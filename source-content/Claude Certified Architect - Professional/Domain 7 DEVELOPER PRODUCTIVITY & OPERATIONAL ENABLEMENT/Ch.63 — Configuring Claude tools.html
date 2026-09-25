@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 63 — Configuring Claude Tools &amp; Environments for Teams | CCA Study Guide</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
+    }
+  });
+</script>
+<style>
+  :root {
+    --ink: #1a2027;
+    --muted: #5b6672;
+    --line: #e2e6ea;
+    --bg: #f7f9fb;
+    --card: #ffffff;
+    --blue-bg: #eaf2fe; --blue-br: #2f6fed; --blue-tx: #12376f;
+    --green-bg: #e9f8ef; --green-br: #1f9d57; --green-tx: #0f5b32;
+    --amber-bg: #fff5e0; --amber-br: #e08a00; --amber-tx: #7a4a00;
+    --gray-bg: #1f2530; --gray-tx: #e6edf3;
+    --pill: #eef1f5;
+    --accent: #2f6fed;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 22px 96px; }
+  header.hero {
+    background: linear-gradient(135deg, #12376f 0%, #2f6fed 100%);
+    color: #fff; border-radius: 16px; padding: 34px 32px; margin-bottom: 28px;
+    box-shadow: 0 10px 30px rgba(18,55,111,.25);
+  }
+  header.hero .eyebrow {
+    text-transform: uppercase; letter-spacing: .12em; font-size: 12px;
+    font-weight: 700; opacity: .85; margin-bottom: 8px;
+  }
+  header.hero h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.2; }
+  header.hero p { margin: 0; opacity: .92; font-size: 15px; }
+  header.hero .chips { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+  header.hero .chip {
+    background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25);
+    padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+  }
+
+  nav.toc {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px 24px; margin-bottom: 34px; box-shadow: 0 2px 8px rgba(0,0,0,.03);
+  }
+  nav.toc h2 { margin: 0 0 12px; font-size: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 34px; }
+  nav.toc li { margin: 5px 0; break-inside: avoid; }
+  nav.toc a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  nav.toc a:hover { text-decoration: underline; }
+  nav.toc .sub { padding-left: 8px; font-size: 13.5px; color: var(--muted); }
+  nav.toc .sub a { color: var(--muted); font-weight: 400; }
+
+  h1 { font-size: 27px; }
+  h2 {
+    font-size: 23px; margin-top: 46px; padding-bottom: 8px;
+    border-bottom: 3px solid var(--accent); scroll-margin-top: 16px;
+  }
+  h2 .tag {
+    display: inline-block; background: var(--accent); color: #fff; font-size: 13px;
+    font-weight: 700; padding: 2px 10px; border-radius: 6px; margin-right: 10px; vertical-align: middle;
+  }
+  h3 {
+    font-size: 17px; margin-top: 28px; color: #12376f;
+    display: flex; align-items: center; gap: 8px; scroll-margin-top: 16px;
+  }
+  h3 .ic { font-size: 18px; }
+  p { margin: 12px 0; }
+  section.subtopic {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 6px 30px 30px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.03);
+  }
+
+  /* Color-coded callout boxes */
+  .box { border-radius: 10px; padding: 16px 18px; margin: 16px 0; border-left: 5px solid; font-size: 15px; }
+  .box .lbl { font-weight: 700; display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+  .concept { background: var(--blue-bg); border-color: var(--blue-br); color: var(--blue-tx); }
+  .tips    { background: var(--green-bg); border-color: var(--green-br); color: var(--green-tx); }
+  .exam    { background: var(--amber-bg); border-color: var(--amber-br); color: var(--amber-tx); }
+  .box ul { margin: 6px 0 0; padding-left: 20px; }
+  .box li { margin: 5px 0; }
+  .box code { background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 4px; font-size: 13.5px; }
+
+  /* Code blocks */
+  pre {
+    background: var(--gray-bg); color: var(--gray-tx); padding: 16px 18px; border-radius: 10px;
+    overflow-x: auto; font-size: 13.5px; line-height: 1.55; margin: 14px 0;
+    border: 1px solid #0d1117;
+  }
+  pre code { font-family: "SF Mono", "Cascadia Code", Consolas, "Roboto Mono", monospace; white-space: pre; }
+  .filename {
+    background: #0d1117; color: #9fb4cc; font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 8px 8px 0 0; margin: 14px 0 -14px;
+    font-family: monospace; border: 1px solid #0d1117; border-bottom: none;
+  }
+  .filename + pre { border-radius: 0 0 10px 10px; margin-top: 0; }
+  p code, li code, td code {
+    background: var(--pill); color: #b3306b; padding: 1px 6px; border-radius: 4px;
+    font-family: "SF Mono", Consolas, monospace; font-size: 13.5px;
+  }
+
+  /* Tables */
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #12376f; color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  td.center, th.center { text-align: center; }
+  .yes { color: #1f9d57; font-weight: 700; }
+  .no { color: #c23b3b; font-weight: 700; }
+
+  .mermaid { background: var(--card); border: 1px dashed var(--line); border-radius: 10px; padding: 18px; margin: 16px 0; text-align: center; }
+
+  .viz-caption { font-size: 13px; color: var(--muted); font-style: italic; margin-top: -6px; }
+
+  /* Q&A */
+  .qa { border: 1px solid var(--line); border-radius: 12px; margin: 16px 0; overflow: hidden; background: var(--card); }
+  .qa .q { padding: 14px 18px; font-weight: 600; background: #eef4ff; border-bottom: 1px solid var(--line); }
+  .qa .q .qtag { font-size: 12px; background: #12376f; color:#fff; padding: 2px 8px; border-radius: 5px; margin-right: 8px; }
+  .qa .opts { padding: 6px 18px 2px; }
+  .qa .opts div { margin: 5px 0; }
+  .qa details { padding: 10px 18px 16px; }
+  .qa summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+  .qa .ans { margin-top: 10px; padding: 12px 14px; background: var(--green-bg); border-left: 4px solid var(--green-br); border-radius: 8px; color: var(--green-tx); }
+
+  .checklist { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 26px; }
+  .checklist li { margin: 8px 0; }
+
+  footer.foot { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
+  .disclaimer { background:#fbfbe8; border:1px solid #e5e58a; border-radius:10px; padding:12px 16px; font-size:13px; color:#6b6b1f; margin: 18px 0; }
+  .backtop { font-size: 12px; }
+  .backtop a { color: var(--muted); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Chapter 63 · Configuring Claude Tools &amp; Environments for Teams</h1>
+  <p>An exam-ready study guide covering team setup, standardization, MCP infrastructure, permissions, and a full hands-on rollout.</p>
+  <div class="chips">
+    <span class="chip">63.1 Team Setup</span>
+    <span class="chip">63.2 CLAUDE.md · Rules · Skills</span>
+    <span class="chip">63.3 MCP Servers</span>
+    <span class="chip">63.4 Access Control</span>
+    <span class="chip">63.5 Hands-On Rollout</span>
+  </div>
+</header>
+
+<div class="disclaimer">
+  ⚠️ <strong>Study aid:</strong> Configuration syntax reflects publicly documented Claude Code, CLAUDE.md, and Model Context Protocol (MCP) patterns. Where a precise field or behavior may vary by version, it is framed as a <em>general/typical pattern</em>. All practice questions are <strong>original and illustrative</strong> — not drawn from any real Anthropic exam.
+</div>
+
+<!-- ================= TOC ================= -->
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s631">63.1 Claude Code Setup for Team Environments</a>
+      <div class="sub"><a href="#s631">Overview</a> · <a href="#s631-cfg">Config</a> · <a href="#s631-viz">Diagram</a> · <a href="#s631-tips">Tips</a> · <a href="#s631-exam">Exam</a></div>
+    </li>
+    <li><a href="#s632">63.2 Standardizing CLAUDE.md, Rules &amp; Skills</a>
+      <div class="sub"><a href="#s632">Overview</a> · <a href="#s632-cfg">Config</a> · <a href="#s632-viz">Diagram</a> · <a href="#s632-tips">Tips</a> · <a href="#s632-exam">Exam</a></div>
+    </li>
+    <li><a href="#s633">63.3 MCP Server Configuration for Shared Infrastructure</a>
+      <div class="sub"><a href="#s633">Overview</a> · <a href="#s633-cfg">Config</a> · <a href="#s633-viz">Diagram</a> · <a href="#s633-tips">Tips</a> · <a href="#s633-exam">Exam</a></div>
+    </li>
+    <li><a href="#s634">63.4 Access Control and Permission Management</a>
+      <div class="sub"><a href="#s634">Overview</a> · <a href="#s634-cfg">Config</a> · <a href="#s634-viz">Matrix</a> · <a href="#s634-tips">Tips</a> · <a href="#s634-exam">Exam</a></div>
+    </li>
+    <li><a href="#s635">63.5 Hands-On: Setting Up Claude for a Dev Team</a>
+      <div class="sub"><a href="#s635">Overview</a> · <a href="#s635-cfg">Config</a> · <a href="#s635-viz">Workflow</a> · <a href="#s635-tips">Tips</a> · <a href="#s635-exam">Exam</a></div>
+    </li>
+    <li><a href="#summary">Chapter Summary Table</a></li>
+    <li><a href="#checklist">Quick-Revision Checklist</a></li>
+    <li><a href="#qa">Sample Exam Q&amp;A</a></li>
+  </ol>
+</nav>
+
+<!-- ============================================================= -->
+<!-- 63.1 -->
+<!-- ============================================================= -->
+<section class="subtopic" id="s631">
+<h2><span class="tag">63.1</span> Claude Code Setup for Team Environments</h2>
+
+<h3><span class="ic">🧭</span> Concept Overview</h3>
+<p><strong>Claude Code</strong> is Anthropic's agentic coding tool that runs in the terminal/IDE. For an individual it "just works" with a login; for a <em>team</em> the challenge is <strong>consistency and governance</strong> — everyone should get the same context, the same guardrails, and the same tool access regardless of which machine they're on.</p>
+
+<div class="box concept">
+  <span class="lbl">Definition — Settings Hierarchy</span>
+  Claude Code reads configuration from multiple <code>settings.json</code> layers that <strong>cascade and override</strong> one another. Team standardization works by pushing shared config into version-controlled <em>project</em> scope and locking policy into <em>enterprise-managed</em> scope, while leaving personal preferences at the <em>user</em> scope.
+</div>
+
+<p>The four typical layers, from highest precedence to lowest:</p>
+<ol>
+  <li><strong>Enterprise managed policy</strong> — deployed by IT/admins; cannot be overridden by users.</li>
+  <li><strong>Command-line flags</strong> — per-invocation overrides.</li>
+  <li><strong>Project settings</strong> — <code>.claude/settings.json</code> (shared, committed) and <code>.claude/settings.local.json</code> (personal, git-ignored).</li>
+  <li><strong>User settings</strong> — <code>~/.claude/settings.json</code> (applies to all your projects).</li>
+</ol>
+
+<h3 id="s631-cfg"><span class="ic">⚙️</span> Key Configuration</h3>
+<div class="filename">.claude/settings.json  (shared, committed to the repo)</div>
+<pre><code>{
+  "permissions": {
+    "allow": ["Read", "Edit", "Bash(npm run test:*)"],
+    "deny":  ["Read(./.env)", "Bash(rm -rf:*)"]
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "model": "claude-sonnet-4-5"
+}</code></pre>
+
+<div class="filename">Typical repo layout for a team-ready project</div>
+<pre><code>my-service/
+├── .claude/
+│   ├── settings.json        # shared team config (committed)
+│   ├── settings.local.json  # personal overrides (git-ignored)
+│   ├── skills/              # team Agent Skills
+│   └── commands/            # custom slash commands
+├── .mcp.json                # shared MCP servers (committed)
+├── CLAUDE.md                # shared project memory (committed)
+└── src/</code></pre>
+
+<h3 id="s631-viz"><span class="ic">📊</span> Visualization — Configuration Precedence</h3>
+<pre class="mermaid">flowchart TD
+    A["Enterprise Managed Policy<br>(admin-deployed, locked)"] --&gt; B["CLI Flags<br>(--model, --permission-mode)"]
+    B --&gt; C["Project settings.local.json<br>(personal, git-ignored)"]
+    C --&gt; D[".claude/settings.json<br>(shared, committed)"]
+    D --&gt; E["User settings<br>~/.claude/settings.json"]
+    style A fill:#ffd9d9,stroke:#c23b3b,color:#000
+    style D fill:#d9ead9,stroke:#1f9d57,color:#000
+    style E fill:#dbe7ff,stroke:#2f6fed,color:#000
+</pre>
+<p class="viz-caption">Higher in the chain wins. Enterprise policy is the only layer users cannot override — that's the lever admins use to enforce non-negotiable rules.</p>
+
+<h3 id="s631-tips"><span class="ic">💡</span> Tips &amp; Tricks</h3>
+<div class="box tips">
+  <span class="lbl">Best Practices</span>
+  <ul>
+    <li><strong>Commit <code>.claude/settings.json</code>, <code>.mcp.json</code>, and <code>CLAUDE.md</code></strong> so every teammate inherits identical context on <code>git clone</code>.</li>
+    <li><strong>Git-ignore <code>.claude/settings.local.json</code></strong> — that's the escape hatch for personal preferences without polluting the shared config.</li>
+    <li>Use the <strong>enterprise managed settings</strong> file for anything security-critical (deny rules, blocked commands) — it is the only layer users can't loosen.</li>
+    <li>Pin the <code>model</code> in shared settings so results are reproducible across the team.</li>
+    <li>Onboard new hires with a single <code>git clone</code> → <code>claude</code> flow; avoid tribal "run these 12 setup steps" docs.</li>
+  </ul>
+</div>
+
+<h3 id="s631-exam"><span class="ic">⚡</span> Exam Strategy</h3>
+<div class="box exam">
+  <span class="lbl">⚡ Exam Angle</span>
+  Expect <strong>precedence-ordering</strong> questions ("Which setting wins if project and enterprise conflict?") and <strong>scenario</strong> questions ("A user changed a deny rule locally but it's still blocked — why?").
+  <ul>
+    <li><strong>Watch for distractors</strong> that reverse the hierarchy — enterprise policy is <em>highest</em>, user settings <em>lowest</em>.</li>
+    <li>Distinguish <code>settings.json</code> (shared, committed) from <code>settings.local.json</code> (personal, git-ignored). Swapping these two is a classic trap.</li>
+    <li><strong>Mnemonic — "E-C-P-U":</strong> <u>E</u>nterprise → <u>C</u>LI → <u>P</u>roject → <u>U</u>ser. "Every Company Prefers Uniformity."</li>
+  </ul>
+</div>
+<p class="backtop"><a href="#top">↑ Back to top</a></p>
+</section>
+
+<!-- ============================================================= -->
+<!-- 63.2 -->
+<!-- ============================================================= -->
+<section class="subtopic" id="s632">
+<h2><span class="tag">63.2</span> Standardizing CLAUDE.md, Rules &amp; Skills Across Teams</h2>
+
+<h3><span class="ic">🧭</span> Concept Overview</h3>
+<p>Three artifacts shape <em>how</em> Claude behaves inside a repo. Standardizing them is what turns "everyone uses Claude differently" into "the whole team gets the same assistant."</p>
+<div class="box concept">
+  <span class="lbl">Definition — The Three Standardization Layers</span>
+  <ul>
+    <li><strong>CLAUDE.md (Memory)</strong> — a Markdown file automatically loaded as context. Holds project purpose, tech stack, conventions, and frequently used commands.</li>
+    <li><strong>Rules</strong> — behavioral directives (do / don't) expressed as instructions <em>inside</em> CLAUDE.md (e.g., "Always run tests before committing"). They are guidance, not hard-enforced security — enforcement lives in permissions (63.4).</li>
+    <li><strong>Skills (Agent Skills)</strong> — packaged folders containing a <code>SKILL.md</code> plus optional scripts/resources that give Claude a reusable, invokable capability (e.g., <code>deploy-staging</code>).</li>
+  </ul>
+</div>
+
+<p><strong>Memory scopes</strong> mirror the settings hierarchy: a shared project <code>./CLAUDE.md</code> (committed), and a personal <code>~/.claude/CLAUDE.md</code> (applies to all your projects). CLAUDE.md files also support <strong><code>@path</code> imports</strong> to pull in shared fragments, so teams can factor common conventions into one canonical file.</p>
+
+<h3 id="s632-cfg"><span class="ic">⚙️</span> Key Configuration / Syntax</h3>
+<div class="filename">CLAUDE.md — team template</div>
+<pre><code># Team CLAUDE.md Template
+
+## Project Context
+- Purpose: Payments microservice (Node 20 + TypeScript)
+- Tech stack: Express, Prisma, PostgreSQL
+- Coding conventions: ESLint airbnb-base, 2-space indent
+
+## Rules
+- Always run `npm run test` before committing.
+- Never modify `/infra` without a reviewer's approval.
+- Prefer async/await over raw Promises.
+
+## Common Commands
+- Build:   `npm run build`
+- Test:    `npm run test`
+- Migrate: `npm run db:migrate`
+
+## Shared conventions (imported)
+@./docs/engineering-standards.md</code></pre>
+
+<div class="filename">.claude/skills/deploy-staging/SKILL.md — a shared Agent Skill</div>
+<pre><code>---
+name: deploy-staging
+description: Deploy the current branch to the staging environment.
+  Use when the user asks to deploy, ship, or push to staging.
+---
+
+# Deploy to Staging
+
+1. Confirm tests pass (`npm run test`).
+2. Build the artifact (`npm run build`).
+3. Run `./scripts/deploy.sh staging`.
+4. Report the deployment URL back to the user.</code></pre>
+
+<div class="box concept">
+  <span class="lbl">Note — SKILL.md front-matter</span>
+  A Skill's <code>name</code> and <code>description</code> live in YAML front-matter. The <strong>description is the trigger signal</strong> — Claude reads it to decide when the skill is relevant, so write it in terms of <em>when to use</em> the skill, not just what it does.
+</div>
+
+<h3 id="s632-viz"><span class="ic">📊</span> Visualization — Memory &amp; Skill Resolution</h3>
+<pre class="mermaid">flowchart LR
+    subgraph Personal
+      U["~/.claude/CLAUDE.md<br>~/.claude/skills/"]
+    end
+    subgraph Project["Project (committed to git)"]
+      P["./CLAUDE.md<br>.claude/skills/"]
+      I["@imported fragments<br>docs/standards.md"]
+    end
+    U --&gt; CTX["Assembled Context<br>+ Available Skills"]
+    P --&gt; CTX
+    I --&gt; P
+    CTX --&gt; CLAUDE(("Claude"))
+    style P fill:#d9ead9,stroke:#1f9d57,color:#000
+    style U fill:#dbe7ff,stroke:#2f6fed,color:#000
+    style I fill:#fff3d6,stroke:#e08a00,color:#000
+</pre>
+<p class="viz-caption">Project-scoped memory and skills are the team standard; personal-scoped ones layer on top for individual workflow.</p>
+
+<table>
+  <thead><tr><th>Artifact</th><th>Purpose</th><th>Typical Location</th><th>Committed?</th></tr></thead>
+  <tbody>
+    <tr><td>CLAUDE.md (project)</td><td>Shared context &amp; rules</td><td><code>./CLAUDE.md</code></td><td class="center yes">✅ Yes</td></tr>
+    <tr><td>CLAUDE.md (user)</td><td>Personal cross-project prefs</td><td><code>~/.claude/CLAUDE.md</code></td><td class="center no">❌ No</td></tr>
+    <tr><td>Skill (project)</td><td>Shared reusable capability</td><td><code>.claude/skills/&lt;name&gt;/</code></td><td class="center yes">✅ Yes</td></tr>
+    <tr><td>Skill (personal)</td><td>Individual capability</td><td><code>~/.claude/skills/&lt;name&gt;/</code></td><td class="center no">❌ No</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s632-tips"><span class="ic">💡</span> Tips &amp; Tricks</h3>
+<div class="box tips">
+  <span class="lbl">Best Practices</span>
+  <ul>
+    <li><strong>Keep CLAUDE.md concise and specific</strong> — it's loaded into every context. Bloated memory wastes tokens and dilutes the important rules.</li>
+    <li>Factor common standards into one file and pull them in with <code>@import</code> instead of copy-pasting across repos.</li>
+    <li>Treat CLAUDE.md and skills as <strong>code</strong>: review changes in PRs so behavior shifts are intentional and visible.</li>
+    <li>Write skill <code>description</code> fields around <em>triggers</em> ("Use when…") so the right skill fires automatically.</li>
+    <li><strong>Common misconfiguration:</strong> putting secrets or credentials in CLAUDE.md — it's plain text and committed. Keep secrets in env/secret managers.</li>
+  </ul>
+</div>
+
+<h3 id="s632-exam"><span class="ic">⚡</span> Exam Strategy</h3>
+<div class="box exam">
+  <span class="lbl">⚡ Exam Angle</span>
+  Questions test whether you can <strong>match the artifact to the job</strong>: which of memory / rules / skills solves a given standardization problem.
+  <ul>
+    <li><strong>Distractor to watch:</strong> conflating a "Rule" (guidance in CLAUDE.md) with a "permission deny rule" (hard-enforced in settings — 63.4). If the scenario needs <em>enforcement</em>, the answer is permissions, not CLAUDE.md text.</li>
+    <li>Remember Skills are folders with a <code>SKILL.md</code>; the <em>description</em> drives invocation.</li>
+    <li><strong>Mnemonic — "M-R-S":</strong> <u>M</u>emory tells Claude <em>what it knows</em>, <u>R</u>ules tell it <em>how to behave</em>, <u>S</u>kills tell it <em>what it can do</em>.</li>
+  </ul>
+</div>
+<p class="backtop"><a href="#top">↑ Back to top</a></p>
+</section>
+
+<!-- ============================================================= -->
+<!-- 63.3 -->
+<!-- ============================================================= -->
+<section class="subtopic" id="s633">
+<h2><span class="tag">63.3</span> MCP Server Configuration for Shared Infrastructure</h2>
+
+<h3><span class="ic">🧭</span> Concept Overview</h3>
+<p>The <strong>Model Context Protocol (MCP)</strong> is an open standard for connecting Claude to external tools and data sources (databases, ticketing systems, internal APIs) through <em>MCP servers</em>. For teams, the goal is that everyone connects to the <strong>same shared infrastructure</strong> with the same configuration.</p>
+
+<div class="box concept">
+  <span class="lbl">Definition — MCP Scopes</span>
+  MCP servers can be registered at three scopes, which determine who sees them and whether they're committed:
+  <ul>
+    <li><strong>local</strong> — private to you, in the current project only (default). Not shared.</li>
+    <li><strong>project</strong> — stored in a committed <code>.mcp.json</code> at the repo root; shared with everyone who clones the repo.</li>
+    <li><strong>user</strong> — available to you across <em>all</em> your projects, but not shared with teammates.</li>
+  </ul>
+  For team infrastructure, <strong>project scope</strong> (<code>.mcp.json</code>) is the answer.
+</div>
+
+<p>Servers connect over a <strong>transport</strong>: <code>stdio</code> (local subprocess), <code>sse</code> (Server-Sent Events, HTTP-based), or <code>http</code> (streamable HTTP). Remote/shared servers typically use <code>sse</code> or <code>http</code>.</p>
+
+<h3 id="s633-cfg"><span class="ic">⚙️</span> Key Configuration / Syntax</h3>
+<div class="filename">.mcp.json  (project scope — committed, shared with the team)</div>
+<pre><code>{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres",
+               "postgresql://localhost/mydb"],
+      "env": { "PGSSLMODE": "require" }
+    },
+    "internal-api": {
+      "type": "http",
+      "url": "https://mcp.internal.example.com/api",
+      "headers": { "Authorization": "Bearer ${API_TOKEN}" }
+    }
+  }
+}</code></pre>
+
+<div class="filename">CLI equivalents (adding servers by scope)</div>
+<pre><code># Shared with the team (writes to .mcp.json)
+claude mcp add --scope project postgres \
+  npx -y @modelcontextprotocol/server-postgres postgresql://localhost/mydb
+
+# Just for me, in this project (default scope)
+claude mcp add --scope local scratch-tool ./run.sh
+
+# Remote server over HTTP transport
+claude mcp add --scope project --transport http internal-api \
+  https://mcp.internal.example.com/api</code></pre>
+
+<div class="box concept">
+  <span class="lbl">Note — stdio vs http/sse servers</span>
+  A <strong>stdio</strong> server uses <code>command</code> + <code>args</code> (Claude launches it as a subprocess). A <strong>remote</strong> server uses <code>type</code> + <code>url</code> (and optional <code>headers</code>). Mixing these — e.g., putting a <code>url</code> on a <code>command</code>-style entry — is a common config error.
+</div>
+
+<h3 id="s633-viz"><span class="ic">📊</span> Visualization — Scope Decision Flow</h3>
+<pre class="mermaid">flowchart TD
+    Q{"Who needs this<br>MCP server?"} --&gt;|"Whole team,<br>in this repo"| PROJ["project scope<br>→ commit .mcp.json"]
+    Q --&gt;|"Only me, all<br>my projects"| USER["user scope"]
+    Q --&gt;|"Only me, just<br>experimenting here"| LOCAL["local scope (default)"]
+    PROJ --&gt; SHARE["Teammates get it<br>on git clone"]
+    style PROJ fill:#d9ead9,stroke:#1f9d57,color:#000
+    style USER fill:#dbe7ff,stroke:#2f6fed,color:#000
+    style LOCAL fill:#f0f0f0,stroke:#888,color:#000
+</pre>
+
+<table>
+  <thead><tr><th>Scope</th><th>Visible to</th><th>Stored in</th><th>Shared via git?</th></tr></thead>
+  <tbody>
+    <tr><td><code>local</code> (default)</td><td>You, this project only</td><td>Local project state</td><td class="center no">❌</td></tr>
+    <tr><td><code>project</code></td><td>Everyone on the repo</td><td><code>.mcp.json</code> (root)</td><td class="center yes">✅</td></tr>
+    <tr><td><code>user</code></td><td>You, all projects</td><td>User-level config</td><td class="center no">❌</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s633-tips"><span class="ic">💡</span> Tips &amp; Tricks</h3>
+<div class="box tips">
+  <span class="lbl">Best Practices</span>
+  <ul>
+    <li><strong>Never hard-code secrets</strong> in <code>.mcp.json</code> — it's committed. Use environment-variable expansion like <code>${API_TOKEN}</code> and inject the real value at runtime.</li>
+    <li>Commit <code>.mcp.json</code> so a fresh clone connects to the same servers automatically.</li>
+    <li>Because project-scoped servers run code from the repo, Claude Code typically <strong>prompts each user to approve</strong> them the first time — this is a safety feature, not a bug.</li>
+    <li>Prefer <code>http</code>/<code>sse</code> transports for centrally hosted shared infrastructure; use <code>stdio</code> for local tooling.</li>
+    <li>Keep server <em>names</em> stable — permission rules and skills may reference them by name.</li>
+  </ul>
+</div>
+
+<h3 id="s633-exam"><span class="ic">⚡</span> Exam Strategy</h3>
+<div class="box exam">
+  <span class="lbl">⚡ Exam Angle</span>
+  MCP questions frequently test <strong>which scope shares a server with the team</strong> and <strong>which fields are required for a given transport</strong>.
+  <ul>
+    <li><strong>Distractor to watch:</strong> answers that swap scope values — <em>user</em> (all my projects, private) vs <em>project</em> (this repo, shared). If the scenario says "so the whole team gets it," the answer is <strong>project</strong>.</li>
+    <li>stdio → needs <code>command</code>/<code>args</code>; remote → needs <code>type</code>/<code>url</code>. Watch for entries that mismatch these.</li>
+    <li>Remember the file name: shared servers live in <code>.mcp.json</code> (not <code>settings.json</code>).</li>
+    <li><strong>Mnemonic — "PUL" = Project(shared) · User(all-mine) · Local(here-only).</strong> "<u>P</u>ublish to the team, <u>U</u>ser is universal-to-me, <u>L</u>ocal stays put."</li>
+  </ul>
+</div>
+<p class="backtop"><a href="#top">↑ Back to top</a></p>
+</section>
+
+<!-- ============================================================= -->
+<!-- 63.4 -->
+<!-- ============================================================= -->
+<section class="subtopic" id="s634">
+<h2><span class="tag">63.4</span> Access Control and Permission Management</h2>
+
+<h3><span class="ic">🧭</span> Concept Overview</h3>
+<p>Permissions govern <strong>what actions Claude may take without asking</strong> — reading files, editing code, running shell commands, calling MCP tools, fetching URLs. Team governance combines <em>permission rules</em> (allow/ask/deny per tool) with <em>permission modes</em> (the overall interaction posture) and <em>enterprise-managed policy</em> (admin-enforced, non-overridable).</p>
+
+<div class="box concept">
+  <span class="lbl">Definition — Two Complementary Mechanisms</span>
+  <ul>
+    <li><strong>Permission rules</strong> — in <code>settings.json</code> under <code>permissions</code>, with <code>allow</code>, <code>ask</code>, and <code>deny</code> lists. Rules are patterns like <code>Bash(npm run test:*)</code> or <code>Read(./.env)</code>. <strong>deny</strong> always wins.</li>
+    <li><strong>Permission modes</strong> — the session posture: <code>default</code> (ask on first use), <code>acceptEdits</code> (auto-accept file edits), <code>plan</code> (read-only planning, no changes), and <code>bypassPermissions</code> (skip prompts — use with extreme caution).</li>
+  </ul>
+</div>
+
+<h3 id="s634-cfg"><span class="ic">⚙️</span> Key Configuration / Syntax</h3>
+<div class="filename">.claude/settings.json — permission rules</div>
+<pre><code>{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(npm run test:*)",
+      "Bash(git status)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./secrets/**)",
+      "Bash(rm -rf:*)",
+      "WebFetch"
+    ],
+    "defaultMode": "default"
+  }
+}</code></pre>
+
+<div class="box concept">
+  <span class="lbl">Precedence within permissions</span>
+  Evaluation order is <strong>deny → ask → allow</strong>. A <code>deny</code> match blocks the action outright even if an <code>allow</code> rule would also match. This is why security-critical restrictions belong in <code>deny</code>, ideally at the enterprise-managed layer where users can't remove them.
+</div>
+
+<h3 id="s634-viz"><span class="ic">📊</span> Visualization — Role / Permission Matrix</h3>
+<p>A typical team RBAC mapping (roles are an organizational construct implemented via the layered settings + managed policy):</p>
+<table>
+  <thead>
+    <tr><th>Role</th><th class="center">Read</th><th class="center">Write / Edit</th><th class="center">Execute Tools (Bash)</th><th class="center">Manage MCP Servers</th><th class="center">Edit Managed Policy</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Viewer</strong></td><td class="center yes">✅</td><td class="center no">❌</td><td class="center no">❌</td><td class="center no">❌</td><td class="center no">❌</td></tr>
+    <tr><td><strong>Developer</strong></td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center no">❌</td><td class="center no">❌</td></tr>
+    <tr><td><strong>Lead / Maintainer</strong></td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center no">❌</td></tr>
+    <tr><td><strong>Admin</strong></td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center yes">✅</td><td class="center yes">✅</td></tr>
+  </tbody>
+</table>
+
+<pre class="mermaid">flowchart TD
+    ACT["Claude wants to run an action"] --&gt; D{"Matches a<br>DENY rule?"}
+    D --&gt;|Yes| BLOCK["🚫 Blocked (deny wins)"]
+    D --&gt;|No| AK{"Matches an<br>ASK rule?"}
+    AK --&gt;|Yes| PROMPT["❓ Prompt the user"]
+    AK --&gt;|No| AL{"Matches an<br>ALLOW rule?"}
+    AL --&gt;|Yes| RUN["✅ Run automatically"]
+    AL --&gt;|No| MODE["Fall back to<br>permission mode default"]
+    style BLOCK fill:#ffd9d9,stroke:#c23b3b,color:#000
+    style RUN fill:#d9ead9,stroke:#1f9d57,color:#000
+    style PROMPT fill:#fff3d6,stroke:#e08a00,color:#000
+</pre>
+
+<h3 id="s634-tips"><span class="ic">💡</span> Tips &amp; Tricks</h3>
+<div class="box tips">
+  <span class="lbl">Best Practices</span>
+  <ul>
+    <li><strong>Least privilege:</strong> allow only the specific commands a team needs (e.g., <code>Bash(npm run test:*)</code>) rather than a blanket <code>Bash(*)</code>.</li>
+    <li>Put hard security limits (deny secrets, deny destructive commands) in <strong>enterprise-managed settings</strong> so no local override can loosen them.</li>
+    <li>Use <strong><code>plan</code> mode</strong> for code review / exploration where Claude should not change anything.</li>
+    <li>Reserve <code>bypassPermissions</code> for trusted, sandboxed CI contexts — never as a default for humans.</li>
+    <li>Use <code>ask</code> (not <code>allow</code>) for irreversible operations like <code>git push</code> or deploys, so there's a human checkpoint.</li>
+  </ul>
+</div>
+
+<h3 id="s634-exam"><span class="ic">⚡</span> Exam Strategy</h3>
+<div class="box exam">
+  <span class="lbl">⚡ Exam Angle</span>
+  This is the most <strong>config-debugging</strong>-heavy topic. Expect "Claude did X even though we allowed it — how do we stop it?" (answer: add a <code>deny</code>, ideally in managed policy) and "why is a permitted command still blocked?" (answer: <code>deny</code> beats <code>allow</code>).
+  <ul>
+    <li><strong>Golden rule:</strong> <em>deny &gt; ask &gt; allow</em>. If a question pits allow against deny, deny wins.</li>
+    <li><strong>Distractors to watch:</strong> mode names — <code>acceptEdits</code> (auto-edits files) vs <code>bypassPermissions</code> (skips <em>all</em> prompts) vs <code>plan</code> (read-only). Don't confuse them.</li>
+    <li>Remember the enforcement boundary: <strong>Rules in CLAUDE.md are guidance; permission rules are enforcement.</strong></li>
+    <li><strong>Mnemonic — "DAA":</strong> <u>D</u>eny <u>A</u>sk <u>A</u>llow — evaluated top-down, deny first.</li>
+  </ul>
+</div>
+<p class="backtop"><a href="#top">↑ Back to top</a></p>
+</section>
+
+<!-- ============================================================= -->
+<!-- 63.5 -->
+<!-- ============================================================= -->
+<section class="subtopic" id="s635">
+<h2><span class="tag">63.5</span> Hands-On: Setting Up Claude for a Development Team</h2>
+
+<h3><span class="ic">🧭</span> Concept Overview</h3>
+<p>This section ties 63.1–63.4 into one end-to-end rollout. The scenario: a 6-person backend team wants every engineer to get identical context, shared tools, and enforced guardrails from a single <code>git clone</code>.</p>
+<div class="box concept">
+  <span class="lbl">The rollout in one sentence</span>
+  Commit the shared config (<code>CLAUDE.md</code> + <code>.claude/settings.json</code> + <code>.mcp.json</code> + skills) into the repo, enforce the non-negotiables through enterprise-managed policy, and let individuals layer personal preferences via git-ignored local files.
+</div>
+
+<h3 id="s635-cfg"><span class="ic">⚙️</span> Key Configuration / Syntax</h3>
+<div class="filename">Step-by-step rollout commands</div>
+<pre><code># 1. Create the shared team memory
+$ cat &gt; CLAUDE.md &lt;&lt;'EOF'
+# Payments Service
+## Rules
+- Run `npm run test` before committing.
+- Never touch /infra without review.
+EOF
+
+# 2. Commit shared permission rules
+$ mkdir -p .claude
+$ cat &gt; .claude/settings.json &lt;&lt;'EOF'
+{ "permissions": {
+    "allow": ["Read","Edit","Bash(npm run test:*)"],
+    "deny":  ["Read(./.env)","Bash(rm -rf:*)"] },
+  "model": "claude-sonnet-4-5" }
+EOF
+
+# 3. Add a shared MCP server at project scope
+$ claude mcp add --scope project postgres \
+    npx -y @modelcontextprotocol/server-postgres $DB_URL
+
+# 4. Add a shared skill
+$ mkdir -p .claude/skills/deploy-staging
+$ $EDITOR .claude/skills/deploy-staging/SKILL.md
+
+# 5. Ignore personal overrides
+$ echo ".claude/settings.local.json" &gt;&gt; .gitignore
+
+# 6. Commit &amp; push — teammates now inherit everything
+$ git add CLAUDE.md .claude/settings.json .mcp.json .claude/skills
+$ git commit -m "chore: standardize Claude Code for the team"
+$ git push</code></pre>
+
+<div class="filename">managed-settings.json — deployed by admins (enterprise-enforced)</div>
+<pre><code>{
+  "permissions": {
+    "deny": ["Read(./secrets/**)", "Bash(curl:*)", "WebFetch"]
+  }
+}</code></pre>
+
+<h3 id="s635-viz"><span class="ic">📊</span> Visualization — End-to-End Setup Workflow</h3>
+<pre class="mermaid">flowchart TD
+    A["Admin deploys<br>managed-settings.json<br>(locked deny rules)"] --&gt; B["Lead creates repo config:<br>CLAUDE.md · .claude/settings.json<br>.mcp.json · skills/"]
+    B --&gt; C["git commit + push"]
+    C --&gt; D["Engineer runs<br>git clone"]
+    D --&gt; E["Engineer runs 'claude'"]
+    E --&gt; F{"Approve project<br>MCP servers?"}
+    F --&gt;|Yes| G["✅ Identical env:<br>same memory, tools,<br>guardrails"]
+    F --&gt;|No| H["Servers stay disabled<br>until approved"]
+    E --&gt; I["Optional: personal<br>settings.local.json<br>(git-ignored)"]
+    I --&gt; G
+    style A fill:#ffd9d9,stroke:#c23b3b,color:#000
+    style G fill:#d9ead9,stroke:#1f9d57,color:#000
+    style F fill:#fff3d6,stroke:#e08a00,color:#000
+</pre>
+<p class="viz-caption">One clone reproduces the entire team environment; admin policy sits above it as an immovable floor of security rules.</p>
+
+<h3 id="s635-tips"><span class="ic">💡</span> Tips &amp; Tricks</h3>
+<div class="box tips">
+  <span class="lbl">Best Practices</span>
+  <ul>
+    <li><strong>Test the clean-clone path:</strong> clone into a fresh directory and confirm a new engineer gets working memory, servers, and guardrails with zero manual steps.</li>
+    <li>Roll config out through <strong>pull requests</strong> so changes to team behavior are reviewed like code.</li>
+    <li>Keep secrets in env vars / a secret manager; reference them as <code>${VAR}</code> in <code>.mcp.json</code>.</li>
+    <li>Document the one-time <strong>MCP server approval</strong> prompt in onboarding so new hires aren't surprised.</li>
+    <li>Layer responsibilities: <em>admins</em> own managed policy, <em>leads</em> own repo config, <em>engineers</em> own their local overrides.</li>
+  </ul>
+</div>
+
+<h3 id="s635-exam"><span class="ic">⚡</span> Exam Strategy</h3>
+<div class="box exam">
+  <span class="lbl">⚡ Exam Angle</span>
+  This section is tested as <strong>integrated scenarios</strong>: "A new engineer cloned the repo but isn't getting the team's deny rules — what's wrong?" or "Where should a non-negotiable security rule live?"
+  <ul>
+    <li><strong>Consistency check:</strong> the permission model here must match 63.4 — <em>deny wins</em>, and enterprise-managed policy overrides everything (per 63.1).</li>
+    <li><strong>Distractor to watch:</strong> putting a security guarantee in CLAUDE.md "Rules" (guidance only) instead of a <code>deny</code> permission or managed policy (enforcement).</li>
+    <li>If a shared server "doesn't work" for a teammate → likely the <strong>one-time approval prompt</strong> hasn't been accepted, or it was added at <code>local</code>/<code>user</code> scope instead of <code>project</code>.</li>
+    <li><strong>Mnemonic — "Clone → Approve → Go":</strong> the three things a new teammate does to inherit the full environment.</li>
+  </ul>
+</div>
+<p class="backtop"><a href="#top">↑ Back to top</a></p>
+</section>
+
+<!-- ============================================================= -->
+<!-- SUMMARY TABLE -->
+<!-- ============================================================= -->
+<h2 id="summary">Chapter Summary Table</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Subtopic</th>
+      <th>Core Idea</th>
+      <th>Key File(s)</th>
+      <th>Team Lever</th>
+      <th>#1 Exam Trap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>63.1</strong> Team Setup</td>
+      <td>Cascading settings hierarchy</td>
+      <td><code>.claude/settings.json</code>, <code>settings.local.json</code>, managed policy</td>
+      <td>Commit shared settings; lock policy at enterprise layer</td>
+      <td>Reversing precedence (Enterprise is highest, User lowest)</td>
+    </tr>
+    <tr>
+      <td><strong>63.2</strong> CLAUDE.md / Rules / Skills</td>
+      <td>Memory + behavior + capabilities</td>
+      <td><code>CLAUDE.md</code>, <code>.claude/skills/*/SKILL.md</code></td>
+      <td>Commit &amp; PR-review; use <code>@import</code> for shared standards</td>
+      <td>Treating CLAUDE.md "Rules" as enforcement</td>
+    </tr>
+    <tr>
+      <td><strong>63.3</strong> MCP Servers</td>
+      <td>Connect Claude to shared tools/data</td>
+      <td><code>.mcp.json</code></td>
+      <td>Use <strong>project</strong> scope to share; env vars for secrets</td>
+      <td>Swapping user vs project scope</td>
+    </tr>
+    <tr>
+      <td><strong>63.4</strong> Access Control</td>
+      <td>allow / ask / deny rules + modes</td>
+      <td><code>.claude/settings.json</code> → <code>permissions</code></td>
+      <td>Least privilege; deny at managed policy</td>
+      <td>Forgetting <em>deny &gt; ask &gt; allow</em></td>
+    </tr>
+    <tr>
+      <td><strong>63.5</strong> Hands-On Rollout</td>
+      <td>One clone reproduces the whole env</td>
+      <td>All of the above, committed</td>
+      <td>Clone → Approve MCP → Go</td>
+      <td>Security rule placed in CLAUDE.md instead of deny/managed</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ============================================================= -->
+<!-- CHECKLIST -->
+<!-- ============================================================= -->
+<h2 id="checklist">Quick-Revision Checklist</h2>
+<div class="checklist">
+<ul>
+  <li>☐ Settings precedence (high→low): <strong>Enterprise → CLI → Project → User</strong> ("E-C-P-U").</li>
+  <li>☐ <code>settings.json</code> = shared/committed; <code>settings.local.json</code> = personal/git-ignored.</li>
+  <li>☐ CLAUDE.md = <strong>Memory</strong>; Rules = <strong>behavior guidance</strong>; Skills = <strong>capabilities</strong> ("M-R-S").</li>
+  <li>☐ Skills are folders with a <code>SKILL.md</code>; the <em>description</em> triggers invocation.</li>
+  <li>☐ CLAUDE.md supports <code>@path</code> imports for shared standards — never store secrets in it.</li>
+  <li>☐ MCP scopes: <strong>project</strong> (shared, <code>.mcp.json</code>) · <strong>user</strong> (all my projects) · <strong>local</strong> (here only, default) — "PUL".</li>
+  <li>☐ MCP transports: <code>stdio</code> (command/args) vs <code>http</code>/<code>sse</code> (type/url).</li>
+  <li>☐ Permission evaluation: <strong>deny → ask → allow</strong> ("DAA"), deny always wins.</li>
+  <li>☐ Permission modes: <code>default</code>, <code>acceptEdits</code>, <code>plan</code> (read-only), <code>bypassPermissions</code> (danger).</li>
+  <li>☐ Enterprise-managed policy is the only layer users cannot override — put non-negotiable deny rules there.</li>
+  <li>☐ Rollout = commit shared config + lock managed policy + git-ignore local overrides.</li>
+  <li>☐ Project MCP servers require a <strong>one-time approval</strong> per user (safety feature).</li>
+  <li>☐ Enforcement lives in <strong>permissions</strong>, not in CLAUDE.md text.</li>
+</ul>
+</div>
+
+<!-- ============================================================= -->
+<!-- Q&A -->
+<!-- ============================================================= -->
+<h2 id="qa">Sample Exam Q&amp;A</h2>
+<p class="viz-caption">Original, illustrative questions for practice — not from any real Anthropic exam.</p>
+
+<div class="qa">
+  <div class="q"><span class="qtag">Q1 · 63.1 · MCQ</span> A developer edits a <code>deny</code> rule in <code>.claude/settings.json</code> to permit a command, but Claude still refuses to run it. Enterprise IT deployed a managed policy denying that command. Which setting takes effect?</div>
+  <div class="opts">
+    <div>A. The project <code>settings.json</code> edit — project scope wins.</div>
+    <div>B. The user's <code>settings.local.json</code>.</div>
+    <div>C. The enterprise-managed policy deny rule.</div>
+    <div>D. Neither; the command runs by default.</div>
+  </div>
+  <details><summary>Show answer &amp; reasoning</summary>
+    <div class="ans"><strong>Answer: C.</strong> Enterprise-managed policy is the highest layer in the precedence chain (E-C-P-U) and cannot be overridden by project or user settings. Additionally, <em>deny wins</em> over allow. Both principles point to the managed deny rule remaining in force.</div>
+  </details>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qtag">Q2 · 63.3 · Scenario</span> Your team wants every engineer to automatically get access to a shared PostgreSQL MCP server when they clone the repo. Which scope should you use, and where is it stored?</div>
+  <div class="opts">
+    <div>A. <code>user</code> scope, stored in <code>~/.claude/settings.json</code>.</div>
+    <div>B. <code>local</code> scope, stored in local project state.</div>
+    <div>C. <code>project</code> scope, stored in a committed <code>.mcp.json</code>.</div>
+    <div>D. <code>project</code> scope, stored in <code>.claude/settings.json</code>.</div>
+  </div>
+  <details><summary>Show answer &amp; reasoning</summary>
+    <div class="ans"><strong>Answer: C.</strong> Only <strong>project</strong> scope shares a server with everyone on the repo, and it is stored in a committed <code>.mcp.json</code> at the repo root. Distractor D swaps the file (MCP servers go in <code>.mcp.json</code>, not <code>settings.json</code>); A is private-to-user; B is private-to-you-in-this-project.</div>
+  </details>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qtag">Q3 · 63.4 · Config-debug</span> A team's <code>permissions</code> block lists <code>Bash(git push:*)</code> in both <code>allow</code> and <code>deny</code>. What happens when Claude tries to push?</div>
+  <div class="opts">
+    <div>A. It pushes — allow and deny cancel out to allow.</div>
+    <div>B. It is blocked — deny takes precedence over allow.</div>
+    <div>C. It prompts the user because of the conflict.</div>
+    <div>D. It errors and refuses to start the session.</div>
+  </div>
+  <details><summary>Show answer &amp; reasoning</summary>
+    <div class="ans"><strong>Answer: B.</strong> Permission evaluation is <em>deny → ask → allow</em> ("DAA"). A matching deny rule blocks the action outright, regardless of any allow match. To require a checkpoint instead of a hard block, you'd remove the deny and place the pattern under <code>ask</code>.</div>
+  </details>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qtag">Q4 · 63.2 / 63.4 · Scenario</span> A lead adds "Never delete production data" to the <code>## Rules</code> section of CLAUDE.md, but Claude still runs a destructive command in a session. What is the most robust fix?</div>
+  <div class="opts">
+    <div>A. Rephrase the rule in CLAUDE.md more forcefully.</div>
+    <div>B. Add the destructive command pattern to the <code>deny</code> list (ideally in enterprise-managed policy).</div>
+    <div>C. Move the rule to <code>~/.claude/CLAUDE.md</code>.</div>
+    <div>D. Switch to <code>acceptEdits</code> mode.</div>
+  </div>
+  <details><summary>Show answer &amp; reasoning</summary>
+    <div class="ans"><strong>Answer: B.</strong> CLAUDE.md "Rules" are behavioral <em>guidance</em>, not enforcement. Hard prevention requires a <code>deny</code> permission rule, and putting it in enterprise-managed policy ensures no local override can loosen it. This mirrors the 63.4 enforcement-vs-guidance distinction. (D is the opposite of safe — it auto-accepts edits.)</div>
+  </details>
+</div>
+
+<div class="qa">
+  <div class="q"><span class="qtag">Q5 · 63.5 · Scenario</span> A new engineer cloned the repo and started Claude, but the shared MCP servers appear unavailable. The <code>.mcp.json</code> is present and correct. What is the most likely cause?</div>
+  <div class="opts">
+    <div>A. MCP servers can never be shared via git.</div>
+    <div>B. The engineer hasn't approved the project-scoped servers on first use.</div>
+    <div>C. <code>.mcp.json</code> must be renamed to <code>settings.json</code>.</div>
+    <div>D. The servers were added at enterprise scope, which blocks engineers.</div>
+  </div>
+  <details><summary>Show answer &amp; reasoning</summary>
+    <div class="ans"><strong>Answer: B.</strong> Project-scoped MCP servers run code defined in the repo, so Claude Code typically requires each user to <strong>approve them once</strong> before they activate — a deliberate safety feature. A is false (project scope is exactly how you share them), C is false (the file is correctly named), and "enterprise scope" for MCP servers is not a standard scope value.</div>
+  </details>
+</div>
+
+<footer class="foot">
+  <p><strong>Chapter 63 — Configuring Claude Tools &amp; Environments for Teams</strong> · Claude Certified Architect study guide.<br>
+  Config syntax reflects documented Claude Code / MCP patterns; treat version-specific fields as typical rather than guaranteed. Practice questions are illustrative and original.</p>
+</footer>
+
+</div>
+
+
+</body></html>

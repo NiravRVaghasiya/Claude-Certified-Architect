@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 35 — Structured Data Extraction | Claude Certified Architect Study Guide</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --ink: #1e293b;
+    --ink-soft: #475569;
+    --ink-mute: #64748b;
+    --line: #e2e8f0;
+    --line-strong: #cbd5e1;
+    --brand: #2563eb;
+    --brand-dark: #1e40af;
+    --brand-soft: #eff6ff;
+    --tip: #059669;
+    --tip-bg: #ecfdf5;
+    --tip-line: #a7f3d0;
+    --warn: #b45309;
+    --warn-bg: #fffbeb;
+    --warn-line: #fcd34d;
+    --sum: #7c3aed;
+    --sum-bg: #f5f3ff;
+    --sum-line: #ddd6fe;
+    --code-bg: #0f172a;
+    --code-ink: #e2e8f0;
+    --ok: #16a34a;
+    --err: #dc2626;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.62;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* Header */
+  header.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 60%, #3b82f6 100%);
+    color: #fff;
+    padding: 44px 20px 40px;
+    text-align: center;
+  }
+  header.hero .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.85;
+  }
+  header.hero h1 { margin: 10px 0 6px; font-size: 30px; line-height: 1.2; }
+  header.hero .sub { font-size: 16px; opacity: 0.92; font-weight: 400; }
+  header.hero .badges { margin-top: 18px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  header.hero .badge {
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.28);
+    padding: 5px 13px; border-radius: 100px; font-size: 12.5px; font-weight: 600;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 24px; margin: 46px 0 6px; padding-top: 12px;
+    border-bottom: 3px solid var(--brand); padding-bottom: 8px; color: var(--brand-dark);
+  }
+  h3 { font-size: 19px; margin: 30px 0 8px; color: var(--ink); }
+  h4 { font-size: 15.5px; margin: 20px 0 6px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; }
+  p { margin: 10px 0; color: var(--ink-soft); }
+  strong { color: var(--ink); }
+  ul, ol { color: var(--ink-soft); padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* TOC */
+  nav.toc {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px 26px; margin: 34px 0; box-shadow: 0 1px 3px rgba(15,23,42,0.05);
+  }
+  nav.toc h2 { border: none; margin: 0 0 12px; padding: 0; font-size: 18px; color: var(--ink); }
+  nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+  nav.toc > ol > li { margin: 4px 0; }
+  nav.toc a { display: block; padding: 7px 12px; border-radius: 8px; font-weight: 600; color: var(--ink); transition: background 0.15s ease; }
+  nav.toc a:hover { background: var(--brand-soft); text-decoration: none; }
+  nav.toc a .num { color: var(--brand); font-family: var(--mono); font-size: 13px; margin-right: 8px; }
+  nav.toc .subitems { list-style: none; padding-left: 18px; margin: 2px 0 8px; }
+  nav.toc .subitems a { font-weight: 500; font-size: 14px; color: var(--ink-mute); padding: 4px 12px; }
+
+  /* Cards / callouts */
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 24px; margin: 20px 0; box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+  }
+  .tip-box, .pitfall-box, .summary-box, .exam-box, .scope-box {
+    border-radius: 10px; padding: 15px 18px 15px 18px; margin: 18px 0; font-size: 14.5px;
+    border: 1px solid; border-left-width: 5px;
+  }
+  .tip-box { background: var(--tip-bg); border-color: var(--tip-line); border-left-color: var(--tip); }
+  .tip-box strong { color: var(--tip); }
+  .pitfall-box { background: var(--warn-bg); border-color: var(--warn-line); border-left-color: var(--warn); }
+  .pitfall-box strong { color: var(--warn); }
+  .summary-box { background: var(--sum-bg); border-color: var(--sum-line); border-left-color: var(--sum); }
+  .summary-box strong { color: var(--sum); }
+  .summary-box h4 { color: var(--sum); margin-top: 0; }
+  .summary-box ul { color: var(--ink-soft); margin: 6px 0 0; }
+  .exam-box { background: #fef2f2; border-color: #fecaca; border-left-color: var(--err); }
+  .exam-box strong, .exam-box h4 { color: var(--err); }
+  .scope-box { background: #f8fafc; border-color: var(--line-strong); border-left-color: var(--ink-mute); }
+  .scope-box strong { color: var(--ink); }
+
+  /* Code */
+  pre {
+    background: var(--code-bg); color: var(--code-ink); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-family: var(--mono); font-size: 13px;
+    line-height: 1.55; margin: 14px 0; border: 1px solid #1e293b;
+  }
+  pre code { font-family: var(--mono); white-space: pre; }
+  code.inline {
+    background: #eef2ff; color: var(--brand-dark); padding: 1.5px 6px;
+    border-radius: 5px; font-family: var(--mono); font-size: 13px; border: 1px solid #dbe3ff;
+  }
+  .code-label {
+    font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-mute); font-weight: 700; margin: 16px 0 -6px; display: block;
+  }
+  .code-good { border-left: 4px solid var(--ok); }
+  .code-bad { border-left: 4px solid var(--err); }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13.5px; background: var(--surface); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(15,23,42,0.04); }
+  thead th { background: var(--brand-dark); color: #fff; text-align: left; padding: 10px 13px; font-weight: 600; font-size: 12.5px; }
+  tbody td { padding: 10px 13px; border-bottom: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #fafbfc; }
+  tbody code { font-family: var(--mono); font-size: 12.5px; color: var(--brand-dark); }
+
+  /* Diagram containers */
+  .diagram { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin: 20px 0; overflow-x: auto; box-shadow: 0 1px 3px rgba(15,23,42,0.04); }
+  .diagram-caption { text-align: center; font-size: 13px; color: var(--ink-mute); font-style: italic; margin-top: 10px; }
+
+  /* MCQ */
+  .mcq { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 24px; margin: 22px 0; box-shadow: 0 1px 3px rgba(15,23,42,0.04); }
+  .mcq .qnum { display: inline-block; background: var(--brand); color: #fff; font-weight: 700; font-size: 13px; padding: 3px 11px; border-radius: 100px; margin-bottom: 8px; }
+  .mcq .stem { font-weight: 600; color: var(--ink); margin: 6px 0 12px; }
+  .mcq ul.opts { list-style: none; padding: 0; margin: 0 0 14px; }
+  .mcq ul.opts li { background: #f8fafc; border: 1px solid var(--line); border-radius: 8px; padding: 9px 14px; margin: 7px 0; color: var(--ink-soft); }
+  .mcq ul.opts li .opt-letter { font-weight: 700; color: var(--brand-dark); font-family: var(--mono); margin-right: 8px; }
+  .answer { background: var(--tip-bg); border: 1px solid var(--tip-line); border-left: 5px solid var(--tip); border-radius: 8px; padding: 12px 16px; }
+  .answer .verdict { font-weight: 700; color: var(--tip); }
+  .answer .wrong { color: var(--err); font-weight: 600; }
+
+  /* Architecture decision list */
+  .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 16px 0; }
+  .decision-grid .dcard { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--brand); border-radius: 10px; padding: 14px 16px; }
+  .decision-grid .dcard h4 { margin: 0 0 6px; color: var(--brand-dark); text-transform: none; letter-spacing: 0; font-size: 14.5px; }
+  .decision-grid .dcard p { font-size: 13px; margin: 0; }
+
+  /* Exit check */
+  .exit-check { background: var(--surface); border: 2px solid var(--tip); border-radius: 12px; padding: 22px 26px; margin: 30px 0; }
+  .exit-check h2 { border: none; color: var(--tip); margin-top: 0; }
+  .exit-check ul { list-style: none; padding: 0; }
+  .exit-check li { padding: 7px 0; font-size: 15px; color: var(--ink); border-bottom: 1px solid var(--line); }
+  .exit-check li:last-child { border-bottom: none; }
+  .exit-check .chk { color: var(--tip); font-weight: 700; margin-right: 10px; }
+
+  footer.foot { text-align: center; color: var(--ink-mute); font-size: 12.5px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 23px; }
+    h2 { font-size: 20px; }
+    .wrap { padding: 0 14px 60px; }
+    pre { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="kicker">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Chapter 35 · Scenario 6 — Structured Data Extraction</h1>
+  <div class="sub">Exam-ready study guide · Schema-validated LLM extraction pipelines</div>
+  <div class="badges">
+    <span class="badge">35.1 Architecture</span>
+    <span class="badge">35.2 Schema &amp; Edge Cases</span>
+    <span class="badge">35.3 Downstream Integration</span>
+    <span class="badge">35.4 Practice &amp; Walkthroughs</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- SCOPE / ASSUMPTIONS -->
+  <div class="scope-box">
+    <strong>📌 Scope &amp; assumptions (read first).</strong> "Claude Certified Architect — Foundations &amp; Professional" is not a publicly verifiable certification. This guide treats the exam as an <strong>illustrative / simulated</strong> assessment built on <em>real, industry-standard best practices</em> for designing Claude-based extraction systems. Accordingly:
+    <ul style="margin:8px 0 0;">
+      <li>No official pass scores, question counts, blueprint weightings, or Anthropic program claims are asserted — none can be verified, so none are invented.</li>
+      <li>All <em>technical</em> content (JSON Schema semantics, Claude tool-use / structured-output behaviour, integration and error-handling patterns) reflects genuine, defensible engineering practice and is exam-agnostic.</li>
+      <li>Sample questions mimic a plausible scenario-based exam <em>style</em>; they are practice items, not leaked or official questions.</li>
+      <li>API field names (e.g. <code class="inline">tools</code>, <code class="inline">tool_choice</code>, <code class="inline">input_schema</code>) follow Anthropic's documented Messages API tool-use shape at time of writing; always confirm against current docs, as APIs evolve.</li>
+    </ul>
+  </div>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s351"><span class="num">35.1</span>Scenario Overview &amp; Architecture</a>
+        <ul class="subitems">
+          <li><a href="#s351-usecase">Use case: invoice extraction</a></li>
+          <li><a href="#s351-diagram">System architecture diagram</a></li>
+          <li><a href="#s351-decisions">Key architectural decisions</a></li>
+        </ul>
+      </li>
+      <li><a href="#s352"><span class="num">35.2</span>JSON Schema Validation &amp; Edge Case Handling</a>
+        <ul class="subitems">
+          <li><a href="#s352-schema">Defining &amp; enforcing the schema</a></li>
+          <li><a href="#s352-malformed">Malformed output examples</a></li>
+          <li><a href="#s352-table">Edge case → detection → fix</a></li>
+        </ul>
+      </li>
+      <li><a href="#s353"><span class="num">35.3</span>Downstream System Integration</a>
+        <ul class="subitems">
+          <li><a href="#s353-patterns">Integration patterns</a></li>
+          <li><a href="#s353-flow">Retry / fallback flow diagram</a></li>
+          <li><a href="#s353-errors">Error-handling strategies</a></li>
+        </ul>
+      </li>
+      <li><a href="#s354"><span class="num">35.4</span>Practice Questions &amp; Walkthroughs</a></li>
+      <li><a href="#exit"><span class="num">✓</span>Exit Check</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 35.1 ============ -->
+  <h2 id="s351">35.1 Scenario Overview &amp; Architecture</h2>
+
+  <p>Structured data extraction is the task of turning <strong>unstructured or semi-structured input</strong> (documents, emails, logs, transcripts) into a <strong>predictable, machine-consumable structure</strong> (typically JSON) that a downstream system can trust. Claude is well suited to this because it can read messy real-world text and, when guided with <strong>tool use / structured output</strong>, emit a payload constrained to a schema you define.</p>
+
+  <h3 id="s351-usecase">Use case: automated invoice extraction into an ERP</h3>
+  <p>Our running scenario: a finance operations team receives thousands of supplier invoices per month as PDFs and email bodies. Each must become a normalized JSON record — <code class="inline">invoice_id</code>, <code class="inline">total_amount</code>, <code class="inline">currency</code>, <code class="inline">line_items[]</code> — and be posted to an ERP (e.g. an accounts-payable API). The pipeline must be accurate, auditable, and resilient: a bad record must never silently corrupt the ledger.</p>
+
+  <h3 id="s351-diagram">System architecture diagram</h3>
+  <div class="diagram">
+    <svg viewBox="0 0 900 300" width="100%" role="img" aria-label="Architecture: input source flows to Claude extraction layer, then validation layer, then downstream system, with an error path back to retry and human review.">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"></path>
+        </marker>
+        <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"></path>
+        </marker>
+      </defs>
+
+      <!-- Stage 1: Input -->
+      <rect x="20" y="110" width="150" height="80" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+      <text x="95" y="140" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#1e40af">Input Source</text>
+      <text x="95" y="160" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">PDFs · emails</text>
+      <text x="95" y="176" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">(OCR / text)</text>
+
+      <!-- Stage 2: Claude -->
+      <rect x="215" y="110" width="160" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"></rect>
+      <text x="295" y="138" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#6d28d9">Claude Layer</text>
+      <text x="295" y="157" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">tool use +</text>
+      <text x="295" y="172" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">input_schema</text>
+
+      <!-- Stage 3: Validation -->
+      <rect x="420" y="110" width="160" height="80" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"></rect>
+      <text x="500" y="138" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#047857">Validation Layer</text>
+      <text x="500" y="157" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">JSON Schema</text>
+      <text x="500" y="172" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">+ business rules</text>
+
+      <!-- Stage 4: Downstream -->
+      <rect x="625" y="110" width="160" height="80" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+      <text x="705" y="138" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#1e40af">Downstream</text>
+      <text x="705" y="157" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">ERP / API</text>
+      <text x="705" y="172" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">queue · DB</text>
+
+      <!-- Success arrows -->
+      <line x1="170" y1="150" x2="212" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"></line>
+      <line x1="375" y1="150" x2="417" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"></line>
+      <line x1="580" y1="150" x2="622" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"></line>
+
+      <!-- Error path down from validation -->
+      <text x="500" y="205" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#dc2626" font-weight="700">on invalid</text>
+      <line x1="500" y1="190" x2="500" y2="240" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)"></line>
+
+      <!-- Error handling box -->
+      <rect x="300" y="242" width="400" height="46" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"></rect>
+      <text x="500" y="262" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#b91c1c">Retry (repair prompt) → DLQ → Human-in-the-loop</text>
+      <text x="500" y="279" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#475569">bounded retries, then quarantine for review</text>
+
+      <!-- retry loop back to Claude -->
+      <path d="M300,265 C170,265 200,200 285,192" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowRed)"></path>
+
+      <!-- top label -->
+      <text x="450" y="40" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1e293b">Structured Extraction Pipeline</text>
+      <text x="450" y="60" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#64748b">Validate BEFORE downstream write · fail closed, never fail silent</text>
+    </svg>
+    <div class="diagram-caption">Figure 35.1 — Four-stage pipeline. The validation layer is the trust boundary: nothing reaches the ERP until it passes schema + business-rule checks.</div>
+  </div>
+
+  <h3 id="s351-decisions">Key architectural decisions</h3>
+  <div class="decision-grid">
+    <div class="dcard">
+      <h4>Tool use vs. plain prompting</h4>
+      <p>Prefer <strong>tool use</strong> (define a tool whose <code class="inline">input_schema</code> is your target schema). It constrains Claude to emit structured arguments and drastically reduces "prose around JSON" parsing errors versus asking for JSON in free text.</p>
+    </div>
+    <div class="dcard">
+      <h4>Temperature</h4>
+      <p>Use <strong>low temperature (0–0.2)</strong> for extraction. You want deterministic, faithful transcription of what is in the document — not creativity. Higher temperature increases hallucinated/invented fields.</p>
+    </div>
+    <div class="dcard">
+      <h4>Streaming vs. batch</h4>
+      <p><strong>Batch</strong> suits high-volume back-office extraction (cost/throughput, async). <strong>Streaming</strong> helps interactive UIs where partial feedback matters — but you cannot validate a partial object, so validate only on the completed message.</p>
+    </div>
+    <div class="dcard">
+      <h4>Force the tool call</h4>
+      <p>Set <code class="inline">tool_choice</code> to require your extraction tool so the model must return structured arguments rather than a chat reply. This makes the output shape predictable for the validation layer.</p>
+    </div>
+    <div class="dcard">
+      <h4>Idempotency</h4>
+      <p>Carry a natural key (e.g. <code class="inline">invoice_id</code>) into the downstream write so retries don't create duplicates. The pipeline must be safe to run twice on the same input.</p>
+    </div>
+    <div class="dcard">
+      <h4>Observability</h4>
+      <p>Log the raw model output, the parsed object, and the validation verdict for every record. Extraction quality is only measurable if you retain inputs, outputs, and outcomes.</p>
+    </div>
+  </div>
+
+  <div class="tip-box">💡 <strong>Tip:</strong> Treat the schema as the <em>contract between the model and the downstream system</em>. When both the model's <code class="inline">input_schema</code> and the validation layer reference the <em>same</em> schema definition, you eliminate an entire class of "the model and the validator disagree" bugs.</div>
+
+  <div class="pitfall-box">⚠️ <strong>Common pitfall:</strong> Assuming tool use <em>guarantees</em> a schema-valid payload. Tool use strongly <em>biases</em> the model toward your shape, but it is not a hard validator — the model can still omit a field, coerce a type, or invent a value. <strong>You must still validate.</strong> Skipping validation "because we used tool use" is the single most common design error in this scenario.</div>
+
+  <div class="summary-box">
+    <h4>📋 35.1 Cheat sheet</h4>
+    <ul>
+      <li><strong>Four stages:</strong> Input → Claude (tool use) → Validation → Downstream.</li>
+      <li><strong>Validation is the trust boundary</strong> — validate <em>before</em> any downstream write.</li>
+      <li><strong>Defaults:</strong> tool use + forced <code class="inline">tool_choice</code> + temperature 0–0.2 + batch for volume.</li>
+      <li><strong>Design for idempotency, observability, and "fail closed."</strong></li>
+    </ul>
+  </div>
+
+  <!-- ============ 35.2 ============ -->
+  <h2 id="s352">35.2 JSON Schema Validation &amp; Edge Case Handling</h2>
+
+  <p>A <strong>JSON Schema</strong> is a declarative document that describes the allowed shape of a JSON value: which properties exist, their types, which are required, and constraints on values. In this scenario the schema plays two roles: (1) it is handed to Claude as the tool's <code class="inline">input_schema</code> to guide generation, and (2) it is enforced by a validator (e.g. <code class="inline">jsonschema</code> in Python, Ajv in Node, or Pydantic) before anything moves downstream.</p>
+
+  <h3 id="s352-schema">Defining &amp; enforcing the schema</h3>
+
+  <span class="code-label">JSON Schema — invoice contract</span>
+  <pre class="code-good"><code>{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "invoice_id":   { "type": "string", "minLength": 1 },
+    "currency":     { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "total_amount": { "type": "number", "minimum": 0 },
+    "line_items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": { "type": "string" },
+          "quantity":    { "type": "integer", "minimum": 1 },
+          "unit_price":  { "type": "number", "minimum": 0 }
+        },
+        "required": ["description", "quantity", "unit_price"]
+      }
+    }
+  },
+  "required": ["invoice_id", "currency", "total_amount", "line_items"]
+}</code></pre>
+
+  <p>Two clauses do most of the defensive work here:</p>
+  <ul>
+    <li><code class="inline">"additionalProperties": false</code> — rejects any field the model invents that you did not declare (a hallucinated <code class="inline">tax_code</code>, say). This is your primary defence against hallucinated fields.</li>
+    <li><code class="inline">"required": [...]</code> — makes missing fields a hard failure rather than a silent <code class="inline">null</code> that reaches the ERP.</li>
+  </ul>
+
+  <span class="code-label">Enforcement — Python (jsonschema)</span>
+  <pre class="code-good"><code>from jsonschema import Draft202012Validator
+
+validator = Draft202012Validator(INVOICE_SCHEMA)
+
+def validate_extraction(payload: dict):
+    errors = sorted(validator.iter_errors(payload), key=lambda e: e.path)
+    if errors:
+        return False, [f"{list(e.path)}: {e.message}" for e in errors]
+    return True, []
+
+# ok, problems = validate_extraction(claude_tool_input)
+# if not ok: route to repair / DLQ  (see 35.3)</code></pre>
+
+  <div class="tip-box">💡 <strong>Tip:</strong> Use <code class="inline">iter_errors</code> (collect <em>all</em> problems) rather than <code class="inline">validate</code> (raises on the first). Feeding the full error list back into a repair prompt lets Claude fix every issue in one retry instead of ping-ponging one error at a time.</div>
+
+  <h3 id="s352-malformed">Malformed output examples</h3>
+  <p>The validator's job is to catch these three canonical failure modes before they escape:</p>
+
+  <span class="code-label">❌ Missing required field (<code>currency</code> absent)</span>
+  <pre class="code-bad"><code>{
+  "invoice_id": "INV-2024-0912",
+  "total_amount": 1480.50,
+  "line_items": [
+    { "description": "Widget A", "quantity": 10, "unit_price": 148.05 }
+  ]
+}
+// → FAILS: 'currency' is a required property</code></pre>
+
+  <span class="code-label">❌ Wrong type (<code>total_amount</code> as string, <code>quantity</code> as float)</span>
+  <pre class="code-bad"><code>{
+  "invoice_id": "INV-2024-0912",
+  "currency": "USD",
+  "total_amount": "1,480.50",          // string, not number
+  "line_items": [
+    { "description": "Widget A", "quantity": 10.0, "unit_price": 148.05 }
+  ]                                     // quantity 10.0 is not an integer
+}
+// → FAILS: '1,480.50' is not of type 'number'; 10.0 is not of type 'integer'</code></pre>
+
+  <span class="code-label">❌ Hallucinated field (<code>discount_reason</code> not in schema)</span>
+  <pre class="code-bad"><code>{
+  "invoice_id": "INV-2024-0912",
+  "currency": "USD",
+  "total_amount": 1480.50,
+  "discount_reason": "loyal customer",   // never appeared in the document
+  "line_items": [
+    { "description": "Widget A", "quantity": 10, "unit_price": 148.05 }
+  ]
+}
+// → FAILS: additional properties 'discount_reason' not allowed</code></pre>
+
+  <div class="pitfall-box">⚠️ <strong>Common pitfall — silent coercion.</strong> If you parse with a permissive layer that <em>auto-coerces</em> types (e.g. turning <code class="inline">"1,480.50"</code> into a number, or silently dropping unknown keys), you can mask a real extraction error. Coercion is fine as an <em>explicit, logged normalization step</em> — never as an invisible side effect of your parser. Decide deliberately what you normalize vs. what you reject.</div>
+
+  <h3 id="s352-table">Edge case → detection method → recommended fix</h3>
+  <table>
+    <thead>
+      <tr><th>Edge case</th><th>Detection method</th><th>Recommended fix</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Missing required field</td>
+        <td><code>required</code> keyword fails during schema validation</td>
+        <td>Repair prompt with the error; if truly absent from source, route to human review — do <em>not</em> fabricate.</td>
+      </tr>
+      <tr>
+        <td>Wrong type (e.g. string for number)</td>
+        <td><code>type</code> keyword mismatch</td>
+        <td>Explicit, logged normalization (strip thousands separators, parse), then re-validate; reject if it still fails.</td>
+      </tr>
+      <tr>
+        <td>Hallucinated / extra field</td>
+        <td><code>additionalProperties: false</code></td>
+        <td>Strip if provably safe, but prefer to reject + retry — an invented field can signal broader hallucination.</td>
+      </tr>
+      <tr>
+        <td>Out-of-range value (negative total)</td>
+        <td><code>minimum</code> / <code>maximum</code> constraints</td>
+        <td>Flag as business-rule violation; quarantine for review rather than clamping silently.</td>
+      </tr>
+      <tr>
+        <td>Empty array where data expected</td>
+        <td><code>minItems</code> constraint</td>
+        <td>Retry with instruction to extract at least one line item; escalate if document genuinely has none.</td>
+      </tr>
+      <tr>
+        <td>Malformed / truncated JSON</td>
+        <td>JSON parse fails before schema check (e.g. from a truncated stream)</td>
+        <td>Check stop reason / increase <code>max_tokens</code>; retry. With tool use this is rare vs. free-text JSON.</td>
+      </tr>
+      <tr>
+        <td>Enum / format violation (bad currency code)</td>
+        <td><code>pattern</code> / <code>enum</code> / <code>format</code></td>
+        <td>Normalize against a known code list; reject unknown codes to human review.</td>
+      </tr>
+      <tr>
+        <td>Cross-field inconsistency (<code>total_amount</code> ≠ Σ line items)</td>
+        <td>Business-rule check <em>after</em> schema passes (schema alone can't express it)</td>
+        <td>Recompute and compare within tolerance; on mismatch, flag for review.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip-box">💡 <strong>Tip:</strong> JSON Schema validates <em>structure and simple constraints</em>. It cannot express "the total must equal the sum of line items." Layer a small set of <strong>business-rule checks</strong> after schema validation to catch semantic errors the schema is blind to.</div>
+
+  <div class="summary-box">
+    <h4>📋 35.2 Cheat sheet</h4>
+    <ul>
+      <li><strong>Schema = contract.</strong> Same definition feeds Claude's <code class="inline">input_schema</code> and your validator.</li>
+      <li><strong>Two power clauses:</strong> <code class="inline">required</code> (catches missing) + <code class="inline">additionalProperties:false</code> (catches hallucinated).</li>
+      <li><strong>Three canonical failures:</strong> missing field · wrong type · hallucinated field.</li>
+      <li><strong>Collect all errors</strong> (<code class="inline">iter_errors</code>) for one-shot repair.</li>
+      <li><strong>Schema + business rules</strong> — schema can't check cross-field math or "sum equals total."</li>
+      <li><strong>Never fabricate</strong> a missing value; normalize explicitly and log it.</li>
+    </ul>
+  </div>
+
+  <!-- ============ 35.3 ============ -->
+  <h2 id="s353">35.3 Downstream System Integration</h2>
+
+  <p>Once a payload is <strong>validated</strong>, it must reach the system of record reliably. The core rule persists: <strong>validate before write.</strong> How you deliver the validated record depends on latency, volume, and coupling requirements.</p>
+
+  <h3 id="s353-patterns">Integration patterns</h3>
+  <table>
+    <thead>
+      <tr><th>Pattern</th><th>When to use</th><th>Trade-offs</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Synchronous API call</strong> (POST to ERP/AP API)</td>
+        <td>Low volume, need an immediate confirmation, tight coupling acceptable.</td>
+        <td>Simple; but a slow/failing downstream directly stalls extraction. Needs timeouts + idempotency keys.</td>
+      </tr>
+      <tr>
+        <td><strong>Message queue</strong> (SQS/Kafka/RabbitMQ)</td>
+        <td>High volume, spiky load, want to decouple extraction from ingestion.</td>
+        <td>Buffers bursts, enables independent scaling &amp; retry; adds infra and eventual-consistency reasoning.</td>
+      </tr>
+      <tr>
+        <td><strong>Direct database write</strong></td>
+        <td>You own the store and want the record persisted for later processing/audit.</td>
+        <td>Fast, transactional; couples the pipeline to the schema of the store — use upserts keyed on the natural id.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip-box">💡 <strong>Tip:</strong> The queue-based pattern is usually the exam's "best" answer for high-volume, resilient extraction: it decouples the LLM step from the downstream, absorbs traffic spikes, and gives you retry + dead-letter semantics for free.</div>
+
+  <h3 id="s353-flow">Retry / fallback flow when validation fails</h3>
+  <div class="diagram">
+    <svg viewBox="0 0 900 420" width="100%" role="img" aria-label="Flowchart: extract, validate; if valid, write downstream; if invalid, retry with a repair prompt up to a bounded number of times, then send to a dead-letter queue for human review.">
+      <defs>
+        <marker id="fa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#475569"></path>
+        </marker>
+        <marker id="faG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#059669"></path>
+        </marker>
+        <marker id="faR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"></path>
+        </marker>
+      </defs>
+
+      <!-- Extract -->
+      <rect x="40" y="30" width="150" height="56" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"></rect>
+      <text x="115" y="63" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#6d28d9">1 · Extract (Claude)</text>
+
+      <!-- Validate diamond -->
+      <polygon points="115,150 200,200 115,250 30,200" fill="#ecfdf5" stroke="#059669" stroke-width="2"></polygon>
+      <text x="115" y="196" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#047857">2 · Validate</text>
+      <text x="115" y="212" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#475569">schema + rules</text>
+
+      <line x1="115" y1="86" x2="115" y2="148" stroke="#475569" stroke-width="2" marker-end="url(#fa)"></line>
+
+      <!-- Valid path -->
+      <text x="230" y="192" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#059669">valid</text>
+      <line x1="200" y1="200" x2="300" y2="200" stroke="#059669" stroke-width="2.5" marker-end="url(#faG)"></line>
+      <rect x="305" y="172" width="170" height="56" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+      <text x="390" y="198" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#1e40af">3 · Write downstream</text>
+      <text x="390" y="215" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#475569">idempotent · confirmed</text>
+
+      <!-- Invalid path down to retry decision -->
+      <text x="150" y="278" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#dc2626">invalid</text>
+      <line x1="115" y1="250" x2="115" y2="300" stroke="#dc2626" stroke-width="2.5" marker-end="url(#faR)"></line>
+
+      <polygon points="115,300 200,340 115,380 30,340" fill="#fffbeb" stroke="#b45309" stroke-width="2"></polygon>
+      <text x="115" y="338" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#b45309">retries left?</text>
+      <text x="115" y="354" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#475569">(bounded, e.g. ≤3)</text>
+
+      <!-- yes: repair prompt loop back to extract -->
+      <text x="300" y="332" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#b45309">yes → repair prompt</text>
+      <path d="M200,340 C420,340 470,120 460,90 C450,58 250,58 192,58" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#fa)"></path>
+      <text x="470" y="145" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#475569">feed errors back +</text>
+      <text x="470" y="160" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#475569">exponential backoff</text>
+
+      <!-- no: DLQ + human -->
+      <text x="150" y="408" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#dc2626">no</text>
+      <line x1="200" y1="340" x2="300" y2="340" stroke="#dc2626" stroke-width="2.5" marker-end="url(#faR)"></line>
+      <rect x="305" y="312" width="180" height="56" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"></rect>
+      <text x="395" y="336" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#b91c1c">4 · Dead-letter queue</text>
+      <text x="395" y="353" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#475569">→ human-in-the-loop</text>
+
+      <!-- side note -->
+      <rect x="560" y="300" width="310" height="90" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+      <text x="575" y="322" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#1e293b">Why bound the retries?</text>
+      <text x="575" y="342" font-family="sans-serif" font-size="10.5" fill="#475569">Infinite retries burn tokens &amp; can loop</text>
+      <text x="575" y="357" font-family="sans-serif" font-size="10.5" fill="#475569">forever on genuinely-unextractable input.</text>
+      <text x="575" y="372" font-family="sans-serif" font-size="10.5" fill="#475569">Quarantine (DLQ) preserves the record for</text>
+      <text x="575" y="387" font-family="sans-serif" font-size="10.5" fill="#475569">a human without blocking the pipeline.</text>
+    </svg>
+    <div class="diagram-caption">Figure 35.3 — Retry/fallback loop. Bounded retries with a repair prompt, then a dead-letter queue that routes to human review. The pipeline never blocks and never writes bad data.</div>
+  </div>
+
+  <h3 id="s353-errors">Error-handling strategies</h3>
+  <ul>
+    <li><strong>Bounded retries with a repair prompt.</strong> On validation failure, re-invoke Claude with the original input <em>plus the specific validation errors</em> and an instruction to correct them. Cap attempts (e.g. 3) and use <strong>exponential backoff</strong> for transient/API errors.</li>
+    <li><strong>Distinguish error classes.</strong> A <em>transient</em> error (429/5xx, timeout) warrants a plain retry with backoff. A <em>validation</em> error warrants a repair-prompt retry. A <em>deterministic content</em> error (data simply isn't in the document) should go straight to human review — retrying won't help.</li>
+    <li><strong>Dead-letter queue (DLQ).</strong> After retries are exhausted, move the record (with its raw input, model output, and error trail) to a DLQ so it is preserved, auditable, and doesn't block throughput.</li>
+    <li><strong>Human-in-the-loop.</strong> A reviewer inspects DLQ items, corrects or rejects them, and — ideally — those corrections feed back into prompt/schema improvements. This is your safety net for the long tail.</li>
+    <li><strong>Idempotency &amp; exactly-once effect.</strong> Use the natural key (<code class="inline">invoice_id</code>) as an idempotency key on the downstream write so retries never double-post.</li>
+    <li><strong>Circuit breaking.</strong> If the downstream is down, stop hammering it — open a breaker, buffer in the queue, and drain when healthy.</li>
+  </ul>
+
+  <div class="pitfall-box">⚠️ <strong>Common pitfall — retrying the same prompt unchanged.</strong> Re-sending the identical prompt after a validation failure usually reproduces the same failure and wastes tokens. Retries must be <em>informed</em>: feed the validation errors back so the model can actually correct them. And never retry <em>indefinitely</em> — bound it, then quarantine.</div>
+
+  <div class="tip-box">💡 <strong>Tip:</strong> Make the DLQ <em>rich</em>. Store the raw document, the exact model output, the schema version, and the ordered list of validation errors. A reviewer (or a debugging engineer) can resolve an item in seconds when the full context travels with it.</div>
+
+  <div class="summary-box">
+    <h4>📋 35.3 Cheat sheet</h4>
+    <ul>
+      <li><strong>Patterns:</strong> sync API (simple/low-volume) · queue (high-volume/decoupled — usually "best") · DB write (owned store, upsert on key).</li>
+      <li><strong>Loop:</strong> extract → validate → (valid) write / (invalid) bounded repair-retry → DLQ → human.</li>
+      <li><strong>Match the retry to the error:</strong> transient → backoff; validation → repair prompt; missing-in-source → human.</li>
+      <li><strong>Always idempotent</strong> downstream writes; <strong>always bounded</strong> retries.</li>
+      <li><strong>DLQ preserves &amp; unblocks;</strong> human-in-the-loop is the long-tail safety net.</li>
+    </ul>
+  </div>
+
+  <!-- ============ 35.4 ============ -->
+  <h2 id="s354">35.4 Practice Questions &amp; Walkthroughs</h2>
+  <p>Five scenario-style items in the pattern the exam favours. Read each stem for the qualifier — <em>BEST</em>, <em>MOST</em>, <em>FIRST</em> — before scanning options.</p>
+
+  <!-- Q1 -->
+  <div class="mcq">
+    <span class="qnum">Q1</span>
+    <div class="stem">A downstream ERP system rejects a Claude-extracted JSON payload due to an unexpected <code class="inline">null</code> in a required field. What is the <strong>BEST</strong> architectural fix?</div>
+    <ul class="opts">
+      <li><span class="opt-letter">A)</span> Increase model temperature so the field is filled more often.</li>
+      <li><span class="opt-letter">B)</span> Add schema validation with a default-value fallback (or repair step) <em>before</em> sending downstream.</li>
+      <li><span class="opt-letter">C)</span> Retry the same prompt indefinitely until the field is populated.</li>
+      <li><span class="opt-letter">D)</span> Disable the required-field constraint in the ERP.</li>
+    </ul>
+    <div class="answer">
+      <span class="verdict">✔ Correct: B.</span> Validation is the trust boundary — catching the null <em>before</em> the write and applying a deliberate fallback (or repair retry) prevents the bad record from ever reaching the ERP.
+      <br><span class="wrong">‘A’ wrong:</span> higher temperature increases hallucination, not correctness. <span class="wrong">‘C’ wrong:</span> unbounded identical retries loop and burn tokens. <span class="wrong">‘D’ wrong:</span> removing the constraint hides the defect and corrupts the ledger.
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="mcq">
+    <span class="qnum">Q2</span>
+    <div class="stem">You want to minimise the chance that Claude returns prose wrapped around your JSON, forcing brittle string parsing. Which design choice helps <strong>MOST</strong>?</div>
+    <ul class="opts">
+      <li><span class="opt-letter">A)</span> Ask for JSON in the system prompt and parse the first <code class="inline">{...}</code> you find with a regex.</li>
+      <li><span class="opt-letter">B)</span> Define an extraction <em>tool</em> with an <code class="inline">input_schema</code> and force <code class="inline">tool_choice</code> to that tool.</li>
+      <li><span class="opt-letter">C)</span> Raise <code class="inline">max_tokens</code> so the JSON is never truncated.</li>
+      <li><span class="opt-letter">D)</span> Increase temperature to make the model more flexible about formatting.</li>
+    </ul>
+    <div class="answer">
+      <span class="verdict">✔ Correct: B.</span> Tool use makes the model emit structured arguments as tool input, and forcing <code class="inline">tool_choice</code> guarantees it calls your tool rather than replying in chat — removing the "prose around JSON" problem at the source.
+      <br><span class="wrong">‘A’ wrong:</span> regex-scraping JSON from free text is exactly the brittleness you're trying to avoid. <span class="wrong">‘C’ wrong:</span> helps with truncation only, not formatting. <span class="wrong">‘D’ wrong:</span> higher temperature makes formatting <em>less</em> predictable.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="mcq">
+    <span class="qnum">Q3</span>
+    <div class="stem">Your schema passes, but finance reports that some invoices post with a <code class="inline">total_amount</code> that doesn't equal the sum of line items. What is the <strong>MOST</strong> appropriate fix?</div>
+    <ul class="opts">
+      <li><span class="opt-letter">A)</span> Add <code class="inline">additionalProperties: false</code> to the schema.</li>
+      <li><span class="opt-letter">B)</span> Add a <code class="inline">minimum</code> constraint to <code class="inline">total_amount</code>.</li>
+      <li><span class="opt-letter">C)</span> Add a business-rule check after schema validation that compares the total to the summed line items within a tolerance.</li>
+      <li><span class="opt-letter">D)</span> Lower the temperature to 0.</li>
+    </ul>
+    <div class="answer">
+      <span class="verdict">✔ Correct: C.</span> JSON Schema validates structure and simple per-field constraints but cannot express cross-field relationships like "total equals the sum of items." A business-rule check layered after schema validation is the right tool.
+      <br><span class="wrong">‘A’ wrong:</span> blocks hallucinated fields, unrelated to arithmetic. <span class="wrong">‘B’ wrong:</span> only bounds the value, doesn't compare fields. <span class="wrong">‘D’ wrong:</span> may reduce errors marginally but doesn't <em>detect</em> the inconsistency.
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="mcq">
+    <span class="qnum">Q4</span>
+    <div class="stem">Extraction volume is spiky — 10× spikes at month-end — and the ERP occasionally goes down for maintenance. Which integration pattern is <strong>BEST</strong>?</div>
+    <ul class="opts">
+      <li><span class="opt-letter">A)</span> Synchronous POST from the extraction worker straight to the ERP.</li>
+      <li><span class="opt-letter">B)</span> A message queue between validation and the ERP, with retry + dead-letter semantics.</li>
+      <li><span class="opt-letter">C)</span> Write to a local file and email it to finance nightly.</li>
+      <li><span class="opt-letter">D)</span> Skip validation during spikes to keep up with volume.</li>
+    </ul>
+    <div class="answer">
+      <span class="verdict">✔ Correct: B.</span> A queue decouples extraction from the ERP, absorbs the month-end spike, and lets the consumer retry (or dead-letter) while the ERP is down — nothing is lost and nothing blocks.
+      <br><span class="wrong">‘A’ wrong:</span> a synchronous call stalls the whole pipeline when the ERP is unavailable. <span class="wrong">‘C’ wrong:</span> loses auditability and timeliness. <span class="wrong">‘D’ wrong:</span> never trade correctness for throughput — that's how bad data enters the ledger.
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="mcq">
+    <span class="qnum">Q5</span>
+    <div class="stem">A validation failure occurs because a required <code class="inline">tax_id</code> is genuinely absent from the source document. What should the pipeline do <strong>FIRST</strong>?</div>
+    <ul class="opts">
+      <li><span class="opt-letter">A)</span> Have Claude infer a plausible <code class="inline">tax_id</code> so the record can pass.</li>
+      <li><span class="opt-letter">B)</span> Retry the extraction three more times with the same prompt.</li>
+      <li><span class="opt-letter">C)</span> Route the record to human review (via the DLQ) rather than fabricate a value.</li>
+      <li><span class="opt-letter">D)</span> Delete the required constraint for <code class="inline">tax_id</code>.</li>
+    </ul>
+    <div class="answer">
+      <span class="verdict">✔ Correct: C.</span> When data is truly not present in the source, no amount of retrying or prompting can honestly produce it. The correct move is to quarantine for human review — fabricating a value would corrupt the record and defeat the point of extraction.
+      <br><span class="wrong">‘A’ wrong:</span> inventing data is the worst outcome — it's confidently wrong. <span class="wrong">‘B’ wrong:</span> retries can't extract what isn't there. <span class="wrong">‘D’ wrong:</span> weakening the contract lets incomplete records through system-wide.
+    </div>
+  </div>
+
+  <div class="exam-box">
+    <h4>🎯 Exam Strategy</h4>
+    <ul>
+      <li><strong>Watch the qualifier.</strong> BEST / MOST / FIRST changes the answer. Several options may be "not wrong" — pick the one that best satisfies the qualifier.</li>
+      <li><strong>Eliminate anti-patterns instantly.</strong> Options that <em>increase temperature to fix correctness</em>, <em>retry indefinitely</em>, <em>disable a constraint</em>, <em>skip validation</em>, or <em>fabricate data</em> are almost always distractors. Cross them out first — this often leaves one answer.</li>
+      <li><strong>The recurring right answer</strong> in this scenario is "validate before write, then repair/retry with bounds, then human-in-the-loop." When in doubt, choose the option that protects the trust boundary.</li>
+      <li><strong>Time management.</strong> For scenario items, budget roughly a minute each: ~15s to read the stem and spot the qualifier, ~25s to eliminate two distractors, ~20s to decide between the final two. Flag and move on rather than stalling — a hard item is worth the same as an easy one.</li>
+      <li><strong>Read the last sentence of the stem twice.</strong> It usually contains the actual ask (the constraint or goal) that discriminates between the two plausible options.</li>
+    </ul>
+  </div>
+
+  <div class="summary-box">
+    <h4>📋 35.4 Cheat sheet</h4>
+    <ul>
+      <li><strong>Default correct move:</strong> validate → repair-retry (bounded) → DLQ → human.</li>
+      <li><strong>Instant distractors:</strong> raise temperature for correctness · retry forever · disable constraints · skip validation · fabricate data.</li>
+      <li><strong>Cross-field logic</strong> → business rules, not schema. <strong>Prose-around-JSON</strong> → tool use + forced <code class="inline">tool_choice</code>.</li>
+      <li><strong>Spiky volume + flaky downstream</strong> → message queue.</li>
+    </ul>
+  </div>
+
+  <!-- ============ EXIT CHECK ============ -->
+  <div class="exit-check" id="exit">
+    <h2>✓ Exit Check — Chapter 35 completeness</h2>
+    <p>Confirm every subsection of the chapter outline is covered before moving on:</p>
+    <ul>
+      <li><span class="chk">✔</span><strong>35.1 Scenario Overview &amp; Architecture</strong> — invoice use case, inline-SVG four-stage architecture diagram (input → Claude → validation → downstream), and key decisions (tool use vs. prompting, temperature, streaming vs. batch, forced tool_choice, idempotency, observability).</li>
+      <li><span class="chk">✔</span><strong>35.2 JSON Schema Validation &amp; Edge Case Handling</strong> — schema definition + enforcement code, three malformed examples (missing / wrong-type / hallucinated), and an 8-row edge-case → detection → fix table.</li>
+      <li><span class="chk">✔</span><strong>35.3 Downstream System Integration</strong> — integration patterns (API / queue / DB), inline-SVG retry/fallback flow diagram, and error-handling strategies (bounded retries, error classes, DLQ, human-in-the-loop, idempotency, circuit breaking).</li>
+      <li><span class="chk">✔</span><strong>35.4 Practice Questions &amp; Walkthroughs</strong> — 5 scenario MCQs with correct answers + reasoning (right vs. distractors) and an Exam Strategy callout with time management and elimination tips.</li>
+      <li><span class="chk">✔</span><strong>Throughout</strong> — 💡 Tips, ⚠️ Pitfalls, and per-subsection summary/cheat-sheet boxes.</li>
+      <li><span class="chk">✔</span><strong>Constraints met</strong> — single self-contained HTML file, internal <code class="inline">&lt;style&gt;</code> only, inline SVG diagrams (no external links), semantic HTML, TOC linking to 35.1–35.4, and an explicit scope/assumptions note (no fabricated official exam facts).</li>
+    </ul>
+  </div>
+
+  <footer class="foot">
+    Illustrative / simulated study material for skill preparation. Technical content reflects general JSON Schema, Claude tool-use, and integration best practices; verify API specifics against current Anthropic documentation. No official "Claude Certified Architect" program facts are asserted.
+  </footer>
+
+</div>
+
+
+</body></html>

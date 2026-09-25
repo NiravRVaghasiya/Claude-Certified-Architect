@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 21 — Validation, Retry &amp; Feedback Loops | Claude Certified Architect</title>
+<style>
+  :root{
+    --bg:#f7f8fa;
+    --surface:#ffffff;
+    --surface-alt:#f0f3f7;
+    --ink:#1a2233;
+    --ink-2:#42506b;
+    --ink-muted:#7a8699;
+    --border:#dfe3ea;
+    --border-strong:#c6ccd8;
+    --primary:#4f46e5;
+    --primary-soft:#eef0ff;
+    --success:#0f9d58;
+    --success-soft:#e6f6ec;
+    --danger:#d93636;
+    --danger-soft:#fdecec;
+    --warn:#c77700;
+    --warn-soft:#fff4e0;
+    --info:#0b74c4;
+    --info-soft:#e6f3fc;
+    --tip:#0d8a6a;
+    --tip-soft:#e4f7f1;
+    --exam:#7c3aed;
+    --exam-soft:#f2ebfe;
+    --mono:'SF Mono',ui-monospace,'Cascadia Code',Consolas,'Roboto Mono',monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --radius:10px;
+    --radius-sm:6px;
+    --shadow:0 1px 3px rgba(20,30,55,.08),0 1px 2px rgba(20,30,55,.04);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--sans);line-height:1.6;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px 80px;}
+
+  /* ---------- Title block ---------- */
+  header.hero{
+    background:linear-gradient(135deg,#3730a3 0%,#6d28d9 55%,#9333ea 100%);
+    color:#fff;padding:48px 24px 40px;margin-bottom:8px;
+  }
+  header.hero .inner{max-width:1080px;margin:0 auto;}
+  .exam-tag{
+    display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:700;background:rgba(255,255,255,.16);padding:6px 12px;border-radius:100px;
+    margin-bottom:16px;
+  }
+  header.hero h1{font-size:34px;line-height:1.2;margin:0 0 8px;font-weight:800;}
+  header.hero .sub{font-size:17px;color:#e6e2ff;margin:0;max-width:720px;}
+  .levels{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;}
+  .level-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+    padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;}
+
+  /* ---------- Nav / TOC ---------- */
+  nav.toc{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px 26px;margin:28px 0;box-shadow:var(--shadow);
+  }
+  nav.toc h2{margin:0 0 14px;font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-muted);}
+  nav.toc ol{margin:0;padding-left:0;list-style:none;column-count:2;column-gap:36px;}
+  nav.toc li{margin:0 0 9px;break-inside:avoid;}
+  nav.toc a{color:var(--ink-2);text-decoration:none;font-size:14.5px;display:flex;gap:8px;}
+  nav.toc a:hover{color:var(--primary);}
+  nav.toc a .num{color:var(--primary);font-weight:700;font-family:var(--mono);min-width:38px;}
+  @media(max-width:720px){nav.toc ol{column-count:1;}}
+
+  /* ---------- Sections ---------- */
+  section{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:30px 32px;margin:24px 0;box-shadow:var(--shadow);scroll-margin-top:20px;
+  }
+  section > h2{
+    font-size:24px;margin:0 0 6px;font-weight:800;color:var(--ink);
+    display:flex;align-items:baseline;gap:12px;
+  }
+  section > h2 .snum{color:var(--primary);font-family:var(--mono);font-size:20px;}
+  h3{font-size:16px;margin:26px 0 8px;color:var(--ink);letter-spacing:.01em;
+    text-transform:uppercase;font-weight:700;font-size:13.5px;color:var(--ink-muted);
+    border-bottom:1px solid var(--border);padding-bottom:6px;}
+  h3:first-of-type{margin-top:20px;}
+  p{margin:8px 0;color:var(--ink-2);}
+  strong{color:var(--ink);}
+  code.inl{font-family:var(--mono);background:var(--surface-alt);padding:2px 6px;
+    border-radius:4px;font-size:.88em;color:#5a3ec8;border:1px solid var(--border);}
+  ol.steps{margin:8px 0;padding-left:22px;}
+  ol.steps li{margin:6px 0;color:var(--ink-2);}
+  ul.plain{margin:8px 0;padding-left:20px;}
+  ul.plain li{margin:5px 0;color:var(--ink-2);}
+
+  /* ---------- Callout boxes ---------- */
+  .tip-box,.exam-box,.note-box,.warn-box{
+    border-radius:var(--radius-sm);padding:14px 16px;margin:16px 0;font-size:14.5px;
+    border-left:4px solid;line-height:1.55;
+  }
+  .tip-box{background:var(--tip-soft);border-color:var(--tip);color:#0a5c48;}
+  .tip-box strong{color:#0a5c48;}
+  .exam-box{background:var(--exam-soft);border-color:var(--exam);color:#4c2596;}
+  .exam-box strong{color:#4c2596;}
+  .note-box{background:var(--info-soft);border-color:var(--info);color:#0a4d80;}
+  .note-box strong{color:#0a4d80;}
+  .warn-box{background:var(--warn-soft);border-color:var(--warn);color:#8a5200;}
+  .warn-box strong{color:#8a5200;}
+  .exam-box .q{display:block;margin-top:8px;padding:10px 12px;background:rgba(124,58,237,.08);
+    border-radius:6px;font-style:italic;}
+
+  /* ---------- Code blocks ---------- */
+  pre{
+    background:#1b2130;color:#e7ebf3;border-radius:8px;padding:16px 18px;margin:14px 0;
+    overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.55;
+    border:1px solid #2a3247;
+  }
+  pre .cm{color:#7f8aa3;font-style:italic;}
+  pre .k{color:#c792ea;}
+  pre .s{color:#9ece6a;}
+  pre .n{color:#ff9e64;}
+  pre .key{color:#7dcfff;}
+  pre .b{color:#f7768e;}
+  .code-label{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink-muted);margin:14px 0 -6px;font-weight:700;}
+
+  /* ---------- Tables ---------- */
+  .tbl-wrap{overflow-x:auto;margin:16px 0;}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface);
+    border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+  th{background:var(--surface-alt);text-align:left;padding:11px 14px;font-weight:700;
+    color:var(--ink);border-bottom:2px solid var(--border-strong);font-size:13px;
+    text-transform:uppercase;letter-spacing:.03em;}
+  td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--ink-2);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  tr:hover td{background:var(--surface-alt);}
+  .yes{color:var(--success);font-weight:700;}
+  .no{color:var(--danger);font-weight:700;}
+  td code,th code{font-family:var(--mono);font-size:12.5px;color:#5a3ec8;
+    background:var(--surface-alt);padding:1px 5px;border-radius:4px;}
+
+  /* ---------- Flow / diagram primitives ---------- */
+  .diagram{background:var(--surface-alt);border:1px solid var(--border);border-radius:8px;
+    padding:22px 18px;margin:16px 0;}
+  .diagram .cap{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-muted);
+    text-align:center;margin-bottom:16px;font-weight:700;}
+  .flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;}
+  .node{background:var(--surface);border:2px solid var(--primary);border-radius:8px;
+    padding:10px 14px;font-size:13px;font-weight:600;color:var(--ink);text-align:center;
+    min-width:96px;box-shadow:var(--shadow);}
+  .node.ok{border-color:var(--success);}
+  .node.bad{border-color:var(--danger);}
+  .node.dec{border-color:var(--warn);border-radius:8px;transform:none;}
+  .node.term{background:var(--primary);color:#fff;border-color:var(--primary);}
+  .arrow{color:var(--ink-muted);font-size:20px;font-weight:700;padding:0 2px;}
+  .arrow.down{width:100%;text-align:center;}
+  .loop-label{font-size:11px;color:var(--warn);font-style:italic;text-align:center;
+    width:100%;margin:4px 0;}
+
+  /* sequence diagram */
+  .seq{display:grid;gap:0;font-size:13px;}
+  .seq .lane-head{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px;}
+  .seq .lane-head div{background:var(--primary);color:#fff;text-align:center;padding:8px;
+    border-radius:6px;font-weight:700;font-size:12px;}
+  .seq-step{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;margin:4px 0;
+    background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px;}
+  .seq-step .n{background:var(--exam);color:#fff;border-radius:50%;width:24px;height:24px;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;}
+  .seq-step .t strong{color:var(--ink);}
+  .seq-step .t .meta{font-family:var(--mono);font-size:11.5px;color:var(--exam);}
+
+  /* comparison split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+  @media(max-width:640px){.split{grid-template-columns:1fr;}}
+  .split .col{border-radius:8px;padding:16px;border:1px solid var(--border);}
+  .split .col.a{background:var(--info-soft);border-color:#b9ddf5;}
+  .split .col.b{background:var(--warn-soft);border-color:#f3dca8;}
+  .split .col h4{margin:0 0 8px;font-size:14px;}
+  .split .col.a h4{color:var(--info);}
+  .split .col.b h4{color:var(--warn);}
+  .split .col ul{margin:6px 0;padding-left:18px;font-size:13.5px;}
+  .split .col li{margin:4px 0;}
+
+  /* cheat sheet */
+  .cheat{background:var(--surface);border:2px dashed var(--primary);border-radius:var(--radius);
+    padding:26px 30px;margin:24px 0;box-shadow:var(--shadow);}
+  .cheat h2{margin:0 0 4px;font-size:20px;display:flex;align-items:center;gap:10px;}
+  .cheat .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 30px;margin-top:14px;}
+  @media(max-width:640px){.cheat .grid{grid-template-columns:1fr;}}
+  .cheat .grid li{list-style:none;font-size:13.8px;padding:6px 0;border-bottom:1px solid var(--border);
+    color:var(--ink-2);}
+  .cheat .grid li b{color:var(--primary);font-family:var(--mono);}
+
+  .back{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--ink-muted);
+    text-decoration:none;}
+  .back:hover{color:var(--primary);}
+
+  .field-legend{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0;}
+  .field-legend .chip{background:var(--surface-alt);border:1px solid var(--border);border-radius:100px;
+    padding:5px 12px;font-size:12.5px;font-family:var(--mono);color:#5a3ec8;}
+
+  footer.foot{text-align:center;color:var(--ink-muted);font-size:12.5px;margin-top:36px;
+    padding-top:20px;border-top:1px solid var(--border);}
+  .disclaimer{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);
+    padding:12px 16px;font-size:12.5px;color:var(--ink-muted);margin:20px 0;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="inner">
+    <span class="exam-tag">Claude Certified Architect · Foundations &amp; Professional</span>
+    <h1>Chapter 21 — Validation, Retry &amp; Feedback Loops</h1>
+    <p class="sub">Designing agentic systems that catch their own mistakes: error-feedback retries,
+    schema vs. semantic validation, self-correction flows, and long-horizon feedback tracking.</p>
+    <div class="levels">
+      <span class="level-pill">📘 7 subtopics · 21.1 → 21.7</span>
+      <span class="level-pill">🧪 Hands-on lab included</span>
+      <span class="level-pill">🎯 Exam-focused</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="disclaimer">
+    <strong>Study note:</strong> All practice questions in this guide are labelled
+    <em>“Example-style question”</em> and are illustrative teaching aids — they are <strong>not</strong>
+    reproductions of official exam items. Field names and payloads are consistent, realistic examples
+    used to teach the underlying architecture patterns.
+  </div>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#cheat"><span class="num">★</span> Quick-Reference Cheat Sheet</a></li>
+      <li><a href="#s1"><span class="num">21.1</span> Retry-with-Error-Feedback</a></li>
+      <li><a href="#s2"><span class="num">21.2</span> When Retries Work vs. Don’t</a></li>
+      <li><a href="#s3"><span class="num">21.3</span> Feedback Loop &amp; Dismissal Patterns</a></li>
+      <li><a href="#s4"><span class="num">21.4</span> Semantic vs. Schema Errors</a></li>
+      <li><a href="#s5"><span class="num">21.5</span> Self-Correction: total mismatch</a></li>
+      <li><a href="#s6"><span class="num">21.6</span> <code>detected_pattern</code> &amp; <code>conflict_detected</code></a></li>
+      <li><a href="#s7"><span class="num">21.7</span> Hands-On: Validation &amp; Retry</a></li>
+      <li><a href="#summary"><span class="num">▦</span> Chapter Summary Table</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <div class="cheat" id="cheat">
+    <h2>★ Quick-Reference Cheat Sheet</h2>
+    <p style="margin:2px 0 0;color:var(--ink-muted);font-size:13.5px;">Last-minute review — the load-bearing facts.</p>
+    <div class="field-legend">
+      <span class="chip">calculated_total</span>
+      <span class="chip">stated_total</span>
+      <span class="chip">conflict_detected</span>
+      <span class="chip">detected_pattern</span>
+    </div>
+    <ul class="grid">
+      <li><b>Error-feedback retry</b> = re-prompt WITH the specific validation error text appended, not a blind retry.</li>
+      <li><b>Retries fix</b> format/structure errors; <b>retries can’t invent</b> data that is absent from the source.</li>
+      <li><b>Schema error</b> = structurally wrong (type/shape). <b>Semantic error</b> = valid shape, wrong meaning.</li>
+      <li><b>Order:</b> run cheap schema validation first, then expensive semantic validation.</li>
+      <li><b>calculated_total</b> = value your code recomputes from line items (authoritative).</li>
+      <li><b>stated_total</b> = value the model/document asserts (untrusted until verified).</li>
+      <li><b>conflict_detected</b> = boolean GATE: “does a semantic conflict exist?”</li>
+      <li><b>detected_pattern</b> = categorical LABEL: <em>which</em> conflict (e.g. <code>rounding_mismatch</code>) — drives routing.</li>
+      <li><b>Cap retries</b> (typically 2–3) + track attempt count to prevent infinite loops.</li>
+      <li><b>Dismissal tracking</b> = asynchronous, offline feedback loop; distinct from the in-request retry loop.</li>
+      <li><b>Data-absent → don’t retry.</b> Short-circuit to escalation / human-in-the-loop.</li>
+      <li><b>Feed back the offending value</b>, not just “invalid” — vague errors cause repeat failures.</li>
+    </ul>
+  </div>
+
+  <!-- ============ 21.1 ============ -->
+  <section id="s1">
+    <h2><span class="snum">21.1</span> Retry-with-Error-Feedback: Appending Specific Validation Errors</h2>
+
+    <h3>Concept Explanation</h3>
+    <p><strong>Retry-with-error-feedback</strong> is a self-correction pattern: when a model’s output
+    fails validation, you don’t just call the model again with the same prompt. Instead you construct a
+    <em>new</em> prompt that includes (a) the original request, (b) the model’s failed output, and
+    (c) the <strong>specific validation error</strong> that was raised. The model then repairs its own
+    output using the concrete feedback.</p>
+    <p>The critical word is <em>specific</em>. “Your JSON was invalid” yields another random guess.
+    “Field <code class="inl">stated_total</code> was a string <code class="inl">\"250.00\"</code> but must
+    be a number” tells the model exactly what to fix.</p>
+
+    <h3>How It Works</h3>
+    <ol class="steps">
+      <li><strong>Generate</strong> — model produces a structured response.</li>
+      <li><strong>Validate</strong> — run the output through schema + semantic checks.</li>
+      <li><strong>Capture</strong> — on failure, serialize a <em>structured, human-readable</em> error (field, expected, actual).</li>
+      <li><strong>Compose retry prompt</strong> — original instructions + the failed output + the exact error string.</li>
+      <li><strong>Regenerate</strong> — model returns a corrected response.</li>
+      <li><strong>Re-validate</strong> — pass ⇒ done; fail ⇒ loop until <code class="inl">max_attempts</code>.</li>
+    </ol>
+
+    <h3>Visualization — Retry Loop</h3>
+    <div class="diagram">
+      <div class="cap">Fig 21.1 — Error-feedback retry loop</div>
+      <div class="flow">
+        <span class="node term">Prompt</span><span class="arrow">→</span>
+        <span class="node">Generate</span><span class="arrow">→</span>
+        <span class="node dec">Validate?</span><span class="arrow">→</span>
+        <span class="node ok">✓ Return</span>
+      </div>
+      <div class="loop-label">↺ on failure: append <code>error_message</code> + offending value, increment attempt, regenerate</div>
+      <div class="flow">
+        <span class="node bad">✗ Fail</span><span class="arrow">→</span>
+        <span class="node">Build feedback prompt</span><span class="arrow">→</span>
+        <span class="node dec">attempt &lt; max?</span><span class="arrow">→</span>
+        <span class="node">Generate&nbsp;(retry)</span>
+      </div>
+      <div class="loop-label">attempt ≥ max ⇒ escalate / abort</div>
+    </div>
+
+    <h3>Code / Config Example</h3>
+    <div class="code-label">Retry prompt payload (attempt 2)</div>
+<pre><span class="key">{</span>
+  <span class="key">"attempt"</span>: <span class="n">2</span>,
+  <span class="key">"max_attempts"</span>: <span class="n">3</span>,
+  <span class="key">"original_instruction"</span>: <span class="s">"Extract the invoice into the InvoiceSchema."</span>,
+  <span class="key">"previous_output"</span>: <span class="key">{</span> <span class="key">"stated_total"</span>: <span class="s">"250.00"</span>, <span class="cm">/* string, not number */</span> <span class="key">}</span>,
+  <span class="key">"validation_error"</span>: <span class="key">{</span>
+    <span class="key">"field"</span>: <span class="s">"stated_total"</span>,
+    <span class="key">"expected"</span>: <span class="s">"number"</span>,
+    <span class="key">"actual"</span>: <span class="s">"string \"250.00\""</span>,
+    <span class="key">"error_message"</span>: <span class="s">"stated_total must be a JSON number, not a string. Return 250.00 (no quotes)."</span>
+  <span class="key">}</span>
+<span class="key">}</span></pre>
+
+    <div class="tip-box">💡 <strong>Tip:</strong> Echo the <em>offending value</em> back verbatim in the retry
+    prompt (“you returned <code class="inl">\"250.00\"</code>”). Models correct far more reliably when they
+    can see their own mistake next to the rule they broke.</div>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> Distinguish a <em>blind retry</em> (same prompt, hope for
+    a better sample) from an <em>error-feedback retry</em> (augmented prompt carrying the specific error).
+    Distractors often propose “increase <code class="inl">max_tokens</code>” or “raise temperature” as the fix
+    for a validation failure — those change sampling, not correctness.
+    <span class="q">Example-style question: An extraction agent returns malformed JSON. Which change most
+    directly improves the next attempt’s success? → <strong>Append the specific parser error and the offending
+    fragment to the retry prompt.</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ 21.2 ============ -->
+  <section id="s2">
+    <h2><span class="snum">21.2</span> When Retries Work (Format Mismatches) vs. When They Don’t (Absent Data)</h2>
+
+    <h3>Concept Explanation</h3>
+    <p>Retries are powerful but not magic. They help when the <strong>information exists</strong> and only its
+    <em>form</em> is wrong. They fail when the required <strong>information is simply not present</strong> in the
+    source — no number of retries can invent data that was never there. Confusing these two cases is the most
+    common (and most expensive) design mistake in retry logic.</p>
+
+    <h3>How It Works — Classify Before You Retry</h3>
+    <ol class="steps">
+      <li>On validation failure, ask: <em>is the data present but mis-formatted, or is it absent?</em></li>
+      <li><strong>Present + mis-formatted</strong> → error-feedback retry (21.1). High success rate.</li>
+      <li><strong>Absent</strong> → <em>short-circuit</em>: do not retry. Escalate, request the missing input, or return a
+      structured “needs human” result.</li>
+    </ol>
+
+    <h3>Visualization — Retry-Works vs. Retry-Fails</h3>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Scenario</th><th>Retry likely to succeed?</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td>Date <code>MM/DD/YYYY</code> expected, model returned <code>DD-MM-YYYY</code></td><td class="yes">✅ Yes</td><td>Format mismatch — the value exists, model can reformat.</td></tr>
+        <tr><td><code>stated_total</code> returned as string <code>"250.00"</code></td><td class="yes">✅ Yes</td><td>Type coercion — data present, wrong JSON type.</td></tr>
+        <tr><td>Enum value <code>"US-DOLLAR"</code> instead of allowed <code>"USD"</code></td><td class="yes">✅ Yes</td><td>Normalisation — map to the permitted token.</td></tr>
+        <tr><td>Required <code>customer_id</code> not present anywhere in the source document</td><td class="no">❌ No</td><td>Data absent — retrying invents/hallucinates a value.</td></tr>
+        <tr><td>Invoice has no line items, but a per-line breakdown is required</td><td class="no">❌ No</td><td>Source lacks the data — escalate, don’t loop.</td></tr>
+        <tr><td>Model must cite a statute the document never mentions</td><td class="no">❌ No</td><td>No grounding — retry pressure increases hallucination risk.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="warn-box">⚠️ <strong>Anti-pattern:</strong> Looping on an <em>absent-data</em> failure doesn’t just waste
+    tokens — it actively pushes the model toward <strong>hallucinating</strong> a plausible-looking value to
+    satisfy the schema. A schema-valid hallucination is worse than an honest failure.</div>
+
+    <div class="tip-box">💡 <strong>Tip:</strong> Make your validator emit a machine-readable
+    <code class="inl">recoverable: true|false</code> flag. Your retry controller reads that flag to decide
+    <em>retry vs. escalate</em> — never leave the recover/abort decision to prompt vibes.</div>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> Watch for the “just try again” trap. If the stem says a
+    required field is <em>missing from the source</em>, the correct answer is <strong>escalate / request input /
+    return partial result</strong> — never “retry with higher temperature.” Key phrase: <em>“data not present in
+    the source.”</em>
+    <span class="q">Example-style question: An agent cannot find a mandatory <code class="inl">customer_id</code>
+    in the uploaded PDF. Best action? → <strong>Short-circuit the retry loop and flag for human input.</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ 21.3 ============ -->
+  <section id="s3">
+    <h2><span class="snum">21.3</span> Feedback Loop Design: Tracking Dismissal Patterns</h2>
+
+    <h3>Concept Explanation</h3>
+    <p>There are two distinct loops. The <strong>retry loop</strong> (21.1) is <em>synchronous</em> and lives
+    inside a single request. The <strong>feedback loop</strong> is <em>asynchronous</em> and lives across
+    <em>many</em> requests: it observes how users react to the system’s output — especially
+    <strong>dismissals</strong> (rejecting, overriding, or ignoring a suggestion) — and feeds that signal back
+    to improve prompts, thresholds, and validators over time.</p>
+    <p>Every dismissal is a labelled data point: the system predicted “this is worth surfacing,” the human said
+    “no.” Aggregating the <code class="inl">detected_pattern</code> behind dismissed items reveals systematic
+    false positives.</p>
+
+    <h3>How It Works — Dismissal Lifecycle</h3>
+    <div class="diagram">
+      <div class="cap">Fig 21.3 — Asynchronous feedback loop (sequence)</div>
+      <div class="seq">
+        <div class="lane-head"><div>Agent</div><div>User</div><div>Event Log</div><div>Tuning Job</div></div>
+        <div class="seq-step"><span class="n">1</span><div class="t"><strong>Agent → User:</strong> surfaces a flagged item <span class="meta">conflict_detected=true, detected_pattern="rounding_mismatch"</span></div></div>
+        <div class="seq-step"><span class="n">2</span><div class="t"><strong>User → Agent:</strong> dismisses it (“this rounding is acceptable”)</div></div>
+        <div class="seq-step"><span class="n">3</span><div class="t"><strong>Agent → Log:</strong> append dismissal event <span class="meta">{pattern, decision:"dismissed", ts}</span></div></div>
+        <div class="seq-step"><span class="n">4</span><div class="t"><strong>Tuning Job ← Log:</strong> nightly aggregate — group dismissals by <code>detected_pattern</code></div></div>
+        <div class="seq-step"><span class="n">5</span><div class="t"><strong>Tuning Job → Agent:</strong> raise tolerance / down-weight the noisy pattern; update prompt or threshold</div></div>
+      </div>
+    </div>
+
+    <h3>Code / Config Example</h3>
+    <div class="code-label">Dismissal event record</div>
+<pre><span class="key">{</span>
+  <span class="key">"event_type"</span>: <span class="s">"suggestion_dismissed"</span>,
+  <span class="key">"detected_pattern"</span>: <span class="s">"rounding_mismatch"</span>,
+  <span class="key">"conflict_detected"</span>: <span class="k">true</span>,
+  <span class="key">"delta"</span>: <span class="key">{</span> <span class="key">"calculated_total"</span>: <span class="n">245.00</span>, <span class="key">"stated_total"</span>: <span class="n">245.01</span> <span class="key">}</span>,
+  <span class="key">"user_decision"</span>: <span class="s">"dismissed"</span>,
+  <span class="key">"reason"</span>: <span class="s">"sub-cent rounding is acceptable for this vendor"</span>,
+  <span class="key">"timestamp"</span>: <span class="s">"2026-09-23T10:14:02Z"</span>
+<span class="key">}</span></pre>
+
+    <div class="tip-box">💡 <strong>Tip:</strong> Aggregate dismissals <em>by <code class="inl">detected_pattern</code></em>.
+    If one pattern is dismissed &gt;80% of the time, it’s a systematic false positive — fix the rule (e.g. add a
+    rounding tolerance), don’t just silence individual alerts.</div>
+
+    <div class="warn-box">⚠️ <strong>Watch out:</strong> A feedback loop that only <em>suppresses</em> alerts can
+    silently hide true positives. Track dismissal <em>reasons</em>, not just counts, and keep a small human-audited
+    sample to detect over-suppression drift.</div>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> The tested distinction is <em>synchronous retry loop</em>
+    (fixes one output, now) vs. <em>asynchronous feedback loop</em> (improves the system, later). If a question mentions
+    “over many sessions,” “aggregate,” or “tune thresholds,” it’s the feedback loop — not retry.
+    <span class="q">Example-style question: Users repeatedly dismiss the same <code class="inl">detected_pattern</code>.
+    What’s the right systemic response? → <strong>Aggregate dismissals offline and adjust the detection threshold /
+    prompt.</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ 21.4 ============ -->
+  <section id="s4">
+    <h2><span class="snum">21.4</span> Semantic vs. Schema Validation Errors</h2>
+
+    <h3>Concept Explanation</h3>
+    <p>A <strong>schema (structural) error</strong> means the output has the wrong <em>shape</em>: malformed JSON,
+    a missing required field, a wrong type, an out-of-range enum. A <strong>semantic (logical) error</strong> means
+    the output is <em>structurally perfect</em> but <em>meaningfully wrong</em>: the totals don’t add up, a
+    “ship date” precedes the “order date,” or two fields contradict each other. Schema validity is necessary but
+    <em>not sufficient</em>.</p>
+
+    <h3>How It Works — Two-Stage Gate</h3>
+    <ol class="steps">
+      <li><strong>Schema validation first</strong> (cheap, deterministic) — parse &amp; type-check against the schema. Fail fast.</li>
+      <li><strong>Semantic validation second</strong> (more expensive) — run business rules only on shape-valid data. This is where <code class="inl">conflict_detected</code> is set.</li>
+    </ol>
+
+    <h3>Visualization — Schema vs. Semantic</h3>
+    <div class="split">
+      <div class="col a">
+        <h4>🧱 Schema / Structural</h4>
+        <ul>
+          <li>Wrong <em>shape</em></li>
+          <li>Malformed JSON, missing field, wrong type, bad enum</li>
+          <li>Caught by JSON Schema / Pydantic / type parser</li>
+          <li>Deterministic &amp; cheap</li>
+          <li>Example: <code>stated_total: "250"</code> (string, not number)</li>
+        </ul>
+      </div>
+      <div class="col b">
+        <h4>🧠 Semantic / Logical</h4>
+        <ul>
+          <li>Right shape, wrong <em>meaning</em></li>
+          <li>Totals mismatch, date order, cross-field contradiction</li>
+          <li>Caught by business-rule checks / recomputation</li>
+          <li>Often needs domain logic or a second model pass</li>
+          <li>Example: <code>calculated_total ≠ stated_total</code> ⇒ <code>conflict_detected: true</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Code / Config Example</h3>
+    <div class="code-label">Schema error (structural)</div>
+<pre><span class="key">{</span>
+  <span class="key">"error_class"</span>: <span class="s">"schema"</span>,
+  <span class="key">"field"</span>: <span class="s">"line_items"</span>,
+  <span class="key">"error_message"</span>: <span class="s">"Expected array, got null. Field is required."</span>,
+  <span class="key">"recoverable"</span>: <span class="k">true</span>
+<span class="key">}</span></pre>
+    <div class="code-label">Semantic error (logical)</div>
+<pre><span class="key">{</span>
+  <span class="key">"error_class"</span>: <span class="s">"semantic"</span>,
+  <span class="key">"conflict_detected"</span>: <span class="k">true</span>,
+  <span class="key">"detected_pattern"</span>: <span class="s">"sum_mismatch"</span>,
+  <span class="key">"calculated_total"</span>: <span class="n">245.00</span>,
+  <span class="key">"stated_total"</span>: <span class="n">250.00</span>,
+  <span class="key">"error_message"</span>: <span class="s">"Sum of line items (245.00) != stated_total (250.00)."</span>
+<span class="key">}</span></pre>
+
+    <div class="tip-box">💡 <strong>Tip:</strong> Run schema validation <em>before</em> semantic validation. There’s no
+    point recomputing a total on data that isn’t even parseable — and schema checks are orders of magnitude cheaper.</div>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> Watch for questions contrasting “schema-invalid”
+    (structurally wrong) vs. “semantically-invalid” (structurally fine, logically wrong). A frequent distractor
+    calls a <em>totals mismatch</em> a “schema error” — it isn’t; the JSON is well-formed, so it’s
+    <strong>semantic</strong>.
+    <span class="q">Example-style question: JSON parses cleanly and matches the schema, but the shipping date is
+    before the order date. This is a ___ error. → <strong>Semantic.</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ 21.5 ============ -->
+  <section id="s5">
+    <h2><span class="snum">21.5</span> Self-Correction Validation Flows: <code>calculated_total</code> vs <code>stated_total</code></h2>
+
+    <h3>Concept Explanation</h3>
+    <p>Language models are unreliable arithmeticians, so a robust extraction system never trusts a total the model
+    reports. Instead it <strong>independently recomputes</strong> the value in code and compares:</p>
+    <ul class="plain">
+      <li><code class="inl">stated_total</code> — the figure the model/document <em>asserts</em> (untrusted).</li>
+      <li><code class="inl">calculated_total</code> — the figure <em>your code</em> derives from the line items (authoritative).</li>
+    </ul>
+    <p>If they disagree beyond a tolerance, set <code class="inl">conflict_detected: true</code>, label the
+    <code class="inl">detected_pattern</code>, and route into self-correction.</p>
+
+    <h3>How It Works — Recompute &amp; Reconcile</h3>
+    <div class="diagram">
+      <div class="cap">Fig 21.5 — Self-correction flow</div>
+      <div class="flow">
+        <span class="node">Extract line_items</span><span class="arrow">→</span>
+        <span class="node">Σ items = <b>calculated_total</b></span><span class="arrow">→</span>
+        <span class="node dec">|calc − stated| ≤ ε ?</span>
+      </div>
+      <div class="loop-label">within tolerance ε ⇒ conflict_detected=false ⇒ accept</div>
+      <div class="flow">
+        <span class="node bad">mismatch</span><span class="arrow">→</span>
+        <span class="node">set conflict_detected=true<br>label detected_pattern</span><span class="arrow">→</span>
+        <span class="node">error-feedback retry (re-extract items)</span><span class="arrow">→</span>
+        <span class="node dec">resolved?</span>
+      </div>
+      <div class="loop-label">still mismatched after max attempts ⇒ flag for human review</div>
+    </div>
+
+    <h3>Code / Config Example</h3>
+    <div class="code-label">Self-correction validation payload</div>
+<pre><span class="key">{</span>
+  <span class="key">"field"</span>: <span class="s">"total_amount"</span>,
+  <span class="key">"calculated_total"</span>: <span class="n">245.00</span>,
+  <span class="key">"stated_total"</span>: <span class="n">250.00</span>,
+  <span class="key">"conflict_detected"</span>: <span class="k">true</span>,
+  <span class="key">"detected_pattern"</span>: <span class="s">"rounding_mismatch"</span>,
+  <span class="key">"error_message"</span>: <span class="s">"Stated total does not match calculated sum of line items."</span>
+<span class="key">}</span></pre>
+
+    <div class="tip-box">💡 <strong>Tip:</strong> Always recompute in code and treat <code class="inl">calculated_total</code>
+    as the source of truth. Add a small tolerance (ε) for currency rounding (e.g. ≤ 0.01) so legitimate sub-cent
+    differences don’t trigger a <code class="inl">conflict_detected</code> storm.</div>
+
+    <div class="warn-box">⚠️ <strong>Trap:</strong> Retrying a <em>totals mismatch</em> only helps if the error is a
+    <em>mis-extracted line item</em> (present-but-wrong). If the arithmetic genuinely doesn’t reconcile because a
+    line item is missing from the source, that’s absent data (21.2) → escalate, don’t loop.</div>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> Know which value is authoritative:
+    <code class="inl">calculated_total</code> (your code), not <code class="inl">stated_total</code> (the model).
+    Distractors will suggest “trust the stated total, it came from the document.” Also: a mismatch is a
+    <em>semantic</em> conflict (21.4), never a schema error.
+    <span class="q">Example-style question: <code class="inl">stated_total</code>=250.00 but the line items sum to
+    245.00. What should the pipeline set? → <strong><code>conflict_detected: true</code> with a categorising
+    <code>detected_pattern</code>.</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ 21.6 ============ -->
+  <section id="s6">
+    <h2><span class="snum">21.6</span> The <code>detected_pattern</code> and <code>conflict_detected</code> Fields</h2>
+
+    <h3>Concept Explanation</h3>
+    <p>These two fields work as a pair and are frequently confused on the exam:</p>
+    <ul class="plain">
+      <li><code class="inl">conflict_detected</code> — a <strong>boolean gate</strong>. It answers one yes/no
+      question: <em>“Does a semantic conflict exist in this record?”</em> It’s what your controller branches on.</li>
+      <li><code class="inl">detected_pattern</code> — a <strong>categorical label</strong>. It answers
+      <em>“Which kind of conflict is it?”</em> (e.g. <code class="inl">rounding_mismatch</code>,
+      <code class="inl">sum_mismatch</code>, <code class="inl">missing_line_item</code>,
+      <code class="inl">duplicate_entry</code>, <code class="inl">currency_mismatch</code>). It drives
+      <em>routing</em> and <em>analytics</em>.</li>
+    </ul>
+    <p>Rule of thumb: <code class="inl">conflict_detected</code> decides <em>whether</em> to act;
+    <code class="inl">detected_pattern</code> decides <em>how</em> to act.</p>
+
+    <h3>How It Works — Gate then Route</h3>
+    <ol class="steps">
+      <li>Semantic validator sets <code class="inl">conflict_detected = true</code> when any rule fails.</li>
+      <li>It classifies the failure into a <code class="inl">detected_pattern</code>.</li>
+      <li>The controller routes on the pattern: some patterns → <em>retry</em> (recoverable), some → <em>escalate</em>
+      (absent data), some → <em>auto-tolerate</em> (e.g. sub-cent rounding).</li>
+      <li>Feedback loop (21.3) aggregates dismissals <em>by pattern</em> to tune the system.</li>
+    </ol>
+
+    <h3>Visualization — Pattern → Routing</h3>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th><code>detected_pattern</code></th><th>Meaning</th><th>Recoverable by retry?</th><th>Route</th></tr></thead>
+      <tbody>
+        <tr><td><code>rounding_mismatch</code></td><td>Sub-cent / rounding difference</td><td class="yes">✅ Often auto-tolerate</td><td>Accept within ε or flag low-priority</td></tr>
+        <tr><td><code>sum_mismatch</code></td><td>Line items don’t sum to stated total</td><td class="yes">✅ Yes (re-extract items)</td><td>Error-feedback retry</td></tr>
+        <tr><td><code>missing_line_item</code></td><td>A line item absent from source</td><td class="no">❌ No</td><td>Escalate / human review</td></tr>
+        <tr><td><code>duplicate_entry</code></td><td>Same item counted twice</td><td class="yes">✅ Yes</td><td>Retry with de-dup instruction</td></tr>
+        <tr><td><code>currency_mismatch</code></td><td>Mixed currencies in one total</td><td class="no">❌ No</td><td>Escalate — needs FX policy</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Code / Config Example</h3>
+    <div class="code-label">Gate + label in one record</div>
+<pre><span class="key">{</span>
+  <span class="key">"conflict_detected"</span>: <span class="k">true</span>,          <span class="cm">// GATE: branch on this</span>
+  <span class="key">"detected_pattern"</span>: <span class="s">"sum_mismatch"</span>,   <span class="cm">// LABEL: route on this</span>
+  <span class="key">"calculated_total"</span>: <span class="n">245.00</span>,
+  <span class="key">"stated_total"</span>: <span class="n">250.00</span>,
+  <span class="key">"routing"</span>: <span class="s">"error_feedback_retry"</span>
+<span class="key">}</span></pre>
+
+    <div class="tip-box">💡 <strong>Tip:</strong> Keep <code class="inl">detected_pattern</code> a controlled enum,
+    not free text. A closed vocabulary is what makes routing rules and dismissal analytics (21.3) possible.</div>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> The classic distractor swaps the two: it describes
+    <code class="inl">conflict_detected</code> as “the type of error” or <code class="inl">detected_pattern</code>
+    as “whether an error occurred.” Remember: <strong>boolean gate = <code>conflict_detected</code>;
+    categorical label = <code>detected_pattern</code>.</strong>
+    <span class="q">Example-style question: Which field would you switch/branch your routing logic on? →
+    <strong><code>detected_pattern</code> (after <code>conflict_detected</code> gates in).</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ 21.7 ============ -->
+  <section id="s7">
+    <h2><span class="snum">21.7</span> Hands-On: Implementing Validation and Retry Logic</h2>
+
+    <h3>Concept Explanation</h3>
+    <p>This section assembles 21.1–21.6 into one working controller: <strong>schema → semantic → classify →
+    decide (retry vs. escalate) → error-feedback retry → cap attempts</strong>. Every field name introduced
+    earlier appears here consistently.</p>
+
+    <h3>How It Works — Reference Implementation</h3>
+    <div class="code-label">validation_retry_controller.py (pseudocode)</div>
+<pre><span class="k">def</span> validate(record):
+    <span class="cm"># 1) SCHEMA first — cheap, deterministic</span>
+    schema_errors = schema_check(record)          <span class="cm"># type/shape/required</span>
+    <span class="k">if</span> schema_errors:
+        <span class="k">return</span> Result(ok=<span class="k">False</span>, error_class=<span class="s">"schema"</span>,
+                      recoverable=<span class="k">True</span>, errors=schema_errors)
+
+    <span class="cm"># 2) SEMANTIC second — recompute the total independently</span>
+    calculated_total = round(sum(li.amount <span class="k">for</span> li <span class="k">in</span> record.line_items), 2)
+    stated_total     = record.stated_total
+    conflict_detected = <span class="k">False</span>
+    detected_pattern  = <span class="k">None</span>
+
+    <span class="k">if</span> abs(calculated_total - stated_total) &gt; EPSILON:          <span class="cm"># EPSILON = 0.01</span>
+        conflict_detected = <span class="k">True</span>
+        detected_pattern  = classify_mismatch(record,
+                                calculated_total, stated_total)
+        <span class="k">return</span> Result(ok=<span class="k">False</span>, error_class=<span class="s">"semantic"</span>,
+                      conflict_detected=conflict_detected,
+                      detected_pattern=detected_pattern,
+                      calculated_total=calculated_total,
+                      stated_total=stated_total,
+                      recoverable=is_recoverable(detected_pattern))
+    <span class="k">return</span> Result(ok=<span class="k">True</span>)
+
+
+<span class="k">def</span> run_with_retry(prompt, max_attempts=3):
+    attempt, output = 0, generate(prompt)
+    <span class="k">while</span> attempt &lt; max_attempts:
+        result = validate(output)
+        <span class="k">if</span> result.ok:
+            <span class="k">return</span> output                              <span class="cm"># ✓ success</span>
+        <span class="k">if</span> <span class="k">not</span> result.recoverable:                       <span class="cm"># 21.2: absent data</span>
+            <span class="k">return</span> escalate(result)                     <span class="cm"># short-circuit, no loop</span>
+        <span class="cm"># 21.1: build error-feedback prompt with the SPECIFIC error</span>
+        prompt = augment(prompt, output, result.error_message)
+        output = generate(prompt)
+        attempt += 1
+        log_attempt(result.detected_pattern, attempt)   <span class="cm"># 21.3 feed</span>
+    <span class="k">return</span> escalate(last_result)                        <span class="cm"># attempts exhausted</span></pre>
+
+    <div class="note-box">📎 <strong>Trace it:</strong> schema check (21.4) → recompute
+    <code class="inl">calculated_total</code> vs <code class="inl">stated_total</code> (21.5) → set
+    <code class="inl">conflict_detected</code> + <code class="inl">detected_pattern</code> (21.6) → recoverable?
+    retry with specific error (21.1) or escalate (21.2) → log for the feedback loop (21.3). Every subtopic maps to
+    a line above.</div>
+
+    <h3>🧪 Mini Practice Scenario</h3>
+    <div class="tip-box" style="border-color:var(--primary);background:var(--primary-soft);color:#332a86;">
+      <strong>Scenario:</strong> An invoice agent returns valid JSON. Line items are
+      <code class="inl">[100.00, 45.00, 100.00]</code> and <code class="inl">stated_total</code> is
+      <code class="inl">250.00</code>. The same <code class="inl">100.00</code> line appears twice, but the vendor’s
+      original PDF lists it only once. What does the controller do — step by step?
+    </div>
+    <div class="code-label">Solution walkthrough</div>
+<pre><span class="cm"># Schema check → PASS (well-formed, correct types)</span>
+calculated_total = 100.00 + 45.00 + 100.00 = <span class="n">245.00</span>
+stated_total     = <span class="n">250.00</span>
+|245.00 - 250.00| = 5.00  &gt; EPSILON(0.01)  <span class="cm"># semantic conflict</span>
+
+conflict_detected = <span class="k">true</span>
+detected_pattern  = <span class="s">"duplicate_entry"</span>   <span class="cm"># 100.00 counted twice</span>
+recoverable       = <span class="k">true</span>                <span class="cm"># present-but-wrong, not absent</span>
+
+<span class="cm"># → error-feedback retry (21.1): re-extract with de-dup instruction</span>
+augment(prompt, output,
+  <span class="s">"Line item 100.00 appears twice but the source lists it once. "</span>
+  <span class="s">"Remove the duplicate; sum must equal stated_total 250.00 or flag mismatch."</span>)
+
+<span class="cm"># Retry result: items = [100.00, 45.00, 105.00] → calc = 250.00</span>
+<span class="cm"># conflict_detected = false → ✓ accept</span></pre>
+    <p style="font-size:14px;color:var(--ink-2);"><strong>Key teaching point:</strong> a
+    <code class="inl">duplicate_entry</code> is <em>recoverable</em> (the data is present, just mis-structured), so the
+    error-feedback retry is the correct route — contrast with <code class="inl">missing_line_item</code>, which is
+    absent data and must escalate (21.2).</p>
+
+    <div class="exam-box">🎯 <strong>Exam Strategy:</strong> Hands-on questions test whether you can trace the
+    <em>ordering</em>: schema → semantic → classify → recoverable-check → retry/escalate → cap. A common distractor
+    reorders these (e.g. semantic before schema, or retry before checking recoverability). The
+    <code class="inl">recoverable</code> check <strong>must</strong> gate the retry — that’s the 21.2 discipline
+    enforced in code.
+    <span class="q">Example-style question: In the controller, what prevents an infinite loop on absent data? →
+    <strong>The <code>recoverable=false</code> short-circuit to <code>escalate()</code> plus the
+    <code>max_attempts</code> cap.</strong></span></div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+    <h2><span class="snum">▦</span> Chapter Summary Table</h2>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Subtopic</th><th>Key Field / Concept</th><th>When to Use</th><th>Common Trap</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>21.1</strong> Retry-with-error-feedback</td>
+          <td><code>error_message</code> in retry prompt</td>
+          <td>Output failed validation but data exists</td>
+          <td>Blind retry / raising temperature instead of feeding the specific error</td>
+        </tr>
+        <tr>
+          <td><strong>21.2</strong> Retry works vs. doesn’t</td>
+          <td><code>recoverable</code> flag</td>
+          <td>Decide retry (format) vs. escalate (absent)</td>
+          <td>Looping on absent data → hallucinated schema-valid value</td>
+        </tr>
+        <tr>
+          <td><strong>21.3</strong> Feedback / dismissals</td>
+          <td>Dismissal events by <code>detected_pattern</code></td>
+          <td>Improve system across many sessions (offline)</td>
+          <td>Confusing async feedback loop with in-request retry; blind suppression</td>
+        </tr>
+        <tr>
+          <td><strong>21.4</strong> Semantic vs. schema</td>
+          <td><code>error_class</code>: schema | semantic</td>
+          <td>Two-stage gate: schema first, semantic second</td>
+          <td>Calling a totals mismatch a “schema” error (JSON is valid → semantic)</td>
+        </tr>
+        <tr>
+          <td><strong>21.5</strong> Self-correction totals</td>
+          <td><code>calculated_total</code> vs <code>stated_total</code></td>
+          <td>Never trust a model-reported total — recompute</td>
+          <td>Trusting <code>stated_total</code>; no rounding tolerance ε</td>
+        </tr>
+        <tr>
+          <td><strong>21.6</strong> The two fields</td>
+          <td><code>conflict_detected</code> (gate) · <code>detected_pattern</code> (label)</td>
+          <td>Gate whether to act; label how to route</td>
+          <td>Swapping their roles (boolean ↔ category)</td>
+        </tr>
+        <tr>
+          <td><strong>21.7</strong> Hands-on controller</td>
+          <td>Full pipeline ordering</td>
+          <td>Assemble schema→semantic→classify→retry/escalate→cap</td>
+          <td>Re-ordering stages; retrying before the <code>recoverable</code> check</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <a href="#cheat" class="back">↑ back to top</a>
+  </section>
+
+  <footer class="foot">
+    Chapter 21 · Validation, Retry &amp; Feedback Loops — study guide.
+    Illustrative examples only; “Example-style” questions are teaching aids, not official exam items.
+  </footer>
+
+</div>
+
+
+</body></html>

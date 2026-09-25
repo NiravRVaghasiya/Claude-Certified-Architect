@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 60: Stakeholder Feedback Loops &amp; Expectation Management</title>
+<style>
+  :root {
+    --ink: #1e293b;
+    --muted: #475569;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --line: #e2e8f0;
+    --brand: #2563eb;
+    --brand-dark: #1e3a8a;
+    --tip: #059669;
+    --tip-bg: #ecfdf5;
+    --warn: #d97706;
+    --warn-bg: #fffbeb;
+    --pit: #dc2626;
+    --pit-bg: #fef2f2;
+    --exam: #7c3aed;
+    --exam-bg: #f5f3ff;
+    --term-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 24px 80px; }
+  header.hero {
+    background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+    color: #fff;
+    padding: 40px 24px;
+    border-radius: 0 0 18px 18px;
+  }
+  header.hero .wrap { padding-top: 0; padding-bottom: 0; }
+  header.hero .eyebrow {
+    text-transform: uppercase; letter-spacing: 2px; font-size: 12px;
+    opacity: .85; margin: 0 0 8px;
+  }
+  header.hero h1 { margin: 0 0 10px; font-size: 30px; line-height: 1.2; }
+  header.hero p { margin: 0; opacity: .92; font-size: 15px; max-width: 720px; }
+  nav.toc {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 22px; margin: 28px 0;
+  }
+  nav.toc h2 { margin: 0 0 10px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+  nav.toc a { color: var(--brand); text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+  section.chapter { margin: 44px 0; }
+  section.chapter > h2 {
+    font-size: 23px; color: var(--brand-dark);
+    border-bottom: 3px solid var(--brand); padding-bottom: 8px; margin-top: 0;
+  }
+  h3 { font-size: 17px; color: var(--ink); margin: 26px 0 8px; }
+  h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin: 22px 0 6px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 24px; margin: 18px 0;
+  }
+  .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; border-left: 5px solid; }
+  .tip   { background: var(--tip-bg);  border-color: var(--tip);  }
+  .warn  { background: var(--warn-bg); border-color: var(--warn); }
+  .pitfall { background: var(--pit-bg); border-color: var(--pit); }
+  .exam-tip { background: var(--exam-bg); border-color: var(--exam); }
+  .callout strong { display: inline; }
+  .callout .lead { font-weight: 700; display: block; margin-bottom: 4px; }
+  dl.terms { margin: 10px 0; }
+  dl.terms dt { font-weight: 700; color: var(--brand-dark); margin-top: 10px; }
+  dl.terms dd { margin: 2px 0 0 0; color: var(--muted); }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--brand); color: #fff; font-weight: 600; }
+  tbody tr:nth-child(even) { background: #f8fafc; }
+  .diagram { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; overflow-x: auto; }
+  .diagram figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 18px; margin: 12px 0; }
+  details summary { cursor: pointer; font-weight: 600; color: var(--brand-dark); }
+  details[open] summary { margin-bottom: 8px; }
+  details p { margin: 6px 0; }
+  .badge { display: inline-block; background: var(--exam-bg); color: var(--exam); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
+  .cheat { background: #0f172a; color: #e2e8f0; border-radius: 12px; padding: 22px 26px; }
+  .cheat h3 { color: #fff; margin-top: 0; }
+  .cheat ul { columns: 2; column-gap: 30px; }
+  .cheat li { margin: 6px 0; break-inside: avoid; }
+  .cheat code { background: #1e293b; color: #93c5fd; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 680px) { .grid2, nav.toc ol, .cheat ul { grid-template-columns: 1fr; columns: 1; } }
+  .mnemonic { font-family: "Courier New", monospace; font-weight: 700; color: var(--brand-dark); }
+  footer.end { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+    <h1>Chapter 60 — Stakeholder Feedback Loops &amp; Expectation Management</h1>
+    <p>An exam-ready study guide and on-the-job reference covering feedback-loop design across the delivery lifecycle, SLA and expectation alignment, pushback and scope-creep control, iteration communication, and a hands-on stakeholder communication plan.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>In this chapter</h2>
+  <ol>
+    <li><a href="#s601">60.1 — Managing Feedback Loops Across the Development Lifecycle</a></li>
+    <li><a href="#s602">60.2 — SLA Definition and Expectation Alignment</a></li>
+    <li><a href="#s603">60.3 — Handling Stakeholder Pushback and Scope Creep</a></li>
+    <li><a href="#s604">60.4 — Iteration Communication: Progress Reports and Demos</a></li>
+    <li><a href="#s605">60.5 — Hands-On: Designing a Stakeholder Communication Plan</a></li>
+    <li><a href="#wrap">Chapter Wrap-Up, Cheat Sheet &amp; Self-Check</a></li>
+  </ol>
+</nav>
+
+<!-- ============================ 60.1 ============================ -->
+<section class="chapter" id="s601">
+  <h2>60.1 — Managing Feedback Loops Across the Development Lifecycle</h2>
+
+  <h3>Core Concept Summary</h3>
+  <p>A <strong>feedback loop</strong> is any recurring cycle in which work is produced, reviewed by those who will use or fund it, and adjusted based on their response. In a delivery engagement, feedback loops are the primary mechanism that keeps a build aligned with real needs rather than with assumptions made at kickoff. An architect's job is not only to design the system but to design the <em>cadence and channels</em> through which stakeholders shape it over time.</p>
+  <p>Feedback loops exist at multiple <strong>tempos</strong>, and mature teams run several at once. Fast, tight loops (automated tests, code review, CI checks) give the delivery team confidence within minutes to hours. Medium loops (sprint reviews, demos, usability sessions) surface product-fit issues within days to weeks. Slow loops (steering committees, quarterly business reviews, production telemetry) validate business outcomes over weeks to months. The core principle from Lean and Agile is the same: <strong>the shorter the loop, the cheaper the correction.</strong> A misunderstanding caught in a demo costs a conversation; the same misunderstanding caught after launch costs a rebuild.</p>
+  <p>Effective loops share three properties. They are <strong>timely</strong> (feedback arrives while the work is still cheap to change), <strong>specific</strong> (tied to a concrete artifact — a demo, a prototype, a metric — not a vague status), and <strong>closed</strong> (the team visibly acts on input and reports back what changed, so stakeholders learn that participating is worth their time). A loop that gathers feedback but never demonstrably acts on it decays quickly: stakeholders stop engaging, and the project drifts back toward assumption-driven delivery.</p>
+  <p>Across the lifecycle — Discovery, Design, Build, Validate, Deploy, Operate — the <em>question</em> each loop answers changes. Early loops ask "are we building the right thing?" (validation of problem and scope). Later loops ask "are we building the thing right?" (verification of quality and performance). An architect maps which stakeholders own which question at each stage, so the right people give the right feedback at the point where it still has leverage.</p>
+
+  <h3>Key Terms &amp; Definitions</h3>
+  <dl class="terms">
+    <dt>Feedback Loop</dt><dd>A recurring cycle of produce → observe → interpret → adjust that steers work toward intended outcomes.</dd>
+    <dt>Loop Latency</dt><dd>The elapsed time from producing something to receiving actionable feedback on it. Lower latency = cheaper corrections.</dd>
+    <dt>Validation vs. Verification</dt><dd><em>Validation</em> = "did we build the right thing?" (fit to need). <em>Verification</em> = "did we build the thing right?" (fit to spec/quality).</dd>
+    <dt>Closing the Loop</dt><dd>Visibly acting on feedback and reporting the resulting change back to the contributor.</dd>
+    <dt>Feedback Debt</dt><dd>Accumulated, un-actioned or un-solicited feedback that grows more expensive to resolve over time.</dd>
+    <dt>Cadence</dt><dd>The fixed, predictable rhythm (e.g., biweekly demo) at which a loop repeats.</dd>
+  </dl>
+
+  <h3>Visualization — The Lifecycle Feedback Loop</h3>
+  <figure class="diagram">
+    <svg width="620" height="220" viewBox="0 0 620 220" role="img" aria-label="Feedback loop cycle: Plan, Build, Demo, Gather Feedback, Adjust, returning to Plan">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"></path>
+        </marker>
+      </defs>
+      <!-- nodes -->
+      <g font-family="sans-serif" font-size="13" text-anchor="middle">
+        <rect x="20" y="85" width="90" height="46" rx="8" fill="#eff6ff" stroke="#2563eb"></rect>
+        <text x="65" y="113">Plan</text>
+        <rect x="150" y="30" width="90" height="46" rx="8" fill="#eff6ff" stroke="#2563eb"></rect>
+        <text x="195" y="58">Build</text>
+        <rect x="280" y="30" width="90" height="46" rx="8" fill="#eff6ff" stroke="#2563eb"></rect>
+        <text x="325" y="58">Demo</text>
+        <rect x="410" y="85" width="110" height="46" rx="8" fill="#ecfdf5" stroke="#059669"></rect>
+        <text x="465" y="106">Gather</text>
+        <text x="465" y="122">Feedback</text>
+        <rect x="280" y="145" width="90" height="46" rx="8" fill="#f5f3ff" stroke="#7c3aed"></rect>
+        <text x="325" y="173">Adjust</text>
+        <rect x="150" y="145" width="90" height="46" rx="8" fill="#f5f3ff" stroke="#7c3aed"></rect>
+        <text x="195" y="167">Re-plan</text>
+        <text x="195" y="183">scope</text>
+      </g>
+      <!-- arrows -->
+      <g fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)">
+        <path d="M110,100 Q130,60 148,55"></path>
+        <path d="M240,53 L278,53"></path>
+        <path d="M370,60 Q400,80 412,95"></path>
+        <path d="M460,131 Q430,160 372,168"></path>
+        <path d="M280,168 L242,168"></path>
+        <path d="M150,168 Q90,160 68,133"></path>
+      </g>
+      <text x="310" y="210" font-size="12" fill="#475569" text-anchor="middle">Each turn of the loop is cheaper than shipping and fixing later.</text>
+    </svg>
+    <figcaption>Fig. 60.1 — The canonical delivery feedback loop. Blue = production, green = signal capture, purple = adaptation.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h4>Multi-tempo loop map</h4>
+    <table>
+      <thead><tr><th>Loop</th><th>Latency</th><th>Owner / Audience</th><th>Answers</th></tr></thead>
+      <tbody>
+        <tr><td>CI / automated tests</td><td>Minutes</td><td>Dev team</td><td>Did this change break anything?</td></tr>
+        <tr><td>Code / design review</td><td>Hours</td><td>Peers, tech lead</td><td>Is this well-built &amp; maintainable?</td></tr>
+        <tr><td>Sprint demo / review</td><td>1–2 weeks</td><td>Product owner, users</td><td>Are we building the right thing?</td></tr>
+        <tr><td>Steering committee</td><td>Monthly</td><td>Sponsors, execs</td><td>Is this on track to deliver value?</td></tr>
+        <tr><td>Production telemetry / QBR</td><td>Weeks–months</td><td>Business, ops</td><td>Did it achieve the outcome?</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Tips &amp; Tricks</h3>
+  <ul>
+    <li><strong>Run loops at multiple tempos simultaneously</strong> — never rely on a single monthly meeting to catch everything.</li>
+    <li><strong>Mnemonic <span class="mnemonic">TSC</span></strong>: every good loop is <em>Timely, Specific, Closed</em>.</li>
+    <li><strong>Always close the loop out loud.</strong> Start each demo with "here's what changed based on your last feedback" — this trains stakeholders that engagement pays off.</li>
+    <li><strong>Attach feedback to an artifact.</strong> A clickable prototype elicits far better input than a status slide.</li>
+    <li><strong>Front-load validation loops.</strong> The "right thing?" question loses leverage after Build starts.</li>
+  </ul>
+
+  <div class="callout pitfall">
+    <span class="lead">⚠️ Common Pitfalls</span>
+    <ul>
+      <li><strong>Big-bang feedback:</strong> saving all review for a single end-of-project sign-off, guaranteeing expensive late rework.</li>
+      <li><strong>Open loops:</strong> collecting feedback but never reporting back what was done — stakeholders disengage.</li>
+      <li><strong>Wrong audience, wrong stage:</strong> asking executives for pixel-level UI feedback, or asking end-users to validate business ROI.</li>
+      <li><strong>Vanity demos:</strong> showing only happy paths so no real feedback is provoked.</li>
+      <li><strong>Confusing verification for validation:</strong> a bug-free build of the wrong feature still fails the stakeholder.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-tip">
+    <span class="lead">🎯 Exam Strategy</span>
+    This topic is tested with <strong>scenario questions</strong> where a project surfaces a problem late. The correct answer almost always favors <em>shorter, earlier, more frequent</em> feedback loops over a single large review. Watch for the validation-vs-verification distinction: if the scenario describes building the <em>wrong</em> thing, the fix is an earlier <em>validation</em> loop, not more testing. Distractors will tempt you with "add more QA" or "write a more detailed spec up front" — both address verification or assumptions, not the loop latency the scenario actually reveals.
+  </div>
+</section>
+
+<!-- ============================ 60.2 ============================ -->
+<section class="chapter" id="s602">
+  <h2>60.2 — SLA Definition and Expectation Alignment</h2>
+
+  <h3>Core Concept Summary</h3>
+  <p>A <strong>Service Level Agreement (SLA)</strong> is a written, measurable commitment about the level of service a stakeholder can expect — availability, response time, resolution time, throughput, or quality. Its purpose is to convert fuzzy, subjective expectations ("it should be fast," "someone should always be reachable") into <strong>objective, time-bound, and testable</strong> targets that both sides agree to <em>before</em> delivery begins. Expectation alignment is the broader discipline; the SLA is its most formal artifact.</p>
+  <p>A robust SLA rests on well-defined <strong>Service Level Indicators (SLIs)</strong> — the actual measurements (e.g., "95th-percentile API latency") — and <strong>Service Level Objectives (SLOs)</strong> — the internal target you engineer toward (e.g., "p95 latency under 300&nbsp;ms"). The SLA is the <em>externally committed</em> promise, usually set slightly looser than the SLO so the team has headroom before breaching a contract. The gap between "how good we build it" (SLO) and "what we promise" (SLA) is deliberate risk management, not sloppiness.</p>
+  <p>Alignment also means being explicit about what is <strong>out of scope</strong>: exclusions, maintenance windows, dependencies on the client's own systems, and the <strong>consequences</strong> of a breach (credits, escalation, remediation). Equally important is defining the <strong>measurement method and reporting cadence</strong> — an SLA nobody measures or reports is just a hope. Good practice ties every SLA target to the SMART discipline: Specific, Measurable, Achievable, Relevant, Time-bound.</p>
+  <p>The most common alignment failure is not a missed metric — it is an <em>unstated assumption</em>. When a stakeholder says "real-time," the architect must translate that into a number, confirm it in writing, and note what is excluded. The SLA conversation is where informal, verbal expectations become durable, shared commitments; skipping it merely defers the disagreement to a moment when it is far more expensive.</p>
+
+  <h3>Key Terms &amp; Definitions</h3>
+  <dl class="terms">
+    <dt>SLA (Service Level Agreement)</dt><dd>The externally committed, measurable promise about service levels, including consequences for breach.</dd>
+    <dt>SLO (Service Level Objective)</dt><dd>The internal target the team engineers toward — usually stricter than the SLA to preserve headroom.</dd>
+    <dt>SLI (Service Level Indicator)</dt><dd>The concrete metric that is measured (e.g., uptime %, p95 latency, resolution time).</dd>
+    <dt>Error Budget</dt><dd>The allowable amount of failure within an SLO (e.g., 0.1% downtime); consumed by incidents, guides release risk.</dd>
+    <dt>SMART Target</dt><dd>Specific, Measurable, Achievable, Relevant, Time-bound — the quality test for any committed number.</dd>
+    <dt>Escalation Path</dt><dd>The predefined sequence of who is notified, and when, as a breach or severity increases.</dd>
+    <dt>Exclusion / Maintenance Window</dt><dd>Explicitly agreed periods or conditions during which SLA targets do not apply.</dd>
+  </dl>
+
+  <h3>Visualization — SLA Escalation &amp; Severity Matrix</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Severity</th><th>Definition</th><th>Response Target</th><th>Resolution Target</th><th>Escalates To</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sev-1 Critical</strong></td><td>Full outage / data loss; no workaround</td><td>15 min</td><td>4 hours</td><td>On-call → Eng lead → Sponsor</td></tr>
+        <tr><td><strong>Sev-2 High</strong></td><td>Major function degraded; partial workaround</td><td>1 hour</td><td>1 business day</td><td>On-call → Eng lead</td></tr>
+        <tr><td><strong>Sev-3 Medium</strong></td><td>Minor function impaired; workaround exists</td><td>4 hours</td><td>3 business days</td><td>Support queue</td></tr>
+        <tr><td><strong>Sev-4 Low</strong></td><td>Cosmetic / question / request</td><td>1 business day</td><td>Next release</td><td>Backlog</td></tr>
+      </tbody>
+    </table>
+    <figcaption style="color:var(--muted);font-size:13px;">Fig. 60.2 — A severity matrix makes "we'll respond quickly" testable. Response ≠ resolution: commit to both, separately.</figcaption>
+  </div>
+
+  <div class="diagram">
+    <svg width="560" height="120" viewBox="0 0 560 120" role="img" aria-label="Relationship between SLI, SLO and SLA">
+      <g font-family="sans-serif" font-size="13" text-anchor="middle">
+        <rect x="20" y="40" width="150" height="44" rx="8" fill="#eff6ff" stroke="#2563eb"></rect>
+        <text x="95" y="60">SLI</text><text x="95" y="76" font-size="11" fill="#475569">what we measure</text>
+        <rect x="205" y="40" width="150" height="44" rx="8" fill="#ecfdf5" stroke="#059669"></rect>
+        <text x="280" y="60">SLO</text><text x="280" y="76" font-size="11" fill="#475569">internal target</text>
+        <rect x="390" y="40" width="150" height="44" rx="8" fill="#f5f3ff" stroke="#7c3aed"></rect>
+        <text x="465" y="60">SLA</text><text x="465" y="76" font-size="11" fill="#475569">committed promise</text>
+      </g>
+      <g fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)">
+        <path d="M170,62 L203,62"></path>
+        <path d="M355,62 L388,62"></path>
+      </g>
+      <text x="280" y="108" font-size="12" fill="#475569" text-anchor="middle">Measure the SLI → engineer to the SLO (stricter) → promise the SLA (looser, with headroom).</text>
+    </svg>
+  </div>
+
+  <h3>Tips &amp; Tricks</h3>
+  <ul>
+    <li><strong>Set the SLO stricter than the SLA.</strong> The buffer is your safety margin against contractual breach.</li>
+    <li><strong>Separate <em>response</em> from <em>resolution</em>.</strong> "We'll acknowledge in 15 min" is not "we'll fix in 15 min." Commit to both.</li>
+    <li><strong>Translate every adjective into a number.</strong> "Fast," "reliable," "real-time" are not commitments until quantified.</li>
+    <li><strong>Write down the exclusions too.</strong> Maintenance windows and client-side dependencies are part of the agreement.</li>
+    <li><strong>Mnemonic <span class="mnemonic">SMART</span></strong> for every target: Specific, Measurable, Achievable, Relevant, Time-bound.</li>
+  </ul>
+
+  <div class="callout pitfall">
+    <span class="lead">⚠️ Common Pitfalls</span>
+    <ul>
+      <li><strong>Verbal SLAs:</strong> "we agreed you'd be reachable" — unwritten, unmeasured, unenforceable.</li>
+      <li><strong>Unachievable promises:</strong> committing to 99.999% on infrastructure that cannot deliver it, to win approval.</li>
+      <li><strong>No measurement method:</strong> an SLA with no agreed metric, tool, or reporting cadence.</li>
+      <li><strong>Ignoring dependencies:</strong> promising uptime that depends on a third party or the client's own network.</li>
+      <li><strong>Conflating SLO and SLA:</strong> committing your internal stretch goal as the external promise, leaving no headroom.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-tip">
+    <span class="lead">🎯 Exam Strategy</span>
+    SLA questions are usually <strong>scenario-based with a vague client expectation</strong> ("the client wants it to be always available"). The best answer emphasizes <em>written, measurable, time-bound</em> commitments over informal verbal ones, and separates response from resolution. A frequent distractor offers an impressively high number (e.g., "commit to 100% uptime") — reject it: unachievable targets are a trap, and 100% is never a defensible SLA. Also watch for answers that skip defining <em>how</em> the metric is measured; an unmeasurable SLA is not the correct choice.
+  </div>
+</section>
+
+<!-- ============================ 60.3 ============================ -->
+<section class="chapter" id="s603">
+  <h2>60.3 — Handling Stakeholder Pushback and Scope Creep</h2>
+
+  <h3>Core Concept Summary</h3>
+  <p><strong>Pushback</strong> is any stakeholder resistance — to a decision, a timeline, a trade-off, or a "no." <strong>Scope creep</strong> is the uncontrolled expansion of what the project must deliver, typically through a steady accumulation of small, individually reasonable requests that were never re-baselined against time, cost, and risk. The two are linked: unmanaged pushback frequently resolves into silent scope creep, because saying "yes" in the moment feels easier than negotiating the trade-off.</p>
+  <p>The professional response is not to refuse changes — requirements legitimately evolve, and rigidly rejecting them is its own failure mode. The response is to make every change <strong>visible, assessed, and decided</strong> through a lightweight <strong>change-control process</strong>. When a new request arrives, it is logged in a <strong>scope-change register</strong>, its impact on schedule, cost, and risk is assessed, and a decision-maker (often via a Change Control Board or the product owner) explicitly accepts or defers it — usually with a corresponding trade-off ("yes, and we drop X" or "yes, and the date moves"). This preserves responsiveness while preventing invisible drift.</p>
+  <p>Handling pushback well is largely about <strong>separating the person from the problem</strong> and grounding the conversation in the shared, previously agreed baseline (the scope statement, the SLA, the prioritized backlog). Techniques from principled negotiation apply: acknowledge the underlying interest behind the request, restate the agreed constraints, and present the trade-off as a joint decision rather than a refusal. The <strong>iron triangle</strong> (scope, time, cost — with quality at the center) is the architect's most powerful framing tool: you cannot expand one corner without moving another, and making that visible turns an argument into a prioritization choice.</p>
+  <p>Authority matters here. A <strong>RACI</strong> matrix clarifies who is <em>Accountable</em> for scope decisions so that pushback is routed to the person empowered to decide, not absorbed silently by whoever received the request. When everyone knows who owns the trade-off, "no" and "not now" become organizational decisions rather than personal confrontations.</p>
+
+  <h3>Key Terms &amp; Definitions</h3>
+  <dl class="terms">
+    <dt>Scope Creep</dt><dd>Uncontrolled growth of deliverables without corresponding adjustment to time, cost, or resources.</dd>
+    <dt>Gold-Plating</dt><dd>The team adding unrequested "extras" it thinks the client will like — a self-inflicted form of scope creep.</dd>
+    <dt>Change-Control Process</dt><dd>The defined workflow for logging, assessing, and approving/deferring changes to baselined scope.</dd>
+    <dt>Scope-Change Register</dt><dd>The living log of every requested change, its impact assessment, and its decision.</dd>
+    <dt>Change Control Board (CCB)</dt><dd>The group/role empowered to approve or reject scope changes.</dd>
+    <dt>Iron Triangle</dt><dd>The scope–time–cost constraint (quality at center); moving one corner forces another to move.</dd>
+    <dt>RACI</dt><dd>Responsible, Accountable, Consulted, Informed — clarifies decision ownership. Exactly one "A" per decision.</dd>
+    <dt>Baseline</dt><dd>The formally agreed reference version of scope/schedule/cost against which changes are measured.</dd>
+  </dl>
+
+  <h3>Visualization — Change-Request Decision Flow</h3>
+  <figure class="diagram">
+    <svg width="640" height="250" viewBox="0 0 640 250" role="img" aria-label="Change request decision flow">
+      <g font-family="sans-serif" font-size="12.5" text-anchor="middle">
+        <rect x="20" y="20" width="140" height="40" rx="8" fill="#eff6ff" stroke="#2563eb"></rect>
+        <text x="90" y="44">New request</text>
+        <rect x="20" y="100" width="140" height="40" rx="8" fill="#eff6ff" stroke="#2563eb"></rect>
+        <text x="90" y="124">Log in register</text>
+        <rect x="240" y="100" width="150" height="40" rx="8" fill="#fffbeb" stroke="#d97706"></rect>
+        <text x="315" y="118">Assess impact</text>
+        <text x="315" y="133" font-size="10.5" fill="#475569">time · cost · risk</text>
+        <polygon points="490,120 545,90 600,120 545,150" fill="#f5f3ff" stroke="#7c3aed"></polygon>
+        <text x="545" y="118">Decide</text>
+        <text x="545" y="132" font-size="10" fill="#475569">(Accountable)</text>
+        <rect x="475" y="185" width="150" height="46" rx="8" fill="#ecfdf5" stroke="#059669"></rect>
+        <text x="550" y="203">Accept + trade-off</text>
+        <text x="550" y="219" font-size="10.5" fill="#475569">re-baseline</text>
+        <rect x="260" y="185" width="150" height="46" rx="8" fill="#fef2f2" stroke="#dc2626"></rect>
+        <text x="335" y="203">Defer / decline</text>
+        <text x="335" y="219" font-size="10.5" fill="#475569">record reason</text>
+      </g>
+      <g fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)">
+        <path d="M90,60 L90,98"></path>
+        <path d="M160,120 L238,120"></path>
+        <path d="M390,120 L488,120"></path>
+        <path d="M545,150 L550,183" stroke="#059669"></path>
+        <path d="M520,135 Q430,175 412,188" stroke="#dc2626"></path>
+      </g>
+      <text x="595" y="170" font-size="11" fill="#059669">yes</text>
+      <text x="440" y="165" font-size="11" fill="#dc2626">no</text>
+    </svg>
+    <figcaption>Fig. 60.3 — No request is silently absorbed or silently dropped: every one is logged, assessed, and explicitly decided.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h4>The Iron Triangle</h4>
+    <svg width="300" height="150" viewBox="0 0 300 150" role="img" aria-label="Iron triangle of scope, time, cost with quality at center">
+      <polygon points="150,20 30,130 270,130" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></polygon>
+      <text x="150" y="15" font-family="sans-serif" font-size="13" text-anchor="middle" fill="#1e3a8a">Scope</text>
+      <text x="20" y="145" font-family="sans-serif" font-size="13" text-anchor="start" fill="#1e3a8a">Time</text>
+      <text x="280" y="145" font-family="sans-serif" font-size="13" text-anchor="end" fill="#1e3a8a">Cost</text>
+      <text x="150" y="100" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#7c3aed">Quality</text>
+    </svg>
+    <p style="font-size:13px;color:var(--muted);margin:4px 0 0;">Expand scope and either time or cost must grow — otherwise quality (the center) silently degrades.</p>
+  </div>
+
+  <h3>Tips &amp; Tricks</h3>
+  <ul>
+    <li><strong>Never say a flat "no."</strong> Say "yes — and here's the trade-off." Frame it as a joint prioritization decision.</li>
+    <li><strong>Log first, decide second.</strong> Capturing a request in the register is not a commitment; it defuses the moment and buys assessment time.</li>
+    <li><strong>Anchor to the baseline.</strong> Return every debate to the agreed scope statement, SLA, or prioritized backlog.</li>
+    <li><strong>Attack the problem, not the person</strong> — acknowledge the interest behind the request before discussing constraints.</li>
+    <li><strong>Route to the "A".</strong> Use RACI so the trade-off is decided by whoever is <em>Accountable</em>, not absorbed by whoever was asked.</li>
+    <li><strong>Guard against gold-plating</strong> — your own team can create scope creep by over-delivering.</li>
+  </ul>
+
+  <div class="callout pitfall">
+    <span class="lead">⚠️ Common Pitfalls</span>
+    <ul>
+      <li><strong>Silent yes:</strong> agreeing to a mid-sprint addition without logging it or moving the date — the classic creep vector.</li>
+      <li><strong>Rigid no:</strong> refusing all change; legitimate evolution gets blocked and the relationship sours.</li>
+      <li><strong>No single owner:</strong> unclear accountability means requests are absorbed by whoever is closest, not decided.</li>
+      <li><strong>Skipping impact assessment:</strong> approving changes without quantifying the schedule/cost/risk cost.</li>
+      <li><strong>Personalizing pushback:</strong> treating disagreement as conflict rather than an unresolved trade-off.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-tip">
+    <span class="lead">🎯 Exam Strategy</span>
+    Expect a <strong>"stakeholder requests an unplanned feature mid-sprint / mid-project"</strong> scenario. The best <em>first</em> response is almost always to <strong>log the request and assess its impact before committing</strong> — not to immediately accept it (creep) and not to flatly reject it (rigidity). Distractors are engineered to feel accommodating ("just add it, the client is important") or decisive ("refuse, it's out of scope"). Both skip the change-control step. If the scenario involves unclear decision authority, the answer points to RACI / the accountable owner. Remember: the exam rewards <em>process and visibility</em>, not heroics.
+  </div>
+</section>
+
+<!-- ============================ 60.4 ============================ -->
+<section class="chapter" id="s604">
+  <h2>60.4 — Iteration Communication: Progress Reports and Demos</h2>
+
+  <h3>Core Concept Summary</h3>
+  <p>Iteration communication is how the team keeps stakeholders continuously informed of progress, risks, and decisions between formal milestones. Its two workhorses are the <strong>progress report</strong> (a concise, regular written status) and the <strong>demo</strong> (a live showing of working increments). Together they replace anxiety-driven "what's the status?" interruptions with a predictable, trusted rhythm — which is itself a form of expectation management.</p>
+  <p>Effective progress reports are <strong>tailored to the audience</strong>. Executives and sponsors want outcomes, risks, and decisions needed from them — typically a <strong>RAG status</strong> (Red / Amber / Green), key metrics, and a short "asks" section. Delivery-level stakeholders want detail: what shipped, what's next, what's blocked. A single report that tries to serve both usually serves neither. The reliable structure is <strong>Progress → Plan → Problems (blockers) → Asks</strong>: what we did, what we'll do next, what's in our way, and what we need from you.</p>
+  <p>Demos are the highest-bandwidth loop because they show <em>working software</em>, not descriptions of it — which is why Agile treats "working software" as the primary measure of progress. A good demo shows a real, integrated increment against the acceptance criteria the stakeholders agreed to, invites reaction, and captures feedback into the backlog on the spot. It is emphatically <em>not</em> a slideware status meeting. Crucially, a demo should surface problems, not hide them: showing an honest partial result early is worth more than a polished illusion of completeness.</p>
+  <p>Cadence is the quiet superpower of iteration communication. A <strong>predictable rhythm</strong> — a report every Friday, a demo every second Thursday — builds trust because stakeholders learn they will be informed <em>without having to chase</em>. Predictability also protects the team: it channels feedback into scheduled forums rather than a constant stream of ad-hoc interruptions. The architect's job is to design a cadence proportional to project risk and stakeholder anxiety, and then to honor it relentlessly, especially when the news is bad.</p>
+
+  <h3>Key Terms &amp; Definitions</h3>
+  <dl class="terms">
+    <dt>RAG Status</dt><dd>Red/Amber/Green health indicator summarizing whether an item is on track, at risk, or in trouble.</dd>
+    <dt>Progress → Plan → Problems (3P)</dt><dd>A concise report structure: what was done, what's next, what's blocking, plus explicit asks.</dd>
+    <dt>Sprint Review / Demo</dt><dd>A recurring session showing the working increment to stakeholders and capturing feedback.</dd>
+    <dt>Definition of Done (DoD)</dt><dd>The shared checklist an increment must meet to be considered complete and demo-worthy.</dd>
+    <dt>Acceptance Criteria</dt><dd>The specific, testable conditions a feature must satisfy to be accepted by the stakeholder.</dd>
+    <dt>Cadence</dt><dd>The fixed rhythm of reports and demos; predictability builds trust and controls interruptions.</dd>
+    <dt>Burndown / Burnup</dt><dd>Charts showing remaining vs. completed work over time — a common progress visual.</dd>
+  </dl>
+
+  <h3>Visualization — Communication Cadence Timeline</h3>
+  <figure class="diagram">
+    <svg width="640" height="150" viewBox="0 0 640 150" role="img" aria-label="Two-week communication cadence timeline">
+      <line x1="30" y1="80" x2="610" y2="80" stroke="#94a3b8" stroke-width="2"></line>
+      <g font-family="sans-serif" font-size="11" text-anchor="middle">
+        <!-- daily standup ticks -->
+        <g fill="#2563eb">
+          <circle cx="70" cy="80" r="5"></circle><circle cx="130" cy="80" r="5"></circle><circle cx="190" cy="80" r="5"></circle>
+          <circle cx="250" cy="80" r="5"></circle><circle cx="370" cy="80" r="5"></circle><circle cx="430" cy="80" r="5"></circle>
+          <circle cx="490" cy="80" r="5"></circle><circle cx="550" cy="80" r="5"></circle>
+        </g>
+        <text x="160" y="112" fill="#2563eb">Daily standup (team)</text>
+        <!-- weekly report -->
+        <rect x="292" y="66" width="12" height="28" fill="#059669"></rect>
+        <text x="298" y="52" fill="#059669">Fri: written report</text>
+        <!-- sprint demo -->
+        <polygon points="600,60 612,80 600,100 588,80" fill="#7c3aed"></polygon>
+        <text x="560" y="128" fill="#7c3aed">Sprint demo (stakeholders)</text>
+        <text x="70" y="45" fill="#475569">Week 1</text>
+        <text x="490" y="45" fill="#475569">Week 2</text>
+      </g>
+    </svg>
+    <figcaption>Fig. 60.4 — A layered cadence: daily team sync (blue), weekly written report (green), biweekly stakeholder demo (purple).</figcaption>
+  </figure>
+
+  <div class="card">
+    <h4>Report structure by audience</h4>
+    <table>
+      <thead><tr><th>Audience</th><th>Format</th><th>Focus</th><th>Cadence</th></tr></thead>
+      <tbody>
+        <tr><td>Sponsor / Exec</td><td>RAG + 3–5 bullets + asks</td><td>Outcomes, risks, decisions needed</td><td>Weekly / monthly</td></tr>
+        <tr><td>Product owner</td><td>Demo + backlog view</td><td>Increment fit, priorities</td><td>Per sprint</td></tr>
+        <tr><td>Delivery team</td><td>Standup + board</td><td>Tasks, blockers, dependencies</td><td>Daily</td></tr>
+        <tr><td>End users</td><td>Demo / release notes</td><td>Usability, what's new</td><td>Per release</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Tips &amp; Tricks</h3>
+  <ul>
+    <li><strong>Tailor by altitude.</strong> Give executives outcomes and asks; give the team detail. Never one report for all.</li>
+    <li><strong>Mnemonic <span class="mnemonic">3P + Asks</span></strong>: Progress, Plan, Problems, and what you need from them.</li>
+    <li><strong>Demo working software, not slides.</strong> Show a real increment against agreed acceptance criteria.</li>
+    <li><strong>Honor the cadence — especially with bad news.</strong> Predictability builds trust; a skipped report reads as trouble.</li>
+    <li><strong>Capture feedback live.</strong> Log demo reactions straight into the backlog so the loop visibly closes.</li>
+    <li><strong>Lead reports with the RAG and the asks</strong> — busy stakeholders read the top, not the appendix.</li>
+  </ul>
+
+  <div class="callout pitfall">
+    <span class="lead">⚠️ Common Pitfalls</span>
+    <ul>
+      <li><strong>Watermelon status:</strong> reporting "Green" outside while the project is "Red" inside — trust collapses when it surfaces.</li>
+      <li><strong>Demo theater:</strong> showing mock-ups or happy-path-only builds that provoke no real feedback.</li>
+      <li><strong>Firehose reports:</strong> dumping raw task detail on executives who need outcomes and decisions.</li>
+      <li><strong>Irregular cadence:</strong> reporting only when convenient; silence during bad periods erodes confidence.</li>
+      <li><strong>No asks:</strong> reports that inform but never state what the team needs from the stakeholder.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-tip">
+    <span class="lead">🎯 Exam Strategy</span>
+    Iteration-communication questions test <strong>audience tailoring and honesty</strong>. When a scenario describes an executive overwhelmed by detail, the answer is a summarized, outcome-focused report (RAG + asks), not "send more information." When a scenario reveals a project is behind, the answer favors <em>transparent, timely</em> disclosure through the normal cadence over delaying or sugar-coating — the "watermelon" report is always the wrong choice. Distractors will offer polished, reassuring options that hide risk; the defensible answer surfaces the problem early. Also know that Agile treats <em>working software</em> as the truest progress signal, so "show a demo of the working increment" beats "present a status deck."
+  </div>
+</section>
+
+<!-- ============================ 60.5 ============================ -->
+<section class="chapter" id="s605">
+  <h2>60.5 — Hands-On: Designing a Stakeholder Communication Plan</h2>
+
+  <h3>Core Concept Summary</h3>
+  <p>A <strong>stakeholder communication plan</strong> is a single, deliberate artifact that answers, for every stakeholder: <em>who</em> needs <em>what</em> information, <em>why</em>, in <em>what format</em>, through <em>which channel</em>, at <em>what cadence</em>, and <em>who is responsible</em> for producing it. It operationalizes everything in this chapter — feedback loops, SLAs, change control, and iteration reporting — into one durable, agreed reference. It is not documentation for its own sake; it is the instrument that prevents the two most common relationship failures: the important stakeholder who feels ignored, and the busy stakeholder who feels spammed.</p>
+  <p>Building one follows a repeatable sequence. First, <strong>identify and analyze stakeholders</strong>: list everyone affected and classify them, most commonly on a <strong>power/interest grid</strong> (high power + high interest → Manage Closely; high power + low interest → Keep Satisfied; low power + high interest → Keep Informed; low power + low interest → Monitor). This classification directly drives cadence and depth: you do not communicate with a peripheral observer the way you do with the funding sponsor. Second, <strong>define the information needs</strong> and the decision rights for each group, ideally cross-referenced to a <strong>RACI</strong> so accountability is unambiguous.</p>
+  <p>Third, <strong>choose channel, format, and cadence</strong> per stakeholder group, matching altitude (executives → concise RAG; team → detailed board) and matching richness to the message (a routine update can be async email; a difficult trade-off deserves a synchronous conversation). Fourth, <strong>assign an owner and a feedback mechanism</strong> for each communication, so it is clear who produces it and how the recipient responds — closing the loop by design rather than by luck. Finally, treat the plan as a <strong>living document</strong>: revisit it when stakeholders, phases, or risk levels change.</p>
+  <p>The payoff is that expectation management stops being reactive. Instead of discovering after the fact that a VP felt out of the loop, the architect has already decided that this VP is "Manage Closely," receives a monthly one-page RAG with an explicit asks section, owned by the delivery lead, with a standing 20-minute review. The plan turns the soft skill of stakeholder communication into an engineered, auditable system.</p>
+
+  <h3>Key Terms &amp; Definitions</h3>
+  <dl class="terms">
+    <dt>Communication Plan</dt><dd>The artifact specifying who/what/why/how/when/owner for every stakeholder communication.</dd>
+    <dt>Stakeholder Analysis</dt><dd>Identifying and classifying stakeholders to determine engagement strategy.</dd>
+    <dt>Power/Interest Grid</dt><dd>A 2×2 classifying stakeholders by influence and interest → Manage Closely / Keep Satisfied / Keep Informed / Monitor.</dd>
+    <dt>Channel Richness</dt><dd>How much nuance a medium carries; match rich media (live conversation) to complex/emotional messages.</dd>
+    <dt>RACI (in the plan)</dt><dd>Ties each communication and decision to a Responsible producer and one Accountable owner.</dd>
+    <dt>Engagement Level</dt><dd>Current vs. desired involvement of a stakeholder (unaware → resistant → neutral → supportive → leading).</dd>
+  </dl>
+
+  <h3>Visualization — Power / Interest Grid</h3>
+  <figure class="diagram">
+    <svg width="440" height="320" viewBox="0 0 440 320" role="img" aria-label="Power interest grid with four quadrants">
+      <!-- axes -->
+      <line x1="60" y1="20" x2="60" y2="280" stroke="#334155" stroke-width="2"></line>
+      <line x1="60" y1="280" x2="420" y2="280" stroke="#334155" stroke-width="2"></line>
+      <!-- quadrants -->
+      <rect x="62" y="20" width="178" height="130" fill="#fffbeb"></rect>
+      <rect x="240" y="20" width="178" height="130" fill="#ecfdf5"></rect>
+      <rect x="62" y="150" width="178" height="130" fill="#f8fafc"></rect>
+      <rect x="240" y="150" width="178" height="130" fill="#eff6ff"></rect>
+      <g font-family="sans-serif" font-size="13" text-anchor="middle" fill="#1e293b">
+        <text x="151" y="80" font-weight="700">Keep Satisfied</text>
+        <text x="151" y="100" font-size="11" fill="#475569">high power, low interest</text>
+        <text x="329" y="80" font-weight="700">Manage Closely</text>
+        <text x="329" y="100" font-size="11" fill="#475569">high power, high interest</text>
+        <text x="151" y="210" font-weight="700">Monitor</text>
+        <text x="151" y="230" font-size="11" fill="#475569">low power, low interest</text>
+        <text x="329" y="210" font-weight="700">Keep Informed</text>
+        <text x="329" y="230" font-size="11" fill="#475569">low power, high interest</text>
+      </g>
+      <text x="30" y="150" font-family="sans-serif" font-size="12" fill="#334155" transform="rotate(-90 30 150)" text-anchor="middle">Power / Influence →</text>
+      <text x="240" y="308" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">Interest →</text>
+    </svg>
+    <figcaption>Fig. 60.5 — Classification drives cadence: "Manage Closely" gets rich, frequent, two-way contact; "Monitor" gets light-touch updates.</figcaption>
+  </figure>
+
+  <h3>Worked Example — A 6-Column Communication Plan</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Stakeholder</th><th>Classification</th><th>Info Need</th><th>Format / Channel</th><th>Cadence</th><th>Owner (RACI-A)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Executive Sponsor</td><td>Manage Closely</td><td>Outcomes, risks, budget, decisions</td><td>1-page RAG report + review call</td><td>Monthly</td><td>Delivery Lead</td></tr>
+        <tr><td>Product Owner</td><td>Manage Closely</td><td>Increment fit, priorities, trade-offs</td><td>Live demo + backlog</td><td>Per sprint (2 wks)</td><td>Scrum Master</td></tr>
+        <tr><td>Compliance / Legal</td><td>Keep Satisfied</td><td>Risk &amp; regulatory checkpoints</td><td>Milestone memo</td><td>Per phase gate</td><td>Architect</td></tr>
+        <tr><td>End Users</td><td>Keep Informed</td><td>What's new, how to use it</td><td>Release notes + demo</td><td>Per release</td><td>Product Owner</td></tr>
+        <tr><td>Delivery Team</td><td>Manage Closely</td><td>Tasks, blockers, dependencies</td><td>Standup + board</td><td>Daily</td><td>Scrum Master</td></tr>
+        <tr><td>Adjacent Team</td><td>Monitor</td><td>Integration touchpoints only</td><td>Shared channel post</td><td>As needed</td><td>Tech Lead</td></tr>
+      </tbody>
+    </table>
+    <figcaption style="font-size:13px;color:var(--muted);">A complete plan has one row per stakeholder group and never leaves the Owner column blank.</figcaption>
+  </div>
+
+  <h3>Tips &amp; Tricks</h3>
+  <ul>
+    <li><strong>Classify before you schedule.</strong> Cadence and depth follow from the power/interest quadrant, not from habit.</li>
+    <li><strong>One accountable owner per communication.</strong> An unowned report is a report that eventually stops going out.</li>
+    <li><strong>Match richness to the message.</strong> Async email for routine updates; a live conversation for bad news or trade-offs.</li>
+    <li><strong>Build in the return path.</strong> Every communication should say how the recipient gives feedback — design the loop closed.</li>
+    <li><strong>Keep it living.</strong> Re-run stakeholder analysis at each phase gate; stakeholders and their interest levels change.</li>
+    <li><strong>Mnemonic — the plan answers <span class="mnemonic">"Who / What / Why / How / When / Who-owns-it."</span></strong></li>
+  </ul>
+
+  <div class="callout pitfall">
+    <span class="lead">⚠️ Common Pitfalls</span>
+    <ul>
+      <li><strong>One-size-fits-all:</strong> the same report to sponsor and developer — over-informing one, under-informing the other.</li>
+      <li><strong>Missing owner:</strong> communications with no responsible producer quietly lapse.</li>
+      <li><strong>Set-and-forget:</strong> writing the plan once and never revising it as the project and its stakeholders evolve.</li>
+      <li><strong>Channel mismatch:</strong> delivering sensitive or complex news via a low-richness channel (e.g., a terse email).</li>
+      <li><strong>Ignoring low-power/high-interest voices</strong> who are often the actual end users and best source of validation feedback.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-tip">
+    <span class="lead">🎯 Exam Strategy</span>
+    Expect a <strong>"design/choose the communication approach for stakeholder X"</strong> scenario. The correct answer is driven by the stakeholder's <em>power/interest classification</em>: a high-power, low-interest executive should be <em>Kept Satisfied</em> with concise, outcome-level updates — not flooded with detail (a common distractor), and not ignored (another distractor). When the scenario involves sensitive or bad news, the defensible choice favors a <em>richer, synchronous</em> channel over a terse written note. Also watch for the "no owner assigned" trap: a plan is only correct when every communication has a clear accountable owner and a defined cadence.
+  </div>
+</section>
+
+<!-- ============================ WRAP-UP ============================ -->
+<section class="chapter" id="wrap">
+  <h2>Chapter Wrap-Up</h2>
+
+  <h3>Chapter Summary Table</h3>
+  <table>
+    <thead><tr><th>Concept</th><th>Key Takeaway</th><th>Exam Tip</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>60.1 Feedback Loops</strong></td>
+        <td>Run multiple loops at different tempos; the shorter the loop, the cheaper the correction. Loops must be Timely, Specific, Closed.</td>
+        <td>Late problem → answer favors earlier/shorter loops. Distinguish validation ("right thing") from verification ("thing right").</td>
+      </tr>
+      <tr>
+        <td><strong>60.2 SLA &amp; Alignment</strong></td>
+        <td>Turn vague expectations into written, measurable, time-bound (SMART) commitments. SLO stricter than SLA; separate response from resolution.</td>
+        <td>Pick written &amp; measurable over verbal. Reject unachievable "100%" targets and any SLA with no measurement method.</td>
+      </tr>
+      <tr>
+        <td><strong>60.3 Pushback &amp; Scope Creep</strong></td>
+        <td>Make every change visible: log → assess impact → decide with a trade-off. Use the iron triangle and RACI to route decisions.</td>
+        <td>Mid-sprint request → log &amp; assess impact first. Avoid both "silent yes" (creep) and "rigid no."</td>
+      </tr>
+      <tr>
+        <td><strong>60.4 Iteration Communication</strong></td>
+        <td>Tailor reports by audience (RAG + asks for execs, detail for team); demo working software; honor a predictable cadence, especially with bad news.</td>
+        <td>Behind schedule → be transparent on the normal cadence. Reject "watermelon" (green outside, red inside) options.</td>
+      </tr>
+      <tr>
+        <td><strong>60.5 Communication Plan</strong></td>
+        <td>Classify stakeholders (power/interest), then set channel, format, cadence, and one accountable owner for each. Keep it living.</td>
+        <td>Answer follows the quadrant: Manage Closely / Keep Satisfied / Keep Informed / Monitor. Never leave a communication unowned.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Quick-Reference Cheat Sheet</h3>
+  <div class="cheat">
+    <h3>⚡ Last-Minute Review</h3>
+    <ul>
+      <li>Good loop = <code>Timely · Specific · Closed</code> (TSC)</li>
+      <li>Shorter loop → cheaper fix; run many tempos at once</li>
+      <li>Validation = right thing · Verification = thing right</li>
+      <li><code>SLI</code> measure → <code>SLO</code> internal (stricter) → <code>SLA</code> promise (headroom)</li>
+      <li>Every target is <code>SMART</code>; separate response vs. resolution</li>
+      <li>Never commit <code>100%</code> uptime; always define the measurement</li>
+      <li>Change request → <code>Log → Assess → Decide (trade-off)</code></li>
+      <li>Iron triangle: move scope → move time or cost, or quality drops</li>
+      <li>Use <code>RACI</code>; exactly one Accountable "A" per decision</li>
+      <li>Reports: <code>Progress · Plan · Problems · Asks</code></li>
+      <li>Exec = RAG + asks; team = detail. Tailor by altitude</li>
+      <li>Demo working software, not slides; honor cadence on bad news</li>
+      <li>Plan = Who/What/Why/How/When/Owner</li>
+      <li>Power/Interest → <code>Manage Closely · Keep Satisfied · Keep Informed · Monitor</code></li>
+      <li>Match channel richness to message sensitivity</li>
+    </ul>
+  </div>
+
+  <h3>Self-Check Questions <span class="badge">answers hidden</span></h3>
+
+  <details>
+    <summary>Q1. A project's stakeholders only review the product at a single sign-off near the end, and major misalignment is discovered. What is the most effective corrective action?</summary>
+    <p><strong>Answer:</strong> Introduce shorter, more frequent feedback loops (e.g., sprint demos) earlier in the lifecycle so misalignment is caught while it is still cheap to fix.</p>
+    <p><strong>Why:</strong> The root problem is loop latency, not effort or documentation. "Add more QA" (verification) or "write a more detailed spec" (up-front assumption) are tempting distractors but do not address the late-validation gap.</p>
+  </details>
+
+  <details>
+    <summary>Q2. A client says the system must be "always available." How should the architect handle this expectation?</summary>
+    <p><strong>Answer:</strong> Translate it into a specific, measurable, time-bound SLA (e.g., 99.9% monthly uptime, with defined maintenance windows and measurement method), agreed in writing.</p>
+    <p><strong>Why:</strong> "Always available" is not a commitment until quantified. Committing to 100% uptime is a distractor — it is unachievable and indefensible. An SLA with no measurement method is also incorrect.</p>
+  </details>
+
+  <details>
+    <summary>Q3. Midway through a sprint, an important stakeholder requests an unplanned feature. What is the best <em>first</em> response?</summary>
+    <p><strong>Answer:</strong> Log the request in the scope-change register and assess its impact on schedule, cost, and risk before committing.</p>
+    <p><strong>Why:</strong> This prevents silent scope creep while staying responsive. "Just add it" (creep) and "refuse, it's out of scope" (rigidity) both skip change control and are the classic distractors.</p>
+  </details>
+
+  <details>
+    <summary>Q4. What is the relationship between an SLI, an SLO, and an SLA?</summary>
+    <p><strong>Answer:</strong> The SLI is the metric you measure; the SLO is the internal target you engineer toward (set stricter); the SLA is the external, committed promise (set looser than the SLO to preserve headroom before a breach).</p>
+    <p><strong>Why:</strong> The deliberate gap between SLO and SLA is risk management. Answers that treat SLO and SLA as identical miss the headroom principle.</p>
+  </details>
+
+  <details>
+    <summary>Q5. A project is behind schedule. The weekly report is due. What should the delivery lead do?</summary>
+    <p><strong>Answer:</strong> Report transparently and on the normal cadence — an honest Amber/Red status with the cause, impact, mitigation, and any asks.</p>
+    <p><strong>Why:</strong> Predictable, honest communication builds trust. Reporting "Green" while the project is troubled (a "watermelon" status) or delaying the report are distractors that erode credibility when the truth surfaces.</p>
+  </details>
+
+  <details>
+    <summary>Q6. An executive sponsor has high influence but limited day-to-day interest and complains about receiving too much detail. How should they be engaged?</summary>
+    <p><strong>Answer:</strong> Treat them as "Keep Satisfied" — provide concise, outcome-focused updates (RAG status + key risks + decisions needed) at a lower cadence, not detailed task-level reports.</p>
+    <p><strong>Why:</strong> The power/interest classification drives the approach. "Send more detail" over-informs; "stop updating them" ignores a high-power stakeholder — both are distractors.</p>
+  </details>
+
+  <details>
+    <summary>Q7. Two teams keep disputing whether a change is in scope, and no decision gets made. What is missing?</summary>
+    <p><strong>Answer:</strong> Clear decision accountability — a RACI with exactly one Accountable owner (e.g., the product owner or Change Control Board) empowered to accept or defer the change.</p>
+    <p><strong>Why:</strong> Unclear ownership leaves pushback absorbed or unresolved. "Escalate every dispute to the sponsor" is a distractor that does not fix the structural gap.</p>
+  </details>
+
+  <details>
+    <summary>Q8. During a sprint review, the team presents a polished slide deck describing the work instead of showing the running increment. What is the concern?</summary>
+    <p><strong>Answer:</strong> Slides describe progress but do not demonstrate it. Agile treats working software as the primary measure of progress, so the review should show a real, integrated increment against agreed acceptance criteria to elicit genuine feedback.</p>
+    <p><strong>Why:</strong> "Demo theater" (slides or happy-path mock-ups) hides risk and provokes no useful feedback — the opposite of a well-designed feedback loop.</p>
+  </details>
+</section>
+
+<footer class="end">
+  Chapter 60 — Stakeholder Feedback Loops &amp; Expectation Management · Claude Certified Architect study guide ·
+  Concepts reflect standard Agile, SLA/SRE, change-control, RACI, and stakeholder-analysis practice.
+</footer>
+
+</div>
+
+
+</body></html>

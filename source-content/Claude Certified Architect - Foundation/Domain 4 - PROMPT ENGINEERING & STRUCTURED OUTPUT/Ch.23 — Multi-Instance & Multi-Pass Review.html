@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 23 — Multi-Instance &amp; Multi-Pass Review Architectures</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-alt: #f0f3f7;
+    --ink: #16202e;
+    --ink-soft: #44546a;
+    --ink-mute: #7a8699;
+    --border: #dfe3ea;
+    --border-soft: #ebeef3;
+    --primary: #2f5bd0;
+    --primary-soft: #eaf0fc;
+    --accent: #7c3aed;
+    --accent-soft: #f2ecfd;
+    --success: #1a8a5a;
+    --success-soft: #e6f6ee;
+    --warning: #b9740a;
+    --warning-soft: #fdf1de;
+    --danger: #c23a2b;
+    --danger-soft: #fcecea;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --radius: 12px;
+    --radius-sm: 7px;
+    --shadow: 0 1px 2px rgba(16,32,46,.06), 0 6px 20px rgba(16,32,46,.05);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.62;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  /* ---- Header ---- */
+  header.chapter {
+    background: linear-gradient(135deg, #1c2c4c 0%, #2f5bd0 60%, #5a34c7 100%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 40px 40px 34px;
+    box-shadow: var(--shadow);
+    margin-bottom: 34px;
+  }
+  header.chapter .eyebrow {
+    font-size: 12.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    opacity: .85;
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  header.chapter h1 {
+    margin: 0 0 14px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -.01em;
+  }
+  header.chapter p.lede {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 66ch;
+    opacity: .94;
+  }
+  header.chapter .exam-tag {
+    display: inline-block;
+    margin-top: 18px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.28);
+    padding: 6px 13px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* ---- TOC ---- */
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+  }
+  nav.toc h2 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    border: none;
+    padding: 0;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+  nav.toc a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14.5px;
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  nav.toc a:hover { color: var(--primary); border-color: var(--border-soft); }
+  nav.toc a b { color: var(--primary); font-variant-numeric: tabular-nums; min-width: 40px; }
+
+  /* ---- Sections ---- */
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 34px 38px 40px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+  }
+  h2 {
+    font-size: 23px;
+    margin: 0 0 6px;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    scroll-margin-top: 20px;
+  }
+  h2 .num {
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+    margin-right: 8px;
+  }
+  .subtitle {
+    color: var(--ink-mute);
+    font-size: 14px;
+    margin: 0 0 22px;
+    font-style: italic;
+  }
+  h3 {
+    font-size: 16.5px;
+    margin: 26px 0 8px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h3::before {
+    content: "";
+    width: 4px; height: 17px;
+    background: var(--accent);
+    border-radius: 3px;
+    display: inline-block;
+  }
+  p { margin: 0 0 14px; }
+  .lead-def {
+    background: var(--surface-alt);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 14px 18px;
+    margin: 0 0 20px;
+    font-size: 15.5px;
+  }
+  strong { color: var(--ink); font-weight: 650; }
+  code {
+    font-family: var(--mono);
+    background: var(--surface-alt);
+    padding: 1.5px 6px;
+    border-radius: 5px;
+    font-size: 13.5px;
+    color: #b3005c;
+    border: 1px solid var(--border-soft);
+  }
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  ul.tight li { margin-bottom: 3px; }
+
+  /* ---- Callout boxes ---- */
+  .tip-box, .strategy-box, .pitfall-box {
+    border-radius: var(--radius-sm);
+    padding: 15px 18px 15px 18px;
+    margin: 20px 0;
+    font-size: 14.8px;
+    line-height: 1.58;
+    border: 1px solid;
+  }
+  .tip-box {
+    background: var(--warning-soft);
+    border-color: #f0d5a3;
+  }
+  .strategy-box {
+    background: var(--accent-soft);
+    border-color: #ddc9f7;
+  }
+  .pitfall-box {
+    background: var(--danger-soft);
+    border-color: #f2c7c1;
+  }
+  .callout-label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .03em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .tip-box .callout-label { color: var(--warning); }
+  .strategy-box .callout-label { color: var(--accent); }
+  .pitfall-box .callout-label { color: var(--danger); }
+  .tip-box ul, .strategy-box ul, .pitfall-box ul { margin: 6px 0 0; }
+  .mnemonic {
+    font-family: var(--mono);
+    font-weight: 700;
+    color: var(--warning);
+    letter-spacing: .02em;
+  }
+
+  /* ---- Tables ---- */
+  .table-scroll { overflow-x: auto; margin: 18px 0; }
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  table.data th {
+    background: var(--surface-alt);
+    text-align: left;
+    padding: 11px 14px;
+    font-size: 12.5px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-bottom: 2px solid var(--border);
+    font-weight: 650;
+  }
+  table.data td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border-soft);
+    vertical-align: top;
+  }
+  table.data tr:last-child td { border-bottom: none; }
+  table.data tr:hover td { background: var(--surface-alt); }
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 650;
+    font-family: var(--mono);
+    white-space: nowrap;
+  }
+  .pill.hi { background: var(--success-soft); color: var(--success); }
+  .pill.mid { background: var(--warning-soft); color: var(--warning); }
+  .pill.lo { background: var(--danger-soft); color: var(--danger); }
+
+  /* ---- Diagrams (CSS flow) ---- */
+  .diagram {
+    margin: 22px 0;
+    padding: 24px 20px;
+    background: var(--surface-alt);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .diagram-cap {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--ink-mute);
+    margin-top: 14px;
+    font-style: italic;
+  }
+  .flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .box {
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    color: var(--ink);
+    border-radius: var(--radius-sm);
+    padding: 10px 15px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(16,32,46,.07);
+    min-width: 96px;
+  }
+  .box.accent { border-color: var(--accent); }
+  .box.good { border-color: var(--success); }
+  .box.warn { border-color: var(--warning); }
+  .box.bad  { border-color: var(--danger); }
+  .box small { display:block; font-weight: 500; color: var(--ink-mute); font-size: 11.5px; margin-top: 2px; }
+  .arrow { color: var(--ink-mute); font-size: 20px; font-weight: 700; padding: 0 2px; }
+
+  svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+
+  /* ---- Summary / checklist ---- */
+  .recap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .recap-card {
+    background: var(--surface-alt);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+  }
+  .recap-card h4 {
+    margin: 0 0 6px;
+    font-size: 14.5px;
+    color: var(--primary);
+  }
+  .recap-card p { margin: 0; font-size: 13.8px; color: var(--ink-soft); }
+
+  ol.checklist {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0 0;
+  }
+  ol.checklist li {
+    counter-increment: step;
+    position: relative;
+    padding: 12px 16px 12px 52px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+    font-size: 14.8px;
+  }
+  ol.checklist li::before {
+    content: counter(step);
+    position: absolute;
+    left: 14px; top: 50%;
+    transform: translateY(-50%);
+    width: 26px; height: 26px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+    font-family: var(--mono);
+  }
+
+  .principle-banner {
+    background: linear-gradient(135deg, var(--accent-soft), var(--primary-soft));
+    border: 1px solid #d4c8f0;
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    margin: 22px 0 4px;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .principle-banner b { color: var(--accent); }
+
+  footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  @media (max-width: 720px) {
+    nav.toc ol, .recap-grid { grid-template-columns: 1fr; }
+    section { padding: 26px 22px 30px; }
+    header.chapter { padding: 30px 24px; }
+    header.chapter h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="chapter">
+    <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+    <h1>Chapter 23 — Multi-Instance &amp; Multi-Pass Review Architectures</h1>
+    <p class="lede">Why a model cannot reliably grade its own homework — and the architectural patterns that
+      restore reviewer independence: fresh-context instances, layered local-then-global passes, and
+      confidence-gated escalation. This chapter is the backbone of every "design a robust automated code
+      review pipeline" exam scenario.</p>
+    <span class="exam-tag">📘 Study guide · 5 sub-sections · diagrams · exam strategy</span>
+  </header>
+
+  <nav class="toc">
+    <h2>In this chapter</h2>
+    <ol>
+      <li><a href="#s231"><b>23.1</b><span>Self-Review Limitations</span></a></li>
+      <li><a href="#s232"><b>23.2</b><span>Independent Review Instances</span></a></li>
+      <li><a href="#s233"><b>23.3</b><span>Multi-Pass Review</span></a></li>
+      <li><a href="#s234"><b>23.4</b><span>Confidence-Based Review Routing</span></a></li>
+      <li><a href="#s235"><b>23.5</b><span>Hands-On Design</span></a></li>
+      <li><a href="#summary"><b>★</b><span>Chapter Summary &amp; Quick Revision</span></a></li>
+      <li><a href="#checklist"><b>✓</b><span>Exam Answering Checklist</span></a></li>
+    </ol>
+  </nav>
+
+  <div class="principle-banner">
+    <b>One principle threads the whole chapter:</b> reliable review requires <b>independence</b> — separating
+    the <em>reviewer's context</em> from the <em>author's context</em>, then structuring that review so
+    scope (local → global) and confidence (auto → escalate) are handled by design, not by luck.
+  </div>
+
+  <!-- ============ 23.1 ============ -->
+  <section id="s231">
+    <h2><span class="num">23.1</span>Self-Review Limitations</h2>
+    <p class="subtitle">Why asking the same session "are you sure?" rarely catches its own mistakes.</p>
+
+    <div class="lead-def">
+      <strong>Definition —</strong> <em>Self-review</em> is when the same model instance that produced an
+      artifact (code, a plan, a PR) is asked, within the <strong>same session and context window</strong>, to
+      critique or verify that artifact. It fails systematically because the reviewer shares the author's state.
+    </div>
+
+    <h3>Why it matters</h3>
+    <p>Self-review <em>looks</em> like verification but structurally it is the author re-reading their own
+      work with the same assumptions loaded. Exam scenarios lean on this because teams naively bolt a
+      "now double-check your answer" step onto a single agent and assume the problem is solved. It is not.</p>
+
+    <h3>Mechanism — the three failure modes</h3>
+    <ul>
+      <li><strong>Context contamination:</strong> the flawed reasoning trace is still in the context window. The
+        model conditions its "review" on the very tokens that produced the bug, so the mistake is treated as an
+        established premise rather than something to challenge.</li>
+      <li><strong>Confirmation bias:</strong> having just committed to a solution, the model is primed to justify
+        it. Generation and evaluation share an objective ("be consistent with what I just said"), so the review
+        rationalizes instead of falsifies.</li>
+      <li><strong>Shared blind spots:</strong> if the model lacks knowledge of an edge case (e.g., a race
+        condition, a locale-specific date format), that gap is present in <em>both</em> the writing and the
+        reviewing pass. You cannot catch an error you couldn't see in the first place.</li>
+    </ul>
+
+    <h3>Concrete example</h3>
+    <p>An agent generates an auth handler and, in its reasoning, assumes tokens never expire mid-request. Asked
+      "review this for bugs" in the same session, it re-reads its own note that "tokens are valid for the
+      request lifetime," treats that as ground truth, and reports "no issues found." The expiry race survives
+      review because the wrong assumption was <em>inherited</em>, not re-examined.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 640 210" role="img" aria-label="Self-review feedback loop where a single instance's contaminated context feeds back into its own review.">
+        <defs>
+          <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#7a8699"></path>
+          </marker>
+          <marker id="ahr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#c23a2b"></path>
+          </marker>
+        </defs>
+        <rect x="60" y="80" width="170" height="52" rx="9" fill="#ffffff" stroke="#2f5bd0" stroke-width="1.6"></rect>
+        <text x="145" y="103" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#16202e">Single Instance</text>
+        <text x="145" y="120" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8699">generates artifact</text>
+
+        <rect x="410" y="80" width="170" height="52" rx="9" fill="#fcecea" stroke="#c23a2b" stroke-width="1.6"></rect>
+        <text x="495" y="103" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#16202e">Same Instance</text>
+        <text x="495" y="120" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8699">"reviews" itself</text>
+
+        <line x1="230" y1="106" x2="404" y2="106" stroke="#7a8699" stroke-width="1.8" marker-end="url(#ah)"></line>
+        <text x="317" y="97" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#44546a">shared context ▸</text>
+
+        <path d="M495,132 C495,185 145,185 145,134" fill="none" stroke="#c23a2b" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ahr)"></path>
+        <text x="320" y="178" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c23a2b" font-weight="600">same assumptions &amp; blind spots loop back</text>
+
+        <text x="320" y="30" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#16202e" font-weight="700">The contamination loop</text>
+        <text x="320" y="49" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8699">nothing enters the loop that could challenge the original reasoning</text>
+      </svg>
+      <div class="diagram-cap">Fig 23.1 — Self-review is a closed loop: the reviewer never sees anything the author didn't.</div>
+    </div>
+
+    <div class="pitfall-box">
+      <span class="callout-label">⚠ Pitfalls</span>
+      <ul class="tight">
+        <li>Mistaking "add a self-check step" for genuine QA — it raises confidence without raising coverage.</li>
+        <li>Longer chain-of-thought does <em>not</em> fix this; more tokens of the same context deepen the anchoring.</li>
+        <li>Temperature tweaks on the same instance are cosmetic — the contaminating context is unchanged.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <span class="callout-label">💡 Tips &amp; Tricks</span>
+      Remember the three failures with <span class="mnemonic">"C-C-S"</span> —
+      <b>C</b>ontamination, <b>C</b>onfirmation bias, <b>S</b>hared blind spots. Examiners test whether you can
+      name <em>why</em> self-review fails structurally (shared state) rather than blaming "the model isn't smart
+      enough." The magic phrase they look for is <em>"the reviewer and author share context, so review is not
+      independent."</em>
+    </div>
+
+    <div class="strategy-box">
+      <span class="callout-label">🎯 Exam Strategy</span>
+      If a scenario says "the team added a self-verification prompt but bugs still ship," <b>lead by diagnosing
+      the shared-context root cause</b> (name C-C-S), <b>then</b> prescribe the fix (independent instance, 23.2).
+      Always state the problem class before the solution — graders reward the causal chain, not just the answer.
+    </div>
+  </section>
+
+  <!-- ============ 23.2 ============ -->
+  <section id="s232">
+    <h2><span class="num">23.2</span>Independent Review Instances</h2>
+    <p class="subtitle">Fresh eyes, empty context: reviewing the artifact, not the author's story about it.</p>
+
+    <div class="lead-def">
+      <strong>Definition —</strong> An <em>independent review instance</em> is a separate model invocation with a
+      <strong>fresh context window</strong> that receives only the <strong>artifact under review</strong> (and its
+      spec/requirements) — never the generator's reasoning trace, intermediate thoughts, or self-justifications.
+    </div>
+
+    <h3>Why it matters</h3>
+    <p>This is the direct structural cure for 23.1. By denying the reviewer the author's context, you break all
+      three failure modes at once: there is nothing to be contaminated by, no prior commitment to defend, and —
+      crucially — a fresh instance may hold <em>different</em> blind spots, so overlap of gaps shrinks.</p>
+
+    <h3>Mechanism</h3>
+    <ul>
+      <li><strong>Context isolation:</strong> spin up a new session. The only inputs are the artifact + the
+        original requirements/acceptance criteria — the "what should this do," not the "how I decided to do it."</li>
+      <li><strong>Blind review:</strong> withhold the generator's chain-of-thought. If the reviewer never sees the
+        rationalization, it cannot inherit the flawed premise.</li>
+      <li><strong>Adversarial framing:</strong> instruct the reviewer to <em>find</em> defects (falsify), not to
+        confirm correctness — the opposite objective to the author.</li>
+      <li><strong>Optional diversity:</strong> vary the reviewer (different prompt/system role, or a different
+        model) to further de-correlate blind spots.</li>
+    </ul>
+
+    <div class="principle-banner">
+      <b>Key rule to memorize:</b> pass the reviewer the <b>artifact + spec</b>, never the author's reasoning.
+      Independence is defined by <em>what you withhold</em>, not merely by "using a second call."
+    </div>
+
+    <h3>Concrete example</h3>
+    <p>The auth handler from 23.1 is handed to a fresh instance that receives only the code and the requirement
+      "handle expired tokens gracefully." With no note claiming tokens never expire, the reviewer reads the code
+      on its own terms, spots that expiry mid-request is unhandled, and files a finding. Same model family — but
+      independence surfaced the bug.</p>
+
+    <div class="diagram">
+      <div class="flow">
+        <div class="box">Generator<small>full context + CoT</small></div>
+        <span class="arrow">→</span>
+        <div class="box accent">Artifact + Spec<small>reasoning stripped</small></div>
+        <span class="arrow">→</span>
+        <div class="box good">Independent Reviewer<small>fresh context</small></div>
+        <span class="arrow">→</span>
+        <div class="box">Findings</div>
+      </div>
+      <div class="diagram-cap">Fig 23.2 — A one-way "context firewall" (center) lets the artifact through but blocks the author's reasoning trace.</div>
+    </div>
+
+    <div class="pitfall-box">
+      <span class="callout-label">⚠ Pitfalls</span>
+      <ul class="tight">
+        <li><strong>Leaky isolation:</strong> passing the full conversation history "for convenience" re-creates
+          self-review — the independence is an illusion.</li>
+        <li>Confusing "a second API call" with independence. Same context in the second call = still contaminated.</li>
+        <li>Over-diversifying (wildly different model with poor code skills) can add noise instead of coverage.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <span class="callout-label">💡 Tips &amp; Tricks</span>
+      Mnemonic: <span class="mnemonic">"FAB"</span> — <b>F</b>resh context, <b>A</b>rtifact-only input,
+      <b>B</b>lind to reasoning. If any of the three is missing, it is not a true independent instance.
+      Examiners love the trap answer "just call the model twice" — reject it unless the context is reset.
+    </div>
+
+    <div class="strategy-box">
+      <span class="callout-label">🎯 Exam Strategy</span>
+      When proposing independent instances, <b>always specify the inputs explicitly</b> ("reviewer receives code
+      + acceptance criteria only; generator CoT withheld"). Naming the withheld context is what distinguishes an
+      A-grade answer from a vague "use a second agent." Mention 23.1's C-C-S and map each cure to it.
+    </div>
+  </section>
+
+  <!-- ============ 23.3 ============ -->
+  <section id="s233">
+    <h2><span class="num">23.3</span>Multi-Pass Review</h2>
+    <p class="subtitle">Separate the questions "is each file correct?" from "do the files agree with each other?"</p>
+
+    <div class="lead-def">
+      <strong>Definition —</strong> <em>Multi-pass review</em> decomposes review into distinct scopes run in
+      sequence: a <strong>Pass 1 (local)</strong> that analyzes each file in isolation, then a
+      <strong>Pass 2 (cross-file integration)</strong> that reasons over interfaces, contracts, and consistency
+      across the whole change set.
+    </div>
+
+    <h3>Why it matters</h3>
+    <p>A single "review the whole PR" prompt forces one context to hold every file <em>and</em> every
+      relationship at once — attention is diluted and mid-file details get lost. Splitting by scope gives each
+      concern its own focused pass, which is both more accurate and more token-efficient. This directly composes
+      with 23.2: each pass runs on an independent, fresh-context instance.</p>
+
+    <h3>Mechanism</h3>
+    <ul>
+      <li><strong>Pass 1 — Local (per-file):</strong> for each file, a fresh reviewer instance checks
+        correctness, style, and in-file logic in isolation. High recall on localized defects; deliberately
+        blind to the rest of the PR.</li>
+      <li><strong>Pass 2 — Cross-file integration:</strong> a reviewer receives the interface surface — function
+        signatures, shared types, call graph, and each file's Pass-1 findings — and checks contract mismatches,
+        broken callers, inconsistent assumptions, and duplicated/ conflicting logic <em>between</em> files.</li>
+      <li><strong>Hand-off, not restart:</strong> Pass 2 consumes Pass 1's structured output (summaries +
+        signatures), so integration reasoning is grounded without re-reading every full file.</li>
+    </ul>
+
+    <h3>Concrete example</h3>
+    <p>In a 5-file PR, Pass 1 clears each file individually — <code>api.py</code>, <code>db.py</code>, etc. all
+      look internally sound. Pass 2 then notices that <code>api.py</code> calls <code>db.save(user, ttl)</code>
+      with three arguments while <code>db.py</code>'s <code>save(user)</code> takes two. No single-file pass could
+      catch this; it only exists <em>between</em> files.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 660 250" role="img" aria-label="Multi-pass review: files fan out to independent local reviewers in pass one, then converge into a cross-file integration reviewer in pass two.">
+        <defs>
+          <marker id="ah2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#7a8699"></path>
+          </marker>
+        </defs>
+        <text x="120" y="24" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#2f5bd0">PASS 1 · Local</text>
+        <text x="540" y="24" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed">PASS 2 · Integration</text>
+
+        <!-- files -->
+        <g font-family="sans-serif" font-size="11.5" fill="#16202e">
+          <rect x="30" y="44" width="80" height="30" rx="6" fill="#ffffff" stroke="#2f5bd0" stroke-width="1.4"></rect><text x="70" y="64" text-anchor="middle">file A</text>
+          <rect x="30" y="94" width="80" height="30" rx="6" fill="#ffffff" stroke="#2f5bd0" stroke-width="1.4"></rect><text x="70" y="114" text-anchor="middle">file B</text>
+          <rect x="30" y="144" width="80" height="30" rx="6" fill="#ffffff" stroke="#2f5bd0" stroke-width="1.4"></rect><text x="70" y="164" text-anchor="middle">file C</text>
+          <rect x="30" y="194" width="80" height="30" rx="6" fill="#ffffff" stroke="#2f5bd0" stroke-width="1.4"></rect><text x="70" y="214" text-anchor="middle">file D</text>
+        </g>
+        <!-- local reviewers -->
+        <g font-family="sans-serif" font-size="10.5" fill="#1a8a5a">
+          <rect x="150" y="44" width="118" height="30" rx="6" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.4"></rect><text x="209" y="63" text-anchor="middle" fill="#16202e">local reviewer</text>
+          <rect x="150" y="94" width="118" height="30" rx="6" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.4"></rect><text x="209" y="113" text-anchor="middle" fill="#16202e">local reviewer</text>
+          <rect x="150" y="144" width="118" height="30" rx="6" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.4"></rect><text x="209" y="163" text-anchor="middle" fill="#16202e">local reviewer</text>
+          <rect x="150" y="194" width="118" height="30" rx="6" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.4"></rect><text x="209" y="213" text-anchor="middle" fill="#16202e">local reviewer</text>
+        </g>
+        <line x1="110" y1="59" x2="146" y2="59" stroke="#7a8699" stroke-width="1.5" marker-end="url(#ah2)"></line>
+        <line x1="110" y1="109" x2="146" y2="109" stroke="#7a8699" stroke-width="1.5" marker-end="url(#ah2)"></line>
+        <line x1="110" y1="159" x2="146" y2="159" stroke="#7a8699" stroke-width="1.5" marker-end="url(#ah2)"></line>
+        <line x1="110" y1="209" x2="146" y2="209" stroke="#7a8699" stroke-width="1.5" marker-end="url(#ah2)"></line>
+
+        <!-- converge -->
+        <rect x="430" y="104" width="200" height="60" rx="9" fill="#f2ecfd" stroke="#7c3aed" stroke-width="1.7"></rect>
+        <text x="530" y="130" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#16202e">Cross-File Reviewer</text>
+        <text x="530" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8699">signatures · call graph · contracts</text>
+
+        <g stroke="#7a8699" stroke-width="1.5" fill="none">
+          <path d="M268,59  C360,59  360,120 426,124" marker-end="url(#ah2)"></path>
+          <path d="M268,109 C360,109 360,128 426,132" marker-end="url(#ah2)"></path>
+          <path d="M268,159 C360,159 360,140 426,140" marker-end="url(#ah2)"></path>
+          <path d="M268,209 C360,209 360,150 426,148" marker-end="url(#ah2)"></path>
+        </g>
+        <text x="348" y="238" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#7a8699" font-style="italic">Pass-1 findings + interface surface flow forward</text>
+      </svg>
+      <div class="diagram-cap">Fig 23.3 — Fan-out for local depth, converge for global consistency.</div>
+    </div>
+
+    <div class="pitfall-box">
+      <span class="callout-label">⚠ Pitfalls</span>
+      <ul class="tight">
+        <li>Skipping Pass 2 — the most dangerous defects (integration/contract breaks) live only between files.</li>
+        <li>Feeding Pass 2 every full file instead of the interface surface: you recreate the diluted-context
+          problem and blow the token budget.</li>
+        <li>Ordering errors: cross-file reasoning before local passes have produced signatures leaves Pass 2 guessing.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <span class="callout-label">💡 Tips &amp; Tricks</span>
+      Mnemonic: <span class="mnemonic">"Local before Global"</span> (L→G). Think "zoom in, then zoom out."
+      Examiners test whether you know <em>which class of bug each pass catches</em>: local pass → in-file logic;
+      integration pass → contract/interface mismatches. If asked "why not one big prompt?" answer with
+      <em>attention dilution + token budget + scope separation</em>.
+    </div>
+
+    <div class="strategy-box">
+      <span class="callout-label">🎯 Exam Strategy</span>
+      Structure any multi-pass answer as <b>Pass 1 (what &amp; why) → hand-off artifact → Pass 2 (what &amp; why)</b>.
+      Explicitly name the hand-off (Pass-1 summaries + signatures) — that detail proves you understand passes are
+      <em>composed</em>, not independent silos. Always tie each pass to an independent fresh instance (links 23.2).
+    </div>
+  </section>
+
+  <!-- ============ 23.4 ============ -->
+  <section id="s234">
+    <h2><span class="num">23.4</span>Confidence-Based Review Routing</h2>
+    <p class="subtitle">Not every finding deserves the same treatment — let certainty decide the escalation path.</p>
+
+    <div class="lead-def">
+      <strong>Definition —</strong> <em>Confidence-based routing</em> attaches a calibrated confidence score to
+      each review finding (or verdict) and uses thresholds to decide its fate: auto-resolve, send to a
+      <strong>secondary independent instance</strong>, or escalate to a human. It is the control plane that sits
+      on top of 23.2/23.3.
+    </div>
+
+    <h3>Why it matters</h3>
+    <p>Routing everything to humans doesn't scale; auto-approving everything is reckless. Confidence lets the
+      system spend expensive attention (a second instance, or a person) only where uncertainty is high, keeping
+      throughput high and risk low. This is where architects show they can balance cost, latency, and safety.</p>
+
+    <h3>Mechanism</h3>
+    <ul>
+      <li><strong>Score each finding:</strong> the reviewer emits a confidence value with each finding
+        (e.g., "unhandled expiry — confidence 0.93"). Calibrate against known-labeled samples so the number is
+        meaningful, not vibes.</li>
+      <li><strong>Threshold bands:</strong> compare against configured cut-offs to pick an action.</li>
+      <li><strong>Escalation targets that preserve independence:</strong> the "secondary reviewer" is another
+        <em>fresh independent instance</em> (23.2) — often with a different prompt/model to de-correlate — never
+        the same contaminated context.</li>
+      <li><strong>Risk-weighting:</strong> multiply/adjust thresholds by blast radius. A low-confidence finding in
+        auth or billing escalates faster than the same score in a doc string.</li>
+    </ul>
+
+    <h3>Decision table (illustrative thresholds)</h3>
+    <div class="table-scroll">
+      <table class="data">
+        <thead>
+          <tr><th>Confidence</th><th>Action</th><th>Rationale</th><th>Ties to</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="pill hi">&gt; 90%</span></td>
+            <td>Auto-resolve<br>(approve or flag as defect)</td>
+            <td>High-certainty, well-calibrated finding; human attention would be wasted.</td>
+            <td>fast path</td>
+          </tr>
+          <tr>
+            <td><span class="pill mid">60–90%</span></td>
+            <td>Route to secondary <em>independent</em> instance</td>
+            <td>Ambiguous — a second set of fresh eyes de-correlates blind spots (23.2) and may resolve it.</td>
+            <td>23.2 · 23.3</td>
+          </tr>
+          <tr>
+            <td><span class="pill lo">&lt; 60%</span></td>
+            <td>Escalate to human reviewer</td>
+            <td>Low confidence and/or high risk — defer to human judgment; the model is not trustworthy here.</td>
+            <td>safety net</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13.5px;color:var(--ink-mute);margin-top:-4px;">The 60% / 90% cut-offs are illustrative,
+      not certified figures — real thresholds are tuned per-domain against calibration data and risk tolerance.</p>
+
+    <h3>Concrete example</h3>
+    <p>The cross-file reviewer reports the <code>db.save</code> arity mismatch at 0.95 confidence → auto-flagged
+      as a blocking defect. A separate finding — "this retry loop <em>might</em> double-charge" — comes in at
+      0.72 → routed to a fresh secondary instance, which confirms it. A vague "naming feels off, unsure" at 0.4 →
+      escalated to a human, who decides it's fine. Each finding consumed effort proportional to its uncertainty.</p>
+
+    <div class="diagram">
+      <div class="flow">
+        <div class="box accent">Finding + confidence</div>
+        <span class="arrow">→</span>
+        <div class="box">Confidence Router</div>
+        <span class="arrow">→</span>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="box good">≥90% · Auto-resolve</div>
+          <div class="box warn">60–90% · 2nd independent instance</div>
+          <div class="box bad">&lt;60% · Human escalation</div>
+        </div>
+      </div>
+      <div class="diagram-cap">Fig 23.4 — The router is a switch, not a reviewer: it only decides <em>who</em> handles the finding next.</div>
+    </div>
+
+    <div class="pitfall-box">
+      <span class="callout-label">⚠ Pitfalls</span>
+      <ul class="tight">
+        <li><strong>Uncalibrated confidence:</strong> raw model self-reported certainty is often overconfident —
+          routing on it blindly sends real bugs down the auto-approve path.</li>
+        <li>Ignoring risk: a 91% finding in payment code shouldn't auto-resolve just because it cleared the band.</li>
+        <li><strong>Fake secondary review:</strong> routing the mid-band back to the <em>same</em> instance
+          violates 23.2 — the "second opinion" is contaminated.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <span class="callout-label">💡 Tips &amp; Tricks</span>
+      Mnemonic: <span class="mnemonic">"A-S-E"</span> — high→<b>A</b>uto, mid→<b>S</b>econd instance,
+      low→<b>E</b>scalate to human. Examiners test two traps: (1) that you calibrate confidence rather than trust
+      it raw, and (2) that the mid-band reviewer is <em>independent</em>. If you forget the risk-weighting, you'll
+      miss the "high-confidence in high-stakes code" gotcha.
+    </div>
+
+    <div class="strategy-box">
+      <span class="callout-label">🎯 Exam Strategy</span>
+      Present routing as a <b>table of bands → actions → rationale</b> (graders love the structure), then add one
+      sentence on <b>calibration</b> and one on <b>risk-weighting</b>. Always state that the secondary path reuses
+      the independent-instance mechanism from 23.2 — this proves cross-section consistency, which is exactly what
+      Chapter-23 essay questions reward.
+    </div>
+  </section>
+
+  <!-- ============ 23.5 ============ -->
+  <section id="s235">
+    <h2><span class="num">23.5</span>Hands-On Design — a Multi-Pass Review System</h2>
+    <p class="subtitle">Putting 23.1–23.4 together into one working pipeline for a real PR.</p>
+
+    <h3>Step 1 — The problem</h3>
+    <p>Design an automated review system for a <strong>10-file pull request</strong> that touches an API layer,
+      a data layer, and shared utilities. Requirements: catch both in-file bugs and cross-file contract breaks,
+      minimize human load, and never auto-approve a risky change the system isn't sure about. A naive
+      "one agent reviews the whole PR and self-checks" is explicitly disallowed (fails per 23.1).</p>
+
+    <h3>Step 2 — Architecture</h3>
+    <div class="diagram">
+      <svg viewBox="0 0 680 300" role="img" aria-label="Full multi-pass review architecture: PR splits into ten local reviewers, feeds a cross-file integration reviewer, whose scored findings pass through a confidence router to auto-resolve, secondary instance, or human escalation.">
+        <defs>
+          <marker id="ah3" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#7a8699"></path>
+          </marker>
+        </defs>
+        <!-- PR -->
+        <rect x="20" y="120" width="86" height="54" rx="8" fill="#ffffff" stroke="#2f5bd0" stroke-width="1.6"></rect>
+        <text x="63" y="143" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#16202e">10-file PR</text>
+        <text x="63" y="160" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#7a8699">artifact + spec</text>
+
+        <!-- pass 1 stack -->
+        <text x="205" y="26" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#1a8a5a">PASS 1 · 10 local reviewers (fresh ctx each)</text>
+        <g font-family="sans-serif" font-size="10" fill="#16202e">
+          <rect x="150" y="40" width="110" height="22" rx="5" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.2"></rect><text x="205" y="55" text-anchor="middle">file 1 reviewer</text>
+          <rect x="150" y="68" width="110" height="22" rx="5" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.2"></rect><text x="205" y="83" text-anchor="middle">file 2 reviewer</text>
+          <rect x="150" y="96" width="110" height="22" rx="5" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.2"></rect><text x="205" y="111" text-anchor="middle">file 3 reviewer</text>
+          <rect x="150" y="124" width="110" height="22" rx="5" fill="#f0f3f7" stroke="#9aa6b6" stroke-width="1.2"></rect><text x="205" y="139" text-anchor="middle" fill="#7a8699">… files 4–9 …</text>
+          <rect x="150" y="152" width="110" height="22" rx="5" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.2"></rect><text x="205" y="167" text-anchor="middle">file 10 reviewer</text>
+        </g>
+        <line x1="106" y1="147" x2="146" y2="120" stroke="#7a8699" stroke-width="1.4" marker-end="url(#ah3)"></line>
+        <line x1="106" y1="147" x2="146" y2="163" stroke="#7a8699" stroke-width="1.4" marker-end="url(#ah3)"></line>
+        <text x="120" y="112" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a8699">fan-out</text>
+
+        <!-- pass 2 -->
+        <rect x="300" y="86" width="120" height="56" rx="9" fill="#f2ecfd" stroke="#7c3aed" stroke-width="1.7"></rect>
+        <text x="360" y="108" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#16202e">PASS 2</text>
+        <text x="360" y="124" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a8699">cross-file reviewer</text>
+        <g stroke="#7a8699" stroke-width="1.3" fill="none">
+          <path d="M260,51  C285,60  285,100 297,104" marker-end="url(#ah3)"></path>
+          <path d="M260,163 C285,150 285,124 297,120" marker-end="url(#ah3)"></path>
+        </g>
+        <text x="283" y="80" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a8699">findings + signatures</text>
+
+        <!-- router -->
+        <rect x="300" y="180" width="120" height="46" rx="9" fill="#eaf0fc" stroke="#2f5bd0" stroke-width="1.7"></rect>
+        <text x="360" y="200" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#16202e">Confidence</text>
+        <text x="360" y="216" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#16202e">Router</text>
+        <line x1="360" y1="142" x2="360" y2="176" stroke="#7a8699" stroke-width="1.5" marker-end="url(#ah3)"></line>
+        <text x="404" y="164" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a8699">scored findings</text>
+
+        <!-- outcomes -->
+        <g font-family="sans-serif" font-size="10.5">
+          <rect x="500" y="60" width="150" height="34" rx="7" fill="#e6f6ee" stroke="#1a8a5a" stroke-width="1.4"></rect><text x="575" y="81" text-anchor="middle" fill="#16202e">≥90% · Auto-resolve</text>
+          <rect x="500" y="120" width="150" height="34" rx="7" fill="#fdf1de" stroke="#b9740a" stroke-width="1.4"></rect><text x="575" y="141" text-anchor="middle" fill="#16202e">60–90% · 2nd instance</text>
+          <rect x="500" y="180" width="150" height="34" rx="7" fill="#fcecea" stroke="#c23a2b" stroke-width="1.4"></rect><text x="575" y="201" text-anchor="middle" fill="#16202e">&lt;60% · Human</text>
+        </g>
+        <g stroke="#7a8699" stroke-width="1.4" fill="none">
+          <path d="M420,196 C455,196 455,77  497,77" marker-end="url(#ah3)"></path>
+          <path d="M420,203 C455,203 455,137 497,137" marker-end="url(#ah3)"></path>
+          <path d="M420,210 C455,210 455,197 497,197" marker-end="url(#ah3)"></path>
+        </g>
+        <!-- feedback: 2nd instance is independent -->
+        <path d="M575,154 C575,250 360,250 360,228" fill="none" stroke="#b9740a" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ah3)"></path>
+        <text x="440" y="268" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#b9740a" font-style="italic">secondary = fresh independent instance (23.2), re-enters router</text>
+      </svg>
+      <div class="diagram-cap">Fig 23.5 — End-to-end: fan-out (23.3 local) → converge (23.3 integration) → route (23.4), every reviewer independent (23.2), replacing self-review (23.1).</div>
+    </div>
+
+    <h3>Step 3 — Walkthrough</h3>
+    <ol>
+      <li><strong>Pass 1 (local, parallel):</strong> 10 fresh independent instances each receive one file + the
+        relevant spec — no generator reasoning (23.1/23.2). Each emits findings with confidence and a compact
+        signature summary (exports, function signatures, assumptions).</li>
+      <li><strong>Pass 2 (cross-file):</strong> one fresh instance receives the 10 signature summaries + Pass-1
+        findings (not the full files) and checks the call graph and contracts. It discovers
+        <code>api.py</code> calls <code>db.save(user, ttl)</code> while <code>db.py</code> defines
+        <code>save(user)</code> — a break invisible to any local pass (23.3).</li>
+      <li><strong>Confidence routing:</strong> every finding flows through the router (23.4). See the decision
+        table below for how each is handled.</li>
+    </ol>
+
+    <h3>Step 4 — Sample decision table (this PR's findings)</h3>
+    <div class="table-scroll">
+      <table class="data">
+        <thead>
+          <tr><th>Finding</th><th>Source pass</th><th>Confidence</th><th>Routed action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>db.save</code> arity mismatch (3 args vs 2)</td>
+            <td>Pass 2 · cross-file</td>
+            <td><span class="pill hi">0.95</span></td>
+            <td>Auto-flag as <strong>blocking defect</strong></td>
+          </tr>
+          <tr>
+            <td>Unhandled token expiry in <code>api.py</code></td>
+            <td>Pass 1 · local</td>
+            <td><span class="pill hi">0.92</span></td>
+            <td>Auto-flag as defect</td>
+          </tr>
+          <tr>
+            <td>Retry loop may double-charge in <code>billing.py</code></td>
+            <td>Pass 1 · local</td>
+            <td><span class="pill mid">0.72</span></td>
+            <td>Route to secondary independent instance → confirmed</td>
+          </tr>
+          <tr>
+            <td>Possible N+1 query in <code>db.py</code></td>
+            <td>Pass 2 · cross-file</td>
+            <td><span class="pill mid">0.65</span></td>
+            <td>Secondary instance → downgraded to advisory</td>
+          </tr>
+          <tr>
+            <td>"Naming feels inconsistent, unsure" in utils</td>
+            <td>Pass 1 · local</td>
+            <td><span class="pill lo">0.40</span></td>
+            <td>Escalate to human → dismissed as style pref</td>
+          </tr>
+          <tr>
+            <td>Low-confidence auth finding (high blast radius)</td>
+            <td>Pass 1 · local</td>
+            <td><span class="pill lo">0.55</span></td>
+            <td>Risk-weighted → escalate to human despite mid-ish score</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pitfall-box">
+      <span class="callout-label">⚠ Pitfalls in the build</span>
+      <ul class="tight">
+        <li>Letting Pass 2 read all 10 full files (context blow-up) instead of signatures + Pass-1 findings.</li>
+        <li>Reusing the primary reviewer's session as the "secondary" — collapses independence back to self-review.</li>
+        <li>Trusting raw model confidence without calibration, and forgetting to risk-weight auth/billing findings.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <span class="callout-label">💡 Tips &amp; Tricks</span>
+      Recall the full pipeline as <span class="mnemonic">"Split → Local → Global → Route"</span>. If you can draw
+      that four-stage flow and annotate each stage with the section it comes from (23.3, 23.3, 23.4) plus
+      "every reviewer independent (23.2), never self-review (23.1)," you have the whole chapter in one diagram.
+    </div>
+
+    <div class="strategy-box">
+      <span class="callout-label">🎯 Exam Strategy</span>
+      For a "design a review system" question: <b>(1)</b> reject the naive single-agent design and say why (23.1);
+      <b>(2)</b> draw the fan-out/converge/route diagram; <b>(3)</b> walk one finding of each confidence band
+      through the pipeline; <b>(4)</b> close with calibration + risk-weighting. Present a decision table — it
+      earns structure marks and demonstrates the routing logic concretely.
+    </div>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+    <h2><span class="num">★</span>Chapter Summary &amp; Quick Revision</h2>
+    <p class="subtitle">The whole chapter in seven cards — read these the night before.</p>
+    <div class="recap-grid">
+      <div class="recap-card">
+        <h4>23.1 Self-Review Limitations</h4>
+        <p>Same-session review fails via <b>C-C-S</b>: Context contamination, Confirmation bias, Shared blind
+          spots. Reviewer and author share state, so review isn't independent.</p>
+      </div>
+      <div class="recap-card">
+        <h4>23.2 Independent Instances</h4>
+        <p><b>FAB</b>: Fresh context, Artifact-only input, Blind to reasoning. Independence is defined by what you
+          <em>withhold</em> — the generator's chain-of-thought.</p>
+      </div>
+      <div class="recap-card">
+        <h4>23.3 Multi-Pass Review</h4>
+        <p><b>Local before Global.</b> Pass 1 = per-file logic; Pass 2 = cross-file contracts via signatures +
+          Pass-1 findings. Integration bugs live only between files.</p>
+      </div>
+      <div class="recap-card">
+        <h4>23.4 Confidence Routing</h4>
+        <p><b>A-S-E</b>: high→Auto, mid→Second independent instance, low→Escalate to human. Calibrate confidence;
+          risk-weight high-stakes code.</p>
+      </div>
+      <div class="recap-card">
+        <h4>23.5 Hands-On</h4>
+        <p><b>Split → Local → Global → Route.</b> 10 fresh local reviewers → one cross-file reviewer → confidence
+          router with a decision table. Never self-review; secondary path stays independent.</p>
+      </div>
+      <div class="recap-card">
+        <h4>The through-line</h4>
+        <p><b>Independence + scope separation + confidence gating.</b> Every later section is a mechanism serving
+          the independence principle introduced in 23.1.</p>
+      </div>
+      <div class="recap-card">
+        <h4>Consistency check</h4>
+        <p>23.4's "secondary reviewer" is literally a 23.2 independent instance operating on 23.3 scopes — the
+          sections compose, they don't contradict.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHECKLIST ============ -->
+  <section id="checklist">
+    <h2><span class="num">✓</span>Exam Answering Checklist</h2>
+    <p class="subtitle">A repeatable order for any Chapter-23-style scenario or essay question.</p>
+    <ol class="checklist">
+      <li><strong>Diagnose before you prescribe.</strong> Name the root cause first — if self-review is in the
+        scenario, state C-C-S (shared context) before offering any fix.</li>
+      <li><strong>Establish independence.</strong> Propose fresh-context instances and explicitly list the inputs
+        (artifact + spec) and what's withheld (generator reasoning). Reject "just call the model twice."</li>
+      <li><strong>Separate scope into passes.</strong> Describe Pass 1 (local, per-file) then Pass 2 (cross-file),
+        and name the hand-off artifact (signatures + Pass-1 findings). Say which bug class each pass catches.</li>
+      <li><strong>Add the confidence control plane.</strong> Present a bands → action → rationale table
+        (auto / secondary independent instance / human). Confirm the secondary path is independent (ties to step 2).</li>
+      <li><strong>Address calibration &amp; risk.</strong> State that confidence must be calibrated (not raw
+        self-report) and thresholds risk-weighted for high-blast-radius code (auth, billing).</li>
+      <li><strong>Draw the diagram.</strong> Fan-out → converge → route. A labeled sketch earns structure marks
+        and proves the sections compose consistently.</li>
+      <li><strong>Close with consistency.</strong> Explicitly note how 23.4 reuses 23.2 on 23.3's scopes — showing
+        no contradiction across the chapter is exactly what graders reward.</li>
+    </ol>
+  </section>
+
+  <footer>
+    Claude Certified Architect — Foundations &amp; Professional · Chapter 23 study guide ·
+    diagrams are inline SVG/CSS, no external assets.
+  </footer>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 49 — Evaluation Datasets &amp; Test Frameworks | Claude Certified Architect</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-alt: #f0f3f8;
+    --ink: #1a2233;
+    --ink-soft: #47536b;
+    --ink-muted: #7a869a;
+    --line: #e2e6ee;
+    --line-strong: #cbd3e0;
+    --primary: #4338ca;
+    --primary-soft: #eef0ff;
+    --accent: #0d9488;
+    --tip-bg: #ecfdf5;
+    --tip-border: #10b981;
+    --tip-ink: #065f46;
+    --exam-bg: #eff6ff;
+    --exam-border: #3b82f6;
+    --exam-ink: #1e40af;
+    --pitfall-bg: #fef2f2;
+    --pitfall-border: #ef4444;
+    --pitfall-ink: #991b1b;
+    --code-bg: #1e293b;
+    --code-ink: #e2e8f0;
+    --radius: 10px;
+    --radius-sm: 6px;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "SF Mono", "Cascadia Code", Consolas, "Liberation Mono", monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  header.masthead {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 55%, #0d9488 130%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 34px 34px 30px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(67, 56, 202, 0.18);
+  }
+  header.masthead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin: 0 0 10px;
+  }
+  header.masthead h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+  header.masthead p.sub {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.92;
+    max-width: 70ch;
+  }
+  header.masthead .meta {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header.masthead .meta span {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 36px;
+  }
+  nav.toc h2 {
+    margin: 0 0 14px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 1;
+  }
+  nav.toc li { margin: 7px 0; }
+  nav.toc a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav.toc a:hover { text-decoration: underline; }
+  nav.toc .toc-desc { color: var(--ink-muted); font-weight: 400; }
+
+  section.topic {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px 32px 34px;
+    margin-bottom: 34px;
+    scroll-margin-top: 20px;
+  }
+
+  h2.section-title {
+    margin: 0 0 6px;
+    font-size: 23px;
+    color: var(--ink);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2.section-title .num {
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    margin: 26px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 14px; }
+  ul, ol.keys { margin: 0 0 16px; padding-left: 22px; }
+  ul li, ol.keys li { margin: 6px 0; }
+  strong { color: var(--ink); }
+  em { color: var(--ink-soft); }
+
+  .overview {
+    background: var(--surface-alt);
+    border-left: 4px solid var(--primary);
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    font-size: 15.5px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 6px 0 18px;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+  }
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 13px;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  th {
+    text-align: left;
+    background: var(--surface-alt);
+    color: var(--ink-soft);
+    font-weight: 600;
+    padding: 10px 13px;
+    border-bottom: 2px solid var(--line-strong);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  td {
+    padding: 10px 13px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) td { background: #fafbfd; }
+  .pill {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 100px;
+    line-height: 1.5;
+  }
+  .pill.low { background: #dcfce7; color: #166534; }
+  .pill.med { background: #fef9c3; color: #854d0e; }
+  .pill.high { background: #fee2e2; color: #991b1b; }
+  .pill.fast { background: #dcfce7; color: #166534; }
+  .pill.slow { background: #fee2e2; color: #991b1b; }
+  .pill.mid { background: #fef9c3; color: #854d0e; }
+
+  .callout {
+    border-radius: var(--radius-sm);
+    padding: 15px 18px 15px 16px;
+    margin: 18px 0;
+    font-size: 14.5px;
+  }
+  .callout .label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 13.5px;
+    letter-spacing: 0.02em;
+  }
+  .callout ul { margin: 8px 0 0; }
+  .tip {
+    background: var(--tip-bg);
+    border-left: 4px solid var(--tip-border);
+    color: var(--tip-ink);
+  }
+  .tip .label { color: var(--tip-ink); }
+  .exam {
+    background: var(--exam-bg);
+    border-left: 4px solid var(--exam-border);
+    color: var(--exam-ink);
+  }
+  .exam .label { color: var(--exam-ink); }
+  .exam strong { color: var(--exam-ink); }
+  .pitfall {
+    background: var(--pitfall-bg);
+    border-left: 4px solid var(--pitfall-border);
+    color: var(--pitfall-ink);
+  }
+  .pitfall .label { color: var(--pitfall-ink); }
+  .pitfall strong { color: var(--pitfall-ink); }
+
+  code {
+    font-family: var(--font-mono);
+    background: var(--primary-soft);
+    color: #3730a3;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+  pre {
+    background: var(--code-bg);
+    color: var(--code-ink);
+    padding: 18px 20px;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 6px 0 18px;
+  }
+  pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: 13px;
+  }
+  .cmt { color: #94a3b8; }
+  .kw { color: #c4b5fd; }
+  .str { color: #6ee7b7; }
+  .fn { color: #93c5fd; }
+
+  blockquote {
+    margin: 0 0 16px;
+    padding: 12px 18px;
+    border-left: 4px solid var(--line-strong);
+    background: var(--surface-alt);
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* CSS flow diagram */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0;
+    margin: 8px 0 20px;
+  }
+  .flow .node {
+    flex: 1 1 130px;
+    min-width: 120px;
+    background: var(--primary-soft);
+    border: 1.5px solid #c7d2fe;
+    color: #3730a3;
+    border-radius: var(--radius-sm);
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .flow .node small {
+    display: block;
+    font-weight: 400;
+    color: var(--ink-muted);
+    font-size: 11px;
+    margin-top: 3px;
+  }
+  .flow .arrow {
+    align-self: center;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 8px;
+    flex: 0 0 auto;
+  }
+  .decision-node {
+    background: #fef3c7 !important;
+    border-color: #fcd34d !important;
+    color: #854d0e !important;
+  }
+  .branch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 4px 0 20px;
+  }
+  .branch .outcome {
+    flex: 1 1 260px;
+    border-radius: var(--radius-sm);
+    padding: 13px 16px;
+    font-size: 13.5px;
+  }
+  .branch .approve {
+    background: var(--tip-bg);
+    border: 1.5px solid var(--tip-border);
+    color: var(--tip-ink);
+  }
+  .branch .rollback {
+    background: var(--pitfall-bg);
+    border: 1.5px solid var(--pitfall-border);
+    color: var(--pitfall-ink);
+  }
+  .branch .outcome b { display: block; margin-bottom: 4px; }
+
+  /* Coverage matrix grid */
+  .matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 8px 0 18px;
+  }
+  .matrix .cell {
+    background: var(--surface-alt);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .matrix .cell b {
+    display: block;
+    color: var(--primary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 5px;
+  }
+
+  .backtop {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+  .backtop:hover { color: var(--primary); }
+
+  footer {
+    text-align: center;
+    color: var(--ink-muted);
+    font-size: 13px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  .summary-note {
+    font-size: 13px;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+    <h1>Chapter 49 — Evaluation Datasets &amp; Test Frameworks</h1>
+    <p class="sub">How to design representative evaluation data, choose the right mix of automated and human judgment, curate golden and adversarial sets, run regression tests across prompt and model changes, and assemble a working evaluation test suite.</p>
+    <div class="meta">
+      <span>5 subtopics</span>
+      <span>Structured notes + visuals</span>
+      <span>Exam strategy per section</span>
+      <span>Hands-on code walkthrough</span>
+    </div>
+  </header>
+
+  <nav class="toc" id="top">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s491">49.1 Designing Representative Evaluation Datasets</a> — <span class="toc-desc">sampling, coverage, diversity, bias</span></li>
+      <li><a href="#s492">49.2 Mixed Methodologies: Automated, Human &amp; Hybrid</a> — <span class="toc-desc">cost/speed/accuracy tradeoffs</span></li>
+      <li><a href="#s493">49.3 Golden Datasets, Edge Cases &amp; Adversarial Examples</a> — <span class="toc-desc">curation and stress testing</span></li>
+      <li><a href="#s494">49.4 Regression Testing for Prompt &amp; Model Changes</a> — <span class="toc-desc">baseline → change → compare → gate</span></li>
+      <li><a href="#s495">49.5 Hands-On: Building an Evaluation Test Suite</a> — <span class="toc-desc">test harness walkthrough</span></li>
+      <li><a href="#summary">Chapter Summary &amp; Quick-Reference Recap</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= 49.1 ================= -->
+  <section class="topic" id="s491">
+    <h2 class="section-title"><span class="num">49.1</span> Designing Representative Evaluation Datasets</h2>
+
+    <div class="overview">
+      An evaluation dataset is only useful if it <strong>mirrors the distribution of real production inputs</strong>. A representative set lets a passing score on the eval predict a passing experience for users. If the eval over-samples easy or convenient inputs, the score becomes an optimistic illusion that masks real-world failure modes.
+    </div>
+
+    <h3>Key Concepts</h3>
+    <ol class="keys">
+      <li><strong>Sampling strategy.</strong> Prefer <em>stratified sampling</em> — partition production traffic by meaningful dimensions (intent, input length, language, user segment) and sample within each stratum so rare-but-important cases are not drowned out by high-volume ones.</li>
+      <li><strong>Use-case coverage.</strong> Enumerate the tasks the system must handle and confirm every task has enough examples to produce a statistically meaningful signal — not just the one or two flagship flows.</li>
+      <li><strong>Input diversity.</strong> Vary phrasing, formatting, length, tone, domain vocabulary, and language so the model is not evaluated on a single narrow style of prompt.</li>
+      <li><strong>Bias avoidance.</strong> Watch for <em>selection bias</em> (cherry-picking clean examples), <em>survivorship bias</em> (only successful past sessions), and <em>temporal drift</em> (last quarter's traffic no longer reflects today's).</li>
+      <li><strong>Label quality.</strong> Expected outputs / rubrics must be defined by someone who understands "good," with clear, reproducible criteria — ambiguous labels poison every downstream metric.</li>
+    </ol>
+
+    <h3>Visualization — Coverage Dimensions</h3>
+    <div class="matrix" role="group" aria-label="Coverage dimensions matrix">
+      <div class="cell"><b>Intent / Task</b>Q&amp;A, summarization, extraction, tool-use, refusal cases</div>
+      <div class="cell"><b>Difficulty</b>Trivial, typical, hard, edge, adversarial</div>
+      <div class="cell"><b>Input Shape</b>Short, long, malformed, multi-part, noisy</div>
+      <div class="cell"><b>Population</b>Language, locale, domain jargon, user segment</div>
+      <div class="cell"><b>Safety Surface</b>Sensitive topics, PII, jailbreak attempts, out-of-scope</div>
+      <div class="cell"><b>Frequency Tier</b>Head (common), torso, long-tail (rare)</div>
+    </div>
+    <p class="summary-note">A representative set touches every column above in proportions that reflect real usage — while deliberately over-weighting high-risk cells relative to their raw frequency.</p>
+
+    <div class="callout pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li><strong>Convenience sampling:</strong> building the set from whatever logs are easiest to grab, skewing toward power users or one channel.</li>
+        <li><strong>Over-representing the happy path:</strong> 95% easy inputs makes the eval score look great while production breaks on the tail.</li>
+        <li><strong>Static forever:</strong> never refreshing the sample as traffic evolves, so the eval quietly stops representing reality (distribution drift).</li>
+        <li><strong>Leaky examples:</strong> pulling eval items from the same data used to craft prompts/few-shots, inflating scores.</li>
+      </ul>
+    </div>
+
+    <div class="callout tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Start from a <strong>production traffic sample</strong>, then top up under-covered strata with hand-authored cases rather than the reverse.</li>
+        <li>Keep a <strong>coverage checklist</strong> (like the matrix above) and mark each dimension's example count — gaps become obvious.</li>
+        <li>Weight by <em>risk × frequency</em>, not frequency alone: a rare but high-impact failure deserves more eval mass than its raw share.</li>
+        <li>Version the dataset and record <em>how</em> it was sampled, so a reviewer can reason about what a score does and does not cover.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <span class="label">📌 How to Answer Exam Questions</span>
+      <p><strong>Common patterns:</strong> "Your eval scores are high but users report failures — what is the most likely cause?" or "Which sampling strategy best ensures rare intents are represented?"</p>
+      <ul>
+        <li><strong>Watch for:</strong> "representative," "distribution," "stratified," "coverage," "bias." These flag this subtopic.</li>
+        <li><strong>Elimination:</strong> answers that maximize <em>quantity</em> ("just add 10,000 random examples") are usually traps — representativeness beats raw volume.</li>
+        <li>If a scenario says the eval looks good but production is bad, favor the option about <strong>unrepresentative / biased sampling</strong> over options about model size or temperature.</li>
+        <li>"Stratified sampling" is almost always the correct choice when the stem stresses covering rare or minority cases.</li>
+      </ul>
+    </div>
+    <a class="backtop" href="#top">↑ Back to contents</a>
+  </section>
+
+  <!-- ================= 49.2 ================= -->
+  <section class="topic" id="s492">
+    <h2 class="section-title"><span class="num">49.2</span> Mixed Methodologies: Automated, Human &amp; Hybrid Evaluation</h2>
+
+    <div class="overview">
+      No single evaluation method is best for everything. Mature evaluation stacks <strong>combine methods</strong>: cheap automated checks run on every change at scale, human review handles nuance and judgment, and hybrid approaches (including LLM-as-judge with human calibration) bridge the two. The architect's job is to route each quality question to the cheapest method that answers it reliably.
+    </div>
+
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Automated evaluation</strong> — deterministic checks (exact/regex match, schema validation, unit-test-style assertions) and metric scorers. Also includes <em>LLM-as-judge</em>, where a model grades outputs against a rubric. Fast and cheap, but only as trustworthy as its criteria.</li>
+      <li><strong>Human evaluation</strong> — expert or crowd raters judge quality, tone, safety, and correctness. The gold standard for nuance, but slow, costly, and subject to rater variance.</li>
+      <li><strong>Hybrid evaluation</strong> — automated scorers do the first pass at scale; humans review disagreements, low-confidence items, and a calibration sample. LLM-judges are validated against human labels before being trusted.</li>
+    </ul>
+
+    <h3>Visualization — Method Comparison Matrix</h3>
+    <table>
+      <caption>Automated vs. Human vs. Hybrid across the dimensions the exam tends to test.</caption>
+      <thead>
+        <tr><th>Method</th><th>Speed</th><th>Cost</th><th>Accuracy on Nuance</th><th>Scalability</th><th>Best For</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Automated</strong></td>
+          <td><span class="pill fast">Fast</span></td>
+          <td><span class="pill low">Low</span></td>
+          <td><span class="pill med">Medium*</span></td>
+          <td><span class="pill low">High</span></td>
+          <td>Regression, CI gates, large-scale scoring, objective checks</td>
+        </tr>
+        <tr>
+          <td><strong>Human</strong></td>
+          <td><span class="pill slow">Slow</span></td>
+          <td><span class="pill high">High</span></td>
+          <td><span class="pill fast">High</span></td>
+          <td><span class="pill high">Low</span></td>
+          <td>Tone, safety, subjective quality, ground-truth labeling, calibration</td>
+        </tr>
+        <tr>
+          <td><strong>Hybrid</strong></td>
+          <td><span class="pill mid">Medium</span></td>
+          <td><span class="pill mid">Medium</span></td>
+          <td><span class="pill fast">High</span></td>
+          <td><span class="pill mid">Medium–High</span></td>
+          <td>Production readiness, ongoing monitoring, scaling human judgment</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="summary-note">*Automated nuance accuracy depends entirely on the scorer: exact-match is objective but brittle; LLM-as-judge handles nuance better but must be validated against human labels first.</p>
+
+    <div class="callout pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li><strong>Trusting an LLM-judge blind:</strong> deploying it without measuring agreement with human labels — its errors then look like ground truth.</li>
+        <li><strong>Over-relying on exact match</strong> for open-ended tasks: penalizing correct answers that are phrased differently.</li>
+        <li><strong>Ignoring inter-rater reliability:</strong> humans disagree; a single unreliable rater is noise, not signal.</li>
+        <li><strong>Using slow human review inside a fast CI loop</strong>, so testing becomes a bottleneck and gets skipped.</li>
+      </ul>
+    </div>
+
+    <div class="callout tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Match method to question: <em>objective &amp; high-volume → automated</em>; <em>subjective &amp; high-stakes → human</em>; <em>scale + nuance → hybrid</em>.</li>
+        <li>Always <strong>calibrate an LLM-judge against a human-labeled subset</strong> and report the agreement rate before relying on it.</li>
+        <li>Use humans where they are irreplaceable (tone, safety, edge judgment) and automate the rest to keep them focused.</li>
+        <li>Track <strong>inter-annotator agreement</strong> (e.g., percent agreement or a kappa statistic) to know how much to trust human labels.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <span class="label">📌 How to Answer Exam Questions</span>
+      <p><strong>Common patterns:</strong> "Which evaluation method is most appropriate for [scenario]?" — where scenario stresses <em>scale</em>, <em>cost</em>, <em>nuance</em>, or <em>safety</em>.</p>
+      <ul>
+        <li><strong>Key terms:</strong> "at scale / every commit" ⇒ automated; "tone, empathy, safety, subjective" ⇒ human; "production readiness / best of both" ⇒ hybrid.</li>
+        <li><strong>Elimination:</strong> "human review on every deploy" is usually a trap — too slow/expensive for CI. "LLM-judge, no validation" is a trap — must be calibrated.</li>
+        <li>If the stem mentions both <em>large volume</em> and <em>subtle quality</em>, the answer is almost always <strong>hybrid</strong>, not a single method.</li>
+      </ul>
+    </div>
+    <a class="backtop" href="#top">↑ Back to contents</a>
+  </section>
+
+  <!-- ================= 49.3 ================= -->
+  <section class="topic" id="s493">
+    <h2 class="section-title"><span class="num">49.3</span> Golden Datasets, Edge Cases &amp; Adversarial Examples</h2>
+
+    <div class="overview">
+      Three complementary test-data types stress a system in different ways. A <strong>golden dataset</strong> is a curated, stable reference of inputs with verified expected outputs — the anchor for regression. <strong>Edge cases</strong> probe the boundaries of valid input. <strong>Adversarial examples</strong> are crafted to <em>break</em> the system: to induce unsafe, incorrect, or policy-violating behavior.
+    </div>
+
+    <h3>Key Concepts &amp; Definitions</h3>
+    <table>
+      <caption>Test-data types, what they contain, and how they are built.</caption>
+      <thead>
+        <tr><th>Type</th><th>Definition</th><th>Key Property</th><th>Construction</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Golden dataset</strong></td>
+          <td>Curated inputs paired with verified, high-confidence expected outputs / acceptance criteria.</td>
+          <td><strong>Static &amp; version-controlled</strong> — changes are deliberate and reviewed, not constant.</td>
+          <td>Expert-labeled, peer-reviewed, stored under version control with a changelog.</td>
+        </tr>
+        <tr>
+          <td><strong>Edge cases</strong></td>
+          <td>Rare-but-valid inputs at the boundaries: empty input, maximum length, unusual formatting, ambiguous requests.</td>
+          <td>Tests <em>robustness</em> to legitimate but uncommon input.</td>
+          <td>Enumerate input boundaries; mine the long tail of real traffic; brainstorm "what breaks?"</td>
+        </tr>
+        <tr>
+          <td><strong>Adversarial examples</strong></td>
+          <td>Inputs deliberately designed to elicit failure, unsafe output, or policy violations.</td>
+          <td>Tests <em>resilience</em> under hostile pressure.</td>
+          <td>Red-teaming, prompt-injection attempts, known jailbreak patterns, systematic perturbation.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Adversarial Prompt Categories</h3>
+    <ul>
+      <li><strong>Prompt injection:</strong> embedded instructions that try to override the system prompt ("ignore previous instructions and…").</li>
+      <li><strong>Jailbreak / role-play framing:</strong> attempts to bypass safety by reframing the request as fiction, hypothetical, or a persona.</li>
+      <li><strong>Data exfiltration:</strong> attempts to extract the system prompt, hidden context, or other users' data.</li>
+      <li><strong>Distraction / obfuscation:</strong> encoding, translation, or padding used to smuggle a disallowed request past filters.</li>
+      <li><strong>Boundary probing:</strong> off-topic, out-of-scope, or nonsensical inputs to test graceful refusal and scope adherence.</li>
+    </ul>
+
+    <div class="callout pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li><strong>Treating the golden set as living:</strong> constantly rewriting expected outputs destroys its value as a stable regression anchor.</li>
+        <li><strong>No provenance for labels:</strong> golden outputs with no reviewer or rationale can't be trusted or defended.</li>
+        <li><strong>Adversarial set that never grows:</strong> attackers evolve; a frozen red-team set gives false confidence.</li>
+        <li><strong>Mixing categories carelessly:</strong> letting edge cases and adversarial cases blur so failures can't be attributed.</li>
+      </ul>
+    </div>
+
+    <div class="callout tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Keep the golden set <strong>small, high-quality, and stable</strong>; keep the adversarial set <strong>growing</strong> as new attack patterns emerge.</li>
+        <li>When a real incident occurs, distill it into a <strong>new adversarial or edge test case</strong> so the same failure can never regress silently.</li>
+        <li>Tag every case with its type and category — it makes failure triage and reporting far faster.</li>
+        <li>Change golden expected-outputs only through a <strong>reviewed, version-controlled process</strong>, never ad hoc.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <span class="label">📌 How to Answer Exam Questions</span>
+      <p><strong>Common patterns:</strong> "What is the key property of a golden dataset?" or "Which category does [example prompt] belong to?"</p>
+      <ul>
+        <li><strong>Golden = static + version-controlled.</strong> Distractor answers say it should be "continuously updated," "auto-generated," or "the largest possible set" — these are traps.</li>
+        <li><strong>Edge vs. adversarial:</strong> edge = valid but rare (robustness); adversarial = crafted to break (resilience/safety). If the input is <em>hostile/malicious</em>, it's adversarial.</li>
+        <li><strong>Watch for:</strong> "ignore previous instructions" ⇒ prompt injection; "pretend you are…" ⇒ jailbreak framing.</li>
+        <li>Answers describing red-teaming or systematic perturbation point to <strong>adversarial</strong> construction.</li>
+      </ul>
+    </div>
+    <a class="backtop" href="#top">↑ Back to contents</a>
+  </section>
+
+  <!-- ================= 49.4 ================= -->
+  <section class="topic" id="s494">
+    <h2 class="section-title"><span class="num">49.4</span> Regression Testing for Prompt &amp; Model Changes</h2>
+
+    <div class="overview">
+      Any change — a reworded prompt, a new few-shot example, a model version upgrade, a temperature tweak — can silently degrade behavior that used to work. <strong>Regression testing</strong> re-runs a fixed evaluation suite before and after a change and compares results, turning "seems fine" into a measured, gated decision to approve or roll back.
+    </div>
+
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Baseline:</strong> the recorded scores of the current, known-good configuration on the eval suite.</li>
+      <li><strong>Candidate:</strong> the new prompt/model configuration under test.</li>
+      <li><strong>Diff / comparison:</strong> per-case and aggregate deltas — crucially, catch <em>per-case regressions</em> even when the aggregate score is flat or improves.</li>
+      <li><strong>Gate:</strong> an explicit pass/fail rule (e.g., "no critical case regresses AND aggregate ≥ baseline") that decides approve vs. rollback.</li>
+      <li><strong>Rollback:</strong> reverting to the baseline configuration when the gate fails.</li>
+    </ul>
+
+    <h3>Visualization — Regression Workflow</h3>
+    <div class="flow" role="img" aria-label="Regression testing workflow diagram">
+      <div class="node">Baseline Eval<small>known-good scores</small></div>
+      <div class="arrow">→</div>
+      <div class="node">Apply Change<small>prompt / model / config</small></div>
+      <div class="arrow">→</div>
+      <div class="node">Re-run Eval Suite<small>same fixed dataset</small></div>
+      <div class="arrow">→</div>
+      <div class="node">Diff Results<small>per-case + aggregate</small></div>
+      <div class="arrow">→</div>
+      <div class="node decision-node">Gate: Pass?<small>meets criteria?</small></div>
+    </div>
+    <div class="branch">
+      <div class="outcome approve"><b>✔ PASS → Approve</b>No critical regressions and metrics meet threshold. Promote the candidate; record its scores as the new baseline.</div>
+      <div class="outcome rollback"><b>✗ FAIL → Rollback</b>A critical case regressed or aggregate dropped below threshold. Revert to baseline; investigate the failing cases before retrying.</div>
+    </div>
+    <blockquote>ASCII form: <code>[Baseline Eval] → [Apply Change] → [Re-run Suite] → [Diff Results] → [Gate: Pass? → Approve : Rollback]</code></blockquote>
+
+    <div class="callout pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li><strong>Aggregate-only comparison:</strong> a flat average can hide that 10 cases improved and 10 critical ones broke. Always inspect per-case deltas.</li>
+        <li><strong>Moving the dataset with the change:</strong> if the eval set changes at the same time as the prompt, the comparison is meaningless.</li>
+        <li><strong>Non-deterministic noise mistaken for regression:</strong> run enough samples (or fix seeds where possible) to separate real drops from sampling variance.</li>
+        <li><strong>No gate defined up front:</strong> deciding "is this good enough?" after seeing results invites rationalizing a bad release.</li>
+      </ul>
+    </div>
+
+    <div class="callout tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Freeze the eval dataset and change <strong>one variable at a time</strong> so any delta is attributable.</li>
+        <li>Define the <strong>gate criteria before running</strong> — e.g., zero critical-case regressions, aggregate not below baseline minus tolerance.</li>
+        <li>Automate regression in <strong>CI</strong> so every prompt/model change is tested by default, not on request.</li>
+        <li>Store baseline results as an artifact; when you approve a candidate, promote its scores to the <strong>new baseline</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <span class="label">📌 How to Answer Exam Questions</span>
+      <p><strong>Common patterns:</strong> "Aggregate score improved but users regressed — what did the process miss?" or "What must stay constant when regression testing a prompt change?"</p>
+      <ul>
+        <li><strong>Watch for:</strong> "baseline," "regression," "roll back," "gate," "per-case." The answer usually protects a stable baseline and a fixed dataset.</li>
+        <li><strong>Elimination:</strong> options that change the dataset and the prompt together are wrong. Options relying only on the average metric are traps.</li>
+        <li>When the stem shows aggregate up but real quality down, choose the answer about <strong>inspecting per-case regressions</strong>.</li>
+        <li>"What stays constant?" ⇒ the <strong>evaluation dataset</strong> (and gate criteria). Only the change-under-test should vary.</li>
+      </ul>
+    </div>
+    <a class="backtop" href="#top">↑ Back to contents</a>
+  </section>
+
+  <!-- ================= 49.5 ================= -->
+  <section class="topic" id="s495">
+    <h2 class="section-title"><span class="num">49.5</span> Hands-On: Building an Evaluation Test Suite</h2>
+
+    <div class="overview">
+      This section assembles the previous four into a concrete, minimal test harness. The pattern mirrors software unit testing: load a versioned dataset of cases, run the system under test on each input, score the output with one or more scorers (automated assertions and/or an LLM-judge), aggregate, and compare against a baseline to gate the change.
+    </div>
+
+    <h3>Step-by-Step Walkthrough</h3>
+    <ol class="keys">
+      <li><strong>Define the dataset schema.</strong> Each case has an <code>id</code>, an <code>input</code>, an <code>expected</code> (or rubric), and metadata like <code>category</code> and <code>critical</code>.</li>
+      <li><strong>Store cases under version control</strong> (e.g., JSON/YAML). Golden cases are stable; add edge and adversarial cases over time.</li>
+      <li><strong>Implement scorers.</strong> Mix objective checks (exact/contains/schema) with a rubric-based LLM-judge for open-ended quality — after validating the judge against human labels.</li>
+      <li><strong>Run the system under test</strong> on every input, capturing outputs and any errors.</li>
+      <li><strong>Aggregate</strong> per-category and overall pass rates; flag any critical-case failure.</li>
+      <li><strong>Compare to baseline</strong> and apply the gate: approve and promote, or fail and roll back.</li>
+      <li><strong>Wire into CI</strong> so the suite runs on every prompt/model change.</li>
+    </ol>
+
+    <h3>Visualization — Sample Test Harness (Python-style pseudo-code)</h3>
+    <pre><code><span class="cmt"># --- 1. Versioned dataset of eval cases (stored in git) ---</span>
+<span class="kw">import</span> json
+
+<span class="kw">def</span> <span class="fn">load_cases</span>(path):
+    <span class="kw">return</span> json.load(open(path))   <span class="cmt"># [{id, input, expected, category, critical}]</span>
+
+<span class="cmt"># --- 2. Scorers: objective + rubric-based judge ---</span>
+<span class="kw">def</span> <span class="fn">exact_match</span>(output, expected):
+    <span class="kw">return</span> output.strip() == expected.strip()
+
+<span class="kw">def</span> <span class="fn">contains_required</span>(output, keywords):
+    <span class="kw">return</span> all(k.lower() <span class="kw">in</span> output.lower() <span class="kw">for</span> k <span class="kw">in</span> keywords)
+
+<span class="kw">def</span> <span class="fn">llm_judge</span>(output, rubric):
+    <span class="cmt"># Ask a model to grade output against rubric; return True/False or score.</span>
+    <span class="cmt"># NOTE: validate this judge against human labels before trusting it.</span>
+    <span class="kw">return</span> judge_model.grade(output, rubric)
+
+<span class="cmt"># --- 3. Run system-under-test on each case ---</span>
+<span class="kw">def</span> <span class="fn">run_case</span>(case, system):
+    output = system.generate(case[<span class="str">"input"</span>])
+    <span class="kw">if</span> case.get(<span class="str">"expected_type"</span>) == <span class="str">"exact"</span>:
+        passed = exact_match(output, case[<span class="str">"expected"</span>])
+    <span class="kw">else</span>:
+        passed = llm_judge(output, case[<span class="str">"rubric"</span>])
+    <span class="kw">return</span> {<span class="str">"id"</span>: case[<span class="str">"id"</span>], <span class="str">"passed"</span>: passed,
+            <span class="str">"critical"</span>: case.get(<span class="str">"critical"</span>, <span class="kw">False</span>), <span class="str">"output"</span>: output}
+
+<span class="cmt"># --- 4. Aggregate results ---</span>
+<span class="kw">def</span> <span class="fn">evaluate</span>(system, cases):
+    results = [run_case(c, system) <span class="kw">for</span> c <span class="kw">in</span> cases]
+    total = len(results)
+    passed = sum(r[<span class="str">"passed"</span>] <span class="kw">for</span> r <span class="kw">in</span> results)
+    critical_fail = [r <span class="kw">for</span> r <span class="kw">in</span> results <span class="kw">if</span> r[<span class="str">"critical"</span>] <span class="kw">and</span> <span class="kw">not</span> r[<span class="str">"passed"</span>]]
+    <span class="kw">return</span> {<span class="str">"pass_rate"</span>: passed / total, <span class="str">"critical_fail"</span>: critical_fail,
+            <span class="str">"results"</span>: results}
+
+<span class="cmt"># --- 5. Regression gate: compare candidate to baseline ---</span>
+<span class="kw">def</span> <span class="fn">gate</span>(candidate, baseline, tolerance=0.0):
+    no_critical = len(candidate[<span class="str">"critical_fail"</span>]) == 0
+    not_worse   = candidate[<span class="str">"pass_rate"</span>] &gt;= baseline[<span class="str">"pass_rate"</span>] - tolerance
+    <span class="kw">return</span> <span class="str">"APPROVE"</span> <span class="kw">if</span> (no_critical <span class="kw">and</span> not_worse) <span class="kw">else</span> <span class="str">"ROLLBACK"</span>
+
+<span class="cmt"># --- 6. Wire together (this is what CI runs on every change) ---</span>
+cases    = load_cases(<span class="str">"eval/cases.json"</span>)
+baseline = json.load(open(<span class="str">"eval/baseline.json"</span>))
+candidate = evaluate(current_system, cases)
+decision  = gate(candidate, baseline)
+print(decision, candidate[<span class="str">"pass_rate"</span>])
+<span class="kw">assert</span> decision == <span class="str">"APPROVE"</span>, <span class="str">"Regression detected — blocking release"</span>
+</code></pre>
+
+    <div class="callout pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li><strong>No <code>critical</code> flag:</strong> treating a safety failure the same as a stylistic miss lets a dangerous regression pass the aggregate.</li>
+        <li><strong>Hard-coding the baseline in the test:</strong> store it as a promotable artifact instead, so approvals update it cleanly.</li>
+        <li><strong>Unvalidated LLM-judge:</strong> shipping the judge as ground truth without measuring its agreement with humans.</li>
+        <li><strong>Non-reproducible runs:</strong> not recording model version, prompt version, and dataset version alongside results.</li>
+      </ul>
+    </div>
+
+    <div class="callout tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Keep the harness <strong>framework-agnostic</strong>: cases in, results out. Swap scorers without touching the runner.</li>
+        <li>Record <strong>version stamps</strong> (dataset, prompt, model) in every result file for reproducibility and audit.</li>
+        <li>Separate <strong>critical</strong> from <strong>non-critical</strong> gates so a minor style dip doesn't block a release and a safety break always does.</li>
+        <li>Make failures actionable: log the failing input and output so a human can triage without re-running.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <span class="label">📌 How to Answer Exam Questions</span>
+      <p><strong>Common patterns:</strong> "What component makes a test suite gate a release?" or "Where should an LLM-judge be validated in this pipeline?"</p>
+      <ul>
+        <li><strong>Watch for:</strong> "gate," "baseline comparison," "critical case," "CI." The correct answer ties the pass/fail decision to a <em>defined threshold vs. baseline</em>.</li>
+        <li><strong>Elimination:</strong> answers that "always approve if the average improved" ignore critical failures — trap. Answers that use an LLM-judge with no human validation — trap.</li>
+        <li>If asked what belongs in version control, choose <strong>the dataset, the baseline, and the prompt versions</strong> — not the raw model outputs alone.</li>
+      </ul>
+    </div>
+    <a class="backtop" href="#top">↑ Back to contents</a>
+  </section>
+
+  <!-- ================= SUMMARY ================= -->
+  <section class="topic" id="summary">
+    <h2 class="section-title">Chapter Summary &amp; Quick-Reference Recap</h2>
+    <p>Evaluation is the discipline that turns "the model feels good" into a measured, defensible claim. Design data that <strong>represents reality</strong>, pick the <strong>cheapest reliable method</strong> per question, anchor on <strong>stable golden data while continuously growing adversarial coverage</strong>, and <strong>gate every change against a baseline</strong> using a repeatable test suite.</p>
+
+    <table>
+      <caption>One-line recap of each subtopic and its single most exam-critical idea.</caption>
+      <thead>
+        <tr><th>#</th><th>Subtopic</th><th>Core Idea</th><th>The Trap to Avoid</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>49.1</strong></td>
+          <td>Representative datasets</td>
+          <td>Mirror the production distribution via stratified sampling; weight by risk × frequency.</td>
+          <td>Convenience sampling / over-representing the happy path.</td>
+        </tr>
+        <tr>
+          <td><strong>49.2</strong></td>
+          <td>Mixed methodologies</td>
+          <td>Automated for scale, human for nuance/safety, hybrid for production readiness.</td>
+          <td>Trusting an LLM-judge without validating it against humans.</td>
+        </tr>
+        <tr>
+          <td><strong>49.3</strong></td>
+          <td>Golden / edge / adversarial</td>
+          <td>Golden = static &amp; version-controlled; edge = valid-but-rare; adversarial = crafted to break.</td>
+          <td>Constantly rewriting the golden set (it's a stable anchor).</td>
+        </tr>
+        <tr>
+          <td><strong>49.4</strong></td>
+          <td>Regression testing</td>
+          <td>Baseline → change → re-run → diff → gate (approve/rollback); inspect per-case deltas.</td>
+          <td>Comparing aggregate only, or changing the dataset with the prompt.</td>
+        </tr>
+        <tr>
+          <td><strong>49.5</strong></td>
+          <td>Building a test suite</td>
+          <td>Versioned cases + mixed scorers + baseline gate wired into CI, with critical-case flags.</td>
+          <td>No critical gate; unvalidated judge; non-reproducible runs.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout exam">
+      <span class="label">📌 Exam-Day Mental Checklist</span>
+      <ul>
+        <li><strong>Representative</strong> beats <strong>large</strong>.</li>
+        <li><strong>Golden = static</strong>; <strong>adversarial = growing</strong>.</li>
+        <li>Match method to the <strong>question</strong> (scale vs. nuance vs. safety).</li>
+        <li>An LLM-judge must be <strong>calibrated to humans</strong> before it's trusted.</li>
+        <li>Regression = <strong>fixed dataset + baseline + gate</strong>; watch per-case, not just the average.</li>
+      </ul>
+    </div>
+    <a class="backtop" href="#top">↑ Back to contents</a>
+  </section>
+
+  <footer>
+    Chapter 49 · Evaluation Datasets &amp; Test Frameworks — study guide.
+    Content reflects standard evaluation and software-testing best practices; it does not assert specific proprietary product features or exam specifics.
+  </footer>
+
+</div>
+
+
+</body></html>

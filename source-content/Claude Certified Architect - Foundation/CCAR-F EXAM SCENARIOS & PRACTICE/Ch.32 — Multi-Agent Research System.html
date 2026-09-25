@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 32 — Scenario 3: Multi-Agent Research System | Claude Certified Architect</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --surface:#ffffff; --surface-2:#f0f3f8;
+    --text:#1a2233; --text-2:#44546a; --muted:#7a869a;
+    --border:#dfe3ea; --border-strong:#c5ccd8;
+    --primary:#3454d1; --primary-bg:#eaefff;
+    --coord:#6d28d9; --coord-bg:#f3ecff;
+    --web:#0d7d6b; --web-bg:#e4f6f2;
+    --doc:#b45309; --doc-bg:#fdf1e0;
+    --synth:#c026a8; --synth-bg:#fceaf8;
+    --success:#12805c; --success-bg:#e3f6ee;
+    --warn:#b54708; --warn-bg:#fdf3e7;
+    --danger:#c0362b; --danger-bg:#fdeceb;
+    --info:#0b63c4; --info-bg:#e7f1fd;
+    --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;
+    --radius:10px; --radius-sm:6px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.62;
+    margin:0;padding:0;font-size:16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 24px 96px}
+
+  /* Headings */
+  h1{font-size:31px;line-height:1.25;margin:0 0 6px;font-weight:800;letter-spacing:-.4px}
+  .subtitle{color:var(--text-2);font-size:16px;margin:0 0 8px;font-weight:500}
+  .exam-badge{display:inline-block;background:var(--primary-bg);color:var(--primary);
+    font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:100px;letter-spacing:.3px;
+    margin-bottom:24px;border:1px solid #c9d5ff}
+  h2{font-size:24px;margin:52px 0 14px;padding-bottom:10px;border-bottom:3px solid var(--primary);
+    font-weight:750;letter-spacing:-.3px;scroll-margin-top:20px}
+  h3{font-size:19px;margin:34px 0 10px;font-weight:700;color:var(--text);scroll-margin-top:20px}
+  h4{font-size:16px;margin:22px 0 8px;font-weight:700;color:var(--text-2)}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-left:24px}
+  li{margin:5px 0}
+  strong{font-weight:700}
+  code{font-family:var(--mono);background:var(--surface-2);padding:2px 6px;border-radius:4px;
+    font-size:13.5px;color:#324}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Cards / sections */
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px 26px;margin:18px 0;box-shadow:0 1px 2px rgba(20,30,60,.04)}
+
+  /* Table of contents */
+  .toc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px 26px;margin:24px 0 8px}
+  .toc h2{border:0;margin:0 0 10px;font-size:18px;padding:0}
+  .toc ol{padding-left:20px;margin:6px 0;columns:1}
+  .toc a{font-weight:600}
+  .toc ul{list-style:none;padding-left:16px;margin:4px 0}
+  .toc ul a{font-weight:500;color:var(--text-2);font-size:14.5px}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+  thead th{background:var(--surface-2);text-align:left;font-weight:700;color:var(--text);
+    padding:11px 13px;border-bottom:2px solid var(--border-strong);font-size:13px;
+    text-transform:uppercase;letter-spacing:.03em}
+  td{padding:10px 13px;border-bottom:1px solid var(--border);color:var(--text-2);vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover td{background:#fafbfe}
+  td strong{color:var(--text)}
+
+  /* Callout boxes */
+  .callout{border-radius:var(--radius);padding:16px 20px;margin:20px 0;border:1px solid;
+    border-left-width:5px;font-size:15px}
+  .callout .h{font-weight:750;display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:15.5px}
+  .callout p:first-of-type{margin-top:2px}
+  .callout p:last-child{margin-bottom:0}
+  .tip-box{background:var(--info-bg);border-color:#bcd8fb;border-left-color:var(--info);color:#12385f}
+  .tip-box .h{color:var(--info)}
+  .trap-box{background:var(--danger-bg);border-color:#f4c7c3;border-left-color:var(--danger);color:#6e211b}
+  .trap-box .h{color:var(--danger)}
+  .note-box{background:var(--warn-bg);border-color:#f3d9b8;border-left-color:var(--warn);color:#653706}
+  .note-box .h{color:var(--warn)}
+  .strategy-box{background:var(--success-bg);border-color:#b6e6cf;border-left-color:var(--success);color:#0d4a35}
+  .strategy-box .h{color:var(--success)}
+  .callout code{background:rgba(255,255,255,.6)}
+
+  /* Architecture diagram */
+  .arch{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:28px 20px;margin:22px 0;text-align:center}
+  .agent-box{display:inline-block;border-radius:var(--radius-sm);padding:12px 18px;font-weight:700;
+    color:#fff;font-size:14.5px;box-shadow:0 2px 6px rgba(20,30,60,.15);min-width:150px}
+  .agent-sub{font-weight:500;font-size:11.5px;opacity:.92;display:block;margin-top:2px}
+  .b-coord{background:var(--coord)} .b-web{background:var(--web)}
+  .b-doc{background:var(--doc)} .b-synth{background:var(--synth)}
+  .b-user{background:#334155} .b-store{background:#475569}
+  .b-out{background:var(--primary)}
+  .arrow-col{color:var(--muted);font-size:22px;line-height:1;margin:12px 0;font-weight:700}
+  .sub-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:6px 0}
+  .lane-note{font-size:12px;color:var(--muted);margin-top:6px}
+  .diagram-caption{font-size:13px;color:var(--muted);margin-top:14px;font-style:italic}
+
+  /* Sequence / swimlane diagram */
+  .seq{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:20px;margin:22px 0;overflow-x:auto}
+  .seq-step{display:flex;align-items:flex-start;gap:14px;padding:12px 4px;border-bottom:1px dashed var(--border)}
+  .seq-step:last-child{border-bottom:0}
+  .seq-num{flex:0 0 30px;height:30px;width:30px;border-radius:50%;background:var(--primary);color:#fff;
+    font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .seq-body{flex:1}
+  .seq-actor{font-weight:700;font-size:13.5px}
+  .seq-actor.coord{color:var(--coord)} .seq-actor.web{color:var(--web)}
+  .seq-actor.doc{color:var(--doc)} .seq-actor.synth{color:var(--synth)} .seq-actor.user{color:#334155}
+  .seq-desc{font-size:14px;color:var(--text-2);margin-top:2px}
+  .prov-tag{display:inline-block;background:#fff5db;border:1px solid #e8cf87;color:#7a5a04;
+    font-family:var(--mono);font-size:11.5px;padding:2px 7px;border-radius:4px;margin-top:6px}
+
+  /* Practice questions */
+  .q{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:20px 24px;margin:20px 0}
+  .q-tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+    padding:3px 9px;border-radius:100px;margin-bottom:8px}
+  .tag-mcq{background:var(--info-bg);color:var(--info)}
+  .tag-scenario{background:var(--coord-bg);color:var(--coord)}
+  .tag-trick{background:var(--danger-bg);color:var(--danger)}
+  .q-stem{font-weight:650;margin:4px 0 12px}
+  .opts{list-style:none;padding:0;margin:0}
+  .opts li{padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);margin:6px 0;
+    background:#fcfdff;font-size:14.5px}
+  .opts li.correct{border-color:var(--success);background:var(--success-bg);font-weight:600}
+  .opts li .opt-key{font-weight:700;margin-right:8px}
+  .walk{margin-top:14px;background:var(--surface-2);border-radius:var(--radius-sm);padding:14px 16px;font-size:14px}
+  .walk .wh{font-weight:700;color:var(--success);margin-bottom:4px;display:block}
+  .walk .why-wrong{margin-top:8px;color:var(--text-2)}
+  details.answer{margin-top:12px}
+  details.answer summary{cursor:pointer;font-weight:700;color:var(--primary);font-size:14px;user-select:none}
+  details.answer summary:hover{text-decoration:underline}
+
+  /* Exit checklist */
+  .checklist{background:var(--surface);border:2px solid var(--success);border-radius:var(--radius);
+    padding:22px 26px;margin:28px 0}
+  .checklist h2{border:0;color:var(--success);margin-top:0}
+  .checklist ul{list-style:none;padding-left:0}
+  .checklist li{padding:6px 0 6px 30px;position:relative}
+  .checklist li:before{content:"\2713";position:absolute;left:0;top:5px;color:var(--success);
+    font-weight:900;font-size:18px}
+
+  .kv{font-family:var(--mono);font-size:13px}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;margin-left:6px}
+  .pill-coord{background:var(--coord-bg);color:var(--coord)}
+  .pill-web{background:var(--web-bg);color:var(--web)}
+  .pill-doc{background:var(--doc-bg);color:var(--doc)}
+  .pill-synth{background:var(--synth-bg);color:var(--synth)}
+  hr{border:0;border-top:1px solid var(--border);margin:36px 0}
+  .footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Chapter 32 — Scenario 3: Multi-Agent Research System</h1>
+  <p class="subtitle">Understand, design, and troubleshoot a coordinator + subagent research architecture.</p>
+  <span class="exam-badge">Claude Certified Architect — Foundations &amp; Professional</span>
+
+  <!-- ================= TOC ================= -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s321">32.1 — Scenario Overview &amp; Architecture</a></li>
+      <li><a href="#s322">32.2 — Coordinator, Web Search, Document Analysis &amp; Synthesis Subagents</a>
+        <ul>
+          <li><a href="#coord">32.2.1 Coordinator agent</a></li>
+          <li><a href="#web">32.2.2 Web Search subagent</a></li>
+          <li><a href="#doc">32.2.3 Document Analysis subagent</a></li>
+          <li><a href="#synth">32.2.4 Synthesis subagent</a></li>
+        </ul>
+      </li>
+      <li><a href="#s323">32.3 — Context Passing &amp; Provenance Tracking</a></li>
+      <li><a href="#s324">32.4 — Practice Questions &amp; Walkthroughs</a></li>
+      <li><a href="#strategy">Exam Strategy</a></li>
+      <li><a href="#checklist">Exit Checklist</a></li>
+    </ol>
+  </nav>
+
+  <div class="note-box callout">
+    <div class="h">📌 A note on scope &amp; accuracy</div>
+    <p>This chapter teaches the <strong>orchestrator–worker (coordinator–subagent) pattern</strong> as
+    described in Anthropic's public engineering guidance on multi-agent research systems. The agent
+    names used here — <em>Coordinator, Web Search, Document Analysis, Synthesis</em> — are
+    <strong>role labels for this exam scenario</strong>, not fixed product SKUs. Anthropic's own
+    documented system uses an orchestrator (lead) agent, parallel search subagents, and a dedicated
+    citation step. Where an exact internal implementation detail is not publicly documented, this guide
+    describes the concept <em>generically</em> and flags the assumption. No fabricated APIs or product
+    names are asserted as fact.</p>
+  </div>
+
+  <!-- ================= 32.1 ================= -->
+  <h2 id="s321">32.1 — Scenario Overview &amp; Architecture</h2>
+
+  <h3>The research use case</h3>
+  <p>An organization needs to answer <strong>open-ended research questions</strong> that no single
+  tool call can satisfy — e.g. <em>"Compare the top three vendors in our RFP against current market
+  analyst reports and our internal evaluation documents, and produce a cited summary."</em> Such
+  questions are:</p>
+  <ul>
+    <li><strong>Breadth-first</strong> — they fan out into many independent sub-questions that can be
+    pursued in parallel.</li>
+    <li><strong>Multi-source</strong> — answers live in live web content <em>and</em> internal documents.</li>
+    <li><strong>Unpredictable in shape</strong> — the number and type of searches can't be hard-coded up front.</li>
+    <li><strong>Citation-critical</strong> — the final answer must be traceable to its sources.</li>
+  </ul>
+  <p>A single agent hits limits here: one context window fills up, searches run serially, and the model
+  loses track of which finding came from where. The <strong>multi-agent orchestrator–worker pattern</strong>
+  solves this by <em>decomposing</em> the task, <em>parallelizing</em> the work across subagents that each
+  have their own context window, and <em>synthesizing</em> a single cited answer.</p>
+
+  <div class="tip-box callout">
+    <div class="h">💡 Tip — when multi-agent actually wins</div>
+    <p>Multi-agent shines for <strong>breadth-first, parallelizable, heavy-search</strong> tasks where
+    subtasks are <em>loosely coupled</em>. It is a <em>poor</em> fit for tightly-coupled, sequential work
+    (e.g. most coding tasks where every step depends on the last) — there the coordination overhead and
+    token cost outweigh the benefit. On the exam, "parallel," "independent sub-questions," and "broad
+    search" signal multi-agent; "each step depends on the previous" signals a single agent.</p>
+  </div>
+
+  <h3>High-level architecture</h3>
+  <p>A <strong>Coordinator</strong> (a.k.a. lead / orchestrator agent) receives the user query, plans an
+  approach, and <strong>delegates</strong> clearly-scoped subtasks to specialized subagents that run
+  <strong>in parallel, each in its own isolated context window</strong>. Subagents return
+  <em>condensed findings</em> (not raw dumps) to the coordinator, which routes document work and finally
+  hands everything to a Synthesis step that composes the answer with preserved citations.</p>
+
+  <div class="arch" role="img" aria-label="Architecture diagram: user query flows to a coordinator agent, which delegates to Web Search and Document Analysis subagents running in parallel, whose findings flow to a Synthesis subagent that produces the final cited answer. A shared memory and provenance store supports all agents.">
+    <div class="agent-box b-user">User / Research Query</div>
+    <div class="arrow-col">↓</div>
+    <div class="agent-box b-coord">Coordinator Agent
+      <span class="agent-sub">plan · decompose · delegate · route · integrate</span></div>
+    <div class="arrow-col">↓&nbsp;&nbsp;delegates scoped subtasks (fan-out, parallel)&nbsp;&nbsp;↓</div>
+    <div class="sub-row">
+      <div class="agent-box b-web">Web Search Subagent
+        <span class="agent-sub">live external sources</span></div>
+      <div class="agent-box b-doc">Document Analysis Subagent
+        <span class="agent-sub">internal / attached docs</span></div>
+    </div>
+    <div class="arrow-col">↓&nbsp;&nbsp;return condensed, source-tagged findings (fan-in)&nbsp;&nbsp;↓</div>
+    <div class="agent-box b-synth">Synthesis Subagent
+      <span class="agent-sub">integrate · reconcile · draft · attach citations</span></div>
+    <div class="arrow-col">↓</div>
+    <div class="agent-box b-out">Final Cited Answer</div>
+    <div class="lane-note">↳ A shared <strong>memory / provenance store</strong> (plan, task specs, source registry) is written by the
+    Coordinator and read by every agent to survive context-window limits and preserve source lineage.</div>
+    <div class="diagram-caption">Fig. 32.1 — Orchestrator–worker control &amp; data flow. Control flows top-down (delegation);
+    findings flow bottom-up (fan-in). Subagents never talk to each other directly — the Coordinator mediates.</div>
+  </div>
+
+  <div class="trap-box callout">
+    <div class="h">⚠️ Exam trap — the Coordinator does NOT search</div>
+    <p>A classic distractor claims the coordinator "performs the web searches and reads the documents
+    itself." It does <strong>not</strong>. Its job is <em>orchestration</em>: planning, decomposition,
+    delegation, and integration. The <em>work</em> is done by subagents. Answers that put retrieval work
+    on the coordinator are wrong.</p>
+  </div>
+
+  <h3>Component responsibilities (summary)</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Primary responsibility</th><th>Key property</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Coordinator</strong> <span class="pill pill-coord">lead</span></td>
+        <td>Plan, decompose query into subtasks, delegate, route document work, integrate results</td>
+        <td>Holds the master plan; mediates all cross-agent flow</td></tr>
+      <tr><td><strong>Web Search subagent</strong> <span class="pill pill-web">worker</span></td>
+        <td>Query live/external sources, gather and condense relevant evidence</td>
+        <td>Own context window; runs in parallel</td></tr>
+      <tr><td><strong>Document Analysis subagent</strong> <span class="pill pill-doc">worker</span></td>
+        <td>Read/extract from internal or attached documents; summarize relevant passages</td>
+        <td>Own context window; grounded in provided corpus</td></tr>
+      <tr><td><strong>Synthesis subagent</strong> <span class="pill pill-synth">integrator</span></td>
+        <td>Reconcile findings, resolve conflicts, draft the answer, attach citations</td>
+        <td>Consumes condensed findings + provenance, not raw context</td></tr>
+      <tr><td><strong>Memory / provenance store</strong></td>
+        <td>Persist plan, task specs, and a registry mapping claims → sources</td>
+        <td>Survives context resets; single source of citation truth</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ================= 32.2 ================= -->
+  <h2 id="s322">32.2 — Coordinator, Web Search, Document Analysis &amp; Synthesis Subagents</h2>
+  <p>Each agent has a distinct <strong>purpose</strong>, defined <strong>inputs/outputs</strong>, a set of
+  <strong>tools</strong>, and characteristic <strong>failure modes</strong>. Study these role boundaries —
+  most scenario questions test whether you can assign a responsibility to the <em>correct</em> agent.</p>
+
+  <h3 id="coord">32.2.1 Coordinator agent <span class="pill pill-coord">orchestrator / lead</span></h3>
+  <ul>
+    <li><strong>Purpose:</strong> Turn an open-ended query into a plan; decompose it into clearly-scoped,
+    non-overlapping subtasks; delegate them; then integrate the returns into a coherent whole. It also
+    decides <em>how many</em> subagents to spawn (effort scaling).</li>
+    <li><strong>Inputs:</strong> User query; conversation/context; available tool &amp; subagent inventory;
+    the persisted plan from memory.</li>
+    <li><strong>Outputs:</strong> Explicit <em>task specifications</em> for each subagent (objective, expected
+    output format, allowed tools, boundaries/scope), and a final integrated result routed to synthesis.</li>
+    <li><strong>Tools used:</strong> Delegation / subagent-spawning capability; memory (write plan &amp; task
+    specs); typically <em>not</em> raw search/retrieval tools itself.</li>
+    <li><strong>Failure modes:</strong>
+      <ul>
+        <li><strong>Vague delegation</strong> — under-specified task descriptions cause subagents to
+        duplicate work or drift off-scope.</li>
+        <li><strong>Over-spawning</strong> — too many subagents → runaway token cost and diminishing returns.</li>
+        <li><strong>Context overflow</strong> — trying to hold every raw finding itself instead of relying on
+        condensed returns + memory.</li>
+        <li><strong>Compounding errors</strong> — a flawed plan propagates to every subagent.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="tip-box callout">
+    <div class="h">💡 Tip — the "OFTB" delegation checklist</div>
+    <p>A good coordinator task spec always defines <strong>O·F·T·B</strong>: <strong>O</strong>bjective,
+    output <strong>F</strong>ormat, <strong>T</strong>ools allowed, and <strong>B</strong>oundaries (scope).
+    If an exam option describes a subagent doing the wrong thing, trace it back — usually the coordinator's
+    task spec was missing one of these four.</p>
+  </div>
+
+  <h3 id="web">32.2.2 Web Search subagent <span class="pill pill-web">worker</span></h3>
+  <ul>
+    <li><strong>Purpose:</strong> Gather evidence from <em>live, external</em> sources for its assigned
+    sub-question, then return a <em>condensed, source-tagged</em> summary.</li>
+    <li><strong>Inputs:</strong> A single scoped sub-question + boundaries from the coordinator.</li>
+    <li><strong>Outputs:</strong> Key findings with source URLs/identifiers attached (provenance) — not a raw
+    page dump.</li>
+    <li><strong>Tools used:</strong> Web search / retrieval tools; optionally page-fetch tools.</li>
+    <li><strong>Failure modes:</strong> Query drift (searching beyond scope), hallucinated or stale sources,
+    returning raw un-condensed content that floods the coordinator, and <em>dropping source references</em>
+    (breaks provenance downstream).</li>
+  </ul>
+
+  <h3 id="doc">32.2.3 Document Analysis subagent <span class="pill pill-doc">worker</span></h3>
+  <ul>
+    <li><strong>Purpose:</strong> Read and extract relevant information from <em>internal or attached</em>
+    documents (PDFs, reports, knowledge bases) and summarize passages tied to the sub-question.</li>
+    <li><strong>Inputs:</strong> Scoped sub-question + a document set / retrieval scope.</li>
+    <li><strong>Outputs:</strong> Extracted facts and quotes with <em>document + location</em> references
+    (file, page/section) for provenance.</li>
+    <li><strong>Tools used:</strong> Document retrieval / RAG over the provided corpus; file readers.</li>
+    <li><strong>Failure modes:</strong> Retrieving irrelevant chunks, mis-attributing a quote to the wrong
+    document, exceeding context by loading whole documents instead of relevant passages, and losing
+    page/section anchors needed for citations.</li>
+  </ul>
+
+  <h3 id="synth">32.2.4 Synthesis subagent <span class="pill pill-synth">integrator</span></h3>
+  <ul>
+    <li><strong>Purpose:</strong> Combine the condensed findings from all workers into one coherent,
+    non-redundant answer; reconcile conflicts; and <em>attach citations</em> so each claim traces to its
+    source.</li>
+    <li><strong>Inputs:</strong> Condensed, source-tagged findings from every subagent + the provenance
+    registry.</li>
+    <li><strong>Outputs:</strong> The final cited answer/report.</li>
+    <li><strong>Tools used:</strong> Reasoning/composition; a citation/attribution step that maps statements
+    to the source registry.</li>
+    <li><strong>Failure modes:</strong> <strong>Fabricating or mismatching citations</strong> (attaching the
+    wrong source to a claim), silently dropping conflicting evidence, over-summarizing away important
+    detail, and introducing claims not supported by any subagent finding.</li>
+  </ul>
+
+  <div class="trap-box callout">
+    <div class="h">⚠️ Exam trap — who owns citations?</div>
+    <p>Provenance is <strong>captured at the source by the workers</strong> (each finding carries its origin)
+    and <strong>preserved/attached at synthesis time</strong> — ideally by a dedicated citation step. A
+    tempting wrong answer says "the Synthesis agent invents citations after the fact." If sources weren't
+    tagged when the evidence was gathered, synthesis has <em>nothing truthful to cite</em>. Provenance is a
+    relay handed down the chain, not something conjured at the end.</p>
+  </div>
+
+  <h3>Comparison table — the four roles at a glance</h3>
+  <table>
+    <thead><tr><th>Agent</th><th>Role</th><th>Inputs</th><th>Outputs</th><th>Common pitfalls</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Coordinator</strong> <span class="pill pill-coord">lead</span></td>
+        <td>Plan, decompose, delegate, route, integrate</td>
+        <td>User query, context, tool/subagent inventory, plan (memory)</td>
+        <td>Scoped task specs (OFTB); final integrated result</td>
+        <td>Vague delegation, over-spawning, hoarding raw context, plan errors compounding</td>
+      </tr>
+      <tr>
+        <td><strong>Web Search</strong> <span class="pill pill-web">worker</span></td>
+        <td>Gather live/external evidence</td>
+        <td>One scoped sub-question + boundaries</td>
+        <td>Condensed findings + source refs (URLs)</td>
+        <td>Query drift, stale/hallucinated sources, raw dumps, dropped provenance</td>
+      </tr>
+      <tr>
+        <td><strong>Document Analysis</strong> <span class="pill pill-doc">worker</span></td>
+        <td>Extract from internal/attached docs</td>
+        <td>Scoped sub-question + document set</td>
+        <td>Extracted facts/quotes + doc &amp; location refs</td>
+        <td>Irrelevant chunks, mis-attribution, whole-doc overload, lost anchors</td>
+      </tr>
+      <tr>
+        <td><strong>Synthesis</strong> <span class="pill pill-synth">integrator</span></td>
+        <td>Integrate, reconcile, cite</td>
+        <td>Condensed source-tagged findings + provenance registry</td>
+        <td>Final cited answer/report</td>
+        <td>Wrong/fabricated citations, dropping conflicts, over-summarizing, unsupported claims</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip-box callout">
+    <div class="h">💡 Tip — mnemonic "C-WDS"</div>
+    <p>Remember the pipeline order as <strong>C-WDS</strong>: <strong>C</strong>oordinator →
+    <strong>W</strong>eb search → <strong>D</strong>ocument analysis → <strong>S</strong>ynthesis.
+    Mental model: <em>C</em>oordinator is the <em>editor-in-chief</em>; Web &amp; Doc subagents are
+    <em>reporters</em> in the field (each with their own notebook = context window); Synthesis is the
+    <em>copy desk</em> that fact-checks, merges, and footnotes the story.</p>
+  </div>
+
+  <!-- ================= 32.3 ================= -->
+  <h2 id="s323">32.3 — Context Passing &amp; Provenance Tracking</h2>
+
+  <h3>How context moves between agents</h3>
+  <p>Agents do <strong>not</strong> share one giant context window. Instead, context is passed through three
+  disciplined channels:</p>
+  <ul>
+    <li><strong>Structured task messages (delegation):</strong> The coordinator sends each subagent a
+    self-contained brief — objective, output format, allowed tools, boundaries (OFTB). This is the only
+    context a fresh subagent starts with, keeping its window lean and focused.</li>
+    <li><strong>Condensed return messages (fan-in):</strong> Subagents return <em>compressed</em> findings —
+    key facts + source tags — <em>not</em> their raw working context. This prevents the coordinator's window
+    from overflowing and keeps signal high.</li>
+    <li><strong>Shared memory / state store:</strong> The plan, task specs, and a <em>source registry</em>
+    live outside any single context window. Because a long research run can exceed a context window, the
+    coordinator persists its plan to memory so work can continue after truncation/reset.</li>
+  </ul>
+
+  <div class="note-box callout">
+    <div class="h">📌 Why isolation matters</div>
+    <p>Each subagent's <strong>separate context window</strong> is a feature, not a limitation: it isolates
+    failures (one subagent's confusion doesn't poison others), enables true parallelism, and keeps each
+    window focused on one sub-question. The cost is that agents can't "see" each other's raw context — so
+    everything important must be explicitly passed via messages or memory.</p>
+  </div>
+
+  <h3>Provenance tracking — why and how</h3>
+  <p><strong>Why it matters:</strong> A research answer is only trustworthy if each claim can be traced to a
+  verifiable source. Provenance enables fact-checking, satisfies compliance/audit needs, lets users judge
+  credibility, and prevents the confident-but-unsourced answers that erode trust.</p>
+  <p><strong>How it's preserved across handoffs:</strong> Provenance is a <em>relay</em>. Each source is
+  tagged <strong>at the moment of retrieval</strong> and that tag rides along with the finding through every
+  handoff into a <strong>source registry</strong>. At synthesis, a dedicated citation step maps each
+  statement in the draft back to the registry entry that supports it. If a tag is dropped at any hop, the
+  citation is irrecoverable downstream — so provenance discipline is enforced at <em>every</em> step, not
+  bolted on at the end.</p>
+
+  <div class="seq" role="img" aria-label="Sequence diagram showing eight numbered steps of context and provenance flow from user query through coordinator, parallel subagents, and synthesis to a final cited answer, with provenance tags attached at each retrieval step.">
+    <div class="seq-step">
+      <div class="seq-num">1</div>
+      <div class="seq-body">
+        <span class="seq-actor user">User → Coordinator</span>
+        <div class="seq-desc">Submits the research query.</div>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">2</div>
+      <div class="seq-body">
+        <span class="seq-actor coord">Coordinator → Memory</span>
+        <div class="seq-desc">Writes the plan + decomposed subtasks + an empty source registry to shared memory.</div>
+        <span class="prov-tag">provenance: registry initialized (empty)</span>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">3</div>
+      <div class="seq-body">
+        <span class="seq-actor coord">Coordinator → Web Search &amp; Document Analysis</span>
+        <div class="seq-desc">Delegates scoped task specs (OFTB) in parallel. Each subagent starts with a fresh, isolated context window.</div>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">4</div>
+      <div class="seq-body">
+        <span class="seq-actor web">Web Search → sources</span>
+        <div class="seq-desc">Retrieves live evidence; tags each finding with its origin at retrieval time.</div>
+        <span class="prov-tag">provenance: {claim_id, url, retrieved_at, snippet}</span>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">5</div>
+      <div class="seq-body">
+        <span class="seq-actor doc">Document Analysis → corpus</span>
+        <div class="seq-desc">Extracts relevant passages; tags each with its document location.</div>
+        <span class="prov-tag">provenance: {claim_id, doc_id, page/section, quote}</span>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">6</div>
+      <div class="seq-body">
+        <span class="seq-actor coord">Subagents → Coordinator / Memory</span>
+        <div class="seq-desc">Return <em>condensed</em>, source-tagged findings; provenance tags are appended to the shared source registry.</div>
+        <span class="prov-tag">provenance: registry updated (all claim_id → source)</span>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">7</div>
+      <div class="seq-body">
+        <span class="seq-actor synth">Coordinator → Synthesis</span>
+        <div class="seq-desc">Passes condensed findings + the source registry. Synthesis reconciles conflicts and drafts the answer.</div>
+      </div>
+    </div>
+    <div class="seq-step">
+      <div class="seq-num">8</div>
+      <div class="seq-body">
+        <span class="seq-actor synth">Synthesis → User</span>
+        <div class="seq-desc">Citation step maps each drafted claim back to its registry entry, then emits the final cited answer.</div>
+        <span class="prov-tag">provenance: each statement ↔ source (verified against registry)</span>
+      </div>
+    </div>
+    <div class="diagram-caption">Fig. 32.3 — Context &amp; provenance sequence. Note that provenance tags are attached at
+    steps 4–5 (retrieval), aggregated at step 6, and <em>verified</em>, not invented, at step 8.</div>
+  </div>
+
+  <div class="trap-box callout">
+    <div class="h">⚠️ Exam trap — "shared context window"</div>
+    <p>Watch for options implying all agents "share the same context window / memory of each other's
+    reasoning." They don't. Isolation + explicit message/memory passing is the whole point. The word
+    <em>shared</em> applies to the <strong>memory/state store</strong> (plan + registry), <strong>not</strong>
+    to the model context windows.</p>
+  </div>
+
+  <!-- ================= 32.4 ================= -->
+  <h2 id="s324">32.4 — Practice Questions &amp; Walkthroughs</h2>
+
+  <!-- Q1 -->
+  <div class="q">
+    <span class="q-tag tag-mcq">Multiple choice</span>
+    <div class="q-stem">Q1. In the multi-agent research system, what is the Coordinator agent's primary responsibility?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> Perform all web searches and read all documents itself, then answer.</li>
+      <li class="correct"><span class="opt-key">B)</span> Plan and decompose the query, delegate scoped subtasks to subagents, and integrate their returns. ✅</li>
+      <li><span class="opt-key">C)</span> Store the final answer in a database for auditing.</li>
+      <li><span class="opt-key">D)</span> Rank web pages by relevance before any agent runs.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: B</span>
+        The coordinator is the orchestrator — it plans, decomposes, delegates, and integrates. The
+        <em>work</em> (search, read) is done by subagents in parallel.
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>A</strong> — this collapses the whole point of the pattern; the coordinator delegates rather
+        than doing retrieval itself. <strong>C</strong> — persistence is a function of the memory/store, not
+        the coordinator's defining role. <strong>D</strong> — page ranking is a retrieval concern handled
+        within the Web Search subagent, not a coordinator responsibility.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q">
+    <span class="q-tag tag-mcq">Multiple choice</span>
+    <div class="q-stem">Q2. Why do subagents each run in their <em>own</em> context window rather than sharing one?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> To force agents to talk to each other directly.</li>
+      <li class="correct"><span class="opt-key">B)</span> To isolate failures, enable parallelism, and keep each window focused on one sub-question. ✅</li>
+      <li><span class="opt-key">C)</span> Because Claude cannot use tools inside a shared window.</li>
+      <li><span class="opt-key">D)</span> To reduce the total token cost below that of a single agent.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: B</span>
+        Isolation contains errors, allows subagents to work simultaneously, and keeps each window
+        lean and on-task.
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>A</strong> — subagents don't communicate directly; the coordinator mediates. <strong>C</strong>
+        — false; tool use isn't blocked by shared windows. <strong>D</strong> — a common misconception:
+        multi-agent systems generally use <em>more</em> tokens than a single agent, not fewer. The benefit is
+        capability/parallelism, not token savings.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q3 TRICK -->
+  <div class="q">
+    <span class="q-tag tag-trick">Trick question</span>
+    <div class="q-stem">Q3. When the Synthesis subagent produces the final answer, how are citations obtained?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> The Synthesis agent infers likely sources and generates plausible citations after drafting.</li>
+      <li class="correct"><span class="opt-key">B)</span> Sources are tagged at retrieval by the workers and preserved in a registry; synthesis maps each claim back to that registry. ✅</li>
+      <li><span class="opt-key">C)</span> The Coordinator adds citations because only it can see all agents' context windows.</li>
+      <li><span class="opt-key">D)</span> Citations are unnecessary because the model is trained on reliable data.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: B</span>
+        Provenance is captured at the source (retrieval) and relayed via the registry; synthesis
+        <em>verifies and attaches</em> citations by mapping claims to registry entries.
+        <div class="why-wrong"><strong>Why the others are wrong — and why this is a trap:</strong>
+        <strong>A</strong> is the tempting misconception from §32.2/§32.3: generating citations after the fact
+        produces <em>fabricated</em> attributions, not real provenance. <strong>C</strong> — the coordinator
+        does <em>not</em> see other agents' raw context windows; only condensed messages + shared memory flow
+        between agents. <strong>D</strong> — verifiability is the whole reason provenance exists; "trust the
+        model" is never the certified-architect answer.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q4 scenario -->
+  <div class="q">
+    <span class="q-tag tag-scenario">Scenario</span>
+    <div class="q-stem">Q4. A research run produces an answer where two subagents clearly duplicated the same searches
+    and one drifted into an unrelated topic. Which root cause and fix best matches?</div>
+    <ul class="opts">
+      <li class="correct"><span class="opt-key">A)</span> The Coordinator's task specs were vague/overlapping — tighten decomposition with clear objectives and boundaries (OFTB). ✅</li>
+      <li><span class="opt-key">B)</span> The context windows were shared — merge them into one window.</li>
+      <li><span class="opt-key">C)</span> The Synthesis agent failed — retrain it on citations.</li>
+      <li><span class="opt-key">D)</span> Too few subagents — spawn many more to cover the topic.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: A</span>
+        Duplicated work + scope drift are hallmark symptoms of poor delegation. The fix is at the
+        coordinator: non-overlapping, well-bounded task specs (Objective, Format, Tools, Boundaries).
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>B</strong> — merging windows removes isolation/parallelism and doesn't address delegation.
+        <strong>C</strong> — the symptom is in search behavior, upstream of synthesis. <strong>D</strong> —
+        adding subagents to a bad plan multiplies duplication and cost; over-spawning is itself a failure mode.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q5 scenario -->
+  <div class="q">
+    <span class="q-tag tag-scenario">Scenario</span>
+    <div class="q-stem">Q5. Midway through a long research run, the Coordinator's context window is nearly full and it risks
+    losing track of the overall plan. What design choice prevents work from being lost?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> Ask the user to re-enter the query.</li>
+      <li class="correct"><span class="opt-key">B)</span> Persist the plan and task specs to shared memory so they survive context truncation. ✅</li>
+      <li><span class="opt-key">C)</span> Delete subagent findings to free space.</li>
+      <li><span class="opt-key">D)</span> Have each subagent hold the full plan in its own window.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: B</span>
+        Writing the plan to an external memory/state store lets the run continue past a single window's
+        limit — a core reason memory exists in this architecture.
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>A</strong> — disruptive and unnecessary; state should be engineered to persist. <strong>C</strong>
+        — findings are the deliverable; deleting them defeats the purpose. <strong>D</strong> — bloats every
+        subagent window and violates the lean, scoped-brief principle; the plan belongs in shared memory, not
+        replicated everywhere.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q6 mcq -->
+  <div class="q">
+    <span class="q-tag tag-mcq">Multiple choice</span>
+    <div class="q-stem">Q6. Which workload is the <em>best</em> fit for the multi-agent research pattern?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> Refactoring a codebase where each change depends on the previous one.</li>
+      <li class="correct"><span class="opt-key">B)</span> Answering a broad question that fans out into many independent sub-questions across web and internal docs. ✅</li>
+      <li><span class="opt-key">C)</span> A single fact lookup answerable by one tool call.</li>
+      <li><span class="opt-key">D)</span> A strictly sequential, tightly-coupled multi-step calculation.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: B</span>
+        Breadth-first, parallelizable, multi-source research with loosely-coupled subtasks is the sweet spot.
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>A</strong> and <strong>D</strong> are tightly-coupled/sequential — coordination overhead and
+        token cost outweigh benefits; a single agent is better. <strong>C</strong> is trivial — multi-agent is
+        overkill and wasteful for a one-shot lookup.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q7 mcq -->
+  <div class="q">
+    <span class="q-tag tag-mcq">Multiple choice</span>
+    <div class="q-stem">Q7. What should a Web Search subagent return to the Coordinator?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> The full raw HTML of every page it visited.</li>
+      <li class="correct"><span class="opt-key">B)</span> A condensed set of findings with source references attached. ✅</li>
+      <li><span class="opt-key">C)</span> Only a yes/no answer with no sources.</li>
+      <li><span class="opt-key">D)</span> Its entire internal chain-of-thought verbatim.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: B</span>
+        Workers compress findings and keep source tags — high signal, provenance intact.
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>A</strong> floods the coordinator's window (context overflow failure mode). <strong>C</strong>
+        strips the provenance needed for citations. <strong>D</strong> — dumping raw reasoning wastes context
+        and provides no structured, source-tagged evidence.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Q8 scenario -->
+  <div class="q">
+    <span class="q-tag tag-scenario">Scenario</span>
+    <div class="q-stem">Q8. The final report contains a statistic attributed to the wrong document. Provenance tags <em>were</em>
+    present in the registry. Where is the most likely defect?</div>
+    <ul class="opts">
+      <li><span class="opt-key">A)</span> The Web Search subagent — it never ran.</li>
+      <li><span class="opt-key">B)</span> The memory store lost all tags.</li>
+      <li class="correct"><span class="opt-key">C)</span> The Synthesis citation step mismatched a claim to the wrong registry entry. ✅</li>
+      <li><span class="opt-key">D)</span> The Coordinator refused to delegate.</li>
+    </ul>
+    <details class="answer"><summary>Show answer &amp; walkthrough</summary>
+      <div class="walk">
+        <span class="wh">Correct: C</span>
+        Since tags existed in the registry, capture worked — the error is at the mapping/attachment stage
+        during synthesis (claim ↔ source mismatch).
+        <div class="why-wrong"><strong>Why the others are wrong:</strong>
+        <strong>A</strong> and <strong>D</strong> would prevent an answer or evidence from existing at all,
+        contradicting the premise. <strong>B</strong> — the question states tags <em>were</em> present, so the
+        store didn't lose them. This isolates the fault to the citation-mapping step.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- ================= Exam Strategy ================= -->
+  <h2 id="strategy">Exam Strategy</h2>
+
+  <h3>Approaching scenario-based multi-agent questions</h3>
+  <ol>
+    <li><strong>Identify the agent under test first.</strong> Ask: is this about <em>orchestration</em>
+    (coordinator), <em>retrieval</em> (web/doc worker), or <em>integration/citation</em> (synthesis)? Map the
+    symptom to the correct layer before reading options.</li>
+    <li><strong>Trace the failure to its owner.</strong> Duplicated/off-scope work → coordinator delegation;
+    stale/unsourced evidence → worker; wrong/missing citations → synthesis or a dropped tag upstream.</li>
+    <li><strong>Reject "single-brain" distractors.</strong> Any option that has the coordinator doing the
+    searching, or all agents sharing one context window, is almost always wrong.</li>
+    <li><strong>Prefer the design fix over the brute-force fix.</strong> "Spawn more subagents" and "merge
+    windows" are usually traps; tightening task specs or persisting to memory are usually correct.</li>
+  </ol>
+
+  <div class="strategy-box callout">
+    <div class="h">🎯 Keyword → concept decoder</div>
+    <table style="margin-top:8px">
+      <thead><tr><th>If the question says…</th><th>It's testing…</th></tr></thead>
+      <tbody>
+        <tr><td>"plan," "decompose," "delegate," "assign subtasks," "duplicated work," "scope drift"</td><td><strong>Coordinator</strong></td></tr>
+        <tr><td>"in parallel," "own context window," "isolate," "fan-out"</td><td><strong>Subagent isolation / parallelism</strong></td></tr>
+        <tr><td>"live sources," "external," "stale," "search results"</td><td><strong>Web Search subagent</strong></td></tr>
+        <tr><td>"internal docs," "extract," "passage," "page/section"</td><td><strong>Document Analysis subagent</strong></td></tr>
+        <tr><td>"combine," "reconcile conflicts," "final report"</td><td><strong>Synthesis subagent</strong></td></tr>
+        <tr><td>"citation," "source," "traceable," "attribute," "audit"</td><td><strong>Provenance tracking</strong></td></tr>
+        <tr><td>"survives context limit," "persist plan," "resume"</td><td><strong>Memory / state store</strong></td></tr>
+        <tr><td>"token cost," "when NOT to use," "tightly coupled," "sequential"</td><td><strong>Pattern fit / trade-offs</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Time management</h3>
+  <ul>
+    <li><strong>~60–75 seconds per scenario question.</strong> Read the <em>last sentence</em> (the actual ask)
+    first, then re-read the stem for the specific symptom.</li>
+    <li><strong>Eliminate two distractors fast</strong> using the "single-brain" and "brute-force" filters
+    above — you can usually get to a coin-flip in 20 seconds.</li>
+    <li><strong>Flag, don't stall.</strong> If a citation/provenance nuance isn't obvious, mark it and move on;
+    these often clarify once you've answered related items.</li>
+    <li><strong>Bank time on keyword questions.</strong> Direct "which agent does X" items should take
+    &lt;30 seconds — use the C-WDS mnemonic and the decoder table.</li>
+  </ul>
+
+  <div class="tip-box callout">
+    <div class="h">💡 Common exam wording patterns to watch</div>
+    <ul style="margin-bottom:0">
+      <li>"<em>Best</em>," "<em>most likely</em>," "<em>primary</em>" → there may be several partially-true
+      options; pick the one matching the agent's <em>defining</em> role.</li>
+      <li>"<em>always</em> / <em>never</em> / <em>guarantees</em>" → usually a red flag on an incorrect option
+      (e.g. "multi-agent always reduces cost").</li>
+      <li>"<em>shared context</em>" → almost always the wrong choice for model windows; correct only when it
+      refers to the memory/registry store.</li>
+      <li>"<em>infers</em> / <em>generates</em> citations" → provenance trap; real citations are captured at
+      retrieval and verified, not invented.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- ================= Exit Checklist ================= -->
+  <section class="checklist" id="checklist">
+    <h2>✅ Exit Checklist</h2>
+    <p><strong>Completeness (32.1–32.4 covered):</strong></p>
+    <ul>
+      <li><strong>32.1</strong> — Scenario overview, use case, high-level architecture diagram (Fig. 32.1), and component summary table.</li>
+      <li><strong>32.2</strong> — All four roles (Coordinator, Web Search, Document Analysis, Synthesis) with purpose, inputs/outputs, tools, failure modes, plus the comparison table.</li>
+      <li><strong>32.3</strong> — Context-passing channels, provenance rationale &amp; mechanism, and the numbered sequence diagram (Fig. 32.3) with provenance tags at each step.</li>
+      <li><strong>32.4</strong> — 8 practice questions (MCQ + scenario) with answers, walkthroughs, and distractor analysis, including a dedicated trick question (Q3).</li>
+      <li>"Tips &amp; Tricks" callout in every section; dedicated Exam Strategy section with keyword decoder and time management.</li>
+    </ul>
+    <p><strong>Validity (HTML/CSS):</strong></p>
+    <ul>
+      <li>Single self-contained file — embedded <code>&lt;style&gt;</code>, no external dependencies or network links.</li>
+      <li>Semantic hierarchy: <code>&lt;h1&gt;</code> chapter → <code>&lt;h2&gt;</code> (32.1–32.4) → <code>&lt;h3&gt;</code> subsections; anchored TOC with working in-page links.</li>
+      <li>Diagrams rendered as styled HTML/CSS (not prose); tables use <code>&lt;table&gt;</code> with <code>&lt;thead&gt;</code> headers; callouts use distinct CSS classes; all tags properly nested/closed.</li>
+    </ul>
+    <p><strong>Truthfulness (no unverified claims):</strong></p>
+    <ul>
+      <li>Content anchored to the publicly-documented <strong>orchestrator–worker</strong> multi-agent pattern (coordinator delegates, parallel isolated subagents, dedicated citation/provenance, memory for plan persistence, higher token cost).</li>
+      <li>Agent <em>names</em> flagged as illustrative role labels for this scenario; no fabricated APIs, product SKUs, or invented features asserted as fact (see the scope note near the top).</li>
+      <li>Concepts described generically where exact internal implementation details are not publicly documented.</li>
+    </ul>
+  </section>
+
+  <p class="footer">Chapter 32 — Scenario 3: Multi-Agent Research System · Claude Certified Architect study notes ·
+  Concepts reflect published orchestrator–worker multi-agent guidance; verify against the current official exam blueprint.</p>
+
+</div>
+
+
+</body></html>

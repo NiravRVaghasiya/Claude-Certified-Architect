@@ -1,0 +1,2696 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 2: Agentic Loops — Autonomous Task Execution</title>
+<style>
+  :root {
+    --bg: #0f1724;
+    --bg-secondary: #182032;
+    --bg-tertiary: #1e293b;
+    --surface: #1a2540;
+    --surface-hover: #22334e;
+    --border: #2a3a55;
+    --border-light: #233050;
+    --text: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --primary: #3b82f6;
+    --primary-dim: #2563eb;
+    --primary-bg: rgba(59,130,246,0.12);
+    --accent: #8b5cf6;
+    --accent-bg: rgba(139,92,246,0.12);
+    --success: #22c55e;
+    --success-bg: rgba(34,197,94,0.10);
+    --error: #ef4444;
+    --error-bg: rgba(239,68,68,0.10);
+    --warning: #f59e0b;
+    --warning-bg: rgba(245,158,11,0.10);
+    --info: #06b6d4;
+    --info-bg: rgba(6,182,212,0.10);
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, 'Liberation Mono', monospace;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --code-bg: #0d1320;
+    --code-border: #1e2d46;
+    --keyword: #c084fc;
+    --string: #34d399;
+    --comment: #64748b;
+    --function: #60a5fa;
+    --number: #f59e0b;
+    --operator: #94a3b8;
+    --decorator: #fb923c;
+    --builtin: #22d3ee;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.7;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ─── SIDEBAR NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+    overflow-y: auto;
+    z-index: 100;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  nav::-webkit-scrollbar { width: 4px; }
+  nav::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .nav-header {
+    padding: 0 20px 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .nav-header .badge {
+    display: inline-block;
+    background: var(--primary-bg);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .nav-header h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .nav-header p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  nav a {
+    display: block;
+    padding: 7px 20px 7px 28px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.15s ease;
+    border-left: 2px solid transparent;
+  }
+  nav a:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+    border-left-color: var(--primary);
+  }
+  nav a.section-title {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 13px;
+    padding: 10px 20px 6px;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: default;
+  }
+  nav a.section-title:hover { background: none; border-left-color: transparent; }
+  nav a.indent { padding-left: 40px; font-size: 12.5px; }
+
+  /* ─── MAIN CONTENT ─── */
+  main {
+    margin-left: 280px;
+    flex: 1;
+    max-width: 920px;
+    padding: 40px 48px 80px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .chapter-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+  .chapter-subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 56px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  h2 .section-num {
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  p { margin-bottom: 14px; }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  code {
+    font-family: var(--font-mono);
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--primary);
+  }
+
+  /* ─── CODE BLOCKS ─── */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin: 16px 0 20px;
+    overflow-x: auto;
+    position: relative;
+    line-height: 1.65;
+  }
+  pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 13px;
+    color: var(--text);
+  }
+  pre .label {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+  pre .label.correct { background: var(--success-bg); color: var(--success); }
+  pre .label.incorrect { background: var(--error-bg); color: var(--error); }
+  pre .label.python { background: var(--primary-bg); color: var(--primary); }
+
+  .kw { color: var(--keyword); font-weight: 600; }
+  .str { color: var(--string); }
+  .cm { color: var(--comment); font-style: italic; }
+  .fn { color: var(--function); }
+  .num { color: var(--number); }
+  .op { color: var(--operator); }
+  .dec { color: var(--decorator); }
+  .bi { color: var(--builtin); }
+  .err { color: var(--error); }
+
+  /* ─── CALLOUT BLOCKS ─── */
+  .callout {
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin: 16px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    border: 1px solid;
+  }
+  .callout-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .callout-content { flex: 1; }
+  .callout-content strong { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .callout-content p { margin: 0; font-size: 14px; line-height: 1.6; }
+
+  .callout.insight { background: var(--primary-bg); border-color: rgba(59,130,246,0.25); }
+  .callout.insight .callout-content strong { color: var(--primary); }
+  .callout.mistake { background: var(--error-bg); border-color: rgba(239,68,68,0.25); }
+  .callout.mistake .callout-content strong { color: var(--error); }
+  .callout.exam-tip { background: var(--accent-bg); border-color: rgba(139,92,246,0.25); }
+  .callout.exam-tip .callout-content strong { color: var(--accent); }
+  .callout.connection { background: var(--success-bg); border-color: rgba(34,197,94,0.25); }
+  .callout.connection .callout-content strong { color: var(--success); }
+  .callout.warning { background: var(--warning-bg); border-color: rgba(245,158,11,0.25); }
+  .callout.warning .callout-content strong { color: var(--warning); }
+
+  /* ─── TABLES ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 13.5px;
+  }
+  th {
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--border);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--bg-tertiary);
+  }
+  td {
+    padding: 10px 14px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+  tr:hover td { background: var(--surface-hover); }
+  td code {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* ─── DIAGRAM CONTAINERS ─── */
+  .diagram-container {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+  .diagram-container svg { display: block; margin: 0 auto; }
+
+  /* ─── LISTS ─── */
+  ul, ol {
+    margin: 8px 0 16px 24px;
+  }
+  li {
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  li code { font-size: 12.5px; }
+
+  /* ─── COLLAPSIBLE SECTIONS ─── */
+  details {
+    margin: 12px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  summary {
+    padding: 14px 20px;
+    background: var(--bg-tertiary);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.15s ease;
+  }
+  summary:hover { background: var(--surface-hover); }
+  summary::before {
+    content: '▸';
+    transition: transform 0.2s ease;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+  details[open] summary::before { transform: rotate(90deg); }
+  details .details-body { padding: 16px 20px; }
+
+  /* ─── NUMBERED STEPS ─── */
+  .step {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-bg);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(59,130,246,0.3);
+  }
+  .step-content { flex: 1; padding-top: 4px; }
+  .step-content strong { color: var(--text); }
+  .step-content p { margin-bottom: 8px; }
+
+  /* ─── CHECKLIST ─── */
+  .checklist {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+    font-size: 16px;
+  }
+
+  /* ─── VISUAL SUMMARY CARDS ─── */
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .topic-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    transition: all 0.2s ease;
+  }
+  .topic-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .topic-card .card-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .topic-card .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .topic-card .card-desc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .complexity-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .complexity-badge.beginner { background: var(--success-bg); color: var(--success); }
+  .complexity-badge.intermediate { background: var(--warning-bg); color: var(--warning); }
+  .complexity-badge.advanced { background: var(--error-bg); color: var(--error); }
+
+  /* ─── Q&A SECTION ─── */
+  .qa-item {
+    margin: 20px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .qa-question {
+    padding: 16px 20px;
+    background: var(--bg-tertiary);
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .qa-question .q-num {
+    flex-shrink: 0;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+  .qa-answer {
+    padding: 16px 20px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+  .qa-answer strong { color: var(--text); }
+
+  /* ─── DIVIDERS ─── */
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { display: none; }
+    main { margin-left: 0; padding: 24px 20px 60px; }
+  }
+
+  /* ─── SCROLL ─── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ SIDEBAR NAVIGATION ═══════════════ -->
+<nav>
+  <div class="nav-header">
+    <span class="badge">Claude Certified Architect</span>
+    <h2>Chapter 2: Agentic Loops</h2>
+    <p>Autonomous Task Execution</p>
+  </div>
+
+  <a class="section-title">Core Concepts</a>
+  <a href="#s2-1">2.1 The Agentic Loop Lifecycle</a>
+  <a href="#s2-2">2.2 Understanding stop_reason</a>
+  <a href="#s2-3">2.3 Appending Tool Results</a>
+  <a href="#s2-4">2.4 Decision-Making Models</a>
+
+  <a class="section-title">Implementation</a>
+  <a href="#s2-5">2.5 Loop Control Flow</a>
+  <a href="#s2-6">2.6 Common Anti-Patterns</a>
+  <a href="#s2-7">2.7 Hands-On: Your First Loop</a>
+
+  <a class="section-title">Exam Prep</a>
+  <a href="#exam-strategy">Exam Strategy</a>
+  <a href="#top-10">Top 10 Questions</a>
+  <a href="#self-assessment">Self-Assessment</a>
+
+  <a class="section-title">Reference</a>
+  <a href="#visual-summary">Visual Chapter Summary</a>
+</nav>
+
+<!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+<main>
+
+<!-- ───────── CHAPTER HEADER ───────── -->
+<span class="chapter-badge">CHAPTER 2</span>
+<h1>Agentic Loops — Autonomous Task Execution</h1>
+<p class="chapter-subtitle">
+  Master the architecture of autonomous Claude agents: the request-inspect-execute-return lifecycle,
+  <code>stop_reason</code>-driven control flow, correct tool result management, and the anti-patterns
+  that derail production systems. This chapter is the foundation of every agentic system built on Claude.
+</p>
+
+<div class="callout insight">
+  <span class="callout-icon">📌</span>
+  <div class="callout-content">
+    <strong>Chapter Overview</strong>
+    <p>An <em>agentic loop</em> is a <code>while</code> loop that repeatedly calls the Claude API, inspects the <code>stop_reason</code> field to decide what to do next, executes any requested tools, appends results back into the conversation, and repeats — until Claude signals it's done. This single pattern underlies every Claude-powered agent, from simple tool-calling assistants to multi-step autonomous planners.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SECTION 2.1 — THE AGENTIC LOOP LIFECYCLE  -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="s2-1"><span class="section-num">2.1</span> The Agentic Loop Lifecycle</h2>
+<p>
+  Every agentic loop follows a four-phase lifecycle: <strong>Request → Inspect → Execute → Return</strong>.
+  Understanding the precise responsibility of each phase — and the data that flows between them — is
+  non-negotiable for the exam and for building reliable agents.
+</p>
+
+<h3>Phase Definitions</h3>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <strong>REQUEST — Send the message to Claude</strong>
+    <p>Pack the full conversation history (system prompt, all prior user/assistant/tool messages) plus the list of available tools into an API call via <code>client.messages.create()</code>. Claude receives the complete context and generates a response.</p>
+    <p><em>Data in:</em> messages array, tools array, model, max_tokens<br>
+    <em>Data out:</em> API response object</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <strong>INSPECT — Check <code>stop_reason</code></strong>
+    <p>Read <code>response.stop_reason</code>. This is the <em>only</em> reliable signal for what the model wants to happen next. If it's <code>"tool_use"</code>, the model is requesting tool execution. If it's <code>"end_turn"</code>, the model considers the task complete.</p>
+    <p><em>Data in:</em> response object<br>
+    <em>Data out:</em> control flow decision (continue loop / exit loop / handle error)</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <strong>EXECUTE — Run the requested tools</strong>
+    <p>Extract every <code>tool_use</code> content block from the response, execute each corresponding function with the provided <code>input</code> arguments, and collect results. A single response can contain <em>multiple</em> tool_use blocks — all must be executed and returned.</p>
+    <p><em>Data in:</em> tool_use blocks (name, id, input)<br>
+    <em>Data out:</em> tool results with matching IDs</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">4</div>
+  <div class="step-content">
+    <strong>RETURN — Append results &amp; loop back</strong>
+    <p>Append Claude's assistant message (the full response content) and a new user message containing <code>tool_result</code> blocks to the conversation history. Then return to phase 1 for the next API call. Claude will see the tool outputs and decide what to do next.</p>
+    <p><em>Data in:</em> tool execution results<br>
+    <em>Data out:</em> updated messages array → back to phase 1</p>
+  </div>
+</div>
+
+<h3>Lifecycle Diagram</h3>
+<div class="diagram-container">
+<svg viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg" style="max-width:780px;width:100%">
+  <!-- Background boxes -->
+  <rect x="20" y="50" width="160" height="80" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"></rect>
+  <rect x="220" y="50" width="160" height="80" rx="10" fill="#2d1f54" stroke="#8b5cf6" stroke-width="2"></rect>
+  <rect x="420" y="50" width="160" height="80" rx="10" fill="#1a3a2a" stroke="#22c55e" stroke-width="2"></rect>
+  <rect x="620" y="50" width="140" height="80" rx="10" fill="#3a2a1a" stroke="#f59e0b" stroke-width="2"></rect>
+
+  <!-- Phase labels -->
+  <text x="100" y="44" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.08em">PHASE 1</text>
+  <text x="300" y="44" text-anchor="middle" fill="#8b5cf6" font-size="11" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.08em">PHASE 2</text>
+  <text x="500" y="44" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.08em">PHASE 3</text>
+  <text x="690" y="44" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.08em">PHASE 4</text>
+
+  <!-- Box titles -->
+  <text x="100" y="80" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700" font-family="var(--font-sans)">REQUEST</text>
+  <text x="100" y="102" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="var(--font-sans)">messages.create()</text>
+  <text x="100" y="118" text-anchor="middle" fill="#64748b" font-size="10" font-family="var(--font-sans)">→ API Response</text>
+
+  <text x="300" y="80" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700" font-family="var(--font-sans)">INSPECT</text>
+  <text x="300" y="102" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="var(--font-sans)">check stop_reason</text>
+  <text x="300" y="118" text-anchor="middle" fill="#64748b" font-size="10" font-family="var(--font-sans)">→ Control Decision</text>
+
+  <text x="500" y="80" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700" font-family="var(--font-sans)">EXECUTE</text>
+  <text x="500" y="102" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="var(--font-sans)">run tool functions</text>
+  <text x="500" y="118" text-anchor="middle" fill="#64748b" font-size="10" font-family="var(--font-sans)">→ Tool Results</text>
+
+  <text x="690" y="80" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700" font-family="var(--font-sans)">RETURN</text>
+  <text x="690" y="102" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="var(--font-sans)">append to history</text>
+  <text x="690" y="118" text-anchor="middle" fill="#64748b" font-size="10" font-family="var(--font-sans)">→ Loop Back</text>
+
+  <!-- Arrows between phases -->
+  <path d="M180 90 L220 90" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"></path>
+  <path d="M380 90 L420 90" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"></path>
+  <path d="M580 90 L620 90" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"></path>
+
+  <!-- Loop-back arrow -->
+  <path d="M690 130 L690 190 L100 190 L100 130" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="6 3" marker-end="url(#arrowhead-yellow)"></path>
+  <text x="395" y="208" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="600" font-family="var(--font-sans)">Loop continues while stop_reason == "tool_use"</text>
+
+  <!-- Exit arrow from INSPECT -->
+  <path d="M300 130 L300 235" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowhead-red)"></path>
+  <text x="300" y="252" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="600" font-family="var(--font-sans)">EXIT: stop_reason == "end_turn"</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b"></path></marker>
+    <marker id="arrowhead-yellow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f59e0b"></path></marker>
+    <marker id="arrowhead-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#ef4444"></path></marker>
+  </defs>
+</svg>
+</div>
+
+<h3>Failure Modes at Each Transition</h3>
+<table>
+  <tbody><tr>
+    <th>Transition</th>
+    <th>Failure Mode</th>
+    <th>Impact</th>
+    <th>Mitigation</th>
+  </tr>
+  <tr>
+    <td>Request → Inspect</td>
+    <td>API error (rate limit, auth, network)</td>
+    <td>Loop never starts or stalls</td>
+    <td>Retry with exponential backoff; raise after N retries</td>
+  </tr>
+  <tr>
+    <td>Inspect → Execute</td>
+    <td>Unrecognized <code>stop_reason</code></td>
+    <td>Undefined behavior; silent data loss</td>
+    <td>Treat unknown values as errors; raise <code>ValueError</code></td>
+  </tr>
+  <tr>
+    <td>Execute → Return</td>
+    <td>Tool execution failure (exception, timeout)</td>
+    <td>Missing result breaks Claude's context</td>
+    <td>Catch exceptions; return error message as tool result</td>
+  </tr>
+  <tr>
+    <td>Return → Request</td>
+    <td>Malformed message history (wrong roles, missing IDs)</td>
+    <td>API rejects the request; loop crashes</td>
+    <td>Validate message structure before each API call</td>
+  </tr>
+</tbody></table>
+
+<h3>Minimal Code: The Complete Lifecycle</h3>
+<pre><code><span class="cm"># The four-phase agentic loop in its simplest form</span>
+<span class="kw">import</span> anthropic
+
+client = anthropic.Anthropic()
+messages = [{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: <span class="str">"What's the weather in London?"</span>}]
+tools = [weather_tool_definition]  <span class="cm"># defined elsewhere</span>
+
+<span class="kw">while</span> <span class="bi">True</span>:
+    <span class="cm"># PHASE 1: REQUEST</span>
+    response = client.messages.create(
+        model=<span class="str">"claude-sonnet-4-20250514"</span>,
+        max_tokens=<span class="num">4096</span>,
+        tools=tools,
+        messages=messages
+    )
+
+    <span class="cm"># PHASE 2: INSPECT</span>
+    <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+        <span class="kw">break</span>  <span class="cm"># Model is done — exit the loop</span>
+    <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+        <span class="cm"># PHASE 3: EXECUTE</span>
+        tool_results = []
+        <span class="kw">for</span> block <span class="kw">in</span> response.content:
+            <span class="kw">if</span> block.type == <span class="str">"tool_use"</span>:
+                result = execute_tool(block.name, block.input)
+                tool_results.append({
+                    <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+                    <span class="str">"tool_use_id"</span>: block.id,
+                    <span class="str">"content"</span>: result
+                })
+
+        <span class="cm"># PHASE 4: RETURN</span>
+        messages.append({<span class="str">"role"</span>: <span class="str">"assistant"</span>, <span class="str">"content"</span>: response.content})
+        messages.append({<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: tool_results})
+    <span class="kw">else</span>:
+        <span class="kw">raise</span> <span class="bi">ValueError</span>(<span class="str">f"Unexpected stop_reason: </span>{response.stop_reason}<span class="str">"</span>)
+<span class="label python">PYTHON</span></code></pre>
+
+<!-- Callouts for 2.1 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p>The agentic loop is not an AI concept — it's a <strong>while loop with a structured exit condition</strong>. The model doesn't "run" tools; your code does. Claude only <em>requests</em> tool execution by setting <code>stop_reason</code> to <code>"tool_use"</code>. Your code is the executor, the model is the decision-maker.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Forgetting to append <strong>both</strong> the assistant message (with <code>tool_use</code> blocks) <strong>and</strong> the user message (with <code>tool_result</code> blocks) before looping back. If you skip the assistant message, Claude loses context of what it asked for. The conversation history must always alternate correctly: user → assistant → user → assistant.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>When a question asks "what are the phases of an agentic loop," the canonical answer is exactly four: <strong>Request, Inspect, Execute, Return</strong>. Don't add "Plan" or "Decide" as separate phases — planning and deciding happen <em>within</em> the model during the Request phase. The loop structure is about your code's control flow, not the model's internal reasoning.</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p>This lifecycle is the foundation for Chapter 3 (Multi-Turn Tool Orchestration) and Chapter 5 (Error Recovery Strategies). The four-phase structure remains identical in complex agents — what changes is the sophistication of the Execute and Return phases.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SECTION 2.2 — UNDERSTANDING stop_reason   -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="s2-2"><span class="section-num">2.2</span> Understanding <code>stop_reason</code></h2>
+<p>
+  The <code>stop_reason</code> field is the <strong>single most critical signal</strong> in an agentic loop.
+  It's a structured, machine-readable indicator that tells your code exactly why the model stopped generating.
+  Every loop iteration must inspect this field — and only this field — to decide what happens next.
+</p>
+
+<h3>Definitive Values</h3>
+<table>
+  <tbody><tr>
+    <th>Value</th>
+    <th>Meaning</th>
+    <th>Your Code Should</th>
+  </tr>
+  <tr>
+    <td><code>"end_turn"</code></td>
+    <td>The model has finished its response and does not need any tools. It considers the current task complete (or has provided its final answer).</td>
+    <td><strong>Exit the loop.</strong> Extract the final text from <code>response.content</code> and return it to the user.</td>
+  </tr>
+  <tr>
+    <td><code>"tool_use"</code></td>
+    <td>The model wants to call one or more tools. The response's <code>content</code> array contains <code>tool_use</code> blocks specifying which tools to call and with what arguments.</td>
+    <td><strong>Execute tools &amp; continue the loop.</strong> Run each requested tool, build <code>tool_result</code> messages, append to history, and make another API call.</td>
+  </tr>
+  <tr>
+    <td><code>"max_tokens"</code></td>
+    <td>The response was truncated because it hit the <code>max_tokens</code> limit. The model was still generating when cut off.</td>
+    <td><strong>Handle as a special case.</strong> You may either increase <code>max_tokens</code> and retry, or treat as a partial response. Never silently ignore this.</td>
+  </tr>
+  <tr>
+    <td><code>"stop_sequence"</code></td>
+    <td>The model hit a custom stop sequence defined in the API call parameters.</td>
+    <td><strong>Handle per your application logic.</strong> This is rarely used in agentic loops but may appear in constrained output scenarios.</td>
+  </tr>
+</tbody></table>
+
+<h3>Decision Flowchart</h3>
+<div class="diagram-container">
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="max-width:700px;width:100%">
+  <!-- Start node -->
+  <rect x="260" y="10" width="180" height="40" rx="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"></rect>
+  <text x="350" y="36" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600" font-family="var(--font-sans)">API Response Received</text>
+
+  <!-- Arrow down -->
+  <path d="M350 50 L350 80" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#ah)"></path>
+
+  <!-- Decision diamond -->
+  <polygon points="350,80 500,130 350,180 200,130" fill="#2d1f54" stroke="#8b5cf6" stroke-width="2"></polygon>
+  <text x="350" y="126" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="600" font-family="var(--font-sans)">stop_reason?</text>
+  <text x="350" y="140" text-anchor="middle" fill="#c4b5fd" font-size="10" font-family="var(--font-mono)">response.stop_reason</text>
+
+  <!-- "end_turn" branch (left) -->
+  <path d="M200 130 L100 130 L100 210" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#ah-green)"></path>
+  <text x="145" y="120" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="600" font-family="var(--font-mono)">"end_turn"</text>
+  <rect x="20" y="210" width="160" height="50" rx="8" fill="#1a3a2a" stroke="#22c55e" stroke-width="2"></rect>
+  <text x="100" y="232" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700" font-family="var(--font-sans)">EXIT LOOP</text>
+  <text x="100" y="248" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="var(--font-sans)">Return final response</text>
+
+  <!-- "tool_use" branch (right) -->
+  <path d="M500 130 L600 130 L600 210" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#ah-blue)"></path>
+  <text x="555" y="120" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="600" font-family="var(--font-mono)">"tool_use"</text>
+  <rect x="520" y="210" width="160" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"></rect>
+  <text x="600" y="232" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="700" font-family="var(--font-sans)">EXECUTE TOOLS</text>
+  <text x="600" y="248" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="var(--font-sans)">Append &amp; loop back</text>
+
+  <!-- Loop arrow from execute back up -->
+  <path d="M680 235 L700 235 L700 30 L440 30" stroke="#3b82f6" stroke-width="2" fill="none" stroke-dasharray="5 3" marker-end="url(#ah-blue)"></path>
+
+  <!-- "max_tokens" / other branch (down) -->
+  <path d="M350 180 L350 290" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#ah-amber)"></path>
+  <text x="380" y="210" fill="#f59e0b" font-size="11" font-weight="600" font-family="var(--font-mono)">other</text>
+  <rect x="260" y="290" width="180" height="50" rx="8" fill="#3a2a1a" stroke="#f59e0b" stroke-width="2"></rect>
+  <text x="350" y="312" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700" font-family="var(--font-sans)">HANDLE / ERROR</text>
+  <text x="350" y="328" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="var(--font-sans)">max_tokens, stop_sequence</text>
+
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b"></path></marker>
+    <marker id="ah-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#22c55e"></path></marker>
+    <marker id="ah-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#3b82f6"></path></marker>
+    <marker id="ah-amber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f59e0b"></path></marker>
+  </defs>
+</svg>
+</div>
+
+<h3>What Happens When You Get It Wrong</h3>
+<table>
+  <tbody><tr>
+    <th>Mistake</th>
+    <th>What Happens</th>
+    <th>Severity</th>
+  </tr>
+  <tr>
+    <td>Treat <code>"tool_use"</code> as <code>"end_turn"</code></td>
+    <td>Loop exits prematurely. Claude asked for a tool but never gets the result. The user receives an incomplete response (often just the model's reasoning, not the answer).</td>
+    <td style="color:var(--error);font-weight:600;">Critical</td>
+  </tr>
+  <tr>
+    <td>Treat <code>"end_turn"</code> as <code>"tool_use"</code></td>
+    <td>Code tries to extract tool_use blocks from a text-only response. Crashes or produces empty tool results. May cause infinite loop if the code re-sends.</td>
+    <td style="color:var(--error);font-weight:600;">Critical</td>
+  </tr>
+  <tr>
+    <td>Ignore <code>"max_tokens"</code></td>
+    <td>Truncated response is treated as complete. Partial JSON, broken instructions, or missing data propagates downstream silently.</td>
+    <td style="color:var(--warning);font-weight:600;">High</td>
+  </tr>
+  <tr>
+    <td>No handler for unexpected values</td>
+    <td>If Anthropic adds a new stop_reason in the future, the code silently drops into an unhandled state — potentially infinite-looping.</td>
+    <td style="color:var(--warning);font-weight:600;">High</td>
+  </tr>
+</tbody></table>
+
+<h3>Correct Pattern: Exhaustive Handling</h3>
+<pre><code><span class="cm"># ✅ CORRECT: Handle every possible stop_reason</span>
+<span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+    <span class="cm"># Task complete — extract and return the final text</span>
+    final_text = <span class="str">""</span>.join(
+        block.text <span class="kw">for</span> block <span class="kw">in</span> response.content
+        <span class="kw">if</span> <span class="fn">hasattr</span>(block, <span class="str">"text"</span>)
+    )
+    <span class="kw">break</span>
+
+<span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+    <span class="cm"># Model wants tools — execute and continue</span>
+    tool_results = process_tool_calls(response)
+    messages.append({<span class="str">"role"</span>: <span class="str">"assistant"</span>, <span class="str">"content"</span>: response.content})
+    messages.append({<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: tool_results})
+
+<span class="kw">elif</span> response.stop_reason == <span class="str">"max_tokens"</span>:
+    <span class="cm"># Response was truncated — handle explicitly</span>
+    logger.warning(<span class="str">"Response truncated at max_tokens"</span>)
+    <span class="kw">raise</span> <span class="bi">RuntimeError</span>(<span class="str">"Max tokens reached; increase max_tokens or simplify the task."</span>)
+
+<span class="kw">else</span>:
+    <span class="cm"># Future-proof: reject unknown stop_reasons loudly</span>
+    <span class="kw">raise</span> <span class="bi">ValueError</span>(<span class="str">f"Unhandled stop_reason: </span>{response.stop_reason}<span class="str">"</span>)
+<span class="label correct">✅ CORRECT</span></code></pre>
+
+<!-- Callouts for 2.2 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p><code>stop_reason</code> is a <strong>structural signal</strong>, not a content signal. It tells you about the <em>structure</em> of the response (does it contain tool calls or not?), not about the <em>meaning</em> of the text. This distinction is why checking text content for phrases like "I'm done" is always wrong.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Checking <code>response.content[0].text</code> to decide if the loop should continue. The <code>content</code> array may contain <em>both</em> text blocks and tool_use blocks in the same response. The model often "thinks out loud" before requesting a tool. Only <code>stop_reason</code> tells you what the model actually wants your code to do.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>If a question shows code that checks <code>if "tool_use" in str(response.content)</code> or <code>if response.content[-1].type == "tool_use"</code>, those are <strong>wrong</strong> — even if they'd work in some cases. The exam tests for the canonical pattern: <code>response.stop_reason == "tool_use"</code>. Don't be tricked by "technically works" alternatives.</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p><code>stop_reason</code> handling is the direct prerequisite for Section 2.5 (Loop Control Flow) and Section 2.6 (Anti-Patterns). Every anti-pattern in Section 2.6 is, at its core, a failure to use <code>stop_reason</code> correctly.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SECTION 2.3 — APPENDING TOOL RESULTS      -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="s2-3"><span class="section-num">2.3</span> Appending Tool Results to Conversation History</h2>
+<p>
+  The conversation history is the <strong>shared memory</strong> between your code and Claude. After executing tools,
+  you must append the results in a very specific format. Getting the structure, ordering, or role assignments
+  wrong will cause API errors or — worse — silently corrupt Claude's understanding of what happened.
+</p>
+
+<h3>The Exact Message Structure</h3>
+<p>After Claude responds with <code>stop_reason: "tool_use"</code>, you must append <strong>two messages</strong>:</p>
+
+<pre><code><span class="cm"># Message 1: The assistant's response (including tool_use blocks)</span>
+{
+    <span class="str">"role"</span>: <span class="str">"assistant"</span>,
+    <span class="str">"content"</span>: [
+        {
+            <span class="str">"type"</span>: <span class="str">"text"</span>,
+            <span class="str">"text"</span>: <span class="str">"Let me check the weather for you."</span>
+        },
+        {
+            <span class="str">"type"</span>: <span class="str">"tool_use"</span>,
+            <span class="str">"id"</span>: <span class="str">"toolu_01A09q90qw90lq917835lq9"</span>,
+            <span class="str">"name"</span>: <span class="str">"get_weather"</span>,
+            <span class="str">"input"</span>: {<span class="str">"city"</span>: <span class="str">"London"</span>}
+        }
+    ]
+}
+
+<span class="cm"># Message 2: The tool results (as a "user" message)</span>
+{
+    <span class="str">"role"</span>: <span class="str">"user"</span>,
+    <span class="str">"content"</span>: [
+        {
+            <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+            <span class="str">"tool_use_id"</span>: <span class="str">"toolu_01A09q90qw90lq917835lq9"</span>,
+            <span class="str">"content"</span>: <span class="str">"Partly cloudy, 18°C, humidity 72%"</span>
+        }
+    ]
+}
+<span class="label python">JSON STRUCTURE</span></code></pre>
+
+<h3>Before &amp; After: Conversation History Snapshot</h3>
+<details>
+  <summary>📋 Before Tool Execution (2 messages)</summary>
+  <div class="details-body">
+<pre><code>messages = [
+    {
+        <span class="str">"role"</span>: <span class="str">"user"</span>,
+        <span class="str">"content"</span>: <span class="str">"What's the weather in London and Paris?"</span>
+    },
+    <span class="cm"># ← Claude's response with tool_use will come here</span>
+]
+</code></pre>
+  </div>
+</details>
+
+<details>
+  <summary>📋 After Tool Execution (4 messages)</summary>
+  <div class="details-body">
+<pre><code>messages = [
+    <span class="cm"># Original user request</span>
+    {
+        <span class="str">"role"</span>: <span class="str">"user"</span>,
+        <span class="str">"content"</span>: <span class="str">"What's the weather in London and Paris?"</span>
+    },
+    <span class="cm"># Claude's response requesting TWO tools</span>
+    {
+        <span class="str">"role"</span>: <span class="str">"assistant"</span>,
+        <span class="str">"content"</span>: [
+            {<span class="str">"type"</span>: <span class="str">"text"</span>, <span class="str">"text"</span>: <span class="str">"I'll check both cities."</span>},
+            {<span class="str">"type"</span>: <span class="str">"tool_use"</span>, <span class="str">"id"</span>: <span class="str">"toolu_01AAA"</span>,
+             <span class="str">"name"</span>: <span class="str">"get_weather"</span>, <span class="str">"input"</span>: {<span class="str">"city"</span>: <span class="str">"London"</span>}},
+            {<span class="str">"type"</span>: <span class="str">"tool_use"</span>, <span class="str">"id"</span>: <span class="str">"toolu_01BBB"</span>,
+             <span class="str">"name"</span>: <span class="str">"get_weather"</span>, <span class="str">"input"</span>: {<span class="str">"city"</span>: <span class="str">"Paris"</span>}}
+        ]
+    },
+    <span class="cm"># Tool results — BOTH results in ONE user message</span>
+    {
+        <span class="str">"role"</span>: <span class="str">"user"</span>,
+        <span class="str">"content"</span>: [
+            {<span class="str">"type"</span>: <span class="str">"tool_result"</span>, <span class="str">"tool_use_id"</span>: <span class="str">"toolu_01AAA"</span>,
+             <span class="str">"content"</span>: <span class="str">"London: 18°C, partly cloudy"</span>},
+            {<span class="str">"type"</span>: <span class="str">"tool_result"</span>, <span class="str">"tool_use_id"</span>: <span class="str">"toolu_01BBB"</span>,
+             <span class="str">"content"</span>: <span class="str">"Paris: 22°C, sunny"</span>}
+        ]
+    }
+    <span class="cm"># ← Next API call starts here; Claude sees all the above</span>
+]
+</code></pre>
+  </div>
+</details>
+
+<h3>Critical Rules</h3>
+<ol>
+  <li><strong>Role assignment:</strong> The assistant's response uses <code>"role": "assistant"</code>. Tool results use <code>"role": "user"</code>. This is counter-intuitive but mandatory — your code sends tool results, so they're a "user" message from the API's perspective.</li>
+  <li><strong>ID matching:</strong> Every <code>tool_result</code> block's <code>tool_use_id</code> must exactly match the <code>id</code> of the corresponding <code>tool_use</code> block. Mismatched IDs cause API errors.</li>
+  <li><strong>All tools answered:</strong> If Claude requested 3 tools in one turn, you must return 3 <code>tool_result</code> blocks. Missing results cause the API to reject your next call.</li>
+  <li><strong>Order within the user message:</strong> All <code>tool_result</code> blocks go in a <em>single</em> user message, not separate messages. The order within that message doesn't matter as long as IDs match.</li>
+  <li><strong>Content serialization:</strong> The <code>content</code> of a <code>tool_result</code> must be a string (or an array of content blocks). If your tool returns JSON, serialize it to a string first.</li>
+</ol>
+
+<h3>Edge Cases</h3>
+
+<h4>Failed Tool Execution</h4>
+<pre><code><span class="cm"># When a tool throws an exception, return the error as a tool result</span>
+<span class="cm"># with is_error=True — do NOT skip the result entirely</span>
+{
+    <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+    <span class="str">"tool_use_id"</span>: <span class="str">"toolu_01AAA"</span>,
+    <span class="str">"content"</span>: <span class="str">"Error: Connection timeout after 30s. The weather API is unavailable."</span>,
+    <span class="str">"is_error"</span>: <span class="bi">True</span>
+}
+<span class="label python">TOOL ERROR FORMAT</span></code></pre>
+<p>Setting <code>is_error: true</code> tells Claude the tool failed. Claude can then decide to retry, use an alternative approach, or inform the user — all without your code needing to hardcode recovery logic.</p>
+
+<h4>Empty / Null Tool Results</h4>
+<pre><code><span class="cm"># A tool that returns nothing (e.g., a "send_email" action)</span>
+{
+    <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+    <span class="str">"tool_use_id"</span>: <span class="str">"toolu_01CCC"</span>,
+    <span class="str">"content"</span>: <span class="str">"Success: email sent."</span>
+}
+<span class="cm"># Even for void actions, always return a confirmation string.</span>
+<span class="cm"># Never pass content: null or content: ""</span>
+<span class="label correct">✅ CORRECT</span></code></pre>
+
+<h4>Multiple Tools in One Turn — Implementation</h4>
+<pre><code><span class="cm"># Extract ALL tool_use blocks and execute each one</span>
+tool_results = []
+<span class="kw">for</span> block <span class="kw">in</span> response.content:
+    <span class="kw">if</span> block.type == <span class="str">"tool_use"</span>:
+        <span class="kw">try</span>:
+            result = execute_tool(block.name, block.input)
+            tool_results.append({
+                <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+                <span class="str">"tool_use_id"</span>: block.id,
+                <span class="str">"content"</span>: <span class="fn">str</span>(result)
+            })
+        <span class="kw">except</span> <span class="bi">Exception</span> <span class="kw">as</span> e:
+            tool_results.append({
+                <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+                <span class="str">"tool_use_id"</span>: block.id,
+                <span class="str">"content"</span>: <span class="str">f"Error: </span>{<span class="fn">str</span>(e)}<span class="str">"</span>,
+                <span class="str">"is_error"</span>: <span class="bi">True</span>
+            })
+
+<span class="cm"># Append both messages to history</span>
+messages.append({<span class="str">"role"</span>: <span class="str">"assistant"</span>, <span class="str">"content"</span>: response.content})
+messages.append({<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: tool_results})
+<span class="label python">PYTHON</span></code></pre>
+
+<!-- Callouts for 2.3 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p>Tool results are sent as a <code>"user"</code> message — <strong>not</strong> as an <code>"assistant"</code> message and not as a separate role. This is because tool results represent new information entering the conversation from outside the model. The API models them as user-provided input, even though they were generated by your tool execution code.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Sending tool results as separate user messages instead of one combined message. If Claude requested 3 tools, you must return <strong>one</strong> user message with 3 <code>tool_result</code> blocks — not 3 user messages with 1 block each. Multiple consecutive user messages violate the API's alternation requirement.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>If a question asks "what role do tool results use?", the answer is <code>"user"</code>. This is a high-frequency trick question because it feels wrong — your infrastructure code produces the results, not the human user. But from the API's perspective, any non-model input enters as a user message. Watch for answer options that say <code>"tool"</code> or <code>"system"</code> — both are wrong.</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p>The <code>is_error: true</code> pattern connects directly to Chapter 5 (Error Recovery). When Claude receives an error tool result, it uses its own judgment to decide next steps — retry, use a different tool, or report the failure. This is model-driven decision-making in action (Section 2.4).</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--  SECTION 2.4 — DECISION-MAKING MODELS             -->
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="s2-4"><span class="section-num">2.4</span> Model-Driven Decision-Making vs Pre-Configured Decision Trees</h2>
+<p>
+  A fundamental architectural choice in every agentic system is: <strong>who decides what to do next — the model or your code?</strong>
+  Both approaches have legitimate use cases, but the Claude ecosystem strongly favors <em>model-driven</em> decision-making
+  as the default. Understanding why — and when to deviate — is critical for both the exam and production systems.
+</p>
+
+<h3>Definitions</h3>
+<table>
+  <tbody><tr>
+    <th style="width:15%"></th>
+    <th style="width:42%">Model-Driven</th>
+    <th style="width:42%">Pre-Configured Decision Tree</th>
+  </tr>
+  <tr>
+    <td><strong>Who decides</strong></td>
+    <td>Claude determines which tools to call, in what order, and when to stop — based on the system prompt, available tools, and conversation context.</td>
+    <td>Your code hardcodes the sequence of actions. The model fills in parameters or generates text, but the control flow is predetermined.</td>
+  </tr>
+  <tr>
+    <td><strong>Loop control</strong></td>
+    <td><code>stop_reason</code> drives the loop. Your code merely executes what Claude asks for.</td>
+    <td>Your code decides when to call Claude, which tools to offer at each step, and when to terminate.</td>
+  </tr>
+  <tr>
+    <td><strong>Adaptability</strong></td>
+    <td>High — Claude can handle unexpected inputs, change plans mid-task, and recover from tool failures autonomously.</td>
+    <td>Low — the system only handles cases you explicitly coded for. Novel situations cause failures or incorrect behavior.</td>
+  </tr>
+  <tr>
+    <td><strong>Predictability</strong></td>
+    <td>Lower — the model may take unexpected paths or call tools in unexpected orders.</td>
+    <td>High — execution follows the exact sequence you designed.</td>
+  </tr>
+  <tr>
+    <td><strong>Security</strong></td>
+    <td>Requires guardrails: tool-level permissions, input validation, output filtering. The model could potentially misuse powerful tools.</td>
+    <td>Inherently more constrained: only the tools you explicitly offer at each step are accessible.</td>
+  </tr>
+  <tr>
+    <td><strong>Best for</strong></td>
+    <td>Open-ended tasks, research, complex reasoning, multi-step problem solving, user-facing agents.</td>
+    <td>Compliance workflows, safety-critical pipelines, batch processing, predictable data transformations.</td>
+  </tr>
+</tbody></table>
+
+<h3>Side-by-Side Code Comparison</h3>
+
+<h4>Model-Driven Approach</h4>
+<pre><code><span class="cm"># ✅ Model-driven: Claude decides everything</span>
+<span class="cm"># Give Claude ALL tools and let it plan the workflow</span>
+
+tools = [search_tool, calculator_tool, email_tool, calendar_tool]
+messages = [{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: <span class="str">"Research Q3 sales data, calculate growth, and email the summary to the team."</span>}]
+
+<span class="kw">while</span> <span class="bi">True</span>:
+    response = client.messages.create(
+        model=<span class="str">"claude-sonnet-4-20250514"</span>,
+        max_tokens=<span class="num">4096</span>,
+        system=<span class="str">"You are a business analyst assistant."</span>,
+        tools=tools,          <span class="cm"># All tools available every turn</span>
+        messages=messages
+    )
+
+    <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+        <span class="kw">break</span>                <span class="cm"># Claude decides when it's done</span>
+    <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+        results = execute_all_tools(response)
+        messages.append({<span class="str">"role"</span>: <span class="str">"assistant"</span>, <span class="str">"content"</span>: response.content})
+        messages.append({<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: results})
+    <span class="kw">else</span>:
+        <span class="kw">raise</span> <span class="bi">ValueError</span>(<span class="str">f"Unexpected: </span>{response.stop_reason}<span class="str">"</span>)
+<span class="label correct">✅ MODEL-DRIVEN</span></code></pre>
+
+<h4>Pre-Configured Decision Tree</h4>
+<pre><code><span class="cm"># ⚙️ Pre-configured: Your code controls the workflow</span>
+<span class="cm"># Each step only gives Claude the tools it needs for that step</span>
+
+<span class="cm"># Step 1: Search (force the model to search first)</span>
+step1 = client.messages.create(
+    model=<span class="str">"claude-sonnet-4-20250514"</span>,
+    max_tokens=<span class="num">4096</span>,
+    tools=[search_tool],     <span class="cm"># Only search available</span>
+    messages=[{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: <span class="str">"Find Q3 sales data."</span>}]
+)
+search_data = extract_result(step1)
+
+<span class="cm"># Step 2: Calculate (force the model to compute)</span>
+step2 = client.messages.create(
+    model=<span class="str">"claude-sonnet-4-20250514"</span>,
+    max_tokens=<span class="num">4096</span>,
+    tools=[calculator_tool], <span class="cm"># Only calculator available</span>
+    messages=[{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: <span class="str">f"Calculate growth from: </span>{search_data}<span class="str">"</span>}]
+)
+calculation = extract_result(step2)
+
+<span class="cm"># Step 3: Email (force the model to send)</span>
+step3 = client.messages.create(
+    model=<span class="str">"claude-sonnet-4-20250514"</span>,
+    max_tokens=<span class="num">4096</span>,
+    tools=[email_tool],      <span class="cm"># Only email available</span>
+    messages=[{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: <span class="str">f"Email this summary: </span>{calculation}<span class="str">"</span>}]
+)
+<span class="label python">⚙️ PRE-CONFIGURED</span></code></pre>
+
+<h3>Decision Criteria: When to Use Each</h3>
+<table>
+  <tbody><tr>
+    <th>Criterion</th>
+    <th>Use Model-Driven</th>
+    <th>Use Pre-Configured</th>
+  </tr>
+  <tr>
+    <td>Task complexity</td>
+    <td>Open-ended, ambiguous, multi-step reasoning</td>
+    <td>Well-defined, repeatable, deterministic</td>
+  </tr>
+  <tr>
+    <td>Tool risk</td>
+    <td>Low-risk tools (read-only, reversible)</td>
+    <td>High-risk tools (payments, deletions, external systems)</td>
+  </tr>
+  <tr>
+    <td>User trust</td>
+    <td>Interactive agent with human in the loop</td>
+    <td>Batch automation with no human oversight</td>
+  </tr>
+  <tr>
+    <td>Error tolerance</td>
+    <td>Retry/recovery is acceptable</td>
+    <td>Errors are costly (compliance, financial)</td>
+  </tr>
+  <tr>
+    <td>Exam default</td>
+    <td colspan="2" style="text-align:center; color:var(--primary); font-weight:600;">Model-driven is the expected default answer unless the question specifies constraints that require pre-configuration.</td>
+  </tr>
+</tbody></table>
+
+<!-- Callouts for 2.4 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p>The model-driven approach is not "letting the AI run wild." It's <strong>delegating the decision graph to the model while your code enforces the execution boundaries</strong>. You still validate inputs, cap iterations, authenticate tools, and handle errors. The model just decides <em>which</em> tools to call and <em>in what order</em>.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Building a pre-configured pipeline and then wondering why the agent can't handle edge cases. If you hardcode "Step 1: Search, Step 2: Calculate, Step 3: Email," what happens when the search returns nothing? With model-driven design, Claude would naturally adapt; with a decision tree, you need explicit error branches for every possible failure.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>When the exam asks "what is the recommended approach for agentic task execution," the answer is <strong>model-driven</strong>. The pre-configured approach is only correct when the question explicitly mentions constraints like "safety-critical," "compliance," or "must follow exact sequence." If in doubt, model-driven is the default.</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p>This section directly informs Chapter 4 (Orchestration Patterns) where you learn to combine both approaches — using model-driven loops within pre-configured stages. It also connects to Chapter 6 (Security &amp; Guardrails) where you learn to constrain model-driven agents safely.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SECTION 2.5 — LOOP CONTROL FLOW           -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="s2-5"><span class="section-num">2.5</span> Implementing Loop Control Flow</h2>
+<p>
+  A production-grade agentic loop needs more than just a <code>while True</code> + <code>stop_reason</code> check.
+  You need entry guards, continuation logic, safe exit conditions, iteration limits, timeouts, and graceful
+  error recovery. This section shows the complete, annotated implementation.
+</p>
+
+<h3>Complete Annotated Loop</h3>
+<pre><code><span class="kw">import</span> anthropic
+<span class="kw">import</span> time
+<span class="kw">import</span> logging
+
+logger = logging.getLogger(__name__)
+
+<span class="kw">class</span> <span class="fn">AgenticLoop</span>:
+    <span class="str">"""Production-grade agentic loop with full control flow."""</span>
+
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, client, model, tools, system_prompt,
+                 max_iterations=<span class="num">10</span>, timeout_seconds=<span class="num">300</span>):
+        self.client = client
+        self.model = model
+        self.tools = tools
+        self.system_prompt = system_prompt
+        self.max_iterations = max_iterations   <span class="cm"># Safety cap — not an exit signal</span>
+        self.timeout = timeout_seconds
+        self.tool_registry = self._build_registry(tools)
+
+    <span class="kw">def</span> <span class="fn">run</span>(self, user_message: <span class="bi">str</span>) -&gt; <span class="bi">str</span>:
+        <span class="str">"""Execute the full agentic loop and return the final response."""</span>
+        messages = [{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: user_message}]
+        iteration = <span class="num">0</span>
+        start_time = time.time()
+
+        <span class="kw">while</span> <span class="bi">True</span>:
+            <span class="cm"># ── GUARD: Check iteration limit ──</span>
+            iteration += <span class="num">1</span>
+            <span class="kw">if</span> iteration &gt; self.max_iterations:
+                logger.warning(<span class="str">f"Max iterations (</span>{self.max_iterations}<span class="str">) reached"</span>)
+                <span class="kw">raise</span> <span class="bi">RuntimeError</span>(
+                    <span class="str">f"Agent exceeded </span>{self.max_iterations}<span class="str"> iterations. "</span>
+                    <span class="str">"Possible infinite loop — task may be too complex."</span>
+                )
+
+            <span class="cm"># ── GUARD: Check timeout ──</span>
+            elapsed = time.time() - start_time
+            <span class="kw">if</span> elapsed &gt; self.timeout:
+                logger.warning(<span class="str">f"Timeout after </span>{elapsed:.1f}<span class="str">s"</span>)
+                <span class="kw">raise</span> <span class="bi">TimeoutError</span>(
+                    <span class="str">f"Agent timed out after </span>{self.timeout}<span class="str">s"</span>
+                )
+
+            <span class="cm"># ── PHASE 1: REQUEST ──</span>
+            <span class="kw">try</span>:
+                response = self.client.messages.create(
+                    model=self.model,
+                    max_tokens=<span class="num">4096</span>,
+                    system=self.system_prompt,
+                    tools=self.tools,
+                    messages=messages
+                )
+            <span class="kw">except</span> anthropic.APIError <span class="kw">as</span> e:
+                logger.error(<span class="str">f"API error on iteration </span>{iteration}<span class="str">: </span>{e}<span class="str">"</span>)
+                <span class="kw">raise</span>
+
+            <span class="cm"># ── PHASE 2: INSPECT ──</span>
+            <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+                <span class="cm"># ✅ Normal exit: model is finished</span>
+                <span class="kw">return</span> self._extract_text(response)
+
+            <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+                <span class="cm"># ── PHASE 3: EXECUTE ──</span>
+                tool_results = self._execute_tools(response)
+
+                <span class="cm"># ── PHASE 4: RETURN ──</span>
+                messages.append({
+                    <span class="str">"role"</span>: <span class="str">"assistant"</span>,
+                    <span class="str">"content"</span>: response.content
+                })
+                messages.append({
+                    <span class="str">"role"</span>: <span class="str">"user"</span>,
+                    <span class="str">"content"</span>: tool_results
+                })
+                <span class="cm"># Loop continues → back to PHASE 1</span>
+
+            <span class="kw">elif</span> response.stop_reason == <span class="str">"max_tokens"</span>:
+                logger.warning(<span class="str">"Response truncated at max_tokens"</span>)
+                <span class="kw">raise</span> <span class="bi">RuntimeError</span>(<span class="str">"Response exceeded max_tokens limit"</span>)
+
+            <span class="kw">else</span>:
+                <span class="kw">raise</span> <span class="bi">ValueError</span>(
+                    <span class="str">f"Unexpected stop_reason: </span>{response.stop_reason}<span class="str">"</span>
+                )
+
+    <span class="kw">def</span> <span class="fn">_execute_tools</span>(self, response):
+        <span class="str">"""Execute all tool_use blocks and return tool_result list."""</span>
+        results = []
+        <span class="kw">for</span> block <span class="kw">in</span> response.content:
+            <span class="kw">if</span> block.type == <span class="str">"tool_use"</span>:
+                <span class="kw">try</span>:
+                    fn = self.tool_registry[block.name]
+                    output = fn(**block.input)
+                    results.append({
+                        <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+                        <span class="str">"tool_use_id"</span>: block.id,
+                        <span class="str">"content"</span>: <span class="fn">str</span>(output)
+                    })
+                <span class="kw">except</span> <span class="bi">Exception</span> <span class="kw">as</span> e:
+                    results.append({
+                        <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+                        <span class="str">"tool_use_id"</span>: block.id,
+                        <span class="str">"content"</span>: <span class="str">f"Error: </span>{e}<span class="str">"</span>,
+                        <span class="str">"is_error"</span>: <span class="bi">True</span>
+                    })
+        <span class="kw">return</span> results
+
+    <span class="kw">def</span> <span class="fn">_extract_text</span>(self, response):
+        <span class="str">"""Extract text content from the final response."""</span>
+        <span class="kw">return</span> <span class="str">""</span>.join(
+            block.text <span class="kw">for</span> block <span class="kw">in</span> response.content
+            <span class="kw">if</span> <span class="fn">hasattr</span>(block, <span class="str">"text"</span>)
+        )
+
+    <span class="kw">def</span> <span class="fn">_build_registry</span>(self, tools):
+        <span class="str">"""Map tool names to callable functions."""</span>
+        <span class="cm"># Implementation depends on your tool setup</span>
+        <span class="kw">return</span> {}
+<span class="label python">PYTHON — PRODUCTION LOOP</span></code></pre>
+
+<h3>Control Flow Summary</h3>
+<table>
+  <tbody><tr>
+    <th>Mechanism</th>
+    <th>Purpose</th>
+    <th>Implementation</th>
+  </tr>
+  <tr>
+    <td><strong>Entry condition</strong></td>
+    <td>Ensure the loop starts with valid state</td>
+    <td>Non-empty messages list, valid tools, authenticated client</td>
+  </tr>
+  <tr>
+    <td><strong>Continuation logic</strong></td>
+    <td>Decide whether to loop again</td>
+    <td><code>stop_reason == "tool_use"</code> → continue</td>
+  </tr>
+  <tr>
+    <td><strong>Normal exit</strong></td>
+    <td>Model signals completion</td>
+    <td><code>stop_reason == "end_turn"</code> → break/return</td>
+  </tr>
+  <tr>
+    <td><strong>Safety cap</strong></td>
+    <td>Prevent runaway loops</td>
+    <td>Iteration counter &gt; <code>max_iterations</code> → raise error</td>
+  </tr>
+  <tr>
+    <td><strong>Timeout</strong></td>
+    <td>Prevent indefinite execution</td>
+    <td>Wall-clock time &gt; <code>timeout</code> → raise error</td>
+  </tr>
+  <tr>
+    <td><strong>Error handling</strong></td>
+    <td>Recover from API/tool failures</td>
+    <td>Try/except with logging; tool errors returned as <code>is_error</code> results</td>
+  </tr>
+</tbody></table>
+
+<!-- Callouts for 2.5 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p>The iteration cap is a <strong>safety net</strong>, not a control mechanism. Your loop should <em>almost never</em> hit the cap — if it does regularly, you have a design problem (bad tools, unclear system prompt, or overly complex tasks). The cap exists to catch infinite loops, not to define normal exit behavior.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Using <code>for i in range(5)</code> as the loop structure. This treats the iteration cap as the primary loop control instead of <code>stop_reason</code>. It also masks the distinction between "the model finished" and "we ran out of iterations" — critical information for debugging and user experience.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>If a question asks "how should an agentic loop terminate normally," the answer is always <code>stop_reason == "end_turn"</code>. Iteration limits, timeouts, and error handlers are <em>abnormal</em> termination paths. The exam distinguishes between the model's chosen exit (normal) and your code's forced exit (safety).</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p>The error handling pattern here (catching tool exceptions and returning them as <code>is_error</code> results) is the foundation for Chapter 5's error recovery strategies. The timeout mechanism connects to Chapter 7 (Performance &amp; Scaling) where you'll learn about async execution and parallel tool calls.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SECTION 2.6 — COMMON ANTI-PATTERNS        -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="s2-6"><span class="section-num">2.6</span> Common Anti-Patterns</h2>
+<p>
+  These are the three most dangerous mistakes developers make when building agentic loops.
+  Each one seems reasonable at first glance but introduces subtle, hard-to-debug failures.
+  <strong>The exam tests these directly</strong> — you must be able to identify each anti-pattern and explain why it's wrong.
+</p>
+
+<!-- Anti-Pattern 1: Natural Language Signals -->
+<h3>Anti-Pattern #1: Natural Language Signals</h3>
+<table>
+  <tbody><tr><td style="width:15%;font-weight:600;color:var(--error);">What It Is</td><td>Using the text content of Claude's response (e.g., "I'm done," "Here's your answer," "No more tools needed") as a signal to exit the loop.</td></tr>
+  <tr><td style="font-weight:600;color:var(--error);">Why It's Wrong</td><td>Claude's text output is <em>natural language</em> — it varies with phrasing, context, and model version. The model might say "I'm done" while also requesting a tool call, or it might rephrase its completion signal in infinite ways. Text is unreliable; <code>stop_reason</code> is definitive.</td></tr>
+  <tr><td style="font-weight:600;color:var(--success);">Correct Approach</td><td>Always use <code>response.stop_reason == "end_turn"</code> for loop termination. Never inspect <code>response.content</code> text for control flow decisions.</td></tr>
+</tbody></table>
+
+<pre><code><span class="cm"># ❌ ANTI-PATTERN: Checking text content for exit signals</span>
+<span class="kw">while</span> <span class="bi">True</span>:
+    response = client.messages.create(**params)
+
+    <span class="cm"># WRONG: Model phrasing is infinitely variable</span>
+    <span class="kw">if</span> <span class="str">"I'm done"</span> <span class="kw">in</span> response.content[<span class="num">0</span>].text:
+        <span class="kw">break</span>
+    <span class="kw">if</span> <span class="str">"final answer"</span> <span class="kw">in</span> response.content[<span class="num">0</span>].text.lower():
+        <span class="kw">break</span>
+    <span class="cm"># What if Claude says "Here's what I found" instead?</span>
+    <span class="cm"># What if content[0] is a tool_use block, not text?</span>
+    <span class="cm"># This approach fails silently in both cases.</span>
+<span class="label incorrect">❌ WRONG</span></code></pre>
+
+<pre><code><span class="cm"># ✅ CORRECT: Structural stop_reason check</span>
+<span class="kw">while</span> <span class="bi">True</span>:
+    response = client.messages.create(**params)
+
+    <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+        <span class="kw">break</span>  <span class="cm"># Definitive, machine-readable exit signal</span>
+    <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+        results = execute_tools(response)
+        append_to_history(messages, response, results)
+    <span class="kw">else</span>:
+        <span class="kw">raise</span> <span class="bi">ValueError</span>(<span class="str">f"Unexpected: </span>{response.stop_reason}<span class="str">"</span>)
+<span class="label correct">✅ CORRECT</span></code></pre>
+
+<!-- Anti-Pattern 2: Arbitrary Iteration Caps -->
+<h3>Anti-Pattern #2: Arbitrary Iteration Caps as Exit Conditions</h3>
+<table>
+  <tbody><tr><td style="width:15%;font-weight:600;color:var(--error);">What It Is</td><td>Using a fixed iteration count (e.g., <code>for i in range(3)</code>) as the <em>primary</em> mechanism for loop termination, rather than as a safety backstop.</td></tr>
+  <tr><td style="font-weight:600;color:var(--error);">Why It's Wrong</td><td>It decouples termination from the model's actual state. A 3-iteration cap means the agent stops mid-task if it needs 4 tool calls, or wastes iterations if it finishes in 1. The model's <code>stop_reason == "end_turn"</code> is the semantically correct exit signal. A cap should only be a safety fallback.</td></tr>
+  <tr><td style="font-weight:600;color:var(--success);">Correct Approach</td><td>Use <code>while True</code> with <code>stop_reason</code> as the exit condition. Add an iteration counter as a <em>safety cap</em> that raises an error when exceeded — this is an abnormal termination, not a normal one.</td></tr>
+</tbody></table>
+
+<pre><code><span class="cm"># ❌ ANTI-PATTERN: Fixed iteration count as the loop structure</span>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">3</span>):   <span class="cm"># WRONG: Why 3? What if the model needs 4 steps?</span>
+    response = client.messages.create(**params)
+    <span class="kw">if</span> response.stop_reason == <span class="str">"tool_use"</span>:
+        results = execute_tools(response)
+        append_to_history(messages, response, results)
+    <span class="kw">else</span>:
+        <span class="kw">break</span>
+<span class="cm"># After the loop: no distinction between "model finished"</span>
+<span class="cm"># and "we ran out of iterations." Both silently exit.</span>
+<span class="label incorrect">❌ WRONG</span></code></pre>
+
+<pre><code><span class="cm"># ✅ CORRECT: stop_reason drives exit; iteration cap is a safety net</span>
+MAX_ITERATIONS = <span class="num">25</span>  <span class="cm"># Generous cap — should rarely be hit</span>
+
+<span class="kw">for</span> iteration <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, MAX_ITERATIONS + <span class="num">1</span>):
+    response = client.messages.create(**params)
+
+    <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+        <span class="kw">break</span>  <span class="cm"># Normal exit: model decided it's done</span>
+    <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+        results = execute_tools(response)
+        append_to_history(messages, response, results)
+    <span class="kw">else</span>:
+        <span class="kw">raise</span> <span class="bi">ValueError</span>(<span class="str">f"Unexpected: </span>{response.stop_reason}<span class="str">"</span>)
+<span class="kw">else</span>:
+    <span class="cm"># for-else: this runs only if the loop exhausted all iterations</span>
+    <span class="kw">raise</span> <span class="bi">RuntimeError</span>(<span class="str">f"Agent hit safety cap of </span>{MAX_ITERATIONS}<span class="str"> iterations"</span>)
+<span class="label correct">✅ CORRECT</span></code></pre>
+
+<!-- Anti-Pattern 3: Text-Content Checks -->
+<h3>Anti-Pattern #3: Text-Content Checks for Tool Detection</h3>
+<table>
+  <tbody><tr><td style="width:15%;font-weight:600;color:var(--error);">What It Is</td><td>Inspecting the content of the response to determine if tools were called — e.g., checking if <code>response.content[-1].type == "tool_use"</code> or searching the content array manually instead of using <code>stop_reason</code>.</td></tr>
+  <tr><td style="font-weight:600;color:var(--error);">Why It's Wrong</td><td>A response's <code>content</code> array can contain <em>both</em> text blocks and tool_use blocks. The last element might be text even when tools were requested. The <code>content</code> structure is for <em>payload extraction</em>, not control flow. Only <code>stop_reason</code> is designed to signal the model's intent.</td></tr>
+  <tr><td style="font-weight:600;color:var(--success);">Correct Approach</td><td>Use <code>response.stop_reason</code> for control flow. Only iterate over <code>response.content</code> blocks <em>after</em> confirming <code>stop_reason == "tool_use"</code>, and only to extract the tool call details.</td></tr>
+</tbody></table>
+
+<pre><code><span class="cm"># ❌ ANTI-PATTERN: Inspecting content structure for control flow</span>
+<span class="kw">while</span> <span class="bi">True</span>:
+    response = client.messages.create(**params)
+
+    <span class="cm"># WRONG: Content structure doesn't reliably indicate intent</span>
+    has_tool = <span class="fn">any</span>(b.type == <span class="str">"tool_use"</span> <span class="kw">for</span> b <span class="kw">in</span> response.content)
+    <span class="kw">if</span> has_tool:
+        results = execute_tools(response)
+        append_to_history(messages, response, results)
+    <span class="kw">else</span>:
+        <span class="kw">break</span>  <span class="cm"># Assumes no tool_use block = done. Fragile!</span>
+<span class="label incorrect">❌ WRONG</span></code></pre>
+
+<pre><code><span class="cm"># ✅ CORRECT: stop_reason for control; content for data extraction</span>
+<span class="kw">while</span> <span class="bi">True</span>:
+    response = client.messages.create(**params)
+
+    <span class="cm"># Control flow: stop_reason is the definitive signal</span>
+    <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+        <span class="kw">break</span>
+    <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+        <span class="cm"># Data extraction: now iterate content safely</span>
+        tool_calls = [b <span class="kw">for</span> b <span class="kw">in</span> response.content <span class="kw">if</span> b.type == <span class="str">"tool_use"</span>]
+        results = [execute_single_tool(tc) <span class="kw">for</span> tc <span class="kw">in</span> tool_calls]
+        append_to_history(messages, response, results)
+    <span class="kw">else</span>:
+        <span class="kw">raise</span> <span class="bi">ValueError</span>(<span class="str">f"Unexpected: </span>{response.stop_reason}<span class="str">"</span>)
+<span class="label correct">✅ CORRECT</span></code></pre>
+
+<h3>Anti-Pattern Summary Table</h3>
+<table>
+  <tbody><tr>
+    <th>Anti-Pattern</th>
+    <th>Detection Signal (in exam questions)</th>
+    <th>Correct Alternative</th>
+  </tr>
+  <tr>
+    <td>Natural Language Signals</td>
+    <td>Code checks <code>.text</code> for "done," "finished," "here's your answer"</td>
+    <td><code>stop_reason == "end_turn"</code></td>
+  </tr>
+  <tr>
+    <td>Arbitrary Iteration Caps</td>
+    <td><code>for i in range(N)</code> as the loop structure with no <code>stop_reason</code> check</td>
+    <td><code>while True</code> with <code>stop_reason</code> exit + iteration cap as safety net</td>
+  </tr>
+  <tr>
+    <td>Text-Content Checks</td>
+    <td><code>any(b.type == "tool_use" for b in content)</code> used for loop control</td>
+    <td><code>stop_reason == "tool_use"</code> for control; content iteration for data only</td>
+  </tr>
+</tbody></table>
+
+<!-- Callouts for 2.6 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p>All three anti-patterns share a common root: <strong>using the wrong signal for control flow</strong>. The response content (text and content blocks) is <em>data</em>. The <code>stop_reason</code> field is the <em>control signal</em>. Mixing data-plane and control-plane information is a classic systems design error — and it's exactly what the exam tests for.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Thinking "well, checking for tool_use blocks in the content array works in practice." It might — until it doesn't. The Anthropic API contract is that <code>stop_reason</code> is the authoritative signal. If a future API version changes how content blocks are ordered (or adds new block types), your text-content check breaks. Building on <code>stop_reason</code> is forward-compatible; building on content structure is not.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>The anti-patterns section is <strong>the highest-yield exam topic in this chapter</strong>. Expect at least 2-3 questions that show "broken" code and ask you to identify what's wrong. Train yourself to scan for three things: (1) string matching on response text, (2) <code>for i in range(N)</code> as the main loop, (3) <code>content</code> inspection for control flow. If any of these appear in an answer choice, it's almost certainly wrong.</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p>These anti-patterns are the "negative examples" that reinforce every other section in this chapter. Section 2.1's lifecycle depends on correct control flow. Section 2.2's <code>stop_reason</code> is the cure for all three. Section 2.5's production loop is the "correct implementation" that avoids all three.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SECTION 2.7 — HANDS-ON BUILD               -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="s2-7"><span class="section-num">2.7</span> Hands-On: Building Your First Agentic Loop</h2>
+<p>
+  Let's build a complete, runnable agentic loop from scratch. This example implements a simple
+  agent with two tools — a calculator and a unit converter — demonstrating every concept from
+  sections 2.1 through 2.6 in working code.
+</p>
+
+<h3>Step 1: Define the Tools</h3>
+<pre><code><span class="kw">import</span> anthropic
+<span class="kw">import</span> json
+
+<span class="cm"># ── Tool implementations ──</span>
+<span class="kw">def</span> <span class="fn">calculator</span>(expression: <span class="bi">str</span>) -&gt; <span class="bi">str</span>:
+    <span class="str">"""Evaluate a mathematical expression safely."""</span>
+    <span class="kw">try</span>:
+        <span class="cm"># Restrict to safe math operations</span>
+        allowed = set(<span class="str">"0123456789+-*/.() "</span>)
+        <span class="kw">if</span> <span class="kw">not</span> <span class="fn">all</span>(c <span class="kw">in</span> allowed <span class="kw">for</span> c <span class="kw">in</span> expression):
+            <span class="kw">return</span> <span class="str">"Error: Expression contains invalid characters."</span>
+        result = <span class="fn">eval</span>(expression)  <span class="cm"># Safe after character validation</span>
+        <span class="kw">return</span> <span class="fn">str</span>(<span class="fn">round</span>(result, <span class="num">6</span>))
+    <span class="kw">except</span> <span class="bi">Exception</span> <span class="kw">as</span> e:
+        <span class="kw">return</span> <span class="str">f"Calculation error: </span>{e}<span class="str">"</span>
+
+<span class="kw">def</span> <span class="fn">unit_converter</span>(value: <span class="bi">float</span>, from_unit: <span class="bi">str</span>, to_unit: <span class="bi">str</span>) -&gt; <span class="bi">str</span>:
+    <span class="str">"""Convert between common units."""</span>
+    conversions = {
+        (<span class="str">"km"</span>, <span class="str">"miles"</span>): <span class="num">0.621371</span>,
+        (<span class="str">"miles"</span>, <span class="str">"km"</span>): <span class="num">1.60934</span>,
+        (<span class="str">"kg"</span>, <span class="str">"lbs"</span>): <span class="num">2.20462</span>,
+        (<span class="str">"lbs"</span>, <span class="str">"kg"</span>): <span class="num">0.453592</span>,
+        (<span class="str">"celsius"</span>, <span class="str">"fahrenheit"</span>): <span class="kw">lambda</span> v: v * <span class="num">9</span>/<span class="num">5</span> + <span class="num">32</span>,
+        (<span class="str">"fahrenheit"</span>, <span class="str">"celsius"</span>): <span class="kw">lambda</span> v: (v - <span class="num">32</span>) * <span class="num">5</span>/<span class="num">9</span>,
+    }
+    key = (from_unit.lower(), to_unit.lower())
+    <span class="kw">if</span> key <span class="kw">not in</span> conversions:
+        <span class="kw">return</span> <span class="str">f"Unsupported conversion: </span>{from_unit}<span class="str"> → </span>{to_unit}<span class="str">"</span>
+    factor = conversions[key]
+    <span class="kw">if</span> <span class="fn">callable</span>(factor):
+        result = factor(value)
+    <span class="kw">else</span>:
+        result = value * factor
+    <span class="kw">return</span> <span class="str">f"</span>{value} {from_unit}<span class="str"> = </span>{<span class="fn">round</span>(result, <span class="num">4</span>)} {to_unit}<span class="str">"</span>
+
+<span class="cm"># ── Tool registry: maps tool names to Python functions ──</span>
+TOOL_FUNCTIONS = {
+    <span class="str">"calculator"</span>: calculator,
+    <span class="str">"unit_converter"</span>: unit_converter,
+}
+<span class="label python">PYTHON — TOOL DEFINITIONS</span></code></pre>
+
+<h3>Step 2: Define Tool Schemas for the API</h3>
+<pre><code><span class="cm"># ── Tool schemas (what Claude sees) ──</span>
+TOOLS = [
+    {
+        <span class="str">"name"</span>: <span class="str">"calculator"</span>,
+        <span class="str">"description"</span>: <span class="str">"Evaluate a mathematical expression. Supports +, -, *, /, parentheses."</span>,
+        <span class="str">"input_schema"</span>: {
+            <span class="str">"type"</span>: <span class="str">"object"</span>,
+            <span class="str">"properties"</span>: {
+                <span class="str">"expression"</span>: {
+                    <span class="str">"type"</span>: <span class="str">"string"</span>,
+                    <span class="str">"description"</span>: <span class="str">"The math expression to evaluate, e.g. '(15 * 3) + 7'"</span>
+                }
+            },
+            <span class="str">"required"</span>: [<span class="str">"expression"</span>]
+        }
+    },
+    {
+        <span class="str">"name"</span>: <span class="str">"unit_converter"</span>,
+        <span class="str">"description"</span>: <span class="str">"Convert a value from one unit to another. Supports km/miles, kg/lbs, celsius/fahrenheit."</span>,
+        <span class="str">"input_schema"</span>: {
+            <span class="str">"type"</span>: <span class="str">"object"</span>,
+            <span class="str">"properties"</span>: {
+                <span class="str">"value"</span>: {<span class="str">"type"</span>: <span class="str">"number"</span>, <span class="str">"description"</span>: <span class="str">"The numeric value to convert"</span>},
+                <span class="str">"from_unit"</span>: {<span class="str">"type"</span>: <span class="str">"string"</span>, <span class="str">"description"</span>: <span class="str">"Source unit"</span>},
+                <span class="str">"to_unit"</span>: {<span class="str">"type"</span>: <span class="str">"string"</span>, <span class="str">"description"</span>: <span class="str">"Target unit"</span>}
+            },
+            <span class="str">"required"</span>: [<span class="str">"value"</span>, <span class="str">"from_unit"</span>, <span class="str">"to_unit"</span>]
+        }
+    }
+]
+<span class="label python">PYTHON — TOOL SCHEMAS</span></code></pre>
+
+<h3>Step 3: The Complete Agentic Loop</h3>
+<pre><code><span class="kw">def</span> <span class="fn">run_agent</span>(user_message: <span class="bi">str</span>, max_iterations: <span class="bi">int</span> = <span class="num">10</span>) -&gt; <span class="bi">str</span>:
+    <span class="str">"""
+    Run a complete agentic loop with calculator and unit converter tools.
+
+    Args:
+        user_message: The user's natural language request.
+        max_iterations: Safety cap to prevent infinite loops.
+
+    Returns:
+        The agent's final text response.
+    """</span>
+    client = anthropic.Anthropic()
+    messages = [{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: user_message}]
+    iteration = <span class="num">0</span>
+
+    <span class="fn">print</span>(<span class="str">f"🚀 Agent started | Task: </span>{user_message}<span class="str">"</span>)
+    <span class="fn">print</span>(<span class="str">"─" * 60</span>)
+
+    <span class="kw">while</span> <span class="bi">True</span>:
+        iteration += <span class="num">1</span>
+
+        <span class="cm"># ── Safety cap check ──</span>
+        <span class="kw">if</span> iteration &gt; max_iterations:
+            <span class="kw">raise</span> <span class="bi">RuntimeError</span>(
+                <span class="str">f"Safety cap reached: </span>{max_iterations}<span class="str"> iterations"</span>
+            )
+
+        <span class="fn">print</span>(<span class="str">f"\n📡 Iteration </span>{iteration}<span class="str"> — Calling Claude API..."</span>)
+
+        <span class="cm"># ── PHASE 1: REQUEST ──</span>
+        response = client.messages.create(
+            model=<span class="str">"claude-sonnet-4-20250514"</span>,
+            max_tokens=<span class="num">1024</span>,
+            system=<span class="str">"You are a helpful assistant with access to a calculator and unit converter. Use tools when needed to answer questions accurately."</span>,
+            tools=TOOLS,
+            messages=messages,
+        )
+
+        <span class="fn">print</span>(<span class="str">f"   stop_reason: </span>{response.stop_reason}<span class="str">"</span>)
+
+        <span class="cm"># ── PHASE 2: INSPECT ──</span>
+        <span class="kw">if</span> response.stop_reason == <span class="str">"end_turn"</span>:
+            <span class="cm"># ✅ Normal exit — extract final text</span>
+            final_text = <span class="str">""</span>.join(
+                block.text <span class="kw">for</span> block <span class="kw">in</span> response.content
+                <span class="kw">if</span> <span class="fn">hasattr</span>(block, <span class="str">"text"</span>)
+            )
+            <span class="fn">print</span>(<span class="str">f"\n✅ Agent finished in </span>{iteration}<span class="str"> iteration(s)"</span>)
+            <span class="fn">print</span>(<span class="str">f"📝 Response: </span>{final_text}<span class="str">"</span>)
+            <span class="kw">return</span> final_text
+
+        <span class="kw">elif</span> response.stop_reason == <span class="str">"tool_use"</span>:
+            <span class="cm"># ── PHASE 3: EXECUTE ──</span>
+            tool_results = []
+            <span class="kw">for</span> block <span class="kw">in</span> response.content:
+                <span class="kw">if</span> block.type == <span class="str">"tool_use"</span>:
+                    <span class="fn">print</span>(<span class="str">f"   🔧 Tool call: </span>{block.name}<span class="str">(</span>{json.dumps(block.input)}<span class="str">)"</span>)
+
+                    <span class="cm"># Look up and execute the tool function</span>
+                    tool_fn = TOOL_FUNCTIONS.get(block.name)
+                    <span class="kw">if</span> tool_fn <span class="kw">is</span> <span class="bi">None</span>:
+                        result = <span class="str">f"Error: Unknown tool '</span>{block.name}<span class="str">'"</span>
+                        is_error = <span class="bi">True</span>
+                    <span class="kw">else</span>:
+                        <span class="kw">try</span>:
+                            result = tool_fn(**block.input)
+                            is_error = <span class="bi">False</span>
+                        <span class="kw">except</span> <span class="bi">Exception</span> <span class="kw">as</span> e:
+                            result = <span class="str">f"Error: </span>{e}<span class="str">"</span>
+                            is_error = <span class="bi">True</span>
+
+                    <span class="fn">print</span>(<span class="str">f"   📤 Result: </span>{result}<span class="str">"</span>)
+
+                    tool_result = {
+                        <span class="str">"type"</span>: <span class="str">"tool_result"</span>,
+                        <span class="str">"tool_use_id"</span>: block.id,
+                        <span class="str">"content"</span>: <span class="fn">str</span>(result),
+                    }
+                    <span class="kw">if</span> is_error:
+                        tool_result[<span class="str">"is_error"</span>] = <span class="bi">True</span>
+                    tool_results.append(tool_result)
+
+            <span class="cm"># ── PHASE 4: RETURN ──</span>
+            messages.append({
+                <span class="str">"role"</span>: <span class="str">"assistant"</span>,
+                <span class="str">"content"</span>: response.content
+            })
+            messages.append({
+                <span class="str">"role"</span>: <span class="str">"user"</span>,
+                <span class="str">"content"</span>: tool_results
+            })
+            <span class="cm"># Loop continues...</span>
+
+        <span class="kw">elif</span> response.stop_reason == <span class="str">"max_tokens"</span>:
+            <span class="kw">raise</span> <span class="bi">RuntimeError</span>(<span class="str">"Response truncated — increase max_tokens"</span>)
+
+        <span class="kw">else</span>:
+            <span class="kw">raise</span> <span class="bi">ValueError</span>(
+                <span class="str">f"Unexpected stop_reason: </span>{response.stop_reason}<span class="str">"</span>
+            )
+<span class="label python">PYTHON — COMPLETE AGENT</span></code></pre>
+
+<h3>Step 4: Sample Run Trace</h3>
+<pre><code><span class="cm"># Running:</span>
+result = run_agent(<span class="str">"If I drive 150 km, how many miles is that? Then calculate 150 divided by the number of miles."</span>)
+<span class="label python">INVOKE</span></code></pre>
+
+<details>
+  <summary>📋 Expected Output Trace</summary>
+  <div class="details-body">
+<pre><code><span class="str">🚀 Agent started | Task: If I drive 150 km, how many miles is that?
+   Then calculate 150 divided by the number of miles.
+────────────────────────────────────────────────────────────
+
+📡 Iteration 1 — Calling Claude API...
+   stop_reason: tool_use
+   🔧 Tool call: unit_converter({"value": 150, "from_unit": "km", "to_unit": "miles"})
+   📤 Result: 150 km = 93.2057 miles
+
+📡 Iteration 2 — Calling Claude API...
+   stop_reason: tool_use
+   🔧 Tool call: calculator({"expression": "150 / 93.2057"})
+   📤 Result: 1.609344
+
+📡 Iteration 3 — Calling Claude API...
+   stop_reason: end_turn
+
+✅ Agent finished in 3 iteration(s)
+📝 Response: 150 km is approximately 93.21 miles. When you divide
+   150 by 93.2057 miles, you get approximately 1.6093, which is
+   the km-to-miles conversion factor!</span>
+</code></pre>
+  </div>
+</details>
+
+<h3>Trace Analysis</h3>
+<ul>
+  <li><strong>Iteration 1:</strong> Claude decided to convert km→miles first (model-driven decision). <code>stop_reason: "tool_use"</code> → execute tool → append results → loop.</li>
+  <li><strong>Iteration 2:</strong> Claude used the result from iteration 1 (93.2057) in a calculator call. This demonstrates multi-step reasoning — the model planned the sequence autonomously. <code>stop_reason: "tool_use"</code> → execute → append → loop.</li>
+  <li><strong>Iteration 3:</strong> Claude had all the data it needed and composed the final answer. <code>stop_reason: "end_turn"</code> → exit loop.</li>
+</ul>
+
+<!-- Callouts for 2.7 -->
+<div class="callout insight">
+  <span class="callout-icon">💡</span>
+  <div class="callout-content">
+    <strong>Key Insight</strong>
+    <p>Notice how the agent used the output of one tool as input to another — all without your code telling it to. This is model-driven orchestration in action. Your code only executes what's asked; Claude decides the sequence, chains the data, and determines when it has enough information to answer.</p>
+  </div>
+</div>
+
+<div class="callout mistake">
+  <span class="callout-icon">⚠️</span>
+  <div class="callout-content">
+    <strong>Common Mistake</strong>
+    <p>Forgetting to handle the <code>is_error</code> flag or unknown tool names. In the hands-on example, both are handled explicitly. In production, also validate the tool's <code>input</code> against the schema before calling the function — Claude occasionally sends malformed arguments.</p>
+  </div>
+</div>
+
+<div class="callout exam-tip">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Exam Tip</strong>
+    <p>If you're asked to write or trace an agentic loop in the exam, structure your answer around the four phases and label each clearly: REQUEST, INSPECT, EXECUTE, RETURN. Exam graders look for the canonical lifecycle structure. Also, always show the <code>else: raise ValueError</code> clause — it demonstrates awareness of forward compatibility.</p>
+  </div>
+</div>
+
+<div class="callout connection">
+  <span class="callout-icon">🔗</span>
+  <div class="callout-content">
+    <strong>Connection</strong>
+    <p>This hands-on example is the "hello world" of agentic systems. Chapter 3 extends it to multi-tool orchestration with parallel tool calls. Chapter 4 adds orchestration patterns (routing, handoffs). Chapter 5 adds robust error recovery. Every advanced pattern starts from this exact loop structure.</p>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  EXAM STRATEGY                              -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="exam-strategy"><span class="section-num">📋</span> Exam Strategy</h2>
+
+<h3>Question Pattern Recognition</h3>
+<table>
+  <tbody><tr>
+    <th>When You See This in a Question...</th>
+    <th>Think This</th>
+  </tr>
+  <tr>
+    <td>"What should your loop check after each API call?"</td>
+    <td><code>stop_reason</code> — always. Never text content, never content block types.</td>
+  </tr>
+  <tr>
+    <td>"Which role do tool results use?"</td>
+    <td><code>"user"</code> — counter-intuitive but mandatory.</td>
+  </tr>
+  <tr>
+    <td>"What's wrong with this code?" + <code>for i in range(N)</code></td>
+    <td>Arbitrary iteration cap as primary control. Look for missing <code>stop_reason</code> check.</td>
+  </tr>
+  <tr>
+    <td>"What's wrong with this code?" + string matching</td>
+    <td>Natural language signal anti-pattern. Answer involves replacing with <code>stop_reason</code>.</td>
+  </tr>
+  <tr>
+    <td>"How should the agent decide which tool to use?"</td>
+    <td>Model-driven — Claude decides. Not hardcoded in your code (unless safety-critical).</td>
+  </tr>
+  <tr>
+    <td>"How should the loop handle a tool failure?"</td>
+    <td>Return an error as <code>tool_result</code> with <code>is_error: true</code>. Let Claude decide next steps.</td>
+  </tr>
+  <tr>
+    <td>"What happens if the model requests multiple tools?"</td>
+    <td>Execute ALL tools. Return ALL results in ONE user message. IDs must match.</td>
+  </tr>
+  <tr>
+    <td>"What is the correct message order after tool execution?"</td>
+    <td>assistant message (with tool_use blocks) → user message (with tool_result blocks)</td>
+  </tr>
+</tbody></table>
+
+<h3>Elimination Strategies</h3>
+<div class="callout warning">
+  <span class="callout-icon">🎯</span>
+  <div class="callout-content">
+    <strong>Elimination Rules for Multiple Choice</strong>
+    <p>
+      <strong>Immediately eliminate any option that:</strong><br>
+      • Checks <code>.text</code> or <code>.content</code> for loop control decisions<br>
+      • Uses <code>role: "tool"</code> or <code>role: "system"</code> for tool results<br>
+      • Uses a hardcoded iteration count without a <code>stop_reason</code> check<br>
+      • Silently ignores <code>max_tokens</code> as a stop reason<br>
+      • Sends tool results as multiple separate user messages<br>
+      • Has the assistant role for tool result messages<br>
+      • Skips appending the assistant's tool_use message to history<br><br>
+      <strong>Favor the option that:</strong><br>
+      • Uses <code>stop_reason</code> as the primary control signal<br>
+      • Handles all possible stop_reason values (including an <code>else</code> clause)<br>
+      • Returns tool errors as <code>is_error: true</code> results instead of throwing<br>
+      • Preserves the full assistant response in conversation history
+    </p>
+  </div>
+</div>
+
+<h3>Keywords That Signal Correct vs Incorrect Answers</h3>
+<table>
+  <tbody><tr>
+    <th>🟢 Correct Answer Keywords</th>
+    <th>🔴 Incorrect Answer Keywords</th>
+  </tr>
+  <tr>
+    <td><code>stop_reason</code>, <code>"end_turn"</code>, <code>"tool_use"</code></td>
+    <td>"check the text," "parse the response," "look for keywords"</td>
+  </tr>
+  <tr>
+    <td><code>role: "user"</code> (for tool results)</td>
+    <td><code>role: "tool"</code>, <code>role: "assistant"</code>, <code>role: "system"</code></td>
+  </tr>
+  <tr>
+    <td>"model decides," "model-driven," "autonomous"</td>
+    <td>"hardcoded sequence," "pre-determined order" (unless safety-critical context)</td>
+  </tr>
+  <tr>
+    <td><code>is_error: true</code>, "return error as tool result"</td>
+    <td>"throw exception," "skip the tool," "retry silently"</td>
+  </tr>
+  <tr>
+    <td>"safety cap," "max iterations as fallback"</td>
+    <td>"set loop to run exactly N times," "iteration limit as exit"</td>
+  </tr>
+  <tr>
+    <td>"append both messages," "assistant then user"</td>
+    <td>"only append tool results," "skip the assistant message"</td>
+  </tr>
+</tbody></table>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  TOP 10 EXAM QUESTIONS                      -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="top-10"><span class="section-num">📝</span> Top 10 Likely Exam Questions</h2>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q1</span>
+    <span>What are the four phases of an agentic loop, and what is the responsibility of each?</span>
+  </div>
+  <div class="qa-answer">
+    <strong>1. Request</strong> — Send the conversation history and tool definitions to the Claude API via <code>messages.create()</code>.<br>
+    <strong>2. Inspect</strong> — Check <code>response.stop_reason</code> to determine what the model wants: <code>"end_turn"</code> (done), <code>"tool_use"</code> (needs tools), or other values (handle/error).<br>
+    <strong>3. Execute</strong> — If <code>"tool_use"</code>, extract all <code>tool_use</code> blocks from <code>response.content</code>, execute each tool function, and collect results.<br>
+    <strong>4. Return</strong> — Append the assistant message and a user message with <code>tool_result</code> blocks to the conversation history, then loop back to phase 1.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q2</span>
+    <span>What is the only reliable signal for determining whether to continue or exit an agentic loop?</span>
+  </div>
+  <div class="qa-answer">
+    The <code>response.stop_reason</code> field. Specifically: <code>"end_turn"</code> means exit, <code>"tool_use"</code> means continue. Never use text content, content block types, or iteration counts as the primary exit signal.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q3</span>
+    <span>What role should tool results be sent under, and why?</span>
+  </div>
+  <div class="qa-answer">
+    Tool results must use <code>"role": "user"</code>. This is because the API models any non-model input as coming from the user side. Even though your infrastructure code generates the results, from the API's perspective, they are new information entering the conversation — which is always a user message. There is no <code>"tool"</code> or <code>"system"</code> role for this purpose.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q4</span>
+    <span>What two messages must be appended to conversation history after executing tools?</span>
+  </div>
+  <div class="qa-answer">
+    <strong>First:</strong> An assistant message containing the full <code>response.content</code> (which includes the <code>tool_use</code> blocks Claude generated).<br>
+    <strong>Second:</strong> A user message containing an array of <code>tool_result</code> blocks, one per tool call, each with a matching <code>tool_use_id</code>.<br>
+    Both must be appended in this order. Skipping the assistant message or sending results as the assistant role will cause API errors or corrupt the model's context.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q5</span>
+    <span>How should a tool execution error be communicated back to Claude?</span>
+  </div>
+  <div class="qa-answer">
+    Return the error as a normal <code>tool_result</code> block with <code>"is_error": true</code> and a descriptive error string in the <code>"content"</code> field. Do <strong>not</strong> skip the result, throw an exception in the loop, or silently retry. By receiving the error, Claude can autonomously decide to retry, try a different approach, or inform the user — enabling model-driven error recovery.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q6</span>
+    <span>Why is checking <code>response.content[0].text</code> for "I'm done" an anti-pattern?</span>
+  </div>
+  <div class="qa-answer">
+    Three reasons: (1) The model's phrasing is non-deterministic — it might say "I'm done," "Here's your answer," or nothing at all. (2) <code>content[0]</code> may not have a <code>.text</code> attribute — it could be a <code>tool_use</code> block, causing an <code>AttributeError</code>. (3) The model might include "I'm done" in text while <em>also</em> requesting tool calls in the same response. <code>stop_reason</code> is the only authoritative signal for the model's intended control flow.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q7</span>
+    <span>What is the difference between using an iteration cap as a safety net vs. as a primary exit condition?</span>
+  </div>
+  <div class="qa-answer">
+    <strong>Safety net (correct):</strong> The loop exits normally via <code>stop_reason == "end_turn"</code>. The iteration cap exists only to prevent infinite loops — hitting it raises an error because it indicates abnormal behavior.<br>
+    <strong>Primary exit (anti-pattern):</strong> The loop is structured as <code>for i in range(N)</code>, where reaching N is the normal way the loop ends. This decouples termination from the model's actual state, making it impossible to distinguish "task complete" from "ran out of iterations."
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q8</span>
+    <span>When is a pre-configured decision tree preferable to model-driven decision-making?</span>
+  </div>
+  <div class="qa-answer">
+    Pre-configured trees are preferable when: (1) the task is safety-critical (financial transactions, compliance workflows); (2) the execution order must be deterministic and auditable; (3) you need to restrict which tools are available at each step for security; (4) the task is a well-defined pipeline with no ambiguity in the sequence. In all other cases — especially open-ended tasks, user-facing agents, and complex reasoning — model-driven is the recommended default.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q9</span>
+    <span>If Claude requests three tool calls in a single response, how should the results be returned?</span>
+  </div>
+  <div class="qa-answer">
+    All three results must be returned in a <strong>single user message</strong> containing an array of three <code>tool_result</code> blocks. Each block's <code>tool_use_id</code> must match the <code>id</code> of the corresponding <code>tool_use</code> block. Sending them as three separate user messages violates the API's message alternation requirement (user → assistant → user). The order of results within the single message doesn't matter as long as IDs match.
+  </div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-question">
+    <span class="q-num">Q10</span>
+    <span>What should your code do when it encounters an unexpected <code>stop_reason</code> value?</span>
+  </div>
+  <div class="qa-answer">
+    Raise an explicit error (e.g., <code>ValueError</code>) with the unexpected value. Do <strong>not</strong> silently continue the loop, ignore the response, or default to <code>"end_turn"</code> behavior. Unknown stop_reason values could indicate API changes, new features, or edge cases that your code isn't equipped to handle. Raising an error makes these cases visible immediately rather than causing silent data corruption or infinite loops.
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SELF-ASSESSMENT                            -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="self-assessment"><span class="section-num">✅</span> Self-Assessment Checklist</h2>
+<p>Can you explain each of these <strong>without looking at the notes</strong>? If not, revisit the linked section.</p>
+
+<ul class="checklist">
+  <li>Name the four phases of an agentic loop and the data that flows between each → <a href="#s2-1">§2.1</a></li>
+  <li>Explain why <code>stop_reason</code> is a structural signal, not a content signal → <a href="#s2-2">§2.2</a></li>
+  <li>List all four possible <code>stop_reason</code> values and what your code should do for each → <a href="#s2-2">§2.2</a></li>
+  <li>Draw the message structure for appending tool results (roles, content types, IDs) → <a href="#s2-3">§2.3</a></li>
+  <li>Explain why tool results use <code>role: "user"</code> instead of <code>role: "tool"</code> → <a href="#s2-3">§2.3</a></li>
+  <li>Handle a failed tool: write the <code>is_error: true</code> tool result from memory → <a href="#s2-3">§2.3</a></li>
+  <li>Compare model-driven vs pre-configured decision trees: when to use each → <a href="#s2-4">§2.4</a></li>
+  <li>Distinguish a safety iteration cap from an iteration-based exit condition → <a href="#s2-5">§2.5</a></li>
+  <li>Write a complete <code>while True</code> agentic loop with proper <code>stop_reason</code> handling → <a href="#s2-5">§2.5</a></li>
+  <li>Identify all three anti-patterns on sight and explain why each is wrong → <a href="#s2-6">§2.6</a></li>
+  <li>Trace an agentic loop through 3 iterations, labeling phases and data flow → <a href="#s2-7">§2.7</a></li>
+  <li>Handle multiple tool calls in one response: structure the result message correctly → <a href="#s2-3">§2.3</a></li>
+</ul>
+
+<hr>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  VISUAL CHAPTER SUMMARY                     -->
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="visual-summary"><span class="section-num">🗺️</span> Visual Chapter Summary</h2>
+<p>All seven sub-topics as an interconnected concept map, showing dependencies and data flow.</p>
+
+<div class="diagram-container">
+<svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;width:100%">
+  <!-- Legend -->
+  <rect x="10" y="10" width="12" height="12" rx="2" fill="#22c55e" opacity="0.3"></rect>
+  <text x="28" y="20" fill="#22c55e" font-size="10" font-family="var(--font-sans)">Beginner</text>
+  <rect x="100" y="10" width="12" height="12" rx="2" fill="#f59e0b" opacity="0.3"></rect>
+  <text x="118" y="20" fill="#f59e0b" font-size="10" font-family="var(--font-sans)">Intermediate</text>
+  <rect x="210" y="10" width="12" height="12" rx="2" fill="#ef4444" opacity="0.3"></rect>
+  <text x="228" y="20" fill="#ef4444" font-size="10" font-family="var(--font-sans)">Advanced</text>
+
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <!-- 2.1 → 2.2 -->
+  <line x1="200" y1="110" x2="200" y2="190" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6 3"></line>
+  <!-- 2.2 → 2.3 -->
+  <line x1="200" y1="260" x2="200" y2="340" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6 3"></line>
+  <!-- 2.1 → 2.4 -->
+  <line x1="310" y1="85" x2="480" y2="85" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 3"></line>
+  <!-- 2.2 → 2.5 -->
+  <line x1="310" y1="225" x2="480" y2="225" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 3"></line>
+  <!-- 2.5 → 2.6 -->
+  <line x1="600" y1="260" x2="600" y2="340" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 3"></line>
+  <!-- 2.3 → 2.7 -->
+  <line x1="310" y1="375" x2="480" y2="435" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4 3"></line>
+  <!-- 2.5 → 2.7 -->
+  <line x1="510" y1="260" x2="510" y2="410" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4 3"></line>
+  <!-- 2.6 → 2.7 -->
+  <line x1="600" y1="410" x2="600" y2="410" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3"></line>
+  <line x1="510" y1="440" x2="520" y2="380" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3"></line>
+
+  <!-- Node 2.1: Lifecycle (Beginner) -->
+  <rect x="80" y="55" width="240" height="60" rx="10" fill="#1a3a2a" stroke="#22c55e" stroke-width="2"></rect>
+  <text x="100" y="78" fill="#22c55e" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.1 · BEGINNER</text>
+  <text x="100" y="98" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Agentic Loop Lifecycle</text>
+
+  <!-- Node 2.2: stop_reason (Beginner) -->
+  <rect x="80" y="195" width="240" height="60" rx="10" fill="#1a3a2a" stroke="#22c55e" stroke-width="2"></rect>
+  <text x="100" y="218" fill="#22c55e" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.2 · BEGINNER</text>
+  <text x="100" y="238" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Understanding stop_reason</text>
+
+  <!-- Node 2.3: Tool Results (Intermediate) -->
+  <rect x="80" y="340" width="240" height="60" rx="10" fill="#3a2a1a" stroke="#f59e0b" stroke-width="2"></rect>
+  <text x="100" y="363" fill="#f59e0b" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.3 · INTERMEDIATE</text>
+  <text x="100" y="383" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Appending Tool Results</text>
+
+  <!-- Node 2.4: Decision Making (Intermediate) -->
+  <rect x="480" y="55" width="240" height="60" rx="10" fill="#3a2a1a" stroke="#f59e0b" stroke-width="2"></rect>
+  <text x="500" y="78" fill="#f59e0b" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.4 · INTERMEDIATE</text>
+  <text x="500" y="98" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Decision-Making Models</text>
+
+  <!-- Node 2.5: Loop Control (Intermediate) -->
+  <rect x="480" y="195" width="240" height="60" rx="10" fill="#3a2a1a" stroke="#f59e0b" stroke-width="2"></rect>
+  <text x="500" y="218" fill="#f59e0b" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.5 · INTERMEDIATE</text>
+  <text x="500" y="238" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Loop Control Flow</text>
+
+  <!-- Node 2.6: Anti-Patterns (Advanced) -->
+  <rect x="480" y="340" width="240" height="60" rx="10" fill="#3a1a1a" stroke="#ef4444" stroke-width="2"></rect>
+  <text x="500" y="363" fill="#ef4444" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.6 · ADVANCED</text>
+  <text x="500" y="383" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Common Anti-Patterns</text>
+
+  <!-- Node 2.7: Hands-On (Beginner) — bottom center -->
+  <rect x="280" y="445" width="240" height="60" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"></rect>
+  <text x="300" y="468" fill="#3b82f6" font-size="10" font-weight="700" font-family="var(--font-sans)" letter-spacing="0.06em">2.7 · SYNTHESIS</text>
+  <text x="300" y="488" fill="#e2e8f0" font-size="14" font-weight="600" font-family="var(--font-sans)">Hands-On: First Agent Loop</text>
+
+  <!-- Flow annotations -->
+  <text x="145" y="160" fill="#64748b" font-size="10" font-style="italic" font-family="var(--font-sans)">depends on</text>
+  <text x="145" y="310" fill="#64748b" font-size="10" font-style="italic" font-family="var(--font-sans)">depends on</text>
+  <text x="370" y="78" fill="#64748b" font-size="10" font-style="italic" font-family="var(--font-sans)">informs</text>
+  <text x="370" y="218" fill="#64748b" font-size="10" font-style="italic" font-family="var(--font-sans)">informs</text>
+  <text x="555" y="310" fill="#64748b" font-size="10" font-style="italic" font-family="var(--font-sans)">validates</text>
+</svg>
+</div>
+
+<div class="topic-grid">
+  <div class="topic-card">
+    <div class="card-num">Section 2.1</div>
+    <div class="card-title">Agentic Loop Lifecycle</div>
+    <div class="card-desc">The four-phase pattern: Request → Inspect → Execute → Return. Foundation for everything.</div>
+    <span class="complexity-badge beginner">Beginner</span>
+  </div>
+  <div class="topic-card">
+    <div class="card-num">Section 2.2</div>
+    <div class="card-title">stop_reason</div>
+    <div class="card-desc">The single most important field: "end_turn" vs "tool_use" — structural signal for loop control.</div>
+    <span class="complexity-badge beginner">Beginner</span>
+  </div>
+  <div class="topic-card">
+    <div class="card-num">Section 2.3</div>
+    <div class="card-title">Tool Result Appending</div>
+    <div class="card-desc">Exact message structure: assistant msg + user msg with tool_result blocks. ID matching, error handling.</div>
+    <span class="complexity-badge intermediate">Intermediate</span>
+  </div>
+  <div class="topic-card">
+    <div class="card-num">Section 2.4</div>
+    <div class="card-title">Decision-Making Models</div>
+    <div class="card-desc">Model-driven (default) vs pre-configured trees. When to use each, security trade-offs.</div>
+    <span class="complexity-badge intermediate">Intermediate</span>
+  </div>
+  <div class="topic-card">
+    <div class="card-num">Section 2.5</div>
+    <div class="card-title">Loop Control Flow</div>
+    <div class="card-desc">Production implementation: guards, timeouts, caps, error handling, clean exit vs forced exit.</div>
+    <span class="complexity-badge intermediate">Intermediate</span>
+  </div>
+  <div class="topic-card">
+    <div class="card-num">Section 2.6</div>
+    <div class="card-title">Anti-Patterns</div>
+    <div class="card-desc">Three critical anti-patterns: NL signals, arbitrary caps, text-content checks. Highest exam yield.</div>
+    <span class="complexity-badge advanced">Advanced</span>
+  </div>
+  <div class="topic-card">
+    <div class="card-num">Section 2.7</div>
+    <div class="card-title">Hands-On Build</div>
+    <div class="card-desc">Complete working agent with tools, loop, error handling, and traced execution. Synthesis of all concepts.</div>
+    <span class="complexity-badge beginner">Synthesis</span>
+  </div>
+</div>
+
+<div class="callout insight" style="margin-top:32px">
+  <span class="callout-icon">🏁</span>
+  <div class="callout-content">
+    <strong>Chapter Complete</strong>
+    <p>You've covered the full architecture of agentic loops — from the lifecycle pattern, through <code>stop_reason</code>-driven control flow and tool result management, to production-grade implementation and the three critical anti-patterns. This chapter's concepts appear in nearly every subsequent chapter. Master them here, and the rest of the exam builds on a solid foundation.</p>
+  </div>
+</div>
+
+</main>
+
+
+</body></html>

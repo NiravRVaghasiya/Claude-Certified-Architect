@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 27: Context Management</title>
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --ink: #1a2233;
+    --ink-soft: #46536b;
+    --muted: #7a869e;
+    --border: #e2e7f0;
+    --primary: #2563eb;
+    --primary-soft: #eff4ff;
+    --accent: #7c3aed;
+    --tip-bg: #ecfdf5;
+    --tip-border: #10b981;
+    --tip-ink: #065f46;
+    --exam-bg: #fef3f2;
+    --exam-border: #f04438;
+    --exam-ink: #912018;
+    --warn-bg: #fffbeb;
+    --warn-border: #f59e0b;
+    --warn-ink: #92400e;
+    --remember-bg: #f5f3ff;
+    --remember-border: #7c3aed;
+    --remember-ink: #4c1d95;
+    --mono: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --radius: 12px;
+    --shadow: 0 1px 3px rgba(16,24,40,0.06), 0 1px 2px rgba(16,24,40,0.04);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-family: var(--sans);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ---------- Header ---------- */
+  .doc-header {
+    background: linear-gradient(135deg, #1e293b 0%, #312e81 100%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 34px 36px;
+    margin-bottom: 34px;
+    box-shadow: var(--shadow);
+  }
+  .doc-header .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a5b4fc;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    font-weight: 700;
+  }
+  .doc-header p { margin: 0; color: #cbd5e1; font-size: 15px; max-width: 70ch; }
+  .badge-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #e0e7ff;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+
+  /* ---------- TOC ---------- */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 36px;
+    box-shadow: var(--shadow);
+  }
+  .toc h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 12px; }
+  .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { color: var(--primary); text-decoration: none; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* ---------- Accuracy note ---------- */
+  .accuracy-note {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    border-left-width: 5px;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    color: var(--warn-ink);
+  }
+  .accuracy-note strong { color: var(--warn-ink); }
+
+  /* ---------- Sections ---------- */
+  section { margin-bottom: 44px; scroll-margin-top: 20px; }
+  .section-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .section-head {
+    background: var(--primary-soft);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 28px;
+  }
+  h2.section-title {
+    font-size: 22px;
+    margin: 0;
+    color: var(--ink);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2.section-title .num {
+    font-family: var(--mono);
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .section-body { padding: 24px 28px 28px; }
+
+  h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 26px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--border);
+  }
+  h3:first-child { margin-top: 4px; }
+  h4 { font-size: 16px; margin: 18px 0 6px; color: var(--ink); }
+  p { margin: 0 0 12px; color: var(--ink-soft); }
+  ul, ol { margin: 0 0 12px; padding-left: 22px; color: var(--ink-soft); }
+  li { margin-bottom: 6px; }
+  code {
+    font-family: var(--mono);
+    background: #f1f3f9;
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 13.5px;
+    color: #b3007a;
+  }
+  strong { color: var(--ink); }
+
+  /* ---------- Flow diagram ---------- */
+  .flow-diagram {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 14px 0 6px;
+  }
+  .flow-diagram .step {
+    background: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .flow-diagram .step.accent { background: var(--primary); border-color: var(--primary); color:#fff; }
+  .flow-diagram .step.sub { background: var(--accent); border-color: var(--accent); color:#fff; }
+  .flow-diagram .arrow { color: #64748b; font-weight: 700; font-size: 16px; padding: 0 2px; }
+  .diagram-caption { font-size: 12.5px; color: var(--muted); margin: 6px 0 4px; font-style: italic; }
+
+  /* ---------- Box: tips ---------- */
+  .tips-box {
+    background: var(--tip-bg);
+    border: 1px solid var(--tip-border);
+    border-left-width: 5px;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    color: var(--tip-ink);
+    font-size: 14.5px;
+  }
+  .tips-box strong { color: var(--tip-ink); }
+  .tips-box ul { color: var(--tip-ink); margin-bottom: 0; }
+
+  /* ---------- Box: exam strategy ---------- */
+  .exam-strategy {
+    background: var(--exam-bg);
+    border: 1px solid var(--exam-border);
+    border-left-width: 5px;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    color: var(--exam-ink);
+    font-size: 14.5px;
+  }
+  .exam-strategy strong { color: var(--exam-ink); }
+
+  /* ---------- Box: remember 3 things ---------- */
+  .remember-box {
+    background: var(--remember-bg);
+    border: 1px solid var(--remember-border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+  .remember-box .rb-title {
+    font-weight: 700;
+    color: var(--remember-ink);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .remember-box ol { margin: 0; padding-left: 20px; color: var(--remember-ink); }
+  .remember-box li { color: var(--remember-ink); font-weight: 500; }
+
+  /* ---------- Box: practice ---------- */
+  .practice {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0 4px;
+  }
+  .practice .pr-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 8px;
+  }
+  .practice .q { font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+  .practice details { margin-top: 4px; }
+  .practice summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    user-select: none;
+  }
+  .practice details[open] summary { margin-bottom: 8px; }
+  .practice .answer { font-size: 14.5px; color: var(--ink-soft); }
+  .practice .answer .correct { color: #047857; font-weight: 700; }
+
+  /* ---------- Tables ---------- */
+  .table-wrap { overflow-x: auto; margin: 14px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--primary-soft); color: var(--ink); font-weight: 600; font-size: 13px; }
+  tbody tr:nth-child(even) { background: #fafbfe; }
+  .mechanics-table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+  /* ---------- Summary table ---------- */
+  .summary-table th { position: sticky; top: 0; }
+  .summary-table td:first-child { font-family: var(--mono); font-weight: 700; color: var(--primary); white-space: nowrap; }
+
+  /* ---------- Footer ---------- */
+  .doc-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 640px) {
+    .toc ol { columns: 1; }
+    h1 { font-size: 24px; }
+    .section-body, .section-head { padding-left: 18px; padding-right: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ============ HEADER ============ -->
+  <header class="doc-header">
+    <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+    <h1>Chapter 27 — Context Management in Large Codebase Exploration</h1>
+    <p>How to explore big, unfamiliar repositories without drowning your main context window: delegate verbose work to subagents, return distilled summaries, and build context progressively from narrow to broad.</p>
+    <div class="badge-row">
+      <span class="badge">27.1 Subagent Delegation</span>
+      <span class="badge">27.2 The Explore Subagent</span>
+      <span class="badge">27.3 Progressive Context</span>
+      <span class="badge">27.4 Hands-On Lab</span>
+    </div>
+  </header>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#s271">Subagent Delegation for Isolating Verbose Output</a></li>
+      <li><a href="#s272">The Explore Subagent: Returning Summaries</a></li>
+      <li><a href="#s273">Progressive Context Building</a></li>
+      <li><a href="#s274">Hands-On: Exploring a Legacy Codebase</a></li>
+      <li><a href="#summary">Chapter Summary &amp; Quick Reference</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ ACCURACY NOTE ============ -->
+  <div class="accuracy-note">
+    <strong>⚖️ Accuracy &amp; scope note.</strong> The mechanisms below describe <em>documented, real</em> Claude agentic patterns — subagents (via the Task tool) that run in <em>separate context windows</em> and return only their final message to the parent. Where exact token accounting, internal limits, or provider-specific behavior is not publicly guaranteed, the guide says <em>"conceptually"</em> or <em>"as a best practice."</em> Treat those framings as design principles, not API contracts.
+  </div>
+
+  <!-- ============ 27.1 ============ -->
+  <section id="s271">
+   <div class="section-card">
+    <div class="section-head">
+      <h2 class="section-title"><span class="num">27.1</span> Subagent Delegation for Isolating Verbose Exploration Output</h2>
+    </div>
+    <div class="section-body">
+
+      <h3>Concept Overview</h3>
+      <p>Exploring a large codebase generates a lot of <strong>low-signal, high-volume output</strong> — directory listings, grep hits, full file contents, dependency trees. If all of that lands in the main conversation, it crowds out the reasoning space you actually need. <strong>Subagent delegation</strong> pushes that noisy work into a <em>separate</em> agent with its own context window, so the parent only ever sees the conclusion.</p>
+
+      <h3>Key Mechanics</h3>
+      <ul>
+        <li><strong>Separate context window.</strong> A subagent (spawned via the Task tool / general-purpose agent) runs with its own fresh context. Conceptually, the tokens it burns reading files do <em>not</em> accumulate in the parent's window.</li>
+        <li><strong>Only the final message returns.</strong> The parent receives the subagent's final summary text — not its intermediate tool calls, file dumps, or scratch reasoning.</li>
+        <li><strong>One-way, stateless hand-off.</strong> The subagent cannot see the parent's future turns and typically cannot ask follow-up questions mid-task. You brief it once with a clear objective; it reports back once.</li>
+        <li><strong>Parallelizable.</strong> Independent exploration tasks (e.g. "map the auth module" and "map the billing module") can be dispatched to multiple subagents at once, each isolating its own output.</li>
+      </ul>
+
+      <h3>Visualization</h3>
+      <div class="flow-diagram">
+        <span class="step accent">Main Agent</span>
+        <span class="arrow">→</span>
+        <span class="step">Delegate task</span>
+        <span class="arrow">→</span>
+        <span class="step sub">Subagent (own context)</span>
+        <span class="arrow">→</span>
+        <span class="step">reads 40 files, greps, lists dirs</span>
+        <span class="arrow">→</span>
+        <span class="step sub">Distills</span>
+        <span class="arrow">→</span>
+        <span class="step accent">Summary only ↩ Main Agent</span>
+      </div>
+      <p class="diagram-caption">The verbose middle steps live and die inside the subagent's context; the main agent's window stays lean.</p>
+
+      <div class="table-wrap">
+      <table class="mechanics-table">
+        <thead><tr><th>Without delegation</th><th>With delegation</th></tr></thead>
+        <tbody>
+          <tr><td>40 file bodies land in main context</td><td>1 structured summary lands in main context</td></tr>
+          <tr><td>Reasoning space shrinks fast</td><td>Reasoning space preserved</td></tr>
+          <tr><td>Later turns risk truncation</td><td>Long session stays coherent</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="tips-box">
+        <strong>💡 Tips &amp; Tricks</strong>
+        <ul>
+          <li>Delegate when the <em>output</em> is bulky but the <em>answer</em> is small — that gap is exactly what a subagent collapses.</li>
+          <li>Give the subagent a crisp deliverable ("return the file paths and the function that handles retries"), not a vague verb ("look around").</li>
+          <li><strong>Common mistake:</strong> delegating a task that needs tight back-and-forth. Subagents can't easily interrogate you mid-run — use them for self-contained investigation, not interactive design.</li>
+          <li>Don't delegate trivially small lookups — the round-trip overhead isn't worth it for a single-file read.</li>
+        </ul>
+      </div>
+
+      <div class="exam-strategy">
+        <strong>🎯 Likely Question Pattern:</strong> "An agent must inspect 200 files but the user only needs one answer. What keeps the main context window from filling up?"<br>
+        <strong>Answer Approach:</strong> Keywords "many files" + "main context window" → <strong>Subagent Delegation (27.1)</strong>. The correct answer isolates verbose work in a subagent's separate context and returns only the final summary. Distractors that mention "read all files into the main agent" or "increase temperature" are wrong.
+      </div>
+
+      <div class="remember-box">
+        <span class="rb-title">🧠 If you remember only 3 things</span>
+        <ol>
+          <li>A subagent has its <strong>own context window</strong> — its verbose output never touches the parent.</li>
+          <li>Only the subagent's <strong>final message</strong> returns to the main agent.</li>
+          <li>Delegate when <strong>output is large but the answer is small</strong>.</li>
+        </ol>
+      </div>
+
+      <div class="practice">
+        <span class="pr-tag">Practice</span>
+        <p class="q">Scenario: Your agent needs to find every place a deprecated <code>LegacyLogger</code> class is instantiated across a 600-file repo. Reading each match inflates the conversation. What's the context-optimal move?</p>
+        <details>
+          <summary>Show reasoning &amp; answer</summary>
+          <div class="answer">
+            <p><span class="correct">Delegate the search to a subagent</span> and ask it to return only a list of <code>file:line</code> locations plus a one-line note on how each is used.</p>
+            <p><strong>Reasoning:</strong> The raw grep output and surrounding code could be thousands of tokens, but the useful result is a compact list. Isolating the search inside a subagent means those thousands of tokens are spent in the subagent's window; the parent receives only the distilled inventory it needs to plan the refactor.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- ============ 27.2 ============ -->
+  <section id="s272">
+   <div class="section-card">
+    <div class="section-head">
+      <h2 class="section-title"><span class="num">27.2</span> The Explore Subagent: Returning Summaries to Preserve Main Context</h2>
+    </div>
+    <div class="section-body">
+
+      <h3>Concept Overview</h3>
+      <p>27.1 established <em>why</em> to delegate. The <strong>Explore subagent</strong> is the concrete pattern for <em>how</em>: a read-only investigator whose sole job is to explore an area of the codebase and hand back a <strong>structured summary</strong>. Its value is entirely in the shape of what it returns — a good Explore subagent answers "what did you find and where," not "here is everything I saw."</p>
+
+      <h3>Key Mechanics</h3>
+      <ul>
+        <li><strong>Read-only by convention.</strong> An Explore subagent investigates and reports; it doesn't edit files. Keeping it read-only makes its output predictable and safe to run in parallel.</li>
+        <li><strong>Summary contract.</strong> You specify the <em>return format</em> up front: key files, entry points, data flow, and open questions — not raw file contents.</li>
+        <li><strong>Context asymmetry.</strong> The subagent may read tens of thousands of tokens internally, yet return only a few hundred. This asymmetry is the entire point — it's a lossy-but-lossless-on-signal compressor.</li>
+        <li><strong>Pointers over payloads.</strong> A well-designed summary returns <em>references</em> (file paths, symbol names, line ranges) so the parent can pull exact detail later <em>only if needed</em>.</li>
+      </ul>
+
+      <h3>Visualization</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>❌ Anti-pattern return</th><th>✅ Explore-summary return</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Pastes 12 full file contents back into the parent</td>
+            <td>"Auth lives in <code>src/auth/</code>. Entry: <code>login()</code> in <code>session.ts:42</code>. Tokens verified in <code>jwt.ts</code>. Open Q: refresh flow unclear."</td>
+          </tr>
+          <tr>
+            <td>Consumes thousands of parent tokens</td>
+            <td>Consumes a few hundred parent tokens</td>
+          </tr>
+          <tr>
+            <td>Parent must re-read to find signal</td>
+            <td>Parent can act immediately, drill down on demand</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="tips-box">
+        <strong>💡 Tips &amp; Tricks</strong>
+        <ul>
+          <li>Dictate the summary schema in your delegation prompt: <em>"Return: (1) relevant files, (2) entry point, (3) data flow in ≤5 bullets, (4) anything ambiguous."</em></li>
+          <li>Ask for <strong>pointers, not payloads</strong> — file paths and symbol names let you fetch detail precisely later.</li>
+          <li><strong>Common mistake:</strong> letting the subagent "be helpful" by dumping full snippets. That silently re-imports the verbosity you delegated away. Explicitly forbid raw file dumps.</li>
+          <li>Request an <strong>"open questions"</strong> field — it surfaces gaps to explore next instead of hiding them.</li>
+        </ul>
+      </div>
+
+      <div class="exam-strategy">
+        <strong>🎯 Likely Question Pattern:</strong> "A subagent explored a module and returned the full contents of every file it opened. What went wrong, and what should it return instead?"<br>
+        <strong>Answer Approach:</strong> The failure is that the subagent <em>re-imported verbosity</em> into the parent, defeating the purpose. Correct answer: return a <strong>structured summary with pointers</strong> (files, entry points, data flow, open questions). Watch for distractors praising "completeness" — in context management, completeness of raw output is a <em>bug</em>, not a feature.
+      </div>
+
+      <div class="remember-box">
+        <span class="rb-title">🧠 If you remember only 3 things</span>
+        <ol>
+          <li>The Explore subagent's job is the <strong>return shape</strong>: summary, not dump.</li>
+          <li>Return <strong>pointers (paths/symbols), not payloads</strong> — fetch detail later on demand.</li>
+          <li>Specify the <strong>summary schema in the prompt</strong>, and forbid raw file contents.</li>
+        </ol>
+      </div>
+
+      <div class="practice">
+        <span class="pr-tag">Practice</span>
+        <p class="q">Scenario: You dispatch an Explore subagent to understand a payments module. It returns 4,000 tokens — mostly pasted source. Your main context is now 60% consumed after one delegation. What do you change?</p>
+        <details>
+          <summary>Show reasoning &amp; answer</summary>
+          <div class="answer">
+            <p><span class="correct">Re-run with an explicit summary contract</span>: ask for a ≤300-token structured report — key files, the charge entry point, the flow in bullets, and open questions — and explicitly instruct it <em>not</em> to paste file contents.</p>
+            <p><strong>Reasoning:</strong> The subagent isolated the <em>reading</em> correctly, but its <em>return</em> broke the contract. Context preservation depends on the summary being small and signal-dense. Constraining the output shape (and forbidding payload dumps) restores the asymmetry that makes the Explore pattern worthwhile.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- ============ 27.3 ============ -->
+  <section id="s273">
+   <div class="section-card">
+    <div class="section-head">
+      <h2 class="section-title"><span class="num">27.3</span> Progressive Context Building: Start Narrow, Expand as Needed</h2>
+    </div>
+    <div class="section-body">
+
+      <h3>Concept Overview</h3>
+      <p>Rather than front-loading the whole repository, <strong>progressive context building</strong> starts with the smallest useful slice — one file, one function, one entry point — and expands <em>only where evidence says to</em>. Context is spent lazily, guided by discovered gaps, so the window fills with relevant signal instead of speculative bulk.</p>
+
+      <h3>Key Mechanics</h3>
+      <ul>
+        <li><strong>Narrow first.</strong> Begin at a single anchor (the file the user mentioned, the failing test, <code>main</code>). Understand it before widening.</li>
+        <li><strong>Gap-driven expansion.</strong> Each step reveals what you <em>don't</em> yet know — an imported module, an unseen caller. Those gaps, not a checklist, decide the next read.</li>
+        <li><strong>Delegate the wide sweeps.</strong> When expansion means touching many files, hand that breadth to a subagent (27.1/27.2) so only its summary re-enters your window.</li>
+        <li><strong>Synthesize, then stop.</strong> Expand only until you can act. "Enough to answer" is the terminal condition — not "read everything."</li>
+      </ul>
+
+      <h3>Visualization</h3>
+      <div class="flow-diagram">
+        <span class="step accent">Start Narrow (single file)</span>
+        <span class="arrow">→</span>
+        <span class="step">Identify Gaps</span>
+        <span class="arrow">→</span>
+        <span class="step">Expand Scope (module)</span>
+        <span class="arrow">→</span>
+        <span class="step sub">Delegate Deep Dive (subagent)</span>
+        <span class="arrow">→</span>
+        <span class="step accent">Synthesize Summary</span>
+      </div>
+      <p class="diagram-caption">Narrow → gap → expand → delegate → synthesize. Each arrow is justified by a discovered gap, never by "just in case."</p>
+
+      <div class="tips-box">
+        <strong>💡 Tips &amp; Tricks</strong>
+        <ul>
+          <li>Treat context budget like money: spend on the file in front of you, not on hypothetical files you <em>might</em> need.</li>
+          <li>After each read, ask "what's the smallest next thing that unblocks me?" — let the answer drive scope.</li>
+          <li><strong>Common mistake:</strong> "read the whole repo first, then think." This exhausts context before reasoning begins and buries signal under noise.</li>
+          <li>Pair with delegation: progressive building decides <em>what</em> to look at next; subagents keep the <em>wide</em> steps from bloating your window.</li>
+        </ul>
+      </div>
+
+      <div class="exam-strategy">
+        <strong>🎯 Likely Question Pattern:</strong> "Which strategy uses the context window most efficiently when debugging an unfamiliar service?" with options ranging from "load all files upfront" to "start from the failing test and expand as gaps appear."<br>
+        <strong>Answer Approach:</strong> Efficiency + unfamiliar + debugging → <strong>Progressive Context Building (27.3)</strong>. Choose the option that <em>starts narrow and expands on evidence</em>. Reject any "load everything first" option — bulk-loading is the canonical wrong answer in context-management questions.
+      </div>
+
+      <div class="remember-box">
+        <span class="rb-title">🧠 If you remember only 3 things</span>
+        <ol>
+          <li><strong>Start narrow</strong> at one anchor; understand it before widening.</li>
+          <li>Let <strong>discovered gaps</strong> — not a checklist — drive each expansion.</li>
+          <li>Stop at <strong>"enough to act,"</strong> and delegate the wide sweeps.</li>
+        </ol>
+      </div>
+
+      <div class="practice">
+        <span class="pr-tag">Practice</span>
+        <p class="q">Scenario: A user reports a bug in checkout. You could (A) read the entire <code>/checkout</code> directory immediately, or (B) start at the failing test, follow its imports, and widen only where the trace leads. Which is more context-disciplined, and why?</p>
+        <details>
+          <summary>Show reasoning &amp; answer</summary>
+          <div class="answer">
+            <p><span class="correct">Option B</span> — start at the failing test and expand along the actual code path.</p>
+            <p><strong>Reasoning:</strong> Option A spends context on files that may be irrelevant to this bug, filling the window with noise before any reasoning happens. Option B is gap-driven: each file you open is justified by the trace, so the context accumulates only relevant signal. If the trace fans out into many files, delegate that breadth to a subagent so only the summary returns.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- ============ 27.4 ============ -->
+  <section id="s274">
+   <div class="section-card">
+    <div class="section-head">
+      <h2 class="section-title"><span class="num">27.4</span> Hands-On: Exploring a Legacy Codebase with Context Discipline</h2>
+    </div>
+    <div class="section-body">
+
+      <h3>Concept Overview</h3>
+      <p>This lab stitches 27.1–27.3 together on a realistic target: a sprawling, poorly documented legacy repo where a single "add a feature" request could naïvely consume your entire context. The discipline is to combine <strong>progressive building</strong> (what to look at) with <strong>delegated exploration</strong> (how to look without bloating the window).</p>
+
+      <h3>Key Mechanics — the disciplined walkthrough</h3>
+      <ol>
+        <li><strong>Anchor narrow.</strong> Start from the one artifact you were given — a ticket, a stack trace, a function name. Read just that.</li>
+        <li><strong>Map before diving.</strong> Delegate a read-only Explore subagent to return the repo's high-level structure: top-level modules, entry points, and where the relevant subsystem lives — as pointers, not contents.</li>
+        <li><strong>Expand on the gap.</strong> Using the map, identify the single module that matters and pull just that into the main context.</li>
+        <li><strong>Delegate the deep dive.</strong> For the verbose "trace every caller / every dependency" step, dispatch another subagent; take back only its structured summary.</li>
+        <li><strong>Synthesize &amp; act.</strong> Now the main context holds a clean picture: anchor + map + targeted detail. Make the change with room to reason.</li>
+      </ol>
+
+      <h3>Visualization — end-to-end context flow</h3>
+      <div class="flow-diagram">
+        <span class="step accent">Ticket / stack trace</span>
+        <span class="arrow">→</span>
+        <span class="step sub">Explore sub: repo map</span>
+        <span class="arrow">→</span>
+        <span class="step">Pull target module</span>
+        <span class="arrow">→</span>
+        <span class="step sub">Explore sub: caller trace</span>
+        <span class="arrow">→</span>
+        <span class="step accent">Synthesize &amp; implement</span>
+      </div>
+      <p class="diagram-caption">Two subagent hops carry all the verbose reading; the main context only ever holds the anchor, the map, and the targeted detail.</p>
+
+      <div class="table-wrap">
+      <table class="mechanics-table">
+        <thead><tr><th>Step</th><th>Technique in play</th><th>What enters main context</th></tr></thead>
+        <tbody>
+          <tr><td>Anchor</td><td>Progressive (narrow) · 27.3</td><td>One file / trace</td></tr>
+          <tr><td>Repo map</td><td>Explore subagent · 27.2</td><td>Structured pointers</td></tr>
+          <tr><td>Target module</td><td>Progressive (expand) · 27.3</td><td>One relevant module</td></tr>
+          <tr><td>Caller trace</td><td>Delegation · 27.1</td><td>Summary only</td></tr>
+          <tr><td>Implement</td><td>Synthesis</td><td>Clean, focused picture</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="tips-box">
+        <strong>💡 Tips &amp; Tricks</strong>
+        <ul>
+          <li>In legacy code, <strong>map before you dive</strong> — a subagent-produced overview prevents you from wandering (and burning context) in the wrong subsystem.</li>
+          <li>Keep a running <em>mental index</em> of pointers (paths/symbols) in the main context; fetch bodies only at the moment of editing.</li>
+          <li><strong>Common mistake:</strong> opening files "to get oriented." Orientation is a delegated job — a subagent orients and reports; the parent stays clean.</li>
+          <li>If the main context still bloats, you're returning payloads somewhere — audit each subagent's return shape (27.2).</li>
+        </ul>
+      </div>
+
+      <div class="exam-strategy">
+        <strong>🎯 Likely Question Pattern:</strong> "Given a 500-file legacy repo and a feature request, which sequence minimizes context-window usage?" — often an ordering / multi-select question.<br>
+        <strong>Answer Approach:</strong> Keywords "legacy," "large codebase," "minimize context" → combine <strong>Subagent Delegation (27.1)</strong> + <strong>Explore summaries (27.2)</strong> + <strong>Progressive Building (27.3)</strong>. The correct sequence is <em>anchor narrow → delegate a map → expand to the target → delegate the deep dive → synthesize</em>. Any answer that begins with "read/index all 500 files into the main agent" is the trap.
+      </div>
+
+      <div class="remember-box">
+        <span class="rb-title">🧠 If you remember only 3 things</span>
+        <ol>
+          <li><strong>Map before you dive</strong> — delegate the repo overview first.</li>
+          <li>Every <strong>wide</strong> step is a subagent hop; the parent holds pointers + targeted detail only.</li>
+          <li>The techniques <strong>compose</strong>: progressive decides <em>what</em>, delegation controls <em>how much</em> comes back.</li>
+        </ol>
+      </div>
+
+      <div class="practice">
+        <span class="pr-tag">Practice</span>
+        <p class="q">Scenario: You must add a rate-limit header to responses in a 500-file legacy API with no docs. Outline the context-disciplined sequence, and name the technique behind each step.</p>
+        <details>
+          <summary>Show reasoning &amp; answer</summary>
+          <div class="answer">
+            <p><span class="correct">Anchor → map → expand → delegate → synthesize:</span></p>
+            <ol>
+              <li><strong>Anchor</strong> on the response/middleware entry point you were given (Progressive, 27.3).</li>
+              <li><strong>Delegate a repo map</strong> to an Explore subagent — where does response handling live? Return pointers (27.2).</li>
+              <li><strong>Pull just the middleware module</strong> into main context (Progressive expand, 27.3).</li>
+              <li><strong>Delegate a caller/usage trace</strong> for that middleware; take back a summary (Delegation, 27.1).</li>
+              <li><strong>Synthesize</strong> and add the header with a clean context.</li>
+            </ol>
+            <p><strong>Reasoning:</strong> No single step dumps hundreds of files into the parent. Breadth is always delegated; the main window only ever grows by small, justified, signal-dense additions.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+   <div class="section-card">
+    <div class="section-head">
+      <h2 class="section-title"><span class="num">§</span> Chapter Summary &amp; Quick Reference</h2>
+    </div>
+    <div class="section-body">
+
+      <p>The four subsections form a single, composable discipline. Read the table left-to-right as a narrative: <strong>narrow → delegate → summarize → apply.</strong></p>
+
+      <div class="table-wrap">
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>§</th>
+            <th>Core idea</th>
+            <th>Key mechanic</th>
+            <th>Exam trigger keywords</th>
+            <th>Trap answer to avoid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>27.1</td>
+            <td>Delegate verbose work to isolate its output</td>
+            <td>Subagent runs in a separate context window; only its final message returns</td>
+            <td>"many files," "keep main context clean," "isolate output"</td>
+            <td>"Read all files into the main agent"</td>
+          </tr>
+          <tr>
+            <td>27.2</td>
+            <td>Return summaries, not dumps</td>
+            <td>Explore subagent returns structured pointers (files, entry points, open Qs)</td>
+            <td>"summary," "preserve context," "what to return"</td>
+            <td>"Return every file's full contents (completeness)"</td>
+          </tr>
+          <tr>
+            <td>27.3</td>
+            <td>Start narrow, expand on evidence</td>
+            <td>Gap-driven expansion from a single anchor; stop at "enough to act"</td>
+            <td>"efficient," "unfamiliar," "debug," "start where"</td>
+            <td>"Load/index the whole repo upfront"</td>
+          </tr>
+          <tr>
+            <td>27.4</td>
+            <td>Compose all three on legacy code</td>
+            <td>Anchor → delegate map → expand → delegate deep dive → synthesize</td>
+            <td>"legacy," "500 files," "minimize context," "sequence"</td>
+            <td>"Begin by reading all 500 files"</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="remember-box">
+        <span class="rb-title">🧠 Whole-chapter takeaway</span>
+        <ol>
+          <li><strong>Isolation:</strong> verbose exploration belongs in a subagent's context, never the parent's.</li>
+          <li><strong>Compression:</strong> what returns to the parent is a summary of pointers, sized for signal.</li>
+          <li><strong>Discipline:</strong> spend context lazily — narrow first, expand only on discovered gaps, stop when you can act.</li>
+        </ol>
+      </div>
+
+      <div class="accuracy-note" style="margin-bottom:0;">
+        <strong>⚖️ Self-check on claims.</strong> Verified against documented behavior: subagents run in separate contexts and return only their final message; they are well-suited to read-only exploration; parallel dispatch is supported. Framed as best practice (not guaranteed API): exact token accounting, the specific "return pointers not payloads" schema, and "stop at enough to act" heuristics — these are <em>design principles</em> for context discipline, not provider-enforced rules.
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <div class="doc-footer">
+    Chapter 27 · Context Management in Large Codebase Exploration — study guide · self-contained HTML, no external dependencies.
+  </div>
+
+</div>
+
+
+</body></html>

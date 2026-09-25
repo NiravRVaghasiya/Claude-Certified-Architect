@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 11 — Built-In Tools: Read, Write, Edit, Bash, Grep, Glob</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7f8fa;
+    --bg-sidebar: #1b2537;
+    --bg-sidebar-hover: #243044;
+    --bg-sidebar-active: #2c3e5a;
+    --bg-code: #f0f2f5;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #8993a4;
+    --text-sidebar: #c4ccda;
+    --text-sidebar-active: #ffffff;
+    --border-light: #e8eaed;
+    --border: #d1d5db;
+    --accent: #0052CC;
+    --accent-light: #e6f0ff;
+    --success: #36b37e;
+    --success-bg: #e6fcf5;
+    --error: #de350b;
+    --error-bg: #ffebe6;
+    --warning: #ff991f;
+    --warning-bg: #fff8e6;
+    --info: #0065ff;
+    --info-bg: #e6f0ff;
+    --purple: #6554C0;
+    --purple-bg: #f3f0ff;
+    --teal: #00b8d9;
+    --teal-bg: #e6fcff;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', 'Consolas', 'Fira Code', monospace;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* ── Layout ─────────────────────────────── */
+  .layout { display: flex; min-height: 100vh; }
+
+  /* ── Sidebar ────────────────────────────── */
+  .sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--bg-sidebar);
+    color: var(--text-sidebar);
+    padding: 28px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  .sidebar-header {
+    padding: 0 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 16px;
+  }
+  .sidebar-header .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .sidebar-header h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+  }
+  .sidebar-header p {
+    font-size: 12px;
+    color: var(--text-sidebar);
+    margin-top: 4px;
+    opacity: 0.7;
+  }
+  .sidebar nav ul { list-style: none; }
+  .sidebar nav > ul > li > a {
+    display: block;
+    padding: 9px 24px;
+    color: var(--text-sidebar);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all 0.15s ease;
+  }
+  .sidebar nav > ul > li > a:hover {
+    background: var(--bg-sidebar-hover);
+    color: var(--text-sidebar-active);
+    border-left-color: rgba(255,255,255,0.2);
+  }
+  .sidebar nav > ul > li > a.active {
+    background: var(--bg-sidebar-active);
+    color: var(--text-sidebar-active);
+    border-left-color: var(--accent);
+  }
+  .sidebar nav > ul > li > a i {
+    width: 18px;
+    margin-right: 8px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  .nav-sub { list-style: none; padding: 0; }
+  .nav-sub li a {
+    display: block;
+    padding: 5px 24px 5px 50px;
+    color: var(--text-sidebar);
+    text-decoration: none;
+    font-size: 12.5px;
+    opacity: 0.7;
+    transition: all 0.15s ease;
+  }
+  .nav-sub li a:hover { opacity: 1; color: #fff; }
+  .sidebar-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 12px 24px;
+  }
+
+  /* ── Main Content ───────────────────────── */
+  .main {
+    flex: 1;
+    max-width: 920px;
+    padding: 40px 48px 80px;
+  }
+
+  .chapter-header {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid var(--border-light);
+  }
+  .chapter-header .ch-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .chapter-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .chapter-header .subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .learning-obj {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin-top: 20px;
+  }
+  .learning-obj h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .learning-obj ul { padding-left: 18px; }
+  .learning-obj li { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 4px; }
+
+  /* ── Sections ───────────────────────────── */
+  section { margin-bottom: 56px; }
+  section > h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+  }
+  section > h2 .sec-num {
+    color: var(--accent);
+    margin-right: 6px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 28px 0 12px;
+  }
+  h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 20px 0 8px;
+  }
+  p { margin-bottom: 12px; }
+
+  /* ── Tables ─────────────────────────────── */
+  .table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  thead th {
+    background: var(--bg-secondary);
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--border-light);
+    white-space: nowrap;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-primary);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f9fafb; }
+  td code, th code {
+    background: var(--bg-code);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--purple);
+  }
+
+  /* ── Code Blocks ────────────────────────── */
+  pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 12px 0 20px;
+    position: relative;
+  }
+  pre .label {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 10px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .inline-code {
+    background: var(--bg-code);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--purple);
+  }
+  .kw { color: #c084fc; }
+  .str { color: #86efac; }
+  .cm { color: #64748b; font-style: italic; }
+  .fn { color: #7dd3fc; }
+  .num { color: #fbbf24; }
+  .op { color: #94a3b8; }
+  .param { color: #f9a8d4; }
+
+  /* ── Callout Boxes ──────────────────────── */
+  .callout {
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin: 16px 0 20px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .callout-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .callout-body { flex: 1; }
+  .callout-body strong { display: block; font-size: 13px; margin-bottom: 4px; }
+  .callout-body p { font-size: 13.5px; margin: 0; }
+  .callout-body ul { font-size: 13.5px; padding-left: 16px; margin: 4px 0 0; }
+  .callout-body li { margin-bottom: 3px; }
+  .callout.warning { background: var(--warning-bg); border-left: 4px solid var(--warning); }
+  .callout.warning .callout-icon { color: var(--warning); }
+  .callout.tip { background: var(--success-bg); border-left: 4px solid var(--success); }
+  .callout.tip .callout-icon { color: var(--success); }
+  .callout.info { background: var(--info-bg); border-left: 4px solid var(--info); }
+  .callout.info .callout-icon { color: var(--info); }
+  .callout.danger { background: var(--error-bg); border-left: 4px solid var(--error); }
+  .callout.danger .callout-icon { color: var(--error); }
+
+  /* ── Exam Strategy Panel ────────────────── */
+  .exam-panel {
+    background: var(--purple-bg);
+    border: 1px solid #d6ccff;
+    border-left: 5px solid var(--purple);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin: 24px 0 28px;
+  }
+  .exam-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .exam-panel-header i { color: var(--purple); font-size: 16px; }
+  .exam-panel-header span {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--purple);
+  }
+  .exam-panel .field {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+  }
+  .exam-panel .field-label {
+    font-weight: 700;
+    color: var(--text-secondary);
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+  .exam-panel .field-value { color: var(--text-primary); }
+  .exam-panel .sample-q {
+    background: rgba(101,84,192,0.06);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-top: 10px;
+  }
+  .exam-panel .sample-q .q-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--purple);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+  .exam-panel .sample-q p { font-size: 13.5px; margin: 0 0 8px; }
+  .exam-panel .answer {
+    background: rgba(54,179,126,0.08);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    margin-top: 6px;
+  }
+  .exam-panel .answer strong { color: var(--success); font-size: 12px; text-transform: uppercase; }
+  .exam-panel .answer p { font-size: 13px; margin: 4px 0 0; }
+
+  /* ── Key Takeaway Box ───────────────────── */
+  .takeaway-box {
+    background: var(--teal-bg);
+    border: 1px solid #b3ecf5;
+    border-left: 5px solid var(--teal);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin: 20px 0 24px;
+  }
+  .takeaway-box h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--teal);
+    margin: 0 0 10px;
+  }
+  .takeaway-box ul { padding-left: 18px; }
+  .takeaway-box li { font-size: 13.5px; margin-bottom: 5px; color: var(--text-primary); }
+
+  /* ── Flashcard Table ────────────────────── */
+  .flashcard-table td:first-child {
+    font-weight: 600;
+    background: var(--bg-secondary);
+    width: 45%;
+  }
+
+  /* ── Workflow Step ───────────────────────── */
+  .workflow {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    margin: 16px 0 24px;
+    overflow: hidden;
+  }
+  .wf-header {
+    background: var(--bg-secondary);
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .wf-header i { color: var(--accent); }
+  .wf-step {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .wf-step:last-child { border-bottom: none; }
+  .wf-step-num {
+    background: var(--accent);
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .wf-step-body { flex: 1; }
+  .wf-step-body .tool-tag {
+    display: inline-block;
+    background: var(--purple-bg);
+    color: var(--purple);
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .wf-step-body p { font-size: 13.5px; margin: 4px 0 0; }
+
+  /* ── ASCII Diagram Wrapper ──────────────── */
+  .ascii-diagram {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 16px 0 20px;
+    color: var(--text-primary);
+  }
+
+  /* ── SVG Diagrams ───────────────────────── */
+  .diagram-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .diagram-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ── Utility ────────────────────────────── */
+  .mt-0 { margin-top: 0; }
+  .mb-0 { margin-bottom: 0; }
+  .mb-sm { margin-bottom: 8px; }
+  .text-sm { font-size: 13px; }
+  .text-muted { color: var(--text-muted); }
+  .text-accent { color: var(--accent); }
+  .bold { font-weight: 700; }
+  mark { background: #fff3cd; padding: 1px 4px; border-radius: 2px; }
+  hr { border: none; border-top: 1px solid var(--border-light); margin: 32px 0; }
+
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { padding: 24px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SIDEBAR NAVIGATION                        -->
+<!-- ══════════════════════════════════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="badge">CCA Exam Prep</div>
+    <h2>Chapter 11</h2>
+    <p>Built-In Tools: Read, Write, Edit, Bash, Grep, Glob</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#s11-1"><i class="fa-solid fa-cubes"></i> 11.1 Overview of Tools</a>
+        <ul class="nav-sub">
+          <li><a href="#tool-read">Read</a></li>
+          <li><a href="#tool-write">Write</a></li>
+          <li><a href="#tool-edit">Edit</a></li>
+          <li><a href="#tool-bash">Bash</a></li>
+          <li><a href="#tool-grep">Grep</a></li>
+          <li><a href="#tool-glob">Glob</a></li>
+        </ul>
+      </li>
+      <div class="sidebar-divider"></div>
+      <li><a href="#s11-2"><i class="fa-solid fa-route"></i> 11.2 Selection Criteria</a></li>
+      <li><a href="#s11-3"><i class="fa-solid fa-link"></i> 11.3 Combining Tools</a></li>
+      <li><a href="#s11-4"><i class="fa-solid fa-binoculars"></i> 11.4 Explore Subagent</a></li>
+      <li><a href="#s11-5"><i class="fa-solid fa-laptop-code"></i> 11.5 Hands-On Walkthrough</a></li>
+      <div class="sidebar-divider"></div>
+      <li><a href="#summary"><i class="fa-solid fa-list-check"></i> Chapter Summary</a></li>
+      <li><a href="#concept-map"><i class="fa-solid fa-diagram-project"></i> Concept Map</a></li>
+      <li><a href="#tips"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</a></li>
+      <li><a href="#flashcards"><i class="fa-solid fa-brain"></i> Flashcards</a></li>
+      <li><a href="#mock-exam"><i class="fa-solid fa-bullseye"></i> Mock Exam</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- MAIN CONTENT                              -->
+<!-- ══════════════════════════════════════════ -->
+<main class="main">
+
+<!-- ── Chapter Header ─────────────────────── -->
+<header class="chapter-header" id="top">
+  <div class="ch-num">Chapter 11</div>
+  <h1>Built-In Tools: Read, Write, Edit, Bash, Grep, Glob</h1>
+  <p class="subtitle">
+    Master Claude's six core built-in tools for filesystem interaction, shell execution, and codebase navigation. Understand when to use each tool, how to compose them into powerful workflows, and when to delegate to the Explore subagent for verbose discovery.
+  </p>
+  <div class="learning-obj">
+    <h4><i class="fa-solid fa-graduation-cap"></i> Learning Objectives</h4>
+    <ul>
+      <li>Define each of Claude's six built-in tools and articulate their purpose, inputs, outputs, and limitations</li>
+      <li>Apply systematic selection criteria to choose the right tool for any given task</li>
+      <li>Compose multi-tool workflows for efficient codebase exploration and modification</li>
+      <li>Evaluate when to use the Explore subagent versus direct tool calls</li>
+      <li>Demonstrate end-to-end codebase navigation using built-in tools in a realistic scenario</li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11.1 — OVERVIEW OF BUILT-IN TOOLS        -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s11-1">
+<h2><span class="sec-num">11.1</span> Overview of Built-In Tools and Their Purposes</h2>
+
+<p>
+  Claude's agentic capabilities include six <strong>built-in tools</strong> — native functions available in agentic environments (such as Claude Code) that allow Claude to interact with the local filesystem and shell. These are not custom user-defined tools; they are part of Claude's core agentic toolkit and are always available when the model operates in tool-use mode within a coding environment.
+</p>
+
+<p>
+  Each tool is designed for a specific class of operation. Understanding the precise boundaries of each tool — what it can and cannot do — is fundamental to effective agentic workflows and a core exam topic.
+</p>
+
+<h3 id="tool-read"><i class="fa-solid fa-book-open" style="color:var(--accent);margin-right:6px;"></i> Read (File Reader)</h3>
+
+<p><strong>Definition:</strong> Reads and returns the contents of a file at a specified path.</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:22%">Attribute</th><th>Details</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Primary Use Case</strong></td><td>Viewing source code, configuration files, documentation, or any text file to understand its content before making decisions.</td></tr>
+  <tr><td><strong>Input</strong></td><td><code>file_path</code> (string, required) — absolute or relative path to the file. Optional: <code>offset</code> / <code>limit</code> to read specific line ranges.</td></tr>
+  <tr><td><strong>Output</strong></td><td>The text content of the file (or specified line range). Includes line numbers for reference.</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td>None — <mark>strictly read-only</mark>. Does not modify the filesystem in any way.</td></tr>
+  <tr><td><strong>Key Limitation</strong></td><td>Cannot execute or interpret the file contents. Binary files produce garbled output. Very large files may need to be read in chunks using offset/limit parameters.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout tip">
+  <div class="callout-icon">💡</div>
+  <div class="callout-body">
+    <strong>Line-Range Reading</strong>
+    <p>The Read tool supports reading specific line ranges (e.g., lines 50–80). This is essential for large files — reading an entire 5,000-line file wastes context window tokens when you only need a specific function. Always scope your reads when possible.</p>
+  </div>
+</div>
+
+
+<h3 id="tool-write"><i class="fa-solid fa-pen-nib" style="color:var(--success);margin-right:6px;"></i> Write (File Writer)</h3>
+
+<p><strong>Definition:</strong> Creates a new file or completely overwrites an existing file with the provided content.</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:22%">Attribute</th><th>Details</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Primary Use Case</strong></td><td>Creating new files (source code, configs, documentation) or replacing the full content of an existing file.</td></tr>
+  <tr><td><strong>Input</strong></td><td><code>file_path</code> (string) — destination path. <code>content</code> (string) — the complete file content to write.</td></tr>
+  <tr><td><strong>Output</strong></td><td>Confirmation that the file was successfully written, including the number of bytes/lines.</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td><mark>Destructive</mark> — overwrites existing file content entirely. Creates intermediate directories if needed.</td></tr>
+  <tr><td><strong>Key Limitation</strong></td><td>Replaces the <em>entire</em> file — unsuitable for small, targeted edits to existing files. Cannot append; writes are atomic and complete.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout warning">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-body">
+    <strong>Write Overwrites Everything</strong>
+    <p>A common exam trap: using Write when you only need to change a few lines in a large file. Write replaces the <em>entire</em> file, which means you must include all unchanged content too. For targeted changes, always use <strong>Edit</strong> instead.</p>
+  </div>
+</div>
+
+
+<h3 id="tool-edit"><i class="fa-solid fa-pen-to-square" style="color:var(--purple);margin-right:6px;"></i> Edit (Surgical File Editor)</h3>
+
+<p><strong>Definition:</strong> Makes precise, targeted modifications to an existing file using a search-and-replace mechanism (<code>old_string</code> → <code>new_string</code>).</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:22%">Attribute</th><th>Details</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Primary Use Case</strong></td><td>Modifying specific functions, fixing bugs, updating configuration values, or refactoring targeted code sections within existing files.</td></tr>
+  <tr><td><strong>Input</strong></td><td><code>file_path</code> (string), <code>old_string</code> (string — the exact text to find), <code>new_string</code> (string — the replacement text).</td></tr>
+  <tr><td><strong>Output</strong></td><td>Confirmation of the edit with a snippet of the surrounding context showing the change.</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td>Modifies the file in place — only the matched region is changed; all other content is preserved.</td></tr>
+  <tr><td><strong>Key Limitation</strong></td><td>The <code>old_string</code> must match <strong>exactly one</strong> location in the file. If it matches zero times (typo, wrong whitespace) or more than once (ambiguous match), the edit <strong>fails</strong>. Whitespace, indentation, and newlines must be exact.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout info">
+  <div class="callout-icon">ℹ️</div>
+  <div class="callout-body">
+    <strong>The Uniqueness Constraint</strong>
+    <p>Edit's requirement for a unique match is its most critical behavior. If a function signature appears twice in a file (e.g., in both the definition and a test), you must include enough surrounding context in <code>old_string</code> to disambiguate. Best practice: include 2–3 lines of context around the target change to ensure uniqueness.</p>
+  </div>
+</div>
+
+
+<h3 id="tool-bash"><i class="fa-solid fa-terminal" style="color:var(--error);margin-right:6px;"></i> Bash (Shell Command Executor)</h3>
+
+<p><strong>Definition:</strong> Executes a shell command in a persistent bash session and returns stdout/stderr.</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:22%">Attribute</th><th>Details</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Primary Use Case</strong></td><td>Running tests, installing packages, executing build scripts, git operations, running linters, or any operation that requires shell access.</td></tr>
+  <tr><td><strong>Input</strong></td><td><code>command</code> (string) — any valid shell command or pipeline.</td></tr>
+  <tr><td><strong>Output</strong></td><td>Combined stdout and stderr output from the command execution, plus the exit code.</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td><mark>Highly stateful and potentially destructive</mark>. Can modify files, install software, change directories, set environment variables, start processes. State persists across calls (working directory, env vars, shell history).</td></tr>
+  <tr><td><strong>Key Limitation</strong></td><td>Security-sensitive — some commands may be restricted or require confirmation. Long-running commands can time out. Cannot handle interactive prompts (e.g., <code>sudo</code> password input). Non-deterministic: same command may produce different results.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout danger">
+  <div class="callout-icon">🔴</div>
+  <div class="callout-body">
+    <strong>Bash Is the "Power Tool" — Handle with Care</strong>
+    <p>Bash can do everything the other tools can do (read files via <code>cat</code>, write via <code>echo &gt;</code>, search via system <code>grep</code>), but using it for those purposes is an <strong>anti-pattern</strong>. Prefer the dedicated tools — they have better error handling, no side effects (for Read/Grep/Glob), and are more predictable. Use Bash only when you need shell capabilities (pipelines, git, test runners, package managers).</p>
+  </div>
+</div>
+
+
+<h3 id="tool-grep"><i class="fa-solid fa-magnifying-glass" style="color:var(--warning);margin-right:6px;"></i> Grep (Pattern Searcher)</h3>
+
+<p><strong>Definition:</strong> Searches for a regex pattern across files and returns matching lines with file paths and line numbers.</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:22%">Attribute</th><th>Details</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Primary Use Case</strong></td><td>Finding function definitions, locating import statements, searching for string literals, identifying configuration values, and tracing symbol usage across a codebase.</td></tr>
+  <tr><td><strong>Input</strong></td><td><code>pattern</code> (string — regex), optional: <code>path</code> (directory to search in), <code>include</code> (file glob filter, e.g. <code>*.py</code>).</td></tr>
+  <tr><td><strong>Output</strong></td><td>List of matches, each with: file path, line number, and the matching line content.</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td>None — <mark>strictly read-only</mark>.</td></tr>
+  <tr><td><strong>Key Limitation</strong></td><td>Pattern-based, not semantic — it matches text, not meaning. Cannot understand code structure (e.g., won't distinguish between a function definition and a comment mentioning the function name). Results can be noisy for common patterns.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="tool-glob"><i class="fa-solid fa-folder-tree" style="color:var(--teal);margin-right:6px;"></i> Glob (File Path Matcher)</h3>
+
+<p><strong>Definition:</strong> Returns a list of file paths matching a given glob pattern.</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:22%">Attribute</th><th>Details</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Primary Use Case</strong></td><td>Discovering project structure, finding files by extension or naming convention, locating configuration files, and scoping subsequent tool calls.</td></tr>
+  <tr><td><strong>Input</strong></td><td><code>pattern</code> (string — glob pattern, e.g. <code>src/**/*.ts</code>, <code>**/README.md</code>).</td></tr>
+  <tr><td><strong>Output</strong></td><td>A flat list of file paths that match the pattern.</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td>None — <mark>strictly read-only</mark>.</td></tr>
+  <tr><td><strong>Key Limitation</strong></td><td>Returns <em>paths only</em>, not file contents. Glob syntax is different from regex — <code>*</code> matches within a directory, <code>**</code> matches recursively across directories. Cannot filter by file content.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<!-- ── Master Comparison Table ─────────────── -->
+<h3>Master Comparison Table</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr>
+    <th>Tool</th>
+    <th>Purpose</th>
+    <th>Input</th>
+    <th>Output</th>
+    <th>Read-Only?</th>
+    <th>Key Limitation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><code>Read</code></td>
+    <td>View file contents</td>
+    <td>File path (+line range)</td>
+    <td>File text with line numbers</td>
+    <td style="color:var(--success);font-weight:700;">✓ Yes</td>
+    <td>No execution; binary files garbled</td>
+  </tr>
+  <tr>
+    <td><code>Write</code></td>
+    <td>Create/overwrite files</td>
+    <td>File path + full content</td>
+    <td>Write confirmation</td>
+    <td style="color:var(--error);font-weight:700;">✗ No</td>
+    <td>Replaces entire file; no partial writes</td>
+  </tr>
+  <tr>
+    <td><code>Edit</code></td>
+    <td>Surgical file modifications</td>
+    <td>File path + old_string + new_string</td>
+    <td>Edit confirmation + context</td>
+    <td style="color:var(--error);font-weight:700;">✗ No</td>
+    <td>old_string must match exactly once</td>
+  </tr>
+  <tr>
+    <td><code>Bash</code></td>
+    <td>Execute shell commands</td>
+    <td>Shell command string</td>
+    <td>stdout + stderr + exit code</td>
+    <td style="color:var(--error);font-weight:700;">✗ No</td>
+    <td>Stateful; side effects; security-sensitive</td>
+  </tr>
+  <tr>
+    <td><code>Grep</code></td>
+    <td>Search file contents by pattern</td>
+    <td>Regex pattern (+path +include filter)</td>
+    <td>Matching lines + file paths + line numbers</td>
+    <td style="color:var(--success);font-weight:700;">✓ Yes</td>
+    <td>Text matching only; not semantic</td>
+  </tr>
+  <tr>
+    <td><code>Glob</code></td>
+    <td>Find files by path pattern</td>
+    <td>Glob pattern</td>
+    <td>List of matching file paths</td>
+    <td style="color:var(--success);font-weight:700;">✓ Yes</td>
+    <td>Paths only; no content inspection</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+<!-- ── Side Effects Spectrum Diagram ──────── -->
+<h3>Side Effects Spectrum</h3>
+
+<div class="diagram-container">
+<svg viewBox="0 0 800 110" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;">
+  <!-- Gradient bar -->
+  <defs>
+    <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#36b37e"></stop>
+      <stop offset="50%" style="stop-color:#ff991f"></stop>
+      <stop offset="100%" style="stop-color:#de350b"></stop>
+    </linearGradient>
+  </defs>
+  <rect x="60" y="30" width="680" height="18" rx="9" fill="url(#specGrad)" opacity="0.25"></rect>
+  <rect x="60" y="30" width="680" height="18" rx="9" fill="none" stroke="url(#specGrad)" stroke-width="1.5"></rect>
+
+  <!-- Labels -->
+  <text x="60" y="20" font-family="-apple-system,sans-serif" font-size="11" fill="#8993a4" font-weight="600">NO SIDE EFFECTS</text>
+  <text x="740" y="20" font-family="-apple-system,sans-serif" font-size="11" fill="#8993a4" font-weight="600" text-anchor="end">FULL SIDE EFFECTS</text>
+
+  <!-- Tool markers -->
+  <circle cx="110" cy="39" r="7" fill="#36b37e"></circle>
+  <text x="110" y="68" font-family="Consolas,monospace" font-size="12" fill="#1a202c" text-anchor="middle" font-weight="700">Read</text>
+  <circle cx="210" cy="39" r="7" fill="#36b37e"></circle>
+  <text x="210" y="68" font-family="Consolas,monospace" font-size="12" fill="#1a202c" text-anchor="middle" font-weight="700">Glob</text>
+  <circle cx="310" cy="39" r="7" fill="#36b37e"></circle>
+  <text x="310" y="68" font-family="Consolas,monospace" font-size="12" fill="#1a202c" text-anchor="middle" font-weight="700">Grep</text>
+  <circle cx="490" cy="39" r="7" fill="#ff991f"></circle>
+  <text x="490" y="68" font-family="Consolas,monospace" font-size="12" fill="#1a202c" text-anchor="middle" font-weight="700">Edit</text>
+  <circle cx="580" cy="39" r="7" fill="#e8590c"></circle>
+  <text x="580" y="68" font-family="Consolas,monospace" font-size="12" fill="#1a202c" text-anchor="middle" font-weight="700">Write</text>
+  <circle cx="700" cy="39" r="7" fill="#de350b"></circle>
+  <text x="700" y="68" font-family="Consolas,monospace" font-size="12" fill="#1a202c" text-anchor="middle" font-weight="700">Bash</text>
+
+  <!-- Grouping bracket -->
+  <text x="210" y="88" font-family="-apple-system,sans-serif" font-size="10" fill="#36b37e" text-anchor="middle" font-weight="600">Safe (read-only)</text>
+  <text x="560" y="88" font-family="-apple-system,sans-serif" font-size="10" fill="#de350b" text-anchor="middle" font-weight="600">Mutating (write + execute)</text>
+</svg>
+</div>
+
+<!-- ── Exam Strategy 11.1 ─────────────────── -->
+<div class="exam-panel">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-pen-fancy"></i>
+    <span>Exam Strategy — 11.1 Tool Overview</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Question Type:</span>
+    <span class="field-value">MCQ (identify the tool from a description) / True-False</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Common Traps:</span>
+    <span class="field-value">
+      ① Confusing <strong>Write</strong> (full overwrite) with <strong>Edit</strong> (surgical replace).<br>
+      ② Thinking Grep returns file paths only (that's Glob).<br>
+      ③ Assuming all tools have side effects (Read, Grep, Glob are read-only).
+    </span>
+  </div>
+  <div class="field">
+    <span class="field-label">Answer Approach:</span>
+    <span class="field-value">For "which tool" questions: first classify the task as <em>read</em> vs. <em>write</em> vs. <em>execute</em>, then match to the tool's specific function.</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Memory Hook:</span>
+    <span class="field-value"><strong>"RWEB-GG"</strong> = <strong>R</strong>ead, <strong>W</strong>rite, <strong>E</strong>dit, <strong>B</strong>ash, <strong>G</strong>rep, <strong>G</strong>lob — the six built-in tools, ordered from least to most powerful in terms of side effects.</span>
+  </div>
+  <div class="sample-q">
+    <div class="q-label">Sample Question</div>
+    <p><em>"An agent needs to view the first 50 lines of a configuration file to determine the logging level. Which tool should it use?"</em></p>
+    <p>A) Bash (<code>head -50 config.yaml</code>)&nbsp;&nbsp; B) Read (with line range)&nbsp;&nbsp; C) Grep (search for 'log')&nbsp;&nbsp; D) Glob</p>
+    <div class="answer">
+      <strong>Answer: B</strong>
+      <p><strong>Read</strong> with offset/limit is the correct choice. While Bash with <code>head</code> would technically work, Read is the purpose-built tool for viewing file contents — it's read-only, has no side effects, and returns line numbers. Always prefer the most specific, least-powerful tool that gets the job done.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11.2 — SELECTION CRITERIA                 -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s11-2">
+<h2><span class="sec-num">11.2</span> Selection Criteria: Choosing the Right Built-In Tool</h2>
+
+<p>
+  Choosing the correct tool is not about capability — Bash can technically do everything. It's about <strong>precision, safety, and predictability</strong>. The exam tests your ability to select the <em>most appropriate</em> tool, which is always the most specific tool that satisfies the requirement with the fewest side effects.
+</p>
+
+<h3>Decision Factors</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th>Factor</th><th>Question to Ask</th><th>Guides You Toward</th></tr>
+</thead>
+<tbody>
+  <tr><td><strong>Task Type</strong></td><td>Am I reading, writing, searching, or executing?</td><td>Read/Grep/Glob vs. Write/Edit vs. Bash</td></tr>
+  <tr><td><strong>Scope</strong></td><td>Am I operating on one file, many files, or the system?</td><td>Read/Edit (single file) vs. Grep/Glob (multi-file) vs. Bash (system)</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td>Does this operation modify anything?</td><td>Read-only tools (Read, Grep, Glob) vs. mutating tools (Write, Edit, Bash)</td></tr>
+  <tr><td><strong>Precision</strong></td><td>Do I need surgical accuracy or broad results?</td><td>Edit (precise) vs. Write (whole file) vs. Bash (arbitrary)</td></tr>
+  <tr><td><strong>Statefulness</strong></td><td>Does this depend on prior command state (cwd, env vars)?</td><td>Bash (stateful) vs. all others (stateless per call)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Decision Flowchart</h3>
+
+<div class="diagram-container">
+<svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" style="max-width:780px;">
+  <!-- Styles -->
+  <style>
+    .node-rect { rx: 8; ry: 8; stroke-width: 2; }
+    .node-text { font-family: -apple-system, sans-serif; font-size: 12px; fill: white; font-weight: 600; text-anchor: middle; }
+    .decision-diamond { stroke-width: 2; }
+    .label-text { font-family: -apple-system, sans-serif; font-size: 11px; fill: #4a5568; font-weight: 500; }
+    .tool-text { font-family: Consolas, monospace; font-size: 13px; font-weight: 700; }
+    .edge-label { font-family: -apple-system, sans-serif; font-size: 10px; fill: #8993a4; font-weight: 600; }
+    .arrow { stroke: #94a3b8; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"></polygon>
+    </marker>
+  </defs>
+
+  <!-- START node -->
+  <rect x="320" y="10" width="160" height="36" class="node-rect" fill="#0052CC" stroke="#0052CC"></rect>
+  <text x="400" y="33" class="node-text">What's the task?</text>
+
+  <!-- Branch arrows from start -->
+  <line x1="340" y1="46" x2="160" y2="90" class="arrow"></line>
+  <text x="230" y="62" class="edge-label">Find files</text>
+
+  <line x1="400" y1="46" x2="400" y2="90" class="arrow"></line>
+  <text x="415" y="72" class="edge-label">Read / Search content</text>
+
+  <line x1="460" y1="46" x2="640" y2="90" class="arrow"></line>
+  <text x="570" y="62" class="edge-label">Modify / Execute</text>
+
+  <!-- GLOB terminal -->
+  <rect x="80" y="90" width="160" height="42" class="node-rect" fill="#00b8d9" stroke="#00b8d9"></rect>
+  <text x="160" y="106" class="tool-text" fill="white">Glob</text>
+  <text x="160" y="122" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">File path patterns</text>
+
+  <!-- Content branch — decision diamond -->
+  <polygon points="400,90 490,130 400,170 310,130" fill="#f7f8fa" stroke="#d1d5db" class="decision-diamond"></polygon>
+  <text x="400" y="126" class="label-text" text-anchor="middle" font-size="11">Need file</text>
+  <text x="400" y="139" class="label-text" text-anchor="middle" font-size="11">contents?</text>
+
+  <!-- Grep branch (NO — just pattern match) -->
+  <line x1="310" y1="130" x2="200" y2="190" class="arrow"></line>
+  <text x="230" y="160" class="edge-label">Pattern search</text>
+
+  <rect x="100" y="190" width="160" height="42" class="node-rect" fill="#ff991f" stroke="#ff991f"></rect>
+  <text x="180" y="206" class="tool-text" fill="white">Grep</text>
+  <text x="180" y="222" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Regex across files</text>
+
+  <!-- Read branch (YES — view contents) -->
+  <line x1="400" y1="170" x2="400" y2="210" class="arrow"></line>
+  <text x="415" y="194" class="edge-label">View full file</text>
+
+  <rect x="320" y="210" width="160" height="42" class="node-rect" fill="#36b37e" stroke="#36b37e"></rect>
+  <text x="400" y="226" class="tool-text" fill="white">Read</text>
+  <text x="400" y="242" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">File path → text</text>
+
+  <!-- Modify/Execute branch — decision diamond -->
+  <polygon points="640,90 730,130 640,170 550,130" fill="#f7f8fa" stroke="#d1d5db" class="decision-diamond"></polygon>
+  <text x="640" y="126" class="label-text" text-anchor="middle" font-size="11">File edit or</text>
+  <text x="640" y="139" class="label-text" text-anchor="middle" font-size="11">shell command?</text>
+
+  <!-- File edit sub-decision -->
+  <line x1="595" y1="162" x2="510" y2="210" class="arrow"></line>
+  <text x="535" y="183" class="edge-label">File edit</text>
+
+  <!-- Shell command -->
+  <line x1="685" y1="162" x2="700" y2="290" class="arrow"></line>
+  <text x="710" y="230" class="edge-label">Shell</text>
+
+  <!-- Edit vs Write decision diamond -->
+  <polygon points="480,210 550,250 480,290 410,250" fill="#f7f8fa" stroke="#d1d5db" class="decision-diamond"></polygon>
+  <text x="480" y="245" class="label-text" text-anchor="middle" font-size="11">Targeted</text>
+  <text x="480" y="258" class="label-text" text-anchor="middle" font-size="11">change?</text>
+
+  <!-- Edit (YES — targeted) -->
+  <line x1="435" y1="270" x2="350" y2="320" class="arrow"></line>
+  <text x="372" y="293" class="edge-label">Yes — surgical</text>
+
+  <rect x="260" y="320" width="160" height="42" class="node-rect" fill="#6554C0" stroke="#6554C0"></rect>
+  <text x="340" y="336" class="tool-text" fill="white">Edit</text>
+  <text x="340" y="352" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">old_string → new_string</text>
+
+  <!-- Write (NO — whole file) -->
+  <line x1="525" y1="270" x2="570" y2="320" class="arrow"></line>
+  <text x="565" y="293" class="edge-label">No — full rewrite</text>
+
+  <rect x="510" y="320" width="160" height="42" class="node-rect" fill="#e8590c" stroke="#e8590c"></rect>
+  <text x="590" y="336" class="tool-text" fill="white">Write</text>
+  <text x="590" y="352" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Full file overwrite</text>
+
+  <!-- Bash terminal -->
+  <rect x="640" y="290" width="140" height="42" class="node-rect" fill="#de350b" stroke="#de350b"></rect>
+  <text x="710" y="306" class="tool-text" fill="white">Bash</text>
+  <text x="710" y="322" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Shell execution</text>
+
+  <!-- Bottom legend -->
+  <rect x="140" y="410" width="520" height="95" rx="8" fill="#f7f8fa" stroke="#e8eaed" stroke-width="1"></rect>
+  <text x="400" y="432" style="font-family:-apple-system,sans-serif;font-size:11px;fill:#4a5568;font-weight:700;text-anchor:middle;text-transform:uppercase;letter-spacing:0.05em;">PRINCIPLE OF LEAST PRIVILEGE</text>
+  <text x="400" y="452" style="font-family:-apple-system,sans-serif;font-size:12px;fill:#4a5568;text-anchor:middle;">Always choose the <tspan font-weight="700">most specific</tspan> tool with the <tspan font-weight="700">fewest side effects</tspan></text>
+  <text x="400" y="472" style="font-family:-apple-system,sans-serif;font-size:12px;fill:#4a5568;text-anchor:middle;">that fully satisfies the requirement.</text>
+  <text x="400" y="494" style="font-family:Consolas,monospace;font-size:11px;fill:#6554C0;text-anchor:middle;font-weight:600;">Read/Grep/Glob → Edit → Write → Bash (escalation order)</text>
+</svg>
+</div>
+
+
+<h3>"When NOT to Use" Guide</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th>Tool</th><th>❌ Do NOT Use When…</th><th>✅ Use This Instead</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td><code>Read</code></td>
+    <td>You only need to check if a pattern exists in a file (don't read the whole thing)</td>
+    <td><code>Grep</code> — pattern search is more efficient</td>
+  </tr>
+  <tr>
+    <td><code>Write</code></td>
+    <td>You only need to change a few lines in an existing file</td>
+    <td><code>Edit</code> — surgical edits preserve the rest of the file</td>
+  </tr>
+  <tr>
+    <td><code>Edit</code></td>
+    <td>The file doesn't exist yet (Edit requires an existing file to modify)</td>
+    <td><code>Write</code> — create the file first, then Edit if needed later</td>
+  </tr>
+  <tr>
+    <td><code>Bash</code></td>
+    <td>A dedicated tool exists for the operation (reading files, searching, etc.)</td>
+    <td>Use the dedicated tool — Bash is the fallback, not the default</td>
+  </tr>
+  <tr>
+    <td><code>Grep</code></td>
+    <td>You need to find files by name/extension, not by content</td>
+    <td><code>Glob</code> — path-based matching is Glob's specialty</td>
+  </tr>
+  <tr>
+    <td><code>Glob</code></td>
+    <td>You need to find files containing a specific string or pattern</td>
+    <td><code>Grep</code> — content search across multiple files</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<h3>Quick-Pick Cheat Sheet</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th>Scenario</th><th>Best Tool</th><th>Rationale</th></tr>
+</thead>
+<tbody>
+  <tr><td>"View the database config file"</td><td><code>Read</code></td><td>Simple file viewing, no mutation needed</td></tr>
+  <tr><td>"Find all Python test files"</td><td><code>Glob</code></td><td>File path matching by naming convention</td></tr>
+  <tr><td>"Search for <code>TODO</code> comments across the repo"</td><td><code>Grep</code></td><td>Content pattern search, multi-file</td></tr>
+  <tr><td>"Fix a typo in the README"</td><td><code>Edit</code></td><td>Targeted, single-location text replacement</td></tr>
+  <tr><td>"Create a new <code>.env.example</code> file"</td><td><code>Write</code></td><td>File doesn't exist yet; new creation</td></tr>
+  <tr><td>"Run the test suite"</td><td><code>Bash</code></td><td>Requires shell execution (<code>npm test</code>, <code>pytest</code>)</td></tr>
+  <tr><td>"Rename a variable across 3 files"</td><td><code>Grep</code> → <code>Edit</code></td><td>Find occurrences first, then Edit each</td></tr>
+  <tr><td>"Check if <code>node_modules</code> exists"</td><td><code>Glob</code></td><td>File existence check by path pattern</td></tr>
+  <tr><td>"Install a missing dependency"</td><td><code>Bash</code></td><td>Package manager requires shell access</td></tr>
+  <tr><td>"Rewrite a utility module from scratch"</td><td><code>Write</code></td><td>Full file replacement — Edit would be too fragmented</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ── Exam Strategy 11.2 ─────────────────── -->
+<div class="exam-panel">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-pen-fancy"></i>
+    <span>Exam Strategy — 11.2 Selection Criteria</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Question Type:</span>
+    <span class="field-value">Scenario-Based MCQ (given a task, pick the tool)</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Common Traps:</span>
+    <span class="field-value">
+      ① Using <strong>Bash</strong> (<code>cat file</code>) when <strong>Read</strong> is the correct answer — Bash "works" but isn't the <em>best</em> choice.<br>
+      ② Using <strong>Write</strong> to "update" a file when only a small change is needed — <strong>Edit</strong> is more appropriate.<br>
+      ③ Confusing Grep (content search) with Glob (path search) — the names aren't intuitive for everyone.
+    </span>
+  </div>
+  <div class="field">
+    <span class="field-label">Answer Approach:</span>
+    <span class="field-value">
+      Three-step method: <strong>① Classify</strong> the task (read / write / search / execute) → <strong>② Scope</strong> it (single file / multi-file / system) → <strong>③ Minimize</strong> side effects (pick the least-powerful tool that works).
+    </span>
+  </div>
+  <div class="field">
+    <span class="field-label">Memory Hook:</span>
+    <span class="field-value"><strong>"Least Power Principle"</strong> — always escalate from read-only → targeted edit → full write → shell. The exam rewards the <em>most specific</em> tool, never the most powerful.</span>
+  </div>
+  <div class="sample-q">
+    <div class="q-label">Sample Question</div>
+    <p><em>"An agent needs to check if a config value exists across 200 YAML files without modifying anything. Which built-in tool is MOST appropriate?"</em></p>
+    <p>A) Read each file and scan for the value&nbsp;&nbsp; B) Bash (<code>grep -r "value" *.yaml</code>)&nbsp;&nbsp; C) Grep&nbsp;&nbsp; D) Glob</p>
+    <div class="answer">
+      <strong>Answer: C</strong>
+      <p><strong>Grep</strong> is purpose-built for multi-file pattern search. Reading all 200 files wastes context tokens. Bash's <code>grep</code> would work but the built-in Grep tool is preferred (better integration, no side effects). Glob only returns paths, not content.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11.3 — COMBINING TOOLS                   -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s11-3">
+<h2><span class="sec-num">11.3</span> Combining Built-In Tools for Codebase Exploration</h2>
+
+<p>
+  The true power of built-in tools emerges when they are <strong>composed into multi-step workflows</strong>. Each tool's output can inform or scope the next tool's input, creating efficient exploration and modification pipelines. Understanding these composition patterns is critical for the exam.
+</p>
+
+<h3>Workflow 1: "Find → Read → Edit" (Targeted Bug Fix)</h3>
+<p><strong>Scenario:</strong> A bug report says the <code>calculateDiscount()</code> function uses the wrong rounding logic. Fix it.</p>
+
+<div class="workflow">
+  <div class="wf-header"><i class="fa-solid fa-code-branch"></i> Find → Read → Edit Pipeline</div>
+  <div class="wf-step">
+    <div class="wf-step-num">1</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Grep</span> <strong>Locate the function definition</strong>
+      <p>Search for <code>def calculateDiscount</code> or <code>function calculateDiscount</code> across the codebase to find which file and line number contains the function.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">2</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Read</span> <strong>View the function in context</strong>
+      <p>Read the file at the identified path, focusing on the line range around the function to understand the current logic and surrounding code.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">3</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Edit</span> <strong>Apply the surgical fix</strong>
+      <p>Use <code>old_string</code> (the broken rounding line) → <code>new_string</code> (the corrected logic) to fix just the problematic code.</p>
+    </div>
+  </div>
+</div>
+
+<pre><span class="label">PSEUDOCODE</span>
+<span class="cm">// Step 1: Grep — find the function</span>
+Grep(pattern=<span class="str">"def calculateDiscount"</span>, include=<span class="str">"*.py"</span>)
+<span class="cm">// → Result: src/pricing/discount.py:42</span>
+
+<span class="cm">// Step 2: Read — view the function</span>
+Read(file_path=<span class="str">"src/pricing/discount.py"</span>, offset=<span class="num">40</span>, limit=<span class="num">60</span>)
+<span class="cm">// → Returns lines 40-60, showing the full function body</span>
+
+<span class="cm">// Step 3: Edit — fix the rounding</span>
+Edit(
+  file_path=<span class="str">"src/pricing/discount.py"</span>,
+  old_string=<span class="str">"return math.floor(price * discount_rate)"</span>,
+  new_string=<span class="str">"return round(price * discount_rate, 2)"</span>
+)</pre>
+
+<div class="callout tip">
+  <div class="callout-icon">💡</div>
+  <div class="callout-body">
+    <strong>Handoff Point</strong>
+    <p>Grep's output (file path + line number) directly informs Read's input (which file and line range to view). Read's output (the actual code) informs Edit's <code>old_string</code> parameter. Each tool receives context from the previous step.</p>
+  </div>
+</div>
+
+
+<h3>Workflow 2: "Glob → Grep → Read" (Dependency Audit)</h3>
+<p><strong>Scenario:</strong> Audit the project to find all files that import a deprecated library (<code>legacy_auth</code>) and understand how each uses it.</p>
+
+<div class="workflow">
+  <div class="wf-header"><i class="fa-solid fa-shield-halved"></i> Glob → Grep → Read Pipeline</div>
+  <div class="wf-step">
+    <div class="wf-step-num">1</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Glob</span> <strong>Discover all Python files</strong>
+      <p>Use <code>**/*.py</code> to get a complete list of Python files in the project. This scopes the search space.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">2</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Grep</span> <strong>Find files importing the deprecated library</strong>
+      <p>Search for <code>import legacy_auth</code> or <code>from legacy_auth</code> across the identified Python files.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">3</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Read</span> <strong>Deep-dive into each affected file</strong>
+      <p>For each file that imports the deprecated library, read the relevant sections to understand the usage pattern and plan the migration.</p>
+    </div>
+  </div>
+</div>
+
+<pre><span class="label">PSEUDOCODE</span>
+<span class="cm">// Step 1: Glob — discover all Python files</span>
+Glob(pattern=<span class="str">"**/*.py"</span>)
+<span class="cm">// → Result: [src/auth/login.py, src/api/middleware.py, tests/test_auth.py, ...]</span>
+
+<span class="cm">// Step 2: Grep — find deprecated imports</span>
+Grep(pattern=<span class="str">"from legacy_auth|import legacy_auth"</span>, include=<span class="str">"*.py"</span>)
+<span class="cm">// → Result:
+//   src/auth/login.py:3:  from legacy_auth import verify_token
+//   src/api/middleware.py:7:  import legacy_auth</span>
+
+<span class="cm">// Step 3: Read — understand usage in each file</span>
+Read(file_path=<span class="str">"src/auth/login.py"</span>)
+Read(file_path=<span class="str">"src/api/middleware.py"</span>)</pre>
+
+
+<h3>Workflow 3: "Grep → Read → Edit → Bash" (Rename and Verify)</h3>
+<p><strong>Scenario:</strong> Rename a function <code>getUserData</code> to <code>fetchUserProfile</code> across the codebase, then run tests to verify nothing broke.</p>
+
+<div class="workflow">
+  <div class="wf-header"><i class="fa-solid fa-arrows-rotate"></i> Grep → Read → Edit → Bash Pipeline</div>
+  <div class="wf-step">
+    <div class="wf-step-num">1</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Grep</span> <strong>Find all occurrences</strong>
+      <p>Locate every reference to <code>getUserData</code> across all source files — definitions, call sites, imports, and tests.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">2</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Read</span> <strong>Verify context at each location</strong>
+      <p>Read surrounding code at each occurrence to confirm it's a true reference (not a comment, string, or different scope) before editing.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">3</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Edit</span> <strong>Rename at each location</strong>
+      <p>Apply Edit with <code>old_string="getUserData"</code> → <code>new_string="fetchUserProfile"</code> in each file, ensuring unique matches.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">4</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Bash</span> <strong>Run the test suite</strong>
+      <p>Execute <code>npm test</code> or <code>pytest</code> to verify the rename didn't break anything. Check for compilation errors and test failures.</p>
+    </div>
+  </div>
+</div>
+
+<pre><span class="label">PSEUDOCODE</span>
+<span class="cm">// Step 1: Find all references</span>
+Grep(pattern=<span class="str">"getUserData"</span>, include=<span class="str">"*.ts"</span>)
+<span class="cm">// → src/services/user.ts:15 (definition)
+//   src/api/routes.ts:42 (call site)
+//   src/api/routes.ts:87 (call site)
+//   tests/user.test.ts:12 (test)</span>
+
+<span class="cm">// Step 2: Verify each (Read the relevant lines)</span>
+Read(<span class="str">"src/services/user.ts"</span>, offset=<span class="num">13</span>, limit=<span class="num">20</span>)
+Read(<span class="str">"src/api/routes.ts"</span>, offset=<span class="num">40</span>, limit=<span class="num">50</span>)
+
+<span class="cm">// Step 3: Edit each file (multiple Edit calls)</span>
+Edit(<span class="str">"src/services/user.ts"</span>,
+  old_string=<span class="str">"export async function getUserData("</span>,
+  new_string=<span class="str">"export async function fetchUserProfile("</span>)
+Edit(<span class="str">"src/api/routes.ts"</span>,
+  old_string=<span class="str">"const data = await getUserData(userId)"</span>,
+  new_string=<span class="str">"const data = await fetchUserProfile(userId)"</span>)
+<span class="cm">// ... repeat for each occurrence</span>
+
+<span class="cm">// Step 4: Verify with tests</span>
+Bash(command=<span class="str">"npm test"</span>)</pre>
+
+
+<h3>Pitfalls &amp; Anti-Patterns</h3>
+
+<div class="callout danger">
+  <div class="callout-icon">🔴</div>
+  <div class="callout-body">
+    <strong>Anti-Pattern: "Bash Everything"</strong>
+    <p>Using <code>Bash("cat file.py")</code> instead of <code>Read("file.py")</code>, or <code>Bash("grep pattern *.py")</code> instead of <code>Grep("pattern")</code>. While functional, this bypasses the safety and integration benefits of dedicated tools. The exam will penalize this approach.</p>
+  </div>
+</div>
+
+<div class="callout danger">
+  <div class="callout-icon">🔴</div>
+  <div class="callout-body">
+    <strong>Anti-Pattern: "Write-for-Edit"</strong>
+    <p>Reading an entire file, modifying one line in the string, then using Write to replace the whole file. This is fragile — if the file was modified between the Read and Write, your changes will silently overwrite the intervening changes. Use Edit for targeted modifications.</p>
+  </div>
+</div>
+
+<div class="callout danger">
+  <div class="callout-icon">🔴</div>
+  <div class="callout-body">
+    <strong>Anti-Pattern: "Blind Edit"</strong>
+    <p>Calling Edit without first using Read to verify the current state of the file. The <code>old_string</code> might not match due to prior changes, different formatting, or incorrect assumptions. Always Read before Edit.</p>
+  </div>
+</div>
+
+<div class="callout warning">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-body">
+    <strong>Anti-Pattern: "Glob Without Follow-Up"</strong>
+    <p>Using Glob to find files but then not doing anything with the results. Glob is a <em>scoping</em> tool — its output is meant to feed into Grep, Read, or other tools. By itself, a file listing is rarely the answer.</p>
+  </div>
+</div>
+
+
+<!-- ── Exam Strategy 11.3 ─────────────────── -->
+<div class="exam-panel">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-pen-fancy"></i>
+    <span>Exam Strategy — 11.3 Combining Tools</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Question Type:</span>
+    <span class="field-value">Scenario-Based (order the steps / identify the workflow)</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Common Traps:</span>
+    <span class="field-value">
+      ① Skipping the Read step before Edit (blind editing).<br>
+      ② Using Write when multiple Edit calls would be safer.<br>
+      ③ Not verifying changes with Bash (test execution) after modifications.
+    </span>
+  </div>
+  <div class="field">
+    <span class="field-label">Answer Approach:</span>
+    <span class="field-value">Trace the data flow: <em>What information does each step produce?</em> and <em>What does the next step need as input?</em> The correct workflow has clear handoff points.</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Memory Hook:</span>
+    <span class="field-value"><strong>"Scout → Study → Strike → Verify"</strong> = Grep/Glob (find) → Read (understand) → Edit/Write (change) → Bash (confirm). This is the canonical 4-phase workflow.</span>
+  </div>
+  <div class="sample-q">
+    <div class="q-label">Sample Question</div>
+    <p><em>"An agent needs to update the API version string from 'v2.1' to 'v3.0' across all TypeScript files, then verify the build succeeds. What is the correct sequence?"</em></p>
+    <p>A) Edit → Bash&nbsp;&nbsp; B) Grep → Edit → Bash&nbsp;&nbsp; C) Grep → Read → Edit → Bash&nbsp;&nbsp; D) Glob → Write → Bash</p>
+    <div class="answer">
+      <strong>Answer: C</strong>
+      <p>The correct workflow is: <strong>Grep</strong> (find all occurrences of 'v2.1' in *.ts files) → <strong>Read</strong> (verify each occurrence is a real API version, not a comment or unrelated string) → <strong>Edit</strong> (replace 'v2.1' → 'v3.0' at each location) → <strong>Bash</strong> (run the build/tests to verify). Skipping Read (option B) risks blind edits; Glob + Write (option D) is the wrong tool combination.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11.4 — EXPLORE SUBAGENT                  -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s11-4">
+<h2><span class="sec-num">11.4</span> The Explore Subagent for Verbose Discovery</h2>
+
+<p>
+  The <strong>Explore subagent</strong> is a specialized delegation mechanism in Claude Code that allows the primary agent to spawn a lightweight subagent for <strong>verbose, exploratory tasks</strong> — reading many files, searching broadly, and building a holistic understanding of a codebase — without consuming the primary agent's context window.
+</p>
+
+<h3>What Is the Explore Subagent?</h3>
+
+<p>
+  When Claude Code encounters a task that requires extensive codebase exploration (e.g., "understand how authentication works in this project"), it can delegate that exploration to a subagent. This subagent:
+</p>
+
+<ul style="padding-left: 20px; margin-bottom: 16px;">
+  <li>Has access to the same built-in tools (Read, Grep, Glob — <strong>read-only tools only</strong>)</li>
+  <li>Operates in its <strong>own context window</strong>, so reading 20+ files doesn't consume the parent's tokens</li>
+  <li>Returns a <strong>synthesized summary</strong> to the parent agent, not the raw file contents</li>
+  <li>Cannot modify files — it is a <strong>read-only exploration agent</strong></li>
+  <li>Is useful when the agent doesn't know <em>where</em> to look or <em>what</em> to look for yet</li>
+</ul>
+
+<h3>When to Use Explore vs. Direct Tool Calls</h3>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr><th style="width:15%">Factor</th><th style="width:42%">Direct Tool Calls (Grep + Glob + Read)</th><th style="width:42%">Explore Subagent</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td><strong>Use When</strong></td>
+    <td>You know <em>exactly</em> what you're looking for — a specific function, variable, file, or pattern</td>
+    <td>You need to <em>understand</em> something broadly — how a system works, what a module does, how components connect</td>
+  </tr>
+  <tr>
+    <td><strong>Scope</strong></td>
+    <td>Narrow: 1–5 files, specific patterns</td>
+    <td>Wide: many files, exploratory, open-ended</td>
+  </tr>
+  <tr>
+    <td><strong>Context Cost</strong></td>
+    <td>Every file read and search result consumes tokens in the main context window</td>
+    <td>Only the <em>summary</em> comes back — raw exploration stays in the subagent's context</td>
+  </tr>
+  <tr>
+    <td><strong>Speed</strong></td>
+    <td>Faster for targeted lookups — no subagent overhead</td>
+    <td>Slightly slower (subagent initialization), but saves tokens on broad exploration</td>
+  </tr>
+  <tr>
+    <td><strong>Modification</strong></td>
+    <td>Can chain into Edit/Write/Bash after reading</td>
+    <td><strong>Read-only</strong> — cannot modify files. Returns knowledge for the parent to act on</td>
+  </tr>
+  <tr>
+    <td><strong>Example</strong></td>
+    <td><em>"Find where <code>processPayment</code> is defined"</em></td>
+    <td><em>"Map the authentication flow from login to session management"</em></td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout info">
+  <div class="callout-icon">ℹ️</div>
+  <div class="callout-body">
+    <strong>Key Insight: Context Window Efficiency</strong>
+    <p>The Explore subagent's primary advantage is <strong>context window management</strong>. If understanding a feature requires reading 15 files, doing so directly would consume thousands of tokens. The subagent reads all 15, synthesizes the understanding, and returns a concise summary — perhaps 200 tokens — to the parent.</p>
+  </div>
+</div>
+
+<h3>Worked Example: Exploring an Authentication System</h3>
+
+<div class="workflow">
+  <div class="wf-header"><i class="fa-solid fa-binoculars"></i> Explore Subagent — Authentication Audit</div>
+  <div class="wf-step">
+    <div class="wf-step-num">1</div>
+    <div class="wf-step-body">
+      <strong>Parent agent dispatches the Explore subagent</strong>
+      <p>Task: <em>"Explore the authentication and authorization system. Identify: entry points, middleware, token handling, session management, and any security concerns."</em></p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">2</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Glob</span> <strong>Subagent discovers the project structure</strong>
+      <p><code>**/auth*</code>, <code>**/middleware*</code>, <code>**/session*</code> — identifies relevant files.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">3</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Grep</span> <strong>Subagent searches for key patterns</strong>
+      <p>Searches for <code>jwt</code>, <code>session</code>, <code>authenticate</code>, <code>authorize</code>, <code>token</code> across the codebase.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">4</div>
+    <div class="wf-step-body">
+      <span class="tool-tag">Read</span> <strong>Subagent reads 12+ files in its own context</strong>
+      <p>Reads auth controllers, middleware, models, config — building a complete picture without burdening the parent's context.</p>
+    </div>
+  </div>
+  <div class="wf-step">
+    <div class="wf-step-num">5</div>
+    <div class="wf-step-body">
+      <strong>Subagent returns a synthesized summary</strong>
+      <p>A structured report: auth flow diagram, key files, middleware chain, token lifecycle, identified concerns. Parent receives this compact summary.</p>
+    </div>
+  </div>
+</div>
+
+<pre><span class="label">CONCEPTUAL INVOCATION</span>
+<span class="cm">// Parent agent dispatches exploration</span>
+<span class="kw">dispatch_agent</span>(
+  task=<span class="str">"Explore the authentication system in this project. "</span>
+     + <span class="str">"Map: entry points, middleware, token handling, sessions. "</span>
+     + <span class="str">"Identify security concerns."</span>,
+  tools=[<span class="str">"Read"</span>, <span class="str">"Grep"</span>, <span class="str">"Glob"</span>]  <span class="cm">// read-only tools only</span>
+)
+<span class="cm">// → Returns: synthesized summary (~200 tokens)
+// instead of raw content from 12+ files (~5000+ tokens)</span></pre>
+
+
+<!-- ── Exam Strategy 11.4 ─────────────────── -->
+<div class="exam-panel">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-pen-fancy"></i>
+    <span>Exam Strategy — 11.4 Explore Subagent</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Question Type:</span>
+    <span class="field-value">Scenario-Based / True-False (when to delegate, what the subagent can/cannot do)</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Common Traps:</span>
+    <span class="field-value">
+      ① Thinking the Explore subagent can <strong>modify</strong> files (it cannot — read-only).<br>
+      ② Using Explore for a simple, targeted lookup that Grep handles in one call.<br>
+      ③ Forgetting that the subagent has its <em>own</em> context window — that's the whole point.
+    </span>
+  </div>
+  <div class="field">
+    <span class="field-label">Answer Approach:</span>
+    <span class="field-value">Ask: <em>"Is this exploration broad and open-ended, or narrow and targeted?"</em> Broad → Explore. Narrow → direct Grep/Read. Also ask: <em>"Will reading all this content blow up my context window?"</em> If yes → Explore.</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Memory Hook:</span>
+    <span class="field-value"><strong>"Explore = Scout, not Soldier"</strong> — it gathers intelligence (read-only) and reports back, but never fights (no modifications). Think of it as sending a reconnaissance drone.</span>
+  </div>
+  <div class="sample-q">
+    <div class="q-label">Sample Question</div>
+    <p><em>"True or False: The Explore subagent can use the Edit tool to fix bugs it discovers during codebase exploration."</em></p>
+    <div class="answer">
+      <strong>Answer: False</strong>
+      <p>The Explore subagent is <strong>strictly read-only</strong>. It can use Read, Grep, and Glob to explore the codebase, but it cannot use Edit, Write, or Bash. If it finds a bug, it reports the finding back to the parent agent, which then decides how to act on it.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11.5 — HANDS-ON WALKTHROUGH              -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s11-5">
+<h2><span class="sec-num">11.5</span> Hands-On: Navigating a Large Codebase with Built-In Tools</h2>
+
+<p>
+  This section walks through a <strong>realistic end-to-end scenario</strong> where an agent navigates an unfamiliar 50,000-line microservices project. At each step, we explain the <em>reasoning</em> behind the tool choice — the same reasoning the exam expects you to demonstrate.
+</p>
+
+<h3>Scenario Setup</h3>
+
+<div class="callout info">
+  <div class="callout-icon">📁</div>
+  <div class="callout-body">
+    <strong>Project: E-Commerce Order Service</strong>
+    <p>A TypeScript microservice with ~50,000 lines across 200+ files. The task: <em>"The <code>/orders/refund</code> endpoint is returning 500 errors in production. Diagnose and fix the issue."</em></p>
+  </div>
+</div>
+
+<h4>Phase 1: Orientation — Understanding the Project</h4>
+
+<p><strong>Reasoning:</strong> <em>"I've never seen this codebase. Before debugging, I need to understand the project structure, entry points, and how the code is organized."</em></p>
+
+<pre><span class="label">STEP 1 — GLOB</span>
+<span class="cm">// Discover the top-level project structure</span>
+Glob(pattern=<span class="str">"*"</span>)
+<span class="cm">// → [src/, tests/, package.json, tsconfig.json, docker-compose.yml, README.md, ...]</span>
+
+<span class="cm">// Drill into the source directory</span>
+Glob(pattern=<span class="str">"src/**/*.ts"</span>)
+<span class="cm">// → [src/index.ts, src/routes/orders.ts, src/routes/products.ts,
+//    src/controllers/orderController.ts, src/services/refundService.ts,
+//    src/models/order.ts, src/middleware/auth.ts, ...]</span></pre>
+
+<p><strong>Tool choice rationale:</strong> Glob is the right starting tool because we need to understand the <em>file structure</em>, not file contents. It's read-only and returns paths quickly.</p>
+
+
+<h4>Phase 2: Targeting — Finding the Relevant Code</h4>
+
+<p><strong>Reasoning:</strong> <em>"The bug is in the <code>/orders/refund</code> endpoint. I need to trace from the route definition to the handler logic."</em></p>
+
+<pre><span class="label">STEP 2 — GREP</span>
+<span class="cm">// Find the route definition</span>
+Grep(pattern=<span class="str">"/orders/refund|orders.*refund"</span>, include=<span class="str">"*.ts"</span>)
+<span class="cm">// → src/routes/orders.ts:47:  router.post('/orders/refund', orderController.processRefund)
+//   src/controllers/orderController.ts:89:  async processRefund(req, res) {
+//   tests/orders.test.ts:156:  describe('/orders/refund', () =&gt; {</span></pre>
+
+<p><strong>Tool choice rationale:</strong> Grep searches <em>file contents</em> across the entire codebase using a regex pattern. We know the string we're looking for (<code>/orders/refund</code>), making this a targeted content search — exactly what Grep excels at.</p>
+
+
+<h4>Phase 3: Deep Dive — Understanding the Code</h4>
+
+<p><strong>Reasoning:</strong> <em>"I found the controller method at line 89 in orderController.ts. Now I need to read the actual implementation to understand the logic."</em></p>
+
+<pre><span class="label">STEP 3 — READ</span>
+<span class="cm">// Read the controller method</span>
+Read(file_path=<span class="str">"src/controllers/orderController.ts"</span>, offset=<span class="num">85</span>, limit=<span class="num">130</span>)
+<span class="cm">// → Shows the processRefund method:
+//   89:  async processRefund(req: Request, res: Response) {
+//   90:    const { orderId, reason } = req.body;
+//   91:    const order = await this.orderService.getOrder(orderId);
+//   92:    const refundResult = await this.refundService.process(order, reason);
+//   93:    ...
+//   95:  }</span>
+
+<span class="cm">// Follow the chain — read the refund service</span>
+Read(file_path=<span class="str">"src/services/refundService.ts"</span>)
+<span class="cm">// → Reveals the full refund logic, including a call to
+//   an external payment API with error handling</span></pre>
+
+<p><strong>Tool choice rationale:</strong> Read with line-range parameters lets us view exactly the function body without wasting context on the entire 500-line controller file. We read the controller first, then follow the call chain to the service layer.</p>
+
+
+<h4>Phase 4: Root Cause — Identifying the Bug</h4>
+
+<p><strong>Reasoning:</strong> <em>"In the refund service, I notice the error handler catches errors but re-throws without the correct status code. Let me also check the error logs with the test file."</em></p>
+
+<pre><span class="label">STEP 4 — GREP + READ</span>
+<span class="cm">// Search for error handling patterns in the refund service</span>
+Grep(pattern=<span class="str">"catch|throw|Error"</span>, path=<span class="str">"src/services/refundService.ts"</span>)
+<span class="cm">// → Line 34: } catch (error) {
+//   Line 35:   throw new Error(error.message);  // ← BUG: loses status code!</span>
+
+<span class="cm">// Read the test file to understand expected behavior</span>
+Read(file_path=<span class="str">"tests/orders.test.ts"</span>, offset=<span class="num">156</span>, limit=<span class="num">200</span>)
+<span class="cm">// → Tests expect a RefundError with statusCode property</span></pre>
+
+
+<h4>Phase 5: Fix — Applying the Correction</h4>
+
+<p><strong>Reasoning:</strong> <em>"The bug is clear: <code>throw new Error(error.message)</code> discards the original error's status code. I need to preserve it."</em></p>
+
+<pre><span class="label">STEP 5 — EDIT</span>
+Edit(
+  file_path=<span class="str">"src/services/refundService.ts"</span>,
+  old_string=<span class="str">"    throw new Error(error.message);"</span>,
+  new_string=<span class="str">"    throw new RefundError(error.message, error.statusCode || 500);"</span>
+)</pre>
+
+<p><strong>Tool choice rationale:</strong> Edit is the correct tool because we're making a surgical, single-line change to an existing file. The old_string is unique within the file. Using Write would require rewriting the entire service file — unnecessary and risky.</p>
+
+
+<h4>Phase 6: Verification — Confirming the Fix</h4>
+
+<p><strong>Reasoning:</strong> <em>"The fix is applied. Now I need to run tests and verify the build still passes."</em></p>
+
+<pre><span class="label">STEP 6 — BASH</span>
+<span class="cm">// Run the specific test suite</span>
+Bash(command=<span class="str">"npx jest tests/orders.test.ts --verbose"</span>)
+<span class="cm">// → ✓ /orders/refund returns 400 for invalid order (45ms)
+//   ✓ /orders/refund returns 200 for valid refund (82ms)
+//   ✓ /orders/refund preserves error status codes (23ms)
+//   All 12 tests passed.</span>
+
+<span class="cm">// Run the full build to check for type errors</span>
+Bash(command=<span class="str">"npx tsc --noEmit"</span>)
+<span class="cm">// → No errors.</span></pre>
+
+<p><strong>Tool choice rationale:</strong> Bash is the only tool that can <em>execute</em> programs. Running tests and builds requires shell access — this is exactly what Bash is for.</p>
+
+
+<h3>Complete Workflow Summary</h3>
+
+<div class="diagram-container">
+<svg viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" style="max-width:780px;">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"></polygon>
+    </marker>
+  </defs>
+
+  <!-- Phase boxes -->
+  <rect x="10" y="30" width="110" height="56" rx="8" fill="#00b8d9" opacity="0.9"></rect>
+  <text x="65" y="51" style="font-family:Consolas,monospace;font-size:12px;fill:white;text-anchor:middle;font-weight:700;">Glob</text>
+  <text x="65" y="69" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Orient</text>
+
+  <line x1="120" y1="58" x2="145" y2="58" class="arrow" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr2)"></line>
+
+  <rect x="145" y="30" width="110" height="56" rx="8" fill="#ff991f" opacity="0.9"></rect>
+  <text x="200" y="51" style="font-family:Consolas,monospace;font-size:12px;fill:white;text-anchor:middle;font-weight:700;">Grep</text>
+  <text x="200" y="69" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Target</text>
+
+  <line x1="255" y1="58" x2="280" y2="58" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr2)"></line>
+
+  <rect x="280" y="30" width="110" height="56" rx="8" fill="#36b37e" opacity="0.9"></rect>
+  <text x="335" y="51" style="font-family:Consolas,monospace;font-size:12px;fill:white;text-anchor:middle;font-weight:700;">Read</text>
+  <text x="335" y="69" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Understand</text>
+
+  <line x1="390" y1="58" x2="415" y2="58" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr2)"></line>
+
+  <rect x="415" y="30" width="110" height="56" rx="8" fill="#6554C0" opacity="0.9"></rect>
+  <text x="470" y="51" style="font-family:Consolas,monospace;font-size:12px;fill:white;text-anchor:middle;font-weight:700;">Edit</text>
+  <text x="470" y="69" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Fix</text>
+
+  <line x1="525" y1="58" x2="550" y2="58" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr2)"></line>
+
+  <rect x="550" y="30" width="110" height="56" rx="8" fill="#de350b" opacity="0.9"></rect>
+  <text x="605" y="51" style="font-family:Consolas,monospace;font-size:12px;fill:white;text-anchor:middle;font-weight:700;">Bash</text>
+  <text x="605" y="69" style="font-family:-apple-system,sans-serif;font-size:10px;fill:rgba(255,255,255,0.85);text-anchor:middle;">Verify</text>
+
+  <line x1="660" y1="58" x2="685" y2="58" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr2)"></line>
+
+  <rect x="685" y="30" width="80" height="56" rx="8" fill="#1a202c"></rect>
+  <text x="725" y="55" style="font-family:-apple-system,sans-serif;font-size:11px;fill:white;text-anchor:middle;font-weight:700;">✓ Done</text>
+
+  <!-- Phase labels -->
+  <text x="65" y="110" style="font-family:-apple-system,sans-serif;font-size:10px;fill:#8993a4;text-anchor:middle;">Phase 1</text>
+  <text x="200" y="110" style="font-family:-apple-system,sans-serif;font-size:10px;fill:#8993a4;text-anchor:middle;">Phase 2</text>
+  <text x="335" y="110" style="font-family:-apple-system,sans-serif;font-size:10px;fill:#8993a4;text-anchor:middle;">Phase 3–4</text>
+  <text x="470" y="110" style="font-family:-apple-system,sans-serif;font-size:10px;fill:#8993a4;text-anchor:middle;">Phase 5</text>
+  <text x="605" y="110" style="font-family:-apple-system,sans-serif;font-size:10px;fill:#8993a4;text-anchor:middle;">Phase 6</text>
+
+  <!-- Principle banner -->
+  <rect x="10" y="126" width="756" height="28" rx="6" fill="#f7f8fa" stroke="#e8eaed"></rect>
+  <text x="393" y="145" style="font-family:-apple-system,sans-serif;font-size:11px;fill:#4a5568;text-anchor:middle;font-weight:500;">
+    Orient → Target → Understand → Fix → Verify  —  <tspan font-weight="700" fill="#0052CC">Least-Power, Maximum-Precision</tspan>
+  </text>
+</svg>
+</div>
+
+
+<div class="takeaway-box">
+  <h4>✅ Key Takeaways from the Walkthrough</h4>
+  <ul>
+    <li><strong>Always start with orientation</strong> — Glob to understand the structure before diving into code</li>
+    <li><strong>Narrow before deepening</strong> — use Grep to find relevant files, then Read to understand them</li>
+    <li><strong>Read before editing</strong> — never Edit blind; verify the current state of the code first</li>
+    <li><strong>Use line ranges</strong> — Read with offset/limit avoids wasting context on irrelevant code</li>
+    <li><strong>Edit for surgical changes</strong> — one-line bug fixes should use Edit, not Write</li>
+    <li><strong>Bash for verification only</strong> — in this workflow, Bash is the <em>last</em> step, not a substitute for dedicated tools</li>
+    <li><strong>Follow the call chain</strong> — trace from route → controller → service to find the actual bug location</li>
+    <li><strong>Each tool feeds the next</strong> — Glob's output scopes Grep, Grep's output targets Read, Read's output informs Edit</li>
+  </ul>
+</div>
+
+
+<!-- ── Exam Strategy 11.5 ─────────────────── -->
+<div class="exam-panel">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-pen-fancy"></i>
+    <span>Exam Strategy — 11.5 Hands-On Navigation</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Question Type:</span>
+    <span class="field-value">Scenario-Based (multi-step problem-solving, "what would you do next?")</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Common Traps:</span>
+    <span class="field-value">
+      ① Jumping straight to Bash to read files or search (should use Read/Grep).<br>
+      ② Forgetting to verify changes (missing the Bash test step).<br>
+      ③ Reading entire files instead of using line ranges for large files.
+    </span>
+  </div>
+  <div class="field">
+    <span class="field-label">Answer Approach:</span>
+    <span class="field-value">Follow the <strong>5-phase pattern</strong>: Orient (Glob) → Target (Grep) → Understand (Read) → Fix (Edit/Write) → Verify (Bash). If a question gives you a scenario mid-flow, identify which phase you're in and what comes next.</span>
+  </div>
+  <div class="field">
+    <span class="field-label">Memory Hook:</span>
+    <span class="field-value"><strong>"O-T-U-F-V"</strong> — Orient, Target, Understand, Fix, Verify. Think: <em>"Oh, That's Unexpectedly Fast, Victor!"</em></span>
+  </div>
+  <div class="sample-q">
+    <div class="q-label">Sample Question</div>
+    <p><em>"An agent has used Glob to discover the project structure and Grep to find that the <code>sendEmail</code> function is defined in <code>src/notifications/email.ts</code> at line 42. The agent needs to understand the function before modifying it. What should it do next?"</em></p>
+    <p>A) Edit the function to add error handling&nbsp;&nbsp; B) Bash <code>cat src/notifications/email.ts</code>&nbsp;&nbsp; C) Read <code>src/notifications/email.ts</code> lines 40–70&nbsp;&nbsp; D) Write a new version of the file</p>
+    <div class="answer">
+      <strong>Answer: C</strong>
+      <p><strong>Read with a line range</strong> (lines 40–70 to capture the function body with context) is the correct next step. We're in the "Understand" phase — we need to see the code before modifying it. Option A (Edit without reading) is a "blind edit" anti-pattern. Option B uses Bash when Read is the dedicated tool. Option D (Write) would overwrite the entire file.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- GLOBAL STUDY AIDS                         -->
+<!-- ══════════════════════════════════════════ -->
+
+<hr>
+
+<!-- ── Chapter Summary ────────────────────── -->
+<section id="summary">
+<h2>✅ Chapter Summary — 10-Bullet Master Recap</h2>
+
+<ol style="padding-left: 20px; font-size: 14.5px;">
+  <li style="margin-bottom:10px;"><strong>Six built-in tools</strong> — Read, Write, Edit, Bash, Grep, Glob — provide Claude with filesystem and shell access in agentic environments. Three are read-only (Read, Grep, Glob) and three are mutating (Write, Edit, Bash).</li>
+  <li style="margin-bottom:10px;"><strong>Read</strong> views file contents (optionally by line range); <strong>Write</strong> creates or <em>fully</em> overwrites files; <strong>Edit</strong> makes surgical search-and-replace changes with exact-match requirements.</li>
+  <li style="margin-bottom:10px;"><strong>Bash</strong> executes shell commands in a persistent, stateful session — use it for tests, builds, git, and packages, never as a substitute for dedicated tools.</li>
+  <li style="margin-bottom:10px;"><strong>Grep</strong> searches file <em>contents</em> by regex pattern; <strong>Glob</strong> searches file <em>paths</em> by glob pattern. They are complementary, not interchangeable.</li>
+  <li style="margin-bottom:10px;">The <strong>Principle of Least Privilege</strong> governs tool selection: always choose the most specific, least-powerful tool that satisfies the requirement. Escalation order: Read/Grep/Glob → Edit → Write → Bash.</li>
+  <li style="margin-bottom:10px;"><strong>Edit's uniqueness constraint</strong> is its defining behavior: <code>old_string</code> must match exactly once. Include surrounding context lines to ensure uniqueness.</li>
+  <li style="margin-bottom:10px;">The canonical workflow is <strong>Orient → Target → Understand → Fix → Verify</strong>: Glob (structure) → Grep (locate) → Read (comprehend) → Edit (change) → Bash (test).</li>
+  <li style="margin-bottom:10px;">The <strong>Explore subagent</strong> delegates verbose, read-only exploration to a separate context window — ideal for broad codebase understanding without consuming the parent's tokens.</li>
+  <li style="margin-bottom:10px;">Key anti-patterns: "Bash everything," "Write-for-Edit," "Blind Edit," and "Glob without follow-up." Recognizing these is a frequent exam topic.</li>
+  <li style="margin-bottom:10px;">Tool outputs <strong>chain naturally</strong>: Glob scopes Grep, Grep targets Read, Read informs Edit, Bash verifies Edit. Understanding this data flow is essential for scenario-based questions.</li>
+</ol>
+</section>
+
+<hr>
+
+<!-- ── Concept Relationship Map ────────────── -->
+<section id="concept-map">
+<h2>🔁 Concept Relationship Map</h2>
+
+<p>This diagram shows how all six tools and the Explore subagent interconnect in practice. Arrows indicate typical data flow (output of one → input of the next).</p>
+
+<div class="diagram-container">
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" style="max-width:780px;">
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"></polygon>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0052CC"></polygon>
+    </marker>
+  </defs>
+
+  <style>
+    .map-node { rx: 10; ry: 10; }
+    .map-label { font-family: Consolas, monospace; font-size: 14px; fill: white; text-anchor: middle; font-weight: 700; }
+    .map-sublabel { font-family: -apple-system, sans-serif; font-size: 10px; fill: rgba(255,255,255,0.8); text-anchor: middle; }
+    .flow-arrow { stroke: #94a3b8; stroke-width: 1.5; fill: none; marker-end: url(#arr3); }
+    .flow-arrow-primary { stroke: #0052CC; stroke-width: 2; fill: none; marker-end: url(#arrBlue); stroke-dasharray: none; }
+    .flow-label { font-family: -apple-system, sans-serif; font-size: 10px; fill: #8993a4; font-style: italic; }
+  </style>
+
+  <!-- Glob -->
+  <rect x="30" y="60" width="130" height="54" class="map-node" fill="#00b8d9"></rect>
+  <text x="95" y="83" class="map-label">Glob</text>
+  <text x="95" y="100" class="map-sublabel">Find files by path</text>
+
+  <!-- Grep -->
+  <rect x="230" y="60" width="130" height="54" class="map-node" fill="#ff991f"></rect>
+  <text x="295" y="83" class="map-label">Grep</text>
+  <text x="295" y="100" class="map-sublabel">Search content</text>
+
+  <!-- Read -->
+  <rect x="430" y="60" width="130" height="54" class="map-node" fill="#36b37e"></rect>
+  <text x="495" y="83" class="map-label">Read</text>
+  <text x="495" y="100" class="map-sublabel">View file contents</text>
+
+  <!-- Edit -->
+  <rect x="430" y="200" width="130" height="54" class="map-node" fill="#6554C0"></rect>
+  <text x="495" y="223" class="map-label">Edit</text>
+  <text x="495" y="240" class="map-sublabel">Surgical modify</text>
+
+  <!-- Write -->
+  <rect x="230" y="200" width="130" height="54" class="map-node" fill="#e8590c"></rect>
+  <text x="295" y="223" class="map-label">Write</text>
+  <text x="295" y="240" class="map-sublabel">Create / overwrite</text>
+
+  <!-- Bash -->
+  <rect x="630" y="130" width="130" height="54" class="map-node" fill="#de350b"></rect>
+  <text x="695" y="153" class="map-label">Bash</text>
+  <text x="695" y="170" class="map-sublabel">Execute commands</text>
+
+  <!-- Explore Subagent -->
+  <rect x="30" y="200" width="130" height="54" class="map-node" fill="#1b2537" stroke="#0052CC" stroke-width="2" stroke-dasharray="6,3"></rect>
+  <text x="95" y="220" class="map-label" fill="#7dd3fc">Explore</text>
+  <text x="95" y="237" class="map-sublabel" fill="#94a3b8">Subagent</text>
+
+  <!-- ── Arrows ── -->
+  <!-- Glob → Grep (scopes search) -->
+  <line x1="160" y1="87" x2="230" y2="87" class="flow-arrow-primary"></line>
+  <text x="195" y="78" class="flow-label">scopes</text>
+
+  <!-- Grep → Read (targets file) -->
+  <line x1="360" y1="87" x2="430" y2="87" class="flow-arrow-primary"></line>
+  <text x="395" y="78" class="flow-label">targets</text>
+
+  <!-- Read → Edit (informs change) -->
+  <line x1="495" y1="114" x2="495" y2="200" class="flow-arrow-primary"></line>
+  <text x="510" y="162" class="flow-label">informs</text>
+
+  <!-- Edit → Bash (verify) -->
+  <line x1="560" y1="227" x2="630" y2="175" class="flow-arrow"></line>
+  <text x="607" y="193" class="flow-label">verify</text>
+
+  <!-- Write → Bash (verify) -->
+  <line x1="360" y1="227" x2="430" y2="227" class="flow-arrow" stroke-dasharray="4,4"></line>
+  <text x="395" y="220" class="flow-label" style="font-size:9px;">or, if new file</text>
+
+  <!-- Read → Write (if full rewrite needed) -->
+  <line x1="465" y1="114" x2="330" y2="200" class="flow-arrow" stroke-dasharray="4,4"></line>
+  <text x="375" y="152" class="flow-label">rewrite?</text>
+
+  <!-- Bash back loop -->
+  <path d="M695 184 L695 300 L295 300 L295 254" class="flow-arrow" stroke-dasharray="4,4"></path>
+  <text x="500" y="316" class="flow-label">failure → fix &amp; re-verify loop</text>
+
+  <!-- Explore → Read/Grep/Glob (uses) -->
+  <line x1="95" y1="200" x2="95" y2="114" class="flow-arrow" stroke="#0052CC" stroke-width="1" stroke-dasharray="4,3"></line>
+  <text x="45" y="160" class="flow-label" fill="#0052CC">uses</text>
+
+  <line x1="160" y1="213" x2="230" y2="213" class="flow-arrow" stroke="#0052CC" stroke-width="1" stroke-dasharray="4,3"></line>
+
+  <!-- Legend -->
+  <rect x="20" y="360" width="760" height="68" rx="8" fill="#f7f8fa" stroke="#e8eaed"></rect>
+  <text x="40" y="382" style="font-family:-apple-system,sans-serif;font-size:11px;fill:#4a5568;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">LEGEND</text>
+  <line x1="40" y1="400" x2="80" y2="400" stroke="#0052CC" stroke-width="2"></line>
+  <text x="90" y="404" style="font-family:-apple-system,sans-serif;font-size:11px;fill:#4a5568;">Primary data flow (output → input)</text>
+  <line x1="300" y1="400" x2="340" y2="400" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"></line>
+  <text x="350" y="404" style="font-family:-apple-system,sans-serif;font-size:11px;fill:#4a5568;">Alternative / conditional flow</text>
+  <rect x="570" y="393" width="14" height="14" rx="3" fill="none" stroke="#0052CC" stroke-width="2" stroke-dasharray="4,2"></rect>
+  <text x="592" y="404" style="font-family:-apple-system,sans-serif;font-size:11px;fill:#4a5568;">Subagent boundary</text>
+</svg>
+</div>
+
+</section>
+
+<hr>
+
+<!-- ── Tips & Tricks ──────────────────────── -->
+<section id="tips">
+<h2>⚡ Tips &amp; Tricks Panel</h2>
+
+<div style="display:grid; gap:12px;">
+
+  <div class="callout tip">
+    <div class="callout-icon">1️⃣</div>
+    <div class="callout-body">
+      <strong>Read with Line Ranges Saves Tokens</strong>
+      <p>In a 2,000-line file, reading lines 100–130 uses ~30 lines of context. Reading the whole file uses ~2,000 lines. Always scope your reads after Grep gives you a line number.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">2️⃣</div>
+    <div class="callout-body">
+      <strong>Edit's old_string Should Include Indentation</strong>
+      <p>Whitespace is part of the match. If the code is indented with 4 spaces, your <code>old_string</code> must include those spaces. Copy-paste from Read output is the safest approach.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">3️⃣</div>
+    <div class="callout-body">
+      <strong>Grep's Include Filter Is Your Best Friend</strong>
+      <p>Always use the <code>include</code> parameter to limit searches to relevant file types. <code>Grep("TODO", include="*.py")</code> is far more efficient than searching all files.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">4️⃣</div>
+    <div class="callout-body">
+      <strong>Glob Before Grep for Unknown Projects</strong>
+      <p>In an unfamiliar codebase, start with <code>Glob("*")</code> and <code>Glob("src/**")</code> to understand the structure. Then use Grep to search within the relevant directories only.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">5️⃣</div>
+    <div class="callout-body">
+      <strong>Bash State Persists — Use It</strong>
+      <p>After <code>Bash("cd src &amp;&amp; npm test")</code>, the working directory remains <code>src/</code> for subsequent Bash calls. You can <code>cd</code> once and run multiple commands in sequence.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">6️⃣</div>
+    <div class="callout-body">
+      <strong>Use Grep to Pre-Verify Edit Uniqueness</strong>
+      <p>Before calling Edit, run <code>Grep("your_old_string", path="the_file")</code>. If it returns more than one match, you need to add more context to your <code>old_string</code> to make it unique.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">7️⃣</div>
+    <div class="callout-body">
+      <strong>Write Is for New Files and Complete Rewrites Only</strong>
+      <p>The only valid uses for Write: (1) creating a file that doesn't exist, (2) completely replacing a file's content when &gt;60% changes. Everything else should be Edit.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">8️⃣</div>
+    <div class="callout-body">
+      <strong>Explore Subagent ≠ "Read All Files"</strong>
+      <p>The Explore subagent's value isn't just reading — it's <em>synthesizing</em>. It reads many files and returns a structured understanding. Direct multi-file reads dump raw content into your context; Explore returns distilled knowledge.</p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<hr>
+
+<!-- ── Flashcards ─────────────────────────── -->
+<section id="flashcards">
+<h2>🧠 Spaced Repetition Flashcard Set</h2>
+
+<div class="table-wrap">
+<table class="flashcard-table">
+<thead>
+  <tr><th>Question (Front)</th><th>Answer (Back)</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td>What are the six built-in tools available to Claude in agentic coding environments?</td>
+    <td><strong>Read, Write, Edit, Bash, Grep, Glob</strong> — three read-only (Read, Grep, Glob) and three mutating (Write, Edit, Bash).</td>
+  </tr>
+  <tr>
+    <td>What is Edit's uniqueness constraint?</td>
+    <td>The <code>old_string</code> parameter must match <strong>exactly one</strong> location in the file. Zero matches (not found) or multiple matches (ambiguous) both cause the Edit to fail.</td>
+  </tr>
+  <tr>
+    <td>What is the key difference between Grep and Glob?</td>
+    <td><strong>Grep</strong> searches file <em>contents</em> using regex patterns. <strong>Glob</strong> searches file <em>paths</em> using glob patterns. Grep returns matching lines; Glob returns matching file paths.</td>
+  </tr>
+  <tr>
+    <td>Why should you prefer Read over <code>Bash("cat file")</code>?</td>
+    <td>Read is the <strong>dedicated, purpose-built</strong> tool — read-only, no side effects, returns line numbers, better integration. Bash is the fallback, not the default. <em>Principle of Least Privilege.</em></td>
+  </tr>
+  <tr>
+    <td>When should you use Write instead of Edit?</td>
+    <td>Use <strong>Write</strong> when: (1) creating a <em>new</em> file, or (2) the entire file needs to be replaced. Use <strong>Edit</strong> for targeted changes to existing files.</td>
+  </tr>
+  <tr>
+    <td>What makes Bash different from all other built-in tools?</td>
+    <td>Bash is <strong>stateful</strong> (working directory, env vars persist across calls), can have <strong>arbitrary side effects</strong>, and can <strong>execute programs</strong>. It's the only tool that can run tests, builds, and install packages.</td>
+  </tr>
+  <tr>
+    <td>What is the Explore subagent, and what can't it do?</td>
+    <td>A subagent with its <strong>own context window</strong> for verbose, broad exploration using Read, Grep, and Glob. It <strong>cannot modify files</strong> — it's strictly read-only and returns synthesized summaries.</td>
+  </tr>
+  <tr>
+    <td>What is the canonical 5-phase agentic workflow?</td>
+    <td><strong>Orient</strong> (Glob) → <strong>Target</strong> (Grep) → <strong>Understand</strong> (Read) → <strong>Fix</strong> (Edit/Write) → <strong>Verify</strong> (Bash). Mnemonic: <em>"O-T-U-F-V"</em></td>
+  </tr>
+  <tr>
+    <td>Name three anti-patterns in built-in tool usage.</td>
+    <td>(1) <strong>"Bash Everything"</strong> — using shell commands when dedicated tools exist. (2) <strong>"Write-for-Edit"</strong> — overwriting entire files for small changes. (3) <strong>"Blind Edit"</strong> — editing without first reading the file to verify state.</td>
+  </tr>
+  <tr>
+    <td>How do you ensure Edit's <code>old_string</code> is unique?</td>
+    <td>Include <strong>2–3 surrounding context lines</strong> in <code>old_string</code> to disambiguate. You can pre-verify with <code>Grep("old_string", path="file")</code> — if it returns more than one match, add more context.</td>
+  </tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<hr>
+
+<!-- ── Mock Exam ──────────────────────────── -->
+<section id="mock-exam">
+<h2>🎯 Mock Exam — 5 Scenario-Based Questions</h2>
+
+
+<!-- Q1 -->
+<div class="exam-panel" style="background:#fff;border-color:#d1d5db;">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-circle-question" style="color:var(--accent);"></i>
+    <span style="color:var(--accent);">Question 1 of 5</span>
+  </div>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>An agent is tasked with finding all files in a React project that contain unused imports. The agent should first find all <code>.tsx</code> files, then search for the pattern <code>import.*unused</code> within them. Which tool sequence is most appropriate?</strong></p>
+  <p style="font-size:13.5px;">
+    A) <code>Bash("find . -name '*.tsx'") → Bash("grep 'import.*unused' *.tsx")</code><br>
+    B) <code>Glob("**/*.tsx") → Grep("import.*unused", include="*.tsx")</code><br>
+    C) <code>Grep("import.*unused") → Read(each matched file)</code><br>
+    D) <code>Read(each .tsx file) → manually scan for unused imports</code>
+  </p>
+  <div class="answer" style="margin-top:12px;">
+    <strong>Answer: B</strong>
+    <p><strong>Glob</strong> discovers file paths by pattern; <strong>Grep</strong> searches content by regex. This is the correct pairing of path-search → content-search. Option A uses Bash for both, violating the Principle of Least Privilege. Option C skips the file discovery step (though Grep with <code>include</code> already handles this, making Glob optional — B is still more methodical). Option D is wildly inefficient.</p>
+  </div>
+</div>
+
+
+<!-- Q2 -->
+<div class="exam-panel" style="background:#fff;border-color:#d1d5db;">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-circle-question" style="color:var(--accent);"></i>
+    <span style="color:var(--accent);">Question 2 of 5</span>
+  </div>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>An agent needs to change the database port from <code>5432</code> to <code>5433</code> in a config file. The string <code>5432</code> appears in three places in the file: as the port value, in a comment, and in a connection string URL. How should the agent proceed?</strong></p>
+  <p style="font-size:13.5px;">
+    A) Use <code>Edit(old_string="5432", new_string="5433")</code><br>
+    B) Use <code>Write</code> to replace the entire file with the port updated everywhere<br>
+    C) Use <code>Read</code> to view the file, then <code>Edit</code> with enough context to match only the port declaration<br>
+    D) Use <code>Bash("sed -i 's/5432/5433/g' config.yaml")</code>
+  </p>
+  <div class="answer" style="margin-top:12px;">
+    <strong>Answer: C</strong>
+    <p>Since <code>5432</code> appears three times, a simple Edit with just <code>old_string="5432"</code> will <strong>fail</strong> (multiple matches violate the uniqueness constraint). The correct approach: <strong>Read</strong> the file to see the context around each occurrence, then <strong>Edit</strong> with a longer <code>old_string</code> that includes surrounding context to uniquely identify the port declaration (e.g., <code>old_string="port: 5432"</code>). Option D blindly replaces all occurrences, which would break the connection string URL and modify the comment.</p>
+  </div>
+</div>
+
+
+<!-- Q3 -->
+<div class="exam-panel" style="background:#fff;border-color:#d1d5db;">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-circle-question" style="color:var(--accent);"></i>
+    <span style="color:var(--accent);">Question 3 of 5</span>
+  </div>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>True or False: The Explore subagent is the preferred approach when an agent needs to find the definition of a single function called <code>validateInput</code> in a known Python project.</strong></p>
+  <div class="answer" style="margin-top:12px;">
+    <strong>Answer: False</strong>
+    <p>The Explore subagent is designed for <strong>broad, open-ended exploration</strong> — not targeted lookups. Finding a single function definition is a <strong>narrow, targeted task</strong> perfectly suited for <code>Grep(pattern="def validateInput", include="*.py")</code>. Using the Explore subagent here adds unnecessary overhead (subagent initialization) and is slower than a direct Grep call.</p>
+  </div>
+</div>
+
+
+<!-- Q4 -->
+<div class="exam-panel" style="background:#fff;border-color:#d1d5db;">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-circle-question" style="color:var(--accent);"></i>
+    <span style="color:var(--accent);">Question 4 of 5</span>
+  </div>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>An agent is working in a large monorepo and needs to understand how the billing module interacts with the user module, the payment gateway, and the notification service. This requires reading 20+ files across 4 directories. What is the best approach?</strong></p>
+  <p style="font-size:13.5px;">
+    A) Use Glob + Grep + Read to read all 20+ files directly<br>
+    B) Use the Explore subagent to investigate the billing module's interactions<br>
+    C) Use Bash to run <code>tree</code> and <code>cat</code> on all relevant files<br>
+    D) Use Write to create a summary file, then Read it
+  </p>
+  <div class="answer" style="margin-top:12px;">
+    <strong>Answer: B</strong>
+    <p>This is <strong>exactly</strong> the Explore subagent's sweet spot: broad, multi-file, open-ended exploration across multiple modules. Reading 20+ files directly (option A) would <strong>overwhelm the parent's context window</strong>. The Explore subagent reads all the files in its <em>own</em> context and returns a synthesized summary of the billing module's interactions. Option C uses Bash when dedicated tools exist. Option D makes no sense — you can't write a summary before understanding the code.</p>
+  </div>
+</div>
+
+
+<!-- Q5 -->
+<div class="exam-panel" style="background:#fff;border-color:#d1d5db;">
+  <div class="exam-panel-header">
+    <i class="fa-solid fa-circle-question" style="color:var(--accent);"></i>
+    <span style="color:var(--accent);">Question 5 of 5</span>
+  </div>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>An agent has just finished renaming a function across 8 files using Edit. What should the agent do <em>immediately after</em> completing the edits?</strong></p>
+  <p style="font-size:13.5px;">
+    A) Use Grep to verify the old function name no longer appears anywhere<br>
+    B) Use Bash to run the test suite<br>
+    C) Both A and B — Grep to verify the rename, then Bash to run tests<br>
+    D) Nothing — the Edit tool guarantees correctness
+  </p>
+  <div class="answer" style="margin-top:12px;">
+    <strong>Answer: C</strong>
+    <p>After a multi-file rename, <strong>both verification steps</strong> are important. <strong>Grep</strong> confirms the old name no longer appears (catches missed occurrences — perhaps in files you didn't know about). <strong>Bash</strong> runs the test suite to catch any runtime issues the rename may have introduced (e.g., the function was referenced dynamically via a string). Edit guarantees each individual edit was applied correctly, but it does <em>not</em> guarantee you found all occurrences or that the codebase still works.</p>
+  </div>
+</div>
+
+</section>
+
+<!-- ── Footer ─────────────────────────────── -->
+<div style="margin-top:48px; padding:24px 0; border-top:2px solid var(--border-light); text-align:center;">
+  <p style="font-size:13px; color:var(--text-muted); margin:0;">
+    Claude Certified Architect — Foundations &amp; Professional · Chapter 11 Study Notes<br>
+    <span style="font-size:12px;">Built for exam preparation. Always verify against the latest official Anthropic documentation.</span>
+  </p>
+</div>
+
+</main>
+</div>
+
+</body></html>

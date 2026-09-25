@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 47 — RAG Pipeline Design | Exam-Ready Study Notes</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --surface:#ffffff; --ink:#1a2233; --ink-soft:#44506b; --muted:#7a869a;
+    --border:#e3e7ee; --border-strong:#cdd4e0;
+    --primary:#2c5cff; --primary-soft:#eaf0ff;
+    --accent:#6b3fd4; --accent-soft:#f0eaff;
+    --tip:#0f8a5f; --tip-bg:#e8f8f1; --tip-border:#9fe0c6;
+    --pit:#c0392b; --pit-bg:#fdeeec; --pit-border:#f2b8b1;
+    --exam:#b7791f; --exam-bg:#fff7e6; --exam-border:#f2d492;
+    --code-bg:#f2f4f8;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: 'SF Mono', ui-monospace, Consolas, 'Courier New', monospace;
+    --radius:12px; --radius-sm:7px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--font); line-height:1.6; font-size:16px;
+    padding:0;
+  }
+  .wrap{max-width:1000px; margin:0 auto; padding:40px 28px 80px;}
+  header.doc{
+    background:linear-gradient(135deg,#1e2a52 0%,#2c5cff 55%,#6b3fd4 100%);
+    color:#fff; border-radius:var(--radius); padding:38px 40px; margin-bottom:32px;
+    box-shadow:0 10px 30px rgba(44,92,255,.18);
+  }
+  header.doc .eyebrow{
+    text-transform:uppercase; letter-spacing:.14em; font-size:12px; font-weight:600;
+    opacity:.85; margin:0 0 10px;
+  }
+  header.doc h1{margin:0 0 8px; font-size:32px; line-height:1.2; font-weight:700;}
+  header.doc p{margin:6px 0 0; font-size:15px; opacity:.92; max-width:70ch;}
+  header.doc .chips{margin-top:18px; display:flex; flex-wrap:wrap; gap:8px;}
+  header.doc .chip{
+    background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:100px; font-size:12.5px; font-weight:500;
+  }
+
+  h2{
+    font-size:24px; margin:52px 0 6px; padding-top:14px; color:var(--ink);
+    border-top:2px solid var(--border-strong); scroll-margin-top:20px;
+  }
+  h2 .num{color:var(--primary); font-weight:700;}
+  h3{font-size:16.5px; margin:24px 0 8px; color:var(--accent); letter-spacing:.01em;
+     text-transform:uppercase; font-weight:700; font-size:13.5px; letter-spacing:.08em;}
+  h4{font-size:15px; margin:16px 0 6px; color:var(--ink);}
+  p{margin:8px 0;}
+  a{color:var(--primary); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  code{font-family:var(--mono); background:var(--code-bg); padding:1.5px 6px;
+       border-radius:5px; font-size:13.5px; color:#c0392b;}
+  strong{color:var(--ink);}
+
+  /* Table of contents */
+  nav.toc{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); padding:22px 26px; margin-bottom:16px;
+    box-shadow:0 2px 8px rgba(20,30,60,.04);
+  }
+  nav.toc h2{border:0; margin:0 0 12px; padding:0; font-size:15px;
+     text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
+  nav.toc ol{margin:0; padding-left:20px; columns:2; column-gap:36px;}
+  nav.toc li{margin:5px 0; break-inside:avoid;}
+  nav.toc a{color:var(--ink-soft); font-size:14.5px;}
+  nav.toc a:hover{color:var(--primary);}
+
+  /* Definition lists for key terminology */
+  dl.terms{margin:6px 0; padding:14px 18px; background:var(--surface);
+     border:1px solid var(--border); border-left:4px solid var(--accent);
+     border-radius:var(--radius-sm);}
+  dl.terms dt{font-weight:700; color:var(--accent); margin-top:8px;}
+  dl.terms dt:first-child{margin-top:0;}
+  dl.terms dd{margin:2px 0 0; padding-left:0; color:var(--ink-soft); font-size:14.5px;}
+
+  /* Callout boxes */
+  .box{border-radius:var(--radius-sm); padding:14px 18px; margin:16px 0;
+       font-size:14.5px; border:1px solid;}
+  .box .label{font-weight:700; display:block; margin-bottom:4px; letter-spacing:.02em;}
+  .box p{margin:6px 0;}
+  .box ul{margin:6px 0; padding-left:22px;}
+  .box li{margin:4px 0;}
+  .tip{background:var(--tip-bg); border-color:var(--tip-border);}
+  .tip .label{color:var(--tip);}
+  .pitfall{background:var(--pit-bg); border-color:var(--pit-border);}
+  .pitfall .label{color:var(--pit);}
+  .exam-strategy{background:var(--exam-bg); border-color:var(--exam-border);
+       border-left:5px solid var(--exam);}
+  .exam-strategy .label{color:var(--exam); font-size:15px;}
+  .exam-strategy .worked{background:rgba(255,255,255,.6); border:1px dashed var(--exam-border);
+       border-radius:6px; padding:10px 14px; margin-top:10px; font-size:13.8px;}
+  .exam-strategy .worked b{color:var(--exam);}
+
+  /* Tables */
+  .table-scroll{overflow-x:auto; margin:14px 0;}
+  table{width:100%; border-collapse:collapse; font-size:13.6px; background:var(--surface);
+        border:1px solid var(--border); border-radius:var(--radius-sm); overflow:hidden;}
+  caption{caption-side:top; text-align:left; font-size:13px; color:var(--muted);
+          margin-bottom:6px; font-style:italic;}
+  th{background:#eef1f7; text-align:left; padding:10px 12px; font-weight:700;
+     color:var(--ink); border-bottom:2px solid var(--border-strong); font-size:12.8px;
+     text-transform:uppercase; letter-spacing:.03em; vertical-align:top;}
+  td{padding:9px 12px; border-bottom:1px solid var(--border); color:var(--ink-soft);
+     vertical-align:top;}
+  tr:last-child td{border-bottom:0;}
+  tr:hover td{background:#fafbfe;}
+  .badge{display:inline-block; padding:2px 9px; border-radius:100px; font-size:11.5px;
+         font-weight:700; letter-spacing:.02em;}
+  .b-low{background:var(--tip-bg); color:var(--tip);}
+  .b-med{background:var(--exam-bg); color:var(--exam);}
+  .b-high{background:var(--pit-bg); color:var(--pit);}
+
+  /* SVG diagram frames */
+  .figure{background:var(--surface); border:1px solid var(--border);
+          border-radius:var(--radius-sm); padding:18px; margin:16px 0; text-align:center;}
+  .figure svg{max-width:100%; height:auto;}
+  .figure .cap{color:var(--muted); font-size:12.5px; margin-top:8px; font-style:italic;}
+
+  .cram{background:linear-gradient(135deg,#141c38,#25325e); color:#eef1fb;
+        border-radius:var(--radius); padding:30px 34px; margin-top:40px;}
+  .cram h2{color:#fff; border:0; margin-top:0;}
+  .cram h3{color:#ffd580;}
+  .cram ul{padding-left:22px;}
+  .cram li{margin:7px 0; font-size:14.6px; color:#dfe4f3;}
+  .cram code{background:rgba(255,255,255,.12); color:#ffd580;}
+  .cram strong{color:#fff;}
+  .cram .tree{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+              border-radius:8px; padding:16px 20px; margin-top:14px;}
+
+  .back{font-size:12px; color:var(--muted); text-decoration:none; float:right;
+        margin-top:22px;}
+  .back:hover{color:var(--primary);}
+  footer.doc{margin-top:40px; padding-top:18px; border-top:1px solid var(--border);
+             color:var(--muted); font-size:12.5px; text-align:center;}
+  @media (max-width:640px){
+    nav.toc ol{columns:1;}
+    header.doc h1{font-size:25px;}
+    .wrap{padding:24px 16px 60px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc">
+    <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 47 · RAG Pipeline Design</h1>
+    <p>Exam-ready study notes covering architecture, chunking, indexing, retrieval,
+       freshness, evaluation, and hands-on tuning of Retrieval-Augmented Generation
+       (RAG) systems — with strategy callouts for every sub-topic.</p>
+    <div class="chips">
+      <span class="chip">7 sub-topics</span>
+      <span class="chip">Concept + Visual + Exam Strategy</span>
+      <span class="chip">Chapter Summary Table</span>
+      <span class="chip">Exam Cram Sheet</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s471">47.1 RAG: Architecture Overview</a></li>
+      <li><a href="#s472">47.2 Chunking Strategies</a></li>
+      <li><a href="#s473">47.3 Indexing: Vector, Keyword &amp; Hybrid</a></li>
+      <li><a href="#s474">47.4 Retrieval Matched to Data &amp; Query</a></li>
+      <li><a href="#s475">47.5 Document Refreshes &amp; Stale Embeddings</a></li>
+      <li><a href="#s476">47.6 Evaluating RAG Quality</a></li>
+      <li><a href="#s477">47.7 Hands-On: Build &amp; Tune a Pipeline</a></li>
+      <li><a href="#summary">📊 Chapter Summary Table</a></li>
+      <li><a href="#cram">🧠 Exam Cram Sheet</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= CHAPTER SUMMARY TABLE ================= -->
+  <section id="summary">
+    <h2><span class="num">📊</span> Chapter Summary Table</h2>
+    <p>Side-by-side comparison of the major strategies discussed in this chapter.
+       Latency/cost/complexity are <em>relative</em> ratings for typical production
+       workloads, not absolute benchmarks.</p>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Table 47-A · Chunking strategies</caption>
+        <tbody><tr><th>Chunking Type</th><th>Best Use Case</th><th>Latency (build)</th><th>Cost</th><th>Complexity</th></tr>
+        <tr><td><strong>Fixed-size (token/char)</strong></td><td>Uniform prose, quick baselines</td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td></tr>
+        <tr><td><strong>Recursive / structural</strong></td><td>Docs with headings, markdown, code</td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-med">Medium</span></td></tr>
+        <tr><td><strong>Semantic (embedding-based)</strong></td><td>Topic-shifting narrative, mixed content</td><td><span class="badge b-high">High</span></td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-high">High</span></td></tr>
+        <tr><td><strong>Sentence / proposition</strong></td><td>FAQ, dense factual Q&amp;A</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td></tr>
+        <tr><td><strong>Parent-document (small→large)</strong></td><td>Precise match + wide context needed</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Table 47-B · Indexing strategies</caption>
+        <tbody><tr><th>Index Type</th><th>Best Use Case</th><th>Query Latency</th><th>Cost</th><th>Complexity</th></tr>
+        <tr><td><strong>Vector (dense / ANN)</strong></td><td>Semantic similarity, paraphrase, concept match</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td></tr>
+        <tr><td><strong>Keyword (sparse / BM25)</strong></td><td>Exact terms, codes, names, acronyms</td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td></tr>
+        <tr><td><strong>Hybrid (dense + sparse fusion)</strong></td><td>Mixed queries; production default</td><td><span class="badge b-high">Higher</span></td><td><span class="badge b-med">Medium-High</span></td><td><span class="badge b-high">High</span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Table 47-C · Retrieval strategies</caption>
+        <tbody><tr><th>Retrieval Type</th><th>Best Use Case</th><th>Latency</th><th>Cost</th><th>Complexity</th></tr>
+        <tr><td><strong>Dense top-k</strong></td><td>Baseline semantic retrieval</td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-low">Low</span></td></tr>
+        <tr><td><strong>Hybrid + RRF</strong></td><td>Robust recall across query styles</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-med">Medium</span></td></tr>
+        <tr><td><strong>Rerank (cross-encoder)</strong></td><td>Precision-critical; many candidates</td><td><span class="badge b-high">High</span></td><td><span class="badge b-high">High</span></td><td><span class="badge b-med">Medium</span></td></tr>
+        <tr><td><strong>MMR (diversity)</strong></td><td>Reduce redundancy, broad coverage</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-med">Medium</span></td></tr>
+        <tr><td><strong>Multi-query / HyDE</strong></td><td>Vague or under-specified queries</td><td><span class="badge b-high">High</span></td><td><span class="badge b-high">High</span></td><td><span class="badge b-med">Medium</span></td></tr>
+      </tbody></table>
+    </div>
+  </section>
+
+  <!-- ================= 47.1 ================= -->
+  <section id="s471">
+    <h2><span class="num">47.1</span> Retrieval-Augmented Generation: Architecture Overview</h2>
+
+    <h3>Concept Summary</h3>
+    <p><strong>RAG (Retrieval-Augmented Generation)</strong> is a pattern that grounds a
+    language model's answer in <em>external, retrieved</em> knowledge instead of relying
+    only on the model's trained-in (parametric) memory. At <strong>ingestion time</strong>,
+    source documents are loaded, split into chunks, embedded, and stored in an index.
+    At <strong>query time</strong>, the user's question is embedded, the most relevant
+    chunks are retrieved, and those chunks are inserted into the prompt as context so the
+    model can answer from evidence it can cite. RAG reduces hallucination, lets you update
+    knowledge without retraining, and keeps answers traceable to sources.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>RAG (Retrieval-Augmented Generation)</dt>
+      <dd>Architecture that retrieves relevant text and feeds it to an LLM as grounding context before it generates an answer.</dd>
+      <dt>Ingestion / Indexing pipeline</dt>
+      <dd>The offline path: load → chunk → embed → store. Runs when documents are added or refreshed.</dd>
+      <dt>Retrieval / Generation pipeline</dt>
+      <dd>The online path: embed query → retrieve chunks → assemble prompt → generate grounded answer.</dd>
+      <dt>Embedding</dt>
+      <dd>A numeric vector representing the meaning of text, so similar meanings sit close together in vector space.</dd>
+      <dt>Context window</dt>
+      <dd>The maximum tokens the model can read at once; retrieved chunks must fit within it alongside the prompt and answer.</dd>
+      <dt>Grounding</dt>
+      <dd>Constraining the model to answer only from retrieved evidence, ideally with citations.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="figure">
+      <svg viewBox="0 0 940 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RAG two-phase pipeline diagram">
+        <defs>
+          <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#7a869a"></path>
+          </marker>
+          <style>
+            .lbl{font:600 12px sans-serif; fill:#1a2233;}
+            .sub{font:11px sans-serif; fill:#7a869a;}
+            .phase{font:700 12px sans-serif; letter-spacing:.06em;}
+          </style>
+        </defs>
+        <!-- Ingestion row -->
+        <text x="20" y="28" class="phase" fill="#6b3fd4">INGESTION (offline)</text>
+        <g>
+          <rect x="20" y="40" width="130" height="52" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+          <text x="85" y="63" text-anchor="middle" class="lbl">Documents</text>
+          <text x="85" y="80" text-anchor="middle" class="sub">PDFs, docs, web</text>
+
+          <rect x="185" y="40" width="120" height="52" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+          <text x="245" y="63" text-anchor="middle" class="lbl">Chunk</text>
+          <text x="245" y="80" text-anchor="middle" class="sub">split into units</text>
+
+          <rect x="340" y="40" width="120" height="52" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+          <text x="400" y="63" text-anchor="middle" class="lbl">Embed</text>
+          <text x="400" y="80" text-anchor="middle" class="sub">→ vectors</text>
+
+          <rect x="495" y="40" width="150" height="52" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+          <text x="570" y="63" text-anchor="middle" class="lbl">Vector Index</text>
+          <text x="570" y="80" text-anchor="middle" class="sub">store + metadata</text>
+
+          <line x1="150" y1="66" x2="182" y2="66" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+          <line x1="305" y1="66" x2="337" y2="66" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+          <line x1="460" y1="66" x2="492" y2="66" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+        </g>
+        <!-- Retrieval row -->
+        <text x="20" y="150" class="phase" fill="#2c5cff">RETRIEVAL + GENERATION (online)</text>
+        <g>
+          <rect x="20" y="162" width="130" height="52" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+          <text x="85" y="185" text-anchor="middle" class="lbl">User Query</text>
+          <text x="85" y="202" text-anchor="middle" class="sub">natural language</text>
+
+          <rect x="185" y="162" width="120" height="52" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+          <text x="245" y="185" text-anchor="middle" class="lbl">Embed Query</text>
+          <text x="245" y="202" text-anchor="middle" class="sub">same model</text>
+
+          <rect x="340" y="162" width="120" height="52" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+          <text x="400" y="185" text-anchor="middle" class="lbl">Retrieve</text>
+          <text x="400" y="202" text-anchor="middle" class="sub">top-k chunks</text>
+
+          <rect x="495" y="162" width="150" height="52" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+          <text x="570" y="185" text-anchor="middle" class="lbl">Assemble Prompt</text>
+          <text x="570" y="202" text-anchor="middle" class="sub">query + context</text>
+
+          <rect x="685" y="162" width="150" height="52" rx="8" fill="#fff7e6" stroke="#b7791f"></rect>
+          <text x="760" y="185" text-anchor="middle" class="lbl">LLM Generates</text>
+          <text x="760" y="202" text-anchor="middle" class="sub">grounded answer</text>
+
+          <line x1="150" y1="188" x2="182" y2="188" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+          <line x1="305" y1="188" x2="337" y2="188" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+          <line x1="460" y1="188" x2="492" y2="188" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+          <line x1="645" y1="188" x2="682" y2="188" stroke="#7a869a" stroke-width="2" marker-end="url(#arr)"></line>
+        </g>
+        <!-- link from index to retrieve -->
+        <path d="M570 92 L570 130 L400 130 L400 160" fill="none" stroke="#2c5cff" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr)"></path>
+        <text x="440" y="124" class="sub" fill="#2c5cff">shared index</text>
+      </svg>
+      <div class="cap">Fig 47.1 — RAG has two pipelines: an offline ingestion path (purple) and an online retrieval + generation path (blue/green), joined by the shared index.</div>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li><strong>Use the same embedding model</strong> for documents and queries — mixing models breaks the shared vector space.</li>
+        <li>Store rich <strong>metadata</strong> (source, title, section, timestamp) alongside each chunk to enable filtering and citations.</li>
+        <li>Always return <strong>source references</strong> so answers are auditable and users can verify claims.</li>
+        <li>Treat RAG as two independently tunable systems — you can improve retrieval without touching generation and vice-versa.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Assuming RAG "fixes" hallucination — it only helps if <em>retrieval</em> surfaces the right evidence and the prompt instructs the model to stay grounded.</li>
+        <li>Stuffing too many chunks into context, causing "lost in the middle" degradation and higher cost.</li>
+        <li>Forgetting that a wrong answer can come from <em>either</em> bad retrieval or bad generation — diagnose the two separately.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> "Which component is responsible for…", "In what order do the stages execute?", or "A system answers from outdated info even though the model is current — what is the most likely cause?"</p>
+      <p><strong>Eliminating distractors:</strong> Answers that describe fine-tuning or retraining are usually <em>wrong</em> for a RAG question — RAG's whole point is updating knowledge <em>without</em> retraining. Discard options that place generation before retrieval.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "A RAG chatbot returns confidently wrong answers about a policy that was correctly ingested. What should you investigate first?"<br>
+        <b>Reason:</b> The doc is present, so ingestion is fine → the fault is downstream. The two candidates are (a) retrieval didn't surface the right chunk, or (b) the prompt didn't constrain the model to use context. Since the info exists but isn't used, check <b>retrieval recall</b> first (did the relevant chunk appear in top-k?), then prompt grounding. → Answer: <b>inspect retrieval, not the training data.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= 47.2 ================= -->
+  <section id="s472">
+    <h2><span class="num">47.2</span> Chunking Strategies: Size, Overlap &amp; Semantic Boundaries</h2>
+
+    <h3>Concept Summary</h3>
+    <p><strong>Chunking</strong> splits documents into retrievable units. Chunk size trades
+    off precision against context: <em>smaller chunks</em> give sharper matches but may lose
+    surrounding meaning, while <em>larger chunks</em> carry more context but dilute the
+    embedding and can retrieve irrelevant material. <strong>Overlap</strong> repeats a slice
+    of text between adjacent chunks so a fact sitting on a boundary isn't cut in half.
+    The best chunking respects <strong>semantic boundaries</strong> — headings, paragraphs,
+    sentences, list items — rather than slicing blindly at a fixed character count.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>Chunk size</dt>
+      <dd>How much text (usually measured in tokens) each retrievable unit contains.</dd>
+      <dt>Overlap</dt>
+      <dd>Text shared between consecutive chunks to preserve context at boundaries; commonly 10–20% of chunk size.</dd>
+      <dt>Recursive / structural chunking</dt>
+      <dd>Splitting along a hierarchy of separators (sections → paragraphs → sentences) so chunks align with natural structure.</dd>
+      <dt>Semantic chunking</dt>
+      <dd>Grouping sentences by embedding similarity so a chunk holds one coherent idea, splitting where topic shifts.</dd>
+      <dt>Parent-document retrieval</dt>
+      <dd>Embed small chunks for precise matching but return the larger parent passage for full context.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="figure">
+      <svg viewBox="0 0 900 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chunk overlap illustration">
+        <style>
+          .t{font:600 12px sans-serif; fill:#1a2233;}
+          .s{font:11px sans-serif; fill:#7a869a;}
+        </style>
+        <text x="20" y="24" class="t">Source text stream</text>
+        <rect x="20" y="34" width="860" height="26" rx="5" fill="#eef1f7" stroke="#cdd4e0"></rect>
+        <text x="450" y="52" text-anchor="middle" class="s">…continuous document…</text>
+
+        <!-- chunk 1 -->
+        <rect x="20" y="86" width="300" height="34" rx="6" fill="#eaf0ff" stroke="#2c5cff"></rect>
+        <text x="170" y="108" text-anchor="middle" class="t">Chunk 1</text>
+        <!-- chunk 2 (overlaps chunk1) -->
+        <rect x="250" y="130" width="300" height="34" rx="6" fill="#f0eaff" stroke="#6b3fd4"></rect>
+        <text x="400" y="152" text-anchor="middle" class="t">Chunk 2</text>
+        <!-- chunk 3 -->
+        <rect x="480" y="86" width="300" height="34" rx="6" fill="#eaf0ff" stroke="#2c5cff"></rect>
+        <text x="630" y="108" text-anchor="middle" class="t">Chunk 3</text>
+
+        <!-- overlap markers -->
+        <rect x="250" y="86" width="70" height="34" fill="#0f8a5f" fill-opacity="0.18"></rect>
+        <rect x="480" y="130" width="70" height="34" fill="#0f8a5f" fill-opacity="0.18"></rect>
+        <text x="285" y="182" text-anchor="middle" class="s" fill="#0f8a5f">overlap</text>
+        <text x="515" y="182" text-anchor="middle" class="s" fill="#0f8a5f">overlap</text>
+        <line x1="285" y1="164" x2="285" y2="122" stroke="#0f8a5f" stroke-width="1.5" stroke-dasharray="3 3"></line>
+        <line x1="515" y1="164" x2="515" y2="122" stroke="#0f8a5f" stroke-width="1.5" stroke-dasharray="3 3"></line>
+      </svg>
+      <div class="cap">Fig 47.2 — Overlap (green) shares text between neighbouring chunks so a sentence spanning a boundary still appears intact in at least one chunk.</div>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Typical starting points by content type (tune with evaluation — not fixed rules)</caption>
+        <tbody><tr><th>Content type</th><th>Chunk size (approx.)</th><th>Overlap</th><th>Boundary to respect</th></tr>
+        <tr><td>Narrative / articles</td><td>~300–500 tokens</td><td>10–20%</td><td>Paragraph</td></tr>
+        <tr><td>Technical manuals / docs</td><td>~200–400 tokens</td><td>10–15%</td><td>Heading + paragraph</td></tr>
+        <tr><td>FAQ / Q&amp;A</td><td>1 Q&amp;A pair</td><td>None / minimal</td><td>Question boundary</td></tr>
+        <tr><td>Code</td><td>Function / class</td><td>Minimal</td><td>Syntactic block</td></tr>
+        <tr><td>Tables / structured</td><td>Row group or full table</td><td>None</td><td>Row / record</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Start with recursive/structural splitting before reaching for expensive semantic chunking — it's often "good enough".</li>
+        <li>For narrative text, an <strong>overlap of 10–20% of chunk size</strong> is a solid default.</li>
+        <li>Keep one coherent idea per chunk; if a chunk mixes topics, its embedding becomes "muddy" and matches poorly.</li>
+        <li>Use <strong>parent-document retrieval</strong> when you need pinpoint matching <em>and</em> broad context.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Fixed-character splitting that cuts sentences, tables, or code mid-structure.</li>
+        <li>Zero overlap — facts on boundaries become unretrievable.</li>
+        <li>Excessive overlap (e.g. 50%+) — inflates index size, cost, and returns near-duplicate chunks.</li>
+        <li>One-size-fits-all sizing across heterogeneous content types.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> Scenario gives you a document type (long manual, FAQ, code) and asks for the "optimal chunking approach" or "why answers miss context at boundaries."</p>
+      <p><strong>Eliminating distractors:</strong> Discard options that mention <em>size alone</em> without overlap or boundary awareness. The correct answer usually pairs <b>size + overlap + semantic boundary</b> together. Beware answers proposing 50%+ overlap as "safer" — that's a distractor.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "Users report the assistant loses information that spans two paragraphs of a policy manual. Best fix?"<br>
+        <b>Reason:</b> Symptom = boundary loss → overlap is too small or zero. Manuals have clear structure → respect headings/paragraphs. So the fix combines <b>modest overlap (10–20%)</b> with <b>structure-aware splitting</b>, not merely "increase chunk size" (which lowers precision) or "remove chunking" (impossible at scale). → Answer: <b>structural chunking with 10–20% overlap.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= 47.3 ================= -->
+  <section id="s473">
+    <h2><span class="num">47.3</span> Indexing Strategies: Vector, Keyword &amp; Hybrid</h2>
+
+    <h3>Concept Summary</h3>
+    <p>An <strong>index</strong> is the searchable structure retrieval queries against.
+    A <strong>vector (dense) index</strong> stores embeddings and finds chunks by
+    <em>semantic similarity</em> — great for paraphrases and concepts, but weak on exact
+    strings. A <strong>keyword (sparse) index</strong> such as <strong>BM25</strong> matches
+    literal terms — excellent for names, error codes, and acronyms, but blind to synonyms.
+    A <strong>hybrid index</strong> runs both and fuses the results (commonly with
+    <strong>Reciprocal Rank Fusion, RRF</strong>), capturing the strengths of each. In
+    production, hybrid is a common default because real queries mix conceptual and exact-match
+    intent.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>Dense / vector index</dt>
+      <dd>Stores embeddings; retrieves by vector similarity (cosine/dot product) using approximate nearest neighbour (ANN) search.</dd>
+      <dt>ANN &amp; HNSW</dt>
+      <dd>Approximate Nearest Neighbour search; HNSW is a popular graph-based ANN algorithm trading a little accuracy for large speed gains.</dd>
+      <dt>Sparse / keyword index (BM25)</dt>
+      <dd>Term-frequency ranking that matches exact tokens; strong on rare/specific terms.</dd>
+      <dt>Hybrid search</dt>
+      <dd>Combines dense + sparse results into one ranked list.</dd>
+      <dt>Reciprocal Rank Fusion (RRF)</dt>
+      <dd>A simple, score-agnostic method to merge multiple ranked lists by summing <code>1/(k + rank)</code> across lists.</dd>
+      <dt>Metadata filtering</dt>
+      <dd>Restricting search to chunks matching structured fields (date, source, tenant) before/after ranking.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Fig 47.3 — Index comparison</caption>
+        <tbody><tr><th>Dimension</th><th>Vector (dense)</th><th>Keyword (BM25)</th><th>Hybrid</th></tr>
+        <tr><td>Matches on</td><td>Meaning / concepts</td><td>Exact terms</td><td>Both</td></tr>
+        <tr><td>Handles synonyms</td><td>✅ Yes</td><td>❌ No</td><td>✅ Yes</td></tr>
+        <tr><td>Handles rare codes/IDs</td><td>⚠️ Weak</td><td>✅ Strong</td><td>✅ Strong</td></tr>
+        <tr><td>Query latency</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-high">Higher</span></td></tr>
+        <tr><td>Infra complexity</td><td><span class="badge b-med">Medium</span></td><td><span class="badge b-low">Low</span></td><td><span class="badge b-high">High</span></td></tr>
+        <tr><td>Cold-start w/o embeddings</td><td>❌ Needs embed model</td><td>✅ Works immediately</td><td>⚠️ Partial</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Default to <strong>hybrid</strong> when queries are mixed; fall back to pure vector or pure keyword only when the workload is clearly one-sided.</li>
+        <li><strong>RRF</strong> needs no score normalization — a robust first choice for fusion.</li>
+        <li>Push <strong>metadata filters</strong> (tenant, date, permissions) into the query to cut candidates and enforce access control.</li>
+        <li>Tune ANN parameters (e.g. HNSW <code>ef_search</code>) to balance recall vs. latency.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Using pure vector search for identifier-heavy data (SKUs, error codes) and getting fuzzy near-misses.</li>
+        <li>Ignoring keyword search entirely — semantic search alone often misses exact-string queries.</li>
+        <li>Forgetting access-control filters, leaking chunks across tenants/users.</li>
+        <li>Setting ANN accuracy too low to save latency, silently dropping relevant results.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> "A search over product SKUs and part numbers returns close-but-wrong items" or "Which index best serves a mix of conceptual and exact-match queries?"</p>
+      <p><strong>Eliminating distractors:</strong> If the scenario stresses <em>exact identifiers</em>, pure vector is a distractor. If it stresses <em>synonyms/paraphrase</em>, pure keyword is a distractor. When both are mentioned, the answer is almost always <b>hybrid</b>.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "Support search must find both 'can't log in' (natural language) and exact error code <code>ERR_4013</code>. Best index?"<br>
+        <b>Reason:</b> Natural-language phrasing needs semantics → dense. Exact code needs literal match → BM25. Both present → combine. → Answer: <b>hybrid with RRF fusion.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= 47.4 ================= -->
+  <section id="s474">
+    <h2><span class="num">47.4</span> Retrieval Strategies Matched to Data Shape and Query Pattern</h2>
+
+    <h3>Concept Summary</h3>
+    <p>Retrieval is not one algorithm — the right strategy depends on the <strong>shape of
+    your data</strong> (short FAQ vs. long reports vs. structured records) and the
+    <strong>pattern of your queries</strong> (specific vs. vague, single-fact vs.
+    multi-hop). Beyond plain <strong>dense top-k</strong>, common techniques include
+    <strong>reranking</strong> (a cross-encoder re-scores candidates for precision),
+    <strong>MMR</strong> (Maximal Marginal Relevance, which trades some relevance for
+    diversity to reduce redundancy), and <strong>query transformation</strong>
+    (multi-query or HyDE) for under-specified questions. The architect's job is to match
+    the tool to the situation, not to always reach for the most complex option.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>Top-k</dt>
+      <dd>Return the k most similar chunks; k is a key tuning knob (too small = missed context, too large = noise/cost).</dd>
+      <dt>Reranking (cross-encoder)</dt>
+      <dd>A second-stage model that scores each (query, chunk) pair jointly for higher precision than embedding similarity alone.</dd>
+      <dt>MMR (Maximal Marginal Relevance)</dt>
+      <dd>Selection that balances relevance to the query against novelty vs. already-picked chunks, reducing duplicates.</dd>
+      <dt>Multi-query</dt>
+      <dd>Generate several rephrasings of the question and union their results to boost recall.</dd>
+      <dt>HyDE (Hypothetical Document Embeddings)</dt>
+      <dd>Draft a hypothetical answer, embed it, and retrieve against that — helps for vague queries.</dd>
+      <dt>Multi-hop retrieval</dt>
+      <dd>Iterative retrieval where one result informs the next query, for questions needing chained evidence.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="figure">
+      <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retrieval strategy decision tree">
+        <style>
+          .n{font:600 12px sans-serif; fill:#1a2233;}
+          .e{font:11px sans-serif; fill:#7a869a;}
+          .leaf{font:700 12px sans-serif; fill:#0f8a5f;}
+        </style>
+        <defs>
+          <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#cdd4e0"></path>
+          </marker>
+        </defs>
+        <!-- root -->
+        <rect x="350" y="14" width="200" height="42" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+        <text x="450" y="40" text-anchor="middle" class="n">Query well-specified?</text>
+
+        <!-- yes branch -->
+        <line x1="410" y1="56" x2="240" y2="96" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a2)"></line>
+        <text x="300" y="80" class="e">yes</text>
+        <rect x="120" y="96" width="230" height="42" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+        <text x="235" y="122" text-anchor="middle" class="n">Precision critical?</text>
+
+        <!-- no branch -->
+        <line x1="490" y1="56" x2="660" y2="96" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a2)"></line>
+        <text x="585" y="80" class="e">no / vague</text>
+        <rect x="560" y="96" width="240" height="42" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+        <text x="680" y="122" text-anchor="middle" class="n">Transform query</text>
+
+        <!-- precision yes/no -->
+        <line x1="180" y1="138" x2="120" y2="184" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a2)"></line>
+        <text x="120" y="166" class="e">yes</text>
+        <rect x="30" y="184" width="185" height="52" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+        <text x="122" y="206" text-anchor="middle" class="leaf">Dense + Rerank</text>
+        <text x="122" y="224" text-anchor="middle" class="e">cross-encoder top-k</text>
+
+        <line x1="285" y1="138" x2="340" y2="184" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a2)"></line>
+        <text x="320" y="166" class="e">no</text>
+        <rect x="250" y="184" width="185" height="52" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+        <text x="342" y="206" text-anchor="middle" class="leaf">Hybrid top-k</text>
+        <text x="342" y="224" text-anchor="middle" class="e">+ MMR if redundant</text>
+
+        <!-- transform leaves -->
+        <line x1="640" y1="138" x2="560" y2="184" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a2)"></line>
+        <rect x="470" y="184" width="180" height="52" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+        <text x="560" y="206" text-anchor="middle" class="leaf">Multi-query / HyDE</text>
+        <text x="560" y="224" text-anchor="middle" class="e">boost recall</text>
+
+        <line x1="720" y1="138" x2="770" y2="184" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a2)"></line>
+        <rect x="680" y="184" width="180" height="52" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+        <text x="770" y="206" text-anchor="middle" class="leaf">Multi-hop</text>
+        <text x="770" y="224" text-anchor="middle" class="e">iterative retrieval</text>
+      </svg>
+      <div class="cap">Fig 47.4 — A decision tree for matching retrieval strategy to query specificity and precision needs.</div>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Retrieve a <strong>wide candidate set</strong> (e.g. top-20–50) then <strong>rerank down</strong> to a few high-precision chunks for the prompt.</li>
+        <li>Use <strong>MMR</strong> when top-k returns many near-duplicates covering the same point.</li>
+        <li>Reach for <strong>multi-query / HyDE</strong> only when queries are genuinely vague — they add latency and cost.</li>
+        <li>Match <strong>k</strong> to the context budget: leave room for the system prompt and the answer.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Over-engineering: applying multi-hop or HyDE to simple, specific queries — pure cost with no benefit.</li>
+        <li>Setting k so large that irrelevant chunks crowd out the answer ("lost in the middle").</li>
+        <li>Skipping reranking when precision matters and false positives are expensive.</li>
+        <li>Ignoring redundancy — feeding the model five chunks that all say the same thing.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> "Retrieved results are relevant but repetitive," "vague user questions return poor context," or "precision must be high because wrong context is costly."</p>
+      <p><strong>Eliminating distractors:</strong> Map the <em>symptom</em> to the <em>tool</em>: redundancy → MMR; vague queries → multi-query/HyDE; low precision → reranking; chained facts → multi-hop. Answers that propose the most complex technique for a simple query are distractors.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "A legal-search RAG surfaces the right documents but the top 5 chunks are near-identical excerpts, so the answer misses a second relevant clause. Best change?"<br>
+        <b>Reason:</b> Relevance is fine, diversity is the problem → the symptom is redundancy, not recall or precision. The tool that maximizes coverage while staying relevant is <b>MMR</b>. → Answer: <b>apply MMR to diversify retrieved chunks.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= 47.5 ================= -->
+  <section id="s475">
+    <h2><span class="num">47.5</span> Handling Document Refreshes and Stale Embeddings</h2>
+
+    <h3>Concept Summary</h3>
+    <p>A RAG index is only as trustworthy as it is fresh. When source documents change,
+    the corresponding chunks and embeddings must be updated or the system will retrieve
+    <strong>stale</strong> content. Two distinct staleness problems exist: (1)
+    <strong>content drift</strong> — the source text changed, so chunks need re-ingestion;
+    and (2) <strong>embedding drift</strong> — you switched or upgraded the embedding model,
+    so <em>all</em> vectors must be recomputed to stay in one comparable space. Robust
+    pipelines use <strong>change detection</strong> (hashes/timestamps), <strong>incremental
+    re-indexing</strong>, <strong>versioning</strong>, and <strong>TTL / scheduled refresh</strong>
+    to keep the index current without rebuilding everything each time.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>Content drift</dt>
+      <dd>Source documents change over time, making stored chunks outdated.</dd>
+      <dt>Embedding drift / model change</dt>
+      <dd>Changing the embedding model invalidates comparisons — mixing vectors from two models corrupts similarity. Full re-embedding is required.</dd>
+      <dt>Incremental / delta indexing</dt>
+      <dd>Only re-process documents that actually changed, detected via content hash or modified timestamp.</dd>
+      <dt>Change data capture (CDC)</dt>
+      <dd>Detecting inserts/updates/deletes at the source so the index can be patched accordingly.</dd>
+      <dt>TTL (time-to-live)</dt>
+      <dd>An expiry after which a chunk is considered stale and re-checked or removed.</dd>
+      <dt>Versioning</dt>
+      <dd>Tracking document/embedding versions so you can roll back and know which model produced which vector.</dd>
+      <dt>Tombstoning</dt>
+      <dd>Explicitly marking deleted source docs so their chunks are removed from retrieval.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="figure">
+      <svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Refresh decision flow">
+        <style>
+          .n{font:600 12px sans-serif; fill:#1a2233;}
+          .e{font:11px sans-serif; fill:#7a869a;}
+          .g{font:700 12px sans-serif; fill:#0f8a5f;}
+          .r{font:700 12px sans-serif; fill:#c0392b;}
+        </style>
+        <defs>
+          <marker id="a3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#cdd4e0"></path>
+          </marker>
+        </defs>
+        <rect x="30" y="100" width="150" height="46" rx="8" fill="#eef1f7" stroke="#cdd4e0"></rect>
+        <text x="105" y="128" text-anchor="middle" class="n">Doc change event</text>
+
+        <line x1="180" y1="123" x2="235" y2="123" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a3)"></line>
+        <rect x="238" y="100" width="170" height="46" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+        <text x="323" y="122" text-anchor="middle" class="n">Hash changed?</text>
+        <text x="323" y="138" text-anchor="middle" class="e">content vs. stored</text>
+
+        <!-- no -->
+        <line x1="408" y1="112" x2="470" y2="60" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a3)"></line>
+        <text x="430" y="80" class="e">no</text>
+        <rect x="470" y="34" width="170" height="46" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+        <text x="555" y="62" text-anchor="middle" class="g">Skip — up to date</text>
+
+        <!-- yes -->
+        <line x1="408" y1="134" x2="470" y2="170" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a3)"></line>
+        <text x="430" y="166" class="e">yes</text>
+        <rect x="470" y="150" width="200" height="46" rx="8" fill="#fff7e6" stroke="#b7791f"></rect>
+        <text x="570" y="172" text-anchor="middle" class="n">Re-chunk + re-embed</text>
+        <text x="570" y="188" text-anchor="middle" class="e">delta only</text>
+
+        <line x1="670" y1="173" x2="720" y2="173" stroke="#cdd4e0" stroke-width="2" marker-end="url(#a3)"></line>
+        <rect x="722" y="150" width="150" height="46" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+        <text x="797" y="172" text-anchor="middle" class="n">Upsert + version</text>
+        <text x="797" y="188" text-anchor="middle" class="e">tombstone deletes</text>
+
+        <!-- model change note -->
+        <rect x="722" y="34" width="150" height="60" rx="8" fill="#fdeeec" stroke="#c0392b"></rect>
+        <text x="797" y="58" text-anchor="middle" class="r">Model change?</text>
+        <text x="797" y="76" text-anchor="middle" class="e">→ full re-embed</text>
+        <text x="797" y="90" text-anchor="middle" class="e">of entire corpus</text>
+      </svg>
+      <div class="cap">Fig 47.5 — Incremental refresh: skip unchanged docs, delta-update changed ones. A model change forces a full re-embed of the whole corpus.</div>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Store a <strong>content hash</strong> per chunk so you re-embed only what actually changed.</li>
+        <li>Keep <strong>timestamps/version tags</strong> in metadata; expose "last updated" in answers for time-sensitive domains.</li>
+        <li>Schedule refreshes to match the source's real update cadence — near-real-time for news, nightly/weekly for docs.</li>
+        <li>On an embedding-model upgrade, <strong>re-embed everything</strong> and cut over atomically (blue/green index) to avoid mixed spaces.</li>
+        <li><strong>Tombstone</strong> deleted sources so removed content stops being retrieved.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Mixing vectors from two embedding models in one index — silently corrupts similarity ranking.</li>
+        <li>Rebuilding the entire index on every small change — slow and expensive.</li>
+        <li>Deleting a source document but leaving its orphaned chunks retrievable.</li>
+        <li>No freshness signal, so users can't tell whether an answer reflects current data.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> "After upgrading the embedding model, retrieval quality collapses," or "Deleted policies still appear in answers," or "How to keep a large index fresh cost-effectively?"</p>
+      <p><strong>Eliminating distractors:</strong> If the trigger is a <em>model change</em>, the only correct answer is a <b>full re-embed</b> — options suggesting partial update are traps. If the trigger is a <em>content change</em>, favor <b>incremental/delta</b> re-indexing over full rebuilds.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "You switch from embedding-model v1 to v2 but only re-embed newly added documents. Search results become erratic. Why?"<br>
+        <b>Reason:</b> New docs are in v2 space, old docs in v1 space — the two aren't comparable, so similarity scores are meaningless across them. The fix is to <b>re-embed the entire corpus with v2</b>. → Answer: <b>full re-embedding after any model change.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= 47.6 ================= -->
+  <section id="s476">
+    <h2><span class="num">47.6</span> Evaluating RAG Quality: Relevance, Faithfulness &amp; Completeness</h2>
+
+    <h3>Concept Summary</h3>
+    <p>You can't improve what you don't measure. RAG evaluation splits into
+    <strong>retrieval quality</strong> and <strong>generation quality</strong>.
+    On the retrieval side, <strong>context relevance/precision</strong> asks "are the
+    retrieved chunks on-topic?" and <strong>context recall</strong> asks "did we retrieve
+    everything needed to answer?". On the generation side, <strong>faithfulness</strong>
+    (a.k.a. groundedness) asks "is the answer supported by the retrieved context, with no
+    made-up claims?" and <strong>answer relevance/completeness</strong> asks "does the answer
+    actually and fully address the question?". Evaluate the stages separately so you know
+    <em>which</em> half to fix.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>Context precision / relevance</dt>
+      <dd>Share of retrieved chunks that are actually relevant — measures retrieval noise.</dd>
+      <dt>Context recall</dt>
+      <dd>Whether all information needed to answer was retrieved — measures retrieval completeness.</dd>
+      <dt>Faithfulness / groundedness</dt>
+      <dd>Degree to which answer claims are supported by the retrieved context (no hallucination).</dd>
+      <dt>Answer relevance</dt>
+      <dd>How directly the answer addresses the user's actual question.</dd>
+      <dt>Completeness</dt>
+      <dd>Whether the answer covers all parts the question requires.</dd>
+      <dt>Golden / evaluation set</dt>
+      <dd>A curated set of question → expected-answer/expected-source pairs used to measure quality over time.</dd>
+      <dt>LLM-as-judge</dt>
+      <dd>Using a strong model with a rubric to score faithfulness/relevance at scale; validate against human labels.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Fig 47.6 — Metrics mapped to the stage they diagnose and the typical fix</caption>
+        <tbody><tr><th>Metric</th><th>Question it answers</th><th>Stage</th><th>If low, fix…</th></tr>
+        <tr><td><strong>Context precision</strong></td><td>Are retrieved chunks relevant?</td><td>Retrieval</td><td>Reranking, better chunking, filters</td></tr>
+        <tr><td><strong>Context recall</strong></td><td>Did we retrieve all we needed?</td><td>Retrieval</td><td>↑ k, hybrid search, query expansion</td></tr>
+        <tr><td><strong>Faithfulness</strong></td><td>Is the answer grounded in context?</td><td>Generation</td><td>Prompt grounding, cite-or-refuse rules</td></tr>
+        <tr><td><strong>Answer relevance</strong></td><td>Does it address the question?</td><td>Generation</td><td>Prompt/instructions, better model</td></tr>
+        <tr><td><strong>Completeness</strong></td><td>Does it cover all parts?</td><td>Both</td><td>Recall + prompt for full coverage</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Build a small <strong>golden set</strong> early; measure before and after every change to prove impact.</li>
+        <li>Evaluate <strong>retrieval and generation separately</strong> — a low faithfulness score with good context points to the prompt/model, not retrieval.</li>
+        <li>Require <strong>citations</strong>; an uncited claim is a faithfulness red flag.</li>
+        <li>Use <strong>LLM-as-judge</strong> for scale, but spot-check against human labels to trust the scores.</li>
+        <li>Track metrics as a dashboard over time to catch <strong>regressions</strong> before users do.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Judging only the final answer and never inspecting whether retrieval supplied the right context.</li>
+        <li>Confusing <em>faithfulness</em> (grounded in context) with <em>correctness</em> (true in the real world) — an answer can be faithful to a wrong source.</li>
+        <li>Optimizing a single metric (e.g. recall) at the expense of another (precision).</li>
+        <li>Having no evaluation set at all, so "improvements" are guesswork.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> "The retrieved context is correct but the answer adds facts not in the context — which metric is failing?" or "How would you diagnose whether a bad answer is a retrieval or generation problem?"</p>
+      <p><strong>Eliminating distractors:</strong> Anchor on definitions. "Made-up claims despite good context" = <b>faithfulness</b>, not relevance. "Missed necessary info" = <b>recall</b>, not precision. Distractors swap these pairs — read the symptom carefully.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "Context contains the answer, but the model's response includes an extra statistic that appears nowhere in the retrieved text. Which metric is low?"<br>
+        <b>Reason:</b> Retrieval was fine (context had the answer) → not a recall/precision issue. The problem is the answer isn't supported by context → that's <b>faithfulness / groundedness</b>. Fix = tighten prompt grounding + require citations. → Answer: <b>faithfulness.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= 47.7 ================= -->
+  <section id="s477">
+    <h2><span class="num">47.7</span> Hands-On: Building and Tuning a RAG Pipeline</h2>
+
+    <h3>Concept Summary</h3>
+    <p>Building a RAG pipeline is iterative: stand up a <strong>baseline</strong> end-to-end,
+    measure it against a golden set, then tune <em>one variable at a time</em>. The typical
+    build order is: load &amp; clean documents → choose a chunking strategy → pick an embedding
+    model → select an index type → set retrieval (k, hybrid, rerank) → engineer a grounding
+    prompt → evaluate → iterate. Because retrieval and generation are separable, you diagnose
+    which stage is limiting quality and tune only that lever, re-measuring each time so you
+    can attribute gains to specific changes.</p>
+
+    <h3>Key Terminology</h3>
+    <dl class="terms">
+      <dt>Baseline</dt>
+      <dd>The simplest working pipeline you measure everything else against.</dd>
+      <dt>Ablation / one-variable tuning</dt>
+      <dd>Changing a single parameter at a time so you can attribute quality changes to it.</dd>
+      <dt>Grounding prompt</dt>
+      <dd>Instruction that tells the model to answer only from provided context and to say "I don't know" if the context is insufficient.</dd>
+      <dt>Context assembly</dt>
+      <dd>How retrieved chunks are ordered/formatted/deduplicated into the final prompt.</dd>
+      <dt>Guardrail: cite-or-refuse</dt>
+      <dd>Require the model to cite sources or decline, curbing hallucination.</dd>
+    </dl>
+
+    <h3>Visualization</h3>
+    <div class="figure">
+      <svg viewBox="0 0 920 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RAG build and tuning loop">
+        <style>
+          .n{font:600 11.5px sans-serif; fill:#1a2233;}
+          .e{font:10.5px sans-serif; fill:#7a869a;}
+        </style>
+        <defs>
+          <marker id="a4" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#7a869a"></path>
+          </marker>
+        </defs>
+        <!-- linear build steps -->
+        <g>
+          <rect x="15" y="30" width="120" height="46" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+          <text x="75" y="52" text-anchor="middle" class="n">1 · Load &amp; clean</text>
+          <text x="75" y="68" text-anchor="middle" class="e">parse, dedupe</text>
+
+          <rect x="160" y="30" width="120" height="46" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+          <text x="220" y="52" text-anchor="middle" class="n">2 · Chunk</text>
+          <text x="220" y="68" text-anchor="middle" class="e">size + overlap</text>
+
+          <rect x="305" y="30" width="120" height="46" rx="8" fill="#f0eaff" stroke="#6b3fd4"></rect>
+          <text x="365" y="52" text-anchor="middle" class="n">3 · Embed</text>
+          <text x="365" y="68" text-anchor="middle" class="e">pick model</text>
+
+          <rect x="450" y="30" width="120" height="46" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+          <text x="510" y="52" text-anchor="middle" class="n">4 · Index</text>
+          <text x="510" y="68" text-anchor="middle" class="e">vector/hybrid</text>
+
+          <rect x="595" y="30" width="130" height="46" rx="8" fill="#eaf0ff" stroke="#2c5cff"></rect>
+          <text x="660" y="52" text-anchor="middle" class="n">5 · Retrieve</text>
+          <text x="660" y="68" text-anchor="middle" class="e">k, rerank, MMR</text>
+
+          <rect x="750" y="30" width="150" height="46" rx="8" fill="#fff7e6" stroke="#b7791f"></rect>
+          <text x="825" y="52" text-anchor="middle" class="n">6 · Prompt + Generate</text>
+          <text x="825" y="68" text-anchor="middle" class="e">grounding rules</text>
+
+          <line x1="135" y1="53" x2="157" y2="53" stroke="#7a869a" stroke-width="2" marker-end="url(#a4)"></line>
+          <line x1="280" y1="53" x2="302" y2="53" stroke="#7a869a" stroke-width="2" marker-end="url(#a4)"></line>
+          <line x1="425" y1="53" x2="447" y2="53" stroke="#7a869a" stroke-width="2" marker-end="url(#a4)"></line>
+          <line x1="570" y1="53" x2="592" y2="53" stroke="#7a869a" stroke-width="2" marker-end="url(#a4)"></line>
+          <line x1="725" y1="53" x2="747" y2="53" stroke="#7a869a" stroke-width="2" marker-end="url(#a4)"></line>
+        </g>
+        <!-- evaluate -->
+        <rect x="360" y="150" width="200" height="50" rx="8" fill="#e8f8f1" stroke="#0f8a5f"></rect>
+        <text x="460" y="172" text-anchor="middle" class="n">7 · Evaluate vs. golden set</text>
+        <text x="460" y="189" text-anchor="middle" class="e">precision · recall · faithfulness</text>
+
+        <!-- gen to eval -->
+        <path d="M825 76 L825 175 L562 175" fill="none" stroke="#7a869a" stroke-width="2" marker-end="url(#a4)"></path>
+        <!-- eval loops back (tune one variable) -->
+        <path d="M360 175 L120 175 L120 78" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a4)"></path>
+        <text x="150" y="140" class="e" fill="#c0392b">iterate — tune one variable, re-measure</text>
+      </svg>
+      <div class="cap">Fig 47.7 — Build the baseline left-to-right, evaluate against a golden set, then loop back changing one lever at a time.</div>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Ship a <strong>naive baseline</strong> first (fixed chunks, dense top-k, simple prompt) — you can't tune what you can't measure.</li>
+        <li>Tune <strong>one variable at a time</strong> and re-run evaluation to attribute the gain.</li>
+        <li>When retrieval metrics are the bottleneck, fix chunking/index/k <em>before</em> touching the generation model.</li>
+        <li>Add a <strong>cite-or-refuse</strong> instruction ("if the context doesn't contain the answer, say you don't know").</li>
+        <li>Log real queries + retrieved chunks to grow your golden set from actual usage.</li>
+      </ul>
+    </div>
+
+    <div class="box pitfall">
+      <span class="label">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Changing chunking, model, and prompt all at once — you can't tell what helped.</li>
+        <li>Optimizing the LLM prompt when the real problem is that retrieval never surfaced the answer.</li>
+        <li>No golden set, so "it feels better" replaces measurement.</li>
+        <li>Over-stuffing the context window, raising cost and triggering "lost in the middle".</li>
+      </ul>
+    </div>
+
+    <div class="box exam-strategy">
+      <span class="label">🎯 Exam Strategy</span>
+      <p><strong>Likely phrasing:</strong> "Answers are wrong; what do you tune first?", "How to isolate the cause of poor RAG quality?", or a step-ordering question ("place these build stages in order").</p>
+      <p><strong>Eliminating distractors:</strong> The correct answer almost always starts with <b>measure/diagnose</b> before changing anything, and changes <b>one lever at a time</b>. Options that jump straight to fine-tuning the LLM, or that change several things at once, are distractors.</p>
+      <div class="worked">
+        <b>Worked example.</b> Q: "Faithfulness is high but answers are frequently incomplete. Evaluation shows context recall is low. What should you tune first?"<br>
+        <b>Reason:</b> Faithful but incomplete + low recall → the model is loyal to context, but the context is missing pieces. That's a <b>retrieval recall</b> problem, not a generation one. Levers: increase k, switch to hybrid search, or add query expansion — <em>not</em> prompt/model changes. → Answer: <b>improve retrieval recall (hybrid/↑k) before touching the prompt.</b>
+      </div>
+    </div>
+    <a class="back" href="#summary">↑ Back to top</a>
+  </section>
+
+  <!-- ================= EXAM CRAM SHEET ================= -->
+  <section id="cram" class="cram">
+    <h2>🧠 Exam Cram Sheet</h2>
+
+    <h3>One fact per sub-topic</h3>
+    <ul>
+      <li><strong>47.1 Architecture:</strong> RAG = two pipelines (ingestion + retrieval/generation) sharing one index; it updates knowledge <em>without retraining</em> and reduces hallucination only if retrieval + grounding both work.</li>
+      <li><strong>47.2 Chunking:</strong> Respect semantic boundaries; use <code>10–20%</code> overlap for narrative text; the best answer pairs <em>size + overlap + boundary</em>, never size alone.</li>
+      <li><strong>47.3 Indexing:</strong> Vector = meaning, Keyword/BM25 = exact terms, <strong>Hybrid (+ RRF)</strong> = both and the production default for mixed queries.</li>
+      <li><strong>47.4 Retrieval:</strong> Match tool to symptom — redundancy → MMR, vague query → multi-query/HyDE, precision → rerank, chained facts → multi-hop; don't over-engineer simple queries.</li>
+      <li><strong>47.5 Freshness:</strong> Content change → incremental/delta re-index; <strong>embedding-model change → full re-embed of the entire corpus</strong> (never mix model spaces).</li>
+      <li><strong>47.6 Evaluation:</strong> Split retrieval (precision/recall) from generation (faithfulness/answer-relevance); "grounded in context" (faithfulness) ≠ "true in reality" (correctness).</li>
+      <li><strong>47.7 Hands-on:</strong> Baseline → measure against golden set → tune <em>one variable at a time</em>; fix retrieval before generation.</li>
+    </ul>
+
+    <h3>Quick decision tree — pick the retrieval strategy</h3>
+    <div class="tree">
+      <p>▸ Query has <strong>exact IDs / codes / names</strong> &nbsp;→&nbsp; include <strong>keyword (BM25)</strong> → if also conceptual → <strong>hybrid + RRF</strong></p>
+      <p>▸ Query is <strong>conceptual / paraphrased</strong> &nbsp;→&nbsp; <strong>dense vector top-k</strong> → if precision-critical → add <strong>cross-encoder rerank</strong></p>
+      <p>▸ Results are <strong>relevant but repetitive</strong> &nbsp;→&nbsp; add <strong>MMR</strong> for diversity</p>
+      <p>▸ Query is <strong>vague / under-specified</strong> &nbsp;→&nbsp; <strong>multi-query or HyDE</strong> to boost recall</p>
+      <p>▸ Answer needs <strong>chained / multi-hop evidence</strong> &nbsp;→&nbsp; <strong>iterative multi-hop retrieval</strong></p>
+      <p>▸ Mixed intent + production default &nbsp;→&nbsp; <strong>hybrid retrieval → rerank → assemble top few chunks</strong></p>
+    </div>
+
+    <h3>Quick decision tree — freshness &amp; evaluation</h3>
+    <div class="tree">
+      <p>▸ Source text changed &nbsp;→&nbsp; <strong>delta re-chunk + re-embed changed docs</strong>, upsert, tombstone deletes</p>
+      <p>▸ Embedding model changed &nbsp;→&nbsp; <strong>full re-embed of whole corpus</strong>, atomic cut-over</p>
+      <p>▸ Answer invents facts despite good context &nbsp;→&nbsp; low <strong>faithfulness</strong> → tighten grounding + citations</p>
+      <p>▸ Answer misses needed info &nbsp;→&nbsp; low <strong>context recall</strong> → ↑k / hybrid / query expansion</p>
+      <p>▸ Retrieved chunks off-topic &nbsp;→&nbsp; low <strong>context precision</strong> → rerank / better chunking / filters</p>
+    </div>
+  </section>
+
+  <footer class="doc">
+    Chapter 47 · RAG Pipeline Design — Exam-ready study notes for the Claude Certified Architect (Foundations &amp; Professional) credential.
+    Relative latency/cost/complexity ratings are typical-case guidance, not benchmarks. Tune all parameters against your own evaluation set.
+  </footer>
+
+</div>
+
+
+</body></html>

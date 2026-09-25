@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 14 — Path-Specific Rules | Claude Certified Architect Study Notes</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f8f9fa;
+    --bg-code: #f1f3f5;
+    --text: #1a1a2e;
+    --text-sec: #495057;
+    --text-muted: #868e96;
+    --border: #dee2e6;
+    --border-light: #e9ecef;
+    --primary: #4263eb;
+    --primary-bg: #edf2ff;
+    --primary-dark: #364fc7;
+    --success: #2b8a3e;
+    --success-bg: #ebfbee;
+    --warning: #e67700;
+    --warning-bg: #fff9db;
+    --danger: #c92a2a;
+    --danger-bg: #fff5f5;
+    --info: #1971c2;
+    --info-bg: #e7f5ff;
+    --purple: #7048e8;
+    --purple-bg: #f3f0ff;
+    --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --radius: 8px;
+    --radius-sm: 4px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.65; font-size: 15px; }
+
+  /* === PRINT === */
+  @media print {
+    body { font-size: 11pt; }
+    .no-print, nav { display: none !important; }
+    .page-break { page-break-before: always; }
+    .callout { break-inside: avoid; }
+    pre { white-space: pre-wrap; word-wrap: break-word; }
+  }
+
+  /* === LAYOUT === */
+  .container { max-width: 920px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  /* === HEADER === */
+  header { background: linear-gradient(135deg, #364fc7 0%, #7048e8 100%); color: #fff; padding: 48px 24px 40px; text-align: center; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+  header .subtitle { font-size: 1rem; opacity: 0.88; font-weight: 400; }
+  header .badge { display: inline-block; background: rgba(255,255,255,0.18); padding: 4px 14px; border-radius: 100px; font-size: 0.8rem; margin-top: 12px; font-weight: 500; letter-spacing: 0.03em; }
+
+  /* === NAV === */
+  nav.toc { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 36px; }
+  nav.toc h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 12px; }
+  nav.toc ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+  nav.toc a { text-decoration: none; color: var(--primary); font-size: 0.9rem; font-weight: 500; transition: color 0.15s; }
+  nav.toc a:hover { color: var(--primary-dark); text-decoration: underline; }
+  @media (max-width: 600px) { nav.toc ul { grid-template-columns: 1fr; } }
+
+  /* === SECTIONS === */
+  section { margin-bottom: 48px; }
+  h2.section-title { font-size: 1.5rem; font-weight: 700; color: var(--primary-dark); border-bottom: 3px solid var(--primary); padding-bottom: 8px; margin-bottom: 24px; }
+  h3 { font-size: 1.15rem; font-weight: 600; color: var(--text); margin: 24px 0 12px; }
+  h4 { font-size: 1rem; font-weight: 600; color: var(--text-sec); margin: 18px 0 8px; }
+  p { margin-bottom: 12px; color: var(--text-sec); }
+  ul, ol { margin: 8px 0 16px 20px; color: var(--text-sec); }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  a { color: var(--primary); }
+
+  /* === CALLOUTS === */
+  .callout { border-radius: var(--radius); padding: 16px 20px; margin: 20px 0; border-left: 4px solid; }
+  .callout-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .callout p, .callout li { font-size: 0.92rem; }
+
+  .callout.tip { background: var(--warning-bg); border-color: var(--warning); }
+  .callout.tip .callout-title { color: var(--warning); }
+
+  .callout.exam { background: var(--info-bg); border-color: var(--info); }
+  .callout.exam .callout-title { color: var(--info); }
+
+  .callout.warn { background: var(--danger-bg); border-color: var(--danger); }
+  .callout.warn .callout-title { color: var(--danger); }
+
+  .callout.hands-on { background: var(--success-bg); border-color: var(--success); }
+  .callout.hands-on .callout-title { color: var(--success); }
+
+  .callout.concept { background: var(--purple-bg); border-color: var(--purple); }
+  .callout.concept .callout-title { color: var(--purple); }
+
+  /* === CODE === */
+  pre { background: #1e1e2e; color: #cdd6f4; border-radius: var(--radius); padding: 16px 20px; overflow-x: auto; margin: 12px 0 16px; font-family: var(--mono); font-size: 0.85rem; line-height: 1.55; border: 1px solid #313244; }
+  code { font-family: var(--mono); font-size: 0.88em; }
+  :not(pre) > code { background: var(--bg-code); padding: 2px 6px; border-radius: var(--radius-sm); color: var(--primary-dark); font-size: 0.85em; }
+  .code-label { display: inline-block; background: #313244; color: #89b4fa; font-family: var(--mono); font-size: 0.75rem; padding: 2px 10px; border-radius: var(--radius-sm) var(--radius-sm) 0 0; margin-bottom: -1px; position: relative; z-index: 1; }
+  .code-annotation { color: #6c7086; font-style: italic; }
+
+  /* === TABLES === */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+  th { background: var(--bg-alt); color: var(--text); font-weight: 600; text-align: left; padding: 10px 14px; border: 1px solid var(--border); }
+  td { padding: 10px 14px; border: 1px solid var(--border-light); color: var(--text-sec); }
+  tr:hover td { background: #f8f9ff; }
+
+  /* === DEFINITION LIST === */
+  dl { margin: 12px 0; }
+  dt { font-weight: 600; color: var(--text); margin-top: 12px; }
+  dd { margin-left: 20px; color: var(--text-sec); margin-bottom: 4px; }
+
+  /* === DIAGRAM === */
+  .diagram { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 20px; margin: 16px 0; overflow-x: auto; }
+  .diagram pre { background: transparent; color: var(--text); border: none; padding: 0; margin: 0; font-size: 0.82rem; }
+  .diagram-caption { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 8px; font-style: italic; }
+
+  /* === SUMMARY TABLE === */
+  .summary-table th { background: var(--primary); color: #fff; }
+  .summary-table td:first-child { font-weight: 600; color: var(--text); white-space: nowrap; }
+
+  /* === CHEAT SHEET === */
+  .cheat-sheet { background: #1e1e2e; color: #cdd6f4; border-radius: var(--radius); padding: 24px; margin: 24px 0; font-family: var(--mono); font-size: 0.82rem; line-height: 1.6; }
+  .cheat-sheet h3 { color: #89b4fa; font-size: 0.9rem; margin-bottom: 12px; border-bottom: 1px solid #313244; padding-bottom: 8px; }
+  .cheat-sheet .section-label { color: #f9e2af; font-weight: 700; }
+  .cheat-sheet .hl { color: #a6e3a1; }
+  .cheat-sheet .dim { color: #6c7086; }
+  .cheat-sheet .warn-hl { color: #fab387; }
+
+  /* === QUESTION BANK === */
+  .question { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 18px 20px; margin: 16px 0; }
+  .question .q-num { font-weight: 700; color: var(--primary); font-size: 0.85rem; }
+  .question .q-text { font-weight: 600; color: var(--text); margin: 6px 0 10px; }
+  .question .options { list-style: upper-alpha; margin-left: 24px; }
+  .question .options li { margin-bottom: 4px; color: var(--text-sec); }
+  details.answer { margin-top: 10px; }
+  details.answer summary { cursor: pointer; color: var(--primary); font-weight: 600; font-size: 0.88rem; }
+  details.answer .answer-body { background: var(--success-bg); border-radius: var(--radius-sm); padding: 12px 16px; margin-top: 8px; font-size: 0.9rem; }
+  details.answer .answer-body strong { color: var(--success); }
+
+  .back-to-top { display: inline-block; margin-top: 16px; color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+  .back-to-top:hover { text-decoration: underline; }
+
+  .vs-box { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: start; margin: 16px 0; }
+  .vs-col { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 16px; }
+  .vs-col h4 { margin-top: 0; }
+  .vs-divider { display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--text-muted); font-size: 1.2rem; padding-top: 24px; }
+  @media (max-width: 700px) { .vs-box { grid-template-columns: 1fr; } .vs-divider { padding: 0; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Chapter 14: Path-Specific Rules</h1>
+  <div class="subtitle">Claude Certified Architect — Foundations &amp; Professional</div>
+  <div class="badge">EXAM-READY STUDY NOTES</div>
+</header>
+
+<div class="container">
+
+<!-- ==================== TOC ==================== -->
+<nav class="toc" id="top">
+  <h2>📑 Table of Contents</h2>
+  <ul>
+    <li><a href="#s14-1">14.1 — <code>.claude/rules/</code> with YAML Frontmatter</a></li>
+    <li><a href="#s14-2">14.2 — Glob Patterns for File-Type Targeting</a></li>
+    <li><a href="#s14-3">14.3 — Path-Specific Rules vs Subdirectory CLAUDE.md</a></li>
+    <li><a href="#s14-4">14.4 — Cross-File-Type Conventions</a></li>
+    <li><a href="#s14-5">14.5 — Hands-On Implementation</a></li>
+    <li><a href="#summary">Chapter Summary</a></li>
+    <li><a href="#questions">Practice Question Bank</a></li>
+    <li><a href="#cheatsheet">Quick-Reference Cheat Sheet</a></li>
+  </ul>
+</nav>
+
+
+<!-- ============================================================ -->
+<!--                    SECTION 14.1                               -->
+<!-- ============================================================ -->
+<section id="s14-1">
+<h2 class="section-title">14.1 — <code>.claude/rules/</code> with YAML Frontmatter Path Scoping</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  The <code>.claude/rules/</code> directory is a <strong>modular, first-class instruction system</strong> in Claude Code. Instead of cramming every convention into a single monolithic <code>CLAUDE.md</code>, you split instructions into focused <code>.md</code> files inside this directory. Claude Code <strong>recursively discovers</strong> every <code>.md</code> file in <code>.claude/rules/</code> — subdirectories are supported for organization. Each rule file optionally includes <strong>YAML frontmatter</strong> with a <code>paths:</code> field to scope that rule to specific file patterns.
+</p>
+<p>
+  Rules without <code>paths:</code> frontmatter are <strong>global</strong> — they load at the start of every session with the same high priority as <code>CLAUDE.md</code>. Rules with <code>paths:</code> are <strong>path-scoped</strong> — they only enter the context window when Claude touches a file matching one of the declared glob patterns. This design is a form of <strong>progressive disclosure</strong>: domain-specific instructions cost zero tokens until they become relevant.
+</p>
+
+<h3>Key Terminology</h3>
+<table>
+  <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Global Rule</strong></td><td>A rule file with <strong>no</strong> <code>paths:</code> frontmatter. Loads unconditionally at session start, same priority as <code>CLAUDE.md</code>.</td></tr>
+    <tr><td><strong>Path-Scoped Rule</strong></td><td>A rule file <strong>with</strong> a <code>paths:</code> field in YAML frontmatter. Loads only when Claude reads/writes a file matching the declared globs.</td></tr>
+    <tr><td><strong>Rule Hierarchy</strong></td><td>Three priority tiers: Enterprise → User → Project. Higher tiers override lower when rules conflict.</td></tr>
+    <tr><td><strong>YAML Frontmatter</strong></td><td>A metadata block delimited by <code>---</code> at the top of a Markdown file, parsed as YAML. Used to declare <code>paths:</code> for scoping.</td></tr>
+    <tr><td><strong>Progressive Disclosure</strong></td><td>Design pattern: load only what is relevant, only when it is relevant. Saves context tokens and reduces noise.</td></tr>
+    <tr><td><strong><code>/memory</code></strong></td><td>Interactive Claude Code command that lists all loaded CLAUDE.md files and rules. The primary debugging tool for rule loading.</td></tr>
+  </tbody>
+</table>
+
+<h3>Rule Hierarchy — Priority Order</h3>
+<div class="diagram">
+<pre> Priority          Location                       Scope
+ ────────          ────────                       ─────
+  1 (highest)      ~/.claude/enterprise/rules/     Organization-level standards
+  2                ~/.claude/rules/                Personal defaults (all projects)
+  3 (lowest)       .claude/rules/                  Project-specific patterns
+</pre>
+<div class="diagram-caption">Higher-priority rules override lower-priority ones when they conflict</div>
+</div>
+
+<h3>Directory Structure &amp; Discovery</h3>
+
+<div class="diagram">
+<pre>your-project/
+├── .claude/
+│   ├── CLAUDE.md              ← main project instructions (always loaded)
+│   └── rules/
+│       ├── code-style.md      ← global rule (no paths:) — loads every session
+│       ├── testing.md         ← global rule (no paths:) — loads every session
+│       ├── INDEX.txt          ← human navigation only — NOT auto-loaded
+│       ├── api/
+│       │   └── endpoints.md   ← path-scoped (paths: "src/api/**/*.ts")
+│       ├── database/
+│       │   └── patterns.md    ← path-scoped (paths: "src/database/**")
+│       └── quality/
+│           └── standards.md   ← global rule — loads every session
+</pre>
+<div class="diagram-caption">Claude Code recursively discovers all .md files. Only .md files are loaded — .txt, .json, etc. are ignored.</div>
+</div>
+
+<p><strong>Discovery rules:</strong></p>
+<ul>
+  <li>Only <code>.md</code> files are auto-loaded. All other extensions are ignored.</li>
+  <li>Subdirectories are scanned recursively — organize by domain freely.</li>
+  <li>Use <code>INDEX.txt</code> (not <code>README.md</code>) for human-readable indexes — <code>README.md</code> would be auto-loaded and waste context tokens.</li>
+  <li>Symlinks are supported and resolved. Circular symlinks are detected gracefully.</li>
+</ul>
+
+<h3>YAML Frontmatter Format</h3>
+<p>The <code>paths:</code> key accepts glob patterns. The body after the closing <code>---</code> is your rule in Markdown.</p>
+
+<div class="code-label">✅ YAML Array Format (standard, widely documented)</div>
+<pre><code>---
+paths:
+  - "src/api/**/*.ts"
+  - "src/api/**/*.js"
+---
+
+# API Development Rules
+
+- Validate all inputs with Zod schemas
+- Return consistent error shapes: { error: string, code: number }
+- Include OpenAPI doc comments on every handler</code></pre>
+
+<div class="code-label">✅ Single Glob String Format</div>
+<pre><code>---
+paths: src/api/**/*.ts
+---
+
+# API Rules
+- Every endpoint validates its input.</code></pre>
+
+<div class="callout warn">
+  <div class="callout-title">⚠️ Watch Out — CSV String Format Discrepancy</div>
+  <p>One community guide (ytrofr/claude-code-guide) reports that YAML arrays are <strong>silently ignored</strong> in some Claude Code versions due to a parser bug (<a href="#">issues #13905, #17204</a>), and recommends a <strong>comma-separated string</strong> format instead:</p>
+<pre><code><span class="code-annotation"># CSV string format — reported as workaround for parser bug</span>
+---
+paths: "src/**/*.js, src/**/*.ts"
+---</code></pre>
+  <p>However, <strong>multiple official and authoritative sources</strong> (Anthropic blog, ClaudeFast, bswen.com, groff.dev) document the <strong>YAML array format</strong> as working correctly. This discrepancy may reflect a <strong>version-specific bug that was fixed</strong>.</p>
+  <p><strong>Exam strategy:</strong> Know both formats exist. If a question asks about the "correct" format, the YAML array is the standard documented format. If a question specifically mentions parser compatibility issues, the CSV string is the fallback.</p>
+</div>
+
+<h3>Loading Behavior — Global vs Path-Scoped</h3>
+<div class="diagram">
+<pre>                    ┌─────────────────────────────┐
+                    │  Claude Code Session Start   │
+                    └─────────────┬───────────────┘
+                                  │
+                    ┌─────────────▼───────────────┐
+                    │  Scan .claude/rules/*.md     │
+                    │  (recursive, all .md files)  │
+                    └─────────────┬───────────────┘
+                                  │
+              ┌───────────────────┴──────────────────┐
+              │                                      │
+    ┌─────────▼─────────┐              ┌─────────────▼─────────────┐
+    │ No paths: field    │              │ Has paths: field          │
+    │                    │              │                           │
+    │ → LOAD IMMEDIATELY │              │ → STORE, WAIT FOR MATCH   │
+    │   (global rule)    │              │   (path-scoped rule)      │
+    │   Same priority    │              │                           │
+    │   as CLAUDE.md     │              │   When Claude reads/writes│
+    └────────────────────┘              │   a file matching a glob: │
+                                        │   → LOAD INTO CONTEXT     │
+                                        └───────────────────────────┘
+</pre>
+<div class="diagram-caption">Loading decision tree for .claude/rules/ files</div>
+</div>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Tips &amp; Tricks — 14.1</div>
+  <ul>
+    <li><strong>Keep each rule focused</strong> — one domain per file. A monolithic <code>everything.md</code> forces the whole file into context when any part matches.</li>
+    <li><strong>Use <code>INDEX.txt</code></strong> instead of <code>README.md</code> for human navigation. A <code>README.md</code> is auto-loaded and wastes tokens.</li>
+    <li><strong>Rule budget target:</strong> Keep total auto-loaded rules under ~15k tokens. Above 20k, you likely have duplication or stale evidence.</li>
+    <li><strong>Don't duplicate across levels.</strong> If a rule exists at both <code>~/.claude/rules/</code> and <code>.claude/rules/</code>, it loads twice. Detect with <code>diff</code> and keep only one copy.</li>
+    <li><strong>Trim evidence out of rules.</strong> Rules should contain the rule, not the history of why it was created. Move evidence and dated narratives to memory banks.</li>
+  </ul>
+</div>
+
+<div class="callout exam">
+  <div class="callout-title">🎯 Exam Strategy — 14.1</div>
+  <ul>
+    <li><strong>Priority order:</strong> Enterprise &gt; User &gt; Project. Expect questions that test whether user-level or project-level rules take precedence (user-level loads first, but project rules have higher priority).</li>
+    <li><strong>What gets loaded:</strong> Only <code>.md</code> files. A question might test whether <code>.yaml</code>, <code>.txt</code>, or <code>.json</code> files in <code>.claude/rules/</code> are auto-loaded (they are NOT).</li>
+    <li><strong>"No paths" ≠ "not loaded":</strong> A rule with no frontmatter at all is <em>always</em> loaded. Only the presence of <code>paths:</code> makes a rule conditional.</li>
+    <li><strong>Debugging:</strong> The <code>/memory</code> command is the canonical way to verify loaded rules — expect this as a correct answer in troubleshooting questions.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    SECTION 14.2                               -->
+<!-- ============================================================ -->
+<section id="s14-2">
+<h2 class="section-title">14.2 — Glob Patterns for File-Type Targeting</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  Glob patterns are the <strong>path-matching language</strong> used in the <code>paths:</code> frontmatter to target specific files or directories. Claude Code uses standard glob syntax with support for <code>*</code> (single-level wildcard), <code>**</code> (recursive wildcard), and <code>{...}</code> (brace expansion). Mastering glob patterns is essential for writing rules that are <strong>neither too broad</strong> (wasting tokens) <strong>nor too narrow</strong> (missing files).
+</p>
+<p>
+  Paths are <strong>relative to the project root</strong>. When Claude reads or writes a file matching a declared pattern, the associated rule loads into context. Multiple patterns can be listed under one <code>paths:</code> block, and all are OR-combined.
+</p>
+
+<h3>Glob Syntax Reference</h3>
+<table>
+  <thead><tr><th>Pattern Element</th><th>Meaning</th><th>Example</th><th>Matches</th></tr></thead>
+  <tbody>
+    <tr><td><code>*</code></td><td>Any characters within <strong>one</strong> directory level (no <code>/</code>)</td><td><code>*.ts</code></td><td><code>app.ts</code> at root level only</td></tr>
+    <tr><td><code>**</code></td><td>Any number of directories (recursive descent)</td><td><code>**/*.ts</code></td><td><code>src/api/user.ts</code>, <code>lib/utils.ts</code></td></tr>
+    <tr><td><code>?</code></td><td>Any single character</td><td><code>file?.ts</code></td><td><code>file1.ts</code>, <code>fileA.ts</code></td></tr>
+    <tr><td><code>{a,b}</code></td><td>Brace expansion — matches any alternative</td><td><code>**/*.{ts,tsx}</code></td><td><code>app.ts</code>, <code>Button.tsx</code></td></tr>
+    <tr><td><code>[abc]</code></td><td>Character class</td><td><code>file[123].ts</code></td><td><code>file1.ts</code>, <code>file2.ts</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Common Patterns for Exam Scenarios</h3>
+<table>
+  <thead><tr><th>Pattern</th><th>What It Matches</th><th>Common Use Case</th></tr></thead>
+  <tbody>
+    <tr><td><code>**/*.ts</code></td><td>All <code>.ts</code> files at any depth</td><td>TypeScript conventions</td></tr>
+    <tr><td><code>src/**/*</code></td><td>All files under <code>src/</code> recursively</td><td>Source code rules</td></tr>
+    <tr><td><code>src/components/*.tsx</code></td><td>Only <strong>direct children</strong> of <code>components/</code></td><td>Top-level component rules</td></tr>
+    <tr><td><code>**/migrations/**/*.sql</code></td><td>SQL files in any <code>migrations/</code> folder</td><td>Database migration safety</td></tr>
+    <tr><td><code>**/*.test.ts</code></td><td>All TypeScript test files</td><td>Testing conventions</td></tr>
+    <tr><td><code>**/*.{ts,tsx}</code></td><td>Both <code>.ts</code> and <code>.tsx</code></td><td>Combined TypeScript/React rules</td></tr>
+    <tr><td><code>{src,lib}/**/*.ts</code></td><td><code>.ts</code> files in <code>src/</code> or <code>lib/</code></td><td>Multi-root source rules</td></tr>
+    <tr><td><code>Dockerfile, *.yml</code></td><td>Dockerfiles and YAML files at root</td><td>Deployment safety</td></tr>
+    <tr><td><code>terraform/**/*</code></td><td>All files under <code>terraform/</code></td><td>Infrastructure-as-code rules</td></tr>
+    <tr><td><code>**/api/**/*.ts</code></td><td>TypeScript in any nested <code>api/</code> dir</td><td>API conventions across apps</td></tr>
+  </tbody>
+</table>
+
+<h3>Critical Distinction: <code>*</code> vs <code>**</code></h3>
+
+<div class="diagram">
+<pre>project/
+├── main.tf                    ← terraform/*   : ✗ NO MATCH (wrong dir)
+├── terraform/                     terraform/*   : matches files HERE only
+│   ├── main.tf                ← terraform/*   : ✅ MATCH
+│   ├── variables.tf           ← terraform/*   : ✅ MATCH
+│   └── modules/
+│       ├── vpc/
+│       │   └── main.tf        ← terraform/*   : ✗ NO MATCH (too deep)
+│       └── ecs/                   terraform/**/*: ✅ MATCH (recursive)
+│           └── service.tf     ← terraform/**/*: ✅ MATCH (recursive)
+
+  terraform/*     →  only direct children of terraform/
+  terraform/**/*  →  everything under terraform/ at ANY depth
+</pre>
+<div class="diagram-caption">The * vs ** distinction is the #1 glob pattern exam trap</div>
+</div>
+
+<h3>Multiple Patterns in One Rule</h3>
+<p>List multiple globs to broaden a single rule's scope:</p>
+<pre><code>---
+paths:
+  - "**/*.schema.ts"
+  - "**/migrations/**"
+  - "prisma/**/*"
+---
+
+# Database &amp; Schema Rules
+
+- Always include rollback instructions in migrations
+- Use snake_case for column names
+- Never modify existing migrations after merge</code></pre>
+<p>All patterns are <strong>OR-combined</strong> — if any one matches the current file, the rule loads.</p>
+
+<h3>Brace Expansion Deep Dive</h3>
+<pre><code><span class="code-annotation"># Match both .ts and .tsx files in any directory</span>
+paths:
+  - "**/*.{ts,tsx}"
+
+<span class="code-annotation"># Match files in both src/ and lib/ directories</span>
+paths:
+  - "{src,lib}/**/*.ts"
+
+<span class="code-annotation"># Combine multiple extensions AND directories</span>
+paths:
+  - "{apps,packages}/*/src/**/*.{ts,tsx,js,jsx}"</code></pre>
+
+<div class="callout concept">
+  <div class="callout-title">🧠 Think About It This Way...</div>
+  <p>Glob patterns work like a <strong>file system filter</strong>. Imagine Claude announces: "I'm about to read <code>src/api/users/controller.ts</code>." Claude Code then checks every path-scoped rule's glob patterns. Any rule whose pattern matches that file path gets injected into the context window. If no patterns match, the rule stays dormant and costs <strong>zero tokens</strong>.</p>
+  <p>This is why path scoping is a form of <strong>token budgeting</strong> — you're not just organizing rules, you're deciding when each rule consumes context capacity.</p>
+</div>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Tips &amp; Tricks — 14.2</div>
+  <ul>
+    <li><strong>Always prefer <code>**/*.ext</code> over <code>*.ext</code></strong> for recursive matching. The single <code>*</code> only matches root-level files.</li>
+    <li><strong>Brace expansion</strong> lets you avoid duplicating patterns: <code>**/*.{ts,tsx}</code> is cleaner than two separate entries.</li>
+    <li><strong>Don't scope too narrowly:</strong> <code>services/api/handlers/payments.py</code> only fires for one file. Scope to <code>services/api/**/*</code> instead.</li>
+    <li><strong>Don't scope too broadly:</strong> <code>**/*</code> matches <em>everything</em> — it's the same as no scoping and defeats the purpose.</li>
+    <li><strong>Test your globs mentally:</strong> For each pattern, imagine 3 file paths and check — does each match or not?</li>
+  </ul>
+</div>
+
+<div class="callout exam">
+  <div class="callout-title">🎯 Exam Strategy — 14.2</div>
+  <ul>
+    <li>Questions on glob patterns almost always test <strong><code>*</code> vs <code>**</code></strong>. "Does <code>terraform/*</code> match <code>terraform/modules/vpc/main.tf</code>?" — <strong>No</strong>, because <code>*</code> doesn't recurse.</li>
+    <li>Watch for <strong>brace expansion</strong> questions: "Does <code>{src,lib}/**/*.ts</code> match <code>lib/utils/helper.ts</code>?" — <strong>Yes</strong>.</li>
+    <li><strong>Multiple patterns are OR-combined</strong>. If the question asks "does a file need to match ALL patterns?" the answer is <strong>no — any one match suffices</strong>.</li>
+    <li>Eliminate answers that confuse <strong>directory-scoped</strong> matching (CLAUDE.md) with <strong>pattern-scoped</strong> matching (rules).</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    SECTION 14.3                               -->
+<!-- ============================================================ -->
+<section id="s14-3">
+<h2 class="section-title">14.3 — Path-Specific Rules vs Subdirectory CLAUDE.md Files</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  This is the <strong>highest-weighted comparison topic</strong> in Chapter 14. Path-specific rules (<code>.claude/rules/</code> with <code>paths:</code>) and subdirectory <code>CLAUDE.md</code> files both scope instructions to specific areas of a codebase, but they use fundamentally different scoping mechanisms. Understanding when to use each — and how they compose together — is critical for the exam and for real-world Claude Code configuration.
+</p>
+<p>
+  The mental model: <code>CLAUDE.md</code> is <strong>directory-scoped</strong> (loads when Claude works <em>in that directory</em>). <code>.claude/rules/</code> with <code>paths:</code> is <strong>pattern-scoped</strong> (loads when Claude touches <em>files matching a glob</em>, regardless of directory). This distinction matters most for <strong>cross-cutting concerns</strong> like test file conventions, config file rules, or file-type standards that span multiple directories.
+</p>
+
+<h3>Comprehensive Comparison Table</h3>
+<table>
+  <thead><tr><th>Aspect</th><th>Path-Specific Rules (<code>.claude/rules/</code>)</th><th>Subdirectory <code>CLAUDE.md</code></th></tr></thead>
+  <tbody>
+    <tr><td><strong>Scope mechanism</strong></td><td>Glob pattern matching on file paths</td><td>Directory proximity — loads when working in that dir</td></tr>
+    <tr><td><strong>Format</strong></td><td>Markdown with YAML frontmatter <code>paths:</code></td><td>Markdown prose (no frontmatter needed)</td></tr>
+    <tr><td><strong>Location</strong></td><td>Centralized in <code>.claude/rules/</code></td><td>Distributed across the project tree</td></tr>
+    <tr><td><strong>Ideal use case</strong></td><td>File-type targeting across directories</td><td>Directory-specific architecture context</td></tr>
+    <tr><td><strong>Cross-cutting?</strong></td><td>✅ Excels — <code>**/*.test.ts</code> spans all dirs</td><td>❌ Must duplicate into each directory</td></tr>
+    <tr><td><strong>Monorepo fit</strong></td><td>✅ One rule governs pattern across all apps</td><td>✅ Each app gets its own architecture context</td></tr>
+    <tr><td><strong>Token cost</strong></td><td>Zero until a matching file is touched</td><td>Loads when Claude enters the directory</td></tr>
+    <tr><td><strong>Discovery</strong></td><td>Auto-discovered recursively in <code>.claude/rules/</code></td><td>Auto-discovered when Claude enters dir</td></tr>
+    <tr><td><strong>Priority</strong></td><td>Same as <code>CLAUDE.md</code> (high priority)</td><td>High priority (subdirectory overrides root)</td></tr>
+    <tr><td><strong>Portability</strong></td><td>Claude Code specific</td><td>Claude Code specific</td></tr>
+    <tr><td><strong>Nesting</strong></td><td>Flat (one centralized location with subdirs)</td><td>Hierarchical (mirrors project structure)</td></tr>
+  </tbody>
+</table>
+
+<h3>The Decision Tree</h3>
+<div class="diagram">
+<pre>Does this instruction apply to...
+
+  ┌─── ALL files in a DIRECTORY, regardless of type?
+  │     → Use subdirectory CLAUDE.md
+  │     Example: "This app uses NestJS with modular services"
+  │
+  ├─── A specific FILE TYPE across multiple directories?
+  │     → Use path-specific rule with paths:
+  │     Example: "All *.controller.ts must use typed decorators"
+  │
+  ├─── EVERYTHING in the entire project?
+  │     → Use root CLAUDE.md or global rule (no paths:)
+  │     Example: "Run nx affected:test before committing"
+  │
+  └─── A specific TASK/PROCEDURE (not always relevant)?
+        → Use a Skill (loaded on demand)
+        Example: "PR review checklist"
+</pre>
+<div class="diagram-caption">When to use which instruction mechanism</div>
+</div>
+
+<h3>Side-by-Side Example: Testing Conventions</h3>
+<div class="vs-box">
+  <div class="vs-col">
+    <h4 style="color: var(--danger);">❌ Subdirectory CLAUDE.md Approach</h4>
+    <p style="font-size: 0.88rem; color: var(--text-sec);">Must duplicate testing rules into every directory containing tests:</p>
+<pre style="font-size: 0.78rem;"><code>src/api/CLAUDE.md       → "Use AAA pattern..."
+src/auth/CLAUDE.md      → "Use AAA pattern..."
+src/billing/CLAUDE.md   → "Use AAA pattern..."
+lib/utils/CLAUDE.md     → "Use AAA pattern..."
+<span class="code-annotation">   ↑ 4 copies to maintain = silent drift risk</span></code></pre>
+  </div>
+  <div class="vs-divider">vs</div>
+  <div class="vs-col">
+    <h4 style="color: var(--success);">✅ Path-Specific Rule Approach</h4>
+    <p style="font-size: 0.88rem; color: var(--text-sec);">Single rule with a glob covers all test files everywhere:</p>
+<pre style="font-size: 0.78rem;"><code><span class="code-annotation"># .claude/rules/testing.md</span>
+---
+paths:
+  - "**/*.test.ts"
+  - "**/*.spec.ts"
+  - "**/__tests__/**/*.ts"
+---
+# Testing Conventions
+- AAA pattern: Arrange, Act, Assert
+- Mock external services
+<span class="code-annotation">   ↑ Single source of truth</span></code></pre>
+  </div>
+</div>
+
+<h3>Composition Pattern — Using Both Together</h3>
+<p>These mechanisms are <strong>additive, not exclusive</strong>. The recommended architecture uses both:</p>
+
+<div class="diagram">
+<pre>project/
+├── CLAUDE.md                          ← universal: build commands, orchestration
+├── .claude/
+│   └── rules/
+│       ├── testing.md                 ← pattern-scoped: **/*.test.ts
+│       ├── controllers.md             ← pattern-scoped: **/*.controller.ts
+│       └── schemas.md                 ← pattern-scoped: **/*.schema.ts
+├── services/
+│   ├── api/
+│   │   ├── CLAUDE.md                  ← directory context: "NestJS, modular services"
+│   │   └── src/
+│   │       ├── users.controller.ts    ← triggers: controllers.md rule
+│   │       └── users.test.ts          ← triggers: testing.md rule
+│   └── billing/
+│       ├── CLAUDE.md                  ← directory context: "integer cents only"
+│       └── src/
+│           └── invoice.test.ts        ← triggers: testing.md rule
+</pre>
+<div class="diagram-caption">The three-layer model: CLAUDE.md (directory) + rules (pattern) + skills (on-demand)</div>
+</div>
+
+<p>When Claude edits <code>services/api/src/users.controller.ts</code>, it loads:</p>
+<ol>
+  <li>Root <code>CLAUDE.md</code> (universal rules)</li>
+  <li><code>services/api/CLAUDE.md</code> (directory context)</li>
+  <li><code>.claude/rules/controllers.md</code> (pattern match: <code>**/*.controller.ts</code>)</li>
+</ol>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Tips &amp; Tricks — 14.3</div>
+  <ul>
+    <li><strong>Rules are additive.</strong> You don't have to restructure existing CLAUDE.md files to start using rules. Just add <code>.claude/rules/</code> alongside.</li>
+    <li><strong>Sizing guide:</strong> Keep each rule under ~250 words. If a convention needs a full page, put the details in a Skill and use the rule as a concise summary with a pointer.</li>
+    <li><strong>If two path-scoped rules both match the same file, both load.</strong> Keep rules consistent to avoid contradictions.</li>
+    <li><strong>Use CLAUDE.md for "what is this area?"</strong> and rules for "what conventions apply to this file type?"</li>
+  </ul>
+</div>
+
+<div class="callout exam">
+  <div class="callout-title">🎯 Exam Strategy — 14.3</div>
+  <ul>
+    <li>The key differentiator on the exam: <strong>directory-scoped vs pattern-scoped</strong>. If the question involves cross-cutting file types (tests, configs, schemas), the answer is path-specific rules.</li>
+    <li>If the question involves architecture context for a specific app or service, the answer is subdirectory <code>CLAUDE.md</code>.</li>
+    <li>Watch for trick answers that suggest <strong>putting procedures in CLAUDE.md</strong> — procedures belong in Skills, not CLAUDE.md.</li>
+    <li>Questions may test whether path rules and CLAUDE.md can coexist — <strong>yes, they compose additively</strong>.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    SECTION 14.4                               -->
+<!-- ============================================================ -->
+<section id="s14-4">
+<h2 class="section-title">14.4 — Applying Conventions Across File Types Regardless of Location</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  This section addresses the <strong>monorepo problem</strong>: when conventions follow <strong>file types</strong> rather than <strong>directories</strong>, traditional directory-scoped instructions break down. In a monorepo with 5 apps and 10+ shared libraries, NestJS controller patterns might span <code>apps/api/</code>, <code>apps/admin/</code>, <code>apps/worker/</code>, and <code>libs/shared/</code>. Duplicating rules across all directories is unmaintainable.
+</p>
+<p>
+  Path-specific rules solve this by using <strong>glob patterns that match file types across the entire project tree</strong>. This creates a <strong>cross-cutting concern layer</strong> — conventions that apply based on <em>what the file is</em>, not <em>where the file lives</em>. Combined with the three-layer instruction architecture (CLAUDE.md + rules + skills), this enables scalable, DRY configuration.
+</p>
+
+<h3>The Three-Layer Instruction Architecture</h3>
+<table>
+  <thead><tr><th>Layer</th><th>Mechanism</th><th>Loads When</th><th>Best For</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>1. CLAUDE.md</strong></td>
+      <td>Directory-scoped Markdown</td>
+      <td>Claude works in that directory</td>
+      <td>App-level architecture, build commands, orchestration</td>
+    </tr>
+    <tr>
+      <td><strong>2. .claude/rules/</strong></td>
+      <td>Pattern-scoped (via <code>paths:</code>)</td>
+      <td>Claude touches matching files</td>
+      <td>File-type conventions spanning directories</td>
+    </tr>
+    <tr>
+      <td><strong>3. Skills</strong></td>
+      <td>On-demand task procedures</td>
+      <td>Invoked or deemed relevant</td>
+      <td>Multi-step workflows, reference docs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Real-World Monorepo Example</h3>
+<p>A team with an Nx TypeScript monorepo — 5 apps, 10+ shared libraries — created 7 glob-pattern rules:</p>
+
+<table>
+  <thead><tr><th>Rule File</th><th>Glob Pattern</th><th>What It Governs</th></tr></thead>
+  <tbody>
+    <tr><td><code>backend-controllers.md</code></td><td><code>**/*.controller.ts</code></td><td>Route ownership, guard patterns, typed decorators</td></tr>
+    <tr><td><code>backend-services.md</code></td><td><code>**/*.service.ts</code></td><td>Transaction safety, auth context, update patterns</td></tr>
+    <tr><td><code>backend-modules.md</code></td><td><code>**/*.module.ts</code></td><td>DI encapsulation, provider resolution, <code>.forRoot()</code></td></tr>
+    <tr><td><code>drizzle-schema.md</code></td><td><code>**/*.schema.ts, **/migrations/**</code></td><td>Column naming, index conventions, type derivation</td></tr>
+    <tr><td><code>react-patterns.md</code></td><td><code>apps/*/src/**/*.tsx, libs/*/src/**/*.tsx</code></td><td>Effect anti-patterns, API calls, permissions</td></tr>
+    <tr><td><code>route-definitions.md</code></td><td><code>libs/routes/**/*.routes.ts</code></td><td>Naming, type sourcing, contract rules</td></tr>
+    <tr><td><code>nextjs-pages.md</code></td><td><code>**/page.tsx, **/layout.tsx</code></td><td>Metadata, layout components, import aliases</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Result:</strong> Total context cost when all 7 fire: ~1K tokens. Typical session: only 2-3 activate. All 11 existing CLAUDE.md files remained unchanged — rules are additive.</p>
+
+<h3>Design Principles for Cross-Cutting Rules</h3>
+
+<h4>1. Reference, Don't Duplicate</h4>
+<pre><code><span class="code-annotation"># .claude/rules/database/patterns.md</span>
+---
+paths:
+  - "src/database/**"
+  - "src/sync/**"
+  - "scripts/*sync*"
+---
+
+# Database Rules
+
+**Full reference**: see `CORE-PATTERNS.md` (authoritative source).
+
+## Quick summary
+- Golden rule: always use `employee_id` (never `id`)
+- Safety: `SELECT current_database()` before destructive ops
+- Validation: `grep -r 'record\.employee\.id' src/`</code></pre>
+<p>Duplicating content across rules leads to <strong>silent drift</strong>: one copy gets updated, the other goes stale.</p>
+
+<h4>2. Keep Rules Concise — Point to Skills for Depth</h4>
+<pre><code><span class="code-annotation"># .claude/rules/api/validation.md (concise — under 250 words)</span>
+---
+paths:
+  - "src/routes/**"
+  - "src/controllers/**"
+  - "src/services/**"
+---
+
+# API Patterns
+
+- Validate inputs with Zod schemas
+- Use the standard error envelope: { error, code, details }
+- Include OpenAPI doc comments
+
+**Full guide**: load the `api-development` skill for complete procedures.</code></pre>
+
+<h4>3. Decision Guide: When to Use <code>paths:</code></h4>
+<ul>
+  <li><strong>Use <code>paths:</code></strong> when the rule is domain-specific — only relevant for certain file types or directories.</li>
+  <li><strong>Omit <code>paths:</code></strong> when the rule applies regardless of which file is being edited (e.g., "never use em dashes in content," "always use single quotes").</li>
+  <li><strong>Use a Skill instead</strong> when the instruction is a multi-step procedure that fires occasionally (deployment checklist, PR review workflow).</li>
+</ul>
+
+<h4>4. Global Rules (No <code>paths:</code>) — Use Sparingly</h4>
+<p>Rules without <code>paths:</code> load every session, so they consume tokens unconditionally:</p>
+<pre><code><span class="code-annotation"># .claude/rules/global/git-safety.md — no paths, always loads</span>
+
+# Git Safety Rules
+
+- Never force push to main or develop
+- Always use conventional commit messages
+- Run `nx affected:test` before committing</code></pre>
+
+<div class="callout concept">
+  <div class="callout-title">🧠 Think About It This Way...</div>
+  <p>Imagine you're an architect deciding where to post construction signs. Some signs belong at the entrance to a specific floor (CLAUDE.md = "This floor is the billing department"). Other signs belong wherever a specific type of work happens, regardless of floor (path-scoped rules = "All electrical work must follow safety code"). And some procedures are in a reference manual on the shelf (Skills = "Full fire evacuation procedure"). The signs by file type follow you around based on <em>what you're doing</em>, not <em>where you are</em>.</p>
+</div>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Tips &amp; Tricks — 14.4</div>
+  <ul>
+    <li><strong>Target ≤250 words per rule file.</strong> Each triggered rule adds to context. Brevity is a design constraint, not a limitation.</li>
+    <li><strong>Measure your rule budget:</strong> <code>find .claude/rules -name '*.md' -type f | xargs wc -c</code> — convert to tokens (÷4). Stay under 15k tokens total for always-on rules.</li>
+    <li><strong>When multiple rules match the same file, all load.</strong> Ensure they don't contradict each other.</li>
+    <li><strong>Existing CLAUDE.md files don't need to change</strong> — rules layer on top. Start with one rule, iterate.</li>
+  </ul>
+</div>
+
+<div class="callout exam">
+  <div class="callout-title">🎯 Exam Strategy — 14.4</div>
+  <ul>
+    <li>Questions will test whether you understand the <strong>three-layer model</strong>: CLAUDE.md (directory), rules (pattern), skills (on-demand). Know which layer each type of instruction belongs in.</li>
+    <li>A common distractor: "put testing conventions in root CLAUDE.md." This <strong>works</strong> but wastes tokens — the best answer is a path-scoped rule.</li>
+    <li>Expect scenario questions: "A monorepo has controllers in 5 different apps. What's the most efficient way to apply controller conventions?" → <strong>Single path-scoped rule with <code>**/*.controller.ts</code></strong>.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    SECTION 14.5                               -->
+<!-- ============================================================ -->
+<section id="s14-5" class="page-break">
+<h2 class="section-title">14.5 — Hands-On: Implementing Path-Specific Rules</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  This section provides a <strong>complete, step-by-step implementation walkthrough</strong> for setting up path-specific rules in a real project. We'll implement a full rule set for a TypeScript monorepo with frontend (React), backend (NestJS), infrastructure (Terraform), and testing concerns.
+</p>
+
+<div class="callout hands-on">
+  <div class="callout-title">🔨 Hands-On — Step-by-Step Implementation</div>
+  <p><strong>Scenario:</strong> You're configuring Claude Code for a monorepo with the following structure:</p>
+<pre><code>my-monorepo/
+├── apps/
+│   ├── web/          (React frontend)
+│   └── api/          (NestJS backend)
+├── libs/
+│   ├── shared/       (shared utilities)
+│   └── ui/           (component library)
+├── terraform/        (infrastructure)
+├── prisma/
+│   └── migrations/   (database migrations)
+└── .claude/          (Claude Code config)</code></pre>
+</div>
+
+<h3>Step 1: Create the Rules Directory</h3>
+<pre><code>mkdir -p .claude/rules</code></pre>
+<p>This is all you need. No configuration file, no imports. Claude Code auto-discovers <code>.md</code> files here.</p>
+
+<h3>Step 2: Create a Global Rule (No Path Scoping)</h3>
+<div class="code-label">.claude/rules/git-conventions.md</div>
+<pre><code># Git Conventions
+
+- Use conventional commits: `feat:`, `fix:`, `chore:`, `docs:`
+- Never force push to `main` or `develop`
+- Squash-merge feature branches
+- Run `pnpm test:affected` before pushing</code></pre>
+<p>No <code>paths:</code> frontmatter → loads every session, same priority as <code>CLAUDE.md</code>.</p>
+
+<h3>Step 3: Create Path-Scoped Rules</h3>
+
+<div class="code-label">.claude/rules/react-patterns.md</div>
+<pre><code>---
+paths:
+  - "apps/web/src/**/*.tsx"
+  - "libs/ui/src/**/*.tsx"
+---
+
+# React Conventions
+
+- Functional components only — no class components
+- Extract reusable logic into custom hooks (useXxx naming)
+- Memoize expensive computations with useMemo/useCallback
+- No business logic in components — delegate to hooks/services
+- Use TypeScript strict mode — no `any` types</code></pre>
+
+<div class="code-label">.claude/rules/nestjs-backend.md</div>
+<pre><code>---
+paths:
+  - "apps/api/src/**/*.ts"
+---
+
+# NestJS Backend Rules
+
+- Controllers: thin handlers, delegate to services
+- Services: never call external APIs inside a transaction
+- Use the request-scoped auth context for permission checks
+- Repository methods return domain types, not ORM entities
+- All exceptions must extend `BaseAppException`</code></pre>
+
+<div class="code-label">.claude/rules/terraform-infra.md</div>
+<pre><code>---
+paths:
+  - "terraform/**/*"
+---
+
+# Terraform Conventions
+
+- Always use snake_case for resource names
+- Require `description` on all variables and outputs
+- Use `terraform fmt` formatting (2-space indent)
+- Pin provider versions in `required_providers`
+- Tag all resources with: Environment, Team, ManagedBy=Terraform</code></pre>
+
+<div class="code-label">.claude/rules/testing-standards.md</div>
+<pre><code>---
+paths:
+  - "**/*.test.ts"
+  - "**/*.spec.ts"
+  - "**/__tests__/**"
+---
+
+# Testing Standards
+
+- AAA pattern: Arrange → Act → Assert
+- One assertion per test when possible
+- Mock external dependencies — never call real APIs in tests
+- Test naming: `should [action] when [condition]`
+- Edge cases: empty inputs, null values, boundary conditions
+- Target 80%+ coverage on business logic</code></pre>
+
+<div class="code-label">.claude/rules/database-migrations.md</div>
+<pre><code>---
+paths:
+  - "prisma/migrations/**/*"
+  - "**/*.schema.ts"
+---
+
+# Database Migration Safety
+
+- Never modify an existing migration after merge
+- Always include rollback instructions
+- Add columns as nullable first → populate → add constraints
+- Use snake_case for table and column names
+- Test migrations on production data copy before deploying</code></pre>
+
+<h3>Step 4: Organize with Subdirectories (Optional)</h3>
+<pre><code>.claude/rules/
+├── git-conventions.md           ← global (no paths:)
+├── INDEX.txt                    ← human navigation (not loaded)
+├── frontend/
+│   └── react-patterns.md        ← paths: apps/web/**, libs/ui/**
+├── backend/
+│   └── nestjs-backend.md        ← paths: apps/api/**
+├── infra/
+│   └── terraform-infra.md       ← paths: terraform/**/*
+├── testing/
+│   └── testing-standards.md     ← paths: **/*.test.ts, **/*.spec.ts
+└── database/
+    └── database-migrations.md   ← paths: prisma/migrations/**</code></pre>
+
+<h3>Step 5: Create INDEX.txt (Not README.md!)</h3>
+<div class="code-label">.claude/rules/INDEX.txt</div>
+<pre><code>RULES INDEX — Human reference (not loaded by Claude Code)
+═══════════════════════════════════════════════════════════
+
+Global (always loaded):
+  git-conventions.md        Git commit/push rules
+
+Path-scoped:
+  frontend/react-patterns.md       React/TSX → apps/web, libs/ui
+  backend/nestjs-backend.md        NestJS    → apps/api
+  infra/terraform-infra.md         Terraform → terraform/
+  testing/testing-standards.md     Tests     → *.test.ts, *.spec.ts
+  database/database-migrations.md  DB        → prisma/migrations/
+
+Changelog:
+  2026-09-14  Initial rules structure
+</code></pre>
+
+<h3>Step 6: Verify with <code>/memory</code></h3>
+<p>In an interactive Claude Code session, run:</p>
+<pre><code>/memory</code></pre>
+<p>This lists every loaded CLAUDE.md and rule file. Verify:</p>
+<ul>
+  <li>Global rules appear immediately in the loaded list</li>
+  <li>Path-scoped rules appear only after you open a matching file</li>
+  <li><code>INDEX.txt</code> does <strong>not</strong> appear (it's <code>.txt</code>, not <code>.md</code>)</li>
+</ul>
+
+<h3>Common Mistakes Checklist</h3>
+
+<div class="callout warn">
+  <div class="callout-title">⚠️ Common Mistakes — Avoid These</div>
+  <table style="margin-top: 8px;">
+    <thead><tr><th>Mistake</th><th>Why It Fails</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Using <code>README.md</code> as an index</td>
+        <td>Auto-loaded, wastes tokens</td>
+        <td>Use <code>INDEX.txt</code> instead</td>
+      </tr>
+      <tr>
+        <td>Forgetting <code>---</code> delimiters</td>
+        <td>YAML frontmatter not parsed</td>
+        <td>Must have <code>---</code> on line 1 and closing <code>---</code></td>
+      </tr>
+      <tr>
+        <td>Using <code>*.ts</code> instead of <code>**/*.ts</code></td>
+        <td>Only matches root-level files</td>
+        <td>Add <code>**/</code> prefix for recursive matching</td>
+      </tr>
+      <tr>
+        <td>Scoping to exact filenames</td>
+        <td>Rule triggers for only one file</td>
+        <td>Scope to directory or file-type pattern</td>
+      </tr>
+      <tr>
+        <td><code>paths: **/*</code> (match everything)</td>
+        <td>Same as no scoping — defeats purpose</td>
+        <td>Either remove <code>paths:</code> or narrow the glob</td>
+      </tr>
+      <tr>
+        <td>Duplicating rules across levels</td>
+        <td>Rule loads twice, wastes tokens</td>
+        <td>Keep one copy at the appropriate level</td>
+      </tr>
+      <tr>
+        <td>Putting procedures in rules</td>
+        <td>Multi-step procedures waste tokens when always loaded</td>
+        <td>Use Skills for procedures, rules for conventions</td>
+      </tr>
+      <tr>
+        <td>Contradictory overlapping rules</td>
+        <td>Both load when file matches both patterns</td>
+        <td>Audit for overlap; keep rules consistent</td>
+      </tr>
+      <tr>
+        <td>Placing <code>.json</code> or <code>.yaml</code> in rules/</td>
+        <td>Only <code>.md</code> files are discovered</td>
+        <td>All rules must be <code>.md</code> files</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout exam">
+  <div class="callout-title">🎯 Exam Strategy — 14.5</div>
+  <ul>
+    <li>Hands-on questions test whether you can <strong>correctly write YAML frontmatter</strong>. Double-check the <code>---</code> delimiters and indentation.</li>
+    <li>Expect questions about <strong>debugging</strong>: "A rule isn't loading. What should you check first?" → <strong>Run <code>/memory</code></strong> to see what's actually loaded.</li>
+    <li>Watch for questions combining multiple concepts: "How would you set up rules for a monorepo with React + Go + Terraform?" → <strong>Separate <code>.md</code> files with targeted <code>paths:</code> per technology.</strong></li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    CHAPTER SUMMARY                            -->
+<!-- ============================================================ -->
+<section id="summary" class="page-break">
+<h2 class="section-title">📖 Chapter Summary</h2>
+
+<table class="summary-table">
+  <thead><tr><th>Concept</th><th>Key Takeaway</th></tr></thead>
+  <tbody>
+    <tr><td>Rules Directory</td><td><code>.claude/rules/</code> is auto-discovered. Every <code>.md</code> file loads automatically. Only <code>.md</code> — no other extensions.</td></tr>
+    <tr><td>Rule Hierarchy</td><td>Enterprise → User → Project. Higher tiers override lower. Project-level has higher priority than user-level.</td></tr>
+    <tr><td>Global Rules</td><td>No <code>paths:</code> frontmatter → loads every session with same priority as <code>CLAUDE.md</code>.</td></tr>
+    <tr><td>Path-Scoped Rules</td><td><code>paths:</code> in YAML frontmatter → loads only when Claude touches matching files. Zero-cost when dormant.</td></tr>
+    <tr><td>Glob: <code>*</code> vs <code>**</code></td><td><code>*</code> = one directory level. <code>**</code> = recursive (any depth). The most critical distinction for exams.</td></tr>
+    <tr><td>Brace Expansion</td><td><code>{ts,tsx}</code> matches multiple alternatives. Works in both extensions and directory names.</td></tr>
+    <tr><td>Rules vs CLAUDE.md</td><td>CLAUDE.md = directory-scoped. Rules = pattern-scoped. Use both — they compose additively.</td></tr>
+    <tr><td>Rules vs Skills</td><td>Rules = conventions (always-on or pattern-triggered). Skills = procedures (on-demand). Don't mix them.</td></tr>
+    <tr><td>Cross-Cutting Concerns</td><td>Rules with globs like <code>**/*.test.ts</code> solve the monorepo duplication problem.</td></tr>
+    <tr><td>Debugging</td><td>Run <code>/memory</code> to see what's loaded. First step for any "rule isn't working" issue.</td></tr>
+    <tr><td>INDEX.txt</td><td>Use <code>.txt</code> for human navigation — <code>README.md</code> would be auto-loaded and waste context tokens.</td></tr>
+    <tr><td>Token Budget</td><td>Target &lt;15k tokens for always-on rules. ~250 words per rule file. Measure, don't guess.</td></tr>
+  </tbody>
+</table>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    PRACTICE QUESTIONS                         -->
+<!-- ============================================================ -->
+<section id="questions">
+<h2 class="section-title">📝 Practice Question Bank</h2>
+
+<!-- Q1 -->
+<div class="question">
+  <div class="q-num">Question 1</div>
+  <div class="q-text">A developer places a rule file at <code>.claude/rules/security.json</code>. What happens?</div>
+  <ol class="options">
+    <li>Claude Code loads it as a JSON rule configuration</li>
+    <li>Claude Code ignores it — only <code>.md</code> files are discovered</li>
+    <li>Claude Code throws an error at session start</li>
+    <li>Claude Code converts it to Markdown and loads it</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: B</strong><br>
+      Claude Code only discovers and loads <code>.md</code> files from <code>.claude/rules/</code>. Files with other extensions (<code>.json</code>, <code>.txt</code>, <code>.yaml</code>) are silently ignored — no error, no conversion.
+    </div>
+  </details>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+  <div class="q-num">Question 2</div>
+  <div class="q-text">Given this rule file, which files will trigger its loading?</div>
+<pre style="margin: 8px 0;"><code>---
+paths:
+  - "terraform/*"
+---
+# Terraform Rules</code></pre>
+  <ol class="options">
+    <li><code>terraform/main.tf</code>, <code>terraform/modules/vpc/main.tf</code></li>
+    <li><code>terraform/main.tf</code>, <code>terraform/variables.tf</code> only</li>
+    <li>All <code>.tf</code> files anywhere in the project</li>
+    <li><code>main.tf</code> at the project root</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: B</strong><br>
+      <code>terraform/*</code> uses a single <code>*</code>, which matches only direct children of <code>terraform/</code>. It does NOT recurse into subdirectories. <code>terraform/modules/vpc/main.tf</code> is nested two levels deep and would require <code>terraform/**/*</code> to match. It also doesn't match root-level files (option D) because the pattern requires the <code>terraform/</code> prefix.
+    </div>
+  </details>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+  <div class="q-num">Question 3</div>
+  <div class="q-text">A team has the same rule defined in both <code>~/.claude/rules/testing.md</code> and <code>.claude/rules/testing.md</code>. What happens?</div>
+  <ol class="options">
+    <li>Only the project-level rule loads (higher priority)</li>
+    <li>Only the user-level rule loads (loaded first)</li>
+    <li>Both load — the rule is duplicated in context, wasting tokens</li>
+    <li>Claude Code merges them into a single rule</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: C</strong><br>
+      Claude Code loads rules from both locations independently. If the same file exists in both <code>~/.claude/rules/</code> and <code>.claude/rules/</code>, it loads twice, duplicating content in the context window and wasting tokens. This is the "double-load trap." The fix: delete one copy and keep it at the appropriate level.
+    </div>
+  </details>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+  <div class="q-num">Question 4</div>
+  <div class="q-text">A path-scoped rule declares <code>paths: ["**/*.test.ts", "**/*.spec.ts"]</code>. Claude is editing <code>src/api/users.service.ts</code>. Does the rule load?</div>
+  <ol class="options">
+    <li>Yes — <code>**/*</code> matches all files</li>
+    <li>No — the file doesn't end in <code>.test.ts</code> or <code>.spec.ts</code></li>
+    <li>Yes — it's a <code>.ts</code> file and the pattern includes <code>*.ts</code></li>
+    <li>It depends on whether the file is in a test directory</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: B</strong><br>
+      The glob patterns <code>**/*.test.ts</code> and <code>**/*.spec.ts</code> specifically match files ending in <code>.test.ts</code> or <code>.spec.ts</code>. The file <code>users.service.ts</code> ends in <code>.service.ts</code>, which matches neither pattern. The <code>**</code> handles directory recursion, but the filename pattern must still match exactly.
+    </div>
+  </details>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+  <div class="q-num">Question 5</div>
+  <div class="q-text">What is the FIRST step when debugging a rule that doesn't seem to be applying?</div>
+  <ol class="options">
+    <li>Delete and recreate the rule file</li>
+    <li>Run <code>/memory</code> to check if the rule is in the loaded list</li>
+    <li>Add the rule content directly to <code>CLAUDE.md</code></li>
+    <li>Restart Claude Code with <code>--clear-cache</code></li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: B</strong><br>
+      The <code>/memory</code> command lists every loaded CLAUDE.md and rule file. If the rule isn't in the list, you know it's a loading issue (wrong extension, bad frontmatter, path not matched). If it IS loaded, the issue is with the rule's content being too vague. Always verify state before taking action.
+    </div>
+  </details>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+  <div class="q-num">Question 6</div>
+  <div class="q-text">In a monorepo with co-located test files, which approach is MOST efficient for applying testing conventions?</div>
+  <ol class="options">
+    <li>Add testing rules to the root <code>CLAUDE.md</code></li>
+    <li>Create a <code>CLAUDE.md</code> in every directory containing test files</li>
+    <li>Create a path-scoped rule in <code>.claude/rules/</code> with <code>paths: ["**/*.test.ts"]</code></li>
+    <li>Create a Skill that loads testing conventions on demand</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: C</strong><br>
+      A path-scoped rule with <code>**/*.test.ts</code> is the most efficient approach. Option A wastes tokens on every session (even when not testing). Option B requires duplication across many directories (maintenance nightmare). Option D requires explicit invocation and might not fire when needed. The path-scoped rule loads automatically when any test file is touched, costs zero tokens otherwise, and has a single source of truth.
+    </div>
+  </details>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+  <div class="q-num">Question 7</div>
+  <div class="q-text">Which of these is a valid reason to use a subdirectory <code>CLAUDE.md</code> INSTEAD of a path-scoped rule?</div>
+  <ol class="options">
+    <li>The convention applies to a specific file type across multiple directories</li>
+    <li>The instruction describes the architecture and purpose of a specific app within the monorepo</li>
+    <li>The convention should only load when matching files are touched</li>
+    <li>The rule needs to use glob patterns for targeting</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: B</strong><br>
+      Subdirectory <code>CLAUDE.md</code> files are the right choice for <strong>directory-scoped architecture context</strong> — "This app uses NestJS with modular services" applies to everything in that directory, regardless of file type. Options A, C, and D all describe scenarios where path-scoped rules are more appropriate.
+    </div>
+  </details>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+  <div class="q-num">Question 8</div>
+  <div class="q-text">What does the glob pattern <code>{src,lib}/**/*.{ts,tsx}</code> match?</div>
+  <ol class="options">
+    <li>Only <code>.ts</code> files in <code>src/</code> and only <code>.tsx</code> files in <code>lib/</code></li>
+    <li>All <code>.ts</code> and <code>.tsx</code> files in both <code>src/</code> and <code>lib/</code> at any depth</li>
+    <li>Only files at the root of <code>src/</code> and <code>lib/</code></li>
+    <li>Files matching the literal string <code>{src,lib}</code> in their path</li>
+  </ol>
+  <details class="answer">
+    <summary>Show Answer</summary>
+    <div class="answer-body">
+      <strong>Answer: B</strong><br>
+      Brace expansion works on both sides: <code>{src,lib}</code> expands to match either directory, and <code>{ts,tsx}</code> expands to match either extension. The <code>**/</code> enables recursive matching. So this pattern matches all <code>.ts</code> and <code>.tsx</code> files anywhere under <code>src/</code> or <code>lib/</code>. Examples: <code>src/api/user.ts</code> ✅, <code>lib/ui/Button.tsx</code> ✅, <code>apps/web/main.ts</code> ❌.
+    </div>
+  </details>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+
+<!-- ============================================================ -->
+<!--                    CHEAT SHEET                                -->
+<!-- ============================================================ -->
+<section id="cheatsheet">
+<h2 class="section-title">📋 Quick-Reference Cheat Sheet</h2>
+
+<div class="cheat-sheet">
+<h3>CHAPTER 14 — PATH-SPECIFIC RULES CHEAT SHEET</h3>
+
+<span class="section-label">═══ RULE HIERARCHY (highest → lowest) ═══</span>
+<br>1. <span class="hl">~/.claude/enterprise/rules/</span>   <span class="dim">← org-level (admin-enforced)</span>
+<br>2. <span class="hl">~/.claude/rules/</span>              <span class="dim">← user-level (personal defaults)</span>
+<br>3. <span class="hl">.claude/rules/</span>                <span class="dim">← project-level (highest priority)</span>
+<br><br>
+
+<span class="section-label">═══ LOADING BEHAVIOR ═══</span>
+<br>No paths: frontmatter  → <span class="hl">GLOBAL</span>       → loads every session
+<br>Has paths: frontmatter → <span class="hl">PATH-SCOPED</span>  → loads on file match only
+<br>Only .md files loaded  → <span class="warn-hl">.txt/.json/.yaml IGNORED</span>
+<br>Recursive discovery    → subdirectories scanned automatically
+<br><br>
+
+<span class="section-label">═══ YAML FRONTMATTER FORMAT ═══</span>
+<br><span class="dim">---</span>
+<br><span class="hl">paths:</span>
+<br>  - "<span class="hl">**/*.ts</span>"
+<br>  - "<span class="hl">**/*.tsx</span>"
+<br><span class="dim">---</span>
+<br><span class="dim"># Rule content in Markdown below</span>
+<br><br>
+
+<span class="section-label">═══ GLOB PATTERNS ═══</span>
+<br><span class="hl">*</span>        <span class="dim">= one level (no recursion)</span>
+<br><span class="hl">**</span>       <span class="dim">= any depth (recursive)</span>
+<br><span class="hl">{a,b}</span>    <span class="dim">= brace expansion (OR)</span>
+<br><span class="hl">?</span>        <span class="dim">= single character</span>
+<br><span class="hl">[abc]</span>    <span class="dim">= character class</span>
+<br><br>
+<span class="warn-hl">CRITICAL:</span>  terraform/<span class="hl">*</span>   ≠  terraform/<span class="hl">**/*</span>
+<br>           <span class="dim">^ direct children    ^ all descendants</span>
+<br><br>
+
+<span class="section-label">═══ RULES vs CLAUDE.md vs SKILLS ═══</span>
+<br><span class="hl">CLAUDE.md</span>        → directory-scoped   → architecture context
+<br><span class="hl">.claude/rules/</span>   → pattern-scoped     → file-type conventions
+<br><span class="hl">Skills</span>           → on-demand           → multi-step procedures
+<br><br>
+
+<span class="section-label">═══ WHEN TO USE WHAT ═══</span>
+<br>Convention for a file type → <span class="hl">path-scoped rule</span>
+<br>Architecture of a directory → <span class="hl">subdirectory CLAUDE.md</span>
+<br>Universal project command   → <span class="hl">root CLAUDE.md or global rule</span>
+<br>Multi-step procedure        → <span class="hl">Skill</span>
+<br><br>
+
+<span class="section-label">═══ DEBUGGING ═══</span>
+<br>Rule not loading? → <span class="hl">/memory</span> <span class="dim">← lists all loaded files</span>
+<br>Double loading?   → <span class="hl">diff ~/.claude/rules/ .claude/rules/</span>
+<br>Token budget?     → <span class="hl">find .claude/rules -name '*.md' | xargs wc -c</span>
+<br>Target: <span class="warn-hl">&lt;15k tokens</span> total for always-on rules
+<br><br>
+
+<span class="section-label">═══ ANTI-PATTERNS ═══</span>
+<br><span class="warn-hl">✗</span> README.md in rules/ <span class="dim">(auto-loads, wastes tokens → use INDEX.txt)</span>
+<br><span class="warn-hl">✗</span> paths: **/*          <span class="dim">(matches everything = pointless scoping)</span>
+<br><span class="warn-hl">✗</span> Exact filename scope <span class="dim">(too narrow, almost never triggers)</span>
+<br><span class="warn-hl">✗</span> Procedures in rules  <span class="dim">(belongs in Skills, not rules)</span>
+<br><span class="warn-hl">✗</span> Duplicate across levels <span class="dim">(loads twice, double token cost)</span>
+</div>
+
+<a href="#top" class="back-to-top">↑ Back to top</a>
+</section>
+
+<div style="text-align: center; padding: 32px 0; border-top: 1px solid var(--border-light); margin-top: 48px;">
+  <p style="color: var(--text-muted); font-size: 0.85rem;">
+    Claude Certified Architect — Foundations &amp; Professional<br>
+    Chapter 14 Study Notes • Generated September 2026<br>
+    Verify all details against <a href="https://docs.anthropic.com/en/docs/claude-code/memory" target="_blank">official Claude Code documentation</a>
+  </p>
+</div>
+
+</div><!-- /container -->
+
+
+</body></html>

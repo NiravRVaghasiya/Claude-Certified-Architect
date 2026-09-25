@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 10: MCP Server Integration — Exam Study Notes</title>
+<style>
+  /* ═══════ RESET & BASE ═══════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:          #0f111a;
+    --bg-card:     #1a1d2e;
+    --bg-sidebar:  #161829;
+    --text:        #e2e4f0;
+    --text-sec:    #a0a4c0;
+    --text-muted:  #6b6f8e;
+    --border:      #2a2d42;
+    --accent:      #6c8cff;
+    --accent-dim:  rgba(108,140,255,0.12);
+
+    /* Callout palette */
+    --blue:        #3b82f6;  --blue-bg:    rgba(59,130,246,0.10);  --blue-border:    rgba(59,130,246,0.30);
+    --green:       #22c55e;  --green-bg:   rgba(34,197,94,0.10);   --green-border:   rgba(34,197,94,0.30);
+    --yellow:      #eab308;  --yellow-bg:  rgba(234,179,8,0.08);   --yellow-border:  rgba(234,179,8,0.30);
+    --orange:      #f97316;  --orange-bg:  rgba(249,115,22,0.10);  --orange-border:  rgba(249,115,22,0.30);
+    --purple:      #a78bfa;  --purple-bg:  rgba(167,139,250,0.10); --purple-border:  rgba(167,139,250,0.30);
+    --red:         #ef4444;  --red-bg:     rgba(239,68,68,0.08);   --red-border:     rgba(239,68,68,0.25);
+
+    --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif;
+    --radius: 10px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ═══════ SIDEBAR NAV ═══════ */
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 260px;
+    min-width: 260px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    padding: 24px 16px;
+    z-index: 100;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  nav.sidebar h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  nav.sidebar a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: var(--text-sec);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+    transition: all 0.15s;
+  }
+  nav.sidebar a:hover { background: var(--accent-dim); color: var(--accent); }
+  nav.sidebar a.top { font-weight: 600; color: var(--text); margin-top: 6px; }
+  nav.sidebar .badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .badge-high { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge-med  { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+
+  /* ═══════ MAIN CONTENT ═══════ */
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 48px 80px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 48px 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 24px 0 8px;
+    scroll-margin-top: 24px;
+  }
+  p { margin-bottom: 12px; }
+
+  /* ═══════ CALLOUT BOXES ═══════ */
+  .callout {
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 16px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+  }
+  .callout-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .callout-blue   { background: var(--blue-bg);   border-color: var(--blue);   }
+  .callout-blue .callout-title { color: var(--blue); }
+  .callout-green  { background: var(--green-bg);  border-color: var(--green);  }
+  .callout-green .callout-title { color: var(--green); }
+  .callout-yellow { background: var(--yellow-bg); border-color: var(--yellow); }
+  .callout-yellow .callout-title { color: var(--yellow); }
+  .callout-orange { background: var(--orange-bg); border-color: var(--orange); }
+  .callout-orange .callout-title { color: var(--orange); }
+  .callout-purple { background: var(--purple-bg); border-color: var(--purple); }
+  .callout-purple .callout-title { color: var(--purple); }
+  .callout-red    { background: var(--red-bg);    border-color: var(--red);    }
+  .callout-red .callout-title { color: var(--red); }
+
+  .callout ul, .callout ol { padding-left: 20px; margin: 6px 0; }
+  .callout li { margin: 4px 0; }
+  .callout code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px; font-family: var(--mono); font-size: 13px; }
+
+  /* ═══════ CODE BLOCKS ═══════ */
+  pre {
+    background: #141627;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    overflow-x: auto;
+    margin: 14px 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.55;
+    color: #c9d1d9;
+  }
+  pre .cm  { color: #6b7280; font-style: italic; }  /* comment */
+  pre .kw  { color: #c678dd; }                       /* keyword */
+  pre .str { color: #98c379; }                        /* string */
+  pre .key { color: #61afef; }                        /* key */
+  pre .val { color: #e5c07b; }                        /* value / number */
+  pre .hl  { background: rgba(108,140,255,0.12); display: inline; border-radius: 3px; padding: 0 2px; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 13px;
+    background: rgba(255,255,255,0.06);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  /* ═══════ TABLES ═══════ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13.5px;
+  }
+  th {
+    text-align: left;
+    padding: 10px 14px;
+    background: rgba(108,140,255,0.08);
+    color: var(--accent);
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  td:first-child { font-weight: 500; }
+
+  /* ═══════ DIAGRAM BOXES ═══════ */
+  .diagram {
+    background: #141627;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 16px 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre;
+    color: #c9d1d9;
+  }
+  .diagram .lbl { color: var(--accent); font-weight: 600; }
+  .diagram .arr { color: var(--yellow); }
+  .diagram .dim { color: var(--text-muted); }
+
+  /* ═══════ EXAM Q BLOCK ═══════ */
+  .exam-q {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .exam-q .q-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--orange);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .exam-q .q-text { font-weight: 600; margin-bottom: 10px; }
+  .exam-q .opt { padding: 4px 0; }
+  .opt .correct { color: var(--green); font-weight: 600; }
+  .opt .wrong   { color: var(--text-muted); }
+  .opt .explain { color: var(--text-sec); font-size: 13px; margin-left: 6px; }
+
+  /* ═══════ OVERVIEW CARD ═══════ */
+  .overview-card {
+    background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(167,139,250,0.08));
+    border: 1px solid rgba(108,140,255,0.2);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 20px 0 32px;
+  }
+  .overview-card h3 { margin-top: 0; color: var(--accent); }
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .weight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .weight-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .dot-high { background: var(--red); }
+  .dot-med  { background: var(--yellow); }
+
+  /* ═══════ CHEAT ROW ═══════ */
+  .cheat-row {
+    display: flex;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13.5px;
+  }
+  .cheat-term { font-weight: 600; color: var(--accent); min-width: 200px; font-family: var(--mono); font-size: 12.5px; }
+  .cheat-def  { color: var(--text-sec); }
+
+  /* ═══════ TRAP LIST ═══════ */
+  .trap-item {
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .trap-item strong { color: var(--red); }
+
+  /* ═══════ SECTION DIVIDER ═══════ */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 48px 0;
+  }
+
+  /* ═══════ RESPONSIVE ═══════ */
+  @media (max-width: 900px) {
+    nav.sidebar { display: none; }
+    main { padding: 24px 20px 60px; }
+  }
+
+  /* ═══════ SCROLLBAR ═══════ */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--                    SIDEBAR NAV                      -->
+<!-- ═══════════════════════════════════════════════════ -->
+<nav class="sidebar">
+  <h2>Chapter 10</h2>
+  <a href="#overview" class="top">📋 Overview</a>
+  <a href="#s10-1" class="top">10.1 Understanding MCP <span class="badge badge-high">HIGH</span></a>
+  <a href="#s10-2" class="top">10.2 Tools vs Resources <span class="badge badge-high">HIGH</span></a>
+  <a href="#s10-3" class="top">10.3 .mcp.json Config <span class="badge badge-high">HIGH</span></a>
+  <a href="#s10-4" class="top">10.4 Env Var Expansion <span class="badge badge-med">MED</span></a>
+  <a href="#s10-5" class="top">10.5 Scoping: Project vs User <span class="badge badge-high">HIGH</span></a>
+  <a href="#s10-6" class="top">10.6 Multi-Server Access <span class="badge badge-med">MED</span></a>
+  <a href="#s10-7" class="top">10.7 Claude Code Integration <span class="badge badge-high">HIGH</span></a>
+  <a href="#s10-8" class="top">10.8 Hands-On Config <span class="badge badge-med">MED</span></a>
+  <hr style="border-color:var(--border); margin:14px 0;">
+  <a href="#master-map">🗺️ Concept Map</a>
+  <a href="#cheat-sheet">📄 Cheat Sheet</a>
+  <a href="#traps">⚠️ Top 10 Exam Traps</a>
+  <a href="#practice">🧩 Practice Scenario</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!--                    MAIN CONTENT                     -->
+<!-- ═══════════════════════════════════════════════════ -->
+<main>
+
+<h1>Chapter 10: MCP Server Integration</h1>
+<p class="subtitle">Claude Certified Architect — Foundations &amp; Professional &nbsp;|&nbsp; Exam Study Notes &nbsp;|&nbsp; September 2026</p>
+
+<!-- ═══════════════════════════════════════ -->
+<!--           CHAPTER OVERVIEW             -->
+<!-- ═══════════════════════════════════════ -->
+<div class="overview-card" id="overview">
+  <h3>📋 Chapter Overview</h3>
+  <p>The <strong>Model Context Protocol (MCP)</strong> is the standardized, open protocol through which Claude connects to external tools, data sources, and services. Chapter 10 is the operational heart of the exam — it bridges conceptual understanding of Claude's capabilities with the real-world configuration and integration work architects must perform daily.</p>
+
+  <p><strong>Key themes unifying all sub-sections:</strong></p>
+  <ul>
+    <li><strong>Standardization</strong> — MCP replaces bespoke integrations with a single protocol (JSON-RPC 2.0 over stdio or HTTP)</li>
+    <li><strong>Separation of Concerns</strong> — Host ↔ Client ↔ Server architecture isolates security, transport, and capability</li>
+    <li><strong>Configuration as Code</strong> — <code>.mcp.json</code> enables reproducible, version-controlled server setups</li>
+    <li><strong>Scoping &amp; Security</strong> — Project vs user scoping controls blast radius of MCP servers</li>
+  </ul>
+
+  <h3 style="margin-top:18px;">Exam Weight Estimates</h3>
+  <div class="weight-grid">
+    <div class="weight-item"><span class="weight-dot dot-high"></span> 10.1 Understanding MCP</div>
+    <div class="weight-item"><span class="weight-dot dot-high"></span> 10.2 Tools vs Resources</div>
+    <div class="weight-item"><span class="weight-dot dot-high"></span> 10.3 .mcp.json Config</div>
+    <div class="weight-item"><span class="weight-dot dot-med"></span> 10.4 Env Var Expansion</div>
+    <div class="weight-item"><span class="weight-dot dot-high"></span> 10.5 Scoping</div>
+    <div class="weight-item"><span class="weight-dot dot-med"></span> 10.6 Multi-Server</div>
+    <div class="weight-item"><span class="weight-dot dot-high"></span> 10.7 Claude Code Integration</div>
+    <div class="weight-item"><span class="weight-dot dot-med"></span> 10.8 Hands-On</div>
+  </div>
+  <p style="font-size:12px; color:var(--text-muted); margin-top:10px;">🔴 HIGH = likely 2–3 questions &nbsp; 🟡 MED = likely 1 question</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.1                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-1">10.1 &nbsp; Understanding Model Context Protocol (MCP)</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p><strong>MCP (Model Context Protocol)</strong> is an open-source standard — created by Anthropic and now industry-adopted — that provides a universal interface for connecting AI applications to external systems (tools, data sources, workflows). It uses <strong>JSON-RPC 2.0</strong> messages over stateful connections.</p>
+  <p><strong>Why it exists:</strong> Before MCP, every AI-tool integration required a custom connector. MCP is the "USB-C for AI" — one protocol to replace N×M custom integrations with a standardized plug-in architecture.</p>
+  <p><strong>Role in architecture:</strong> MCP defines the outer boundary of Claude's capability surface. Without MCP, Claude can only reason over text in its context window. With MCP, Claude gains access to live databases, APIs, file systems, and services.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>First</strong>, an <em>MCP Host</em> (e.g., Claude Desktop, Claude Code, an IDE) starts up and reads its MCP configuration.</li>
+  <li><strong>Then</strong>, for each configured server, the host instantiates one <em>MCP Client</em> — a dedicated connector.</li>
+  <li><strong>Each client</strong> establishes a stateful connection to its <em>MCP Server</em> over a <em>transport layer</em> (stdio for local processes, Streamable HTTP for remote services).</li>
+  <li><strong>During discovery</strong>, the client sends a <code>server/discover</code> request (JSON-RPC). The server responds with its supported protocol versions, capabilities (tools, resources, prompts), and identity.</li>
+  <li><strong>At runtime</strong>, when Claude's reasoning determines it needs external data or action, it issues tool calls / resource reads via the appropriate MCP client, which routes them to the correct server.</li>
+  <li><strong>Results flow back</strong> through the same channel, enriching Claude's context for continued reasoning.</li>
+</ol>
+
+<h3>📊 Architecture Diagram</h3>
+<div class="diagram">
+<span class="lbl">┌─────────────────────────────────────────────────────────────────┐</span>
+<span class="lbl">│                        MCP HOST                                │</span>
+<span class="lbl">│</span>  (Claude Desktop / Claude Code / Custom App)                    <span class="lbl">│</span>
+<span class="lbl">│                                                                 │</span>
+<span class="lbl">│</span>  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐        <span class="lbl">│</span>
+<span class="lbl">│</span>  │ <span class="lbl">MCP Client A</span> │   │ <span class="lbl">MCP Client B</span> │   │ <span class="lbl">MCP Client C</span> │        <span class="lbl">│</span>
+<span class="lbl">│</span>  └──────┬───────┘   └──────┬───────┘   └──────┬───────┘        <span class="lbl">│</span>
+<span class="lbl">└─────────┼──────────────────┼──────────────────┼────────────────┘</span>
+          <span class="arr">│ stdio            │ HTTP/SSE          │ stdio</span>
+          <span class="arr">▼</span>                  <span class="arr">▼</span>                  <span class="arr">▼</span>
+  ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
+  │ <span class="lbl">MCP Server</span>    │ │ <span class="lbl">MCP Server</span>    │ │ <span class="lbl">MCP Server</span>    │
+  │ <span class="dim">(Local FS)</span>    │ │ <span class="dim">(Sentry API)</span>  │ │ <span class="dim">(Playwright)</span>  │
+  │ Tools+Rsrcs   │ │ Tools         │ │ Tools         │
+  └───────────────┘ └───────────────┘ └───────────────┘</div>
+
+<h3>Protocol Stack</h3>
+<table>
+  <tbody><tr><th>Layer</th><th>What</th><th>Details</th></tr>
+  <tr><td><strong>Data Layer</strong></td><td>JSON-RPC 2.0 messages</td><td>Requests, responses, notifications. Carries protocol version &amp; capabilities in <code>_meta</code>.</td></tr>
+  <tr><td><strong>Transport Layer</strong></td><td>stdio / Streamable HTTP</td><td>stdio = local subprocess. HTTP = remote, supports SSE streaming &amp; OAuth auth.</td></tr>
+  <tr><td><strong>Primitives</strong></td><td>Tools, Resources, Prompts</td><td>What servers expose to clients. Each has discovery (<code>list</code>) and execution/read methods.</td></tr>
+  <tr><td><strong>Client Features</strong></td><td>Elicitation</td><td>Servers can request user input via the client. <em>Sampling is deprecated since 2026-07-28.</em></td></tr>
+</tbody></table>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>MCP follows a <strong>Host → Client → Server</strong> three-tier architecture</li>
+    <li>The protocol uses <strong>JSON-RPC 2.0</strong> over stateful connections</li>
+    <li>Two transports: <strong>stdio</strong> (local) and <strong>Streamable HTTP</strong> (remote)</li>
+    <li>Discovery happens via <strong><code>server/discover</code></strong> — returns versions, capabilities, identity</li>
+    <li>MCP is <strong>protocol-only</strong> — it does not dictate how the host uses the LLM or manages context</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Mnemonic — "HCS":</strong> Host Creates (multiple) clients; each Client Serves one Server</li>
+    <li><strong>Pitfall:</strong> Don't confuse "MCP Server" with "runs on a remote server." Local stdio-based MCP servers run as subprocesses on the same machine.</li>
+    <li><strong>Edge case:</strong> The <code>server/discover</code> request is optional — clients MAY send any request directly and handle version errors. But exam questions treat discovery as the "correct first step."</li>
+    <li><strong>Sampling is deprecated</strong> (protocol version 2026-07-28). New implementations should integrate directly with LLM provider APIs instead.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Definitional MCQ + Architecture diagram</p>
+  <p><strong>Trigger phrase:</strong> "Which component is responsible for…" / "How does Claude connect to external…"</p>
+  <p><strong>Answer direction:</strong> Look for <em>Host → Client → Server</em> chain. The <em>Client</em> maintains the connection; the <em>Host</em> orchestrates multiple clients.</p>
+  <p><strong>Distractor warning:</strong> "MCP Server" ≠ "remote." A stdio server is still an MCP Server, just local.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question 1</div>
+  <div class="q-text">In MCP's architecture, which component maintains a dedicated connection to an MCP server?</div>
+  <div class="opt"><span class="wrong">A) MCP Host</span> <span class="explain">— coordinates clients, doesn't connect directly</span></div>
+  <div class="opt"><span class="correct">B) MCP Client ✓</span> <span class="explain">— one client per server, maintains the connection</span></div>
+  <div class="opt"><span class="wrong">C) MCP Transport</span> <span class="explain">— a layer, not a component</span></div>
+  <div class="opt"><span class="wrong">D) JSON-RPC Handler</span> <span class="explain">— internal mechanism, not an architectural role</span></div>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question 2</div>
+  <div class="q-text">Which message format does MCP use for client-server communication?</div>
+  <div class="opt"><span class="wrong">A) Protocol Buffers</span></div>
+  <div class="opt"><span class="wrong">B) GraphQL</span></div>
+  <div class="opt"><span class="correct">C) JSON-RPC 2.0 ✓</span></div>
+  <div class="opt"><span class="wrong">D) gRPC</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.2                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-2">10.2 &nbsp; MCP Tools vs MCP Resources: Actions vs Content Catalogs</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p><strong>Tools</strong> are executable actions the AI model can invoke autonomously during reasoning (e.g., query a database, create an issue, send a message). <strong>Resources</strong> are read-only data sources the host application loads to provide context (e.g., file contents, database schemas, configuration).</p>
+  <p><strong>Why the distinction:</strong> The critical design question is <em>who controls invocation</em>. Tools = model-controlled (the AI decides when to call). Resources = application-controlled (the host decides when to fetch). Getting this wrong causes either unnecessary model calls for static data, or an AI that can't act autonomously when it should.</p>
+  <p><strong>Role in architecture:</strong> Together with Prompts (user-controlled templates), Tools and Resources form MCP's three <strong>server primitives</strong> — the capability surface a server exposes to clients.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>First</strong>, ask: "Does this functionality perform an action or provide data?"</li>
+  <li><strong>If it performs an action</strong> (write, create, execute, send) → it's a <strong>Tool</strong>. Tools can have side effects.</li>
+  <li><strong>If it provides data</strong> (read-only context) → it's a <strong>Resource</strong>. Resources are identified by URIs and are side-effect-free.</li>
+  <li><strong>Then ask:</strong> "Who should control when this is used?" Model decides → Tool. Application decides → Resource. User explicitly picks → Prompt.</li>
+  <li><strong>The model</strong> sees tool descriptions + input schemas and decides autonomously when calling a tool would help.</li>
+  <li><strong>Resources</strong> are fetched by the host before or during conversation to enrich context — the model doesn't "call" them.</li>
+</ol>
+
+<h3>📊 Comparison Table</h3>
+<table>
+  <tbody><tr><th>Dimension</th><th>MCP Tools</th><th>MCP Resources</th><th>MCP Prompts</th></tr>
+  <tr><td><strong>Nature</strong></td><td>Actions (verbs)</td><td>Content (nouns)</td><td>Templates (patterns)</td></tr>
+  <tr><td><strong>Control Model</strong></td><td>Model-controlled</td><td>Application-controlled</td><td>User-controlled</td></tr>
+  <tr><td><strong>Invocation</strong></td><td>AI decides autonomously</td><td>Host app fetches</td><td>User explicitly selects</td></tr>
+  <tr><td><strong>Side Effects</strong></td><td>Yes (possible)</td><td>No (read-only)</td><td>No (generates messages)</td></tr>
+  <tr><td><strong>Input Schema</strong></td><td>Yes (JSON Schema)</td><td>No (URI params only)</td><td>Yes (parameters)</td></tr>
+  <tr><td><strong>Discovery Method</strong></td><td><code>tools/list</code></td><td><code>resources/list</code></td><td><code>prompts/list</code></td></tr>
+  <tr><td><strong>Execution Method</strong></td><td><code>tools/call</code></td><td><code>resources/read</code></td><td><code>prompts/get</code></td></tr>
+  <tr><td><strong>Addressing</strong></td><td>By name</td><td>By URI</td><td>By name</td></tr>
+  <tr><td><strong>Example</strong></td><td><code>run_query</code></td><td><code>db://schema</code></td><td><code>code-review</code></td></tr>
+</tbody></table>
+
+<h3>Real-World Mapping</h3>
+<div class="diagram">
+<span class="lbl">GitHub MCP Server</span>
+├── <span class="lbl">Tools</span> <span class="dim">(model-controlled actions)</span>
+│   ├── create_issue
+│   ├── search_issues
+│   └── merge_pull_request
+├── <span class="lbl">Resources</span> <span class="dim">(app-loaded context)</span>
+│   ├── repo://owner/repo/readme
+│   └── repo://owner/repo/config
+└── <span class="lbl">Prompts</span> <span class="dim">(user-selected templates)</span>
+    ├── bug-report-template
+    └── code-review-checklist</div>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>Tools = <strong>model-controlled actions</strong>; Resources = <strong>application-controlled data</strong>; Prompts = <strong>user-controlled templates</strong></li>
+    <li>Tools can have <strong>side effects</strong>; Resources are <strong>always read-only</strong></li>
+    <li>Resources use <strong>URI addressing</strong> (<code>config://project</code>, <code>db://schema</code>)</li>
+    <li>Discovery methods: <code><strong>tools/list</strong></code>, <code><strong>resources/list</strong></code>, <code><strong>prompts/list</strong></code></li>
+    <li>The decision framework: <strong>"Who controls invocation?"</strong> is the #1 question</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Mnemonic — "TAP":</strong> <u>T</u>ools (AI), <u>A</u>pp-Resources, <u>P</u>rompts (User) — ordered by autonomy level</li>
+    <li><strong>Common pitfall:</strong> Implementing a read-only data fetch as a Tool instead of a Resource. This wastes model reasoning and token budget on something the host should load automatically.</li>
+    <li><strong>Edge case:</strong> A <code>search_docs</code> function looks like it "just reads data" — but because the <em>model decides when and what to search</em>, it's correctly a Tool, not a Resource.</li>
+    <li><strong>Resource Templates</strong> allow dynamic URIs (e.g., <code>users://{userId}/profile</code>) — but the application still controls when they're fetched.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Scenario-based classification MCQ</p>
+  <p><strong>Trigger phrase:</strong> "Which MCP primitive should be used for…" / "A developer wants Claude to automatically…"</p>
+  <p><strong>Answer framework:</strong> (1) Does it <em>do something</em> or <em>provide data</em>? (2) Who should <em>control</em> when it runs?</p>
+  <p><strong>Distractor warning:</strong> "Resources can have side effects" is ALWAYS wrong. Resources are defined as read-only in the spec.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">An MCP server for a database exposes the ability to view the table schema. Which primitive type is most appropriate?</div>
+  <div class="opt"><span class="wrong">A) Tool</span> <span class="explain">— Tools are for actions the model initiates. Schema is static context.</span></div>
+  <div class="opt"><span class="correct">B) Resource ✓</span> <span class="explain">— Read-only data loaded by the host for context. URI: <code>db://schema</code></span></div>
+  <div class="opt"><span class="wrong">C) Prompt</span> <span class="explain">— Prompts are user-selected templates, not data.</span></div>
+  <div class="opt"><span class="wrong">D) Notification</span> <span class="explain">— Notifications are real-time update events, not a primitive type.</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.3                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-3">10.3 &nbsp; The <code>.mcp.json</code> Configuration File</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p><code>.mcp.json</code> is the project-scoped configuration file placed at the repository root. It declaratively defines which MCP servers a project uses, their transport types, commands, arguments, environment variables, and headers. It is the <strong>"configuration as code"</strong> artifact for MCP — version-controllable, shareable, and reviewable.</p>
+  <p><strong>Why it exists:</strong> Without it, every developer must manually <code>claude mcp add</code> each server. With <code>.mcp.json</code>, cloning a repo brings the entire tool configuration along. Teammates get prompted to approve the servers automatically.</p>
+  <p><strong>Role in architecture:</strong> <code>.mcp.json</code> is the bridge between human-authored config and the MCP runtime. Claude Code reads it at session start, instantiates clients, and connects to each defined server.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>First</strong>, a developer adds a server with <code>claude mcp add --scope project</code>, which writes to <code>.mcp.json</code> at the repo root.</li>
+  <li><strong>Alternatively</strong>, developers can hand-edit the JSON file directly.</li>
+  <li><strong>The file</strong> contains a top-level <code>"mcpServers"</code> object. Each key is the server alias.</li>
+  <li><strong>Each server entry</strong> specifies: <code>type</code> (transport), plus transport-specific fields (<code>command</code>/<code>args</code> for stdio, <code>url</code> for HTTP).</li>
+  <li><strong>When a teammate</strong> clones the repo, Claude Code detects the <code>.mcp.json</code> and prompts for approval before starting any servers — a security gate.</li>
+  <li><strong>Changes</strong> to <code>.mcp.json</code> require a session restart to take effect — the file is read once at startup.</li>
+</ol>
+
+<h3>📊 Annotated Configuration</h3>
+<pre><span class="cm">// .mcp.json — placed at project root, committed to version control</span>
+{
+  <span class="key">"mcpServers"</span>: {
+    <span class="key">"filesystem"</span>: {            <span class="cm">// ← Server alias (your chosen name)</span>
+      <span class="key">"type"</span>: <span class="str">"stdio"</span>,          <span class="cm">// ← Transport: "stdio" | "http" | "streamable-http"</span>
+      <span class="key">"command"</span>: <span class="str">"npx"</span>,         <span class="cm">// ← Executable to run</span>
+      <span class="key">"args"</span>: [<span class="str">"-y"</span>, <span class="str">"@modelcontextprotocol/server-filesystem"</span>, <span class="str">"/project"</span>],
+      <span class="key">"env"</span>: {                   <span class="cm">// ← Environment variables passed to the process</span>
+        <span class="key">"NODE_ENV"</span>: <span class="str">"production"</span>
+      }
+    },
+    <span class="key">"sentry"</span>: {                 <span class="cm">// ← Remote HTTP server</span>
+      <span class="key">"type"</span>: <span class="str">"http"</span>,
+      <span class="key">"url"</span>: <span class="str">"https://mcp.sentry.dev/sse"</span>,
+      <span class="key">"headers"</span>: {              <span class="cm">// ← Custom headers (auth tokens, etc.)</span>
+        <span class="key">"Authorization"</span>: <span class="str">"Bearer ${SENTRY_TOKEN}"</span>  <span class="cm">// ← Env var expansion!</span>
+      }
+    }
+  }
+}</pre>
+
+<h3>File Structure Rules</h3>
+<table>
+  <tbody><tr><th>Rule</th><th>Detail</th></tr>
+  <tr><td><strong>Location</strong></td><td>Project root (<code>.mcp.json</code>), same level as <code>.git/</code></td></tr>
+  <tr><td><strong><code>type</code> field</strong></td><td>Mandatory. Without it, Claude Code defaults to stdio and may silently fail for HTTP servers.</td></tr>
+  <tr><td><strong><code>streamable-http</code></strong></td><td>Alias for <code>http</code> — the spec's official name. Claude Code accepts both.</td></tr>
+  <tr><td><strong>Approval gate</strong></td><td>On first load, users must approve project-scoped servers before they start.</td></tr>
+  <tr><td><strong>Reload behavior</strong></td><td>File read at session start only. Edit → restart session for changes to take effect.</td></tr>
+  <tr><td><strong>Parse errors</strong></td><td>Malformed entries are <em>silently skipped</em> — check <code>/mcp</code> for warnings.</td></tr>
+</tbody></table>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li><code>.mcp.json</code> lives at <strong>project root</strong> and is <strong>committed to version control</strong></li>
+    <li>Top-level key: <code><strong>"mcpServers"</strong></code> — each child key is a server alias</li>
+    <li>The <code><strong>type</strong></code> field is <strong>required</strong> — omitting it causes silent failures for HTTP servers</li>
+    <li>Changes require a <strong>session restart</strong>; the file is read once at startup</li>
+    <li>Never commit raw secrets — use <strong><code>${VAR}</code> environment variable expansion</strong> (see 10.4)</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Common pitfall:</strong> Forgetting the <code>type</code> field on an HTTP server. The entry gets parsed as stdio, the URL is ignored, and the server silently fails with "connection error."</li>
+    <li><strong>Pitfall #2:</strong> Editing <code>.mcp.json</code> and expecting changes immediately — you must restart the Claude Code session.</li>
+    <li><strong>If servers don't appear</strong> after editing, open <code>/mcp</code> panel and look for parse warnings. Also check if you rejected the approval prompt earlier — reset with <code>claude mcp reset-project-choices</code>.</li>
+    <li><strong>Correct file names:</strong> <code>.mcp.json</code> (project root) or <code>~/.claude.json</code> (user/local). NOT <code>~/.claude/mcp.json</code>, <code>~/.claude/.mcp.json</code>, or <code>%APPDATA%\Claude\mcp.json</code>.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Code-reading MCQ (identify what's wrong in a config)</p>
+  <p><strong>Trigger phrase:</strong> "Given the following .mcp.json…" / "Which file should contain…"</p>
+  <p><strong>Answer direction:</strong> Look for missing <code>type</code> field, wrong file location, or raw secrets in config.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">A developer's HTTP MCP server entry in <code>.mcp.json</code> has a <code>url</code> field but no <code>type</code> field. What happens?</div>
+  <div class="opt"><span class="wrong">A) Claude Code auto-detects it as HTTP from the URL</span> <span class="explain">— No auto-detection.</span></div>
+  <div class="opt"><span class="wrong">B) The entry is ignored entirely</span></div>
+  <div class="opt"><span class="correct">C) Claude Code treats it as a stdio server and the connection fails ✓</span></div>
+  <div class="opt"><span class="wrong">D) An error dialog warns the user</span> <span class="explain">— Failures are silent.</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.4                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-4">10.4 &nbsp; Environment Variable Expansion in MCP Config</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p>MCP configuration files support <strong>environment variable expansion</strong> using the syntax <code>${VAR_NAME}</code> or <code>${VAR_NAME:-default_value}</code>. This enables storing secrets (API keys, tokens, connection strings) in the environment rather than hardcoded in config files, keeping <code>.mcp.json</code> safe to commit.</p>
+  <p><strong>Why it exists:</strong> Project-scoped config must be version-controlled, but secrets must never be committed. Env var expansion bridges this gap — the shape of the config is in the repo, the secrets are in each developer's environment.</p>
+  <p><strong>Role in architecture:</strong> This is the security mechanism for MCP configuration. It works across <code>command</code>, <code>args</code>, <code>env</code>, <code>url</code>, and <code>headers</code> fields.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>First</strong>, the developer writes <code>${API_KEY}</code> in a config field instead of the raw value.</li>
+  <li><strong>At startup</strong>, Claude Code's config parser scans string values for <code>${...}</code> patterns.</li>
+  <li><strong>For each match</strong>, it looks up the variable name in the process environment.</li>
+  <li><strong>If found</strong>, the value is JSON-escaped and substituted — quotes and braces in the value won't break the config structure.</li>
+  <li><strong>If not found</strong> and a default is specified (<code>${VAR:-fallback}</code>), the fallback is used.</li>
+  <li><strong>If not found</strong> and no default exists, the <em>literal <code>${VAR}</code> text remains</em> — the file still loads, but the connection fails at runtime. Claude Code warns in <code>claude mcp list</code>.</li>
+</ol>
+
+<h3>📊 Syntax Reference</h3>
+<pre><span class="cm">// Expansion syntax variants</span>
+
+<span class="key">"api_key"</span>: <span class="str">"${MY_API_KEY}"</span>                    <span class="cm">// ← Plain substitution</span>
+<span class="key">"base_url"</span>: <span class="str">"${API_URL:-https://api.example.com}"</span>  <span class="cm">// ← With default fallback</span>
+<span class="key">"auth"</span>: <span class="str">"Bearer ${TOKEN}"</span>                     <span class="cm">// ← Inline expansion within a string</span>
+
+<span class="cm">// Works in ALL string fields:</span>
+<span class="cm">//   command, args[], env{}, url, headers{}</span>
+
+<span class="cm">// ⚠️ Unterminated placeholder "${VAR" → parse error</span>
+<span class="cm">// ⚠️ Unset var without default → literal "${VAR}" remains → fails at connect</span></pre>
+
+<h3>Complete Example</h3>
+<pre>{
+  <span class="key">"mcpServers"</span>: {
+    <span class="key">"api-server"</span>: {
+      <span class="key">"type"</span>: <span class="str">"http"</span>,
+      <span class="key">"url"</span>: <span class="str">"<span class="hl">${API_BASE_URL:-https://api.example.com}</span>/mcp"</span>,
+      <span class="key">"headers"</span>: {
+        <span class="key">"Authorization"</span>: <span class="str">"Bearer <span class="hl">${API_KEY}</span>"</span>
+      }
+    },
+    <span class="key">"db-server"</span>: {
+      <span class="key">"type"</span>: <span class="str">"stdio"</span>,
+      <span class="key">"command"</span>: <span class="str">"npx"</span>,
+      <span class="key">"args"</span>: [<span class="str">"-y"</span>, <span class="str">"db-mcp-server"</span>],
+      <span class="key">"env"</span>: {
+        <span class="key">"DB_CONNECTION"</span>: <span class="str">"<span class="hl">${DATABASE_URL}</span>"</span>,
+        <span class="key">"DB_POOL_SIZE"</span>: <span class="str">"<span class="hl">${POOL_SIZE:-5}</span>"</span>
+      }
+    }
+  }
+}</pre>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>Syntax: <code><strong>${VAR}</strong></code> for plain substitution, <code><strong>${VAR:-default}</strong></code> for fallback</li>
+    <li>Expansion works in: <strong>command, args, env, url, headers</strong></li>
+    <li>Values are <strong>JSON-escaped</strong> during substitution — safe for secrets with special characters</li>
+    <li>Unset variables without defaults → <strong>literal text remains, connection fails at runtime</strong></li>
+    <li>Unterminated <code>${</code> (no closing <code>}</code>) → <strong>parse error</strong> (deliberately vague to protect secrets)</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Always use defaults for non-secret values</strong> like base URLs: <code>${API_URL:-https://prod.example.com}</code></li>
+    <li><strong>Desktop app gotcha:</strong> The Claude Desktop app has no shell in its launch path, so there's no easy way to inject env vars. This pushes users toward plaintext tokens — flag this as a known limitation.</li>
+    <li><strong>Debugging:</strong> If <code>claude mcp list</code> shows a server as failed, check for unset env vars first — it's the #1 cause of "works on my machine" issues.</li>
+    <li><strong>Never commit <code>.env</code> files either.</strong> Use <code>.env.example</code> with placeholder names (no values) in the repo.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Syntax identification / Security best-practice MCQ</p>
+  <p><strong>Trigger phrase:</strong> "How should an API key be stored in .mcp.json…" / "What happens if the environment variable is not set…"</p>
+  <p><strong>Answer direction:</strong> Always pick <code>${VAR}</code> syntax over hardcoded values. Know the fallback syntax.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">In an <code>.mcp.json</code> file, what does <code>${DB_URL:-localhost:5432}</code> resolve to if <code>DB_URL</code> is not set?</div>
+  <div class="opt"><span class="wrong">A) An empty string</span></div>
+  <div class="opt"><span class="wrong">B) The literal text <code>${DB_URL:-localhost:5432}</code></span></div>
+  <div class="opt"><span class="correct">C) <code>localhost:5432</code> ✓</span> <span class="explain">— The <code>:-</code> syntax provides a default.</span></div>
+  <div class="opt"><span class="wrong">D) A parse error</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.5                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-5">10.5 &nbsp; Project-Scoped vs User-Scoped MCP Servers</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p>MCP servers in Claude Code have three <strong>configuration scopes</strong> that determine visibility, storage location, and shareability. The scope controls which projects "see" a server and whether teammates get it automatically.</p>
+  <p><strong>Why it exists:</strong> Different servers have different sharing needs. A project's database connector should travel with the repo; a personal API key integration shouldn't leak to every project; an experimental server shouldn't follow you everywhere.</p>
+  <p><strong>Role in architecture:</strong> Scoping is the access-control model for MCP configuration. It determines the blast radius of each server definition and implements the principle of least privilege.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>Local scope</strong> (default): Private to <em>you</em> in the <em>current project</em>. Stored in <code>~/.claude.json</code> under the project's path key. Use for experiments and credential-bearing servers.</li>
+  <li><strong>Project scope</strong>: Shared with the team via version control. Written to <code>.mcp.json</code> at project root. Use for servers the whole team needs.</li>
+  <li><strong>User scope</strong>: Available to <em>you</em> across <em>all projects</em>. Stored in <code>~/.claude.json</code> top-level <code>mcpServers</code>. Use for personal utilities you want everywhere.</li>
+  <li><strong>Precedence rule</strong>: When the same server name exists at multiple scopes: <strong>local &gt; project &gt; user &gt; plugin &gt; claude.ai connectors</strong>.</li>
+  <li><strong>Critical detail</strong>: The winning entry is used <em>whole</em> — configurations are <strong>never merged</strong> across scopes.</li>
+</ol>
+
+<h3>📊 Scope Comparison</h3>
+<table>
+  <tbody><tr><th>Scope</th><th>CLI Flag</th><th>Stored In</th><th>Loads In</th><th>Shared with Team?</th></tr>
+  <tr><td><strong>Local</strong></td><td><code>--scope local</code> (default)</td><td><code>~/.claude.json</code> (project-keyed)</td><td>Current project only</td><td>❌ No</td></tr>
+  <tr><td><strong>Project</strong></td><td><code>--scope project</code></td><td><code>.mcp.json</code> (repo root)</td><td>Current project only</td><td>✅ Yes (via git)</td></tr>
+  <tr><td><strong>User</strong></td><td><code>--scope user</code></td><td><code>~/.claude.json</code> (top-level)</td><td>All projects</td><td>❌ No</td></tr>
+</tbody></table>
+
+<h3>Scope Hierarchy Diagram</h3>
+<div class="diagram">
+<span class="lbl">Precedence (highest → lowest):</span>
+
+  <span class="lbl">1. LOCAL</span>    <span class="dim">~/.claude.json (project-keyed)</span>    <span class="arr">──► Wins if defined</span>
+     <span class="arr">│</span>
+  <span class="lbl">2. PROJECT</span>  <span class="dim">.mcp.json (repo root)</span>              <span class="arr">──► Falls through if no local</span>
+     <span class="arr">│</span>
+  <span class="lbl">3. USER</span>     <span class="dim">~/.claude.json (top-level)</span>         <span class="arr">──► Falls through if no project</span>
+     <span class="arr">│</span>
+  <span class="lbl">4. PLUGIN</span>   <span class="dim">Plugin-bundled servers</span>             <span class="arr">──► Falls through if no user</span>
+     <span class="arr">│</span>
+  <span class="lbl">5. CLAUDE.AI</span> <span class="dim">Connectors from claude.ai</span>         <span class="arr">──► Lowest priority</span>
+
+<span class="dim">⚠️ Entire entry wins — NO field-level merging between scopes.</span></div>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>Three scopes: <strong>Local</strong> (default, private, per-project), <strong>Project</strong> (shared via git), <strong>User</strong> (global, private)</li>
+    <li>Precedence: <strong>local &gt; project &gt; user &gt; plugin &gt; claude.ai</strong></li>
+    <li>Configs are <strong>never merged</strong> — the winning scope's entry is used <em>whole</em></li>
+    <li>Scope is <strong>fixed at add-time</strong>. To change scope: remove + re-add.</li>
+    <li>Only <code><strong>.mcp.json</strong></code> (project scope) is shareable through version control</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Biggest gotcha:</strong> "User-scoped" sounds restrictive/personal but is actually <strong>BROADER</strong> in reach — it loads in <em>all</em> projects. This is the #1 exam distractor.</li>
+    <li><strong>Decision rule:</strong> Has a credential? → Local. Whole team needs it? → Project. You want it everywhere? → User.</li>
+    <li><strong>"My server disappeared"</strong>: Almost always a scope mismatch. Local scope is tied to the <em>exact directory</em> where you ran <code>claude mcp add</code>. If you <code>cd</code> elsewhere, it's gone.</li>
+    <li><strong>No merge = no combining</strong>: A URL in project scope and a header in local scope for the same name will NOT combine. The local entry wins entirely, with no header from project.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Scenario-based MCQ</p>
+  <p><strong>Trigger phrase:</strong> "A team wants server X only for Project A, not globally…" / "available across ALL projects…"</p>
+  <p><strong>Answer direction:</strong> "Only for this project" → project or local. "All projects for me" → user.</p>
+  <p><strong>Distractor warning:</strong> "User-scoped" sounds personal/restrictive but is the BROADEST personal scope. "Global-scoped" and "Team-scoped" are NOT valid MCP scope terms — they're distractors.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">Which scope makes an MCP server available across ALL projects for one user?</div>
+  <div class="opt"><span class="wrong">A) Project-scoped</span> <span class="explain">— only current project</span></div>
+  <div class="opt"><span class="correct">B) User-scoped ✓</span> <span class="explain">— all projects for that user</span></div>
+  <div class="opt"><span class="wrong">C) Global-scoped</span> <span class="explain">— not a valid MCP scope term</span></div>
+  <div class="opt"><span class="wrong">D) Local-scoped</span> <span class="explain">— current project only, private</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.6                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-6">10.6 &nbsp; Multi-Server Simultaneous Access</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p>Claude Code supports connecting to <strong>multiple MCP servers simultaneously</strong>. The host creates one MCP Client per server, each maintaining an independent connection. Claude's reasoning layer can draw on tools and resources from any connected server within a single conversation.</p>
+  <p><strong>Why it exists:</strong> Real-world workflows require multiple data sources — a project might need a database server, a monitoring server, a file system server, and a CI/CD server all at once. Multi-server access enables this without swapping connections.</p>
+  <p><strong>Role in architecture:</strong> This is what makes MCP composable. Servers are independent modules; the host is the orchestrator that presents a unified capability surface to the LLM.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>First</strong>, Claude Code reads all configured servers (from all scopes) and deduplicates by name using the precedence rule.</li>
+  <li><strong>Then</strong>, it instantiates one MCP Client per surviving server and connects them in parallel.</li>
+  <li><strong>Tool search is on by default</strong> — tool definitions load on demand rather than all at once, preventing context window bloat.</li>
+  <li><strong>At runtime</strong>, when Claude needs a tool, it searches across all connected servers' tool registries.</li>
+  <li><strong>Each tool call</strong> is routed to the specific server that owns that tool — the client handles routing transparently.</li>
+  <li><strong>Claude</strong> can invoke tools from multiple servers in a single reasoning turn (e.g., read from DB server + post to Slack server).</li>
+</ol>
+
+<h3>📊 Multi-Server Topology</h3>
+<div class="diagram">
+<span class="lbl">┌──────────────── Claude Code Host ────────────────────┐</span>
+<span class="lbl">│</span>                                                       <span class="lbl">│</span>
+<span class="lbl">│</span>  Claude LLM <span class="arr">──►</span> Tool Router <span class="arr">──┬──►</span> Client A <span class="arr">──►</span> DB Server    <span class="lbl">│</span>
+<span class="lbl">│</span>                            <span class="arr">├──►</span> Client B <span class="arr">──►</span> GitHub       <span class="lbl">│</span>
+<span class="lbl">│</span>                            <span class="arr">├──►</span> Client C <span class="arr">──►</span> Sentry       <span class="lbl">│</span>
+<span class="lbl">│</span>                            <span class="arr">└──►</span> Client D <span class="arr">──►</span> Playwright   <span class="lbl">│</span>
+<span class="lbl">│</span>                                                       <span class="lbl">│</span>
+<span class="lbl">│</span>  <span class="dim">Tool Search: loads definitions on demand</span>               <span class="lbl">│</span>
+<span class="lbl">│</span>  <span class="dim">Context: tools from ALL servers available</span>              <span class="lbl">│</span>
+<span class="lbl">└───────────────────────────────────────────────────────┘</span></div>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>One <strong>MCP Client per server</strong> — connections are independent and parallel</li>
+    <li><strong>Tool search is on by default</strong> — definitions load on demand, not all at startup</li>
+    <li>Claude can invoke tools from <strong>multiple servers in a single turn</strong></li>
+    <li><strong>Name collision</strong>: If two servers define a tool with the same name, the one from the higher-precedence server wins</li>
+    <li>Removing unused servers is still worthwhile — each server's tool <em>names</em> still load into session context</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Naming discipline matters:</strong> Use distinct server aliases to avoid name collisions in the tool registry.</li>
+    <li><strong>Performance note:</strong> stdio servers start as subprocesses — many heavy servers can slow session startup. Consider which really need to be stdio vs remote HTTP.</li>
+    <li><strong>On-demand loading:</strong> Tool search means adding many servers no longer eats your context window — but each server's metadata still has a small cost.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Architecture MCQ</p>
+  <p><strong>Trigger phrase:</strong> "How does Claude Code handle multiple MCP servers…"</p>
+  <p><strong>Answer direction:</strong> One client per server, independent connections, tool search on demand.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">When Claude Code connects to 5 MCP servers, how many MCP Client instances are created?</div>
+  <div class="opt"><span class="wrong">A) 1 (shared client)</span></div>
+  <div class="opt"><span class="correct">B) 5 (one per server) ✓</span></div>
+  <div class="opt"><span class="wrong">C) It depends on the transport type</span></div>
+  <div class="opt"><span class="wrong">D) 10 (one for tools, one for resources per server)</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.7                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-7">10.7 &nbsp; Integrating MCP Servers into Claude Code</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p>Claude Code provides a comprehensive CLI (<code>claude mcp</code>) for adding, removing, inspecting, and authenticating MCP servers. Integration follows a structured workflow: <strong>add → verify → authenticate (if needed) → use</strong>. Understanding each step and the failure modes at each stage is essential.</p>
+  <p><strong>Why it exists:</strong> The CLI abstracts away the complexity of JSON config editing, transport negotiation, and credential management. It provides guardrails, feedback, and debugging tools.</p>
+  <p><strong>Role in architecture:</strong> The CLI is the developer's primary interface for MCP lifecycle management in Claude Code.</p>
+</div>
+
+<h3>🧠 Chain-of-Thought Breakdown</h3>
+<ol>
+  <li><strong>Add</strong> a server: <code>claude mcp add [options] &lt;name&gt; [-- command args...]</code></li>
+  <li><strong>Verify</strong> connection: <code>claude mcp list</code> — must show <code>✔ Connected</code></li>
+  <li><strong>Authenticate</strong> (if needed): <code>claude mcp login &lt;name&gt;</code> or via <code>/mcp</code> panel in session</li>
+  <li><strong>Use</strong> the tools: Start a session, name the server in your prompt, approve tool calls on first use</li>
+  <li><strong>Manage</strong>: <code>claude mcp get</code>, <code>claude mcp remove</code>, <code>claude mcp reset-project-choices</code></li>
+</ol>
+
+<h3>📊 CLI Command Reference</h3>
+<table>
+  <tbody><tr><th>Command</th><th>Purpose</th></tr>
+  <tr><td><code>claude mcp add</code></td><td>Register a new MCP server (specify transport, scope, env vars, headers)</td></tr>
+  <tr><td><code>claude mcp list</code></td><td>Show all servers with connection status</td></tr>
+  <tr><td><code>claude mcp get &lt;name&gt;</code></td><td>Show full config for one server (scope, URL/command, status)</td></tr>
+  <tr><td><code>claude mcp remove &lt;name&gt;</code></td><td>Remove a server (use <code>--scope</code> to target specific scope)</td></tr>
+  <tr><td><code>claude mcp login &lt;name&gt;</code></td><td>OAuth authentication flow for remote servers</td></tr>
+  <tr><td><code>claude mcp logout &lt;name&gt;</code></td><td>Clear stored OAuth tokens</td></tr>
+  <tr><td><code>claude mcp add-json &lt;name&gt; &lt;json&gt;</code></td><td>Add from a JSON blob (when vendor gives you config JSON)</td></tr>
+  <tr><td><code>claude mcp add-from-claude-desktop</code></td><td>Import servers from Claude Desktop config</td></tr>
+  <tr><td><code>claude mcp serve</code></td><td>Run Claude Code itself as an MCP server (stdio)</td></tr>
+  <tr><td><code>claude mcp reset-project-choices</code></td><td>Reset approval decisions for project-scoped servers</td></tr>
+  <tr><td><code>/mcp</code> (in session)</td><td>Interactive panel: status, reconnect, authenticate</td></tr>
+</tbody></table>
+
+<h3>Connection Status Reference</h3>
+<table>
+  <tbody><tr><th>Status</th><th>Meaning</th><th>Action</th></tr>
+  <tr><td><code>✔ Connected</code></td><td>Working correctly</td><td>None — ready to use</td></tr>
+  <tr><td><code>! Connected · tools fetch failed</code></td><td>Connected but can't list tools</td><td>Check env vars / API keys</td></tr>
+  <tr><td><code>! Needs authentication</code></td><td>Reachable, wants OAuth</td><td><code>claude mcp login &lt;name&gt;</code></td></tr>
+  <tr><td><code>✘ Failed to connect</code></td><td>No usable response</td><td>Check URL, network, transport type</td></tr>
+  <tr><td><code>✘ Connection error</code></td><td>Connection attempt threw</td><td>Verify command / binary exists</td></tr>
+  <tr><td><code>⏸ Pending approval</code></td><td>Project-scoped, not yet approved</td><td>Open <code>/mcp</code>, approve</td></tr>
+</tbody></table>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>Integration workflow: <strong>Add → Verify → Authenticate → Use</strong></li>
+    <li><code>claude mcp add</code> is a <strong>write receipt, not a connection test</strong> — always verify with <code>claude mcp list</code></li>
+    <li>Two auth models: <strong>OAuth</strong> (interactive sign-in) vs <strong>static token</strong> (passed via <code>--header</code>)</li>
+    <li>The <code><strong>--</strong></code> separator is critical for stdio servers — everything after it is the server command</li>
+    <li><strong><code>/mcp</code></strong> in-session panel provides status, reconnect, and authenticate actions</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Flag ordering trap:</strong> <code>--env KEY=value</code> consumes all following <code>KEY=value</code> pairs. If the server name comes right after <code>--env</code>, it's parsed as an env pair. Put another flag between them.</li>
+    <li><strong>stdio first-run timeout:</strong> <code>npx</code> downloads packages on first run, which can exceed the 30s default timeout. Set <code>MCP_TIMEOUT=60000 claude</code> to increase.</li>
+    <li><strong>"Failed" with a header token:</strong> Claude Code reports this as <em>failed</em>, NOT as "needs authentication." A failed status on a server with an Authorization header almost always means a bad token.</li>
+    <li><strong>SSE transport:</strong> Deprecated but some servers still use it. Use <code>--transport sse</code> if an HTTP endpoint doesn't work.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Process-order / Troubleshooting MCQ</p>
+  <p><strong>Trigger phrase:</strong> "After adding a server, what should the developer do next…" / "The server shows Failed status…"</p>
+  <p><strong>Answer framework:</strong> Always verify with <code>claude mcp list</code> after adding. Always check status before editing config.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">A developer runs <code>claude mcp add --transport http my-server https://api.example.com/mcp</code> and sees "Added http server my-server." What does this confirm?</div>
+  <div class="opt"><span class="wrong">A) The server is connected and tools are available</span></div>
+  <div class="opt"><span class="wrong">B) The URL is reachable and authenticated</span></div>
+  <div class="opt"><span class="correct">C) The configuration was saved to the config file ✓</span></div>
+  <div class="opt"><span class="wrong">D) The server's tools have been loaded into context</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    SECTION 10.8                                 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="s10-8">10.8 &nbsp; Hands-On: Configuring and Using an MCP Server</h2>
+
+<div class="callout callout-blue">
+  <div class="callout-title">📘 Core Concept</div>
+  <p>This section synthesizes all prior knowledge into a complete, end-to-end workflow for configuring and using MCP servers in Claude Code. It covers both the CLI-based approach and the config-file approach, plus troubleshooting patterns.</p>
+  <p><strong>Why it matters:</strong> The exam tests practical knowledge. Understanding the theory is necessary but not sufficient — you must know the exact commands, file locations, and debugging steps.</p>
+</div>
+
+<h3>🧠 End-to-End Workflow</h3>
+<ol>
+  <li><strong>Identify the server</strong> — Remote HTTP endpoint? Local stdio package? What credentials does it need?</li>
+  <li><strong>Choose scope</strong> — Private experiment → local. Team standard → project. Personal utility → user.</li>
+  <li><strong>Add the server</strong> — CLI (<code>claude mcp add</code>) or hand-edit <code>.mcp.json</code></li>
+  <li><strong>Verify connection</strong> — <code>claude mcp list</code> must show <code>✔ Connected</code></li>
+  <li><strong>Authenticate</strong> — OAuth: <code>claude mcp login</code>. Token: passed at add-time via <code>--header</code></li>
+  <li><strong>Use in session</strong> — Name the server in your first prompt. Approve tool calls. Verify tool call carries server name.</li>
+  <li><strong>Debug if needed</strong> — Check status → check URL/command → check env vars → check scope → restart session</li>
+</ol>
+
+<h3>📊 Quick-Reference: Adding Servers</h3>
+<pre><span class="cm"># ═══ Remote HTTP server ═══</span>
+<span class="kw">claude mcp add</span> <span class="val">--transport http</span> <span class="val">--scope user</span> sentry https://mcp.sentry.dev/sse
+
+<span class="cm"># ═══ Local stdio server ═══</span>
+<span class="kw">claude mcp add</span> playwright <span class="val">--</span> npx -y @playwright/mcp@latest
+
+<span class="cm"># ═══ stdio with env vars ═══</span>
+<span class="kw">claude mcp add</span> <span class="val">--env AIRTABLE_API_KEY=xxx</span> <span class="val">--transport stdio</span> airtable \
+  <span class="val">--</span> npx -y airtable-mcp-server
+
+<span class="cm"># ═══ Verify ═══</span>
+<span class="kw">claude mcp list</span>              <span class="cm"># Must show ✔ Connected</span>
+<span class="kw">claude mcp get</span> sentry        <span class="cm"># Full config for one server</span>
+
+<span class="cm"># ═══ Auth ═══</span>
+<span class="kw">claude mcp login</span> sentry      <span class="cm"># OAuth flow</span>
+<span class="kw">claude mcp logout</span> sentry
+
+<span class="cm"># ═══ Remove ═══</span>
+<span class="kw">claude mcp remove</span> sentry <span class="val">--scope user</span>
+
+<span class="cm"># ═══ Scope change (must remove + re-add) ═══</span>
+<span class="kw">claude mcp remove</span> explain <span class="val">--scope local</span>
+<span class="kw">claude mcp add</span> <span class="val">--scope user --transport http</span> explain https://example.com/mcp</pre>
+
+<h3>Troubleshooting Decision Tree</h3>
+<div class="diagram">
+<span class="lbl">Problem: MCP Server Not Working</span>
+        <span class="arr">│</span>
+        <span class="arr">▼</span>
+  Run <span class="lbl">claude mcp list</span>
+        <span class="arr">│</span>
+  ┌─────┼──────────────────────────────────────┐
+  <span class="arr">▼</span>     <span class="arr">▼</span>                                      <span class="arr">▼</span>
+<span class="lbl">No servers</span>  <span class="lbl">✘ Failed</span>                          <span class="lbl">✔ Connected</span>
+<span class="dim">shown</span>       <span class="dim">/ Error</span>                           <span class="dim">but no tools</span>
+  <span class="arr">│</span>         <span class="arr">│</span>                                    <span class="arr">│</span>
+  <span class="arr">▼</span>         <span class="arr">▼</span>                                    <span class="arr">▼</span>
+Wrong     For HTTP: <span class="lbl">curl -I &lt;url&gt;</span>            Open <span class="lbl">/mcp</span> panel
+scope     For stdio: run command manually     Check env vars/keys
+or wrong  Check: URL, type field,             → Missing API key
+file path transport, -- separator             is #1 cause</div>
+
+<div class="callout callout-green">
+  <div class="callout-title">🔑 Key Takeaways</div>
+  <ul>
+    <li>Complete workflow: <strong>Identify → Scope → Add → Verify → Auth → Use → Debug</strong></li>
+    <li>The <code><strong>--</strong></code> separator is mandatory for stdio servers with arguments</li>
+    <li>Scope change requires <strong>remove + re-add</strong> (cannot be changed in-place)</li>
+    <li>Troubleshooting order: <strong>status first → then URL/command → then env vars → then scope</strong></li>
+    <li><code>MCP_TIMEOUT=60000</code> environment variable extends the 30s default startup timeout</li>
+  </ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul>
+    <li><strong>Always test with <code>claude mcp list</code> before opening a session</strong> — it's the cheapest diagnostic.</li>
+    <li><strong>"Added" ≠ "Connected":</strong> The add command is a file-write confirmation, not a connectivity test.</li>
+    <li><strong>For SSH/no-browser machines:</strong> Use <code>--no-browser</code> with <code>claude mcp login</code> to get a printable auth URL.</li>
+    <li><strong>Import from Desktop:</strong> <code>claude mcp add-from-claude-desktop</code> migrates your existing Claude Desktop MCP config.</li>
+  </ul>
+</div>
+
+<div class="callout callout-orange">
+  <div class="callout-title">🎯 Exam Strategy</div>
+  <p><strong>Question Type:</strong> Troubleshooting scenario / Process-order MCQ</p>
+  <p><strong>Trigger phrase:</strong> "A developer reports their MCP server isn't working…" / "What is the correct first step…"</p>
+  <p><strong>Answer direction:</strong> First step is ALWAYS <code>claude mcp list</code> to check status. Never edit config before reading status.</p>
+</div>
+
+<div class="exam-q">
+  <div class="q-label">Sample Question</div>
+  <div class="q-text">A developer's stdio MCP server shows <code>✘ Failed to connect</code> on first run using <code>npx</code>. The command works when run manually. What is the most likely cause?</div>
+  <div class="opt"><span class="wrong">A) The server's API key is invalid</span></div>
+  <div class="opt"><span class="correct">B) The npx package download exceeded the 30-second startup timeout ✓</span></div>
+  <div class="opt"><span class="wrong">C) The <code>type</code> field is missing from the configuration</span></div>
+  <div class="opt"><span class="wrong">D) The server requires OAuth authentication</span></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    MASTER SUMMARY                               -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="master-map" style="border-bottom-color: var(--purple);">🗺️ Concept Relationship Map</h2>
+
+<div class="diagram">
+<span class="lbl">╔══════════════════════════ CHAPTER 10 CONCEPT MAP ══════════════════════════╗</span>
+<span class="lbl">║</span>                                                                            <span class="lbl">║</span>
+<span class="lbl">║</span>  <span class="lbl">10.1 MCP Architecture</span>                                                    <span class="lbl">║</span>
+<span class="lbl">║</span>      │  Host → Client → Server (JSON-RPC 2.0)                              <span class="lbl">║</span>
+<span class="lbl">║</span>      │                                                                      <span class="lbl">║</span>
+<span class="lbl">║</span>      ├──► <span class="lbl">10.2 Primitives</span>: Tools | Resources | Prompts                     <span class="lbl">║</span>
+<span class="lbl">║</span>      │       │  (What servers expose)                                      <span class="lbl">║</span>
+<span class="lbl">║</span>      │       │                                                              <span class="lbl">║</span>
+<span class="lbl">║</span>      ├──► <span class="lbl">10.3 .mcp.json</span>                                                   <span class="lbl">║</span>
+<span class="lbl">║</span>      │       │  (How servers are declared)                                 <span class="lbl">║</span>
+<span class="lbl">║</span>      │       │                                                              <span class="lbl">║</span>
+<span class="lbl">║</span>      │       ├──► <span class="lbl">10.4 Env Var Expansion</span>                                   <span class="lbl">║</span>
+<span class="lbl">║</span>      │       │       (How secrets stay out of config)                       <span class="lbl">║</span>
+<span class="lbl">║</span>      │       │                                                              <span class="lbl">║</span>
+<span class="lbl">║</span>      │       └──► <span class="lbl">10.5 Scoping</span>                                            <span class="lbl">║</span>
+<span class="lbl">║</span>      │               │  local | project | user                              <span class="lbl">║</span>
+<span class="lbl">║</span>      │               │  (Who sees which servers)                            <span class="lbl">║</span>
+<span class="lbl">║</span>      │               │                                                      <span class="lbl">║</span>
+<span class="lbl">║</span>      ├──► <span class="lbl">10.6 Multi-Server</span>                                               <span class="lbl">║</span>
+<span class="lbl">║</span>      │       (1 client per server, parallel connections)                    <span class="lbl">║</span>
+<span class="lbl">║</span>      │                                                                      <span class="lbl">║</span>
+<span class="lbl">║</span>      └──► <span class="lbl">10.7 CLI Integration</span>  ──►  <span class="lbl">10.8 Hands-On</span>                     <span class="lbl">║</span>
+<span class="lbl">║</span>              (add/verify/auth/use)       (End-to-end workflow)              <span class="lbl">║</span>
+<span class="lbl">║</span>                                                                            <span class="lbl">║</span>
+<span class="lbl">╚════════════════════════════════════════════════════════════════════════════╝</span></div>
+
+<h2 id="cheat-sheet" style="border-bottom-color: var(--green);">📄 Rapid-Review Cheat Sheet</h2>
+
+<div class="cheat-row"><span class="cheat-term">MCP</span><span class="cheat-def">Model Context Protocol — open standard for connecting AI apps to external systems via JSON-RPC 2.0</span></div>
+<div class="cheat-row"><span class="cheat-term">Host</span><span class="cheat-def">AI application that coordinates multiple MCP Clients (e.g., Claude Code, Claude Desktop)</span></div>
+<div class="cheat-row"><span class="cheat-term">Client</span><span class="cheat-def">Component in the Host that maintains a 1:1 connection to an MCP Server</span></div>
+<div class="cheat-row"><span class="cheat-term">Server</span><span class="cheat-def">Program that exposes tools, resources, and/or prompts to MCP Clients</span></div>
+<div class="cheat-row"><span class="cheat-term">Tool</span><span class="cheat-def">Model-controlled action (verb) — AI decides when to invoke. Can have side effects.</span></div>
+<div class="cheat-row"><span class="cheat-term">Resource</span><span class="cheat-def">Application-controlled data (noun) — read-only, identified by URI, no side effects.</span></div>
+<div class="cheat-row"><span class="cheat-term">Prompt</span><span class="cheat-def">User-controlled template — reusable message structure the user explicitly selects.</span></div>
+<div class="cheat-row"><span class="cheat-term">stdio transport</span><span class="cheat-def">Local subprocess communication via stdin/stdout. Default transport. No network overhead.</span></div>
+<div class="cheat-row"><span class="cheat-term">Streamable HTTP</span><span class="cheat-def">Remote transport using HTTP POST + optional SSE. Supports OAuth, bearer tokens, headers.</span></div>
+<div class="cheat-row"><span class="cheat-term">.mcp.json</span><span class="cheat-def">Project-scoped config file at repo root. Declares MCP servers for version-controlled sharing.</span></div>
+<div class="cheat-row"><span class="cheat-term">~/.claude.json</span><span class="cheat-def">User config file. Holds local (project-keyed) and user (top-level) server definitions.</span></div>
+<div class="cheat-row"><span class="cheat-term">${VAR}</span><span class="cheat-def">Environment variable expansion — substitutes the value, JSON-escaped. Fails at connect if unset.</span></div>
+<div class="cheat-row"><span class="cheat-term">${VAR:-default}</span><span class="cheat-def">Expansion with fallback — uses default if VAR is unset.</span></div>
+<div class="cheat-row"><span class="cheat-term">Local scope</span><span class="cheat-def">Private, current project only. Stored in ~/.claude.json under project key. Default scope.</span></div>
+<div class="cheat-row"><span class="cheat-term">Project scope</span><span class="cheat-def">Shared via git, current project. Stored in .mcp.json. Requires teammate approval.</span></div>
+<div class="cheat-row"><span class="cheat-term">User scope</span><span class="cheat-def">Private, ALL projects. Stored in ~/.claude.json top-level. Broadest personal scope.</span></div>
+<div class="cheat-row"><span class="cheat-term">Precedence</span><span class="cheat-def">local &gt; project &gt; user &gt; plugin &gt; claude.ai. Entire entry wins — no merging.</span></div>
+<div class="cheat-row"><span class="cheat-term">server/discover</span><span class="cheat-def">JSON-RPC method for version negotiation and capability discovery. Optional but recommended.</span></div>
+<div class="cheat-row"><span class="cheat-term">Tool search</span><span class="cheat-def">On-demand loading of tool definitions. On by default. Prevents context window bloat.</span></div>
+<div class="cheat-row"><span class="cheat-term">claude mcp list</span><span class="cheat-def">Shows all servers + connection status. The #1 diagnostic command.</span></div>
+<div class="cheat-row"><span class="cheat-term">/mcp</span><span class="cheat-def">In-session interactive panel for status, reconnect, authenticate, and tool inspection.</span></div>
+<div class="cheat-row"><span class="cheat-term">Elicitation</span><span class="cheat-def">Server-initiated request for user input through the client. Replaces deprecated Sampling.</span></div>
+
+<h2 id="traps" style="border-bottom-color: var(--red);">⚠️ Top 10 Exam Traps</h2>
+
+<div class="trap-item"><strong>1.</strong> <strong>"User-scoped"</strong> sounds restrictive but is the <em>broadest</em> personal scope — it loads in ALL projects.</div>
+<div class="trap-item"><strong>2.</strong> <strong>"Global-scoped" and "Team-scoped"</strong> are NOT valid MCP scope terms — they're distractors.</div>
+<div class="trap-item"><strong>3.</strong> <strong><code>claude mcp add</code> does NOT verify connectivity.</strong> It's a write receipt only. Always follow with <code>claude mcp list</code>.</div>
+<div class="trap-item"><strong>4.</strong> <strong>Omitting the <code>type</code> field</strong> in <code>.mcp.json</code> defaults to stdio — an HTTP server entry without <code>type: "http"</code> silently fails.</div>
+<div class="trap-item"><strong>5.</strong> <strong>Resources CANNOT have side effects.</strong> Any option claiming resources can modify state is wrong.</div>
+<div class="trap-item"><strong>6.</strong> <strong>Scope configs are NEVER merged.</strong> A URL from project scope + a header from local scope for the same name won't combine. The winning scope's entry is used whole.</div>
+<div class="trap-item"><strong>7.</strong> <strong>"MCP Server" ≠ "remote server."</strong> Local stdio servers running on the same machine are still MCP Servers.</div>
+<div class="trap-item"><strong>8.</strong> <strong>Unset env vars with no default → literal <code>${VAR}</code> text remains.</strong> The file loads successfully, but the connection fails at runtime with no clear error about the variable.</div>
+<div class="trap-item"><strong>9.</strong> <strong>A bad auth token shows as "Failed," NOT "Needs authentication."</strong> Claude Code only shows "Needs authentication" for servers expecting OAuth flow — a rejected header token shows as a generic failure.</div>
+<div class="trap-item"><strong>10.</strong> <strong>Sampling is deprecated</strong> (protocol version 2026-07-28). Any option listing Sampling as a current client primitive is outdated.</div>
+
+<h2 id="practice" style="border-bottom-color: var(--orange);">🧩 Practice Scenario</h2>
+
+<div class="callout callout-purple">
+  <div class="callout-title">Multi-Part Scenario</div>
+  <p><strong>Context:</strong> Your team is building a customer support tool. You need Claude Code to:</p>
+  <ul>
+    <li>Query a PostgreSQL database for ticket data (requires <code>DATABASE_URL</code> credential)</li>
+    <li>Post updates to a Slack channel (remote HTTP MCP server at <code>https://mcp.slack.dev/sse</code>)</li>
+    <li>Read the project's README and API schema for context</li>
+  </ul>
+  <p>The team has 5 developers. The database and Slack servers should be available to all of them. Each developer has their own <code>DATABASE_URL</code>.</p>
+</div>
+
+<div class="callout callout-purple" style="margin-top: 8px;">
+  <div class="callout-title">Questions</div>
+  <p><strong>Part A (Sections 10.2, 10.5):</strong> Which MCP primitive should expose the database query capability? Which should expose the README and API schema? What scope should each server use?</p>
+
+  <p><strong>Part B (Sections 10.3, 10.4):</strong> Write the <code>.mcp.json</code> entry for the database server. How should the <code>DATABASE_URL</code> be handled?</p>
+
+  <p><strong>Part C (Section 10.7):</strong> A new developer clones the repo. They run <code>claude mcp list</code> and the database server shows <code>✘ Failed to connect</code>. The Slack server shows <code>⏸ Pending approval</code>. Diagnose both.</p>
+</div>
+
+<div class="callout callout-green" style="margin-top: 8px;">
+  <div class="callout-title">🔑 Model Answer</div>
+
+  <p><strong>Part A:</strong></p>
+  <ul>
+    <li><strong>Database query</strong> → <strong>Tool</strong>. The AI model decides when to query based on conversation context. It's an action with potential side effects (even SELECTs hit the DB).</li>
+    <li><strong>README + API Schema</strong> → <strong>Resources</strong>. Read-only context data the host loads to enrich Claude's understanding. URIs like <code>docs://readme</code>, <code>db://schema</code>.</li>
+    <li><strong>Scope:</strong> Both servers should be <strong>project-scoped</strong> (via <code>.mcp.json</code>) so all 5 developers get them automatically when cloning the repo. Individual credentials (<code>DATABASE_URL</code>) stay in each developer's environment, not in the config file.</li>
+  </ul>
+
+  <p><strong>Part B:</strong></p>
+  <pre>{
+  <span class="key">"mcpServers"</span>: {
+    <span class="key">"support-db"</span>: {
+      <span class="key">"type"</span>: <span class="str">"stdio"</span>,
+      <span class="key">"command"</span>: <span class="str">"npx"</span>,
+      <span class="key">"args"</span>: [<span class="str">"-y"</span>, <span class="str">"@mcp/postgres-server"</span>],
+      <span class="key">"env"</span>: {
+        <span class="key">"DATABASE_URL"</span>: <span class="str">"<span class="hl">${DATABASE_URL}</span>"</span>
+      }
+    },
+    <span class="key">"slack"</span>: {
+      <span class="key">"type"</span>: <span class="str">"http"</span>,
+      <span class="key">"url"</span>: <span class="str">"https://mcp.slack.dev/sse"</span>
+    }
+  }
+}</pre>
+  <p><code>DATABASE_URL</code> uses <code>${DATABASE_URL}</code> expansion — each developer sets it in their own environment. The credential never enters version control.</p>
+
+  <p><strong>Part C:</strong></p>
+  <ul>
+    <li><strong>Database <code>✘ Failed</code>:</strong> The new developer hasn't set the <code>DATABASE_URL</code> environment variable. The <code>${DATABASE_URL}</code> placeholder resolved to the literal string, causing a connection failure. <strong>Fix:</strong> Set <code>DATABASE_URL</code> in their shell environment and restart the session.</li>
+    <li><strong>Slack <code>⏸ Pending approval</code>:</strong> This is the security gate working correctly. Project-scoped servers require approval before starting. <strong>Fix:</strong> Open the <code>/mcp</code> panel in a Claude Code session and approve the Slack server.</li>
+  </ul>
+</div>
+
+<div style="text-align: center; margin-top: 48px; padding: 24px; color: var(--text-muted); font-size: 13px;">
+  <p>— End of Chapter 10 Study Notes —</p>
+  <p style="margin-top:4px;">Claude Certified Architect — Foundations &amp; Professional &nbsp;|&nbsp; v1.0 &nbsp;|&nbsp; September 2026</p>
+</div>
+
+</main>
+
+
+</body></html>

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 64 — Improving Developer Workflows with AI-Assisted Tooling | Claude Certified Architect Study Guide</title>
+<style>
+  :root {
+    --bg: #f6f8fb;
+    --surface: #ffffff;
+    --surface-alt: #f1f5f9;
+    --ink: #0f172a;
+    --ink-soft: #334155;
+    --ink-mute: #64748b;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --primary: #4338ca;
+    --primary-soft: #eef2ff;
+    --accent: #0ea5e9;
+    --tip-bg: #ecfdf5;
+    --tip-border: #10b981;
+    --tip-ink: #065f46;
+    --exam-bg: #fff7ed;
+    --exam-border: #f97316;
+    --exam-ink: #9a3412;
+    --warn-bg: #fef2f2;
+    --warn-border: #ef4444;
+    --warn-ink: #991b1b;
+    --code-bg: #0f172a;
+    --code-ink: #e2e8f0;
+    --radius: 12px;
+    --radius-sm: 7px;
+    --shadow: 0 1px 3px rgba(15,23,42,0.06), 0 8px 24px rgba(15,23,42,0.05);
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", "Cascadia Code", Consolas, Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---------- Header ---------- */
+  header.hero {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 55%, #0ea5e9 130%);
+    color: #fff;
+    padding: 54px 20px 60px;
+    text-align: center;
+  }
+  header.hero .kicker {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: .85;
+    margin-bottom: 14px;
+  }
+  header.hero h1 {
+    margin: 0 auto 14px;
+    font-size: 2rem;
+    line-height: 1.25;
+    max-width: 760px;
+    font-weight: 700;
+  }
+  header.hero p.sub {
+    margin: 0 auto;
+    max-width: 640px;
+    opacity: .92;
+    font-size: 1.02rem;
+  }
+  header.hero .badges { margin-top: 22px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+  header.hero .badge {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 5px 13px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ---------- Table of Contents ---------- */
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 26px 30px;
+    margin: -34px auto 46px;
+    position: relative;
+    z-index: 2;
+  }
+  nav.toc h2 { margin: 0 0 16px; font-size: 1.05rem; color: var(--ink); display:flex; align-items:center; gap:8px; }
+  nav.toc ol { margin: 0; padding-left: 0; list-style: none; counter-reset: toc; }
+  nav.toc li { counter-increment: toc; margin: 0; }
+  nav.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    padding: 9px 10px;
+    border-radius: var(--radius-sm);
+    transition: background .15s ease, color .15s ease;
+  }
+  nav.toc a:hover { background: var(--primary-soft); color: var(--primary); }
+  nav.toc a .num {
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: .9rem;
+    min-width: 46px;
+  }
+  nav.toc .extra a .num { color: var(--ink-mute); }
+
+  /* ---------- Modules ---------- */
+  section.module {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 34px 34px 38px;
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+  }
+  .module-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-soft);
+    padding: 4px 11px;
+    border-radius: 100px;
+    margin-bottom: 12px;
+  }
+  section.module > h2 {
+    margin: 0 0 6px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  h3.block-title {
+    font-size: 1.02rem;
+    color: var(--ink);
+    margin: 30px 0 12px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  h3.block-title .dot { width: 9px; height: 9px; border-radius: 3px; background: var(--accent); }
+  p { margin: 0 0 14px; color: var(--ink-soft); }
+  strong { color: var(--ink); }
+
+  /* ---------- Tables ---------- */
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 8px;
+    font-size: 14.5px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  table.data thead th {
+    background: var(--surface-alt);
+    text-align: left;
+    padding: 11px 14px;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 13.5px;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  table.data td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+  table.data tbody tr:last-child td { border-bottom: none; }
+  table.data tbody tr:nth-child(even) td { background: #fafcff; }
+  table.data code, p code, li code {
+    font-family: var(--mono);
+    background: var(--surface-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: .86em;
+    color: var(--primary);
+    border: 1px solid var(--border);
+  }
+  .term { font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+  /* ---------- Callout boxes ---------- */
+  .tip-box, .exam-strategy-box, .misconception-box {
+    border-radius: var(--radius-sm);
+    padding: 15px 18px;
+    margin: 20px 0;
+    font-size: 14.7px;
+    line-height: 1.58;
+  }
+  .tip-box { background: var(--tip-bg); border-left: 4px solid var(--tip-border); color: var(--tip-ink); }
+  .exam-strategy-box { background: var(--exam-bg); border-left: 4px solid var(--exam-border); color: var(--exam-ink); }
+  .misconception-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); color: var(--warn-ink); }
+  .tip-box strong, .exam-strategy-box strong, .misconception-box strong { color: inherit; }
+  .tip-box ul, .exam-strategy-box ul { margin: 8px 0 0; padding-left: 20px; }
+  .tip-box li, .exam-strategy-box li { margin-bottom: 5px; }
+
+  /* ---------- Use case card ---------- */
+  .usecase {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    margin: 8px 0 6px;
+    font-size: 14.7px;
+  }
+  .usecase .lbl { font-size: 11.5px; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-mute); font-weight: 600; }
+
+  /* ---------- Flowchart (CSS) ---------- */
+  .flowchart {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 14px 0 6px;
+    justify-content: flex-start;
+  }
+  .flowchart .step {
+    background: var(--primary-soft);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 13.2px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 118px;
+    flex: 1;
+  }
+  .flowchart .step small { display:block; font-weight: 400; color: var(--ink-mute); font-size: 11px; margin-top: 3px; }
+  .flowchart .arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink-mute); font-size: 20px; padding: 0 8px; font-weight: 700;
+  }
+  .flowchart .step.gate { background: var(--exam-bg); border-color: var(--exam-border); color: var(--exam-ink); }
+
+  /* ---------- Before / After ---------- */
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0 6px; }
+  .ba-card { border-radius: var(--radius-sm); padding: 16px 18px; border: 1px solid var(--border); }
+  .ba-card.before { background: #fef2f2; border-left: 4px solid #ef4444; }
+  .ba-card.after { background: #ecfdf5; border-left: 4px solid #10b981; }
+  .ba-card h4 { margin: 0 0 10px; font-size: 13.5px; text-transform: uppercase; letter-spacing: .06em; }
+  .ba-card.before h4 { color: #991b1b; }
+  .ba-card.after h4 { color: #065f46; }
+  .ba-card ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
+  .ba-card li { margin-bottom: 6px; }
+
+  /* ---------- Comparison bars (CSS) ---------- */
+  .bench { margin: 14px 0 6px; }
+  .bench-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .bench-row .metric { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+  .bench-bars { display: flex; flex-direction: column; gap: 5px; }
+  .bar-track { background: var(--surface-alt); border-radius: 100px; height: 22px; position: relative; overflow: hidden; border: 1px solid var(--border); }
+  .bar-fill { height: 100%; border-radius: 100px; display: flex; align-items: center; padding: 0 10px; font-size: 11.5px; font-weight: 600; color: #fff; white-space: nowrap; }
+  .bar-fill.before { background: #94a3b8; }
+  .bar-fill.after { background: linear-gradient(90deg, #4338ca, #0ea5e9); }
+  .bench-legend { display: flex; gap: 18px; font-size: 12px; color: var(--ink-mute); margin-top: 4px; }
+  .bench-legend span { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+  /* ---------- SVG diagram wrapper ---------- */
+  .diagram { width: 100%; overflow-x: auto; margin: 12px 0 6px; }
+  .diagram svg { display: block; max-width: 100%; height: auto; }
+
+  /* ---------- Summary table ---------- */
+  section.summary { background: linear-gradient(135deg, #eef2ff, #f0f9ff); border: 1px solid var(--border); }
+
+  /* ---------- Practice questions ---------- */
+  details.q {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: box-shadow .15s ease;
+  }
+  details.q[open] { box-shadow: var(--shadow); }
+  details.q summary {
+    cursor: pointer;
+    padding: 16px 18px;
+    font-weight: 600;
+    color: var(--ink);
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  details.q summary::-webkit-details-marker { display: none; }
+  details.q summary .qnum {
+    font-family: var(--mono);
+    background: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    padding: 2px 9px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  details.q summary .reveal { margin-left: auto; font-size: 12.5px; color: var(--primary); font-weight: 500; flex-shrink: 0; white-space: nowrap; }
+  details.q[open] summary .reveal::after { content: " ▲"; }
+  details.q:not([open]) summary .reveal::after { content: " ▼"; }
+  details.q .options { padding: 0 18px 6px 52px; }
+  details.q .options .opt { padding: 5px 0; color: var(--ink-soft); font-size: 14.5px; }
+  details.q .answer {
+    margin: 6px 18px 18px 52px;
+    padding: 14px 16px;
+    background: var(--tip-bg);
+    border-left: 4px solid var(--tip-border);
+    border-radius: var(--radius-sm);
+    font-size: 14.3px;
+    color: var(--tip-ink);
+  }
+  details.q .answer .correct { font-weight: 700; }
+
+  footer.foot {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 13px;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+  .disclaimer {
+    background: var(--surface-alt);
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 13px 16px;
+    font-size: 13px;
+    color: var(--ink-mute);
+    margin: 24px 0 0;
+  }
+  .backtop { font-size: 12.5px; color: var(--ink-mute); text-decoration: none; display: inline-block; margin-top: 14px; }
+  .backtop:hover { color: var(--primary); }
+
+  @media (max-width: 680px) {
+    header.hero h1 { font-size: 1.5rem; }
+    section.module { padding: 24px 20px 28px; }
+    nav.toc { padding: 22px 18px; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .bench-row { grid-template-columns: 1fr; gap: 4px; }
+    .flowchart .arrow { transform: rotate(90deg); padding: 4px 0; }
+    .flowchart { flex-direction: column; }
+    .flowchart .step { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="kicker">Claude Certified Architect · Foundations &amp; Professional</div>
+  <h1>Chapter 64 — Improving Developer Workflows with AI-Assisted Tooling</h1>
+  <p class="sub">An exam-ready study guide covering AI-assisted code review, task automation, toolchain integration, productivity measurement, and a hands-on pipeline build.</p>
+  <div class="badges">
+    <span class="badge">5 Subsections</span>
+    <span class="badge">Visual Aids</span>
+    <span class="badge">Exam Strategies</span>
+    <span class="badge">5 Practice Questions</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ TABLE OF CONTENTS ============ -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>📚 Table of Contents</h2>
+    <ol>
+      <li><a href="#s641"><span class="num">64.1</span><span>AI-Assisted Code Review, Testing &amp; Documentation</span></a></li>
+      <li><a href="#s642"><span class="num">64.2</span><span>Automating Repetitive Development Tasks</span></a></li>
+      <li><a href="#s643"><span class="num">64.3</span><span>Integrating Claude into Existing Developer Toolchains</span></a></li>
+      <li><a href="#s644"><span class="num">64.4</span><span>Measuring Developer Productivity Improvements</span></a></li>
+      <li><a href="#s645"><span class="num">64.5</span><span>Hands-On: Building a Developer Productivity Pipeline</span></a></li>
+      <li class="extra"><a href="#summary"><span class="num">§</span><span>Chapter Summary Table</span></a></li>
+      <li class="extra"><a href="#practice"><span class="num">?</span><span>Practice Questions &amp; Answers</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 64.1 ============ -->
+  <section class="module" id="s641">
+    <span class="module-tag">64.1</span>
+    <h2>AI-Assisted Code Review, Testing &amp; Documentation</h2>
+
+    <h3 class="block-title"><span class="dot"></span>Concept Overview</h3>
+    <p>AI-assisted tooling built on Claude can act as a <strong>tireless first-pass collaborator</strong> across three closely related engineering activities: reviewing pull requests (PRs), generating tests, and producing or updating documentation. Because Claude is a large language model that reasons over the code and context you give it, it typically excels at <em>surfacing candidates</em> — likely bugs, missing test cases, unclear docstrings — that a human then confirms.</p>
+    <p>The load-bearing idea for the exam is <strong>augmentation, not replacement</strong>. Claude can draft a review comment, propose a unit test, or write an API reference, but the human engineer remains accountable for correctness, security, and intent. In most configurations, AI output is treated as a <em>suggestion</em> that flows into the normal review gate rather than an authority that bypasses it.</p>
+
+    <h3 class="block-title"><span class="dot"></span>Key Definitions &amp; Terminology</h3>
+    <table class="data">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="term">AI-assisted code review</td><td>Using an LLM to analyze a diff/PR and suggest improvements, flag potential bugs, style issues, or security concerns — as comments a human reviewer validates.</td></tr>
+        <tr><td class="term">Test generation</td><td>Prompting the model to produce unit or integration tests from source code, a spec, or observed behavior. Output must be executed and reviewed for correctness and edge cases.</td></tr>
+        <tr><td class="term">Auto-documentation</td><td>Generating docstrings, README sections, API references, or inline comments from code and context.</td></tr>
+        <tr><td class="term">Unit test</td><td>A test that isolates and verifies a single function/component.</td></tr>
+        <tr><td class="term">Integration test</td><td>A test that verifies multiple components working together (e.g., a service + its database).</td></tr>
+        <tr><td class="term">Human-in-the-loop (HITL)</td><td>A workflow design where a person reviews/approves AI output before it takes effect. Central to responsible AI-assisted tooling.</td></tr>
+        <tr><td class="term">Hallucination</td><td>Confident but incorrect model output — e.g., a test asserting wrong behavior, or docs describing a non-existent parameter. The reason validation is mandatory.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="block-title"><span class="dot"></span>Real-World Workflow Example</h3>
+    <div class="usecase">
+      <div class="lbl">Scenario — PR review assist</div>
+      A developer opens a PR. An automated step sends the diff plus surrounding context to Claude, which returns inline comments: a possible null-dereference, a missing test for an error branch, and a suggested clearer docstring. The human reviewer accepts the null-check comment, ignores a false positive on style, and asks Claude to generate the missing test — then <strong>runs that test</strong> before approving. Documentation for the changed function is regenerated and committed alongside the code.
+    </div>
+
+    <h3 class="block-title"><span class="dot"></span>Visualization — Sequence Diagram</h3>
+    <div class="diagram" role="img" aria-label="Sequence diagram: developer opens PR, tool sends diff to Claude, Claude returns suggestions, human validates, tests run, then merge.">
+      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" font-family="var(--mono)">
+        <!-- lifelines -->
+        <g font-size="12" font-weight="600" fill="#0f172a" text-anchor="middle">
+          <rect x="30" y="10" width="110" height="30" rx="6" fill="#eef2ff" stroke="#4338ca"></rect>
+          <text x="85" y="30">Developer</text>
+          <rect x="200" y="10" width="110" height="30" rx="6" fill="#eef2ff" stroke="#4338ca"></rect>
+          <text x="255" y="30">Review Bot</text>
+          <rect x="370" y="10" width="110" height="30" rx="6" fill="#e0f2fe" stroke="#0ea5e9"></rect>
+          <text x="425" y="30">Claude</text>
+          <rect x="560" y="10" width="130" height="30" rx="6" fill="#fff7ed" stroke="#f97316"></rect>
+          <text x="625" y="30">CI / Human Gate</text>
+        </g>
+        <g stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.5">
+          <line x1="85" y1="40" x2="85" y2="285"></line>
+          <line x1="255" y1="40" x2="255" y2="285"></line>
+          <line x1="425" y1="40" x2="425" y2="285"></line>
+          <line x1="625" y1="40" x2="625" y2="285"></line>
+        </g>
+        <g font-size="10.5" fill="#334155">
+          <!-- msg 1 -->
+          <line x1="85" y1="70" x2="253" y2="70" stroke="#4338ca" stroke-width="1.6" marker-end="url(#ar)"></line>
+          <text x="90" y="64">1. Open PR (diff)</text>
+          <!-- msg 2 -->
+          <line x1="257" y1="105" x2="423" y2="105" stroke="#4338ca" stroke-width="1.6" marker-end="url(#ar)"></line>
+          <text x="262" y="99">2. Send diff + context</text>
+          <!-- msg 3 -->
+          <line x1="423" y1="140" x2="257" y2="140" stroke="#0ea5e9" stroke-width="1.6" marker-end="url(#ar)"></line>
+          <text x="262" y="134">3. Review comments + test drafts</text>
+          <!-- msg 4 -->
+          <line x1="253" y1="175" x2="87" y2="175" stroke="#0ea5e9" stroke-width="1.6" marker-end="url(#ar)"></line>
+          <text x="90" y="169">4. Surface suggestions</text>
+          <!-- msg 5 -->
+          <line x1="85" y1="210" x2="623" y2="210" stroke="#f97316" stroke-width="1.6" marker-end="url(#ar)"></line>
+          <text x="90" y="204">5. Human validates → run generated tests in CI</text>
+          <!-- msg 6 -->
+          <line x1="623" y1="250" x2="87" y2="250" stroke="#10b981" stroke-width="1.8" marker-end="url(#ar2)"></line>
+          <text x="90" y="244" fill="#065f46" font-weight="600">6. Pass + approve → merge</text>
+        </g>
+        <defs>
+          <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#475569"></path></marker>
+          <marker id="ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#10b981"></path></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Tips &amp; Tricks:</strong>
+      <ul>
+        <li>Always pair Claude-generated tests with a human review pass for edge-case coverage — <strong>AI output still requires validation and execution</strong>.</li>
+        <li>Give the model <em>context</em> (related files, style guide, ticket description) — review and doc quality typically improves with richer, well-scoped context.</li>
+        <li>Treat generated tests as a <em>starting scaffold</em>: check that assertions reflect intended behavior, not merely current behavior (which may encode a bug).</li>
+        <li>Regenerate docs in the same PR as the code change to prevent doc drift.</li>
+      </ul>
+    </div>
+
+    <div class="misconception-box">
+      ⚠️ <strong>Common Misconception:</strong> "If Claude wrote the tests and they pass, the code is verified." Passing AI-generated tests only proves the code matches the model's (possibly flawed) assumptions. Tests can assert incorrect expected values — coverage ≠ correctness.
+    </div>
+
+    <div class="exam-strategy-box">
+      🎯 <strong>Exam Strategy:</strong> Questions here usually probe <em>whether you understand the limits of AI output</em>. When a scenario implies AI review/tests replace human judgment or a CI gate, that answer is almost always wrong. Favor options that keep a human-in-the-loop, run generated tests before trusting them, and treat AI results as suggestions. Watch for the word "automatically merges" as a red flag.
+    </div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 64.2 ============ -->
+  <section class="module" id="s642">
+    <span class="module-tag">64.2</span>
+    <h2>Automating Repetitive Development Tasks</h2>
+
+    <h3 class="block-title"><span class="dot"></span>Concept Overview</h3>
+    <p>A large share of engineering time goes to <strong>low-novelty, repetitive work</strong>: writing boilerplate, scaffolding new modules, applying mechanical refactors, and keeping dependencies current. AI-assisted tooling is well suited to these because the transformations are pattern-driven and the "correct shape" is usually well defined.</p>
+    <p>The exam framing is about <strong>picking the right candidates for automation</strong> and knowing where risk rises. Boilerplate and scaffolding are typically low-risk (easy to eyeball and regenerate). Refactors and dependency updates are higher-risk because they can silently change behavior — so they belong behind tests and review, not unattended automation.</p>
+
+    <h3 class="block-title"><span class="dot"></span>Key Definitions &amp; Terminology</h3>
+    <table class="data">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td class="term">Boilerplate generation</td><td>Producing standard, repetitive code structures (config, DTOs, CRUD handlers, error types) from a short instruction or template.</td></tr>
+        <tr><td class="term">Scaffolding</td><td>Generating the skeleton of a new component/service/module — files, folders, entry points — ready to be filled in.</td></tr>
+        <tr><td class="term">Refactoring</td><td>Changing code structure <em>without</em> changing external behavior (rename, extract method, modernize syntax). Must be behavior-preserving.</td></tr>
+        <tr><td class="term">Dependency update</td><td>Bumping library versions and adapting call sites. Higher risk due to breaking changes and transitive effects.</td></tr>
+        <tr><td class="term">Deterministic vs. generative task</td><td>Deterministic tasks (formatting, simple codemods) may be better served by classic tooling; generative tasks (context-aware refactors, drafting) suit an LLM.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="block-title"><span class="dot"></span>Real-World Workflow Example</h3>
+    <div class="usecase">
+      <div class="lbl">Scenario — new endpoint scaffold</div>
+      A team adds a new REST endpoint. Instead of hand-copying an existing handler, the developer asks Claude to scaffold the route, request/response models, validation stub, and a matching test file following the repo's conventions. The developer fills in business logic, runs the tests, and reviews the diff. What used to take ~30 minutes of copy-paste-adapt becomes a few minutes of guided generation plus review.
+    </div>
+
+    <h3 class="block-title"><span class="dot"></span>Visualization — Before / After Automation</h3>
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <h4>Before — Manual</h4>
+        <ul>
+          <li>Copy an existing module, hand-edit names</li>
+          <li>Manually write repetitive boilerplate</li>
+          <li>Refactors done file-by-file, error-prone</li>
+          <li>Dependency bumps deferred → tech debt</li>
+          <li>Inconsistent conventions across authors</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <h4>After — AI-Assisted</h4>
+        <ul>
+          <li>Scaffold generated from repo conventions</li>
+          <li>Boilerplate drafted in seconds, then reviewed</li>
+          <li>Refactor suggestions applied behind tests</li>
+          <li>Dependency changes drafted with call-site fixes for review</li>
+          <li>More consistent patterns, developer focuses on logic</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Tips &amp; Tricks:</strong>
+      <ul>
+        <li>Automate the <em>boring and well-defined</em> first; keep semantically risky changes (refactors, dep bumps) behind a passing test suite.</li>
+        <li>Provide an existing "good example" file so generated code matches your conventions.</li>
+        <li>For dependency updates, let AI draft the change but rely on tests + changelog review to catch breaking changes.</li>
+        <li>Prefer small, reviewable batches over one giant auto-generated diff.</li>
+      </ul>
+    </div>
+
+    <div class="misconception-box">
+      ⚠️ <strong>Common Misconception:</strong> "A refactor from an AI is safe because refactoring means behavior doesn't change." The <em>definition</em> requires behavior preservation, but the model can still introduce subtle changes. Tests are what actually guarantee the refactor was behavior-preserving.
+    </div>
+
+    <div class="exam-strategy-box">
+      🎯 <strong>Exam Strategy:</strong> Expect questions that ask which task is the <em>best</em> or <em>safest</em> candidate for automation. Rank by risk: boilerplate/scaffolding (low) &lt; documentation drafting (low–medium) &lt; refactoring (medium) &lt; unattended dependency upgrades (high). If an option proposes automating a high-risk task with <strong>no tests or review</strong>, it's the trap answer.
+    </div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 64.3 ============ -->
+  <section class="module" id="s643">
+    <span class="module-tag">64.3</span>
+    <h2>Integrating Claude into Existing Developer Toolchains</h2>
+
+    <h3 class="block-title"><span class="dot"></span>Concept Overview</h3>
+    <p>Value comes from meeting developers <strong>where they already work</strong> rather than forcing a context switch. Claude-based assistance can plug in at several points: inside the editor (IDE), at commit time (Git hooks), during automated pipelines (CI/CD), or scripted directly via the API/CLI. Each integration point corresponds to a different <em>moment</em> in the development lifecycle and a different feedback latency.</p>
+    <p>The exam-critical skill is <strong>matching the integration point to the moment</strong>. "While coding" → IDE. "At commit, locally" → Git hook. "Before merge, enforced for everyone" → CI/CD. "Custom/batch/scripted" → API or CLI.</p>
+
+    <h3 class="block-title"><span class="dot"></span>Key Definitions &amp; Terminology</h3>
+    <table class="data">
+      <thead><tr><th>Integration Point</th><th>When It Runs</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td class="term">IDE plugin / extension</td><td>While the developer is coding (real-time)</td><td>Inline completions, explanations, quick refactors, fast feedback loop</td></tr>
+        <tr><td class="term">Git hook (e.g., pre-commit)</td><td>Locally, at commit time</td><td>Lightweight local checks, quick lint/doc nudges before code leaves the machine</td></tr>
+        <tr><td class="term">CI/CD pipeline</td><td>On push / PR, server-side, enforced</td><td>Team-wide gates: review, test runs, standards — consistent for everyone</td></tr>
+        <tr><td class="term">API integration</td><td>Programmatically, on demand</td><td>Custom internal tools, bots, bespoke automations</td></tr>
+        <tr><td class="term">CLI integration</td><td>Terminal / scripts</td><td>Ad-hoc tasks, batch jobs, glue in shell workflows</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="block-title"><span class="dot"></span>Real-World Workflow Example</h3>
+    <div class="usecase">
+      <div class="lbl">Scenario — layered integration</div>
+      A team wires Claude in at complementary points: an <strong>IDE extension</strong> gives instant explanations and completions while coding; a lightweight <strong>pre-commit hook</strong> nudges missing docstrings locally; and a <strong>CI/CD step</strong> performs the authoritative, enforced review on every PR. Because the CI gate is team-wide, it — not the optional local tools — is the layer that guarantees standards before merge.
+    </div>
+
+    <h3 class="block-title"><span class="dot"></span>Visualization — Integration Points Along the Lifecycle</h3>
+    <div class="flowchart">
+      <div class="step">Write code<small>IDE plugin</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Commit<small>Git hook (local)</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Push / PR<small>API-triggered bot</small></div>
+      <div class="arrow">→</div>
+      <div class="step gate">Pre-merge gate<small>CI/CD (enforced)</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Merge</div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-mute);margin-top:4px;">Latency &amp; enforcement increase left→right: IDE = instant but optional; CI/CD = slower but authoritative and applied to everyone.</p>
+
+    <div class="tip-box">
+      💡 <strong>Tips &amp; Tricks:</strong>
+      <ul>
+        <li>Use <strong>multiple</strong> integration points for different needs — they're complementary, not either/or.</li>
+        <li>Put <em>enforced</em> checks in CI/CD; keep local hooks fast so developers don't bypass them.</li>
+        <li>Manage API keys/secrets centrally (in CI secrets, not committed) and mind rate limits and cost at the pipeline layer.</li>
+        <li>Keep Git hooks lightweight — long-running hooks frustrate developers and get skipped with <code>--no-verify</code>.</li>
+      </ul>
+    </div>
+
+    <div class="misconception-box">
+      ⚠️ <strong>Common Misconception:</strong> "A local pre-commit hook is enough to enforce a standard for the whole team." Local hooks are opt-in and skippable per developer. Only a server-side <strong>CI/CD gate</strong> enforces a rule for everyone.
+    </div>
+
+    <div class="exam-strategy-box">
+      🎯 <strong>Exam Strategy:</strong> These are the classic "identify the <em>best</em> integration point" scenarios. Map keywords to answers: <strong>"while coding"/"as they type" → IDE</strong>; <strong>"before it leaves the laptop"/"at commit" → Git hook</strong>; <strong>"enforce for all developers"/"before merge"/"gate" → CI/CD</strong>; <strong>"custom tool"/"scripted"/"batch" → API/CLI</strong>. If the requirement is team-wide enforcement, pick CI/CD even if a local option looks convenient.
+    </div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 64.4 ============ -->
+  <section class="module" id="s644">
+    <span class="module-tag">64.4</span>
+    <h2>Measuring Developer Productivity Improvements</h2>
+
+    <h3 class="block-title"><span class="dot"></span>Concept Overview</h3>
+    <p>To justify AI-assisted tooling you must measure impact <strong>credibly</strong>. The widely-cited framework is <strong>DORA metrics</strong> (from the DevOps Research and Assessment program), complemented by flow metrics like cycle time and PR throughput. The goal is to compare a meaningful <em>before</em> baseline against an <em>after</em> state — while avoiding <strong>vanity metrics</strong> that look impressive but don't reflect real value.</p>
+    <p>The exam emphasizes <strong>choosing outcome metrics over activity metrics</strong>. Lines of code written, number of AI suggestions accepted, or raw commit counts are activity/vanity signals. Delivery speed, stability, and cycle time are outcomes.</p>
+
+    <h3 class="block-title"><span class="dot"></span>Key Definitions &amp; Terminology</h3>
+    <table class="data">
+      <thead><tr><th>Metric</th><th>Category</th><th>What It Measures</th></tr></thead>
+      <tbody>
+        <tr><td class="term">Deployment frequency</td><td>DORA (throughput)</td><td>How often code is successfully released to production.</td></tr>
+        <tr><td class="term">Lead time for changes</td><td>DORA (throughput)</td><td>Time from commit to running in production.</td></tr>
+        <tr><td class="term">Change failure rate</td><td>DORA (stability)</td><td>% of deployments causing a failure/rollback.</td></tr>
+        <tr><td class="term">Mean time to restore (MTTR)</td><td>DORA (stability)</td><td>How quickly service is restored after an incident.</td></tr>
+        <tr><td class="term">Cycle time</td><td>Flow</td><td>Time from starting work to it being merged/shipped.</td></tr>
+        <tr><td class="term">PR throughput</td><td>Flow</td><td>Number of PRs merged per period — useful <em>only</em> with quality context.</td></tr>
+        <tr><td class="term">Vanity metric</td><td>Anti-pattern</td><td>A number that rises without reflecting real value (e.g., lines of code, raw suggestion count).</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="block-title"><span class="dot"></span>Real-World Workflow Example</h3>
+    <div class="usecase">
+      <div class="lbl">Scenario — before/after benchmarking</div>
+      Before rolling out AI-assisted review, a team records a 6–8 week baseline of DORA + cycle-time metrics. After adoption, they compare the same metrics over a similar window, controlling for confounders (team size, release freeze, incident spikes). They report <em>cycle time dropped and change failure rate held steady</em> — a defensible improvement — rather than boasting that "20,000 more lines were written."
+    </div>
+
+    <h3 class="block-title"><span class="dot"></span>Visualization — Before / After Benchmark</h3>
+    <div class="bench">
+      <div class="bench-row">
+        <div class="metric">Cycle time<br><small style="color:var(--ink-mute);font-weight:400;">lower is better</small></div>
+        <div class="bench-bars">
+          <div class="bar-track"><div class="bar-fill before" style="width:90%;">Before · 4.5 days</div></div>
+          <div class="bar-track"><div class="bar-fill after" style="width:60%;">After · 3.0 days</div></div>
+        </div>
+      </div>
+      <div class="bench-row">
+        <div class="metric">Deployment freq.<br><small style="color:var(--ink-mute);font-weight:400;">higher is better</small></div>
+        <div class="bench-bars">
+          <div class="bar-track"><div class="bar-fill before" style="width:45%;">Before · 3/wk</div></div>
+          <div class="bar-track"><div class="bar-fill after" style="width:75%;">After · 5/wk</div></div>
+        </div>
+      </div>
+      <div class="bench-row">
+        <div class="metric">Change failure rate<br><small style="color:var(--ink-mute);font-weight:400;">should stay flat/low</small></div>
+        <div class="bench-bars">
+          <div class="bar-track"><div class="bar-fill before" style="width:30%;">Before · 12%</div></div>
+          <div class="bar-track"><div class="bar-fill after" style="width:28%;">After · 11%</div></div>
+        </div>
+      </div>
+      <div class="bench-legend">
+        <span><i class="swatch" style="background:#94a3b8;"></i>Before (baseline)</span>
+        <span><i class="swatch" style="background:linear-gradient(90deg,#4338ca,#0ea5e9);"></i>After (AI-assisted)</span>
+      </div>
+      <p style="font-size:12px;color:var(--ink-mute);margin-top:10px;">Illustrative figures for concept demonstration only — not benchmark data. The healthy signal is faster delivery <em>without</em> a rise in failure rate.</p>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Tips &amp; Tricks:</strong>
+      <ul>
+        <li>Establish a <strong>baseline before rollout</strong> — you can't show improvement without a "before."</li>
+        <li>Pair a speed metric with a quality/stability metric so you don't trade reliability for velocity.</li>
+        <li>Prefer team-level trends over individual scorecards — individual metrics invite gaming and harm morale.</li>
+        <li>Triangulate quantitative metrics with qualitative signals (developer surveys, e.g., the SPACE framework).</li>
+      </ul>
+    </div>
+
+    <div class="misconception-box">
+      ⚠️ <strong>Common Misconception:</strong> "More PRs merged / more lines of code = more productive." Volume is a vanity metric — it can rise while quality falls. Productivity should be judged by delivery outcomes and stability, not raw activity counts.
+    </div>
+
+    <div class="exam-strategy-box">
+      🎯 <strong>Exam Strategy:</strong> When asked which metric best demonstrates improvement, <strong>eliminate vanity/activity metrics</strong> (lines of code, commit count, number of AI suggestions accepted) and choose <strong>outcome metrics</strong> (DORA: lead time, deployment frequency, change failure rate, MTTR; or cycle time). Also watch for answers that ignore a baseline — "measure before and after" is usually the correct methodology.
+    </div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 64.5 ============ -->
+  <section class="module" id="s645">
+    <span class="module-tag">64.5</span>
+    <h2>Hands-On: Building a Developer Productivity Pipeline</h2>
+
+    <h3 class="block-title"><span class="dot"></span>Concept Overview</h3>
+    <p>This section ties the chapter together by assembling a concrete pipeline: <strong>PR → Claude review → test generation → doc update → human-gated merge</strong>. The pipeline lives in CI/CD (so it's enforced), calls the model via API at defined stages, and preserves a <strong>human approval gate</strong> before anything merges. The design principle: automate the toil, keep humans on the decisions.</p>
+
+    <h3 class="block-title"><span class="dot"></span>Visualization — Pipeline Flowchart</h3>
+    <div class="flowchart">
+      <div class="step">Code commit<small>PR opened</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Claude review<small>inline comments</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Test generation<small>run in CI</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Doc update<small>regenerate</small></div>
+      <div class="arrow">→</div>
+      <div class="step gate">Human approval<small>required gate</small></div>
+      <div class="arrow">→</div>
+      <div class="step">Merge</div>
+    </div>
+
+    <h3 class="block-title"><span class="dot"></span>Step-by-Step Walkthrough</h3>
+    <table class="data">
+      <thead><tr><th>Stage</th><th>What happens</th><th>Guardrail</th></tr></thead>
+      <tbody>
+        <tr><td class="term">1. Trigger</td><td>PR opened/updated fires a CI/CD workflow.</td><td>Scope to changed files; respect rate/cost limits.</td></tr>
+        <tr><td class="term">2. Review</td><td>Diff + context sent to Claude; returns comments on bugs, style, security.</td><td>Comments are advisory; posted for humans.</td></tr>
+        <tr><td class="term">3. Test gen</td><td>Missing tests drafted for changed code, then <strong>executed</strong> in CI.</td><td>Generated tests must actually run &amp; pass; humans sanity-check assertions.</td></tr>
+        <tr><td class="term">4. Doc update</td><td>Docstrings / API docs regenerated for changed symbols and committed to the PR.</td><td>Diff reviewed to avoid inaccurate docs.</td></tr>
+        <tr><td class="term">5. Gate</td><td>Required status checks + at least one human approval.</td><td><strong>No auto-merge without human sign-off.</strong></td></tr>
+        <tr><td class="term">6. Merge</td><td>On approval + green checks, merge proceeds.</td><td>Rollback plan / monitored deploy afterward.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="usecase">
+      <div class="lbl">Reference wiring (illustrative)</div>
+      A CI workflow step authenticates to the Claude API with a secret stored in the CI provider, posts review comments back to the PR via the Git host's API, uploads generated tests as part of the run, and marks a status check. A branch-protection rule requires that status check <em>plus</em> a human review before the merge button unlocks.
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Tips &amp; Tricks:</strong>
+      <ul>
+        <li>Make the pipeline <strong>idempotent</strong> — re-running on a new commit shouldn't duplicate comments or tests.</li>
+        <li>Fail safe: if the API is unavailable, the pipeline should degrade gracefully (skip AI step, don't block emergencies).</li>
+        <li>Store keys in CI secrets; never commit them. Cap spend with per-run token limits.</li>
+        <li>Start with review + doc stages (low risk), add test-gen once trusted, and keep the human gate permanent.</li>
+      </ul>
+    </div>
+
+    <div class="misconception-box">
+      ⚠️ <strong>Common Misconception:</strong> "The most mature pipeline auto-merges once all AI steps pass." Removing the human gate is a regression in safety, not maturity. Best-practice pipelines keep a required human approval even when heavily automated.
+    </div>
+
+    <div class="exam-strategy-box">
+      🎯 <strong>Exam Strategy:</strong> Expect ordering/design questions ("what's the correct sequence?" or "what's missing from this pipeline?"). The reliable answers: the model runs <em>inside</em> CI/CD, generated tests are <em>executed</em> not just written, and a <strong>human approval gate precedes merge</strong>. Any option that removes the human gate, trusts unexecuted tests, or hardcodes secrets is the distractor.
+    </div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section class="module summary" id="summary">
+    <span class="module-tag">Recap</span>
+    <h2>📋 Chapter Summary — One-Line Takeaways</h2>
+    <table class="data">
+      <thead><tr><th>Subsection</th><th>One-line takeaway</th></tr></thead>
+      <tbody>
+        <tr><td class="term">64.1 Review, Testing &amp; Docs</td><td>Claude drafts reviews, tests, and docs — but output is a <strong>suggestion</strong>; humans validate and run generated tests.</td></tr>
+        <tr><td class="term">64.2 Automating Repetitive Tasks</td><td>Automate low-risk toil (boilerplate, scaffolding) freely; keep refactors &amp; dependency updates behind tests and review.</td></tr>
+        <tr><td class="term">64.3 Toolchain Integration</td><td>Match the integration point to the moment: IDE (coding), Git hook (commit), <strong>CI/CD (enforced pre-merge)</strong>, API/CLI (custom).</td></tr>
+        <tr><td class="term">64.4 Measuring Productivity</td><td>Use DORA + cycle time against a baseline; avoid vanity metrics like lines of code and raw PR counts.</td></tr>
+        <tr><td class="term">64.5 Building a Pipeline</td><td>PR → review → test-gen (executed) → doc update → <strong>human-gated</strong> merge, all inside CI/CD with secrets managed safely.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ PRACTICE ============ -->
+  <section class="module" id="practice">
+    <span class="module-tag">Practice</span>
+    <h2>🧪 Practice Questions</h2>
+    <p style="color:var(--ink-mute);font-size:14px;">One question per subsection. Click a question to reveal the answer and explanation.</p>
+
+    <details class="q">
+      <summary><span class="qnum">Q1</span><span>A CI bot uses Claude to review PRs and auto-generate unit tests. The generated tests pass. What is the correct next step before trusting the change? <span class="reveal">Show answer</span></span></summary>
+      <div class="options">
+        <div class="opt">A. Merge immediately — passing tests prove correctness.</div>
+        <div class="opt">B. Delete the human review step to save time.</div>
+        <div class="opt">C. Have a human review the tests' assertions and the code, then proceed through the normal gate.</div>
+        <div class="opt">D. Increase the number of AI-generated tests until coverage hits 100%.</div>
+      </div>
+      <div class="answer"><span class="correct">Correct: C.</span> AI-generated tests can assert incorrect expected behavior, so passing tests don't equal correctness. A human validates assertions and the change proceeds through the standard human-in-the-loop gate. <em>(Ties to 64.1: augmentation, not replacement; coverage ≠ correctness.)</em></div>
+    </details>
+
+    <details class="q">
+      <summary><span class="qnum">Q2</span><span>Which task is the <em>safest</em> candidate for AI automation with the least additional guardrails? <span class="reveal">Show answer</span></span></summary>
+      <div class="options">
+        <div class="opt">A. Generating boilerplate/scaffolding for a new module.</div>
+        <div class="opt">B. Unattended major-version dependency upgrades pushed straight to main.</div>
+        <div class="opt">C. A large cross-cutting refactor merged without tests.</div>
+        <div class="opt">D. Rewriting a security-critical auth module autonomously.</div>
+      </div>
+      <div class="answer"><span class="correct">Correct: A.</span> Boilerplate/scaffolding is pattern-driven, easy to review, and low-risk. Dependency upgrades, unguarded refactors, and security-critical rewrites are higher-risk and need tests + review. <em>(Ties to 64.2: rank automation candidates by risk.)</em></div>
+    </details>
+
+    <details class="q">
+      <summary><span class="qnum">Q3</span><span>A team needs an AI review standard <em>enforced for every developer before merge</em>. Which integration point should they use? <span class="reveal">Show answer</span></span></summary>
+      <div class="options">
+        <div class="opt">A. An IDE plugin each developer installs.</div>
+        <div class="opt">B. A local pre-commit Git hook.</div>
+        <div class="opt">C. A CI/CD pipeline check with branch protection.</div>
+        <div class="opt">D. A CLI command developers can run manually.</div>
+      </div>
+      <div class="answer"><span class="correct">Correct: C.</span> Only a server-side CI/CD gate (with branch protection) enforces a rule for everyone. IDE plugins, local hooks, and CLI commands are optional/skippable per developer. <em>(Ties to 64.3: "enforce for all / before merge" → CI/CD.)</em></div>
+    </details>
+
+    <details class="q">
+      <summary><span class="qnum">Q4</span><span>Which metric best demonstrates a genuine productivity improvement from AI-assisted tooling? <span class="reveal">Show answer</span></span></summary>
+      <div class="options">
+        <div class="opt">A. Total lines of code written per week.</div>
+        <div class="opt">B. Number of AI suggestions accepted.</div>
+        <div class="opt">C. Reduced cycle time / lead time while change failure rate stays flat.</div>
+        <div class="opt">D. Raw count of commits.</div>
+      </div>
+      <div class="answer"><span class="correct">Correct: C.</span> Outcome metrics (DORA lead time, cycle time) paired with a stability metric show real improvement. Lines of code, accepted-suggestion counts, and commit counts are vanity/activity metrics. <em>(Ties to 64.4: outcome over vanity; pair speed with stability.)</em></div>
+    </details>
+
+    <details class="q">
+      <summary><span class="qnum">Q5</span><span>In a PR → review → test-gen → doc → merge pipeline, what is the essential final safeguard before merge? <span class="reveal">Show answer</span></span></summary>
+      <div class="options">
+        <div class="opt">A. Auto-merge as soon as all AI steps complete.</div>
+        <div class="opt">B. A required human approval gate alongside green status checks.</div>
+        <div class="opt">C. Hardcoding the API key in the workflow file for reliability.</div>
+        <div class="opt">D. Skipping test execution to speed up the merge.</div>
+      </div>
+      <div class="answer"><span class="correct">Correct: B.</span> A mature pipeline keeps a required human approval gate plus passing checks. Auto-merging without human sign-off, hardcoding secrets, and skipping test execution are all anti-patterns. <em>(Ties to 64.5: automate toil, humans keep the decision.)</em></div>
+    </details>
+  </section>
+
+  <div class="disclaimer">
+    <strong>Accuracy note:</strong> This guide describes AI-assisted developer tooling using general, defensible capabilities. Claims about model behavior are hedged ("typically," "in most configurations") because exact features and results vary by configuration, model version, and setup. Benchmark figures shown are illustrative for teaching the concept, not real measurements. Always confirm specifics against current official Claude / Anthropic documentation.
+  </div>
+
+  <footer class="foot">
+    Chapter 64 · Improving Developer Workflows with AI-Assisted Tooling — Claude Certified Architect study guide.
+  </footer>
+
+</div>
+
+
+
+</body></html>

@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5: Multi-Step Workflows &amp; State Management — CCA Study Notes</title>
+<style>
+  /* ========== RESET & BASE ========== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 15px; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #0f172a; color: #e2e8f0; line-height: 1.72;
+    display: flex; min-height: 100vh;
+  }
+
+  /* ========== SIDEBAR ========== */
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0;
+    width: 280px; background: #1e293b;
+    border-right: 1px solid #334155;
+    overflow-y: auto; padding: 24px 0; z-index: 100;
+  }
+  .sidebar-title {
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #64748b; padding: 0 20px; margin-bottom: 8px; font-weight: 700;
+  }
+  .sidebar-chapter {
+    font-size: 1.05rem; font-weight: 700; color: #f1f5f9;
+    padding: 0 20px; margin-bottom: 20px;
+  }
+  .sidebar a {
+    display: block; padding: 8px 20px 8px 28px;
+    color: #94a3b8; text-decoration: none; font-size: 0.88rem;
+    border-left: 3px solid transparent; transition: all 0.15s;
+  }
+  .sidebar a:hover, .sidebar a.active {
+    color: #e2e8f0; background: rgba(59,130,246,0.08);
+    border-left-color: #3b82f6;
+  }
+  .sidebar .nav-group { margin-bottom: 16px; }
+  .sidebar .nav-group-label {
+    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #475569; padding: 12px 20px 4px; font-weight: 600;
+  }
+  .sidebar .badge {
+    display: inline-block; font-size: 0.65rem; padding: 1px 6px;
+    border-radius: 4px; margin-left: 6px; vertical-align: middle; font-weight: 600;
+  }
+  .badge-core { background: #1e3a5f; color: #60a5fa; }
+  .badge-hands { background: #14532d; color: #4ade80; }
+  .badge-exam { background: #713f12; color: #fbbf24; }
+
+  /* ========== MAIN CONTENT ========== */
+  .main {
+    margin-left: 280px; flex: 1;
+    max-width: 920px; padding: 40px 48px 120px;
+  }
+
+  /* ========== HEADINGS ========== */
+  h1 { font-size: 2rem; font-weight: 800; color: #f8fafc; margin-bottom: 8px; }
+  .subtitle { color: #64748b; font-size: 0.95rem; margin-bottom: 36px; }
+  h2 {
+    font-size: 1.45rem; font-weight: 700; color: #f1f5f9;
+    margin-top: 56px; margin-bottom: 6px;
+    padding-bottom: 10px; border-bottom: 2px solid #334155;
+  }
+  h2 .section-num { color: #3b82f6; margin-right: 6px; }
+  h3 { font-size: 1.1rem; font-weight: 700; color: #cbd5e1; margin-top: 32px; margin-bottom: 10px; }
+  h4 { font-size: 0.95rem; font-weight: 700; color: #94a3b8; margin-top: 20px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* ========== CALLOUT BOXES ========== */
+  .callout {
+    border-radius: 8px; padding: 16px 20px; margin: 20px 0;
+    font-size: 0.92rem; line-height: 1.65;
+  }
+  .callout-title {
+    font-weight: 700; font-size: 0.82rem; text-transform: uppercase;
+    letter-spacing: 0.06em; margin-bottom: 6px;
+  }
+  .callout-concept { background: #172554; border-left: 4px solid #3b82f6; }
+  .callout-concept .callout-title { color: #60a5fa; }
+  .callout-tip { background: #422006; border-left: 4px solid #f59e0b; }
+  .callout-tip .callout-title { color: #fbbf24; }
+  .callout-pitfall { background: #450a0a; border-left: 4px solid #ef4444; }
+  .callout-pitfall .callout-title { color: #f87171; }
+  .callout-hands { background: #052e16; border-left: 4px solid #22c55e; }
+  .callout-hands .callout-title { color: #4ade80; }
+  .callout-summary { background: #1e1b4b; border-left: 4px solid #818cf8; }
+  .callout-summary .callout-title { color: #a5b4fc; }
+
+  /* ========== TABLES ========== */
+  table {
+    width: 100%; border-collapse: collapse; margin: 16px 0;
+    font-size: 0.88rem;
+  }
+  th {
+    background: #1e293b; color: #94a3b8; text-align: left;
+    padding: 10px 14px; font-weight: 700; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: 2px solid #334155;
+  }
+  td {
+    padding: 10px 14px; border-bottom: 1px solid #1e293b;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: rgba(30,41,59,0.4); }
+  tr:hover td { background: rgba(59,130,246,0.06); }
+  .term { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; color: #7dd3fc; font-weight: 600; font-size: 0.86rem; }
+
+  /* ========== CODE BLOCKS ========== */
+  pre {
+    background: #0c1222; border: 1px solid #1e293b; border-radius: 8px;
+    padding: 18px 22px; overflow-x: auto; margin: 16px 0;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.84rem; line-height: 1.7; color: #cbd5e1;
+  }
+  code {
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.86rem;
+  }
+  :not(pre) > code {
+    background: #1e293b; padding: 2px 7px; border-radius: 4px;
+    color: #7dd3fc; font-size: 0.84rem;
+  }
+  .comment { color: #4a5568; font-style: italic; }
+  .keyword { color: #c084fc; }
+  .string { color: #86efac; }
+  .func { color: #60a5fa; }
+  .type { color: #fbbf24; }
+  .num { color: #f87171; }
+
+  /* ========== DIAGRAMS (ASCII-STYLE) ========== */
+  .diagram {
+    background: #0f172a; border: 1px solid #334155; border-radius: 8px;
+    padding: 20px 24px; margin: 16px 0; overflow-x: auto;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.82rem; line-height: 1.55; color: #94a3b8;
+    white-space: pre;
+  }
+  .diagram .node { color: #60a5fa; font-weight: 700; }
+  .diagram .gate { color: #fbbf24; font-weight: 700; }
+  .diagram .state { color: #4ade80; }
+  .diagram .fail { color: #f87171; }
+  .diagram .arrow { color: #475569; }
+
+  /* ========== PRACTICE QUESTIONS ========== */
+  .question-block {
+    background: #1e293b; border-radius: 8px; padding: 20px 24px;
+    margin: 20px 0; border: 1px solid #334155;
+  }
+  .q-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #3b82f6; margin-bottom: 8px;
+  }
+  .q-text { font-weight: 600; color: #f1f5f9; margin-bottom: 14px; line-height: 1.6; }
+  .q-options { list-style: none; margin-bottom: 16px; }
+  .q-options li {
+    padding: 6px 0 6px 12px; border-left: 3px solid transparent;
+    margin-bottom: 2px; color: #cbd5e1;
+  }
+  .q-options li.correct {
+    border-left-color: #22c55e; background: rgba(34,197,94,0.06);
+    color: #4ade80; font-weight: 600;
+  }
+  .q-explanation {
+    background: #0f172a; padding: 12px 16px; border-radius: 6px;
+    font-size: 0.88rem; color: #94a3b8; line-height: 1.6;
+  }
+  .q-explanation strong { color: #e2e8f0; }
+
+  /* ========== CHECKLIST ========== */
+  .checklist { list-style: none; margin: 12px 0; }
+  .checklist li {
+    padding: 6px 0 6px 28px; position: relative;
+    color: #cbd5e1; font-size: 0.92rem;
+  }
+  .checklist li::before {
+    content: '☐'; position: absolute; left: 0; color: #64748b; font-size: 1rem;
+  }
+
+  /* ========== MISC ========== */
+  p { margin-bottom: 12px; }
+  ul, ol { margin: 8px 0 12px 24px; }
+  li { margin-bottom: 4px; }
+  strong { color: #f1f5f9; }
+  a { color: #60a5fa; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #1e293b; margin: 40px 0; }
+  .highlight { background: rgba(59,130,246,0.12); padding: 2px 4px; border-radius: 3px; }
+
+  .dep-chain {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    margin: 16px 0; font-size: 0.88rem;
+  }
+  .dep-chain .dep-node {
+    background: #1e293b; border: 1px solid #334155; padding: 6px 14px;
+    border-radius: 6px; color: #60a5fa; font-weight: 600;
+  }
+  .dep-chain .dep-arrow { color: #475569; font-size: 1.2rem; }
+
+  /* ========== PRINT ========== */
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; max-width: 100%; padding: 20px; }
+    body { background: #fff; color: #1a1a1a; font-size: 11pt; }
+    h1, h2, h3 { color: #111; }
+    .callout { border: 1px solid #ccc; background: #f9f9f9 !important; }
+    .callout-title { color: #333 !important; }
+    pre, .diagram { background: #f5f5f5; border: 1px solid #ddd; color: #333; }
+    table { border: 1px solid #ccc; }
+    th { background: #eee; color: #333; border-bottom: 2px solid #999; }
+    td { border-bottom: 1px solid #ddd; }
+    .question-block { background: #f5f5f5; border: 1px solid #ccc; }
+    a { color: #0066cc; }
+    code { background: #eee; color: #c7254e; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== SIDEBAR ==================== -->
+<nav class="sidebar">
+  <div class="sidebar-title">CCA Exam Study Notes</div>
+  <div class="sidebar-chapter">Ch 5 — Multi-Step Workflows<br>&amp; State Management</div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Sections</div>
+    <a href="#s5-1">5.1 Designing Multi-Step Workflows <span class="badge badge-core">Core</span></a>
+    <a href="#s5-2">5.2 Verification Gates <span class="badge badge-core">Core</span></a>
+    <a href="#s5-3">5.3 State Persistence &amp; Manifests <span class="badge badge-core">Core</span></a>
+    <a href="#s5-4">5.4 Crash Recovery &amp; Resumption <span class="badge badge-core">Core</span></a>
+    <a href="#s5-5">5.5 Sessions, Forking &amp; Named Sessions <span class="badge badge-core">Core</span></a>
+    <a href="#s5-6">5.6 Hands-On: Resilient Pipeline <span class="badge badge-hands">Hands-On</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Synthesis &amp; Review</div>
+    <a href="#summary-map">Chapter Summary Map</a>
+    <a href="#dependency-chain">Concept Dependency Chain</a>
+    <a href="#glossary">Glossary</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Exam Prep</div>
+    <a href="#exam-strategy">Exam Strategy <span class="badge badge-exam">Exam</span></a>
+    <a href="#practice-questions">Practice Questions <span class="badge badge-exam">Exam</span></a>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<div class="main">
+
+<h1>Chapter 5: Multi-Step Workflows &amp; State Management</h1>
+<p class="subtitle">Claude Certified Architect — Foundations &amp; Professional &nbsp;|&nbsp; Comprehensive Exam-Ready Study Notes</p>
+
+<!-- ============================================================ -->
+<!-- SECTION 5.1                                                   -->
+<!-- ============================================================ -->
+<h2 id="s5-1"><span class="section-num">5.1</span> Designing Multi-Step Workflows with Intermediate Verification</h2>
+
+<div class="callout callout-concept">
+  <div class="callout-title">🔵 Core Concept</div>
+  <p>Multi-step workflows decompose a complex AI task into discrete, bounded stages, where each stage produces an explicit intermediate artifact that can be independently verified before the next stage begins. The fundamental principle is: <strong>never let an error in Step N propagate silently into Step N+1</strong>. This pattern trades a small amount of latency for dramatically higher reliability, debuggability, and user trust.</p>
+</div>
+
+<h3>Why Decompose?</h3>
+<p>Large, monolithic prompts that attempt an entire complex task in a single pass suffer from three failure modes the exam will test you on:</p>
+<ol>
+  <li><strong>Error Compounding</strong> — A subtle mistake in early reasoning poisons all downstream output, with no way to isolate the failure point.</li>
+  <li><strong>Opaque Debugging</strong> — When a single-pass output is wrong, there is no intermediate state to inspect; you must re-run everything from scratch.</li>
+  <li><strong>Wasted Compute</strong> — If Step 8 out of 10 fails, a monolithic pipeline forces you to redo Steps 1–7, even though they were correct.</li>
+</ol>
+
+<h3>Key Principles of Decomposition</h3>
+<table>
+  <tbody><tr><th>Principle</th><th>Description</th><th>Exam Relevance</th></tr>
+  <tr>
+    <td><span class="term">Single Responsibility</span></td>
+    <td>Each step should do exactly one thing — parse, transform, validate, generate, or review</td>
+    <td>Questions may present a step that does too much and ask you to identify the violation</td>
+  </tr>
+  <tr>
+    <td><span class="term">Explicit Artifact Boundary</span></td>
+    <td>Every step must produce a named, typed output artifact (e.g., a structured JSON object, a file, a validated record)</td>
+    <td>Distinguish from implicit state (context window contents) vs. explicit state (persisted artifact)</td>
+  </tr>
+  <tr>
+    <td><span class="term">Verifiability</span></td>
+    <td>The artifact produced by each step must be checkable against defined criteria before the next step consumes it</td>
+    <td>Core to Sections 5.1 and 5.2 — the interplay between these is heavily tested</td>
+  </tr>
+  <tr>
+    <td><span class="term">Idempotency</span></td>
+    <td>Re-running a step with the same input must produce the same output (or at minimum, not corrupt state)</td>
+    <td>Critical for crash recovery (5.4) — expect questions about what breaks when a step is not idempotent</td>
+  </tr>
+  <tr>
+    <td><span class="term">Loose Coupling</span></td>
+    <td>Steps communicate only through their explicit artifacts, never through shared mutable state or side channels</td>
+    <td>Trap answers often introduce hidden dependencies between steps</td>
+  </tr>
+</tbody></table>
+
+<h3>How It Works — Step-by-Step</h3>
+<div class="diagram"><span class="node">┌─────────────────────────────────────────────────────────────────────┐</span>
+<span class="node">│                    MULTI-STEP WORKFLOW ANATOMY                      │</span>
+<span class="node">└─────────────────────────────────────────────────────────────────────┘</span>
+
+  <span class="node">[ Input ]</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="node">┌──────────────────┐</span>     <span class="state">artifact_0</span>
+  <span class="node">│  Step 1: Parse   │</span><span class="arrow">────────▶</span>  <span class="state">{ structured_input }</span>
+  <span class="node">└──────────────────┘</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="gate">◆ Verify: schema valid?</span> <span class="arrow">──</span><span class="fail"> FAIL ──▶ Halt &amp; Report</span>
+      <span class="arrow">│</span>
+     <span class="state">PASS</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="node">┌──────────────────┐</span>     <span class="state">artifact_1</span>
+  <span class="node">│ Step 2: Enrich   │</span><span class="arrow">────────▶</span>  <span class="state">{ enriched_data }</span>
+  <span class="node">└──────────────────┘</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="gate">◆ Verify: completeness?</span> <span class="arrow">──</span><span class="fail"> FAIL ──▶ Retry / Remediate</span>
+      <span class="arrow">│</span>
+     <span class="state">PASS</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="node">┌──────────────────┐</span>     <span class="state">artifact_2</span>
+  <span class="node">│ Step 3: Generate │</span><span class="arrow">────────▶</span>  <span class="state">{ final_output }</span>
+  <span class="node">└──────────────────┘</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="gate">◆ Verify: quality check</span>
+      <span class="arrow">│</span>
+     <span class="state">PASS</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="node">[ Output Delivered ]</span></div>
+
+<h3>Design Heuristics for Step Boundaries</h3>
+<p>Where should you place step boundaries? Look for these natural seams:</p>
+<ul>
+  <li><strong>Data format changes</strong> — If the representation changes (e.g., raw text → JSON → SQL), that is a step boundary.</li>
+  <li><strong>Domain transitions</strong> — If the task crosses domains (e.g., parsing → reasoning → code generation), each domain is a step.</li>
+  <li><strong>Risk boundaries</strong> — If a sub-task is expensive, external-facing, or irreversible (API call, database write, email send), isolate it as its own step with a preceding verification gate.</li>
+  <li><strong>Review points</strong> — If a human or model review is desirable, place a step boundary there.</li>
+</ul>
+
+<div class="callout callout-pitfall">
+  <div class="callout-title">🔴 Common Pitfall</div>
+  <p><strong>Over-decomposition:</strong> Splitting a task into too many tiny steps introduces excessive latency and checkpoint overhead. The exam may present a 15-step pipeline and ask which steps should be merged. The answer: merge steps that share the same domain, have no useful verification between them, and always succeed or fail together.</p>
+  <p><strong>Implicit state leakage:</strong> Candidates often forget that the LLM's context window is <em>implicit</em> state. If you rely on the model "remembering" an artifact from 3 turns ago without explicitly passing it, you have created a hidden dependency that breaks on context overflow.</p>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Exam Tip — Section 5.1</div>
+  <p>When a question asks "what is the PRIMARY benefit of multi-step decomposition," the answer is <strong>intermediate verification and error isolation</strong>, NOT "parallel execution" or "reduced token usage." While those may be secondary benefits in some cases, the architectural motivation is always fault isolation.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5.2                                                   -->
+<!-- ============================================================ -->
+<h2 id="s5-2"><span class="section-num">5.2</span> Verification Gates Between Workflow Steps</h2>
+
+<div class="callout callout-concept">
+  <div class="callout-title">🔵 Core Concept</div>
+  <p>A <strong>verification gate</strong> is a programmatic or model-driven checkpoint positioned between workflow steps that validates the output of the preceding step against defined criteria. Gates enforce a <em>pass/fail contract</em>: execution proceeds only on pass; on fail, the system halts, logs, and triggers a remediation strategy (retry, fallback, or escalation). Gates are the immune system of the pipeline — without them, corrupted data flows silently downstream.</p>
+</div>
+
+<h3>Key Terminology</h3>
+<table>
+  <tbody><tr><th>Term</th><th>Definition</th><th>Exam Tip</th></tr>
+  <tr>
+    <td><span class="term">Verification Gate</span></td>
+    <td>A checkpoint that validates the output of Step N before Step N+1 begins execution</td>
+    <td>Often tested in "what happens if X fails" scenarios — the gate determines the response</td>
+  </tr>
+  <tr>
+    <td><span class="term">Structural Validation</span></td>
+    <td>Checks that the artifact conforms to an expected schema, type, or format (e.g., JSON schema validation)</td>
+    <td>Cheapest and fastest gate type — always apply first before more expensive checks</td>
+  </tr>
+  <tr>
+    <td><span class="term">Semantic Validation</span></td>
+    <td>Uses a second LLM call (or judge model) to evaluate whether the content is logically correct, coherent, or aligned with intent</td>
+    <td>More expensive but catches errors structural checks miss — exam tests when to use which</td>
+  </tr>
+  <tr>
+    <td><span class="term">Constraint Validation</span></td>
+    <td>Checks domain-specific business rules (e.g., "total must not exceed budget," "all referenced IDs must exist")</td>
+    <td>Often the right answer for "which validation catches X" questions involving business logic</td>
+  </tr>
+  <tr>
+    <td><span class="term">Gate Disposition</span></td>
+    <td>The action taken on gate failure: <code>HALT</code>, <code>RETRY</code>, <code>FALLBACK</code>, or <code>ESCALATE</code></td>
+    <td>Know all four — questions may ask which disposition is correct for a given scenario</td>
+  </tr>
+  <tr>
+    <td><span class="term">Retry Budget</span></td>
+    <td>A finite limit on how many times a failed step may be retried before escalation or halt</td>
+    <td>Without a retry budget, you risk infinite loops — the exam expects you to know this</td>
+  </tr>
+</tbody></table>
+
+<h3>Gate Types &amp; When to Use Them</h3>
+<div class="diagram"><span class="gate">╔══════════════════════════════════════════════════════════════════╗</span>
+<span class="gate">║             VERIFICATION GATE SELECTION MATRIX                   ║</span>
+<span class="gate">╚══════════════════════════════════════════════════════════════════╝</span>
+
+ <span class="state">Level 1: STRUCTURAL</span>  (always first, zero LLM cost)
+ ├── Schema validation (JSON Schema, Pydantic, Zod)
+ ├── Type checking (expected fields exist, correct types)
+ ├── Length / size constraints (min/max tokens, array bounds)
+ └── Format adherence (regex for dates, emails, IDs)
+
+ <span class="state">Level 2: CONSTRAINT</span>  (domain logic, usually deterministic)
+ ├── Business rules (total ≤ budget, deadline in future)
+ ├── Referential integrity (all IDs resolve to real entities)
+ ├── Uniqueness / deduplication checks
+ └── Cross-field consistency (start_date &lt; end_date)
+
+ <span class="state">Level 3: SEMANTIC</span>  (most expensive, uses LLM or judge model)
+ ├── Coherence check (does the output make logical sense?)
+ ├── Completeness check (are all requested components present?)
+ ├── Alignment check (does the output match the original intent?)
+ └── Quality scoring (rubric-based evaluation by a judge model)</div>
+
+<h3>Gate Failure Protocol</h3>
+<p>When a gate fails, the system must execute a <strong>deterministic response protocol</strong>. The exam tests this heavily:</p>
+
+<div class="diagram"><span class="gate">     ◆ GATE FAILS</span>
+         <span class="arrow">│</span>
+         <span class="arrow">▼</span>
+   <span class="fail">┌─────────────┐</span>
+   <span class="fail">│  1. HALT    │</span>  Stop execution immediately. Do NOT proceed.
+   <span class="fail">└──────┬──────┘</span>
+         <span class="arrow">▼</span>
+   <span class="state">┌─────────────┐</span>
+   <span class="state">│  2. LOG     │</span>  Record: step_id, input, output, failure reason, timestamp.
+   <span class="state">└──────┬──────┘</span>
+         <span class="arrow">▼</span>
+   <span class="gate">┌─────────────────┐</span>
+   <span class="gate">│ 3. REMEDIATE    │</span>  Choose a strategy based on failure type:
+   <span class="gate">└──────┬──────────┘</span>
+         <span class="arrow">│</span>
+    <span class="arrow">┌────┼──────────┐</span>
+    <span class="arrow">▼</span>    <span class="arrow">▼</span>          <span class="arrow">▼</span>
+ <span class="node">RETRY</span>  <span class="node">FALLBACK</span>    <span class="node">ESCALATE</span>
+  (same    (alt.       (human-in-
+  step,    strategy    the-loop or
+  ≤ N      or simpler  supervisor
+  times)   model)      agent)</div>
+
+<h3>Retry Strategies</h3>
+<table>
+  <tbody><tr><th>Strategy</th><th>When to Use</th><th>Implementation</th></tr>
+  <tr>
+    <td><span class="term">Simple Retry</span></td>
+    <td>Non-deterministic failures (LLM variance, transient API errors)</td>
+    <td>Re-invoke the same step with identical input, up to <code>max_retries</code></td>
+  </tr>
+  <tr>
+    <td><span class="term">Retry with Feedback</span></td>
+    <td>The output was wrong but fixable (e.g., missing a field, wrong format)</td>
+    <td>Append the failure reason to the prompt: <code>"Previous attempt failed because: {reason}. Fix and retry."</code></td>
+  </tr>
+  <tr>
+    <td><span class="term">Retry with Escalation</span></td>
+    <td>A simpler model failed; a more capable model may succeed</td>
+    <td>Re-invoke with a higher-tier model (e.g., Haiku → Sonnet → Opus)</td>
+  </tr>
+  <tr>
+    <td><span class="term">Fallback Path</span></td>
+    <td>The step is fundamentally failing; an alternative approach is available</td>
+    <td>Route to a different prompt, tool, or simplified sub-pipeline</td>
+  </tr>
+</tbody></table>
+
+<div class="callout callout-pitfall">
+  <div class="callout-title">🔴 Common Pitfall</div>
+  <p><strong>"Silent continue" trap:</strong> The #1 wrong answer pattern in verification gate questions is an option that says "log the error and continue to the next step." The correct answer almost always includes <em>halting execution</em> before remediation. Skipping the halt means corrupted data reaches downstream steps.</p>
+  <p><strong>Unbounded retries:</strong> Any retry mechanism without a finite retry budget is a defect. Exam answers that propose "retry until success" without a limit are always wrong.</p>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Exam Tip — Section 5.2</div>
+  <p>When a question asks "what should happen when a verification gate fails," look for the answer that includes <strong>all three components: halt → log → remediate</strong>. If an option skips the logging step, it's a trap. If an option skips the halt, it's a trap. The correct answer is the one with the complete protocol.</p>
+  <p>For "which gate type" questions, apply the <strong>cheapest-first heuristic</strong>: structural before constraint before semantic. An answer that jumps straight to LLM-based semantic validation when a JSON schema check would suffice is the wrong answer.</p>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 5.3                                                   -->
+<!-- ============================================================ -->
+<h2 id="s5-3"><span class="section-num">5.3</span> Explicit State Persistence: Progress Manifests &amp; Checkpoint Files</h2>
+
+<div class="callout callout-concept">
+  <div class="callout-title">🔵 Core Concept</div>
+  <p>In a multi-step workflow, <strong>explicit state persistence</strong> is the practice of writing the workflow's progress and intermediate results to durable storage after each successful step. This is achieved through two complementary mechanisms: the <strong>progress manifest</strong> (a high-level ledger of which steps completed) and <strong>checkpoint files</strong> (granular snapshots of each step's output data). Together, they form the foundation for crash recovery (5.4) and session management (5.5).</p>
+</div>
+
+<h3>Key Terminology</h3>
+<table>
+  <tbody><tr><th>Term</th><th>Definition</th><th>Exam Tip</th></tr>
+  <tr>
+    <td><span class="term">Progress Manifest</span></td>
+    <td>A persistent metadata record tracking which workflow steps have completed, their status, timestamps, and any error information. Acts as the pipeline's "table of contents."</td>
+    <td>Distinguish from checkpoint files: the manifest tracks <em>status</em>; checkpoints store <em>data</em></td>
+  </tr>
+  <tr>
+    <td><span class="term">Checkpoint File</span></td>
+    <td>A durable snapshot of a single step's output artifact, written to storage upon successful verification. Contains the actual data needed to resume.</td>
+    <td>Granularity matters: one checkpoint per step, not one per workflow</td>
+  </tr>
+  <tr>
+    <td><span class="term">Explicit State</span></td>
+    <td>State that is intentionally serialized and persisted to storage (files, DB, object store) — as opposed to implicit state held only in memory or context window</td>
+    <td>The exam contrasts explicit vs. implicit state frequently</td>
+  </tr>
+  <tr>
+    <td><span class="term">Implicit State</span></td>
+    <td>State that exists only in transient memory: LLM context window, in-process variables, unwritten buffers</td>
+    <td>Implicit state is lost on crash — a core vulnerability the chapter addresses</td>
+  </tr>
+  <tr>
+    <td><span class="term">Atomic Write</span></td>
+    <td>A write operation that either completes fully or not at all — no partial/corrupted files</td>
+    <td>Critical for checkpoint integrity; the write-then-rename pattern is the standard technique</td>
+  </tr>
+  <tr>
+    <td><span class="term">State Schema Versioning</span></td>
+    <td>Including a version number in checkpoint/manifest format so older checkpoints can be migrated or rejected when the pipeline code changes</td>
+    <td>Often overlooked by candidates — expect a question about what happens when pipeline code changes</td>
+  </tr>
+</tbody></table>
+
+<h3>Progress Manifest Structure</h3>
+<pre><span class="comment">// progress_manifest.json — written after each step completes</span>
+{
+  <span class="string">"workflow_id"</span>:       <span class="string">"wf-a3b8c9d2"</span>,
+  <span class="string">"schema_version"</span>:   <span class="num">2</span>,
+  <span class="string">"created_at"</span>:       <span class="string">"2026-09-14T10:00:00Z"</span>,
+  <span class="string">"updated_at"</span>:       <span class="string">"2026-09-14T10:03:42Z"</span>,
+  <span class="string">"total_steps"</span>:      <span class="num">5</span>,
+  <span class="string">"steps"</span>: [
+    {
+      <span class="string">"step_id"</span>:        <span class="string">"parse_input"</span>,
+      <span class="string">"index"</span>:          <span class="num">0</span>,
+      <span class="string">"status"</span>:         <span class="string">"completed"</span>,         <span class="comment">// pending | running | completed | failed | skipped</span>
+      <span class="string">"started_at"</span>:     <span class="string">"2026-09-14T10:00:00Z"</span>,
+      <span class="string">"completed_at"</span>:   <span class="string">"2026-09-14T10:00:12Z"</span>,
+      <span class="string">"checkpoint_ref"</span>: <span class="string">"checkpoints/step_0_parse_input.json"</span>,
+      <span class="string">"retries"</span>:        <span class="num">0</span>,
+      <span class="string">"error"</span>:          <span class="keyword">null</span>
+    },
+    {
+      <span class="string">"step_id"</span>:        <span class="string">"enrich_data"</span>,
+      <span class="string">"index"</span>:          <span class="num">1</span>,
+      <span class="string">"status"</span>:         <span class="string">"completed"</span>,
+      <span class="string">"started_at"</span>:     <span class="string">"2026-09-14T10:00:12Z"</span>,
+      <span class="string">"completed_at"</span>:   <span class="string">"2026-09-14T10:01:05Z"</span>,
+      <span class="string">"checkpoint_ref"</span>: <span class="string">"checkpoints/step_1_enrich_data.json"</span>,
+      <span class="string">"retries"</span>:        <span class="num">1</span>,
+      <span class="string">"error"</span>:          <span class="keyword">null</span>
+    },
+    {
+      <span class="string">"step_id"</span>:        <span class="string">"generate_report"</span>,
+      <span class="string">"index"</span>:          <span class="num">2</span>,
+      <span class="string">"status"</span>:         <span class="string">"failed"</span>,
+      <span class="string">"started_at"</span>:     <span class="string">"2026-09-14T10:01:05Z"</span>,
+      <span class="string">"completed_at"</span>:   <span class="keyword">null</span>,
+      <span class="string">"checkpoint_ref"</span>: <span class="keyword">null</span>,
+      <span class="string">"retries"</span>:        <span class="num">3</span>,
+      <span class="string">"error"</span>:          <span class="string">"Semantic validation failed: missing executive summary"</span>
+    }
+    <span class="comment">// Steps 3–4 have status "pending"</span>
+  ]
+}
+</pre>
+
+<h3>How Manifests &amp; Checkpoints Work Together</h3>
+<div class="diagram"><span class="node">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="node">│           MANIFEST + CHECKPOINT INTERACTION MODEL                │</span>
+<span class="node">└──────────────────────────────────────────────────────────────────┘</span>
+
+  <span class="state">Progress Manifest</span>                        <span class="state">Checkpoint Files</span>
+  <span class="state">(status ledger)</span>                          <span class="state">(data snapshots)</span>
+  ┌─────────────────────┐                 ┌─────────────────────┐
+  │ step_0: <span class="state">completed</span>   │<span class="arrow">───────────────▶</span>│ step_0_parse.json   │
+  │ step_1: <span class="state">completed</span>   │<span class="arrow">───────────────▶</span>│ step_1_enrich.json  │
+  │ step_2: <span class="fail">failed</span>      │       (no checkpoint — step failed)
+  │ step_3: pending     │
+  │ step_4: pending     │
+  └─────────────────────┘                 └─────────────────────┘
+
+  <span class="gate">Recovery reads manifest → finds last "completed" → loads its checkpoint</span>
+  <span class="gate">→ resumes from step_2 with step_1's output data as input</span></div>
+
+<h3>Atomic Write Pattern</h3>
+<p>Checkpoint corruption is a real risk if the process crashes mid-write. The standard solution is the <strong>write-then-rename</strong> (or write-to-temp-then-move) pattern:</p>
+<pre><span class="keyword">def</span> <span class="func">save_checkpoint</span>(step_id, data, checkpoint_dir):
+    <span class="comment"># 1. Write to a TEMPORARY file (incomplete data lives here)</span>
+    tmp_path = f<span class="string">"{checkpoint_dir}/{step_id}.tmp"</span>
+    <span class="keyword">with</span> open(tmp_path, <span class="string">'w'</span>) <span class="keyword">as</span> f:
+        json.dump(data, f)
+        f.flush()
+        os.fsync(f.fileno())   <span class="comment"># Force write to disk</span>
+
+    <span class="comment"># 2. Atomically RENAME to the final path</span>
+    <span class="comment">#    (rename on same filesystem is atomic on POSIX)</span>
+    final_path = f<span class="string">"{checkpoint_dir}/{step_id}.json"</span>
+    os.rename(tmp_path, final_path)
+
+    <span class="comment"># 3. Update the manifest AFTER the checkpoint is safely written</span>
+    <span class="func">update_manifest</span>(step_id, status=<span class="string">"completed"</span>, checkpoint_ref=final_path)
+</pre>
+
+<div class="callout callout-pitfall">
+  <div class="callout-title">🔴 Common Pitfall</div>
+  <p><strong>Confusing manifest and checkpoint scope:</strong> The manifest answers "which steps are done?"; the checkpoint answers "what did that step produce?" They are complementary, not interchangeable. Candidates who treat the manifest as the checkpoint (or vice versa) will misdiagnose recovery scenarios.</p>
+  <p><strong>Ignoring schema versioning:</strong> If the pipeline code changes between runs (e.g., Step 2 now expects an extra field), old checkpoints become incompatible. Without a <code>schema_version</code> field, the system may silently load stale data and produce wrong results.</p>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Exam Tip — Section 5.3</div>
+  <p>Any exam question about "what is lost when a process crashes" is testing your understanding of explicit vs. implicit state. The answer is: <strong>everything not yet written to a checkpoint is lost</strong>. Context window state, in-memory variables, partial outputs — all gone. Only completed, persisted checkpoints survive.</p>
+  <p>If a question asks about the <strong>order of operations</strong> when completing a step, the correct sequence is: (1) write checkpoint file atomically, (2) update manifest to "completed." Never the reverse — if you update the manifest first and crash before writing the checkpoint, the manifest says "done" but the data is missing.</p>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 5.4                                                   -->
+<!-- ============================================================ -->
+<h2 id="s5-4"><span class="section-num">5.4</span> Crash Recovery Using Checkpoint-Based Resumption</h2>
+
+<div class="callout callout-concept">
+  <div class="callout-title">🔵 Core Concept</div>
+  <p>Crash recovery is the process of detecting that a workflow was interrupted (crash, timeout, resource exhaustion) and resuming execution from the last known good state rather than restarting from scratch. The recovery system reads the progress manifest to find the last completed step, loads its checkpoint data, and re-enters the pipeline at the next step. This requires that every step is either <strong>idempotent</strong> (safe to re-run) or <strong>skip-safe</strong> (the checkpoint proves it already completed).</p>
+</div>
+
+<h3>Key Terminology</h3>
+<table>
+  <tbody><tr><th>Term</th><th>Definition</th><th>Exam Tip</th></tr>
+  <tr>
+    <td><span class="term">Resumption Point</span></td>
+    <td>The step index where execution resumes after recovery — always the first step whose status is NOT "completed" in the manifest</td>
+    <td>Questions test: the resumption point is the <em>failed or pending</em> step, not the last <em>completed</em> step</td>
+  </tr>
+  <tr>
+    <td><span class="term">Idempotent Step</span></td>
+    <td>A step that produces the same result when executed multiple times with the same input, with no harmful side effects</td>
+    <td>Essential for safe retries and recovery — the exam expects you to identify non-idempotent operations</td>
+  </tr>
+  <tr>
+    <td><span class="term">Side-Effect Isolation</span></td>
+    <td>Ensuring that steps with external side effects (API calls, DB writes, emails) are guarded so they don't double-fire on retry</td>
+    <td>The classic "sent the email twice" scenario — know how to prevent it</td>
+  </tr>
+  <tr>
+    <td><span class="term">Stale Checkpoint Detection</span></td>
+    <td>Identifying when a checkpoint was written by an older version of the pipeline code and may be incompatible</td>
+    <td>Schema version mismatch is the signal; the correct response is to invalidate and re-run, not silently proceed</td>
+  </tr>
+</tbody></table>
+
+<h3>Recovery Algorithm — Step by Step</h3>
+<div class="diagram"><span class="node">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="node">│               CRASH RECOVERY ALGORITHM                           │</span>
+<span class="node">└──────────────────────────────────────────────────────────────────┘</span>
+
+  <span class="node">[Pipeline Start / Restart]</span>
+           <span class="arrow">│</span>
+           <span class="arrow">▼</span>
+  <span class="gate">1. Does a progress manifest exist?</span>
+      <span class="arrow">│</span>               <span class="arrow">│</span>
+     <span class="state">YES</span>             <span class="fail">NO</span> <span class="arrow">──▶</span> <span class="node">Start fresh from Step 0</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="gate">2. Is schema_version compatible?</span>
+      <span class="arrow">│</span>               <span class="arrow">│</span>
+     <span class="state">YES</span>             <span class="fail">NO</span> <span class="arrow">──▶</span> <span class="fail">Invalidate all checkpoints</span>
+      <span class="arrow">│</span>                        <span class="arrow">──▶</span> <span class="node">Start fresh from Step 0</span>
+      <span class="arrow">▼</span>
+  <span class="gate">3. Find LAST step with status "completed"</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="gate">4. Verify its checkpoint file exists &amp; is intact</span>
+      <span class="arrow">│</span>               <span class="arrow">│</span>
+     <span class="state">YES</span>             <span class="fail">NO</span> <span class="arrow">──▶</span> <span class="fail">Walk backward until valid checkpoint found</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="state">5. Load checkpoint data as input</span>
+      <span class="arrow">│</span>
+      <span class="arrow">▼</span>
+  <span class="node">6. Resume execution at step (last_completed + 1)</span></div>
+
+<h3>Handling Non-Idempotent Steps</h3>
+<p>Some steps have external side effects that must not be repeated:</p>
+<table>
+  <tbody><tr><th>Pattern</th><th>Mechanism</th><th>Example</th></tr>
+  <tr>
+    <td><span class="term">Idempotency Key</span></td>
+    <td>Include a unique request ID; the external system deduplicates</td>
+    <td>Payment API: include <code>idempotency_key: "wf-a3b8-step3-attempt1"</code></td>
+  </tr>
+  <tr>
+    <td><span class="term">Effect Log</span></td>
+    <td>Before performing a side effect, check a local log of already-executed effects</td>
+    <td>Before sending email, check: <code>effects_log["send_email_to_user_42"]</code> — if present, skip</td>
+  </tr>
+  <tr>
+    <td><span class="term">Two-Phase Commit</span></td>
+    <td>First "prepare" the side effect (reserve, draft), then "commit" only after verification</td>
+    <td>Create email as draft → verify contents → send only on explicit commit</td>
+  </tr>
+</tbody></table>
+
+<div class="callout callout-pitfall">
+  <div class="callout-title">🔴 Common Pitfall</div>
+  <p><strong>Resuming at the wrong step:</strong> A common mistake is resuming at the last <em>completed</em> step instead of the <em>next</em> step. If Steps 0–2 are completed and Step 3 is "failed," the resumption point is Step 3, not Step 2. Re-running Step 2 wastes compute (and risks non-idempotent side effects).</p>
+  <p><strong>Assuming all steps are idempotent:</strong> LLM inference calls are idempotent (re-calling produces possibly different but valid output). But API calls, database writes, and message-sends are NOT inherently idempotent. The exam tests whether you can identify which steps need idempotency protection.</p>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Exam Tip — Section 5.4</div>
+  <p>If a question describes a pipeline that crashes after completing Steps 1–3 and asks "which component determines where execution resumes," the answer is <strong>the progress manifest / checkpoint file</strong> — NOT the session token (which tracks identity, not progress) and NOT the verification gate log (which records pass/fail results but doesn't store resumption state).</p>
+  <p>For questions about "what can go wrong during recovery," the top answers are: (1) stale/incompatible checkpoints, (2) missing checkpoint files, and (3) non-idempotent steps being re-executed.</p>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 5.5                                                   -->
+<!-- ============================================================ -->
+<h2 id="s5-5"><span class="section-num">5.5</span> Session State, Resumption &amp; Forking (<code>fork_session</code>, Named Sessions)</h2>
+
+<div class="callout callout-concept">
+  <div class="callout-title">🔵 Core Concept</div>
+  <p><strong>Session state</strong> encapsulates the full context of a workflow execution: conversation history, accumulated artifacts, manifest state, and configuration. <strong>Session resumption</strong> reloads a previously suspended session to continue where it left off. <strong>Session forking</strong> (<code>fork_session</code>) creates a divergent copy of an active session — both the original and the fork continue independently from the same point, enabling parallel exploration, A/B testing, and what-if analysis. <strong>Named sessions</strong> give human-readable identifiers to sessions for easy retrieval and management.</p>
+</div>
+
+<h3>Key Terminology</h3>
+<table>
+  <tbody><tr><th>Term</th><th>Definition</th><th>Exam Tip</th></tr>
+  <tr>
+    <td><span class="term">Session State</span></td>
+    <td>The complete snapshot of a workflow's execution context: conversation history, progress manifest, all checkpoint data, config, and metadata</td>
+    <td>Broader than a checkpoint — session state = manifest + all checkpoints + context + config</td>
+  </tr>
+  <tr>
+    <td><span class="term">Session Resumption</span></td>
+    <td>Reloading a suspended or interrupted session and continuing execution from where it paused</td>
+    <td>Resumption continues the <em>same</em> session; forking creates a <em>new</em> one — know the difference</td>
+  </tr>
+  <tr>
+    <td><span class="term">fork_session</span></td>
+    <td>An operation that creates a new, independent session by deep-copying the state of an existing session at a specific point in time</td>
+    <td>The fork and the original are fully independent after the fork point — changes in one do NOT affect the other</td>
+  </tr>
+  <tr>
+    <td><span class="term">Named Session</span></td>
+    <td>A session identified by a human-readable label (e.g., <code>"quarterly-report-v2"</code>) rather than only a system-generated UUID</td>
+    <td>Named sessions enable explicit retrieval and management — important for long-running workflows</td>
+  </tr>
+  <tr>
+    <td><span class="term">Fork Point</span></td>
+    <td>The exact moment/state from which a fork diverges — both branches share all history up to this point</td>
+    <td>Forks share the <em>same</em> history before the fork point and <em>diverge</em> after</td>
+  </tr>
+  <tr>
+    <td><span class="term">Session Lineage</span></td>
+    <td>The parent-child relationship between a forked session and its origin, enabling traceability</td>
+    <td>Important for auditing and debugging — know that lineage metadata is preserved</td>
+  </tr>
+</tbody></table>
+
+<h3>Resumption vs. Forking — Comparison</h3>
+<table>
+  <tbody><tr><th>Dimension</th><th>Session Resumption</th><th>Session Forking</th></tr>
+  <tr>
+    <td><strong>Intent</strong></td>
+    <td>Continue the same task from where it stopped</td>
+    <td>Explore an alternative path without losing the original</td>
+  </tr>
+  <tr>
+    <td><strong>Sessions After</strong></td>
+    <td>1 session (the same one, extended)</td>
+    <td>2 sessions (original + fork, both active)</td>
+  </tr>
+  <tr>
+    <td><strong>State Relationship</strong></td>
+    <td>Appends to existing state</td>
+    <td>Deep-copies state; branches are independent</td>
+  </tr>
+  <tr>
+    <td><strong>Use Case</strong></td>
+    <td>Crash recovery, pause/resume, context reload</td>
+    <td>A/B testing, what-if analysis, parallel strategy exploration</td>
+  </tr>
+  <tr>
+    <td><strong>Side Effect Risk</strong></td>
+    <td>Low — continuing a known path</td>
+    <td>Higher — forked branches may repeat side effects if not guarded</td>
+  </tr>
+</tbody></table>
+
+<h3>Fork Architecture</h3>
+<div class="diagram"><span class="node">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="node">│                     SESSION FORKING MODEL                        │</span>
+<span class="node">└──────────────────────────────────────────────────────────────────┘</span>
+
+    <span class="state">Session "main-report"</span>
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    Step 0          Step 1          Step 2          Step 3
+  ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐
+  │ Parse  │<span class="arrow">────▶</span>│ Enrich │<span class="arrow">────▶</span>│Analyze │<span class="arrow">────▶</span>│Generate│
+  └────────┘     └────────┘     └────────┘     └────────┘
+                                     <span class="arrow">│</span>
+                               <span class="gate">fork_session()</span>
+                                     <span class="arrow">│</span>
+                                ┌────<span class="arrow">┘</span>
+                                <span class="arrow">▼</span>
+    <span class="state">Session "main-report-aggressive"</span>  (Named fork)
+    <span class="state">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+
+    <span class="comment">(Inherits Step 0–2 state)</span>     Step 3'         Step 4'
+                                ┌────────┐     ┌────────┐
+                                │Analyze │<span class="arrow">────▶</span>│Generate│
+                                │<span class="state">(alt.   </span>│     │<span class="state">(alt.   </span>│
+                                │<span class="state"> params)</span>│     │<span class="state"> output)</span>│
+                                └────────┘     └────────┘
+
+  <span class="comment">Both sessions are now independent:</span>
+  <span class="comment">  • "main-report" continues with original parameters</span>
+  <span class="comment">  • "main-report-aggressive" explores alternative approach</span>
+  <span class="comment">  • Neither affects the other's state or checkpoints</span></div>
+
+<h3>Named Session Best Practices</h3>
+<ul>
+  <li><strong>Use descriptive, hierarchical names:</strong> <code>"project-alpha/report/v3"</code> is better than <code>"session_12345"</code></li>
+  <li><strong>Include intent in fork names:</strong> <code>"report-conservative-tone"</code> vs. <code>"report-aggressive-tone"</code> — makes A/B comparison legible</li>
+  <li><strong>Set TTL (time-to-live):</strong> Named sessions should have expiration policies to avoid unbounded storage growth</li>
+  <li><strong>Track lineage:</strong> Always record which session a fork originated from, and at which step</li>
+</ul>
+
+<div class="callout callout-pitfall">
+  <div class="callout-title">🔴 Common Pitfall</div>
+  <p><strong>Confusing fork and resume:</strong> Resumption continues the <em>same</em> session (same ID, same lineage). Forking creates a <em>new</em> session (new ID, parent lineage reference). The exam will present scenarios where one is appropriate and the other is not — for example, "the client wants to see two different report styles" → fork, not resume.</p>
+  <p><strong>Shared mutable state after fork:</strong> If two forked sessions write to the same external resource (database table, file, API endpoint) without coordination, they can create race conditions and data corruption. Forks must have isolated effect scopes.</p>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Exam Tip — Section 5.5</div>
+  <p>When a question asks about the difference between <code>fork_session</code> and session resumption, focus on two axes: <strong>(1) number of sessions after the operation</strong> (resume = 1, fork = 2) and <strong>(2) independence</strong> (resume = same path, fork = divergent paths). If the scenario involves exploring alternatives or parallel strategies, the answer is fork. If the scenario involves continuing interrupted work, the answer is resume.</p>
+  <p>For named session questions, the key insight is <strong>human-readable retrieval</strong>. Without named sessions, you need the system-generated UUID to find a session. Named sessions solve the "which session was the good one?" problem.</p>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 5.6                                                   -->
+<!-- ============================================================ -->
+<h2 id="s5-6"><span class="section-num">5.6</span> Hands-On: Building a Resilient Multi-Step Pipeline</h2>
+
+<div class="callout callout-hands">
+  <div class="callout-title">🟢 Hands-On Section</div>
+  <p>This section applies every concept from 5.1–5.5 into a complete, annotated implementation of a resilient multi-step pipeline. The scenario: a document analysis pipeline that parses, enriches, analyzes, and generates a final report — with full verification gates, checkpoint persistence, crash recovery, and session support.</p>
+</div>
+
+<h3>Complete Annotated Pseudocode Pipeline</h3>
+<pre><span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+<span class="comment"># RESILIENT MULTI-STEP PIPELINE — Complete Implementation</span>
+<span class="comment"># Demonstrates: decomposition, verification gates, checkpoints,</span>
+<span class="comment">#               crash recovery, idempotency, and session management.</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+
+<span class="keyword">import</span> json, os, time, hashlib
+<span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timezone
+<span class="keyword">from</span> pathlib <span class="keyword">import</span> Path
+
+<span class="comment"># ─── CONFIGURATION ───────────────────────────────────────────────</span>
+<span class="type">SCHEMA_VERSION</span>  = <span class="num">2</span>          <span class="comment"># Increment when step I/O contracts change</span>
+<span class="type">MAX_RETRIES</span>     = <span class="num">3</span>          <span class="comment"># Finite retry budget per step</span>
+<span class="type">CHECKPOINT_DIR</span>  = <span class="string">"./checkpoints"</span>
+<span class="type">MANIFEST_PATH</span>   = <span class="string">"./progress_manifest.json"</span>
+
+
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+<span class="comment"># 1. MANIFEST &amp; CHECKPOINT MANAGEMENT (Section 5.3)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+
+<span class="keyword">class</span> <span class="type">WorkflowState</span>:
+    <span class="string">"""Manages the progress manifest and checkpoint persistence.
+    
+    WHY: Explicit state persistence ensures that progress survives
+    crashes. Without this, every failure restarts from zero.
+    """</span>
+
+    <span class="keyword">def</span> <span class="func">__init__</span>(self, workflow_id: str, steps: list[str]):
+        self.workflow_id = workflow_id
+        self.steps = steps
+        self.manifest = self.<span class="func">_load_or_create_manifest</span>()
+
+    <span class="keyword">def</span> <span class="func">_load_or_create_manifest</span>(self) -&gt; dict:
+        <span class="string">"""Load existing manifest (for recovery) or create a fresh one.
+        
+        WHY: On startup, we check for existing state to enable
+        crash recovery (Section 5.4). A missing manifest means
+        this is a fresh run.
+        """</span>
+        <span class="keyword">if</span> Path(<span class="type">MANIFEST_PATH</span>).exists():
+            manifest = json.loads(Path(<span class="type">MANIFEST_PATH</span>).read_text())
+            <span class="comment"># CRITICAL: Validate schema version compatibility</span>
+            <span class="keyword">if</span> manifest.get(<span class="string">"schema_version"</span>) != <span class="type">SCHEMA_VERSION</span>:
+                print(<span class="string">"⚠ Schema version mismatch — invalidating old state"</span>)
+                <span class="keyword">return</span> self.<span class="func">_create_fresh_manifest</span>()
+            <span class="keyword">return</span> manifest
+        <span class="keyword">return</span> self.<span class="func">_create_fresh_manifest</span>()
+
+    <span class="keyword">def</span> <span class="func">_create_fresh_manifest</span>(self) -&gt; dict:
+        <span class="keyword">return</span> {
+            <span class="string">"workflow_id"</span>: self.workflow_id,
+            <span class="string">"schema_version"</span>: <span class="type">SCHEMA_VERSION</span>,
+            <span class="string">"created_at"</span>: datetime.now(timezone.utc).isoformat(),
+            <span class="string">"steps"</span>: [
+                {<span class="string">"step_id"</span>: sid, <span class="string">"index"</span>: i, <span class="string">"status"</span>: <span class="string">"pending"</span>,
+                 <span class="string">"checkpoint_ref"</span>: <span class="keyword">None</span>, <span class="string">"retries"</span>: <span class="num">0</span>, <span class="string">"error"</span>: <span class="keyword">None</span>}
+                <span class="keyword">for</span> i, sid <span class="keyword">in</span> enumerate(self.steps)
+            ]
+        }
+
+    <span class="keyword">def</span> <span class="func">save_checkpoint</span>(self, step_index: int, data: dict):
+        <span class="string">"""Atomically persist step output using write-then-rename.
+        
+        WHY: The atomic write pattern (Section 5.3) prevents
+        corrupted checkpoint files from crashes during the write.
+        """</span>
+        step = self.manifest[<span class="string">"steps"</span>][step_index]
+        os.makedirs(<span class="type">CHECKPOINT_DIR</span>, exist_ok=<span class="keyword">True</span>)
+
+        <span class="comment"># Phase 1: Write to temp file</span>
+        tmp_path = f<span class="string">"{<span class="type">CHECKPOINT_DIR</span>}/{step['step_id']}.tmp"</span>
+        <span class="keyword">with</span> open(tmp_path, <span class="string">'w'</span>) <span class="keyword">as</span> f:
+            json.dump(data, f, indent=<span class="num">2</span>)
+            f.flush()
+            os.fsync(f.fileno())
+
+        <span class="comment"># Phase 2: Atomic rename</span>
+        final_path = f<span class="string">"{<span class="type">CHECKPOINT_DIR</span>}/{step['step_id']}.json"</span>
+        os.rename(tmp_path, final_path)
+
+        <span class="comment"># Phase 3: Update manifest AFTER checkpoint is safe</span>
+        step[<span class="string">"status"</span>] = <span class="string">"completed"</span>
+        step[<span class="string">"checkpoint_ref"</span>] = final_path
+        step[<span class="string">"completed_at"</span>] = datetime.now(timezone.utc).isoformat()
+        self.<span class="func">_persist_manifest</span>()
+
+    <span class="keyword">def</span> <span class="func">load_checkpoint</span>(self, step_index: int) -&gt; dict:
+        <span class="string">"""Load the persisted output of a completed step."""</span>
+        ref = self.manifest[<span class="string">"steps"</span>][step_index][<span class="string">"checkpoint_ref"</span>]
+        <span class="keyword">if</span> ref <span class="keyword">and</span> Path(ref).exists():
+            <span class="keyword">return</span> json.loads(Path(ref).read_text())
+        <span class="keyword">raise</span> FileNotFoundError(f<span class="string">"Checkpoint missing for step {step_index}"</span>)
+
+    <span class="keyword">def</span> <span class="func">find_resumption_point</span>(self) -&gt; int:
+        <span class="string">"""Find the first non-completed step (Section 5.4).
+        
+        WHY: This is the core of crash recovery. We walk the
+        manifest to find where to resume, NOT where we stopped.
+        """</span>
+        <span class="keyword">for</span> step <span class="keyword">in</span> self.manifest[<span class="string">"steps"</span>]:
+            <span class="keyword">if</span> step[<span class="string">"status"</span>] != <span class="string">"completed"</span>:
+                <span class="keyword">return</span> step[<span class="string">"index"</span>]
+        <span class="keyword">return</span> len(self.manifest[<span class="string">"steps"</span>])  <span class="comment"># All complete</span>
+
+    <span class="keyword">def</span> <span class="func">_persist_manifest</span>(self):
+        self.manifest[<span class="string">"updated_at"</span>] = datetime.now(timezone.utc).isoformat()
+        Path(<span class="type">MANIFEST_PATH</span>).write_text(json.dumps(self.manifest, indent=<span class="num">2</span>))
+
+
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+<span class="comment"># 2. VERIFICATION GATES (Section 5.2)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+
+<span class="keyword">class</span> <span class="type">GateFailure</span>(Exception):
+    <span class="string">"""Raised when a verification gate rejects step output."""</span>
+    <span class="keyword">def</span> <span class="func">__init__</span>(self, step_id: str, reason: str):
+        self.step_id = step_id
+        self.reason = reason
+        super().__init__(f<span class="string">"Gate failed at {step_id}: {reason}"</span>)
+
+
+<span class="keyword">def</span> <span class="func">verify_structural</span>(data: dict, required_keys: list[str]) -&gt; bool:
+    <span class="string">"""Level 1 gate: cheapest check — schema/structure validation.
+    
+    WHY: Always run structural checks FIRST (cheapest-first heuristic).
+    No LLM cost, millisecond execution.
+    """</span>
+    <span class="keyword">return</span> all(k <span class="keyword">in</span> data <span class="keyword">for</span> k <span class="keyword">in</span> required_keys)
+
+
+<span class="keyword">def</span> <span class="func">verify_constraints</span>(data: dict, rules: list[callable]) -&gt; tuple[bool, str]:
+    <span class="string">"""Level 2 gate: domain-specific business logic checks.
+    
+    WHY: Catches semantic errors that structure checks miss,
+    without the cost of an LLM call.
+    """</span>
+    <span class="keyword">for</span> rule <span class="keyword">in</span> rules:
+        ok, msg = rule(data)
+        <span class="keyword">if not</span> ok:
+            <span class="keyword">return</span> <span class="keyword">False</span>, msg
+    <span class="keyword">return</span> <span class="keyword">True</span>, <span class="string">""</span>
+
+
+<span class="keyword">def</span> <span class="func">verify_semantic</span>(data: dict, criteria: str, llm_client) -&gt; tuple[bool, str]:
+    <span class="string">"""Level 3 gate: LLM-based quality/coherence check.
+    
+    WHY: Most expensive gate — use only when structural and
+    constraint checks cannot catch the class of errors you need
+    to detect (e.g., logical coherence, completeness of reasoning).
+    """</span>
+    response = llm_client.evaluate(
+        prompt=f<span class="string">"Evaluate if this output meets: {criteria}\n\nOutput: {data}"</span>,
+        response_format={<span class="string">"pass"</span>: bool, <span class="string">"reason"</span>: str}
+    )
+    <span class="keyword">return</span> response[<span class="string">"pass"</span>], response.get(<span class="string">"reason"</span>, <span class="string">""</span>)
+
+
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+<span class="comment"># 3. PIPELINE STEPS (Section 5.1 — each step: single responsibility)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+
+<span class="keyword">def</span> <span class="func">step_parse</span>(raw_input: str) -&gt; dict:
+    <span class="string">"""Step 0: Parse raw input into structured form.
+    
+    WHY: Isolating parsing ensures that format errors are caught
+    before any downstream processing begins.
+    """</span>
+    <span class="comment"># ... parsing logic ...</span>
+    <span class="keyword">return</span> {<span class="string">"title"</span>: ..., <span class="string">"sections"</span>: [...], <span class="string">"metadata"</span>: {...}}
+
+
+<span class="keyword">def</span> <span class="func">step_enrich</span>(parsed: dict) -&gt; dict:
+    <span class="string">"""Step 1: Enrich parsed data with additional context.
+    
+    WHY: Enrichment (lookups, external data fetches) is isolated
+    because it depends on external services that may fail.
+    """</span>
+    <span class="comment"># ... enrichment logic ...</span>
+    <span class="keyword">return</span> {**parsed, <span class="string">"enrichments"</span>: {...}}
+
+
+<span class="keyword">def</span> <span class="func">step_analyze</span>(enriched: dict) -&gt; dict:
+    <span class="string">"""Step 2: Deep analysis using LLM reasoning.
+    
+    WHY: The most expensive step — isolating it allows retry
+    with feedback or model escalation on failure.
+    """</span>
+    <span class="comment"># ... LLM analysis ...</span>
+    <span class="keyword">return</span> {**enriched, <span class="string">"analysis"</span>: {...}, <span class="string">"insights"</span>: [...]}
+
+
+<span class="keyword">def</span> <span class="func">step_generate</span>(analyzed: dict) -&gt; dict:
+    <span class="string">"""Step 3: Generate final report from analysis.
+    
+    WHY: Generation is separated from analysis so that if the
+    report format is wrong, we can regenerate without re-analyzing.
+    """</span>
+    <span class="comment"># ... report generation ...</span>
+    <span class="keyword">return</span> {<span class="string">"report"</span>: <span class="string">"..."</span>, <span class="string">"summary"</span>: <span class="string">"..."</span>}
+
+
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+<span class="comment"># 4. PIPELINE ORCHESTRATOR (Ties everything together)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+
+<span class="keyword">class</span> <span class="type">ResilientPipeline</span>:
+    <span class="string">"""Orchestrates multi-step execution with full resilience.
+    
+    Integrates: decomposition (5.1), gates (5.2), checkpoints (5.3),
+    crash recovery (5.4), and session management (5.5).
+    """</span>
+
+    <span class="keyword">def</span> <span class="func">__init__</span>(self, workflow_id: str, session_name: str = <span class="keyword">None</span>):
+        self.steps_config = [
+            {
+                <span class="string">"id"</span>: <span class="string">"parse"</span>,
+                <span class="string">"fn"</span>: step_parse,
+                <span class="string">"gate"</span>: <span class="keyword">lambda</span> d: verify_structural(d, [<span class="string">"title"</span>, <span class="string">"sections"</span>]),
+                <span class="string">"gate_type"</span>: <span class="string">"structural"</span>,
+            },
+            {
+                <span class="string">"id"</span>: <span class="string">"enrich"</span>,
+                <span class="string">"fn"</span>: step_enrich,
+                <span class="string">"gate"</span>: <span class="keyword">lambda</span> d: verify_structural(d, [<span class="string">"enrichments"</span>]),
+                <span class="string">"gate_type"</span>: <span class="string">"structural"</span>,
+            },
+            {
+                <span class="string">"id"</span>: <span class="string">"analyze"</span>,
+                <span class="string">"fn"</span>: step_analyze,
+                <span class="string">"gate"</span>: <span class="keyword">lambda</span> d: verify_semantic(d, <span class="string">"complete analysis"</span>, llm),
+                <span class="string">"gate_type"</span>: <span class="string">"semantic"</span>,
+            },
+            {
+                <span class="string">"id"</span>: <span class="string">"generate"</span>,
+                <span class="string">"fn"</span>: step_generate,
+                <span class="string">"gate"</span>: <span class="keyword">lambda</span> d: verify_structural(d, [<span class="string">"report"</span>, <span class="string">"summary"</span>]),
+                <span class="string">"gate_type"</span>: <span class="string">"structural"</span>,
+            },
+        ]
+        step_ids = [s[<span class="string">"id"</span>] <span class="keyword">for</span> s <span class="keyword">in</span> self.steps_config]
+        self.state = WorkflowState(workflow_id, step_ids)
+        self.session_name = session_name <span class="keyword">or</span> workflow_id
+
+    <span class="keyword">def</span> <span class="func">run</span>(self, initial_input):
+        <span class="string">"""Execute the pipeline with crash recovery support.
+        
+        WHY: The resumption point check (Section 5.4) means this
+        method handles both fresh runs AND recovery runs identically.
+        """</span>
+        start_index = self.state.<span class="func">find_resumption_point</span>()
+
+        <span class="keyword">if</span> start_index &gt; <span class="num">0</span>:
+            print(f<span class="string">"♻ Resuming from step {start_index} (recovered)"</span>)
+            <span class="comment"># Load the last completed step's output as input</span>
+            current_data = self.state.<span class="func">load_checkpoint</span>(start_index - <span class="num">1</span>)
+        <span class="keyword">else</span>:
+            print(<span class="string">"▶ Starting fresh pipeline run"</span>)
+            current_data = initial_input
+
+        <span class="keyword">for</span> i <span class="keyword">in</span> range(start_index, len(self.steps_config)):
+            step = self.steps_config[i]
+            print(f<span class="string">"\n── Step {i}: {step['id']} ──"</span>)
+
+            success = <span class="keyword">False</span>
+            <span class="keyword">for</span> attempt <span class="keyword">in</span> range(<span class="type">MAX_RETRIES</span>):
+                <span class="keyword">try</span>:
+                    <span class="comment"># Execute the step</span>
+                    result = step[<span class="string">"fn"</span>](current_data)
+
+                    <span class="comment"># Run verification gate (Section 5.2)</span>
+                    gate_result = step[<span class="string">"gate"</span>](result)
+                    <span class="keyword">if</span> isinstance(gate_result, tuple):
+                        passed, reason = gate_result
+                    <span class="keyword">else</span>:
+                        passed, reason = gate_result, <span class="string">""</span>
+
+                    <span class="keyword">if not</span> passed:
+                        <span class="keyword">raise</span> GateFailure(step[<span class="string">"id"</span>], reason)
+
+                    <span class="comment"># Gate passed — persist checkpoint (Section 5.3)</span>
+                    self.state.<span class="func">save_checkpoint</span>(i, result)
+                    current_data = result
+                    success = <span class="keyword">True</span>
+                    print(f<span class="string">"  ✓ Step {step['id']} completed (attempt {attempt+1})"</span>)
+                    <span class="keyword">break</span>
+
+                <span class="keyword">except</span> GateFailure <span class="keyword">as</span> gf:
+                    <span class="comment"># HALT → LOG → REMEDIATE (retry with feedback)</span>
+                    print(f<span class="string">"  ✗ Gate failed: {gf.reason} (attempt {attempt+1})"</span>)
+                    self.state.manifest[<span class="string">"steps"</span>][i][<span class="string">"retries"</span>] = attempt + <span class="num">1</span>
+                    self.state.manifest[<span class="string">"steps"</span>][i][<span class="string">"error"</span>] = gf.reason
+                    self.state.<span class="func">_persist_manifest</span>()
+
+                    <span class="keyword">if</span> attempt == <span class="type">MAX_RETRIES</span> - <span class="num">1</span>:
+                        print(f<span class="string">"  ✗ Retry budget exhausted — ESCALATING"</span>)
+                        self.state.manifest[<span class="string">"steps"</span>][i][<span class="string">"status"</span>] = <span class="string">"failed"</span>
+                        self.state.<span class="func">_persist_manifest</span>()
+                        <span class="keyword">raise</span>  <span class="comment"># Escalate to caller</span>
+
+            <span class="keyword">if not</span> success:
+                <span class="keyword">break</span>
+
+        print(<span class="string">"\n✅ Pipeline completed successfully"</span>)
+        <span class="keyword">return</span> current_data
+
+    <span class="keyword">def</span> <span class="func">fork</span>(self, new_session_name: str) -&gt; <span class="string">"ResilientPipeline"</span>:
+        <span class="string">"""Create a divergent copy of this pipeline (Section 5.5).
+        
+        WHY: fork_session enables exploring alternative strategies
+        without losing the original execution path. Both branches
+        continue independently.
+        """</span>
+        <span class="keyword">import</span> copy
+        forked = <span class="type">ResilientPipeline</span>(
+            workflow_id=f<span class="string">"{self.state.workflow_id}-fork-{new_session_name}"</span>,
+            session_name=new_session_name
+        )
+        <span class="comment"># Deep copy current state — branches are independent after this</span>
+        forked.state.manifest = copy.deepcopy(self.state.manifest)
+        forked.state.manifest[<span class="string">"forked_from"</span>] = self.state.workflow_id
+        forked.state.manifest[<span class="string">"fork_point"</span>] = self.state.<span class="func">find_resumption_point</span>() - <span class="num">1</span>
+        forked.state.<span class="func">_persist_manifest</span>()
+        <span class="keyword">return</span> forked
+
+
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+<span class="comment"># 5. USAGE</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════════════</span>
+
+<span class="comment"># Fresh run (or automatic crash recovery)</span>
+pipeline = ResilientPipeline(<span class="string">"doc-analysis-001"</span>, session_name=<span class="string">"quarterly-report"</span>)
+result = pipeline.run(raw_document_input)
+
+<span class="comment"># Fork for alternative analysis</span>
+alt_pipeline = pipeline.fork(<span class="string">"quarterly-report-aggressive-tone"</span>)
+alt_result = alt_pipeline.run(raw_document_input)
+</pre>
+
+<h3>Developer Checklist — Building a Resilient Pipeline</h3>
+<ul class="checklist">
+  <li><strong>Decompose</strong> the task into steps with single responsibilities and explicit artifact boundaries</li>
+  <li><strong>Define the output schema</strong> for each step — typed, versioned, documented</li>
+  <li><strong>Add verification gates</strong> between every pair of adjacent steps (structural → constraint → semantic)</li>
+  <li><strong>Set a retry budget</strong> for every step — no unbounded retries</li>
+  <li><strong>Implement atomic checkpoint writes</strong> using the write-then-rename pattern</li>
+  <li><strong>Design the progress manifest</strong> with <code>schema_version</code>, step status, timestamps, and checkpoint refs</li>
+  <li><strong>Write the recovery algorithm</strong> — load manifest → find resumption point → load checkpoint → resume</li>
+  <li><strong>Handle non-idempotent steps</strong> — use idempotency keys, effect logs, or two-phase commit</li>
+  <li><strong>Validate schema version</strong> on recovery — reject incompatible checkpoints</li>
+  <li><strong>Support named sessions</strong> — assign human-readable names for retrieval and management</li>
+  <li><strong>Implement fork support</strong> — deep-copy state with lineage tracking for parallel exploration</li>
+  <li><strong>Test the failure paths</strong> — simulate crashes at every step boundary and verify correct recovery</li>
+  <li><strong>Add observability</strong> — log every gate result, retry attempt, and recovery event</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Exam Tip — Section 5.6</div>
+  <p>Hands-on questions typically present a pipeline with a deliberate flaw and ask you to identify it. Common flaws to watch for:</p>
+  <ul>
+    <li>Missing verification gate between two steps</li>
+    <li>Checkpoint written after manifest update (wrong order)</li>
+    <li>No schema version in the manifest</li>
+    <li>Retry without a budget limit</li>
+    <li>Non-idempotent step without side-effect protection</li>
+    <li>Fork that shares mutable state with the original</li>
+  </ul>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER SUMMARY MAP                                           -->
+<!-- ============================================================ -->
+<hr>
+<h2 id="summary-map">Chapter Summary Map</h2>
+
+<div class="callout callout-summary">
+  <div class="callout-title">📘 Chapter 5 at a Glance</div>
+  <p>This map shows how each section's core concept connects to the overall architecture of a resilient multi-step workflow.</p>
+</div>
+
+<table>
+  <tbody><tr><th>Section</th><th>Core Concept</th><th>Key Artifact</th><th>Answers the Question…</th></tr>
+  <tr>
+    <td><strong>5.1</strong></td>
+    <td>Multi-step decomposition with intermediate verification</td>
+    <td>Step definitions, artifact schemas</td>
+    <td><em>"How do I structure a complex task for reliability?"</em></td>
+  </tr>
+  <tr>
+    <td><strong>5.2</strong></td>
+    <td>Verification gates (structural → constraint → semantic)</td>
+    <td>Gate functions, retry budget</td>
+    <td><em>"How do I prevent errors from propagating downstream?"</em></td>
+  </tr>
+  <tr>
+    <td><strong>5.3</strong></td>
+    <td>Explicit state persistence via manifests + checkpoints</td>
+    <td>Progress manifest, checkpoint files</td>
+    <td><em>"How do I preserve progress so nothing is lost on failure?"</em></td>
+  </tr>
+  <tr>
+    <td><strong>5.4</strong></td>
+    <td>Crash recovery through checkpoint-based resumption</td>
+    <td>Recovery algorithm, idempotency guards</td>
+    <td><em>"How do I resume from where I left off after a crash?"</em></td>
+  </tr>
+  <tr>
+    <td><strong>5.5</strong></td>
+    <td>Session state, resumption, and forking</td>
+    <td><code>fork_session</code>, named sessions, lineage</td>
+    <td><em>"How do I manage, continue, and branch workflow executions?"</em></td>
+  </tr>
+  <tr>
+    <td><strong>5.6</strong></td>
+    <td>Putting it all together in a resilient pipeline</td>
+    <td>Complete implementation, developer checklist</td>
+    <td><em>"What does a production-grade implementation look like?"</em></td>
+  </tr>
+</tbody></table>
+
+
+<!-- ============================================================ -->
+<!-- CONCEPT DEPENDENCY CHAIN                                      -->
+<!-- ============================================================ -->
+<h2 id="dependency-chain">Concept Dependency Chain</h2>
+
+<p>Each section builds on the previous. Here is the directed dependency graph — understanding them in order is essential:</p>
+
+<div class="diagram">  <span class="node">5.1 Decomposition</span>
+       <span class="arrow">│</span>
+       <span class="arrow">│</span>  <span class="comment">"Steps need validation between them"</span>
+       <span class="arrow">▼</span>
+  <span class="gate">5.2 Verification Gates</span>
+       <span class="arrow">│</span>
+       <span class="arrow">│</span>  <span class="comment">"Validated results need to be saved durably"</span>
+       <span class="arrow">▼</span>
+  <span class="state">5.3 State Persistence (Manifests + Checkpoints)</span>
+       <span class="arrow">│</span>
+       <span class="arrow">│</span>  <span class="comment">"Saved state enables recovery from failures"</span>
+       <span class="arrow">▼</span>
+  <span class="fail">5.4 Crash Recovery</span>
+       <span class="arrow">│</span>
+       <span class="arrow">│</span>  <span class="comment">"Recovery + state = full session management"</span>
+       <span class="arrow">▼</span>
+  <span class="node">5.5 Sessions, Resumption &amp; Forking</span>
+       <span class="arrow">│</span>
+       <span class="arrow">│</span>  <span class="comment">"All concepts integrated into a real system"</span>
+       <span class="arrow">▼</span>
+  <span class="gate">5.6 Hands-On Pipeline (synthesis of all sections)</span></div>
+
+<p><strong>Key insight:</strong> You cannot implement 5.4 (recovery) without 5.3 (checkpoints). You cannot implement 5.3 without 5.2 (gates verify what gets checkpointed). You cannot implement 5.2 without 5.1 (steps create the boundaries where gates live). The chain is strictly ordered.</p>
+
+
+<!-- ============================================================ -->
+<!-- GLOSSARY                                                      -->
+<!-- ============================================================ -->
+<h2 id="glossary">Glossary</h2>
+
+<table>
+  <tbody><tr><th>Term</th><th>Definition</th><th>Section</th></tr>
+  <tr><td><span class="term">Multi-Step Workflow</span></td><td>A complex task decomposed into discrete, bounded stages with explicit intermediate artifacts</td><td>5.1</td></tr>
+  <tr><td><span class="term">Intermediate Artifact</span></td><td>The typed, structured output produced by a single step and consumed by the next</td><td>5.1</td></tr>
+  <tr><td><span class="term">Single Responsibility</span></td><td>Design principle: each step does exactly one thing (parse, validate, transform, generate, or review)</td><td>5.1</td></tr>
+  <tr><td><span class="term">Idempotency</span></td><td>Property where re-running a step with the same input produces the same result without harmful side effects</td><td>5.1, 5.4</td></tr>
+  <tr><td><span class="term">Verification Gate</span></td><td>A programmatic or model-driven checkpoint that validates step output before the next step proceeds</td><td>5.2</td></tr>
+  <tr><td><span class="term">Structural Validation</span></td><td>Gate type checking schema, types, and format — cheapest, always first</td><td>5.2</td></tr>
+  <tr><td><span class="term">Constraint Validation</span></td><td>Gate type checking domain-specific business rules</td><td>5.2</td></tr>
+  <tr><td><span class="term">Semantic Validation</span></td><td>Gate type using LLM to evaluate coherence, completeness, or alignment — most expensive</td><td>5.2</td></tr>
+  <tr><td><span class="term">Gate Disposition</span></td><td>Action on failure: HALT, RETRY, FALLBACK, or ESCALATE</td><td>5.2</td></tr>
+  <tr><td><span class="term">Retry Budget</span></td><td>Finite limit on retry attempts per step — prevents infinite loops</td><td>5.2</td></tr>
+  <tr><td><span class="term">Progress Manifest</span></td><td>High-level persistent ledger tracking step completion status, timestamps, and error info</td><td>5.3</td></tr>
+  <tr><td><span class="term">Checkpoint File</span></td><td>Durable snapshot of a step's output data, written after successful verification</td><td>5.3</td></tr>
+  <tr><td><span class="term">Explicit State</span></td><td>State intentionally serialized and persisted to durable storage</td><td>5.3</td></tr>
+  <tr><td><span class="term">Implicit State</span></td><td>State held only in transient memory (context window, process variables) — lost on crash</td><td>5.3</td></tr>
+  <tr><td><span class="term">Atomic Write</span></td><td>Write operation that completes fully or not at all; implemented via write-then-rename</td><td>5.3</td></tr>
+  <tr><td><span class="term">Schema Versioning</span></td><td>Including a version number in checkpoint format for compatibility checking across pipeline versions</td><td>5.3, 5.4</td></tr>
+  <tr><td><span class="term">Resumption Point</span></td><td>The first non-completed step in the manifest — where execution resumes after recovery</td><td>5.4</td></tr>
+  <tr><td><span class="term">Idempotency Key</span></td><td>A unique identifier sent with external requests to prevent duplicate side effects</td><td>5.4</td></tr>
+  <tr><td><span class="term">Effect Log</span></td><td>A local record of side effects already executed, checked before re-execution on retry/recovery</td><td>5.4</td></tr>
+  <tr><td><span class="term">Two-Phase Commit</span></td><td>Pattern: prepare (draft/reserve) first, commit only after verification</td><td>5.4</td></tr>
+  <tr><td><span class="term">Session State</span></td><td>Complete snapshot of workflow execution: conversation, manifest, checkpoints, config</td><td>5.5</td></tr>
+  <tr><td><span class="term">Session Resumption</span></td><td>Reloading and continuing a suspended/interrupted session (same session, extended)</td><td>5.5</td></tr>
+  <tr><td><span class="term">fork_session</span></td><td>Operation that deep-copies session state to create an independent, divergent session</td><td>5.5</td></tr>
+  <tr><td><span class="term">Named Session</span></td><td>A session identified by a human-readable label for easy retrieval and management</td><td>5.5</td></tr>
+  <tr><td><span class="term">Fork Point</span></td><td>The exact state from which a fork diverges — shared history before, divergent after</td><td>5.5</td></tr>
+  <tr><td><span class="term">Session Lineage</span></td><td>Parent-child metadata linking forked sessions to their origin for traceability</td><td>5.5</td></tr>
+</tbody></table>
+
+
+<!-- ============================================================ -->
+<!-- EXAM STRATEGY                                                 -->
+<!-- ============================================================ -->
+<hr>
+<h2 id="exam-strategy">Exam Strategy for Chapter 5</h2>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Master Strategy</div>
+  <p>Chapter 5 questions revolve around <strong>failure handling</strong> and <strong>architectural decision-making</strong>. The exam writer's goal is to test whether you understand not just what happens on the happy path, but what happens when things go wrong — and which recovery mechanism addresses which failure mode.</p>
+</div>
+
+<h3>Question Types to Expect</h3>
+<table>
+  <tbody><tr><th>Type</th><th>Pattern</th><th>Strategy</th></tr>
+  <tr>
+    <td><strong>Scenario-Based</strong></td>
+    <td>"A pipeline crashes at Step 3. Which component determines where to resume?"</td>
+    <td>Map the scenario to the specific section: crash recovery → 5.4. The answer involves manifests and checkpoints, not session tokens or gate logs.</td>
+  </tr>
+  <tr>
+    <td><strong>Best Practice</strong></td>
+    <td>"What is the recommended approach for handling a gate failure?"</td>
+    <td>Apply the complete protocol: Halt → Log → Remediate. Any answer missing a step is incomplete.</td>
+  </tr>
+  <tr>
+    <td><strong>"Which Approach?"</strong></td>
+    <td>"Should you use session resumption or fork_session for X?"</td>
+    <td>Two-axis test: (1) continuing vs. exploring, (2) one session vs. two sessions. Match the scenario to the axis.</td>
+  </tr>
+  <tr>
+    <td><strong>Debugging</strong></td>
+    <td>"A recovered pipeline produces wrong data. What is the most likely cause?"</td>
+    <td>Top causes: stale checkpoints (schema version mismatch), non-idempotent side effects, wrong resumption point.</td>
+  </tr>
+  <tr>
+    <td><strong>Definition</strong></td>
+    <td>"What is a progress manifest?"</td>
+    <td>Be precise about scope: the manifest tracks <em>status</em>; checkpoints store <em>data</em>. Confusing these is the trap.</td>
+  </tr>
+</tbody></table>
+
+<h3>Trap Answers &amp; How to Spot Them</h3>
+<table>
+  <tbody><tr><th>Trap Pattern</th><th>Why It's Wrong</th><th>How to Spot It</th></tr>
+  <tr>
+    <td>"Log the error and continue to the next step"</td>
+    <td>Skips the HALT — corrupted data flows downstream</td>
+    <td>Any answer that continues after a gate failure without halting first</td>
+  </tr>
+  <tr>
+    <td>"Retry until success"</td>
+    <td>No retry budget → infinite loop risk</td>
+    <td>Look for the absence of a retry limit in the answer</td>
+  </tr>
+  <tr>
+    <td>"Use semantic validation for all gates"</td>
+    <td>Violates cheapest-first heuristic; wastes LLM calls on what a schema check could catch</td>
+    <td>Whenever the failure type is structural, the answer should use structural validation</td>
+  </tr>
+  <tr>
+    <td>"The session token determines where to resume"</td>
+    <td>Session tokens track identity, not progress; the manifest/checkpoint tracks progress</td>
+    <td>Any answer confusing authentication/identity with execution state</td>
+  </tr>
+  <tr>
+    <td>"Update the manifest first, then write the checkpoint"</td>
+    <td>If you crash between these two operations, the manifest says "done" but the data is missing</td>
+    <td>The correct order is always: checkpoint first → manifest second</td>
+  </tr>
+  <tr>
+    <td>"fork_session continues the existing session"</td>
+    <td>Fork creates a <em>new</em> session; resumption continues the existing one</td>
+    <td>Watch for answers that conflate fork with resume</td>
+  </tr>
+</tbody></table>
+
+<h3>Decision Frameworks</h3>
+
+<h4>"Which verification gate type should be used?"</h4>
+<div class="diagram">  <span class="gate">Can a schema/type/regex check catch it?</span>
+       <span class="arrow">│</span>                    <span class="arrow">│</span>
+      <span class="state">YES</span>                  <span class="fail">NO</span>
+       <span class="arrow">│</span>                    <span class="arrow">│</span>
+       <span class="arrow">▼</span>                    <span class="arrow">▼</span>
+  <span class="state">→ STRUCTURAL</span>       <span class="gate">Is it a business rule / logic constraint?</span>
+                          <span class="arrow">│</span>                    <span class="arrow">│</span>
+                         <span class="state">YES</span>                  <span class="fail">NO</span>
+                          <span class="arrow">│</span>                    <span class="arrow">│</span>
+                          <span class="arrow">▼</span>                    <span class="arrow">▼</span>
+                     <span class="state">→ CONSTRAINT</span>         <span class="gate">→ SEMANTIC (LLM)</span></div>
+
+<h4>"Should I resume or fork?"</h4>
+<div class="diagram">  <span class="gate">Do I want to CONTINUE the same execution path?</span>
+       <span class="arrow">│</span>                    <span class="arrow">│</span>
+      <span class="state">YES</span>                  <span class="fail">NO</span>
+       <span class="arrow">│</span>                    <span class="arrow">│</span>
+       <span class="arrow">▼</span>                    <span class="arrow">▼</span>
+  <span class="state">→ RESUME</span>           <span class="gate">Do I want to keep the original AND explore?</span>
+                          <span class="arrow">│</span>                    <span class="arrow">│</span>
+                         <span class="state">YES</span>                  <span class="fail">NO</span>
+                          <span class="arrow">│</span>                    <span class="arrow">│</span>
+                          <span class="arrow">▼</span>                    <span class="arrow">▼</span>
+                     <span class="state">→ FORK</span>              <span class="gate">→ NEW SESSION</span></div>
+
+<h3>Memory Aids &amp; Mnemonics</h3>
+
+<div class="callout callout-tip">
+  <div class="callout-title">🧠 Mnemonics</div>
+  <p><strong>HLR</strong> — Gate failure protocol: <strong>H</strong>alt → <strong>L</strong>og → <strong>R</strong>emediate. Never skip a letter.</p>
+  <p><strong>SCS</strong> — Gate type order: <strong>S</strong>tructural → <strong>C</strong>onstraint → <strong>S</strong>emantic. Cheapest first.</p>
+  <p><strong>"Checkpoint = Data, Manifest = Status"</strong> — Repeat this distinction until it's automatic. The checkpoint stores <em>what was produced</em>; the manifest stores <em>whether it was produced</em>.</p>
+  <p><strong>"Write checkpoint, THEN manifest"</strong> — The correct ordering. Think of it as: "prove the work exists before marking it done."</p>
+  <p><strong>"Fork = 2, Resume = 1"</strong> — Number of sessions after the operation. Fork creates 2 independent sessions; resume continues the 1 existing session.</p>
+  <p><strong>CRISP</strong> — Five properties of a well-designed step: <strong>C</strong>hecked (verified), <strong>R</strong>ecoverable (checkpointed), <strong>I</strong>dempotent (safe to retry), <strong>S</strong>ingle-purpose, <strong>P</strong>ersisted (explicit state).</p>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- PRACTICE QUESTIONS                                             -->
+<!-- ============================================================ -->
+<h2 id="practice-questions">Practice Questions</h2>
+
+<!-- Q1 -->
+<div class="question-block">
+  <div class="q-label">Practice Question 1 — Crash Recovery</div>
+  <div class="q-text">A pipeline completes Steps 0–2 successfully before crashing during Step 3. On restart, which component determines where execution resumes?</div>
+  <ul class="q-options">
+    <li>A) The session token</li>
+    <li>B) The verification gate log for Step 3</li>
+    <li class="correct">C) The progress manifest / checkpoint files ✅</li>
+    <li>D) The fork_session identifier</li>
+  </ul>
+  <div class="q-explanation">
+    <strong>Explanation:</strong> The progress manifest records the completion status of each step, and the checkpoint files store the actual data. On restart, the recovery algorithm reads the manifest to find the first non-completed step (Step 3), loads Step 2's checkpoint as input, and resumes at Step 3. The session token tracks identity (not progress), the gate log records pass/fail verdicts (not resumption state), and <code>fork_session</code> is for creating divergent branches (not recovery).
+  </div>
+</div>
+
+<!-- Q2 -->
+<div class="question-block">
+  <div class="q-label">Practice Question 2 — Verification Gate Failure</div>
+  <div class="q-text">A verification gate detects that Step 2's output is missing a required field. What is the correct response protocol?</div>
+  <ul class="q-options">
+    <li>A) Log the error and proceed to Step 3 with a warning flag</li>
+    <li>B) Retry Step 2 indefinitely until the field appears</li>
+    <li class="correct">C) Halt execution, log the failure reason, then retry Step 2 with feedback (up to the retry budget) ✅</li>
+    <li>D) Skip Step 2 and use Step 1's output for Step 3 instead</li>
+  </ul>
+  <div class="q-explanation">
+    <strong>Explanation:</strong> The correct protocol is <strong>Halt → Log → Remediate</strong> (HLR). Option A skips the halt — corrupted data reaches Step 3. Option B has no retry budget — risks infinite loops. Option D skips a required step — violates the pipeline's data contract. Option C correctly halts, logs, and remediates with bounded retries and feedback to help the model self-correct.
+  </div>
+</div>
+
+<!-- Q3 -->
+<div class="question-block">
+  <div class="q-label">Practice Question 3 — State Persistence</div>
+  <div class="q-text">A developer writes the progress manifest update BEFORE the checkpoint file. The system crashes between the two writes. What is the consequence?</div>
+  <ul class="q-options">
+    <li>A) No consequence — the system is designed to handle this</li>
+    <li>B) The step is silently skipped on recovery</li>
+    <li class="correct">C) On recovery, the manifest says the step completed, but the checkpoint data is missing — causing a recovery failure or silent data loss ✅</li>
+    <li>D) The checkpoint is automatically regenerated from the manifest</li>
+  </ul>
+  <div class="q-explanation">
+    <strong>Explanation:</strong> The manifest now says "completed" for the step, but no checkpoint file exists. On recovery, the system believes the step is done and tries to load a checkpoint that doesn't exist — this either throws a <code>FileNotFoundError</code> or causes silent data loss if the system proceeds without the data. This is why the correct order is <strong>checkpoint first, manifest second</strong>. The manifest is never auto-generated from the checkpoint or vice versa.
+  </div>
+</div>
+
+<!-- Q4 -->
+<div class="question-block">
+  <div class="q-label">Practice Question 4 — Fork vs. Resume</div>
+  <div class="q-text">A product team has completed Steps 0–3 of a report generation pipeline. They now want to explore two different formatting strategies for the final step while keeping the original execution intact. Which operation should they use?</div>
+  <ul class="q-options">
+    <li>A) Resume the session twice with different parameters</li>
+    <li class="correct">B) Fork the session into two named branches, each with different formatting parameters ✅</li>
+    <li>C) Create a new verification gate for each formatting strategy</li>
+    <li>D) Roll back to Step 2 and re-run with both strategies sequentially</li>
+  </ul>
+  <div class="q-explanation">
+    <strong>Explanation:</strong> The requirement is to explore <em>alternatives while keeping the original intact</em> — this is the textbook use case for <code>fork_session</code>. Resuming twice would mutate the same session (you can't resume into two parallel paths). Verification gates validate output, not explore alternatives. Rolling back wastes the work already done in Steps 2–3. Forking creates two independent named sessions that share the Steps 0–3 history and diverge at Step 4.
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="question-block">
+  <div class="q-label">Practice Question 5 — Gate Selection</div>
+  <div class="q-text">A pipeline step generates a JSON response containing financial calculations. You need to verify that: (1) the JSON has all required fields, (2) no total exceeds the approved budget, and (3) the executive summary is coherent and complete. In what order should these checks be applied?</div>
+  <ul class="q-options">
+    <li>A) Semantic → Constraint → Structural</li>
+    <li>B) Constraint → Structural → Semantic</li>
+    <li class="correct">C) Structural → Constraint → Semantic ✅</li>
+    <li>D) All three simultaneously for efficiency</li>
+  </ul>
+  <div class="q-explanation">
+    <strong>Explanation:</strong> The <strong>cheapest-first heuristic</strong> (SCS: Structural → Constraint → Semantic) dictates the order. (1) Structural validation checks JSON schema conformance — instant, zero cost. If it fails, there's no point running more expensive checks. (2) Constraint validation checks budget limits — fast deterministic logic. (3) Semantic validation (LLM-based) evaluates the executive summary — most expensive, only run when the data is structurally and logically sound. Running them simultaneously wastes LLM calls when the JSON doesn't even parse correctly.
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                        -->
+<!-- ============================================================ -->
+<hr>
+<p style="text-align:center; color:#475569; font-size:0.82rem; margin-top:40px;">
+  Claude Certified Architect — Foundations &amp; Professional &nbsp;•&nbsp; Chapter 5 Study Notes &nbsp;•&nbsp; Generated September 2026
+</p>
+
+</div><!-- /.main -->
+
+
+</body></html>

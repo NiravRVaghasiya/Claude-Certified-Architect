@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 61: Documentation &amp; Implementation Guidance — Study Notes</title>
+<style>
+  :root{
+    --bg:#f6f8fb; --surface:#ffffff; --ink:#1a2233; --ink-soft:#495267;
+    --muted:#6b7688; --line:#e3e8f0; --line-soft:#eef1f6;
+    --brand:#6b4de6; --brand-soft:#efeafe; --brand-ink:#4a2fb8;
+    --accent:#c15f18; --accent-soft:#fdf1e6;
+    --ok:#1f8a5b; --ok-soft:#e6f6ee;
+    --warn:#b7791f; --warn-soft:#fdf5e3;
+    --danger:#c0392b; --danger-soft:#fbeae8;
+    --info:#1d6fb8; --info-soft:#e7f1fb;
+    --code-bg:#1e2330; --code-ink:#e6e9f2;
+    --radius:12px; --radius-sm:8px;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",ui-monospace,Consolas,"Roboto Mono",monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); line-height:1.6; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:32px 20px 80px;}
+
+  /* Header */
+  header.hero{
+    background:linear-gradient(135deg,#6b4de6 0%,#4a2fb8 100%);
+    color:#fff; border-radius:16px; padding:34px 32px; margin-bottom:28px;
+    box-shadow:0 10px 30px rgba(74,47,184,.22);
+  }
+  header.hero .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; opacity:.85; font-weight:600;}
+  header.hero h1{margin:8px 0 6px; font-size:30px; line-height:1.2;}
+  header.hero p{margin:0; opacity:.92; max-width:70ch;}
+  .badges{margin-top:16px; display:flex; flex-wrap:wrap; gap:8px;}
+  .badges span{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28);
+    padding:4px 11px; border-radius:100px; font-size:12.5px; font-weight:500;}
+
+  /* Nav TOC */
+  nav.toc{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 22px; margin-bottom:32px;
+  }
+  nav.toc h2{margin:0 0 12px; font-size:15px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted);}
+  nav.toc ol{margin:0; padding-left:20px; columns:2; column-gap:32px;}
+  nav.toc li{margin:6px 0; break-inside:avoid;}
+  nav.toc a{color:var(--brand-ink); text-decoration:none; font-weight:500;}
+  nav.toc a:hover{text-decoration:underline;}
+
+  /* Sections */
+  section{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px 30px; margin-bottom:26px; scroll-margin-top:20px;
+  }
+  section > h2{
+    margin:0 0 6px; font-size:23px; color:var(--ink);
+    border-bottom:3px solid var(--brand-soft); padding-bottom:12px;
+  }
+  section .lead{color:var(--ink-soft); margin:14px 0 20px;}
+  h3{font-size:17px; margin:26px 0 10px; color:var(--brand-ink); display:flex; align-items:center; gap:8px;}
+  h4{font-size:14.5px; margin:18px 0 8px; color:var(--ink); text-transform:uppercase; letter-spacing:.04em;}
+  p{margin:10px 0;}
+  strong{color:var(--ink);}
+  ul,ol{margin:10px 0; padding-left:22px;}
+  li{margin:6px 0;}
+  code{font-family:var(--mono); background:var(--brand-soft); color:var(--brand-ink);
+    padding:2px 6px; border-radius:5px; font-size:13.5px;}
+
+  /* Tables */
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px;}
+  th{background:var(--brand-soft); color:var(--brand-ink); text-align:left;
+    padding:10px 12px; font-weight:600; border:1px solid var(--line);}
+  td{padding:10px 12px; border:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:#fafbfe;}
+
+  /* Code blocks */
+  pre{background:var(--code-bg); color:var(--code-ink); padding:16px 18px;
+    border-radius:var(--radius-sm); overflow-x:auto; font-family:var(--mono);
+    font-size:13px; line-height:1.55; margin:14px 0;}
+  pre code{background:none; color:inherit; padding:0;}
+  .tok-c{color:#7f8aa3;} .tok-k{color:#c792ea;} .tok-s{color:#c3e88d;} .tok-n{color:#f78c6c;}
+
+  /* Callout boxes */
+  .box{border-radius:var(--radius-sm); padding:16px 18px; margin:16px 0; border:1px solid;}
+  .box .t{font-weight:700; font-size:14px; margin-bottom:6px; display:flex; align-items:center; gap:8px;}
+  .tips{background:var(--ok-soft); border-color:#bfe6d1;}
+  .tips .t{color:var(--ok);}
+  .exam{background:var(--info-soft); border-color:#c3ddf3;}
+  .exam .t{color:var(--info);}
+  .trap{background:var(--danger-soft); border-color:#f2c9c3;}
+  .trap .t{color:var(--danger);}
+  .note{background:var(--warn-soft); border-color:#ecd9a8;}
+  .note .t{color:var(--warn);}
+  .box ul{margin:6px 0 0;}
+  .mnem{font-family:var(--mono); background:#fff; border:1px dashed var(--ok);
+    padding:2px 7px; border-radius:5px; font-weight:700; color:var(--ok);}
+
+  /* Flowchart (styled divs) */
+  .flow{display:flex; flex-wrap:wrap; align-items:stretch; gap:0; margin:18px 0;}
+  .flow .step{flex:1 1 0; min-width:120px; background:var(--brand-soft); border:1px solid #d8ccfa;
+    border-radius:var(--radius-sm); padding:12px 14px; text-align:center; position:relative;}
+  .flow .step .n{display:inline-block; width:22px; height:22px; line-height:22px; border-radius:50%;
+    background:var(--brand); color:#fff; font-size:12px; font-weight:700; margin-bottom:6px;}
+  .flow .step .lbl{font-weight:700; font-size:14px; color:var(--brand-ink);}
+  .flow .step .sub{font-size:12px; color:var(--muted); margin-top:3px;}
+  .flow .arrow{display:flex; align-items:center; justify-content:center; color:var(--brand); font-size:22px; padding:0 8px; font-weight:700;}
+
+  /* SVG wrapper */
+  .svgwrap{background:#fafbfe; border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px; margin:16px 0; overflow-x:auto;}
+
+  /* Compare grid */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0;}
+  .grid2 .col{border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px 16px; background:#fafbfe;}
+  .grid2 .col h4{margin-top:0;}
+
+  /* Summary checklist */
+  #summary{background:linear-gradient(135deg,#fff 0%,#f4f0ff 100%); border:1px solid #ded4fb;}
+  .chk{list-style:none; padding-left:0;}
+  .chk li{position:relative; padding-left:30px; margin:10px 0;}
+  .chk li::before{content:"✓"; position:absolute; left:0; top:0; width:20px; height:20px;
+    background:var(--ok); color:#fff; border-radius:5px; font-size:13px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;}
+  .chk li strong{color:var(--brand-ink);}
+
+  footer{text-align:center; color:var(--muted); font-size:13px; margin-top:24px;}
+  @media(max-width:640px){
+    nav.toc ol{columns:1;}
+    .grid2{grid-template-columns:1fr;}
+    .flow{flex-direction:column;}
+    .flow .arrow{transform:rotate(90deg); padding:4px 0;}
+    section{padding:22px 18px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Claude Certified Architect · Foundations &amp; Professional</div>
+    <h1>Chapter 61 — Documentation &amp; Implementation Guidance</h1>
+    <p>Exam-ready study notes covering how to document AI architectures, write implementation guides and runbooks, transfer knowledge cleanly, and produce a real architecture document end to end.</p>
+    <div class="badges">
+      <span>5 subsections · 61.1–61.5</span>
+      <span>Visuals + Mnemonics + Exam Strategy</span>
+      <span>Domain: Docs &amp; Handoff</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s61-1">61.1 Documenting AI Architectures: What to Include and Why</a></li>
+      <li><a href="#s61-2">61.2 Implementation Guides for Development Teams</a></li>
+      <li><a href="#s61-3">61.3 Runbooks for Operational Teams</a></li>
+      <li><a href="#s61-4">61.4 Knowledge Transfer and Handoff Strategies</a></li>
+      <li><a href="#s61-5">61.5 Hands-On: Creating Architecture Documentation</a></li>
+      <li><a href="#map">Chapter Map: How the Subsections Depend on Each Other</a></li>
+      <li><a href="#summary">Chapter Summary &amp; Quick Revision Checklist</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 61.1 ============ -->
+  <section id="s61-1">
+    <h2>61.1 Documenting AI Architectures: What to Include and Why</h2>
+    <p class="lead">Architecture documentation is the <strong>single source of truth</strong> for how an AI system is designed, why those design choices were made, and how it behaves under normal and failure conditions. For LLM systems built on Claude, good docs must go beyond boxes-and-arrows: they capture <strong>model choices, prompt/context strategy, guardrails, data flow, and rollback plans</strong> so the system can be audited, scaled, and safely operated.</p>
+
+    <h3>🧩 Key Components &amp; Why Each Matters</h3>
+    <table>
+      <thead>
+        <tr><th style="width:26%">Component</th><th style="width:37%">What it captures</th><th>Why it matters (audit / scale / compliance)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>System Context Diagram</strong> (C4 Level 1)</td><td>The AI system as one box, plus users, upstream/downstream systems, and external APIs (e.g. the Anthropic Messages API).</td><td>Sets scope and trust boundaries; auditors immediately see what data crosses which boundary.</td></tr>
+        <tr><td><strong>Data Flow Diagram (DFD)</strong></td><td>How a request travels: input → preprocessing → retrieval → model call → post-processing → output, plus where data is stored/logged.</td><td>Core to <strong>privacy &amp; compliance</strong> — shows where PII lives, what is sent to the model provider, and what is retained.</td></tr>
+        <tr><td><strong>Model Choices &amp; Rationale</strong></td><td>Which Claude model per task (e.g. a smaller/faster model for routing, a larger model for reasoning), context-window sizing, temperature, and fallback models.</td><td>Justifies cost/latency/quality trade-offs; supports scaling decisions and model-upgrade planning.</td></tr>
+        <tr><td><strong>Prompt &amp; Context Strategy</strong></td><td>System-prompt design, tool-use definitions, retrieval (RAG) sources, and context-management approach (e.g. prompt caching, truncation).</td><td>Prompts are part of the architecture — reproducibility and change control depend on documenting them.</td></tr>
+        <tr><td><strong>Guardrails &amp; Safety Controls</strong></td><td>Input validation, output filtering/moderation, allow/deny policies, human-in-the-loop checkpoints, and refusal handling.</td><td>Most-audited section; demonstrates responsible-AI controls and how misuse is prevented.</td></tr>
+        <tr><td><strong>Non-Functional Requirements (NFRs)</strong></td><td>Latency/throughput targets, availability SLOs, cost budgets, token limits, and quality/eval thresholds.</td><td>Defines "done"; scaling and capacity planning are impossible without them.</td></tr>
+        <tr><td><strong>Failure Modes &amp; Rollback Plan</strong></td><td>What happens on timeout, rate limit, degraded quality, or a bad prompt/model release; how to revert.</td><td>Frequently the <em>missing</em> section — critical for operational safety and change management.</td></tr>
+        <tr><td><strong>Assumptions, Risks &amp; Decisions (ADR log)</strong></td><td>Why alternatives were rejected, open risks, and dated decision records.</td><td>Preserves intent so future engineers don't re-litigate settled choices.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🔄 The Documentation Lifecycle</h3>
+    <p>Docs are living artifacts, not a one-time deliverable. The lifecycle mirrors the system it describes:</p>
+    <div class="flow">
+      <div class="step"><span class="n">1</span><div class="lbl">Draft</div><div class="sub">Capture context, decisions, diagrams</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">2</span><div class="lbl">Review</div><div class="sub">Peer + security + stakeholder sign-off</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">3</span><div class="lbl">Publish</div><div class="sub">Versioned, discoverable source of truth</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">4</span><div class="lbl">Maintain</div><div class="sub">Update on every architecture change</div></div>
+    </div>
+
+    <div class="box tips">
+      <div class="t">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li>Mnemonic for the core sections: <span class="mnem">C-DIME-GR</span> → <strong>C</strong>ontext, <strong>D</strong>ata flow, <strong>I</strong>mplementation notes, <strong>M</strong>odel choices, <strong>E</strong>valuation/NFRs, <strong>G</strong>uardrails, <strong>R</strong>ollback.</li>
+        <li>The two sections candidates forget — and exams love to test — are <strong>Guardrails</strong> and <strong>Rollback</strong>. If a doc is described as "complete" but has neither, that's usually the trap.</li>
+        <li>Use the <strong>C4 model</strong> (Context → Container → Component → Code) to scale diagram detail to the audience. Executives read Level 1; engineers read Levels 3–4.</li>
+        <li>Always record the <strong>"why," not just the "what."</strong> An ADR (Architecture Decision Record) answers audit questions before they're asked.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <div class="t">🎯 Exam Strategy</div>
+      <p>Questions here typically present a scenario ("A team wrote a doc containing X, Y, Z…") and ask <strong>"what's missing?"</strong> or <strong>"what should be added before an audit?"</strong></p>
+      <ul>
+        <li>Keyword <em>"audit / compliance / regulator"</em> → the answer usually involves <strong>data flow, guardrails, or PII handling</strong>.</li>
+        <li>Keyword <em>"scale / grow / more traffic"</em> → answer involves <strong>NFRs, model choice, cost/latency trade-offs</strong>.</li>
+        <li>Keyword <em>"safely change / new model version"</em> → answer involves <strong>rollback plan &amp; versioning</strong>.</li>
+        <li>Distractor watch: options that add <em>more diagrams</em> when the real gap is a <em>guardrail/rollback</em> section.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 61.2 ============ -->
+  <section id="s61-2">
+    <h2>61.2 Implementation Guides for Development Teams</h2>
+    <p class="lead">An <strong>implementation guide</strong> translates the architecture into concrete, reproducible engineering steps. Its reader is a <strong>developer</strong> who needs to build or extend the system — so it is prescriptive, example-heavy, and testable. Where architecture docs answer <em>"what and why,"</em> the implementation guide answers <em>"how do I build it correctly."</em></p>
+
+    <h3>🧱 Structure of a Dev-Facing Implementation Guide</h3>
+    <table>
+      <thead><tr><th style="width:30%">Section</th><th>Contents</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Prerequisites</strong></td><td>SDK versions, API keys/secrets management, environment setup, required permissions.</td></tr>
+        <tr><td><strong>Setup &amp; Configuration</strong></td><td>Environment variables, model IDs, timeouts, retry policy, rate-limit handling.</td></tr>
+        <tr><td><strong>Core Integration Patterns</strong></td><td>How to call the Messages API, system-prompt conventions, tool-use (function calling), streaming, and RAG wiring.</td></tr>
+        <tr><td><strong>Code &amp; Config Examples</strong></td><td>Copy-pasteable, minimal-but-complete snippets in the team's language.</td></tr>
+        <tr><td><strong>Error Handling</strong></td><td>Handling <code>429</code> rate limits (exponential backoff), timeouts, malformed tool calls, and refusals.</td></tr>
+        <tr><td><strong>Testing Checklist</strong></td><td>Unit, integration, prompt/eval, and regression tests before merge.</td></tr>
+        <tr><td><strong>Security &amp; Cost Notes</strong></td><td>Secret handling, PII redaction, token budgeting, prompt caching to cut cost.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>⌨️ Example: Configuration &amp; a Guarded API Call</h3>
+    <pre><code><span class="tok-c"># config (env-driven — never hardcode keys)</span>
+ANTHROPIC_API_KEY=<span class="tok-s">${SECRET_FROM_VAULT}</span>
+CLAUDE_MODEL=<span class="tok-s">claude-sonnet-4-5</span>
+MAX_TOKENS=<span class="tok-n">1024</span>
+REQUEST_TIMEOUT_S=<span class="tok-n">30</span>
+MAX_RETRIES=<span class="tok-n">3</span>
+
+<span class="tok-c"># pseudo-code: retry with backoff + guardrail</span>
+<span class="tok-k">def</span> generate(user_input):
+    validate_input(user_input)            <span class="tok-c"># input guardrail</span>
+    <span class="tok-k">for</span> attempt <span class="tok-k">in</span> range(MAX_RETRIES):
+        <span class="tok-k">try</span>:
+            resp = client.messages.create(
+                model=CLAUDE_MODEL,
+                max_tokens=MAX_TOKENS,
+                system=SYSTEM_PROMPT,     <span class="tok-c"># versioned, source-controlled</span>
+                messages=[{<span class="tok-s">"role"</span>:<span class="tok-s">"user"</span>,<span class="tok-s">"content"</span>:user_input}],
+            )
+            <span class="tok-k">return</span> filter_output(resp)      <span class="tok-c"># output guardrail</span>
+        <span class="tok-k">except</span> RateLimitError:            <span class="tok-c"># HTTP 429</span>
+            backoff(<span class="tok-n">2</span> ** attempt)</code></pre>
+
+    <h3>✅ Pre-Merge Testing Checklist</h3>
+    <table>
+      <thead><tr><th style="width:26%">Test type</th><th>Verifies</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Unit</strong></td><td>Input validation, parsing, output filtering logic in isolation.</td></tr>
+        <tr><td><strong>Integration</strong></td><td>Live/mocked API call succeeds, retries fire, timeouts respected.</td></tr>
+        <tr><td><strong>Prompt / Eval</strong></td><td>Outputs meet quality thresholds on a fixed eval set (accuracy, format, safety).</td></tr>
+        <tr><td><strong>Regression</strong></td><td>New prompt/model version does not degrade prior passing cases.</td></tr>
+        <tr><td><strong>Security</strong></td><td>No secrets in logs, PII redacted, injection attempts refused.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box note">
+      <div class="t">⚠️ Accuracy note</div>
+      <p>Model IDs and exact parameters evolve — an implementation guide should reference model names and API parameters from the <strong>current official Anthropic documentation</strong> rather than hardcoding assumptions. Treat prompts and model IDs as <strong>versioned config</strong>, not code constants.</p>
+    </div>
+
+    <div class="box tips">
+      <div class="t">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li>Mnemonic for guide sections: <span class="mnem">PSCET-S</span> → <strong>P</strong>rerequisites, <strong>S</strong>etup, <strong>C</strong>ore patterns, <strong>E</strong>xamples, <strong>T</strong>esting, <strong>S</strong>ecurity/cost.</li>
+        <li>Every code example should be <strong>minimal but runnable</strong> — enough to copy, paste, and get a green result.</li>
+        <li>Treat the <strong>system prompt as source-controlled config</strong>: version it, review it, and reference the version in the guide.</li>
+        <li>Always show the <strong>429 / rate-limit backoff pattern</strong> — it's the most common real-world integration bug.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <div class="t">🎯 Exam Strategy</div>
+      <p>Questions distinguish <strong>who the document is for</strong>. If the reader is a <em>developer building the system</em>, the answer is the <strong>implementation guide</strong> (not the runbook or architecture doc).</p>
+      <ul>
+        <li>Keyword <em>"onboard a new engineer to build/extend"</em> → implementation guide.</li>
+        <li>Keyword <em>"reproducible / step-by-step / code example"</em> → implementation guide.</li>
+        <li>Trap: choosing the <strong>runbook</strong> when the scenario is about <em>building</em>, not <em>operating</em>. Runbooks are for production incidents (see 61.3).</li>
+        <li>If asked what to add before merge, look for a <strong>testing/eval checklist</strong> — commonly the omitted answer.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 61.3 ============ -->
+  <section id="s61-3">
+    <h2>61.3 Runbooks for Operational Teams</h2>
+    <p class="lead">A <strong>runbook</strong> is an operational playbook for the team that <strong>keeps the system running in production</strong>. It is action-oriented and read <em>under pressure</em>: during an incident, on-call engineers should be able to follow it step-by-step without needing to understand the full design. Runbooks answer <em>"it's broken / behaving oddly — what do I do right now?"</em></p>
+
+    <h3>🆚 Runbook vs. Implementation Guide</h3>
+    <div class="grid2">
+      <div class="col">
+        <h4>Implementation Guide (61.2)</h4>
+        <ul>
+          <li><strong>Audience:</strong> developers building the system</li>
+          <li><strong>When used:</strong> during development / onboarding</li>
+          <li><strong>Goal:</strong> build it correctly &amp; reproducibly</li>
+          <li><strong>Tone:</strong> explanatory, example-rich</li>
+          <li><strong>Content:</strong> setup, code, integration patterns, tests</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Runbook (61.3)</h4>
+        <ul>
+          <li><strong>Audience:</strong> operators / on-call / SRE</li>
+          <li><strong>When used:</strong> in production, often during incidents</li>
+          <li><strong>Goal:</strong> detect, diagnose, restore, escalate</li>
+          <li><strong>Tone:</strong> terse, imperative, checklist-driven</li>
+          <li><strong>Content:</strong> alerts, procedures, escalation, rollback</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>🚨 Incident-Response Flow</h3>
+    <div class="svgwrap">
+      <svg viewBox="0 0 860 130" width="860" height="130" role="img" aria-label="Incident response flow: Detect, Triage, Diagnose, Mitigate, Escalate, Resolve and Post-mortem">
+        <defs>
+          <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#6b4de6"></path>
+          </marker>
+        </defs>
+        <g font-family="sans-serif" font-size="12.5" text-anchor="middle">
+          <g>
+            <rect x="8" y="40" width="110" height="50" rx="8" fill="#efeafe" stroke="#d8ccfa"></rect>
+            <text x="63" y="62" font-weight="700" fill="#4a2fb8">Detect</text>
+            <text x="63" y="78" fill="#6b7688">alert fires</text>
+          </g>
+          <line x1="120" y1="65" x2="146" y2="65" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar)"></line>
+          <g>
+            <rect x="150" y="40" width="110" height="50" rx="8" fill="#efeafe" stroke="#d8ccfa"></rect>
+            <text x="205" y="62" font-weight="700" fill="#4a2fb8">Triage</text>
+            <text x="205" y="78" fill="#6b7688">severity?</text>
+          </g>
+          <line x1="262" y1="65" x2="288" y2="65" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar)"></line>
+          <g>
+            <rect x="292" y="40" width="110" height="50" rx="8" fill="#efeafe" stroke="#d8ccfa"></rect>
+            <text x="347" y="62" font-weight="700" fill="#4a2fb8">Diagnose</text>
+            <text x="347" y="78" fill="#6b7688">check dashboards</text>
+          </g>
+          <line x1="404" y1="65" x2="430" y2="65" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar)"></line>
+          <g>
+            <rect x="434" y="40" width="110" height="50" rx="8" fill="#e6f6ee" stroke="#bfe6d1"></rect>
+            <text x="489" y="62" font-weight="700" fill="#1f8a5b">Mitigate</text>
+            <text x="489" y="78" fill="#6b7688">rollback / failover</text>
+          </g>
+          <line x1="546" y1="65" x2="572" y2="65" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar)"></line>
+          <g>
+            <rect x="576" y="40" width="110" height="50" rx="8" fill="#fdf5e3" stroke="#ecd9a8"></rect>
+            <text x="631" y="62" font-weight="700" fill="#b7791f">Escalate</text>
+            <text x="631" y="78" fill="#6b7688">if unresolved</text>
+          </g>
+          <line x1="688" y1="65" x2="714" y2="65" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar)"></line>
+          <g>
+            <rect x="718" y="40" width="134" height="50" rx="8" fill="#e7f1fb" stroke="#c3ddf3"></rect>
+            <text x="785" y="62" font-weight="700" fill="#1d6fb8">Resolve +</text>
+            <text x="785" y="78" fill="#6b7688">post-mortem</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <h3>📈 Monitoring &amp; Alerting for LLM Systems</h3>
+    <table>
+      <thead><tr><th style="width:30%">Signal</th><th>Why monitor it</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Latency (p50/p95/p99)</strong></td><td>LLM calls are slow &amp; variable; tail latency breaks SLOs.</td></tr>
+        <tr><td><strong>Error / rate-limit (4xx/5xx, 429)</strong></td><td>Provider throttling and outages are top incident causes.</td></tr>
+        <tr><td><strong>Token usage &amp; cost</strong></td><td>Runaway prompts/loops can spike spend fast.</td></tr>
+        <tr><td><strong>Output quality / eval drift</strong></td><td>A model or prompt change can silently degrade answers.</td></tr>
+        <tr><td><strong>Guardrail / refusal rate</strong></td><td>Spikes can indicate abuse, prompt injection, or a broken prompt.</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Escalation Path (example)</h4>
+    <ol>
+      <li><strong>L1 On-call</strong> — follow runbook, attempt standard mitigation (rollback, failover, disable feature flag).</li>
+      <li><strong>L2 Service owner</strong> — engaged if not mitigated within the SEV time budget.</li>
+      <li><strong>L3 Architecture / vendor</strong> — deeper design issue or provider-side incident; open a support case.</li>
+      <li><strong>Incident commander + comms</strong> — for high-severity, customer-impacting events.</li>
+    </ol>
+
+    <div class="box tips">
+      <div class="t">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li>Incident-response mnemonic: <span class="mnem">D-T-D-M-E-R</span> → <strong>D</strong>etect, <strong>T</strong>riage, <strong>D</strong>iagnose, <strong>M</strong>itigate, <strong>E</strong>scalate, <strong>R</strong>esolve (+ post-mortem).</li>
+        <li>A good runbook step is <strong>copy-pasteable and unambiguous</strong> — exact command, exact dashboard link, exact threshold. No prose essays.</li>
+        <li><strong>Mitigate before you fully diagnose:</strong> restore service (rollback/failover) first, root-cause later.</li>
+        <li>Every alert should link to <strong>the specific runbook entry</strong> that resolves it — an alert with no runbook is a design gap.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <div class="t">🎯 Exam Strategy</div>
+      <p>The classic question contrasts <strong>runbook vs. implementation guide vs. architecture doc</strong>. Anchor on the <strong>audience + moment of use</strong>.</p>
+      <ul>
+        <li>Keyword <em>"on-call / production incident / 3 a.m. / restore service"</em> → <strong>runbook</strong>.</li>
+        <li>Keyword <em>"alert / escalation / monitoring / SLO"</em> → runbook territory.</li>
+        <li>Keyword <em>"build / integrate / code example"</em> → implementation guide (61.2), not runbook.</li>
+        <li>Trap: an answer that says "add more architecture diagrams" to fix an <em>operational</em> gap — the fix is usually a <strong>runbook step, alert, or escalation path</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 61.4 ============ -->
+  <section id="s61-4">
+    <h2>61.4 Knowledge Transfer and Handoff Strategies</h2>
+    <p class="lead">Knowledge transfer (KT) moves understanding — not just files — from the people who built the system to those who will <strong>own, operate, or extend it</strong>. A handoff fails not when documents are missing, but when <strong>context, rationale, and tacit knowledge</strong> don't survive the transition. Effective KT combines <em>artifacts</em> (docs from 61.1–61.3) with <em>interaction</em> (walkthroughs, shadowing, Q&amp;A).</p>
+
+    <h3>📋 Handoff Checklist</h3>
+    <table>
+      <thead><tr><th style="width:32%">Category</th><th>Must be handed over</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Documentation</strong></td><td>Architecture doc, implementation guide, runbooks, ADR log — all current and versioned.</td></tr>
+        <tr><td><strong>Access &amp; credentials</strong></td><td>Repos, secrets/vault, dashboards, cloud consoles, provider (API) accounts — transferred, not shared personally.</td></tr>
+        <tr><td><strong>Operational knowledge</strong></td><td>Known issues, recurring incidents, "here be dragons" areas, on-call expectations.</td></tr>
+        <tr><td><strong>Decisions &amp; rationale</strong></td><td>Why key choices were made; rejected alternatives; open risks.</td></tr>
+        <tr><td><strong>Contacts &amp; ownership</strong></td><td>Upstream/downstream owners, vendor support, escalation contacts, RACI.</td></tr>
+        <tr><td><strong>Live walkthrough</strong></td><td>At least one guided demo + a Q&amp;A/shadowing period before sign-off.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🗣️ Stakeholder Communication Plan (RACI-style)</h3>
+    <table>
+      <thead><tr><th>Stakeholder</th><th>Interest</th><th>What they receive</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Receiving engineers</strong></td><td>How to run &amp; extend it</td><td>Full docs + walkthroughs + shadowing</td></tr>
+        <tr><td><strong>Operations / SRE</strong></td><td>Keeping it healthy</td><td>Runbooks, alerts, escalation paths</td></tr>
+        <tr><td><strong>Product / Business</strong></td><td>Capabilities &amp; risks</td><td>Summary of what it does, limits, roadmap</td></tr>
+        <tr><td><strong>Security / Compliance</strong></td><td>Controls &amp; data handling</td><td>Guardrails, data-flow, audit evidence</td></tr>
+        <tr><td><strong>Leadership</strong></td><td>Continuity &amp; ownership</td><td>Ownership transfer confirmation, sign-off</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🕳️ Common KT Pitfalls &amp; How to Avoid Them</h3>
+    <table>
+      <thead><tr><th style="width:44%">Pitfall</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr><td><strong>"Docs = KT"</strong> — dumping files without interaction</td><td>Pair docs with live walkthroughs, shadowing, and a Q&amp;A window.</td></tr>
+        <tr><td><strong>Bus-factor of one</strong> — one expert holds all context</td><td>Transfer to a team, not a person; record sessions; write down tacit knowledge.</td></tr>
+        <tr><td><strong>Big-bang handoff</strong> on the last day</td><td>Use a phased overlap period; shadow → reverse-shadow → own.</td></tr>
+        <tr><td><strong>Stale documentation</strong></td><td>Refresh docs immediately before handoff; verify against the running system.</td></tr>
+        <tr><td><strong>No acceptance criteria</strong></td><td>Define "handoff complete" (checklist signed, receiver runs it solo, incident simulated).</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box tips">
+      <div class="t">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li>Handoff readiness mnemonic: <span class="mnem">D-A-R-C</span> → <strong>D</strong>ocumentation, <strong>A</strong>ccess, <strong>R</strong>ationale, <strong>C</strong>ontacts. (Add a live walkthrough on top.)</li>
+        <li>Phased overlap beats a single meeting: <strong>Shadow → Reverse-shadow → Solo</strong>. The receiver <em>proves</em> readiness by operating it while the expert watches.</li>
+        <li>Handoff isn't done when docs are delivered — it's done when the <strong>receiver can operate the system without the original owner</strong>.</li>
+        <li>Record walkthroughs; the recording captures tacit knowledge no document will.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <div class="t">🎯 Exam Strategy</div>
+      <p>KT questions often describe a <strong>failed or risky handoff</strong> and ask what went wrong or what to add.</p>
+      <ul>
+        <li>Keyword <em>"only one person knows / left the company"</em> → <strong>bus-factor</strong>; answer = transfer to a team + document tacit knowledge.</li>
+        <li>Keyword <em>"handed over docs but team still can't operate it"</em> → missing <strong>walkthrough / shadowing</strong>, not more docs.</li>
+        <li>Keyword <em>"how do we know handoff is complete?"</em> → <strong>acceptance criteria</strong> (receiver operates solo / simulated incident).</li>
+        <li>Trap: assuming <em>"write more documentation"</em> is always the fix — for KT gaps the fix is usually <strong>interaction and ownership transfer</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 61.5 ============ -->
+  <section id="s61-5">
+    <h2>61.5 Hands-On: Creating Architecture Documentation</h2>
+    <p class="lead">This section ties 61.1–61.4 together into a repeatable process for producing a real architecture document. Use the step-by-step workflow and the fill-in template, then study the worked example for a Claude-based support assistant.</p>
+
+    <h3>🛠️ Step-by-Step Workflow</h3>
+    <div class="flow">
+      <div class="step"><span class="n">1</span><div class="lbl">Scope</div><div class="sub">purpose, audience, boundaries</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">2</span><div class="lbl">Diagram</div><div class="sub">context + data flow (C4)</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">3</span><div class="lbl">Decide</div><div class="sub">models, prompts, guardrails</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">4</span><div class="lbl">Specify</div><div class="sub">NFRs, failure modes, rollback</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">5</span><div class="lbl">Review</div><div class="sub">peers, security, stakeholders</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">6</span><div class="lbl">Publish</div><div class="sub">version &amp; maintain</div></div>
+    </div>
+
+    <h3>📄 Architecture Doc Template (fill in)</h3>
+    <pre><code><span class="tok-c"># [System Name] — Architecture Document  (v1.0, owner, date)</span>
+
+<span class="tok-k">1. Overview &amp; Purpose</span>      — what it does, who uses it, success metrics
+<span class="tok-k">2. System Context</span>          — C4 L1 diagram; external systems &amp; APIs
+<span class="tok-k">3. Data Flow</span>               — request path; where PII lives; retention/logging
+<span class="tok-k">4. Model &amp; Prompt Strategy</span>  — Claude model per task; system prompt; RAG; context mgmt
+<span class="tok-k">5. Guardrails &amp; Safety</span>      — input validation, output filtering, HITL, refusals
+<span class="tok-k">6. NFRs</span>                     — latency/SLO, throughput, cost budget, quality thresholds
+<span class="tok-k">7. Failure Modes &amp; Rollback</span> — timeouts, 429s, degraded quality; how to revert
+<span class="tok-k">8. Decisions (ADRs)</span>          — key choices, rejected alternatives, dated
+<span class="tok-k">9. Open Risks &amp; Assumptions</span>
+<span class="tok-k">10. Glossary &amp; References</span></code></pre>
+
+    <h3>💼 Worked Example — "SupportBot" (Claude-based support assistant)</h3>
+    <table>
+      <thead><tr><th style="width:28%">Doc section</th><th>Filled-in example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Overview</strong></td><td>Answers customer questions from a help-center knowledge base; deflects tickets. Success = deflection rate &amp; CSAT.</td></tr>
+        <tr><td><strong>System Context</strong></td><td>User → Web app → SupportBot service → (Retrieval over KB index) + (Anthropic Messages API) → response; tickets logged to CRM.</td></tr>
+        <tr><td><strong>Data Flow</strong></td><td>Question → PII redaction → retrieve top-k KB chunks → build prompt → Claude call → output filter → answer. Transcripts stored 30 days.</td></tr>
+        <tr><td><strong>Model &amp; Prompt</strong></td><td>Smaller/faster Claude model for intent routing; larger model for answer generation. Versioned system prompt; RAG grounding; prompt caching for the static KB preamble.</td></tr>
+        <tr><td><strong>Guardrails</strong></td><td>Block prompt-injection patterns; refuse out-of-scope/PII requests; escalate low-confidence answers to a human.</td></tr>
+        <tr><td><strong>NFRs</strong></td><td>p95 &lt; 4s; 99.9% availability; cost ≤ $X / 1k conversations; answer-eval score ≥ threshold.</td></tr>
+        <tr><td><strong>Failure &amp; Rollback</strong></td><td>On 429 → backoff + queue; on quality regression → revert to previous prompt/model version via feature flag; degraded mode = "connect to a human."</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box note">
+      <div class="t">📝 Practice Exercise</div>
+      <p>Take a system you know and produce a <strong>one-page</strong> version of the template above. Deliberately draft <strong>Section 5 (Guardrails)</strong> and <strong>Section 7 (Rollback)</strong> first — these are the sections most often missing and most often tested. Then have a peer play "auditor" and ask <em>"what's missing?"</em></p>
+    </div>
+
+    <div class="box tips">
+      <div class="t">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li>Workflow mnemonic: <span class="mnem">S-D-D-S-R-P</span> → <strong>S</strong>cope, <strong>D</strong>iagram, <strong>D</strong>ecide, <strong>S</strong>pecify, <strong>R</strong>eview, <strong>P</strong>ublish.</li>
+        <li>Write to the <strong>audience</strong>: one document can carry layered detail (C4 levels) so execs and engineers each find their level.</li>
+        <li>Draft the <strong>hard/omitted sections first</strong> (guardrails, rollback) while energy is high — don't leave them as afterthoughts.</li>
+        <li>A doc isn't finished at "Publish" — the <strong>Maintain</strong> step (61.1 lifecycle) keeps it a source of truth.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <div class="t">🎯 Exam Strategy</div>
+      <p>Hands-on / scenario questions ask you to <strong>sequence steps</strong> or <strong>pick the next action</strong> in building a doc.</p>
+      <ul>
+        <li>Keyword <em>"first step / before writing"</em> → define <strong>scope, purpose, audience</strong> (not jump to diagrams or code).</li>
+        <li>Keyword <em>"who is this for?"</em> → drives diagram depth (C4 level) and language.</li>
+        <li>Keyword <em>"what's still missing before publish?"</em> → check for <strong>guardrails, rollback, NFRs, ADRs</strong>.</li>
+        <li>Trap: options that start with implementation code before scope/context are defined — sequence matters.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER MAP ============ -->
+  <section id="map">
+    <h2>🗺️ Chapter Map: How the Subsections Depend on Each Other</h2>
+    <p class="lead">The five subsections aren't independent — they form a chain from <em>design</em> to <em>build</em> to <em>operate</em> to <em>hand off</em>, all validated by the hands-on practice. Understanding these dependencies is itself commonly tested.</p>
+    <div class="svgwrap">
+      <svg viewBox="0 0 860 210" width="860" height="210" role="img" aria-label="Dependency map of subsections 61.1 to 61.5">
+        <defs>
+          <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 Z" fill="#6b4de6"></path>
+          </marker>
+        </defs>
+        <g font-family="sans-serif" font-size="12.5" text-anchor="middle">
+          <rect x="30" y="80" width="150" height="54" rx="9" fill="#efeafe" stroke="#d8ccfa"></rect>
+          <text x="105" y="102" font-weight="700" fill="#4a2fb8">61.1 Architecture</text>
+          <text x="105" y="120" fill="#6b7688">what &amp; why (design)</text>
+
+          <line x1="180" y1="107" x2="216" y2="107" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar2)"></line>
+
+          <rect x="220" y="80" width="150" height="54" rx="9" fill="#efeafe" stroke="#d8ccfa"></rect>
+          <text x="295" y="102" font-weight="700" fill="#4a2fb8">61.2 Impl. Guide</text>
+          <text x="295" y="120" fill="#6b7688">how to build</text>
+
+          <line x1="370" y1="107" x2="406" y2="107" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar2)"></line>
+
+          <rect x="410" y="80" width="150" height="54" rx="9" fill="#efeafe" stroke="#d8ccfa"></rect>
+          <text x="485" y="102" font-weight="700" fill="#4a2fb8">61.3 Runbook</text>
+          <text x="485" y="120" fill="#6b7688">how to operate</text>
+
+          <line x1="560" y1="107" x2="596" y2="107" stroke="#6b4de6" stroke-width="2" marker-end="url(#ar2)"></line>
+
+          <rect x="600" y="80" width="150" height="54" rx="9" fill="#efeafe" stroke="#d8ccfa"></rect>
+          <text x="675" y="102" font-weight="700" fill="#4a2fb8">61.4 Handoff</text>
+          <text x="675" y="120" fill="#6b7688">transfer ownership</text>
+
+          <rect x="300" y="12" width="260" height="40" rx="9" fill="#e6f6ee" stroke="#bfe6d1"></rect>
+          <text x="430" y="30" font-weight="700" fill="#1f8a5b">61.5 Hands-On</text>
+          <text x="430" y="45" fill="#6b7688">produces &amp; validates all of the above</text>
+          <line x1="430" y1="52" x2="430" y2="76" stroke="#1f8a5b" stroke-width="2" marker-end="url(#ar2)"></line>
+
+          <rect x="220" y="162" width="330" height="36" rx="9" fill="#e7f1fb" stroke="#c3ddf3"></rect>
+          <text x="385" y="185" font-weight="700" fill="#1d6fb8">Guardrails + Rollback thread through every section</text>
+        </g>
+      </svg>
+    </div>
+    <p><strong>Read it as:</strong> 61.1 defines the design → 61.2 turns it into buildable steps → 61.3 keeps the built system alive → 61.4 transfers all of it to new owners. 61.5 is the practical skill that <em>produces</em> these artifacts, and <strong>guardrails + rollback</strong> recur across all of them as the most-tested, most-omitted content.</p>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+    <h2>📋 Chapter Summary &amp; Quick Revision Checklist</h2>
+    <ul class="chk">
+      <li><strong>61.1 — Architecture docs:</strong> capture Context, Data flow, Model choices, Prompt strategy, Guardrails, NFRs, and <em>Rollback</em>. Mnemonic <span class="mnem">C-DIME-GR</span>. Document the <em>why</em> (ADRs) for audits. Lifecycle = Draft → Review → Publish → Maintain.</li>
+      <li><strong>61.2 — Implementation guides</strong> are for <em>developers building</em> the system: prerequisites, setup, integration patterns, runnable examples, and a testing/eval checklist. Mnemonic <span class="mnem">PSCET-S</span>. Prompts &amp; model IDs are versioned config; always show 429 backoff.</li>
+      <li><strong>61.3 — Runbooks</strong> are for <em>operators in production</em>: alerts, monitoring signals, incident flow <span class="mnem">D-T-D-M-E-R</span>, escalation paths, and rollback. Mitigate first, diagnose later. Every alert links to a runbook step.</li>
+      <li><strong>61.4 — Knowledge transfer</strong> = artifacts + interaction. Readiness mnemonic <span class="mnem">D-A-R-C</span> (Docs, Access, Rationale, Contacts) + live walkthrough. Beat bus-factor; use Shadow → Reverse-shadow → Solo; define "done" with acceptance criteria.</li>
+      <li><strong>61.5 — Hands-on:</strong> workflow <span class="mnem">S-D-D-S-R-P</span> (Scope, Diagram, Decide, Specify, Review, Publish). Use the 10-section template; draft Guardrails &amp; Rollback first — most omitted, most tested.</li>
+      <li><strong>Cross-cutting exam anchors:</strong> match the doc to its <em>audience</em> (build → impl guide; operate → runbook; design → architecture doc; own → handoff). "What's missing?" answers are usually <strong>guardrails, rollback, NFRs, or interaction</strong>, rarely "more diagrams."</li>
+    </ul>
+  </section>
+
+  <footer>
+    Chapter 61 · Documentation &amp; Implementation Guidance — exam-ready study notes. Verify model names &amp; API parameters against current official Anthropic documentation before use.
+  </footer>
+
+</div>
+
+</body></html>

@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 59 — Communicating Architectural Decisions &amp; Tradeoffs | Claude Certified Architect</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-alt: #f0f3f7;
+    --text: #1a2233;
+    --text-soft: #4a5568;
+    --text-muted: #718096;
+    --border: #dce1e8;
+    --border-strong: #c3cbd6;
+    --primary: #4338ca;
+    --primary-soft: #eef0ff;
+    --tip: #0f766e;
+    --tip-bg: #e8f7f4;
+    --tip-border: #7fd1c4;
+    --warn: #b45309;
+    --warn-bg: #fdf3e3;
+    --warn-border: #f0c26b;
+    --exam: #1d4ed8;
+    --exam-bg: #e9f0ff;
+    --exam-border: #9dbcf5;
+    --example-bg: #f4f5f8;
+    --example-border: #d4d9e2;
+    --mono: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--text);
+    background: var(--bg);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 22px 80px; }
+
+  /* ---------- Header ---------- */
+  .masthead {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 55%, #7c3aed 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 34px 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 26px rgba(67,56,202,0.22);
+  }
+  .masthead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.85;
+    margin: 0 0 8px;
+  }
+  .masthead h1 { margin: 0 0 10px; font-size: 30px; line-height: 1.25; font-weight: 700; }
+  .masthead p { margin: 0; font-size: 15px; opacity: 0.92; max-width: 680px; }
+  .chip-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 100px;
+    padding: 5px 13px;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+
+  /* ---------- Table of Contents ---------- */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 34px;
+  }
+  .toc h2 { margin: 0 0 14px; font-size: 17px; color: var(--primary); }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 7px 0; }
+  .toc a { color: var(--text); text-decoration: none; font-weight: 500; }
+  .toc a:hover { color: var(--primary); text-decoration: underline; }
+  .toc .num { font-family: var(--mono); color: var(--primary); font-weight: 700; margin-right: 6px; }
+  .toc .extra { list-style: none; padding-left: 0; margin-top: 12px; border-top: 1px dashed var(--border); padding-top: 12px; }
+  .toc .extra li { display: inline-block; margin-right: 18px; }
+
+  /* ---------- Sections ---------- */
+  section { margin-bottom: 46px; scroll-margin-top: 20px; }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+  }
+  .sec-head .badge {
+    font-family: var(--mono);
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+  }
+  .sec-head h2 { margin: 0; font-size: 23px; font-weight: 700; }
+  h3 { font-size: 17.5px; margin: 26px 0 8px; color: var(--primary); }
+  h4 { font-size: 15px; margin: 18px 0 6px; color: var(--text); }
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0; padding-left: 24px; }
+  li { margin: 5px 0; }
+  code {
+    font-family: var(--mono);
+    background: var(--surface-alt);
+    padding: 1.5px 6px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    color: #6d28d9;
+  }
+  .lead {
+    font-size: 16.5px;
+    color: var(--text-soft);
+    background: var(--surface);
+    border-left: 4px solid var(--primary);
+    padding: 12px 16px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+
+  /* ---------- Callout boxes ---------- */
+  .box { border-radius: var(--radius-sm); padding: 14px 18px; margin: 18px 0; border: 1px solid; font-size: 14.5px; }
+  .box strong.lbl { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .tip-box { background: var(--tip-bg); border-color: var(--tip-border); color: #134e4a; }
+  .tip-box strong.lbl { color: var(--tip); }
+  .warning-box { background: var(--warn-bg); border-color: var(--warn-border); color: #7c3a02; }
+  .warning-box strong.lbl { color: var(--warn); }
+  .exam-box { background: var(--exam-bg); border-color: var(--exam-border); color: #1e3a8a; }
+  .exam-box strong.lbl { color: var(--exam); }
+  .example-box { background: var(--example-bg); border: 1px solid var(--example-border); border-radius: var(--radius-sm); padding: 16px 18px; margin: 18px 0; }
+  .example-box .tag { display: inline-block; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary); background: var(--primary-soft); padding: 3px 9px; border-radius: 100px; margin-bottom: 8px; }
+  .mnemonic { font-family: var(--mono); font-weight: 700; color: var(--tip); background: #fff; padding: 2px 7px; border-radius: 4px; border: 1px dashed var(--tip-border); }
+
+  /* ---------- Tables ---------- */
+  .table-scroll { overflow-x: auto; margin: 18px 0; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--surface); }
+  caption { caption-side: top; text-align: left; font-size: 13px; color: var(--text-muted); padding: 0 0 8px; font-style: italic; }
+  th { text-align: left; background: var(--surface-alt); color: var(--text); font-weight: 700; padding: 10px 13px; border-bottom: 2px solid var(--border-strong); vertical-align: top; }
+  td { padding: 10px 13px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--text-soft); }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: var(--surface-alt); }
+  td.dim strong, th.dim { color: var(--primary); }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+  .pill.hi { background: #e8f7f4; color: #0f766e; }
+  .pill.mid { background: #fdf3e3; color: #b45309; }
+  .pill.lo { background: #fde8e8; color: #b91c1c; }
+
+  /* ---------- Comparison grid ---------- */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 18px 0;
+  }
+  .compare .col {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+  }
+  .compare .col.no { border-top: 4px solid #dc2626; }
+  .compare .col.yes { border-top: 4px solid #0f766e; }
+  .compare .col h4 { margin-top: 0; }
+  .compare ul { padding-left: 18px; }
+
+  /* ---------- Abstraction ladder / flow (SVG wrappers) ---------- */
+  .figure { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 20px 0; text-align: center; }
+  .figure figcaption { font-size: 13px; color: var(--text-muted); margin-top: 12px; font-style: italic; }
+  svg { max-width: 100%; height: auto; }
+
+  /* ---------- ADR card ---------- */
+  .adr-card {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-left: 5px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 20px 22px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(26,34,51,0.05);
+  }
+  .adr-card h4 { margin: 0 0 12px; font-size: 16.5px; color: var(--text); }
+  .adr-card .status { display: inline-block; background: #e8f7f4; color: #0f766e; font-weight: 700; font-size: 12px; padding: 3px 10px; border-radius: 100px; margin-bottom: 12px; }
+  .adr-card p { margin: 8px 0; font-size: 14px; }
+  .adr-card .field-label { font-weight: 700; color: var(--primary); display: block; margin-top: 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .adr-card .consequences .pro { color: #0f766e; }
+  .adr-card .consequences .con { color: #b45309; }
+
+  /* ---------- Checklist ---------- */
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li { padding-left: 30px; position: relative; margin: 8px 0; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; font-size: 18px; color: var(--primary); top: -1px; }
+
+  /* ---------- Slide outline ---------- */
+  .slides { counter-reset: slide; margin: 18px 0; }
+  .slide {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px 14px 56px;
+    margin: 10px 0;
+    position: relative;
+  }
+  .slide::before {
+    counter-increment: slide;
+    content: "S" counter(slide);
+    position: absolute;
+    left: 14px; top: 14px;
+    font-family: var(--mono);
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary);
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  .slide h4 { margin: 0 0 4px; }
+  .slide p { margin: 0; font-size: 13.5px; color: var(--text-soft); }
+
+  /* ---------- Self-test ---------- */
+  .qa { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); margin: 14px 0; overflow: hidden; }
+  .qa .q { padding: 14px 18px; font-weight: 600; background: var(--surface-alt); }
+  .qa .q .qnum { font-family: var(--mono); color: var(--primary); margin-right: 8px; }
+  details { padding: 0; }
+  details summary { cursor: pointer; padding: 10px 18px; color: var(--primary); font-weight: 600; font-size: 14px; list-style: none; user-select: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: "▸ "; }
+  details[open] summary::before { content: "▾ "; }
+  details .answer { padding: 4px 18px 16px; font-size: 14.5px; color: var(--text-soft); border-top: 1px solid var(--border); }
+  details .answer .key { color: var(--tip); font-weight: 700; }
+
+  /* ---------- Misc ---------- */
+  .back-top { display: inline-block; font-size: 12.5px; color: var(--text-muted); text-decoration: none; margin-top: 8px; }
+  .back-top:hover { color: var(--primary); }
+  hr.soft { border: none; border-top: 1px solid var(--border); margin: 26px 0; }
+  footer { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 640px) {
+    .masthead h1 { font-size: 23px; }
+    .compare { grid-template-columns: 1fr; }
+    .sec-head { flex-wrap: wrap; }
+    .sec-head h2 { font-size: 19px; }
+    .wrap { padding: 20px 14px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead" id="top">
+    <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 59 · Communicating Architectural Decisions &amp; Tradeoffs</h1>
+    <p>How to translate LLM system architecture into decisions stakeholders can understand, fund, and trust — covering audience-aware communication, tradeoff framing, expectation-setting, ADRs, and a hands-on decision presentation.</p>
+    <div class="chip-row">
+      <span class="chip">5 sub-topics</span>
+      <span class="chip">Frameworks &amp; checklists</span>
+      <span class="chip">Worked examples</span>
+      <span class="chip">Exam strategy</span>
+      <span class="chip">Self-test included</span>
+    </div>
+  </header>
+
+  <!-- ============ TABLE OF CONTENTS ============ -->
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s591"><span class="num">59.1</span>Presenting Technical Architecture to Non-Technical Audiences</a></li>
+      <li><a href="#s592"><span class="num">59.2</span>Communicating Tradeoffs: Cost vs Quality vs Latency vs Safety</a></li>
+      <li><a href="#s593"><span class="num">59.3</span>Setting Realistic Expectations About LLM Capabilities and Limitations</a></li>
+      <li><a href="#s594"><span class="num">59.4</span>Architecture Decision Records (ADRs) for AI Systems</a></li>
+      <li><a href="#s595"><span class="num">59.5</span>Hands-On: Writing an Architecture Decision Presentation</a></li>
+    </ol>
+    <ul class="extra">
+      <li><a href="#summary"><span class="num">↳</span> Chapter Summary &amp; Recap Table</a></li>
+      <li><a href="#selftest"><span class="num">↳</span> Self-Test (Q&amp;A)</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==================================================== -->
+  <!-- 59.1 -->
+  <!-- ==================================================== -->
+  <section id="s591">
+    <div class="sec-head"><span class="badge">59.1</span><h2>Presenting Technical Architecture to Non-Technical Audiences</h2></div>
+
+    <p class="lead">The value of an architecture is capped by how well the people who fund and depend on it understand it. Your job is not to <em>simplify the system</em> — it's to <em>translate it into the listener's world</em> (outcomes, risk, cost, timelines) without distorting the truth.</p>
+
+    <h3>Overview / Definition</h3>
+    <p>Presenting technical architecture to a non-technical audience means expressing <strong>what the system does, why it's built this way, and what it means for the business</strong> — using the audience's vocabulary (revenue, risk, effort, customer impact) instead of implementation vocabulary (embeddings, vector stores, token budgets). The architecture doesn't change; the <em>abstraction level</em> does.</p>
+
+    <h3>Why it matters in real AI architecture roles</h3>
+    <ul>
+      <li><strong>Funding &amp; prioritization:</strong> Executives approve budgets based on understood value, not technical elegance.</li>
+      <li><strong>Trust &amp; adoption:</strong> Business owners who understand the system's boundaries defend it and use it correctly.</li>
+      <li><strong>Expectation control:</strong> Clear framing up front prevents "why can't it just be 100% accurate?" conversations later (see 59.3).</li>
+      <li><strong>Influence:</strong> The architect who can explain a RAG pipeline in one sentence to a VP has more organizational leverage than one who can only explain it to peers.</li>
+    </ul>
+
+    <h3>Key frameworks</h3>
+    <ul>
+      <li><strong>BLUF — Bottom Line Up Front:</strong> Lead with the recommendation/outcome, then support it. Non-technical audiences want the conclusion first, detail on demand.</li>
+      <li><strong>Minto Pyramid Principle:</strong> Answer → key supporting arguments → evidence. Structure top-down, not bottom-up.</li>
+      <li><strong>The Abstraction Ladder:</strong> Consciously choose the rung — business outcome → capability → component → implementation. Match the rung to the audience and only descend when asked.</li>
+      <li><strong>Feature → Benefit → Outcome ("So what?" ladder):</strong> Never stop at the feature. "We use prompt caching (feature) → so repeated context is 90% cheaper to process (benefit) → so we can afford to run this at full scale within budget (outcome)."</li>
+      <li><strong>Analogy-first explanation:</strong> Anchor an unfamiliar concept to a familiar one before adding nuance.</li>
+    </ul>
+
+    <div class="figure">
+      <svg viewBox="0 0 640 260" role="img" aria-label="Abstraction ladder from implementation up to business outcome">
+        <defs>
+          <marker id="arrUp" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+            <path d="M5,0 L10,9 L0,9 Z" fill="#4338ca"></path>
+          </marker>
+        </defs>
+        <!-- rungs -->
+        <rect x="120" y="20" width="400" height="42" rx="8" fill="#eef0ff" stroke="#9dbcf5"></rect>
+        <text x="320" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Business Outcome — "cut support cost 30%, faster replies"</text>
+
+        <rect x="120" y="78" width="400" height="42" rx="8" fill="#f0f3f7" stroke="#c3cbd6"></rect>
+        <text x="320" y="104" text-anchor="middle" font-size="14" font-weight="600" fill="#1a2233">Capability — "answers questions from our help docs"</text>
+
+        <rect x="120" y="136" width="400" height="42" rx="8" fill="#f0f3f7" stroke="#c3cbd6"></rect>
+        <text x="320" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#1a2233">Component — "retrieval + Claude + guardrails"</text>
+
+        <rect x="120" y="194" width="400" height="42" rx="8" fill="#f4f5f8" stroke="#d4d9e2"></rect>
+        <text x="320" y="220" text-anchor="middle" font-size="13.5" font-weight="500" fill="#4a5568">Implementation — "embeddings, vector index, top-k, reranking"</text>
+
+        <!-- arrow -->
+        <line x1="60" y1="225" x2="60" y2="35" stroke="#4338ca" stroke-width="3" marker-end="url(#arrUp)"></line>
+        <text x="34" y="135" text-anchor="middle" font-size="12" fill="#4338ca" font-weight="700" transform="rotate(-90 34 135)">Raise the rung for executives</text>
+      </svg>
+      <figcaption>The Abstraction Ladder — non-technical audiences live near the top; descend only when questions pull you down.</figcaption>
+    </div>
+
+    <h3>Technical vs. non-technical communication styles</h3>
+    <div class="compare">
+      <div class="col no">
+        <h4>❌ Engineer-to-engineer framing</h4>
+        <ul>
+          <li>"We chunk docs, embed with a bi-encoder, store in a vector DB, and do top-k retrieval with a cross-encoder reranker."</li>
+          <li>Leads with mechanism.</li>
+          <li>Assumes shared vocabulary.</li>
+          <li>Measures success in latency/recall.</li>
+        </ul>
+      </div>
+      <div class="col yes">
+        <h4>✅ Non-technical framing</h4>
+        <ul>
+          <li>"It's like giving the assistant an open-book exam using <em>our</em> documents, so answers stay grounded in our policies."</li>
+          <li>Leads with outcome and analogy.</li>
+          <li>Uses the audience's vocabulary.</li>
+          <li>Measures success in cost, trust, customer impact.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <span class="tag">Worked Example</span>
+      <p><strong>Scenario:</strong> You must get a VP of Customer Support to fund a Retrieval-Augmented Generation (RAG) assistant for agents.</p>
+      <p><strong>Weak (feature-first):</strong> "We'll build a RAG pipeline with semantic search over your knowledge base and inject retrieved chunks into Claude's context window."</p>
+      <p><strong>Strong (BLUF + analogy + outcome):</strong> "<strong>Recommendation: fund a help-desk assistant that drafts answers from our own support docs.</strong> Think of it as an open-book assistant — it only answers using <em>our approved</em> articles, and it shows the source so agents can verify in one click. Expected impact: faster first responses and fewer escalations, at a cost we can cap per conversation. It won't replace agents; it makes each agent faster."</p>
+      <p>Notice: conclusion first, familiar analogy, explicit boundary ("won't replace agents"), and business metrics — no mention of embeddings unless the VP asks.</p>
+    </div>
+
+    <div class="box tip-box">
+      <strong class="lbl">💡 Tips &amp; Tricks</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Mnemonic — <span class="mnemonic">A.B.C.</span></strong>: <em>Audience</em> (who + what they care about) → <em>Benefit</em> (outcome, not feature) → <em>Confidence</em> (what's proven vs. assumed, and the boundaries).</li>
+        <li><strong>Analogy library:</strong> RAG = open-book exam; fine-tuning = on-the-job training; guardrails = a bouncer at the door; prompt = the job brief; context window = short-term memory / desk space.</li>
+        <li><strong>One diagram, one arrow of value:</strong> Show inputs → system → business outcome, not the full component graph.</li>
+        <li><strong>Pre-empt the "why not 100%?" question</strong> before it's asked (bridges into 59.3).</li>
+      </ul>
+    </div>
+
+    <div class="box warning-box">
+      <strong class="lbl">⚠️ Common Pitfalls</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Jargon leakage:</strong> "vector", "token", "embedding", "inference" mean nothing to most stakeholders — and using them signals you can't translate.</li>
+        <li><strong>Over-simplifying into a lie:</strong> "It just knows the answer" is false and sets you up to fail in 59.3. Simplify the <em>level</em>, not the <em>truth</em>.</li>
+        <li><strong>Bottom-up storytelling:</strong> Building up to the conclusion loses a busy executive. Lead with it.</li>
+        <li><strong>One-size framing:</strong> The same deck for the CFO, the legal team, and the engineering lead will underserve all three.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-box">
+      <strong class="lbl">🎯 Exam Strategy — 59.1</strong>
+      <p style="margin:6px 0;"><strong>Likely question types:</strong> Scenario ("You're presenting X to a non-technical exec — which framing is best?"), MCQ on which statement avoids jargon, short-answer on choosing an analogy.</p>
+      <p style="margin:6px 0;"><strong>Answer structure:</strong> <em>Identify the audience &amp; their priority → choose the abstraction rung → lead with outcome (BLUF) → add one analogy → state the boundary.</em></p>
+      <p style="margin:6px 0;"><strong>Graders look for:</strong> "audience-appropriate", "outcome / business value first", "analogy", "avoid jargon", "set boundaries / manage expectations", "BLUF / pyramid".</p>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ==================================================== -->
+  <!-- 59.2 -->
+  <!-- ==================================================== -->
+  <section id="s592">
+    <div class="sec-head"><span class="badge">59.2</span><h2>Communicating Tradeoffs: Cost vs Quality vs Latency vs Safety</h2></div>
+
+    <p class="lead">Every LLM architecture decision moves a slider between four competing dimensions. You rarely maximize all four — the architect's job is to make the tradeoff <strong>explicit, quantified, and tied to the use case</strong>, so stakeholders choose consciously instead of assuming "best on everything".</p>
+
+    <h3>Overview / Definition</h3>
+    <p>The four core dimensions of an LLM system:</p>
+    <ul>
+      <li><strong>Cost</strong> — spend per request/token; total run-rate at scale.</li>
+      <li><strong>Quality</strong> — accuracy, relevance, completeness, reasoning depth of outputs.</li>
+      <li><strong>Latency</strong> — time to first token and time to full response; user-perceived speed.</li>
+      <li><strong>Safety</strong> — resistance to harmful, non-compliant, or hallucinated output; auditability and control.</li>
+    </ul>
+    <p>These trade against one another: a larger, more capable model tends to raise quality <em>and</em> cost <em>and</em> latency; heavy guardrails and human review raise safety but add latency and cost. There is <strong>no free lunch</strong> — improving one dimension usually spends another.</p>
+
+    <h3>Why it matters</h3>
+    <p>Stakeholders instinctively want maximum quality, minimum cost, instant responses, and perfect safety. Presenting those as simultaneously achievable is dishonest and erodes trust. Communicating tradeoffs well turns an emotional "make it better and cheaper" demand into a rational "for <em>this</em> use case, we'll optimize for X and accept Y" decision.</p>
+
+    <h3>The architect's levers (how to move each slider)</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Common levers and which dimensions they push. Effects are directional, not absolute.</caption>
+        <thead>
+          <tr><th>Lever</th><th>Primary effect</th><th>Trade cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="dim"><strong>Smaller / faster model tier</strong> (e.g. Haiku-class vs Opus-class)</td><td>↓ Cost, ↓ Latency</td><td>May ↓ Quality on hard tasks</td></tr>
+          <tr><td class="dim"><strong>Larger / more capable tier</strong></td><td>↑ Quality, ↑ reasoning</td><td>↑ Cost, ↑ Latency</td></tr>
+          <tr><td class="dim"><strong>Prompt caching</strong></td><td>↓ Cost &amp; ↓ Latency for repeated context</td><td>Setup complexity; benefit only when context is reused</td></tr>
+          <tr><td class="dim"><strong>Batch processing</strong> (async, non-real-time)</td><td>↓ Cost (often discounted)</td><td>↑ Latency (not for interactive use)</td></tr>
+          <tr><td class="dim"><strong>Retrieval (RAG)</strong></td><td>↑ Quality/grounding, ↑ Safety (citations)</td><td>↑ Latency, added infra cost</td></tr>
+          <tr><td class="dim"><strong>Guardrails + human-in-the-loop</strong></td><td>↑ Safety</td><td>↑ Latency, ↑ Cost, ↓ throughput</td></tr>
+          <tr><td class="dim"><strong>Streaming responses</strong></td><td>↓ <em>perceived</em> latency</td><td>No change to total compute or quality</td></tr>
+          <tr><td class="dim"><strong>Shorter outputs / tighter max tokens</strong></td><td>↓ Cost, ↓ Latency</td><td>May ↓ completeness</td></tr>
+          <tr><td class="dim"><strong>Model routing / tiering</strong> (cheap model first, escalate hard cases)</td><td>Balances Cost vs Quality</td><td>Routing complexity, edge-case risk</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The Tradeoff Matrix</h3>
+    <div class="table-scroll">
+      <table class="tradeoff-matrix">
+        <caption>Which dimension to optimize, what you sacrifice, and when it fits.</caption>
+        <thead>
+          <tr><th>Optimize for</th><th>Typical levers</th><th>You sacrifice</th><th>Best-fit use case</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="dim"><strong>Cost</strong></td>
+            <td>Smaller model tier, caching, batching, short outputs</td>
+            <td><span class="pill mid">Quality</span> <span class="pill mid">Latency</span> on hard tasks</td>
+            <td>High-volume, low-stakes tasks (tagging, routing, first-draft summaries)</td>
+          </tr>
+          <tr>
+            <td class="dim"><strong>Quality</strong></td>
+            <td>Larger tier, RAG grounding, richer prompts, self-critique</td>
+            <td><span class="pill lo">Cost</span> <span class="pill mid">Latency</span></td>
+            <td>Complex reasoning, analysis, high-value or expert-facing output</td>
+          </tr>
+          <tr>
+            <td class="dim"><strong>Latency</strong></td>
+            <td>Smaller tier, streaming, caching, parallelism, trimmed context</td>
+            <td><span class="pill mid">Quality</span> on hard tasks; <span class="pill mid">Cost</span> for redundancy</td>
+            <td>Real-time chat, interactive UX, voice assistants</td>
+          </tr>
+          <tr>
+            <td class="dim"><strong>Safety</strong></td>
+            <td>Guardrails, human review, citations, restricted tools, audit logs</td>
+            <td><span class="pill lo">Latency</span> <span class="pill lo">Cost</span> <span class="pill mid">Throughput</span></td>
+            <td>Regulated / compliance-sensitive domains (health, legal, finance)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example-box">
+      <span class="tag">Worked Example — two use cases, opposite tradeoffs</span>
+      <p><strong>Case A — Support ticket triage (10,000/day):</strong> Volume is high, each classification is low-stakes, and a human handles the actual reply. <em>Decision:</em> optimize for <strong>Cost + Latency</strong> — use a smaller/faster tier with caching; accept slightly lower per-item quality because misroutes are caught downstream.</p>
+      <p><strong>Case B — Clinical documentation summary:</strong> Errors carry patient-safety and regulatory risk. <em>Decision:</em> optimize for <strong>Safety + Quality</strong> — use a more capable tier, ground with retrieval, require clinician sign-off, and log every output. Accept higher cost and latency because the downside of an error dominates.</p>
+      <p><strong>How you'd say it to stakeholders:</strong> "Same technology, opposite dials. For triage we buy scale and speed; for clinical summaries we buy accuracy and control. Trying to run clinical summaries on the triage configuration would be cheap and fast — and unsafe."</p>
+    </div>
+
+    <div class="box tip-box">
+      <strong class="lbl">💡 Tips &amp; Tricks</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Mnemonic — <span class="mnemonic">"CLASS"</span> the request:</strong> <em>C</em>ost, <em>L</em>atency, <em>A</em>ccuracy (Quality), <em>S</em>afety, <em>S</em>cale. Rank them 1–4 <em>before</em> proposing an architecture.</li>
+        <li><strong>The "pick two-ish" rule:</strong> You can push any two dimensions hard; the others must give. Say this out loud so stakeholders own the choice.</li>
+        <li><strong>Quantify, don't adjective:</strong> Replace "faster" and "cheaper" with "~1.2s first token" and "$X per 1,000 requests". Tie targets to SLOs.</li>
+        <li><strong>Perceived vs. real latency:</strong> Streaming makes a slow response <em>feel</em> fast — a UX lever, not a compute lever.</li>
+      </ul>
+    </div>
+
+    <div class="box warning-box">
+      <strong class="lbl">⚠️ Common Pitfalls</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Promising Pareto-perfection:</strong> "cheaper, faster, and better" without a caveat is a red flag — it's almost never all three at once.</li>
+        <li><strong>Hiding the sacrifice:</strong> Presenting only the upside of a choice. Always name what you're trading away.</li>
+        <li><strong>Optimizing globally instead of per use case:</strong> One config for all workloads over-spends on easy tasks and under-protects hard ones — prefer routing/tiering.</li>
+        <li><strong>Ignoring scale:</strong> A decision that's fine at 100 requests/day can be ruinous at 1M/day. State the operating volume.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-box">
+      <strong class="lbl">🎯 Exam Strategy — 59.2</strong>
+      <p style="margin:6px 0;"><strong>Likely question types:</strong> Scenario ("Given use case X, which dimension should be prioritized and what's the tradeoff?"), matching levers to effects, MCQ on "which config fits a regulated domain".</p>
+      <p style="margin:6px 0;"><strong>Answer structure:</strong> <em>State the tradeoff → justify with the use-case constraints (volume, stakes, latency need) → recommend the lever(s) → name what you sacrifice.</em></p>
+      <p style="margin:6px 0;"><strong>Graders look for:</strong> "no free lunch", "prioritize per use case", named levers (model tier, caching, batching, RAG, guardrails, human-in-the-loop, streaming), "quantify / SLO", and an explicit sacrifice.</p>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ==================================================== -->
+  <!-- 59.3 -->
+  <!-- ==================================================== -->
+  <section id="s593">
+    <div class="sec-head"><span class="badge">59.3</span><h2>Setting Realistic Expectations About LLM Capabilities and Limitations</h2></div>
+
+    <p class="lead">Over-promising is the fastest way to lose stakeholder trust and ship an unsafe system. The architect's ethical and practical duty is to frame LLM output as <strong>high-confidence assistance that requires validation</strong> — never as an infallible oracle.</p>
+
+    <h3>Overview / Definition</h3>
+    <p>Expectation-setting means giving stakeholders an accurate mental model of what a large language model (like Claude) <em>reliably</em> does, what it does <em>with caveats</em>, and what it <em>cannot guarantee</em> — <strong>before</strong> commitments are made. It is the honesty layer that makes 59.1 and 59.2 credible.</p>
+
+    <h3>What LLMs do well (capabilities)</h3>
+    <ul>
+      <li>Natural-language understanding and generation; summarization, rewriting, tone/style adaptation.</li>
+      <li>Information extraction and classification from unstructured text.</li>
+      <li>Drafting and transforming content (emails, code, structured data) from instructions.</li>
+      <li>Following complex instructions and adopting a defined role/format.</li>
+      <li><strong>Tool use / function calling</strong> — invoking external systems to fetch fresh data or take actions, which mitigates several limitations below.</li>
+      <li>Handling large inputs within a fixed <strong>context window</strong> (Claude models offer a large context window — commonly 200K tokens — enabling long documents).</li>
+    </ul>
+
+    <h3>What to be honest about (limitations)</h3>
+    <ul>
+      <li><strong>Hallucination:</strong> Models can produce fluent, confident, and <em>false</em> statements. Fluency ≠ correctness.</li>
+      <li><strong>Non-determinism:</strong> The same prompt can yield different outputs (especially at higher temperature). Don't promise identical results every run.</li>
+      <li><strong>Knowledge cutoff:</strong> A model's built-in knowledge stops at its training cutoff and has no awareness of events after it — unless given fresh data via tools/retrieval.</li>
+      <li><strong>No inherent grounding:</strong> Without retrieval or tools, a model has no live access to your systems, databases, or the internet.</li>
+      <li><strong>Context limits:</strong> Inputs beyond the context window must be truncated or chunked; important detail can be lost.</li>
+      <li><strong>Prompt sensitivity:</strong> Small wording changes can shift output quality — behavior isn't perfectly stable.</li>
+      <li><strong>No guaranteed accuracy:</strong> There is no configuration that yields provable 100% correctness. High-stakes outputs need validation.</li>
+      <li><strong>Potential bias &amp; reasoning gaps:</strong> Outputs can reflect biases in data and can fail on some multi-step or numerical reasoning without support (tools, verification).</li>
+    </ul>
+
+    <h3>Framing framework — the "capability contract"</h3>
+    <p>Translate each capability into a stakeholder-safe statement plus its mitigation:</p>
+    <div class="table-scroll">
+      <table>
+        <caption>Reframe raw capability into an honest promise + mitigation.</caption>
+        <thead>
+          <tr><th>Don't say</th><th>Do say</th><th>Mitigation to pair with it</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>"It knows the answer."</td><td>"It drafts a high-confidence answer that a person should validate."</td><td>Human review for high-stakes; confidence surfacing</td></tr>
+          <tr><td>"It's always accurate."</td><td>"It's accurate on most cases; we measure the error rate and set a threshold."</td><td>Evaluation suite + acceptance criteria</td></tr>
+          <tr><td>"It has up-to-date info."</td><td>"Its built-in knowledge has a cutoff; live data comes from our tools/retrieval."</td><td>RAG / tool use / function calling</td></tr>
+          <tr><td>"It can't make things up."</td><td>"It can occasionally state false things confidently, so we ground it and cite sources."</td><td>Retrieval with citations; guardrails</td></tr>
+          <tr><td>"Same input, same output."</td><td>"Outputs can vary run-to-run; we constrain format and lower variability where it matters."</td><td>Lower temperature, structured output, tests</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example-box">
+      <span class="tag">Worked Example — compliance document review</span>
+      <p><strong>Context (author's domain):</strong> A stakeholder asks, "Can the LLM just automatically approve or reject product-compliance submissions?"</p>
+      <p><strong>Unsafe framing:</strong> "Yes — it'll read the docs and decide, fully automated."</p>
+      <p><strong>Realistic framing:</strong> "It can <em>pre-screen</em> submissions and flag likely issues with citations to the exact policy clause — think of it as a fast, tireless first reviewer. It should <strong>not</strong> make the final approve/reject call in a regulated flow. We'll frame it as high-confidence assistance requiring a human decision, measure its flag accuracy against a labeled set, and log every recommendation for audit. That gives us most of the speed with none of the compliance risk."</p>
+      <p>This sets a truthful ceiling (assistive, not autonomous), names mitigations (citations, human sign-off, evals, audit logs), and still lands the business value.</p>
+    </div>
+
+    <div class="box tip-box">
+      <strong class="lbl">💡 Tips &amp; Tricks</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>💡 Golden rule:</strong> Never promise 100% accuracy — always frame LLM output as "high-confidence assistance requiring validation", especially for compliance-sensitive use cases.</li>
+        <li><strong>Mnemonic — <span class="mnemonic">"HALT"</span> before promising:</strong> <em>H</em>allucination possible? <em>A</em>ccuracy measured (not assumed)? <em>L</em>imits of knowledge cutoff stated? <em>T</em>ools/human-in-the-loop for high stakes?</li>
+        <li><strong>Analogy:</strong> An LLM is a brilliant, fast intern — great first drafts, occasionally confidently wrong, always needs a senior review for anything that matters.</li>
+        <li><strong>Replace vibes with evals:</strong> "It's good" → "It hits our acceptance threshold on the eval set; here's the residual error rate."</li>
+      </ul>
+    </div>
+
+    <div class="box warning-box">
+      <strong class="lbl">⚠️ Common Pitfalls</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Confusing fluency with truth:</strong> A confident, well-written answer can still be wrong.</li>
+        <li><strong>Promising autonomy in regulated flows:</strong> "Fully automated decisioning" in health/legal/finance is a trust and compliance landmine.</li>
+        <li><strong>Ignoring the knowledge cutoff:</strong> Assuming the model "knows" recent events without tools/retrieval.</li>
+        <li><strong>No measurement plan:</strong> Setting expectations without an eval set means "accurate" is just an opinion.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-box">
+      <strong class="lbl">🎯 Exam Strategy — 59.3</strong>
+      <p style="margin:6px 0;"><strong>Likely question types:</strong> "Which statement sets realistic expectations?" (MCQ), scenario on responding to "can it be 100% accurate?", identifying a limitation + its mitigation.</p>
+      <p style="margin:6px 0;"><strong>Answer structure:</strong> <em>Acknowledge the capability → state the limitation honestly → pair each limitation with a concrete mitigation → frame as assistive with validation.</em></p>
+      <p style="margin:6px 0;"><strong>Graders look for:</strong> "no 100% guarantee", "hallucination", "knowledge cutoff", "non-deterministic", "human-in-the-loop", "evaluation / acceptance threshold", "grounding / RAG / citations", "high-confidence assistance requiring validation".</p>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ==================================================== -->
+  <!-- 59.4 -->
+  <!-- ==================================================== -->
+  <section id="s594">
+    <div class="sec-head"><span class="badge">59.4</span><h2>Architecture Decision Records (ADRs) for AI Systems</h2></div>
+
+    <p class="lead">An ADR is a short, immutable document that captures <strong>one significant decision, the context that forced it, and its consequences</strong>. For AI systems, ADRs must also record model choice, eval criteria, cost/latency budgets, and safety controls — the parts most likely to change and be questioned later.</p>
+
+    <h3>Overview / Definition</h3>
+    <p>Architecture Decision Records (a practice popularized by Michael Nygard) are lightweight markdown-style documents, one per decision, stored in the repo alongside the code. They answer "<em>why is it built this way?</em>" for future engineers, auditors, and your future self. They are <strong>append-only</strong>: you don't rewrite history — you supersede an old ADR with a new one.</p>
+
+    <h3>Why it matters for AI systems specifically</h3>
+    <ul>
+      <li><strong>Fast-moving decisions:</strong> Model tiers, prompts, and providers change often; ADRs preserve the reasoning behind each choice.</li>
+      <li><strong>Auditability &amp; compliance:</strong> Regulated AI use needs a paper trail of why a model, guardrail, or human-review step was chosen.</li>
+      <li><strong>Tradeoff memory:</strong> ADRs record the Cost/Quality/Latency/Safety tradeoff (59.2) that was accepted — so nobody re-litigates it blindly.</li>
+      <li><strong>Onboarding:</strong> New team members understand the "why", not just the "what".</li>
+    </ul>
+
+    <h3>Standard ADR structure (+ AI extensions)</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Classic ADR fields plus fields that matter for AI systems.</caption>
+        <thead><tr><th>Field</th><th>What it captures</th><th>AI-specific note</th></tr></thead>
+        <tbody>
+          <tr><td class="dim"><strong>Title &amp; number</strong></td><td>Sequential ID + one-line decision (e.g. <code>ADR-014: Model tier for support bot</code>)</td><td>One decision per ADR</td></tr>
+          <tr><td class="dim"><strong>Status</strong></td><td>Proposed → Accepted → Deprecated / Superseded</td><td>Link to superseding ADR when replaced</td></tr>
+          <tr><td class="dim"><strong>Context</strong></td><td>Forces at play: requirements, constraints, volume, stakes</td><td>Include latency/cost budget, data sensitivity, regulatory constraints</td></tr>
+          <tr><td class="dim"><strong>Decision</strong></td><td>The choice made, stated actively ("We will…")</td><td>Model tier, prompt/version strategy, guardrails, fallback behavior</td></tr>
+          <tr><td class="dim"><strong>Consequences</strong></td><td>Resulting context — positive <em>and</em> negative</td><td>Accepted tradeoff (59.2), monitoring/eval plan, residual risk</td></tr>
+          <tr><td class="dim"><strong>Alternatives considered</strong></td><td>Options rejected and why</td><td>Other tiers/providers/architectures and their tradeoffs</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>ADR lifecycle</h3>
+    <div class="figure">
+      <svg viewBox="0 0 720 150" role="img" aria-label="ADR lifecycle: Proposed to Accepted to Deprecated or Superseded">
+        <defs>
+          <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#4a5568"></path>
+          </marker>
+        </defs>
+        <rect x="20" y="52" width="140" height="46" rx="9" fill="#eef0ff" stroke="#9dbcf5"></rect>
+        <text x="90" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Proposed</text>
+
+        <rect x="230" y="52" width="140" height="46" rx="9" fill="#e8f7f4" stroke="#7fd1c4"></rect>
+        <text x="300" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#0f766e">Accepted</text>
+
+        <rect x="440" y="10" width="150" height="46" rx="9" fill="#fdf3e3" stroke="#f0c26b"></rect>
+        <text x="515" y="38" text-anchor="middle" font-size="13.5" font-weight="700" fill="#b45309">Deprecated</text>
+
+        <rect x="440" y="94" width="150" height="46" rx="9" fill="#f4f5f8" stroke="#c3cbd6"></rect>
+        <text x="515" y="116" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4338ca">Superseded</text>
+        <text x="515" y="132" text-anchor="middle" font-size="10.5" fill="#718096">→ links to new ADR</text>
+
+        <line x1="160" y1="75" x2="224" y2="75" stroke="#4a5568" stroke-width="2.5" marker-end="url(#arrR)"></line>
+        <line x1="370" y1="70" x2="434" y2="42" stroke="#4a5568" stroke-width="2.5" marker-end="url(#arrR)"></line>
+        <line x1="370" y1="80" x2="434" y2="110" stroke="#4a5568" stroke-width="2.5" marker-end="url(#arrR)"></line>
+      </svg>
+      <figcaption>ADRs are append-only. To change a decision, write a new ADR and mark the old one <em>Superseded</em> — never silently edit history.</figcaption>
+    </div>
+
+    <h3>Sample ADR (rendered)</h3>
+    <div class="adr-card">
+      <h4>ADR-014: Model tier selection for the Customer Support Bot</h4>
+      <span class="status">Status: Accepted</span>
+      <span class="field-label">Context</span>
+      <p>~8,000 support conversations/day. Most are routine FAQ-style questions; a minority are complex account issues. Budget target &lt; $0.02 per conversation; users expect a reply to begin in under ~2 seconds. Answers must stay grounded in our published help center; no medical/legal/financial advice.</p>
+      <span class="field-label">Decision</span>
+      <p>We will use a <strong>two-tier routing</strong> approach: a fast, lower-cost model tier (Haiku-class) handles the majority of FAQ queries with RAG over the help center; queries the router flags as complex escalate to a more capable tier (Sonnet-class). All answers include source citations, and out-of-scope topics are refused via guardrails. Prompts are versioned in the repo.</p>
+      <span class="field-label">Consequences</span>
+      <p class="consequences">
+        <span class="pro">✓ Keeps per-conversation cost within budget and first-token latency low for the common case.</span><br>
+        <span class="pro">✓ Grounding + citations improve trust and reduce hallucination risk.</span><br>
+        <span class="con">– Router adds complexity and a misclassification failure mode (a hard query sent to the small tier).</span><br>
+        <span class="con">– Accepted tradeoff (59.2): we optimize Cost + Latency for the common path and buy Quality only where routing detects it's needed. Mitigation: monitor escalation accuracy; alert on rising deflection failures.</span>
+      </p>
+      <span class="field-label">Alternatives considered</span>
+      <p><strong>Single large tier for everything</strong> — higher quality everywhere but over budget and slower for simple FAQs. <strong>Single small tier for everything</strong> — cheapest/fastest but under-serves complex cases and risks wrong answers. Routing was chosen to balance both.</p>
+    </div>
+
+    <div class="box tip-box">
+      <strong class="lbl">💡 Tips &amp; Tricks</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Mnemonic — <span class="mnemonic">"C.D.C.A."</span></strong>: <em>Context → Decision → Consequences → Alternatives</em>. Miss "Consequences" and it's a decision announcement, not a record.</li>
+        <li><strong>One decision per ADR</strong> — keep them short (often &lt; 1 page) and numbered sequentially.</li>
+        <li><strong>Immutable:</strong> Don't edit an accepted ADR to reverse it — write a new one and mark the old <em>Superseded</em>. The history <em>is</em> the value.</li>
+        <li><strong>Write "We will…" in active voice</strong> and store ADRs in the repo (<code>/docs/adr/</code>) next to the code they govern.</li>
+        <li><strong>For AI ADRs, always include:</strong> model tier, eval/acceptance criteria, cost &amp; latency budget, safety controls, and fallback behavior.</li>
+      </ul>
+    </div>
+
+    <div class="box warning-box">
+      <strong class="lbl">⚠️ Common Pitfalls</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Omitting negative consequences:</strong> An ADR with only upsides isn't honest and hides the accepted tradeoff.</li>
+        <li><strong>Bundling many decisions:</strong> "Our whole AI architecture" in one ADR becomes unmaintainable — split it.</li>
+        <li><strong>Editing history:</strong> Rewriting an accepted ADR destroys the audit trail. Supersede instead.</li>
+        <li><strong>No status / no number:</strong> Un-numbered, statusless notes aren't ADRs — you lose ordering and lifecycle.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-box">
+      <strong class="lbl">🎯 Exam Strategy — 59.4</strong>
+      <p style="margin:6px 0;"><strong>Likely question types:</strong> "Which field is missing from this ADR?", ordering the ADR sections, "how do you change an accepted decision?" (answer: supersede), identifying AI-specific fields.</p>
+      <p style="margin:6px 0;"><strong>Answer structure:</strong> <em>Name the decision → give Context (forces) → state Decision (active voice) → list Consequences (good + bad) → note Alternatives → set Status.</em></p>
+      <p style="margin:6px 0;"><strong>Graders look for:</strong> "one decision per record", "immutable / superseded", "context, decision, consequences, alternatives", "status", and AI extensions (model tier, evals, cost/latency budget, guardrails, fallback).</p>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ==================================================== -->
+  <!-- 59.5 -->
+  <!-- ==================================================== -->
+  <section id="s595">
+    <div class="sec-head"><span class="badge">59.5</span><h2>Hands-On: Writing an Architecture Decision Presentation</h2></div>
+
+    <p class="lead">This section combines 59.1–59.4 into a single deliverable: a short, persuasive presentation that gets a decision approved. The goal is a <strong>decision, not a lecture</strong> — lead with the recommendation, make the tradeoff explicit, and set honest expectations.</p>
+
+    <h3>Step-by-step template</h3>
+    <ol>
+      <li><strong>Define the decision &amp; audience.</strong> One sentence: "We need to decide X for audience Y." Rank the audience's priorities using <span class="mnemonic">CLASS</span> (Cost, Latency, Accuracy, Safety, Scale).</li>
+      <li><strong>State the recommendation up front (BLUF).</strong> Slide 1 gives the answer and the single most important reason.</li>
+      <li><strong>Give just enough context.</strong> The forces at play — volume, stakes, constraints, budget — at the audience's abstraction rung (59.1).</li>
+      <li><strong>Present the options as a tradeoff.</strong> 2–3 real options in a matrix across Cost / Quality / Latency / Safety (59.2). Name what each sacrifices.</li>
+      <li><strong>Set realistic expectations.</strong> Explicitly state what the system will and won't guarantee, and the mitigations (59.3).</li>
+      <li><strong>Show the decision &amp; consequences.</strong> The chosen option, the accepted tradeoff, and how you'll measure success (evals, SLOs, monitoring).</li>
+      <li><strong>Define the ask &amp; next steps.</strong> What you need approved (budget, headcount, timeline) and what happens after "yes".</li>
+      <li><strong>Attach the ADR.</strong> The presentation persuades; the ADR (59.4) records. Reference the ADR number.</li>
+    </ol>
+
+    <h3>Sample mini-presentation outline (worked example)</h3>
+    <p>Decision: <em>which model strategy to fund for the Customer Support Bot</em> — audience: VP of Support (non-technical) + Eng Lead.</p>
+    <div class="slides">
+      <div class="slide"><h4>Recommendation (BLUF)</h4><p>"Fund a two-tier support assistant: fast/cheap model for common questions, escalate hard ones. Grounded in our help center, with citations. Expected: faster replies within a capped per-chat cost."</p></div>
+      <div class="slide"><h4>Why now / Context</h4><p>~8,000 chats/day, mostly routine FAQs; agents overloaded on repetitive questions. Budget and speed targets stated in business terms.</p></div>
+      <div class="slide"><h4>The options (tradeoff matrix)</h4><p>Option A: one big model (best quality, over budget/slow). Option B: one small model (cheapest/fastest, weaker on hard cases). Option C: two-tier routing (balances Cost/Latency with Quality). Show what each sacrifices.</p></div>
+      <div class="slide"><h4>What it will &amp; won't do</h4><p>Drafts grounded answers with sources; makes agents faster. Will <em>not</em> auto-close tickets or give regulated advice; occasional errors are possible, so answers are assistive and cited (59.3).</p></div>
+      <div class="slide"><h4>Decision &amp; how we'll measure it</h4><p>Choose Option C. Accepted tradeoff: optimize cost/latency on the common path, buy quality only where routing detects complexity. Success = deflection rate, escalation accuracy, cost/chat, CSAT — tracked on a dashboard.</p></div>
+      <div class="slide"><h4>The ask &amp; next steps</h4><p>Approve budget + 3-week pilot on the top 20 FAQ intents. On success, expand. Reference <code>ADR-014</code> for the full record.</p></div>
+    </div>
+
+    <h3>Self-review checklist (before "submission")</h3>
+    <ul class="checklist">
+      <li>Does <strong>slide 1 state the recommendation</strong> (BLUF), not build up to it?</li>
+      <li>Is the language at the <strong>audience's abstraction rung</strong> — no unexplained jargon (59.1)?</li>
+      <li>Are there <strong>2–3 real options</strong> shown as a <strong>tradeoff matrix</strong>, each with a named sacrifice (59.2)?</li>
+      <li>Did I <strong>quantify</strong> cost/latency/quality targets instead of using adjectives?</li>
+      <li>Did I <strong>set honest expectations</strong> — what it won't do, and the mitigations (59.3)?</li>
+      <li>Is there a <strong>measurement plan</strong> (evals / SLOs / monitoring) for the chosen option?</li>
+      <li>Is the <strong>ask explicit</strong> (budget, timeline, scope) with clear next steps?</li>
+      <li>Is a numbered <strong>ADR attached</strong> with Context, Decision, Consequences, Alternatives (59.4)?</li>
+      <li>Would a skeptical CFO and a skeptical Eng Lead <strong>both</strong> find it credible?</li>
+    </ul>
+
+    <div class="box tip-box">
+      <strong class="lbl">💡 Tips &amp; Tricks</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Mnemonic — <span class="mnemonic">"R.O.T.E.D."</span></strong> presentation spine: <em>R</em>ecommendation → <em>O</em>ptions (tradeoffs) → <em>T</em>ruth (expectations) → <em>E</em>vidence (metrics/evals) → <em>D</em>ecision + ask.</li>
+        <li><strong>One slide = one idea.</strong> If a slide needs a paragraph to explain, it's two slides.</li>
+        <li><strong>Put backup detail in an appendix</strong> — architecture diagrams and benchmarks live there, ready if asked, out of the main flow.</li>
+        <li><strong>Rehearse the objection:</strong> pre-answer "why not just the cheap model?" and "can it be 100% accurate?" on their own slides.</li>
+      </ul>
+    </div>
+
+    <div class="box warning-box">
+      <strong class="lbl">⚠️ Common Pitfalls</strong>
+      <ul style="margin:6px 0 0;">
+        <li><strong>Lecture, not decision:</strong> 20 slides of how it works and no clear ask.</li>
+        <li><strong>Only presenting the chosen option:</strong> Without alternatives, stakeholders can't trust the choice was reasoned.</li>
+        <li><strong>Burying the tradeoff and the ask</strong> on the last slide when time runs out.</li>
+        <li><strong>No measurement plan</strong> — "we'll know it's working" is not a metric.</li>
+      </ul>
+    </div>
+
+    <div class="box exam-box">
+      <strong class="lbl">🎯 Exam Strategy — 59.5</strong>
+      <p style="margin:6px 0;"><strong>Likely question types:</strong> "Order these presentation sections", "what's missing from this decision deck?", short-answer: outline a decision presentation for scenario X.</p>
+      <p style="margin:6px 0;"><strong>Answer structure:</strong> <em>Recommendation (BLUF) → context → options as tradeoffs → expectations/limits → decision + metrics → the ask → attach ADR.</em></p>
+      <p style="margin:6px 0;"><strong>Graders look for:</strong> "BLUF / recommendation first", "options + tradeoff matrix", "named sacrifice", "realistic expectations", "measurement / evals / SLOs", "explicit ask", "ADR attached".</p>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ==================================================== -->
+  <!-- CHAPTER SUMMARY -->
+  <!-- ==================================================== -->
+  <section id="summary">
+    <div class="sec-head"><span class="badge">Recap</span><h2>Chapter Summary — Quick Reference</h2></div>
+    <div class="table-scroll">
+      <table>
+        <caption>One-line recall for each sub-topic + the single most testable idea.</caption>
+        <thead><tr><th>#</th><th>Sub-topic</th><th>Core idea</th><th>Memory hook</th></tr></thead>
+        <tbody>
+          <tr><td class="dim"><strong>59.1</strong></td><td>Presenting to non-technical audiences</td><td>Translate to the audience's world; lead with outcome; simplify the level, not the truth.</td><td><span class="mnemonic">A.B.C.</span> + BLUF + abstraction ladder</td></tr>
+          <tr><td class="dim"><strong>59.2</strong></td><td>Cost vs Quality vs Latency vs Safety</td><td>No free lunch — optimize per use case and name the sacrifice.</td><td><span class="mnemonic">CLASS</span> + "pick two-ish"</td></tr>
+          <tr><td class="dim"><strong>59.3</strong></td><td>Realistic LLM expectations</td><td>Never promise 100%; frame as high-confidence assistance requiring validation.</td><td><span class="mnemonic">HALT</span> before promising</td></tr>
+          <tr><td class="dim"><strong>59.4</strong></td><td>ADRs for AI systems</td><td>One immutable record per decision: Context, Decision, Consequences, Alternatives (+ AI fields).</td><td><span class="mnemonic">C.D.C.A.</span> + supersede, don't edit</td></tr>
+          <tr><td class="dim"><strong>59.5</strong></td><td>Architecture decision presentation</td><td>Deliver a decision, not a lecture — recommendation first, tradeoffs shown, expectations set, ADR attached.</td><td><span class="mnemonic">R.O.T.E.D.</span> spine</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box exam-box">
+      <strong class="lbl">🎯 Chapter-End Exam Strategy</strong>
+      <p style="margin:6px 0;">Chapter 59 questions reward <strong>communication discipline</strong>, not deep math. Across all sub-topics, a strong answer almost always: (1) identifies the <strong>audience</strong>, (2) leads with the <strong>decision/outcome</strong>, (3) makes a <strong>tradeoff explicit</strong> with a named sacrifice, (4) sets <strong>honest expectations</strong> with a mitigation, and (5) points to <strong>how success is measured</strong>. If a multiple-choice option over-promises ("always accurate", "cheaper, faster, better", "fully automated in a regulated flow"), it is almost always the wrong answer.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================== -->
+  <!-- SELF TEST -->
+  <!-- ==================================================== -->
+  <section id="selftest">
+    <div class="sec-head"><span class="badge">Test</span><h2>Self-Test — 5 Sample Questions</h2></div>
+    <p style="color:var(--text-muted);font-size:14px;">Attempt each before expanding the answer. Explanations note the keywords graders reward.</p>
+
+    <div class="qa">
+      <div class="q"><span class="qnum">Q1</span>(Scenario) A VP of Marketing asks how your new content-drafting assistant works. Which opening is best?</div>
+      <details>
+        <summary>Show answer</summary>
+        <div class="answer">
+          <p><span class="key">Best:</span> "It drafts first-version copy from your brief — like a fast junior writer that always needs an editor's review." <em>(Leads with outcome + analogy + honest boundary — 59.1 &amp; 59.3.)</em></p>
+          <p><span class="key">Wrong:</span> "It uses a transformer to autoregressively generate tokens conditioned on your prompt embedding." <em>(Jargon-first; ignores audience.)</em> Also wrong: "It writes perfect final copy automatically." <em>(Over-promises — violates 59.3.)</em></p>
+          <p><strong>Keywords:</strong> audience-appropriate, outcome-first, analogy, requires validation.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qnum">Q2</span>(MCQ) A high-volume, low-stakes text-tagging job runs 2M items/day. Which optimization is most appropriate?<br>A) Largest model tier for max quality &nbsp; B) Smaller/faster tier + caching + batching &nbsp; C) Add human review to every item &nbsp; D) Maximize output length</div>
+      <details>
+        <summary>Show answer</summary>
+        <div class="answer">
+          <p><span class="key">Answer: B.</span> High volume + low stakes → optimize <strong>Cost + Latency</strong> with a smaller tier, prompt caching, and batch processing. A over-spends; C is safety overkill that destroys throughput; D increases cost for no benefit.</p>
+          <p><strong>Keywords:</strong> optimize per use case, no free lunch, cost/latency levers, scale.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qnum">Q3</span>(Short answer) A stakeholder insists the compliance-review assistant must be "100% accurate and fully automated." How do you respond?</div>
+      <details>
+        <summary>Show answer</summary>
+        <div class="answer">
+          <p><span class="key">Model answer:</span> Explain that no LLM configuration guarantees 100% accuracy — outputs can occasionally be confidently wrong (hallucination) and are non-deterministic. Reframe it as <strong>high-confidence assistance requiring human validation</strong>: the assistant pre-screens and flags issues with citations to the exact policy clause, a human makes the final call, and we measure flag accuracy against a labeled eval set and log every recommendation for audit. This delivers most of the speed while keeping the regulated decision human-owned.</p>
+          <p><strong>Keywords:</strong> no 100% guarantee, hallucination, human-in-the-loop, evals/acceptance threshold, citations/grounding, audit trail.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qnum">Q4</span>(MCQ) An accepted ADR's decision needs to be reversed after six months. What's the correct action?<br>A) Edit the ADR text to the new decision &nbsp; B) Delete the ADR &nbsp; C) Write a new ADR and mark the old one "Superseded" &nbsp; D) Add a comment in the code only</div>
+      <details>
+        <summary>Show answer</summary>
+        <div class="answer">
+          <p><span class="key">Answer: C.</span> ADRs are <strong>immutable / append-only</strong>. Preserve history by writing a new numbered ADR and marking the previous one <em>Superseded</em> (with a link). Editing or deleting destroys the audit trail — the whole point of ADRs.</p>
+          <p><strong>Keywords:</strong> immutable, supersede (don't edit/delete), status, audit trail.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qnum">Q5</span>(Scenario) Review this decision deck: 15 slides of architecture diagrams, one option shown, no metrics, the budget ask on the final slide. Name three fixes.</div>
+      <details>
+        <summary>Show answer</summary>
+        <div class="answer">
+          <p><span class="key">Fixes:</span> (1) <strong>Lead with the recommendation (BLUF)</strong> on slide 1 instead of building up through diagrams — move detail to an appendix (59.1/59.5). (2) <strong>Show 2–3 options as a tradeoff matrix</strong> with named sacrifices so the choice is defensible (59.2). (3) <strong>Add a measurement plan</strong> (evals/SLOs/monitoring) and bring the <strong>explicit ask earlier</strong>, not stranded on the last slide. Bonus: attach a numbered ADR.</p>
+          <p><strong>Keywords:</strong> BLUF/recommendation first, options + tradeoff matrix, named sacrifice, metrics/evals, explicit ask, ADR.</p>
+        </div>
+      </details>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <footer>
+    Chapter 59 · Communicating Architectural Decisions &amp; Tradeoffs — study guide.<br>
+    Technical claims describe general, verifiable LLM/Claude practices (model tiers, prompt caching, batch processing, tool use, context windows, non-determinism, knowledge cutoff). No specific benchmarks are asserted. Verify current model names, context limits, and pricing against official Anthropic documentation before relying on them.
+  </footer>
+
+</div>
+
+
+</body></html>

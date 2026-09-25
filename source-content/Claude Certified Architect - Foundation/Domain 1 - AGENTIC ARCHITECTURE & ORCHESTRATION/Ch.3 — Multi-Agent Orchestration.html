@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3: Multi-Agent Orchestration — CCAR Study Notes</title>
+<style>
+  :root {
+    --bg: #f1f5f9; --surface: #ffffff; --sidebar-bg: #0f172a;
+    --sidebar-text: #cbd5e1; --sidebar-active: #38bdf8;
+    --heading: #0f172a; --text: #334155; --text-muted: #64748b;
+    --blue-bg: #dbeafe; --blue-border: #2563eb; --blue-icon: #1d4ed8;
+    --yellow-bg: #fef9c3; --yellow-border: #ca8a04; --yellow-icon: #a16207;
+    --red-bg: #fee2e2; --red-border: #dc2626; --red-icon: #b91c1c;
+    --green-bg: #dcfce7; --green-border: #16a34a; --green-icon: #15803d;
+    --code-bg: #1e293b; --code-text: #e2e8f0; --code-kw: #7dd3fc;
+    --code-str: #86efac; --code-cm: #64748b; --code-fn: #c4b5fd;
+    --border: #e2e8f0; --link: #2563eb;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7;
+    display: flex; min-height: 100vh;
+  }
+  /* SIDEBAR */
+  .sidebar {
+    width: 280px; min-width: 280px; background: var(--sidebar-bg);
+    color: var(--sidebar-text); padding: 24px 0; position: fixed;
+    top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 100;
+    scrollbar-width: thin; scrollbar-color: #334155 transparent;
+  }
+  .sidebar h2 { padding: 0 20px 16px; font-size: 14px; text-transform: uppercase;
+    letter-spacing: 1.5px; color: #94a3b8; border-bottom: 1px solid #1e293b; margin-bottom: 8px; }
+  .sidebar a {
+    display: block; padding: 7px 20px; font-size: 13.5px; color: var(--sidebar-text);
+    text-decoration: none; border-left: 3px solid transparent; transition: all .15s;
+  }
+  .sidebar a:hover, .sidebar a:focus {
+    color: #f1f5f9; background: #1e293b; border-left-color: var(--sidebar-active);
+  }
+  .sidebar a.sub { padding-left: 36px; font-size: 12.5px; color: #64748b; }
+  .sidebar a.sub:hover { color: #cbd5e1; }
+  .sidebar .badge {
+    display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 8px;
+    background: #1e293b; color: #94a3b8; margin-left: 6px; vertical-align: middle;
+  }
+  /* MAIN */
+  .main { margin-left: 280px; flex: 1; padding: 40px 48px 80px; max-width: 960px; }
+  .main > h1 { font-size: 32px; color: var(--heading); margin-bottom: 6px; line-height: 1.25; }
+  .main > .subtitle { font-size: 16px; color: var(--text-muted); margin-bottom: 36px; }
+  h2 { font-size: 24px; color: var(--heading); margin: 48px 0 8px; padding-top: 16px;
+    border-top: 2px solid var(--border); }
+  h2:first-of-type { border-top: none; margin-top: 0; }
+  h3 { font-size: 18px; color: var(--heading); margin: 28px 0 10px; }
+  h4 { font-size: 15px; color: var(--heading); margin: 20px 0 8px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); }
+  strong { color: var(--heading); }
+  /* CALLOUTS */
+  .callout {
+    border-left: 4px solid; border-radius: 6px; padding: 16px 20px;
+    margin: 18px 0; font-size: 14.5px;
+  }
+  .callout .callout-title { font-weight: 700; margin-bottom: 6px; font-size: 14px; text-transform: uppercase; letter-spacing: .5px; }
+  .callout-blue   { background: var(--blue-bg);   border-color: var(--blue-border);   }
+  .callout-blue .callout-title { color: var(--blue-icon); }
+  .callout-yellow { background: var(--yellow-bg); border-color: var(--yellow-border); }
+  .callout-yellow .callout-title { color: var(--yellow-icon); }
+  .callout-red    { background: var(--red-bg);    border-color: var(--red-border);    }
+  .callout-red .callout-title { color: var(--red-icon); }
+  .callout-green  { background: var(--green-bg);  border-color: var(--green-border);  }
+  .callout-green .callout-title { color: var(--green-icon); }
+  /* CODE */
+  pre {
+    background: var(--code-bg); color: var(--code-text); padding: 18px 22px;
+    border-radius: 8px; overflow-x: auto; font-size: 13.5px; line-height: 1.6;
+    margin: 14px 0; font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, monospace;
+  }
+  code { font-family: inherit; }
+  p code, li code {
+    background: #e2e8f0; color: #0f172a; padding: 2px 6px; border-radius: 4px;
+    font-size: 13px;
+  }
+  .kw { color: var(--code-kw); } .st { color: var(--code-str); }
+  .cm { color: var(--code-cm); font-style: italic; } .fn { color: var(--code-fn); }
+  .op { color: #fbbf24; }
+  /* DIAGRAM BOX */
+  .diagram-box {
+    background: #0f172a; color: #94a3b8; padding: 20px 24px; border-radius: 8px;
+    margin: 16px 0; overflow-x: auto; font-family: "Cascadia Code", Consolas, monospace;
+    font-size: 13px; line-height: 1.5;
+  }
+  .diagram-box .hl { color: #38bdf8; } .diagram-box .hl2 { color: #a78bfa; }
+  .diagram-box .hl3 { color: #4ade80; } .diagram-box .hl4 { color: #fbbf24; }
+  /* TABLE */
+  table {
+    width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px;
+  }
+  th, td {
+    padding: 10px 14px; border: 1px solid var(--border); text-align: left;
+  }
+  th { background: #f1f5f9; font-weight: 600; color: var(--heading); }
+  tr:nth-child(even) { background: #f8fafc; }
+  /* Q&A */
+  .qa { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px;
+    padding: 18px 22px; margin: 14px 0; }
+  .qa .q { font-weight: 700; color: var(--heading); margin-bottom: 4px; }
+  .qa .opts { margin: 8px 0 8px 18px; }
+  .qa .opts div { margin: 3px 0; }
+  .qa .opts .correct { color: var(--green-icon); font-weight: 600; }
+  .qa .rationale { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border);
+    color: var(--text-muted); font-size: 13.5px; }
+  /* CHECKLIST */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 5px 0; }
+  .checklist li::before { content: "☐ "; color: var(--text-muted); }
+  /* GLOSSARY */
+  .glossary dt { font-weight: 700; color: var(--heading); margin-top: 10px; }
+  .glossary dd { margin-left: 18px; margin-bottom: 6px; color: var(--text); }
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ SIDEBAR NAV ═══════════════════════ -->
+<nav class="sidebar">
+  <h2>Chapter 3</h2>
+  <a href="#s3-1">3.1 Hub-and-Spoke / Coordinator</a>
+  <a href="#s3-2">3.2 Subagent Context Isolation</a>
+  <a href="#s3-3">3.3 Decomposition &amp; Aggregation</a>
+  <a href="#s3-4">3.4 Over-Decomposition Risks</a>
+  <a href="#s3-5">3.5 Dynamic Subagent Selection</a>
+  <a href="#s3-6">3.6 Structured Context Passing</a>
+  <a href="#s3-7">3.7 Failure &amp; Partial Results</a>
+  <a href="#s3-8">3.8 Parallel vs Sequential</a>
+  <a href="#s3-9">3.9 Hands-On Walkthrough</a>
+  <a href="#summary" style="margin-top:12px; border-top:1px solid #1e293b; padding-top:12px;">📋 Chapter Summary</a>
+  <a href="#quickref" class="sub">Quick-Reference Table</a>
+  <a href="#glossary" class="sub">Glossary</a>
+  <a href="#readiness" class="sub">Exam Readiness Checklist</a>
+</nav>
+
+<!-- ═══════════════════════ MAIN CONTENT ═══════════════════════ -->
+<div class="main">
+<h1>Chapter 3: Multi-Agent Orchestration</h1>
+<p class="subtitle">Claude Certified Architect — Foundations &amp; Professional &nbsp;|&nbsp; Comprehensive Study Notes</p>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.1                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-1">3.1 &nbsp; Hub-and-Spoke Architecture: The Coordinator Pattern</h2>
+
+<h3>Concept Overview</h3>
+<p>The <strong>hub-and-spoke</strong> (or <strong>coordinator</strong>) pattern is the foundational architecture for multi-agent systems built with Claude. A single <em>coordinator agent</em> sits at the center and is the only agent that communicates directly with the user. It receives the user's request, decomposes it into subtasks, dispatches those subtasks to specialized <em>subagents</em>, collects their results, and synthesizes a final response. Subagents never talk to each other or to the user — they only talk to the coordinator.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Coordinator (Hub/Orchestrator)</strong> — The central agent responsible for task planning, delegation, and result aggregation. It maintains the conversation state with the user.</li>
+  <li><strong>Subagent (Spoke/Worker)</strong> — A specialized agent that receives a scoped task from the coordinator, executes it, and returns a result. Stateless between invocations.</li>
+  <li><strong>Hub-and-Spoke Topology</strong> — A network topology where all communication flows through a central node (the hub); spokes do not communicate laterally.</li>
+  <li><strong>Orchestration Layer</strong> — The application code that manages the lifecycle of subagent calls — spawning, monitoring, timeout, aggregation.</li>
+  <li><strong>Fan-out / Fan-in</strong> — The pattern of dispatching multiple subtasks (fan-out) and collecting their results (fan-in).</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">                        ┌──────────────────────────┐
+                        │    <span class="hl">USER / CLIENT APP</span>      │
+                        └────────────┬─────────────┘
+                                     │  user query
+                                     ▼
+                        ┌──────────────────────────┐
+                        │   <span class="hl2">COORDINATOR AGENT</span>       │
+                        │  ┌────────────────────┐  │
+                        │  │ • Decompose task    │  │
+                        │  │ • Select subagents  │  │
+                        │  │ • Dispatch &amp; wait   │  │
+                        │  │ • Aggregate results │  │
+                        │  └────────────────────┘  │
+                        └───┬────────┬────────┬────┘
+                  ┌─────────┘        │        └─────────┐
+                  │ subtask A        │ subtask B        │ subtask C
+                  ▼                  ▼                  ▼
+          ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+          │ <span class="hl3">SUBAGENT A</span>   │  │ <span class="hl3">SUBAGENT B</span>   │  │ <span class="hl3">SUBAGENT C</span>   │
+          │  (Research)  │  │  (Analysis)  │  │  (Writing)   │
+          └──────┬───────┘  └──────┬───────┘  └──────┬───────┘
+                 │ result A        │ result B        │ result C
+                 └─────────┐       │       ┌─────────┘
+                           ▼       ▼       ▼
+                        ┌──────────────────────────┐
+                        │   <span class="hl2">COORDINATOR</span> aggregates  │
+                        │   → synthesizes final     │
+                        │      response to user     │
+                        └──────────────────────────┘
+</pre></div>
+
+<h3>Deep Dive</h3>
+<p>In multi-agent systems using Claude, the hub-and-spoke pattern is the <strong>strongly recommended default</strong>. Here's why:</p>
+<ol>
+  <li><strong>Single point of coherence.</strong> The coordinator holds the "big picture" — it understands the user's intent and can make trade-offs across subtask results. Subagents, by design, have narrow scope.</li>
+  <li><strong>Clear responsibility boundaries.</strong> Each subagent has a well-defined specialty (research, code generation, summarization). This allows you to tune system prompts, temperature, and tool access per subagent without cross-contamination.</li>
+  <li><strong>Simplified error handling.</strong> The coordinator is the single place where you handle subagent failures, retries, and fallback logic.</li>
+  <li><strong>Conversation continuity.</strong> Only the coordinator maintains the multi-turn conversation with the user. Subagents are invoked for a single turn and are discarded.</li>
+</ol>
+<p><strong>How it works mechanically:</strong> The coordinator is a Claude API call with its own system prompt. When it decides to invoke a subagent, your orchestration code makes a <em>new, separate</em> Claude API call with the subagent's system prompt and the scoped task as the user message. The subagent's response is returned to the orchestration code, which feeds it back into the coordinator's context. The coordinator then continues its reasoning with the subagent result available.</p>
+<p>Critically, subagents are implemented as <strong>tool calls</strong> from the coordinator's perspective. The coordinator decides to use a "tool" (e.g., <code>research_agent</code>), the orchestration layer intercepts this, makes the subagent API call, and returns the result as a tool result. This keeps the coordinator's conversation flow clean.</p>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">🟡 Tip — Tool-Based Subagent Invocation</div>
+  <p>Model subagents as tools in the coordinator's tool definitions. For example, define a tool called <code>research_agent(query: str)</code>. When the coordinator calls this tool, your application code routes the call to a dedicated Claude instance with a research-focused system prompt. This pattern leverages Claude's native tool-use capabilities for clean orchestration.</p>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-title">🔴 Common Mistake — Peer-to-Peer Agent Communication</div>
+  <p>A frequent anti-pattern is allowing subagents to call each other directly (mesh topology). This leads to unpredictable execution paths, circular dependencies, and makes debugging nearly impossible. Always route communication through the coordinator. If Subagent B needs information from Subagent A, the coordinator should invoke A first, extract relevant data, and pass it to B.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.1</div>
+  <p>Questions on this topic test whether you understand <strong>why centralized coordination is preferred</strong> over peer-to-peer. Look for scenarios describing multi-step tasks — the correct answer will involve a coordinator that delegates and aggregates. Watch for distractors that describe agents "passing messages to each other" or "sharing a conversation" — these describe mesh patterns that violate hub-and-spoke.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: A development team is building a multi-agent system where a customer query needs research, code analysis, and a final summary. Which architecture should they use?</div>
+  <div class="opts">
+    <div>A) Each agent processes the query independently and the user picks the best response</div>
+    <div>B) Agents are arranged in a pipeline where each passes its output to the next agent directly</div>
+    <div class="correct">✅ C) A coordinator agent decomposes the query, dispatches subtasks to specialist agents, and aggregates their results into a single response</div>
+    <div>D) All agents share a single conversation context and collaboratively build the response</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C is the hub-and-spoke pattern. A fails because independent processing lacks coherent synthesis. B is a pipeline (valid in some cases, but the coordinator pattern is the canonical answer for multi-skill tasks). D is wrong — agents don't share conversation context in Claude's architecture.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: In a hub-and-spoke multi-agent system, what is the primary role of the coordinator agent?</div>
+  <div class="opts">
+    <div>A) To execute the most computationally intensive subtask</div>
+    <div class="correct">✅ B) To decompose the user's request into subtasks, delegate to specialized subagents, and aggregate their results</div>
+    <div>C) To maintain separate conversation histories for each subagent</div>
+    <div>D) To provide shared memory that all subagents can read from and write to</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> B is the definition of the coordinator's role. A confuses the coordinator with a worker. C is partially true (the coordinator does track context) but is not its primary role. D describes shared state — subagents are isolated.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q3: Why is peer-to-peer communication between subagents discouraged in Claude-based multi-agent systems?</div>
+  <div class="opts">
+    <div>A) Because Claude's API does not support multiple concurrent connections</div>
+    <div>B) Because it would exceed the context window limit</div>
+    <div class="correct">✅ C) Because it creates unpredictable execution paths, circular dependencies, and makes debugging difficult</div>
+    <div>D) Because subagents cannot make tool calls</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C correctly identifies the architectural risks. A is factually wrong. B is not the primary concern. D is wrong — subagents can have tools.</div>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.2                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-2">3.2 &nbsp; Subagent Context Isolation — Why Subagents Don't Inherit History</h2>
+
+<h3>Concept Overview</h3>
+<p>When a coordinator spawns a subagent, the subagent starts with a <strong>completely fresh context</strong>. It does not automatically receive the coordinator's conversation history, previous subagent results, or any accumulated state. Each subagent invocation is an independent Claude API call with its own system prompt and a user message that contains only what the orchestration layer explicitly provides. This is a deliberate architectural choice, not a limitation.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Context Isolation</strong> — The principle that each subagent operates in its own context window, independent of all other agents.</li>
+  <li><strong>Context Window</strong> — The maximum amount of text (system prompt + messages) a single Claude call can process. Each subagent has its own window.</li>
+  <li><strong>Context Injection</strong> — The practice of explicitly inserting relevant information into a subagent's prompt so it has the data it needs.</li>
+  <li><strong>Context Pollution</strong> — When irrelevant information from other tasks "leaks" into a subagent's context, degrading its performance and focus.</li>
+  <li><strong>Minimum Viable Context</strong> — The smallest amount of context a subagent needs to successfully complete its specific subtask.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">  <span class="hl4">WRONG MENTAL MODEL</span> (subagents inherit history)       <span class="hl3">CORRECT MENTAL MODEL</span> (isolated contexts)
+
+  ┌─────────────────────────────┐                ┌─────────────────────────────┐
+  │ Coordinator Context Window  │                │ Coordinator Context Window  │
+  │ ┌─────────────────────────┐ │                │ ┌─────────────────────────┐ │
+  │ │ System prompt            │ │                │ │ System prompt            │ │
+  │ │ Turn 1: User → Asst     │ │                │ │ Turn 1: User → Asst     │ │
+  │ │ Turn 2: User → Asst     │ │                │ │ Turn 2: User → Asst     │ │
+  │ │ Turn 3: User + tool call│ │                │ │ Turn 3: User + tool call│ │
+  │ └─────────────────────────┘ │                │ └─────────────────────────┘ │
+  │         ╲  ╲  ╲ shared?     │                │         │  (NO sharing)     │
+  │   ┌──────╲──╲──╲────────┐  │                └─────────┼───────────────────┘
+  │   │ Subagent Context  ❌ │  │
+  │   │ (sees ALL history)   │  │                ┌─────────┴───────────────────┐
+  │   └──────────────────────┘  │                │ <span class="hl3">Subagent Context Window</span>     │
+  └─────────────────────────────┘                │ ┌─────────────────────────┐ │
+                                                 │ │ Subagent system prompt   │ │
+                                                 │ │ <span class="hl">Only explicitly passed</span>   │ │
+                                                 │ │ <span class="hl">context from coordinator</span> │ │
+                                                 │ └─────────────────────────┘ │
+                                                 └─────────────────────────────┘
+</pre></div>
+
+<h3>Deep Dive</h3>
+<p>Context isolation exists for three critical reasons:</p>
+<ol>
+  <li><strong>Focus and precision.</strong> A subagent tasked with "analyze this code for security vulnerabilities" performs better when its context contains only the code and the analysis instructions — not 20 turns of unrelated conversation about project timelines.</li>
+  <li><strong>Context window efficiency.</strong> Claude has a finite context window. If every subagent inherited the full coordinator history, you'd waste significant token budget on irrelevant context, leaving less room for the actual task.</li>
+  <li><strong>Security and data segmentation.</strong> In enterprise systems, different subagents may handle data with different sensitivity levels. Isolation ensures a "public summary" subagent never accidentally sees data intended only for an "internal analysis" subagent.</li>
+</ol>
+
+<p><strong>What this means in practice:</strong> When you invoke a subagent via a Claude API call, the <code>messages</code> array for that call starts fresh. The only content the subagent sees is:</p>
+<ul>
+  <li>Its own <code>system</code> prompt (specialized for its role)</li>
+  <li>The <code>user</code> message you construct — which should contain the subtask description and any necessary context extracted from the coordinator's state</li>
+</ul>
+
+<p><strong>Real-world analogy:</strong> Think of the coordinator as a project manager and subagents as contractors. When you hire a plumber (subagent), you don't hand them the entire project file for a house renovation. You give them the plumbing-specific plans, access to the relevant area, and the scope of work. That's context injection — providing exactly what's needed, nothing more.</p>
+
+<div class="callout callout-blue">
+  <div class="callout-title">🔵 Core Concept — Explicit Context Transfer</div>
+  <p>If a subagent needs information from the coordinator's conversation history or from a previous subagent's result, the coordinator must <strong>explicitly extract and pass</strong> that information. This is typically done by constructing a structured prompt that includes relevant data snippets. There is no automatic, implicit, or inherited context sharing.</p>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-title">🔴 Common Mistake — Assuming Context Inheritance</div>
+  <p>New architects often assume subagents "see" the coordinator's history. This leads to subagent prompts like: <em>"Continue the analysis from earlier."</em> The subagent has no idea what "earlier" refers to. The correct approach: <em>"Analyze the following data for trend X. The data was collected from [source] and shows [key observations]. Here is the data: ..."</em></p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.2</div>
+  <p>This is one of the <strong>most frequently tested</strong> concepts. Questions will describe a scenario where a subagent "needs to know" something from a previous turn or another subagent's result. The correct answer <em>always</em> involves explicitly passing context in the subagent's prompt. <strong>Distractor trap:</strong> Any option that suggests subagents "automatically receive," "inherit," or "share" the coordinator's conversation history is <strong>always wrong</strong>.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: A coordinator agent has gathered research results in Turn 3. In Turn 5, it needs a subagent to summarize those results. How should the results be made available to the summarization subagent?</div>
+  <div class="opts">
+    <div>A) The subagent automatically receives the coordinator's full conversation history including Turn 3</div>
+    <div>B) The coordinator stores the results in a shared memory space that the subagent reads from</div>
+    <div class="correct">✅ C) The coordinator extracts the relevant research results and includes them in the subagent's prompt as context</div>
+    <div>D) The subagent makes an API call back to the coordinator to request the Turn 3 results</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C is the only correct approach. A violates context isolation. B implies a shared memory system that doesn't exist in Claude's standard architecture. D implies subagent-to-coordinator communication, which is not how the pattern works.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: Which of the following is NOT a benefit of subagent context isolation?</div>
+  <div class="opts">
+    <div>A) Prevents irrelevant information from degrading subagent performance</div>
+    <div>B) Allows different security levels for different subagents</div>
+    <div class="correct">✅ C) Eliminates the need to think about what context each subagent requires</div>
+    <div>D) Conserves context window tokens for task-relevant information</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C is wrong because isolation actually <em>increases</em> the need to carefully consider what context to pass. It's a responsibility, not something that eliminates thinking. A, B, and D are all genuine benefits.</div>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.3                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-3">3.3 &nbsp; Task Decomposition, Delegation &amp; Result Aggregation</h2>
+
+<h3>Concept Overview</h3>
+<p>Task decomposition is the coordinator's most critical responsibility: breaking a complex user request into well-scoped subtasks that individual subagents can handle independently. Delegation is the act of assigning each subtask to the appropriate specialized subagent. Result aggregation is the synthesis of subagent outputs into a coherent, complete response that addresses the original user request. Together, these three steps form the <strong>core loop</strong> of multi-agent orchestration.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Task Decomposition</strong> — Breaking a complex request into independent, well-scoped subtasks.</li>
+  <li><strong>Subtask</strong> — A discrete unit of work that can be completed by a single subagent in a single invocation.</li>
+  <li><strong>Delegation</strong> — The act of assigning a subtask to a specific subagent based on its specialization.</li>
+  <li><strong>Result Aggregation</strong> — Combining subagent outputs into a unified response, resolving conflicts and filling gaps.</li>
+  <li><strong>Decomposition Strategy</strong> — The method used to break down tasks (by domain, by step, by data partition, etc.).</li>
+  <li><strong>Atomic Subtask</strong> — A subtask that cannot be meaningfully subdivided further for a single agent.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">  User: <span class="hl4">"Compare the security, cost, and performance of AWS Lambda vs ECS for our microservices."</span>
+
+  <span class="hl2">COORDINATOR</span>
+  ├── <span class="hl">STEP 1: DECOMPOSE</span>
+  │   ├── Subtask A: "Analyze security model of Lambda vs ECS"
+  │   ├── Subtask B: "Compare cost structures for 10K req/day workload"
+  │   └── Subtask C: "Benchmark cold start and throughput characteristics"
+  │
+  ├── <span class="hl">STEP 2: DELEGATE</span>
+  │   ├── Subtask A → <span class="hl3">Security Analyst Subagent</span> (system prompt: security expert)
+  │   ├── Subtask B → <span class="hl3">Cost Analyst Subagent</span>     (system prompt: FinOps expert)
+  │   └── Subtask C → <span class="hl3">Perf Engineer Subagent</span>   (system prompt: performance expert)
+  │
+  └── <span class="hl">STEP 3: AGGREGATE</span>
+      ├── Collect: result_A + result_B + result_C
+      ├── Synthesize: Cross-reference findings, resolve contradictions
+      ├── Structure: Build comparison table + recommendation
+      └── Return: Unified response to user
+</pre></div>
+
+<h3>Deep Dive</h3>
+<h4>Decomposition Strategies</h4>
+<p>There are four primary decomposition strategies, and the right one depends on the task:</p>
+<table>
+  <tbody><tr><th>Strategy</th><th>When to Use</th><th>Example</th></tr>
+  <tr><td><strong>By Domain</strong></td><td>Task spans multiple knowledge areas</td><td>Security + Cost + Performance analysis</td></tr>
+  <tr><td><strong>By Step</strong></td><td>Task is inherently sequential</td><td>Research → Analyze → Write → Review</td></tr>
+  <tr><td><strong>By Data Partition</strong></td><td>Same analysis on different data chunks</td><td>Analyze each of 5 documents separately</td></tr>
+  <tr><td><strong>By Perspective</strong></td><td>Task benefits from multiple viewpoints</td><td>Evaluate from user, developer, business perspectives</td></tr>
+</tbody></table>
+
+<h4>Principles of Good Decomposition</h4>
+<ul>
+  <li><strong>Independence:</strong> Subtasks should be as independent as possible. Minimize dependencies between subagent tasks.</li>
+  <li><strong>Completeness:</strong> The union of all subtasks should fully cover the original request. No gaps.</li>
+  <li><strong>Specificity:</strong> Each subtask should have clear success criteria. "Look into security" is too vague; "List the top 3 security risks of X and mitigations for each" is specific.</li>
+  <li><strong>Right-sizing:</strong> Each subtask should be substantial enough to warrant a separate agent but focused enough for a single invocation.</li>
+</ul>
+
+<h4>Aggregation is Not Concatenation</h4>
+<p>A critical architect-level insight: aggregation is <strong>not</strong> simply appending subagent results together. The coordinator must:</p>
+<ul>
+  <li><strong>Resolve contradictions</strong> — If the security subagent recommends Lambda but the cost subagent recommends ECS, the coordinator must acknowledge and reason through the trade-off.</li>
+  <li><strong>Fill gaps</strong> — If no subagent addressed a cross-cutting concern (e.g., operational complexity), the coordinator should identify and address it.</li>
+  <li><strong>Enforce coherence</strong> — The final response should read as a unified analysis, not three separate reports stitched together.</li>
+  <li><strong>Add meta-level insight</strong> — The coordinator can see patterns across subagent results that no individual subagent could see.</li>
+</ul>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">🟡 Tip — Structured Output for Easier Aggregation</div>
+  <p>Instruct subagents to return results in a <strong>consistent structured format</strong> (e.g., JSON with predefined keys like <code>findings</code>, <code>confidence</code>, <code>caveats</code>). This makes the coordinator's aggregation step dramatically easier and more reliable than parsing free-form text from different agents.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.3</div>
+  <p>Exam questions will present a complex task and ask which decomposition strategy is best. Focus on the <strong>dependencies</strong>: if subtasks have no dependencies, they can be parallel (by-domain or by-data). If they must happen in order, it's by-step. Also watch for questions about aggregation — the answer that involves "synthesizing and resolving conflicts" beats "concatenating results" every time.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: A user asks: "Research competitor X, draft a blog post about our advantages, and create social media snippets." The coordinator should decompose this as:</div>
+  <div class="opts">
+    <div>A) Three parallel subtasks dispatched simultaneously to different subagents</div>
+    <div class="correct">✅ B) A sequential pipeline: research first, then pass results to the blog writer, then pass the blog to the snippet creator</div>
+    <div>C) A single subtask given to one generalist subagent</div>
+    <div>D) Two parallel subtasks (research + blog) followed by snippet creation</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> B is correct because each step depends on the previous one's output. The blog post needs research results; the snippets need the blog post. A is wrong because of these dependencies. C loses the benefit of specialization. D misidentifies the dependency chain.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: During result aggregation, the security subagent rates a design as "high risk" while the performance subagent rates the same design as "optimal." What should the coordinator do?</div>
+  <div class="opts">
+    <div>A) Return both results verbatim and let the user decide</div>
+    <div>B) Prioritize the security finding since security always trumps performance</div>
+    <div class="correct">✅ C) Acknowledge the trade-off, explain the tension between security and performance, and provide a recommendation based on the user's stated priorities</div>
+    <div>D) Re-run both subagents with additional context to resolve the conflict</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C reflects the coordinator's responsibility to synthesize and add meta-level insight. A abdicates the coordinator's role. B applies a rigid rule without considering context. D wastes resources when the coordinator already has enough information.</div>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.4                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-4">3.4 &nbsp; Risks of Overly Narrow Task Decomposition</h2>
+
+<h3>Concept Overview</h3>
+<p>While decomposition is essential, <strong>over-decomposition</strong> — splitting a task into too many tiny subtasks — is a common anti-pattern that degrades system performance. When subtasks are too narrow, each subagent lacks sufficient context to produce meaningful output, the coordinator's aggregation burden skyrockets, and the system incurs unnecessary latency and cost. The architect's challenge is finding the right granularity: coarse enough for each subagent to do meaningful work, fine enough for specialization to add value.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Over-Decomposition</strong> — Splitting a task into subtasks that are too small or too narrow to be independently meaningful.</li>
+  <li><strong>Context Fragmentation</strong> — When over-decomposition causes each subagent to receive only a tiny slice of context, losing the holistic view needed for quality output.</li>
+  <li><strong>Aggregation Overhead</strong> — The increased coordinator effort required to stitch together many tiny results into a coherent response.</li>
+  <li><strong>Granularity Sweet Spot</strong> — The optimal level of decomposition where subtasks are focused but self-contained.</li>
+  <li><strong>Single-Agent Sufficiency</strong> — The recognition that not every task benefits from multi-agent orchestration; some are better handled by a single well-prompted agent.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">                     DECOMPOSITION GRANULARITY SPECTRUM
+
+ <span class="hl4">⚠ TOO COARSE</span>                   <span class="hl3">✓ RIGHT-SIZED</span>                  <span class="hl4">⚠ TOO FINE</span>
+
+ ┌───────────────┐        ┌──────────┐ ┌──────────┐        ┌────┐┌────┐┌────┐
+ │               │        │ Subtask  │ │ Subtask  │        │tiny││tiny││tiny│
+ │  One giant    │        │    A     │ │    B     │        │ a1 ││ a2 ││ a3 │
+ │   task for    │        │ (self-   │ │ (self-   │        └────┘└────┘└────┘
+ │  one agent    │        │contained)│ │contained)│        ┌────┐┌────┐┌────┐
+ │               │        └──────────┘ └──────────┘        │tiny││tiny││tiny│
+ │               │        ┌──────────┐                     │ b1 ││ b2 ││ b3 │
+ └───────────────┘        │ Subtask  │                     └────┘└────┘└────┘
+                          │    C     │                     ┌────┐┌────┐┌────┐
+                          └──────────┘                     │tiny││tiny││tiny│
+                                                           │ c1 ││ c2 ││ c3 │
+                                                           └────┘└────┘└────┘
+
+ • No specialization      • Focused but complete          • Context fragmented
+ • Context window risk     • Manageable aggregation        • Massive aggregation
+ • Single point of failure • Clear success criteria        • 9 API calls ($$$)
+                                                           • Loss of big picture
+</pre></div>
+
+<h3>Deep Dive</h3>
+<p>Over-decomposition manifests in several concrete problems:</p>
+
+<h4>1. Context Fragmentation</h4>
+<p>When you split "Write a market analysis report" into "Write the introduction," "Write section 1," "Write section 2," etc., each subagent lacks the full picture. The introduction subagent doesn't know what sections 1–3 will say. Section 2 doesn't know what Section 1 concluded. The result is a disjointed report with repetitions, contradictions, and no narrative flow.</p>
+
+<h4>2. Compounding Latency and Cost</h4>
+<p>Each subagent invocation is a separate API call. Ten tiny subtasks running sequentially mean 10× the API round-trip latency. Even in parallel, you pay for 10 separate API calls when 2–3 would have sufficed.</p>
+
+<h4>3. Aggregation Complexity Explosion</h4>
+<p>Aggregating 3 well-structured results is manageable. Aggregating 15 tiny fragments — some overlapping, some with gaps, some contradicting — requires the coordinator to essentially re-do the work of understanding the full problem.</p>
+
+<h4>4. Loss of Emergent Insight</h4>
+<p>Claude produces its best work when it can see enough context to draw connections. A subagent analyzing only one paragraph of a document cannot identify themes that span multiple paragraphs. Over-decomposition eliminates the possibility of emergent, cross-cutting insights.</p>
+
+<h4>The Right-Sizing Heuristic</h4>
+<p>Ask: <em>"Can this subtask be meaningfully completed in isolation, with the context I plan to provide, and produce a result that is useful on its own?"</em> If the answer is no, the subtask is too narrow.</p>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">🟡 Tip — The 2–5 Subtask Rule of Thumb</div>
+  <p>For most tasks, 2–5 subtasks is the sweet spot. If you find yourself creating more than 5 subtasks for a single user request, step back and ask whether some subtasks should be merged. If you have only 1 subtask, you probably don't need multi-agent orchestration at all — just use a well-prompted single agent.</p>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-title">🔴 Common Mistake — Decomposing by Paragraph or Section</div>
+  <p>Never decompose a writing task by assigning each paragraph or section to a different subagent. Writing is inherently holistic — each section must be aware of the others for coherence. Instead, decompose by <em>research vs. writing vs. review</em> (by step), or have one writing agent produce the full draft and a separate review agent critique it.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.4</div>
+  <p>Questions will present a scenario where a team has created too many subagents or too-fine subtasks, and ask you to identify the problem or fix it. The correct answer typically involves <strong>merging subtasks</strong> or <strong>using fewer, more capable subagents</strong>. Watch for scenarios where latency, cost, or incoherent output is described — these are signals of over-decomposition.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: A team decomposed a report-writing task into 12 subtasks — one per section of the report, each assigned to a separate subagent. The final output is disjointed and repetitive. What is the most likely root cause?</div>
+  <div class="opts">
+    <div>A) The subagents used the wrong temperature setting</div>
+    <div>B) The coordinator's aggregation prompt was poorly written</div>
+    <div class="correct">✅ C) The task was over-decomposed — each subagent lacked sufficient context about other sections to write coherently</div>
+    <div>D) The subagents needed access to a shared knowledge base</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C identifies context fragmentation from over-decomposition. B could contribute, but the fundamental issue is architectural. A and D are not the root cause.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: When determining the right number of subtasks for multi-agent orchestration, what is the most important factor?</div>
+  <div class="opts">
+    <div>A) Matching the number of available API keys</div>
+    <div>B) Ensuring each subtask takes approximately the same amount of time</div>
+    <div class="correct">✅ C) Ensuring each subtask is self-contained enough to produce a meaningful result independently with the provided context</div>
+    <div>D) Minimizing the total number of tokens used across all subagents</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C captures the right-sizing principle. B is about load balancing (secondary concern). D would lead to under-decomposition or starving agents of needed context.</div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.5                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-5">3.5 &nbsp; Dynamic Subagent Selection Based on Query Complexity</h2>
+
+<h3>Concept Overview</h3>
+<p>Not every user query requires the full multi-agent apparatus. A well-designed coordinator should <strong>dynamically assess query complexity</strong> and choose the appropriate execution strategy: handling simple queries directly, using a single specialized subagent for focused tasks, and deploying multiple subagents only for genuinely complex, multi-faceted requests. This adaptive routing minimizes cost and latency while maximizing quality where it matters most.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Complexity Classification</strong> — The coordinator's assessment of how complex a query is, which determines the orchestration strategy.</li>
+  <li><strong>Direct Response</strong> — The coordinator answers the query itself without invoking any subagents (for simple queries).</li>
+  <li><strong>Single-Agent Routing</strong> — Dispatching the entire query to one specialized subagent (for moderately complex, single-domain queries).</li>
+  <li><strong>Multi-Agent Fan-Out</strong> — Dispatching multiple subtasks to multiple subagents (for complex, multi-faceted queries).</li>
+  <li><strong>Routing Logic</strong> — The decision-making process (in the coordinator's system prompt or application code) that determines which path to take.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">                          User Query
+                              │
+                              ▼
+                    ┌───────────────────┐
+                    │   <span class="hl2">COORDINATOR</span>      │
+                    │ Complexity Check   │
+                    └────────┬──────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              ▼              ▼              ▼
+       <span class="hl3">LOW COMPLEXITY</span>   <span class="hl4">MEDIUM COMPLEXITY</span>  <span class="hl">HIGH COMPLEXITY</span>
+
+    "What is X?"       "Analyze this      "Compare X vs Y across
+    "Define Y."         code for bugs."    security, cost, and
+                                           performance, then
+                                           recommend."
+
+         │                   │                    │
+         ▼                   ▼                    ▼
+   ┌──────────┐       ┌──────────┐       ┌──────┬──────┬──────┐
+   │<span class="hl3">Coordinator</span>│       │ <span class="hl4">Single</span>   │       │ <span class="hl">Sub</span>  │ <span class="hl">Sub</span>  │ <span class="hl">Sub</span>  │
+   │ <span class="hl3">responds</span>  │       │ <span class="hl4">Subagent</span> │       │ <span class="hl">  A</span>  │ <span class="hl">  B</span>  │ <span class="hl">  C</span>  │
+   │ <span class="hl3">directly</span>  │       │ <span class="hl4">(Code)</span>   │       │      │      │      │
+   └──────────┘       └──────────┘       └──────┴──────┴──────┘
+
+   Fastest, cheapest   Focused expertise   Full orchestration
+   ~1 API call         ~2 API calls        ~4+ API calls
+</pre></div>
+
+<h3>Deep Dive</h3>
+<p>Dynamic selection can be implemented at two levels:</p>
+
+<h4>1. Prompt-Based Classification (Coordinator Decides)</h4>
+<p>Include complexity classification instructions in the coordinator's system prompt:</p>
+<pre><code><span class="cm"># In the coordinator's system prompt:</span>
+Before responding, classify the query complexity:
+- <span class="st">SIMPLE</span>: Factual question, definition, or straightforward request
+  → Answer directly without subagents
+- <span class="st">MODERATE</span>: Requires specialized expertise in one domain
+  → Delegate to the appropriate specialist subagent
+- <span class="st">COMPLEX</span>: Requires multiple domains, comparison, or synthesis
+  → Decompose into subtasks and delegate to multiple subagents</code></pre>
+<p>This approach leverages Claude's reasoning ability to make the routing decision. The coordinator classifies the query and then acts accordingly.</p>
+
+<h4>2. Code-Based Classification (Application Logic Decides)</h4>
+<p>Use a lightweight classifier (could be a cheaper/faster model or even heuristics) in your application code to route before the coordinator is even invoked:</p>
+<pre><code><span class="kw">def</span> <span class="fn">route_query</span>(query):
+    complexity = <span class="fn">classify_complexity</span>(query)  <span class="cm"># fast classifier</span>
+    <span class="kw">if</span> complexity == <span class="st">"simple"</span>:
+        <span class="kw">return</span> <span class="fn">single_agent_response</span>(query, model=<span class="st">"haiku"</span>)
+    <span class="kw">elif</span> complexity == <span class="st">"moderate"</span>:
+        specialist = <span class="fn">select_specialist</span>(query)
+        <span class="kw">return</span> <span class="fn">single_agent_response</span>(query, agent=specialist, model=<span class="st">"sonnet"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="fn">full_orchestration</span>(query, model=<span class="st">"opus"</span>)  <span class="cm"># coordinator + subagents</span></code></pre>
+
+<h4>Model Tiering</h4>
+<p>An important optimization: not all subagents need the same model tier. A research subagent that aggregates information might use <code>Haiku</code> (fast, cheap). A reasoning-heavy analysis subagent might need <code>Sonnet</code>. The coordinator, which handles the most complex reasoning, might use <code>Opus</code>. This tiered approach optimizes cost without sacrificing quality where it matters.</p>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">🟡 Tip — Start Simple, Scale Up</div>
+  <p>Default to the simplest execution path. Most production systems find that 60–70% of queries can be handled by a single agent. Reserve multi-agent orchestration for the 20–30% of queries that genuinely need it. Premature multi-agent design is a common waste of engineering effort and API budget.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.5</div>
+  <p>Questions will describe a system that always uses multi-agent orchestration, even for simple queries, and ask how to improve it. The answer involves <strong>adding complexity classification and routing logic</strong>. Also watch for questions about cost optimization — matching model tiers to task complexity is a key strategy.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: An AI system uses a full coordinator + 3 subagent orchestration for every query, including "What time is it?" style questions. This results in high latency and cost. What is the best architectural improvement?</div>
+  <div class="opts">
+    <div>A) Use faster models for all agents</div>
+    <div>B) Cache all previous responses to avoid re-computation</div>
+    <div class="correct">✅ C) Implement query complexity classification so simple queries are answered directly by the coordinator without spawning subagents</div>
+    <div>D) Reduce the number of subagents from 3 to 1</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C addresses the root cause — unnecessary orchestration for simple queries. A reduces latency but doesn't fix the architectural waste. B is limited to exact matches. D is arbitrary.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: In a multi-agent system, which model selection strategy best optimizes cost while maintaining quality?</div>
+  <div class="opts">
+    <div>A) Use the most capable model (Opus) for all agents to ensure quality</div>
+    <div>B) Use the cheapest model (Haiku) for all agents to minimize cost</div>
+    <div class="correct">✅ C) Use a tiered approach: lighter models for simple subtasks, more capable models for complex reasoning and coordination</div>
+    <div>D) Alternate between models randomly to balance cost and quality</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C applies model tiering — the correct cost optimization strategy. A wastes budget. B sacrifices quality. D is not a strategy.</div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.6                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-6">3.6 &nbsp; Passing Structured Context Between Coordinator and Subagents</h2>
+
+<h3>Concept Overview</h3>
+<p>Since subagents don't inherit context (Section 3.2), the coordinator must <strong>explicitly construct the context</strong> for each subagent invocation. The quality of this context directly determines the quality of the subagent's output. Structured context passing — using well-defined schemas, clear formatting, and the principle of minimum viable context — is the architect's primary lever for controlling multi-agent system quality.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Context Packet</strong> — The structured block of information assembled by the coordinator and passed to a subagent.</li>
+  <li><strong>Minimum Viable Context (MVC)</strong> — The smallest set of information needed for a subagent to complete its task effectively.</li>
+  <li><strong>Context Schema</strong> — A predefined format (JSON, XML, or structured text) for organizing context passed between agents.</li>
+  <li><strong>Context Injection Point</strong> — Where in the subagent's prompt the context is inserted (typically in the user message).</li>
+  <li><strong>Output Contract</strong> — The agreed-upon format for subagent responses, enabling reliable parsing by the coordinator.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">  <span class="hl2">COORDINATOR</span> constructs a <span class="hl">CONTEXT PACKET</span> for each subagent:
+
+  ┌──────────────────────────────────────────────────┐
+  │                 CONTEXT PACKET                    │
+  │                                                   │
+  │  ┌──────────────────────────────────────────┐    │
+  │  │ <span class="hl4">① TASK DESCRIPTION</span>                       │    │
+  │  │    "Analyze the following code for        │    │
+  │  │     security vulnerabilities"              │    │
+  │  └──────────────────────────────────────────┘    │
+  │  ┌──────────────────────────────────────────┐    │
+  │  │ <span class="hl">② RELEVANT CONTEXT</span>                       │    │
+  │  │    Language: Python 3.11                   │    │
+  │  │    Framework: FastAPI                      │    │
+  │  │    Deployment: AWS Lambda                  │    │
+  │  └──────────────────────────────────────────┘    │
+  │  ┌──────────────────────────────────────────┐    │
+  │  │ <span class="hl3">③ INPUT DATA</span>                              │    │
+  │  │    &lt;code&gt;                                  │    │
+  │  │    def handle_request(user_input): ...     │    │
+  │  │    &lt;/code&gt;                                 │    │
+  │  └──────────────────────────────────────────┘    │
+  │  ┌──────────────────────────────────────────┐    │
+  │  │ <span class="hl2">④ OUTPUT CONTRACT</span>                         │    │
+  │  │    Return JSON with keys:                  │    │
+  │  │    {findings: [], severity: str,           │    │
+  │  │     recommendations: []}                   │    │
+  │  └──────────────────────────────────────────┘    │
+  └──────────────────────────────────────────────────┘
+</pre></div>
+
+<h3>Deep Dive</h3>
+<h4>Constructing Effective Context Packets</h4>
+<p>A well-constructed context packet has four components:</p>
+
+<p><strong>1. Task Description</strong> — What the subagent should do. Be specific and include success criteria.</p>
+<pre><code><span class="cm"># Bad:</span>  <span class="st">"Look at this code."</span>
+<span class="cm"># Good:</span> <span class="st">"Identify the top 3 security vulnerabilities in the following Python code.
+         For each, provide: (a) vulnerability type, (b) affected line(s),
+         (c) severity (Critical/High/Medium/Low), (d) recommended fix."</span></code></pre>
+
+<p><strong>2. Relevant Context</strong> — Background information the subagent needs but wouldn't know from the input data alone (language, framework, deployment environment, user preferences stated earlier in the conversation).</p>
+
+<p><strong>3. Input Data</strong> — The actual content to process, clearly delimited. Use XML tags (<code>&lt;code&gt;...&lt;/code&gt;</code>, <code>&lt;document&gt;...&lt;/document&gt;</code>) for unambiguous boundaries.</p>
+
+<p><strong>4. Output Contract</strong> — The format the subagent must use for its response. This makes the coordinator's parsing step deterministic.</p>
+
+<h4>Formatting Best Practices</h4>
+<table>
+  <tbody><tr><th>Format</th><th>Best For</th><th>Example Use</th></tr>
+  <tr><td><strong>XML tags</strong></td><td>Separating data types within a prompt</td><td><code>&lt;task&gt;...&lt;/task&gt;&lt;context&gt;...&lt;/context&gt;</code></td></tr>
+  <tr><td><strong>JSON</strong></td><td>Output contracts, structured input data</td><td>Subagent returns <code>{"findings": [...]}</code></td></tr>
+  <tr><td><strong>Markdown</strong></td><td>Human-readable context with hierarchy</td><td>Multi-section briefings for subagents</td></tr>
+  <tr><td><strong>Numbered lists</strong></td><td>Sequential instructions or criteria</td><td>"Evaluate against these 5 criteria: 1. ..."</td></tr>
+</tbody></table>
+
+<div class="callout callout-blue">
+  <div class="callout-title">🔵 Core Concept — Minimum Viable Context (MVC)</div>
+  <p>Pass only what the subagent needs to complete its specific subtask. Extra context wastes tokens and can distract the subagent. If a subagent is analyzing code for security issues, it doesn't need to know the project's business requirements or the user's name. The MVC principle is about <strong>relevance filtering</strong> — the coordinator selects and extracts only the pertinent information from its broader context.</p>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-title">🔴 Common Mistake — Dumping the Full Coordinator Context</div>
+  <p>Passing the coordinator's entire conversation history to a subagent "just in case" is a common anti-pattern. It wastes context window capacity, increases cost, and introduces noise that can degrade the subagent's focus. A 50,000-token coordinator context should become a 2,000-token context packet for a focused subagent.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.6</div>
+  <p>Questions on this topic test whether you understand <strong>what should be in a context packet</strong> and <strong>what should not</strong>. The correct answer will include a well-structured prompt with task, context, data, and output format. Distractors include: passing the full conversation, passing no context, or having the subagent "figure it out" from the data alone.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: A coordinator delegates a code review subtask to a subagent. Which context packet is most effective?</div>
+  <div class="opts">
+    <div>A) "Review this code" + the code file</div>
+    <div>B) The coordinator's full conversation history + the code file</div>
+    <div class="correct">✅ C) A structured prompt with the task description, the language/framework, the code, the specific review criteria, and the desired output format</div>
+    <div>D) The code file + "Return your analysis as a JSON object"</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C provides all four components of an effective context packet. A is too vague. B violates MVC by dumping irrelevant history. D specifies output format but lacks task specificity and context.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: What is the purpose of XML tags like <code>&lt;code&gt;...&lt;/code&gt;</code> or <code>&lt;document&gt;...&lt;/document&gt;</code> in a subagent's prompt?</div>
+  <div class="opts">
+    <div>A) They trigger special parsing modes in the Claude API</div>
+    <div class="correct">✅ B) They create clear, unambiguous boundaries between the task instructions and the input data, helping the model distinguish what to analyze from how to analyze it</div>
+    <div>C) They are required by the API specification for multi-agent systems</div>
+    <div>D) They compress the text to fit more data in the context window</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> B is correct — XML tags are a prompt engineering best practice for clear data delineation. A is wrong (no special parsing). C is wrong (not a requirement). D is wrong (no compression).</div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.7                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-7">3.7 &nbsp; Handling Subagent Failures and Partial Results</h2>
+
+<h3>Concept Overview</h3>
+<p>In production multi-agent systems, subagents <em>will</em> fail. API calls time out, rate limits are hit, subagents produce malformed output, or they return low-confidence results. A robust coordinator must handle these failures gracefully: retrying when appropriate, using fallback strategies, and delivering the best possible response even when some subtasks fail. <strong>Graceful degradation</strong> — returning a partial but useful response rather than a complete failure — is a hallmark of well-architected multi-agent systems.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Graceful Degradation</strong> — Returning a useful (if incomplete) response when some subagents fail, rather than failing entirely.</li>
+  <li><strong>Retry Strategy</strong> — The logic for re-attempting failed subagent calls (with/without backoff, with/without modified prompts).</li>
+  <li><strong>Fallback Agent</strong> — A backup subagent (often simpler or more general) invoked when the primary specialist fails.</li>
+  <li><strong>Timeout Policy</strong> — Maximum time to wait for a subagent response before considering it failed.</li>
+  <li><strong>Partial Result Aggregation</strong> — Combining available results while clearly indicating which subtasks didn't complete.</li>
+  <li><strong>Circuit Breaker</strong> — A pattern that stops sending requests to a consistently failing subagent to avoid cascading failures.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">  <span class="hl2">COORDINATOR</span> dispatches 3 subtasks:
+
+  Subtask A ─→ <span class="hl3">Subagent A</span> ─→ ✅ Result A   ─┐
+  Subtask B ─→ <span class="hl4">Subagent B</span> ─→ ❌ TIMEOUT     │
+  Subtask C ─→ <span class="hl3">Subagent C</span> ─→ ✅ Result C   ─┤
+                                               │
+                    FAILURE HANDLING FLOW       │
+                    ─────────────────────       │
+                                               ▼
+                          ┌────────────────────────────────┐
+                          │ <span class="hl2">COORDINATOR</span> Failure Handler     │
+                          │                                │
+                          │ 1. Detect: B timed out         │
+                          │ 2. Decide:                      │
+                          │    ├─ Retry? (attempt ≤ max)   │
+                          │    ├─ Fallback? (simpler agent)│
+                          │    └─ Skip? (non-critical)     │
+                          │ 3. Aggregate A + C              │
+                          │ 4. Note: "B unavailable"        │
+                          │ 5. Return partial response      │
+                          └────────────────────────────────┘
+</pre></div>
+
+<h3>Deep Dive</h3>
+<h4>Types of Subagent Failures</h4>
+<table>
+  <tbody><tr><th>Failure Type</th><th>Cause</th><th>Detection</th><th>Recovery Strategy</th></tr>
+  <tr><td>Timeout</td><td>API latency, large context</td><td>Deadline exceeded</td><td>Retry with shorter context, or fallback agent</td></tr>
+  <tr><td>Rate Limit (429)</td><td>API rate limiting</td><td>HTTP status code</td><td>Exponential backoff + retry</td></tr>
+  <tr><td>Malformed Output</td><td>Subagent ignores output contract</td><td>Parsing failure</td><td>Retry with stricter instructions, or parse best-effort</td></tr>
+  <tr><td>Low-Quality Output</td><td>Insufficient context, ambiguous task</td><td>Coordinator quality check</td><td>Retry with enriched context, or flag for user</td></tr>
+  <tr><td>API Error (5xx)</td><td>Service-side issue</td><td>HTTP status code</td><td>Retry with backoff, then fallback or skip</td></tr>
+</tbody></table>
+
+<h4>The Decision Tree for Failure Handling</h4>
+<pre><code>subagent_failed:
+  <span class="kw">if</span> retries_remaining &gt; 0:
+    <span class="kw">if</span> failure_type == <span class="st">"timeout"</span>:
+      retry <span class="kw">with</span> reduced context  <span class="cm"># maybe subagent was overloaded</span>
+    <span class="kw">elif</span> failure_type == <span class="st">"malformed_output"</span>:
+      retry <span class="kw">with</span> stricter output instructions
+    <span class="kw">elif</span> failure_type == <span class="st">"rate_limit"</span>:
+      wait(exponential_backoff) then retry
+    <span class="kw">else</span>:
+      retry as-is
+  <span class="kw">else</span>:
+    <span class="kw">if</span> fallback_agent_available:
+      invoke fallback_agent
+    <span class="kw">elif</span> subtask_is_critical:
+      <span class="kw">return</span> error to user <span class="kw">with</span> explanation
+    <span class="kw">else</span>:
+      proceed <span class="kw">with</span> partial results + transparency note</code></pre>
+
+<h4>Partial Result Aggregation</h4>
+<p>When aggregating partial results, the coordinator should be transparent:</p>
+<pre><code><span class="cm"># Coordinator aggregation prompt (with partial results):</span>
+<span class="st">"""
+You have results from 2 of 3 analysis subtasks.
+- Security analysis: [available - see results below]
+- Cost analysis: [UNAVAILABLE - subagent timed out after retries]
+- Performance analysis: [available - see results below]
+
+Synthesize the available results into a coherent response.
+Clearly note that cost analysis could not be completed and
+suggest the user request it separately if needed.
+"""</span></code></pre>
+
+<div class="callout callout-blue">
+  <div class="callout-title">🔵 Core Concept — Transparency Over Silence</div>
+  <p>When a subagent fails and partial results are returned, the coordinator must <strong>tell the user</strong> what's missing. A response that silently omits the cost analysis (because the subagent failed) is worse than one that says "I was unable to complete the cost analysis due to a processing issue. Here are the security and performance findings. Would you like me to retry the cost analysis?"</p>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-title">🔴 Common Mistake — Infinite Retry Loops</div>
+  <p>Without a retry limit and circuit-breaker, a failing subagent can cause the entire system to hang. Always set: (1) a maximum retry count (typically 1–2), (2) a per-subagent timeout, and (3) a total orchestration timeout. If a subagent is consistently failing, stop calling it for a period (circuit breaker).</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.7</div>
+  <p>Questions will describe a subagent failure scenario and ask for the best response. The answer that involves <strong>graceful degradation with transparency</strong> (return what you have + tell the user what's missing) is almost always correct. Answers that suggest "fail completely" or "silently omit the failed result" are typically wrong.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: In a 3-subagent system, one subagent times out after 2 retries. The other two return valid results. What should the coordinator do?</div>
+  <div class="opts">
+    <div>A) Return an error to the user stating the system is unavailable</div>
+    <div>B) Silently aggregate the two available results without mentioning the missing component</div>
+    <div class="correct">✅ C) Aggregate the available results, clearly indicate which component is missing, and offer to retry</div>
+    <div>D) Wait indefinitely for the timed-out subagent to respond</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C applies graceful degradation with transparency. A is overly pessimistic. B is dishonest. D creates a blocking failure.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: A subagent returns output that doesn't match the expected JSON schema. What is the best immediate retry strategy?</div>
+  <div class="opts">
+    <div>A) Re-send the exact same request</div>
+    <div class="correct">✅ B) Retry with a more explicit output format instruction and an example of the expected schema</div>
+    <div>C) Switch to a different model for the retry</div>
+    <div>D) Parse whatever was returned with best-effort regex</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> B addresses the likely cause (unclear output instructions) with a targeted fix. A might produce the same error. C is a heavy change for a prompt issue. D is fragile and unreliable.</div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.8                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-8">3.8 &nbsp; Parallel vs Sequential Subagent Execution</h2>
+
+<h3>Concept Overview</h3>
+<p>When the coordinator dispatches multiple subtasks, they can be executed <strong>in parallel</strong> (simultaneously) or <strong>sequentially</strong> (one after another). The choice depends on <em>dependency relationships</em> between subtasks. Independent subtasks should run in parallel for speed. Dependent subtasks — where one needs another's output — must run sequentially. Hybrid patterns (some parallel, some sequential) are common in production systems.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Parallel Execution</strong> — Running multiple subagent calls concurrently (e.g., using <code>asyncio.gather</code> or threads).</li>
+  <li><strong>Sequential Execution</strong> — Running subagent calls one at a time, where each call may use the previous call's output.</li>
+  <li><strong>Pipeline Pattern</strong> — A sequential chain where each stage's output feeds the next stage's input.</li>
+  <li><strong>Fan-Out / Fan-In</strong> — Dispatch multiple parallel subtasks (fan-out) and collect all results (fan-in) before proceeding.</li>
+  <li><strong>DAG (Directed Acyclic Graph)</strong> — A dependency graph that defines which subtasks depend on others, enabling maximum parallelism.</li>
+  <li><strong>Barrier / Join Point</strong> — The point in execution where you wait for all parallel subtasks to complete before continuing.</li>
+</ul>
+
+<h3>Visualization</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">  <span class="hl3">PARALLEL</span> (independent subtasks)     <span class="hl4">SEQUENTIAL</span> (dependent subtasks)     <span class="hl">HYBRID</span> (DAG)
+
+  ┌──────┐                            ┌──────┐                       ┌──────┐
+  │Task A│──┐                         │Task A│                       │Task A│──┐
+  └──────┘  │                         └──┬───┘                       └──────┘  │
+  ┌──────┐  ├──→ BARRIER → Aggregate  │ result_A                  ┌──────┐  ├→ BARRIER
+  │Task B│──┤                         ┌──┴───┐                       │Task B│──┘     │
+  └──────┘  │                         │Task B│                       └──────┘        │
+  ┌──────┐  │                         └──┬───┘                                       ▼
+  │Task C│──┘                            │ result_B                            ┌──────┐
+  └──────┘                            ┌──┴───┐                                 │Task C│
+                                      │Task C│                                 │(needs│
+                                      └──────┘                                 │A + B)│
+                                                                               └──────┘
+  Time: max(A, B, C)                  Time: A + B + C              Time: max(A,B) + C
+  <span class="hl3">Fastest overall</span>                      <span class="hl4">Slowest but necessary</span>           <span class="hl">Balanced</span>
+</pre></div>
+
+<h3>Deep Dive</h3>
+<h4>When to Use Parallel Execution</h4>
+<ul>
+  <li>Subtasks are <strong>independent</strong> — no subtask needs another's output</li>
+  <li>Example: Analyzing a document for security, cost, AND performance (three independent lenses)</li>
+  <li>Benefit: Total latency = time of slowest subtask (not sum of all)</li>
+  <li>Cost: Same total API cost, but you need concurrent API call capacity</li>
+</ul>
+
+<h4>When to Use Sequential Execution</h4>
+<ul>
+  <li>Subtasks have <strong>data dependencies</strong> — output of one feeds into the next</li>
+  <li>Example: Research → Outline → Write → Review (pipeline)</li>
+  <li>Benefit: Each subsequent subagent builds on refined input</li>
+  <li>Cost: Total latency = sum of all subtask latencies</li>
+</ul>
+
+<h4>The Hybrid / DAG Pattern</h4>
+<p>Most real systems have a mix of independent and dependent subtasks. Model this as a <strong>DAG (Directed Acyclic Graph)</strong>:</p>
+<pre><code><span class="kw">import</span> asyncio
+
+<span class="kw">async def</span> <span class="fn">orchestrate</span>(query):
+    <span class="cm"># Level 1: Independent research tasks (parallel)</span>
+    research_a, research_b = <span class="kw">await</span> asyncio.gather(
+        research_agent(query, <span class="st">"security"</span>),
+        research_agent(query, <span class="st">"cost"</span>)
+    )
+    <span class="cm"># Level 2: Depends on both research results (sequential)</span>
+    analysis = <span class="kw">await</span> analysis_agent(research_a, research_b)
+
+    <span class="cm"># Level 3: Independent post-processing (parallel)</span>
+    summary, visuals = <span class="kw">await</span> asyncio.gather(
+        summary_agent(analysis),
+        visualization_agent(analysis)
+    )
+    <span class="kw">return</span> combine(summary, visuals)</code></pre>
+
+<h4>Decision Framework</h4>
+<table>
+  <tbody><tr><th>Factor</th><th>Choose Parallel</th><th>Choose Sequential</th></tr>
+  <tr><td>Dependencies</td><td>No dependencies between subtasks</td><td>Output of A needed by B</td></tr>
+  <tr><td>Latency Priority</td><td>Speed is critical</td><td>Accuracy over speed</td></tr>
+  <tr><td>Error Handling</td><td>Failures are independent</td><td>Early failure should abort later tasks</td></tr>
+  <tr><td>Context Building</td><td>Each subtask has all needed context</td><td>Context is progressively enriched</td></tr>
+  <tr><td>Cost Impact</td><td>Same total cost, burst capacity needed</td><td>Same total cost, spread over time</td></tr>
+</tbody></table>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">🟡 Tip — Identify the Critical Path</div>
+  <p>In a hybrid execution, the <strong>critical path</strong> is the longest chain of sequential dependencies. This determines the minimum possible latency. To optimize, focus on shortening the critical path — parallelize as many of its subtasks as possible. Everything off the critical path is already optimized by virtue of being parallel.</p>
+</div>
+
+<div class="callout callout-red">
+  <div class="callout-title">🔴 Common Mistake — Forcing Sequential When Parallel Is Possible</div>
+  <p>New architects sometimes default to sequential execution "to be safe." If subtasks A and B are genuinely independent (B doesn't need A's result), running them sequentially doubles the latency for no benefit. Always analyze dependency relationships before choosing the execution pattern.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.8</div>
+  <p>Questions will describe a set of subtasks with implicit dependency relationships. You must identify which can be parallelized and which must be sequential. <strong>Key signal:</strong> If the question says "Subtask B requires the output of Subtask A," B cannot start until A finishes. If subtasks are described as "independent analyses" or "different aspects," they can be parallel. Look for the answer that maximizes parallelism while respecting dependencies.</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: A coordinator must: (A) research a topic, (B) fact-check the research, and (C) write a summary based on the fact-checked research. What is the optimal execution strategy?</div>
+  <div class="opts">
+    <div>A) All three in parallel</div>
+    <div class="correct">✅ B) Sequential: A → B → C (each depends on the previous result)</div>
+    <div>C) A and C in parallel, then B</div>
+    <div>D) A and B in parallel, then C</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> B is correct — B needs A's output (to fact-check it), and C needs B's output (to summarize fact-checked research). A is wrong because B can't run without A's result. C and D misidentify the dependencies.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: A coordinator must: (A) analyze code security, (B) analyze code performance, (C) analyze code readability, and (D) produce a unified report from A+B+C. What is the optimal execution pattern?</div>
+  <div class="opts">
+    <div>A) A → B → C → D (fully sequential)</div>
+    <div>B) (A || B) → C → D (partial parallel)</div>
+    <div class="correct">✅ C) (A || B || C) → D (fan-out/fan-in: A, B, C in parallel, then D)</div>
+    <div>D) All four in parallel</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C maximizes parallelism. A, B, C are independent analyses that can run simultaneously. Only D depends on all three. D is wrong because the report can't be written without the analysis results.</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q3: In a fan-out/fan-in pattern with 5 parallel subagents, what determines the total latency of the parallel phase?</div>
+  <div class="opts">
+    <div>A) The average response time of all 5 subagents</div>
+    <div>B) The total sum of all response times</div>
+    <div class="correct">✅ C) The response time of the slowest subagent</div>
+    <div>D) The response time of the fastest subagent</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> In parallel execution, you must wait for all tasks to complete (the barrier/join point). The total time is determined by the slowest task. This is a fundamental property of parallel execution.</div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 3.9                                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="s3-9">3.9 &nbsp; Hands-On: Building a Coordinator-Subagent System</h2>
+
+<h3>Concept Overview</h3>
+<p>This section ties together all preceding concepts into a <strong>complete, annotated implementation</strong> of a coordinator-subagent system. We build a multi-agent "Technical Document Analyzer" that accepts a document, dispatches analysis subtasks to specialized subagents, handles failures, and returns a unified report. The walkthrough shows both a naive (monolithic) approach and the orchestrated multi-agent approach side by side.</p>
+
+<h3>Key Terminology</h3>
+<ul>
+  <li><strong>Orchestration Layer</strong> — The application code (outside Claude) that manages subagent lifecycle.</li>
+  <li><strong>Tool Definition</strong> — The JSON schema registered with the coordinator's API call, representing a subagent as a callable tool.</li>
+  <li><strong>System Prompt Specialization</strong> — Tailoring each subagent's system prompt for its specific role.</li>
+  <li><strong>Output Parsing</strong> — Extracting structured data from subagent responses for aggregation.</li>
+</ul>
+
+<h3>Visualization: System Architecture</h3>
+<div class="diagram-box"><pre style="background:transparent;color:inherit;padding:0;margin:0;">  ┌────────────────────────────────────────────────────────────────────────────┐
+  │                      <span class="hl2">TECHNICAL DOCUMENT ANALYZER</span>                        │
+  │                                                                            │
+  │  ┌─────────┐      ┌──────────────────────────────────┐                    │
+  │  │  User    │─────→│      <span class="hl2">COORDINATOR AGENT</span>              │                    │
+  │  │  Input   │      │  model: claude-sonnet            │                    │
+  │  │(document)│      │  tools: [security_analyzer,      │                    │
+  │  └─────────┘      │          quality_reviewer,        │                    │
+  │                    │          summary_writer]          │                    │
+  │                    └────┬──────────┬──────────┬───────┘                    │
+  │              ┌──────────┘          │          └──────────┐                 │
+  │              ▼                     ▼                     ▼                 │
+  │    ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐          │
+  │    │<span class="hl3">SECURITY ANALYZER</span>│  │<span class="hl4">QUALITY REVIEWER</span> │  │<span class="hl">SUMMARY WRITER</span>  │          │
+  │    │model: haiku     │  │model: sonnet    │  │model: sonnet    │          │
+  │    │focus: vulns,    │  │focus: code      │  │focus: executive │          │
+  │    │  compliance     │  │  quality, style │  │  summary, recs  │          │
+  │    └────────┬────────┘  └────────┬────────┘  └────────┬────────┘          │
+  │             │ JSON result        │ JSON result        │ JSON result       │
+  │             └──────────┐         │         ┌──────────┘                   │
+  │                        ▼         ▼         ▼                              │
+  │                    ┌──────────────────────────┐                           │
+  │                    │  <span class="hl2">COORDINATOR</span> aggregates  │                           │
+  │                    │  → unified report        │                           │
+  │                    └──────────────────────────┘                           │
+  └────────────────────────────────────────────────────────────────────────────┘
+</pre></div>
+
+<h3>Before &amp; After: Naive vs Orchestrated</h3>
+
+<h4>❌ NAIVE APPROACH (Single Monolithic Agent)</h4>
+<pre><code><span class="cm"># BAD: One agent tries to do everything</span>
+<span class="kw">def</span> <span class="fn">naive_analyze</span>(document):
+    response = claude.messages.create(
+        model=<span class="st">"claude-sonnet-4-20250514"</span>,
+        system=<span class="st">"""You are a document analyzer. Analyze the given document for:
+            1. Security vulnerabilities
+            2. Code quality issues
+            3. Write an executive summary
+            Be thorough in all three areas."""</span>,
+        messages=[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: document}]
+    )
+    <span class="kw">return</span> response  <span class="cm"># Unstructured blob covering all three topics</span>
+
+<span class="cm"># Problems:
+# ❌ One prompt tries to be expert in 3 domains
+# ❌ No structured output — hard to parse or validate
+# ❌ If the document is long, it crowds out analysis depth
+# ❌ Can't use different models for different tasks
+# ❌ Single failure = total failure</span></code></pre>
+
+<h4>✅ ORCHESTRATED APPROACH (Coordinator + Subagents)</h4>
+<pre><code><span class="kw">import</span> asyncio, json, anthropic
+<span class="kw">from</span> typing <span class="kw">import</span> Optional
+
+client = anthropic.Anthropic()
+
+<span class="cm"># ──────────────────────────────────────────────────────────</span>
+<span class="cm"># SUBAGENT DEFINITIONS</span>
+<span class="cm"># Each subagent has: a specialized system prompt, a model</span>
+<span class="cm"># tier, an output contract, and a timeout.</span>
+<span class="cm"># ──────────────────────────────────────────────────────────</span>
+
+SUBAGENTS = {
+    <span class="st">"security_analyzer"</span>: {
+        <span class="st">"system"</span>: <span class="st">"""You are a security analysis specialist. Analyze code/documents
+for security vulnerabilities. Return JSON:
+{
+  "findings": [{"id": "SEC-001", "severity": "HIGH|MEDIUM|LOW",
+                "title": "...", "description": "...", "recommendation": "..."}],
+  "overall_risk": "CRITICAL|HIGH|MEDIUM|LOW",
+  "summary": "One-paragraph security assessment"
+}"""</span>,
+        <span class="st">"model"</span>: <span class="st">"claude-haiku-3-20250722"</span>,     <span class="cm"># Fast/cheap for pattern matching</span>
+        <span class="st">"timeout"</span>: 30,
+    },
+    <span class="st">"quality_reviewer"</span>: {
+        <span class="st">"system"</span>: <span class="st">"""You are a code quality expert. Review code/documents for quality
+issues. Return JSON:
+{
+  "issues": [{"id": "QA-001", "category": "STYLE|LOGIC|PERF|MAINT",
+              "title": "...", "description": "...", "suggestion": "..."}],
+  "quality_score": 85,
+  "summary": "One-paragraph quality assessment"
+}"""</span>,
+        <span class="st">"model"</span>: <span class="st">"claude-sonnet-4-20250514"</span>,   <span class="cm"># Needs deeper reasoning</span>
+        <span class="st">"timeout"</span>: 45,
+    },
+    <span class="st">"summary_writer"</span>: {
+        <span class="st">"system"</span>: <span class="st">"""You are a technical writer. Produce an executive summary from
+analysis results. Return JSON:
+{
+  "title": "Document Analysis Report",
+  "executive_summary": "2-3 paragraph overview",
+  "key_recommendations": ["...", "...", "..."],
+  "priority_actions": ["...", "..."]
+}"""</span>,
+        <span class="st">"model"</span>: <span class="st">"claude-sonnet-4-20250514"</span>,   <span class="cm"># Needs quality writing</span>
+        <span class="st">"timeout"</span>: 30,
+    }
+}
+
+<span class="cm"># ──────────────────────────────────────────────────────────</span>
+<span class="cm"># SUBAGENT INVOCATION (with retry &amp; timeout)</span>
+<span class="cm"># ──────────────────────────────────────────────────────────</span>
+
+<span class="kw">async def</span> <span class="fn">invoke_subagent</span>(
+    name: str,
+    task_prompt: str,
+    max_retries: int = 1
+) -&gt; Optional[dict]:
+    <span class="st">"""Invoke a subagent with timeout and retry logic."""</span>
+    config = SUBAGENTS[name]
+
+    <span class="kw">for</span> attempt <span class="kw">in</span> range(max_retries + 1):
+        <span class="kw">try</span>:
+            <span class="cm"># Each subagent gets a FRESH context (Section 3.2)</span>
+            <span class="cm"># Only the task_prompt is passed — no coordinator history</span>
+            response = <span class="kw">await</span> asyncio.wait_for(
+                asyncio.to_thread(
+                    client.messages.create,
+                    model=config[<span class="st">"model"</span>],
+                    max_tokens=2048,
+                    system=config[<span class="st">"system"</span>],     <span class="cm"># Specialized system prompt</span>
+                    messages=[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: task_prompt}]
+                ),
+                timeout=config[<span class="st">"timeout"</span>]
+            )
+
+            <span class="cm"># Parse structured output (Section 3.6 — output contract)</span>
+            result = json.loads(response.content[0].text)
+            <span class="kw">return</span> {<span class="st">"status"</span>: <span class="st">"success"</span>, <span class="st">"agent"</span>: name, <span class="st">"data"</span>: result}
+
+        <span class="kw">except</span> asyncio.TimeoutError:
+            <span class="kw">if</span> attempt &lt; max_retries:
+                <span class="kw">continue</span>  <span class="cm"># Retry (Section 3.7)</span>
+            <span class="kw">return</span> {<span class="st">"status"</span>: <span class="st">"timeout"</span>, <span class="st">"agent"</span>: name, <span class="st">"data"</span>: <span class="kw">None</span>}
+        <span class="kw">except</span> json.JSONDecodeError:
+            <span class="kw">if</span> attempt &lt; max_retries:
+                task_prompt += <span class="st">"\n\nIMPORTANT: Return ONLY valid JSON."</span>
+                <span class="kw">continue</span>
+            <span class="kw">return</span> {<span class="st">"status"</span>: <span class="st">"parse_error"</span>, <span class="st">"agent"</span>: name, <span class="st">"data"</span>: <span class="kw">None</span>}
+        <span class="kw">except</span> Exception <span class="kw">as</span> e:
+            <span class="kw">return</span> {<span class="st">"status"</span>: <span class="st">"error"</span>, <span class="st">"agent"</span>: name, <span class="st">"data"</span>: str(e)}
+
+<span class="cm"># ──────────────────────────────────────────────────────────</span>
+<span class="cm"># COORDINATOR</span>
+<span class="cm"># ──────────────────────────────────────────────────────────</span>
+
+<span class="kw">async def</span> <span class="fn">coordinator</span>(document: str) -&gt; str:
+    <span class="st">"""
+    Coordinator agent: decomposes, delegates, aggregates.
+
+    Architecture Decisions:
+    - Security &amp; Quality run in PARALLEL (independent)   [Section 3.8]
+    - Summary runs SEQUENTIALLY after (needs their output) [Section 3.8]
+    - Each subagent gets minimum viable context             [Section 3.6]
+    - Failures produce partial results, not total failure  [Section 3.7]
+    """</span>
+
+    <span class="cm"># ── Step 1: DECOMPOSE (Section 3.3) ──</span>
+    <span class="cm"># Two independent analysis tasks + one dependent summary task</span>
+
+    <span class="cm"># ── Step 2: DELEGATE — Phase 1: Parallel analysis ──</span>
+    <span class="cm"># Security and Quality are independent → run in parallel</span>
+    security_task = invoke_subagent(
+        <span class="st">"security_analyzer"</span>,
+        <span class="cm"># Context packet: task + input data (Section 3.6)</span>
+        f<span class="st">"Analyze the following document for security vulnerabilities:\n"
+        f"&lt;document&gt;\n{document}\n&lt;/document&gt;"</span>
+    )
+    quality_task = invoke_subagent(
+        <span class="st">"quality_reviewer"</span>,
+        f<span class="st">"Review the following document for quality issues:\n"
+        f"&lt;document&gt;\n{document}\n&lt;/document&gt;"</span>
+    )
+
+    <span class="cm"># Fan-out: both run concurrently</span>
+    security_result, quality_result = <span class="kw">await</span> asyncio.gather(
+        security_task, quality_task
+    )
+
+    <span class="cm"># ── Step 2b: DELEGATE — Phase 2: Sequential summary ──</span>
+    <span class="cm"># Summary depends on analysis results → runs after Phase 1</span>
+    available_results = []
+    missing_components = []
+
+    <span class="kw">for</span> r <span class="kw">in</span> [security_result, quality_result]:
+        <span class="kw">if</span> r[<span class="st">"status"</span>] == <span class="st">"success"</span>:
+            available_results.append(r)
+        <span class="kw">else</span>:
+            missing_components.append(
+                f<span class="st">"{r['agent']} ({r['status']})"</span>
+            )
+
+    <span class="cm"># Build context packet for summary agent (Section 3.6)</span>
+    summary_context = <span class="st">"Synthesize these analysis results into an executive summary:\n"</span>
+    <span class="kw">for</span> r <span class="kw">in</span> available_results:
+        summary_context += f<span class="st">"\n&lt;{r['agent']}_results&gt;\n"</span>
+        summary_context += json.dumps(r[<span class="st">"data"</span>], indent=2)
+        summary_context += f<span class="st">"\n&lt;/{r['agent']}_results&gt;\n"</span>
+
+    <span class="kw">if</span> missing_components:
+        summary_context += f<span class="st">"\nNote: These analyses were unavailable: "</span>
+        summary_context += <span class="st">", "</span>.join(missing_components)
+        summary_context += <span class="st">"\nAcknowledge this gap in your summary."</span>
+
+    summary_result = <span class="kw">await</span> invoke_subagent(<span class="st">"summary_writer"</span>, summary_context)
+
+    <span class="cm"># ── Step 3: AGGREGATE (Section 3.3) ──</span>
+    <span class="kw">return</span> <span class="fn">aggregate_final_report</span>(
+        security_result, quality_result, summary_result, missing_components
+    )
+
+<span class="kw">def</span> <span class="fn">aggregate_final_report</span>(security, quality, summary, missing) -&gt; str:
+    <span class="st">"""Combine all results into a coherent final report."""</span>
+    report = <span class="st">"# Technical Document Analysis Report\n\n"</span>
+
+    <span class="kw">if</span> summary[<span class="st">"status"</span>] == <span class="st">"success"</span>:
+        report += f<span class="st">"## Executive Summary\n{summary['data']['executive_summary']}\n\n"</span>
+
+    <span class="kw">if</span> security[<span class="st">"status"</span>] == <span class="st">"success"</span>:
+        report += <span class="st">"## Security Analysis\n"</span>
+        <span class="kw">for</span> f <span class="kw">in</span> security[<span class="st">"data"</span>][<span class="st">"findings"</span>]:
+            report += f<span class="st">"- **[{f['severity']}]** {f['title']}: {f['description']}\n"</span>
+
+    <span class="kw">if</span> quality[<span class="st">"status"</span>] == <span class="st">"success"</span>:
+        report += f<span class="st">"\n## Quality Review (Score: {quality['data']['quality_score']}/100)\n"</span>
+        <span class="kw">for</span> i <span class="kw">in</span> quality[<span class="st">"data"</span>][<span class="st">"issues"</span>]:
+            report += f<span class="st">"- **[{i['category']}]** {i['title']}: {i['suggestion']}\n"</span>
+
+    <span class="cm"># Transparency: report missing components (Section 3.7)</span>
+    <span class="kw">if</span> missing:
+        report += f<span class="st">"\n---\n⚠️ **Note:** The following analyses could not be completed: "</span>
+        report += <span class="st">", "</span>.join(missing)
+        report += <span class="st">"\nPlease retry these components if needed.\n"</span>
+
+    <span class="kw">return</span> report</code></pre>
+
+<h3>Implementation Best Practices Checklist</h3>
+<div style="background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:14px 0;">
+<ul class="checklist">
+  <li>Define each subagent with a <strong>specialized system prompt</strong> and <strong>output contract</strong></li>
+  <li>Model subagents as <strong>tools</strong> in the coordinator's tool definitions</li>
+  <li>Use <strong>minimum viable context</strong> — pass only what the subagent needs</li>
+  <li>Use <strong>XML tags</strong> to delimit input data in subagent prompts</li>
+  <li>Implement <strong>timeout policies</strong> for every subagent call</li>
+  <li>Add <strong>retry logic</strong> with modified prompts for parse errors</li>
+  <li>Design for <strong>graceful degradation</strong> — return partial results when subagents fail</li>
+  <li>Be <strong>transparent</strong> about missing components in the final output</li>
+  <li>Run independent subtasks in <strong>parallel</strong>, dependent ones <strong>sequentially</strong></li>
+  <li>Use <strong>model tiering</strong> — match model capability to task complexity</li>
+  <li>Keep coordinator logic in <strong>application code</strong>, not in a single mega-prompt</li>
+  <li>Validate subagent outputs against the expected schema <strong>before aggregation</strong></li>
+  <li>Log all subagent calls and results for <strong>debugging and observability</strong></li>
+  <li>Test with <strong>injected failures</strong> — verify degradation behaves as expected</li>
+</ul>
+</div>
+
+<div class="callout callout-yellow">
+  <div class="callout-title">🟡 Tip — Tool-Based vs Code-Based Orchestration</div>
+  <p>There are two main implementation patterns: (1) The coordinator uses Claude's native tool-use to "call" subagents — your orchestration code intercepts tool calls and routes them to subagent API calls. This is more natural but the coordinator has less explicit control over execution order. (2) The coordinator is pure application code that calls Claude API for each subagent independently — this gives you full control over parallel/sequential execution, timeouts, and retries. Pattern 2 is recommended for production systems where reliability and control matter most.</p>
+</div>
+
+<h3>Exam Strategy</h3>
+<div class="callout callout-green">
+  <div class="callout-title">🟢 Exam Strategy — 3.9</div>
+  <p>Hands-on questions may show a code snippet and ask you to identify the architectural pattern, the flaw, or the improvement. Key things to check: (1) Are subagents getting fresh context? (2) Are independent tasks running in parallel? (3) Is there failure handling? (4) Are results properly aggregated (not just concatenated)? (5) Is there transparency about failures?</p>
+</div>
+
+<div class="qa">
+  <div class="q">Q1: Review this code snippet. What is the architectural issue?</div>
+  <pre style="font-size:12.5px;"><code>result_a = call_subagent("research", full_conversation_history)
+result_b = call_subagent("analysis", full_conversation_history)
+return result_a + result_b</code></pre>
+  <div class="opts">
+    <div>A) The subagents are called sequentially instead of in parallel</div>
+    <div>B) There is no error handling</div>
+    <div class="correct">✅ C) All of the above — plus the full conversation history is passed (violating MVC), and aggregation is simple concatenation instead of synthesis</div>
+    <div>D) The code uses the wrong programming language</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C identifies all the issues: sequential execution of independent tasks (3.8), no error handling (3.7), passing full history instead of MVC (3.6), and concatenation instead of synthesis (3.3).</div>
+</div>
+
+<div class="qa">
+  <div class="q">Q2: In the Technical Document Analyzer example, why is the summary_writer subagent invoked after security_analyzer and quality_reviewer, rather than in parallel with them?</div>
+  <div class="opts">
+    <div>A) Because the summary_writer uses a more expensive model</div>
+    <div>B) Because running 3 subagents in parallel would exceed the API rate limit</div>
+    <div class="correct">✅ C) Because the summary_writer needs the results from the other two subagents as input — it has a data dependency</div>
+    <div>D) Because sequential execution is always more reliable than parallel</div>
+  </div>
+  <div class="rationale"><strong>Rationale:</strong> C correctly identifies the dependency. The summary cannot be written until the analyses it summarizes are available. A and B are not the determining factors. D is false.</div>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  CHAPTER SUMMARY & REFERENCE                                ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<h2 id="summary">📋 Chapter Summary — 10 Critical Takeaways</h2>
+<ol>
+  <li><strong>Hub-and-spoke is the default.</strong> Use a central coordinator that delegates to specialized subagents. No peer-to-peer communication between subagents.</li>
+  <li><strong>Subagents are context-isolated.</strong> Every subagent starts with a blank context. Nothing is inherited — everything must be explicitly passed.</li>
+  <li><strong>Decomposition is the coordinator's #1 job.</strong> Break complex tasks into independent, well-scoped subtasks with clear success criteria.</li>
+  <li><strong>Aggregation ≠ concatenation.</strong> The coordinator must synthesize, resolve conflicts, fill gaps, and add meta-level insight.</li>
+  <li><strong>Over-decomposition kills quality.</strong> 2–5 subtasks is typical. If subtasks can't produce meaningful results independently, they're too narrow.</li>
+  <li><strong>Not every query needs multi-agent orchestration.</strong> Use complexity classification to route simple queries directly, moderate ones to a single specialist, and only complex ones to full orchestration.</li>
+  <li><strong>Structured context packets are essential.</strong> Pass: task description + relevant context + input data + output contract. Apply the Minimum Viable Context principle.</li>
+  <li><strong>Plan for failure.</strong> Implement timeouts, retries, and graceful degradation. Return partial results with transparency about what's missing.</li>
+  <li><strong>Parallel when independent, sequential when dependent.</strong> Analyze the dependency DAG to maximize parallelism while respecting data flow.</li>
+  <li><strong>Model tiering optimizes cost.</strong> Use lighter models (Haiku) for simple subtasks, more capable models (Sonnet/Opus) for complex reasoning and coordination.</li>
+</ol>
+
+<h2 id="quickref">Quick-Reference Comparison Tables</h2>
+
+<h3>Coordinator vs Subagent Responsibilities</h3>
+<table>
+  <tbody><tr><th>Responsibility</th><th>Coordinator</th><th>Subagent</th></tr>
+  <tr><td>User interaction</td><td>✅ Direct communication</td><td>❌ Never talks to user</td></tr>
+  <tr><td>Task decomposition</td><td>✅ Breaks down requests</td><td>❌ Receives scoped task</td></tr>
+  <tr><td>Context management</td><td>✅ Maintains full history</td><td>❌ Isolated fresh context</td></tr>
+  <tr><td>Result synthesis</td><td>✅ Aggregates &amp; reconciles</td><td>❌ Returns single result</td></tr>
+  <tr><td>Error handling</td><td>✅ Retry/fallback logic</td><td>❌ Fails or succeeds</td></tr>
+  <tr><td>Specialized expertise</td><td>❌ Generalist orchestrator</td><td>✅ Domain expert</td></tr>
+  <tr><td>Multi-turn awareness</td><td>✅ Full conversation state</td><td>❌ Single invocation</td></tr>
+</tbody></table>
+
+<h3>Parallel vs Sequential Execution</h3>
+<table>
+  <tbody><tr><th>Dimension</th><th>Parallel</th><th>Sequential</th></tr>
+  <tr><td>When to use</td><td>Independent subtasks</td><td>Dependent subtasks (A→B→C)</td></tr>
+  <tr><td>Latency</td><td>max(all tasks)</td><td>sum(all tasks)</td></tr>
+  <tr><td>API cost</td><td>Same total tokens</td><td>Same total tokens</td></tr>
+  <tr><td>Implementation</td><td>asyncio.gather / threads</td><td>Await one, then next</td></tr>
+  <tr><td>Error impact</td><td>One failure doesn't block others</td><td>Early failure can abort chain</td></tr>
+  <tr><td>Context flow</td><td>Each gets independent context</td><td>Each can use predecessor's output</td></tr>
+</tbody></table>
+
+<h3>Failure Handling Strategies</h3>
+<table>
+  <tbody><tr><th>Strategy</th><th>When</th><th>Example</th></tr>
+  <tr><td>Retry (same prompt)</td><td>Transient error (5xx, timeout)</td><td>Network blip — try again</td></tr>
+  <tr><td>Retry (modified prompt)</td><td>Malformed output</td><td>Add stricter output instructions</td></tr>
+  <tr><td>Fallback agent</td><td>Specialist fails repeatedly</td><td>Route to generalist model</td></tr>
+  <tr><td>Graceful degradation</td><td>Non-critical subtask fails</td><td>Return partial + transparency</td></tr>
+  <tr><td>Circuit breaker</td><td>Persistent failures</td><td>Stop calling failing agent for N mins</td></tr>
+</tbody></table>
+
+<h2 id="glossary">Glossary</h2>
+<dl class="glossary">
+  <dt>Aggregation Overhead</dt>
+  <dd>The extra coordinator effort needed when combining many subagent results, especially from over-decomposed tasks.</dd>
+
+  <dt>Atomic Subtask</dt>
+  <dd>A subtask that cannot be meaningfully subdivided further for a single agent to execute.</dd>
+
+  <dt>Barrier / Join Point</dt>
+  <dd>The synchronization point where the coordinator waits for all parallel subagent calls to complete before proceeding.</dd>
+
+  <dt>Circuit Breaker</dt>
+  <dd>A pattern that automatically stops sending requests to a consistently failing subagent for a cooldown period.</dd>
+
+  <dt>Complexity Classification</dt>
+  <dd>The coordinator's assessment of query difficulty, used to determine whether to respond directly, use one subagent, or invoke full orchestration.</dd>
+
+  <dt>Context Fragmentation</dt>
+  <dd>Loss of holistic understanding caused by splitting a task too finely, depriving each subagent of sufficient context.</dd>
+
+  <dt>Context Injection</dt>
+  <dd>Explicitly inserting relevant information into a subagent's prompt so it has the data it needs to complete its task.</dd>
+
+  <dt>Context Isolation</dt>
+  <dd>The design principle that each subagent operates in its own independent context window with no inherited state.</dd>
+
+  <dt>Context Packet</dt>
+  <dd>The structured block of information (task + context + data + output contract) assembled by the coordinator for a subagent.</dd>
+
+  <dt>Context Pollution</dt>
+  <dd>When irrelevant information leaks into a subagent's context, degrading its focus and output quality.</dd>
+
+  <dt>Coordinator / Hub / Orchestrator</dt>
+  <dd>The central agent that manages user interaction, task decomposition, subagent delegation, and result aggregation.</dd>
+
+  <dt>DAG (Directed Acyclic Graph)</dt>
+  <dd>A dependency graph showing which subtasks depend on others, used to determine maximum parallelism.</dd>
+
+  <dt>Decomposition Strategy</dt>
+  <dd>The method used to break down tasks: by domain, by step, by data partition, or by perspective.</dd>
+
+  <dt>Direct Response</dt>
+  <dd>When the coordinator answers a simple query itself without invoking any subagents.</dd>
+
+  <dt>Fan-Out / Fan-In</dt>
+  <dd>Dispatching multiple parallel subtasks (fan-out) and collecting all results at a join point (fan-in).</dd>
+
+  <dt>Graceful Degradation</dt>
+  <dd>Returning a useful partial response when some subagents fail, with transparency about what's missing.</dd>
+
+  <dt>Hub-and-Spoke Topology</dt>
+  <dd>A network pattern where all communication flows through a central node; spokes never communicate directly.</dd>
+
+  <dt>Minimum Viable Context (MVC)</dt>
+  <dd>The smallest set of information a subagent needs to complete its specific subtask effectively.</dd>
+
+  <dt>Model Tiering</dt>
+  <dd>Using different Claude model tiers (Haiku/Sonnet/Opus) for different subtasks based on complexity requirements.</dd>
+
+  <dt>Orchestration Layer</dt>
+  <dd>The application code that manages the lifecycle of subagent calls: spawning, monitoring, timeout, retry, and aggregation.</dd>
+
+  <dt>Output Contract</dt>
+  <dd>The agreed-upon format (typically JSON schema) that a subagent must use for its response.</dd>
+
+  <dt>Over-Decomposition</dt>
+  <dd>Splitting a task into subtasks that are too small or narrow, leading to context fragmentation and aggregation overhead.</dd>
+
+  <dt>Pipeline Pattern</dt>
+  <dd>A sequential chain where each stage's output feeds the next stage's input.</dd>
+
+  <dt>Single-Agent Sufficiency</dt>
+  <dd>The recognition that some tasks are better handled by one well-prompted agent than by multi-agent orchestration.</dd>
+
+  <dt>Subagent / Spoke / Worker</dt>
+  <dd>A specialized, stateless agent that receives a scoped task, executes it, and returns a result to the coordinator.</dd>
+
+  <dt>Task Decomposition</dt>
+  <dd>Breaking a complex user request into independent, well-scoped subtasks for individual subagent execution.</dd>
+
+  <dt>Tool Definition</dt>
+  <dd>The JSON schema registered with the coordinator's API call, representing a subagent as a callable tool.</dd>
+</dl>
+
+<h2 id="readiness">Exam Readiness Checklist</h2>
+<p>Before taking the exam, verify you can confidently explain each of the following:</p>
+<ul class="checklist">
+  <li>Why hub-and-spoke is preferred over peer-to-peer in multi-agent systems</li>
+  <li>What context isolation means and why subagents don't inherit coordinator history</li>
+  <li>How to construct an effective context packet (task + context + data + output contract)</li>
+  <li>The difference between decomposition by domain, by step, by data, and by perspective</li>
+  <li>Why aggregation requires synthesis — not just concatenation of subagent results</li>
+  <li>The concrete risks of over-decomposition (fragmentation, latency, aggregation overhead)</li>
+  <li>The 2–5 subtask heuristic and when to use a single agent instead</li>
+  <li>How complexity classification routes queries to direct response, single subagent, or full orchestration</li>
+  <li>How model tiering (Haiku/Sonnet/Opus) optimizes cost in multi-agent systems</li>
+  <li>How to pass minimum viable context using XML tags and structured schemas</li>
+  <li>The failure handling decision tree: retry → fallback → graceful degradation</li>
+  <li>When to be transparent about failed subagent results (always)</li>
+  <li>When to use parallel execution (independent subtasks) vs sequential (data dependencies)</li>
+  <li>How to identify the critical path in a hybrid execution DAG</li>
+  <li>The difference between tool-based and code-based orchestration patterns</li>
+  <li>How to implement a complete coordinator-subagent system with error handling</li>
+</ul>
+
+<div style="text-align:center; padding:32px 0 16px; color:var(--text-muted); font-size:13px; border-top:2px solid var(--border); margin-top:40px;">
+  Chapter 3: Multi-Agent Orchestration — CCAR Study Notes<br>
+  Claude Certified Architect — Foundations &amp; Professional
+</div>
+
+</div><!-- /main -->
+
+</body></html>

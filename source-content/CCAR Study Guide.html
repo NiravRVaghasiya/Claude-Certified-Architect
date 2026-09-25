@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Certified Architect (CCAR) — Study Guide: Chapters 67–70</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2333; --ink:#e6edf3; --muted:#9aa7b5;
+    --accent:#d97757; --accent2:#7c93ff; --line:#2a3441; --ok:#3fb950; --warn:#d29922;
+    --tip:#1f6f43; --strat:#274b8f; --hyp:#8a5a00;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;font-size:16px}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 24px 96px}
+  h1{font-size:30px;line-height:1.25;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:15px;margin:0 0 20px}
+  h2{font-size:23px;margin:44px 0 6px;padding-top:14px;border-top:2px solid var(--line);color:#fff}
+  h3{font-size:18px;margin:28px 0 6px;color:var(--accent2)}
+  h4{font-size:15px;margin:18px 0 4px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+  li{margin:3px 0}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code{background:#0b0f14;border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:13px}
+  /* Disclaimer banner */
+  .disclaimer{background:linear-gradient(90deg,#3a2a00,#2a1f00);border:1px solid var(--warn);
+    border-left:6px solid var(--warn);border-radius:8px;padding:16px 18px;margin:18px 0 8px}
+  .disclaimer b{color:#ffcf4d}
+  .verified{background:#0f2417;border:1px solid var(--ok);border-left:6px solid var(--ok);
+    border-radius:8px;padding:14px 18px;margin:14px 0}
+  .verified b{color:#5ad06a}
+  /* Callout boxes */
+  .tip-box{background:#10261a;border:1px solid var(--tip);border-left:5px solid var(--ok);
+    border-radius:6px;padding:12px 14px;margin:12px 0}
+  .strategy-box{background:#131f38;border:1px solid var(--strat);border-left:5px solid var(--accent2);
+    border-radius:6px;padding:12px 14px;margin:12px 0}
+  .hyp{display:inline-block;background:var(--hyp);color:#fff;font-size:11px;font-weight:700;
+    padding:2px 8px;border-radius:10px;vertical-align:middle;letter-spacing:.03em;margin-left:6px}
+  .example{background:var(--panel2);border:1px dashed var(--line);border-radius:6px;padding:12px 14px;margin:12px 0}
+  .example h4{color:var(--accent);margin-top:0}
+  /* Tables */
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14.5px;background:var(--panel)}
+  caption{caption-side:top;text-align:left;color:var(--muted);font-size:13px;padding:4px 0}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#20283a;color:#fff}
+  tr:nth-child(even) td{background:#12171f}
+  .pri-high{color:#ff9a76;font-weight:700}
+  .pri-med{color:#e8c14d;font-weight:700}
+  .pri-low{color:#7fd68b;font-weight:700}
+  /* Flow diagram (CSS boxes) */
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0;
+    background:#0b0f14;border:1px solid var(--line);border-radius:8px;padding:14px}
+  .node{background:var(--panel2);border:1px solid var(--accent2);border-radius:6px;
+    padding:8px 12px;font-size:13.5px;min-width:96px;text-align:center}
+  .node.alt{border-color:var(--accent)}
+  .node.ok{border-color:var(--ok)}
+  .arrow{color:var(--muted);font-size:18px;font-weight:700}
+  .col{display:flex;flex-direction:column;gap:6px}
+  /* TOC */
+  .toc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:20px 0}
+  .toc h2{border:0;margin:0 0 8px;padding:0;font-size:18px;color:#fff}
+  .toc ul{list-style:none;padding-left:0;margin:0}
+  .toc > ul > li{margin:8px 0 2px;font-weight:700}
+  .toc ul ul{padding-left:18px}
+  .toc ul ul li{font-weight:400;color:var(--muted)}
+  .toc a{color:var(--ink)}
+  .pitfall{color:#ff9a76;font-weight:600}
+  .backtop{font-size:12px;color:var(--muted);float:right;margin-top:6px}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px}
+  .b-f{background:#274b8f;color:#cfe0ff}
+  .b-p{background:#7a3a1f;color:#ffd8c5}
+  hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Claude Certified Architect (CCAR) — Comprehensive Study Guide</h1>
+  <p class="sub">Foundations (CCAR-F) &amp; Professional (CCAR-P) · Chapters 67–70 · Exam-prep edition</p>
+
+  <div class="disclaimer">
+    ⚠️ <b>Truthfulness &amp; verification notice — read first.</b>
+    The <i>existence and names</i> of these exams are confirmed against the official
+    <a href="https://www.pearsonvue.com/us/en/anthropic.html" target="_blank" rel="noopener">Pearson VUE / Anthropic Claude Certification Program page</a>:
+    <b>CCAR-F</b> and <b>CCAR-P</b> are real exam codes delivered via Pearson VUE, with badges through Credly and access limited to the Claude Partner Network.
+    <br><br>
+    However, <b>all numeric exam specifics</b> in this guide — item counts, duration, scaled-score range, the 720/1000 pass mark, pricing, and every domain weight —
+    are <b>NOT stated on the official page</b>. They are drawn from third-party blogs and community write-ups (dev.to, Substack, CloudThat, etc.) and are therefore
+    <b>treated as illustrative / unverified</b>. Every such figure below is tagged
+    <span class="hyp">ILLUSTRATIVE</span> and should be re-checked against the official Exam Guide PDF in Anthropic Partner Academy before you rely on it.
+  </div>
+
+  <div class="verified">
+    ✅ <b>Verified from authoritative source</b> (Pearson VUE / Anthropic): Program is real; four exams across three roles (Associate, Architect, Developer);
+    <b>CCAR-F</b> and <b>CCAR-P</b> exist; delivered online (OnVUE) or at test centers; retake waits of 14 / 30 / 90 days; max 4 attempts per rolling 12 months;
+    reschedule/cancel up to 48h before; digital badges via Credly; training via Anthropic Partner Academy.
+  </div>
+
+  <!-- ================= TABLE OF CONTENTS ================= -->
+  <nav class="toc" id="top">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#ch67">Chapter 67 — CCAR-F Study Strategy &amp; Preparation Roadmap <span class="badge b-f">CCAR-F</span></a>
+        <ul>
+          <li><a href="#s67-1">67.1 Exam Format (items, scenarios, duration)</a></li>
+          <li><a href="#s67-2">67.2 Scoring Methodology (scaled range, pass threshold)</a></li>
+          <li><a href="#s67-3">67.3 Domain Weight Strategy (prioritization)</a></li>
+          <li><a href="#s67-4">67.4 Preparation Timeline (week-by-week)</a></li>
+          <li><a href="#s67-5">67.5 Hands-On Project Ideas per Domain</a></li>
+        </ul>
+      </li>
+      <li><a href="#ch68">Chapter 68 — CCAR-P Study Strategy &amp; Preparation Roadmap <span class="badge b-p">CCAR-P</span></a>
+        <ul>
+          <li><a href="#s68-1">68.1 Exam Format</a></li>
+          <li><a href="#s68-2">68.2 Scoring Methodology</a></li>
+          <li><a href="#s68-3">68.3 Domain Weight Strategy</a></li>
+          <li><a href="#s68-4">68.4 Preparation Timeline</a></li>
+          <li><a href="#s68-5">68.5 Bridging Foundations → Professional Knowledge</a></li>
+        </ul>
+      </li>
+      <li><a href="#ch69">Chapter 69 — CCAR-F Preparation Exercises <span class="badge b-f">CCAR-F</span></a>
+        <ul>
+          <li><a href="#s69-1">69.1 Multi-Tool Agent with Escalation Logic</a></li>
+          <li><a href="#s69-2">69.2 Configuring Claude Code for a Team Project</a></li>
+          <li><a href="#s69-3">69.3 Structured Data Extraction Pipeline</a></li>
+          <li><a href="#s69-4">69.4 Multi-Agent Research Pipeline Design &amp; Debugging</a></li>
+        </ul>
+      </li>
+      <li><a href="#ch70">Chapter 70 — CCAR-P Preparation Exercises <span class="badge b-p">CCAR-P</span></a>
+        <ul>
+          <li><a href="#s70-1">70.1 Full Solution Architecture from a Business Brief</a></li>
+          <li><a href="#s70-2">70.2 End-to-End RAG Pipeline Build &amp; Evaluation</a></li>
+          <li><a href="#s70-3">70.3 Governance and Risk Assessment</a></li>
+          <li><a href="#s70-4">70.4 Presenting Architecture Decisions to Stakeholders</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================= -->
+  <!-- CHAPTER 67 -->
+  <!-- ============================================================= -->
+  <h2 id="ch67">Chapter 67 — CCAR-F Study Strategy &amp; Preparation Roadmap <span class="badge b-f">CCAR-F</span></h2>
+  <p>Foundations is the entry-level architect credential: it validates that you can <i>design and build</i> production-grade Claude solutions, not merely discuss them. It is implementation-heavy despite the "Architect" title.</p>
+
+  <!-- 67.1 -->
+  <h3 id="s67-1">67.1 Exam Format (items, scenarios, duration) <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> CCAR-F is a proctored, scenario-based exam. Community sources consistently report a fixed-form multiple-choice / multiple-response structure with no hands-on lab. Questions are framed as short design scenarios ("A team needs X; which approach…") rather than trivia recall.</p>
+  <table>
+    <caption>CCAR-F format at a glance <span class="hyp">ILLUSTRATIVE — verify against official Exam Guide</span></caption>
+    <tbody><tr><th>Attribute</th><th>Reported value</th><th>Status</th></tr>
+    <tr><td>Question count</td><td>~60 items</td><td>Illustrative</td></tr>
+    <tr><td>Item types</td><td>Multiple-choice + multiple-response (multi-select)</td><td>Illustrative</td></tr>
+    <tr><td>Duration</td><td>120 minutes</td><td>Illustrative</td></tr>
+    <tr><td>Style</td><td>Scenario-based design questions</td><td>Illustrative</td></tr>
+    <tr><td>Delivery</td><td>Pearson VUE — OnVUE online or test center</td><td class="pri-low">Verified</td></tr>
+    <tr><td>Retakes</td><td>14 / 30 / 90-day waits; 4 attempts / 12 mo</td><td class="pri-low">Verified</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> With ~60 items in 120 minutes you have <b>~2 minutes per question</b>. Do a first pass answering everything you know in &lt;90 seconds, flag the rest, and reserve the final ~15 minutes for flagged items. <span class="pitfall">Common misunderstanding:</span> candidates assume "Architect" means a hands-on lab exam — it is <i>not</i>; it is scenario multiple-choice, so practice reading design vignettes, not coding under time pressure.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> For <b>multi-response</b> items, the stem usually tells you how many to pick ("Select TWO"). Evaluate each option as an independent true/false statement rather than ranking them against each other — this avoids over-selecting.</div>
+  <div class="example"><h4>Mini-scenario</h4>"You have 60 items and hit a dense MCP-design question at #12 that you can't resolve in 30 seconds." → Flag it, pick your best guess now (never leave blank — no negative marking is reported), and move on. Returning with fresh context after easier questions often makes the answer obvious.</div>
+
+  <!-- 67.2 -->
+  <h3 id="s67-2">67.2 Scoring Methodology (scaled range, pass threshold) <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Like most Pearson VUE professional exams, CCAR-F is reported to use a <i>scaled score</i> (raw points transformed onto a fixed scale so different form versions are comparable). You receive pass/fail plus a scaled number; individual question weights are not published.</p>
+  <table>
+    <caption>Scoring model <span class="hyp">ILLUSTRATIVE — verify against official Exam Guide</span></caption>
+    <tbody><tr><th>Element</th><th>Reported value</th><th>Interpretation</th></tr>
+    <tr><td>Scaled score range</td><td>100–1000</td><td>Raw score mapped to a fixed scale</td></tr>
+    <tr><td><b>Pass threshold</b></td><td><b>720 / 1000</b></td><td>Same value used everywhere in this guide</td></tr>
+    <tr><td>Negative marking</td><td>None reported</td><td>Always answer every item</td></tr>
+    <tr><td>Result timing</td><td>On-screen at end (typical Pearson VUE)</td><td>Provisional pending review</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> A scaled 720/1000 does <b>not</b> mean "72% of questions correct." Because of scaling, the raw-correct percentage needed can differ. <span class="pitfall">Common misunderstanding:</span> candidates target exactly 72% raw and cut it too close — <b>aim for ≥80% on practice sets</b> to build a safety margin against scaling and a hard form.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> Since weights are hidden, treat every question as equally valuable. Don't "spend" disproportionate time chasing one hard item — protecting three easy correct answers elsewhere is a better score-per-minute trade.</div>
+  <div class="example"><h4>Worked example</h4>Practice-test raw = 45/60 correct = 75%. Feels like a pass against "72%," but scaling on a hard form could push the passing raw toward ~78%. Verdict: <b>borderline</b> — review weak domains before booking.</div>
+
+  <!-- 67.3 -->
+  <h3 id="s67-3">67.3 Domain Weight Strategy (prioritization guidance) <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Sources disagree on the exact domain list (some cite five domains: agentic architecture, tool/MCP design, Claude Code, prompt engineering, context management; others describe "four of six scenario banks"). The weights below are a <b>reasonable illustrative distribution</b> for planning study time — not official numbers.</p>
+  <table>
+    <caption>Illustrative domain weighting for study prioritization <span class="hyp">ILLUSTRATIVE — weights NOT official</span></caption>
+    <tbody><tr><th>Domain</th><th>Est. Weight</th><th>Priority</th></tr>
+    <tr><td>Agentic architecture (agent/tool loops, escalation)</td><td>~30%</td><td class="pri-high">High</td></tr>
+    <tr><td>Tool &amp; MCP integration design</td><td>~25%</td><td class="pri-high">High</td></tr>
+    <tr><td>Prompt engineering &amp; context management</td><td>~20%</td><td class="pri-med">Medium</td></tr>
+    <tr><td>Claude Code &amp; developer workflows</td><td>~15%</td><td class="pri-med">Medium</td></tr>
+    <tr><td>Governance, safety &amp; evaluation basics</td><td>~10%</td><td class="pri-low">Lower</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Prioritize by <b>weight × your weakness</b>, not weight alone. A 10% domain you'd fail outright is a better use of an evening than a 30% domain you already score 90% on. <span class="pitfall">Common misunderstanding:</span> assuming the biggest domain deserves the most hours regardless of current skill.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> On scenario questions, first classify which <i>domain</i> the vignette belongs to — the domain framing narrows the plausible "best practice" answer before you even read the options.</div>
+  <div class="example"><h4>Mini-scenario</h4>Diagnostic scores: Agentic 85%, Tools/MCP 60%, Prompting 80%, Claude Code 55%, Governance 70%. Even though Agentic is the heaviest domain, allocate the next week to <b>Tools/MCP</b> and <b>Claude Code</b> — the largest expected point recovery.</div>
+
+  <!-- 67.4 -->
+  <h3 id="s67-4">67.4 Preparation Timeline (week-by-week plan) <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> A 5-week plan for a working professional putting in ~6–8 hrs/week. Compress to 3 weeks if you already build with Claude daily.</p>
+  <table>
+    <caption>5-week CCAR-F preparation schedule <span class="hyp">ILLUSTRATIVE plan</span></caption>
+    <tbody><tr><th>Week</th><th>Focus</th><th>Deliverable</th></tr>
+    <tr><td>1</td><td>Read official Exam Guide; baseline diagnostic; agentic architecture fundamentals</td><td>Gap map (per-domain % score)</td></tr>
+    <tr><td>2</td><td>Tool &amp; MCP design; build a 2-tool agent</td><td>Working multi-tool agent (see 69.1)</td></tr>
+    <tr><td>3</td><td>Prompt engineering, context management, Claude Code setup</td><td>Team Claude Code config (see 69.2)</td></tr>
+    <tr><td>4</td><td>Structured extraction + multi-agent pipelines; governance basics</td><td>Extraction pipeline (see 69.3)</td></tr>
+    <tr><td>5</td><td>Full-length timed practice ×2; review flagged domains; book exam</td><td>≥80% on a fresh practice form</td></tr>
+  </tbody></table>
+  <div class="flow" aria-label="Preparation flow">
+    <span class="node">Diagnostic</span><span class="arrow">→</span>
+    <span class="node">Gap map</span><span class="arrow">→</span>
+    <span class="node alt">Targeted study</span><span class="arrow">→</span>
+    <span class="node alt">Build projects</span><span class="arrow">→</span>
+    <span class="node">Timed mocks</span><span class="arrow">→</span>
+    <span class="node ok">Book exam</span>
+  </div>
+  <div class="tip-box">💡 <b>Tip:</b> Book the exam <b>at the start</b> of Week 5, not after you "feel ready" — a fixed date converts open-ended study into focused revision. <span class="pitfall">Common misunderstanding:</span> waiting for perfect confidence, which rarely arrives and lets prep drift for months.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> Simulate real conditions in Week 5 — 120-minute timer, no notes, no pausing. Exam-day stamina and pacing are skills you must rehearse, not just knowledge.</div>
+  <div class="example"><h4>Worked example</h4>Daily-builder shortcut: skip Weeks 1–2 fundamentals, start at Week 3, and add one extra timed mock. 3-week compressed plan → book for day 21.</div>
+
+  <!-- 67.5 -->
+  <h3 id="s67-5">67.5 Hands-On Project Ideas per Domain <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> The fastest way to pass a scenario exam is to have <i>actually built</i> the scenarios. One small project per domain:</p>
+  <table>
+    <caption>One project per domain</caption>
+    <tbody><tr><th>Domain</th><th>Mini-project</th><th>What it proves</th></tr>
+    <tr><td>Agentic architecture</td><td>Weather+calendar agent with a human-escalation path</td><td>Agent loops, stop conditions, escalation</td></tr>
+    <tr><td>Tool &amp; MCP</td><td>Wrap an internal API as an MCP server</td><td>Tool schemas, error handling</td></tr>
+    <tr><td>Prompt / context</td><td>Long-doc summarizer with context-window budgeting</td><td>Chunking, context management</td></tr>
+    <tr><td>Claude Code</td><td>Team repo with shared config + CLAUDE.md conventions</td><td>Developer workflow setup</td></tr>
+    <tr><td>Governance</td><td>Add input/output guardrails + an eval harness</td><td>Safety, evaluation basics</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Keep each project to a <b>single afternoon</b>. The goal is exposure to the failure modes the exam asks about, not a portfolio piece. <span class="pitfall">Common misunderstanding:</span> over-engineering one project and never touching the other four domains.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> After each build, write down the <i>one bug that cost you the most time</i>. Exam distractor options are frequently built from exactly these real-world failure modes.</div>
+  <div class="example"><h4>Mini-scenario</h4>Your weather agent loops forever calling the tool. Fix = add a max-iteration stop + a "no further tool needed" check. That fix maps directly to an agentic-architecture exam item on loop termination.</div>
+
+  <!-- ============================================================= -->
+  <!-- CHAPTER 68 -->
+  <!-- ============================================================= -->
+  <h2 id="ch68">Chapter 68 — CCAR-P Study Strategy &amp; Preparation Roadmap <span class="badge b-p">CCAR-P</span></h2>
+  <p>Professional is the advanced architect credential: it validates end-to-end ownership — discovery, design, build, deployment, governance, and stakeholder delivery — across the full solution lifecycle. Even less is publicly documented about CCAR-P than CCAR-F, so treat this chapter's specifics as <b>doubly illustrative</b>.</p>
+
+  <!-- 68.1 -->
+  <h3 id="s68-1">68.1 Exam Format <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Reported as a proctored scenario exam like CCAR-F, but with heavier <b>case-study</b> items — longer vignettes that ask you to make trade-off decisions across an entire architecture rather than a single component.</p>
+  <table>
+    <caption>CCAR-P format <span class="hyp">ILLUSTRATIVE — even less documented than CCAR-F</span></caption>
+    <tbody><tr><th>Attribute</th><th>Reported / assumed value</th><th>Status</th></tr>
+    <tr><td>Question count</td><td>~60 items (assumed parity with CCAR-F)</td><td>Illustrative</td></tr>
+    <tr><td>Item types</td><td>Multiple-choice, multi-response, extended case study</td><td>Illustrative</td></tr>
+    <tr><td>Duration</td><td>120 minutes</td><td>Illustrative</td></tr>
+    <tr><td>Prerequisite</td><td>CCAR-F commonly assumed; confirm officially</td><td>Illustrative</td></tr>
+    <tr><td>Delivery</td><td>Pearson VUE — OnVUE or test center</td><td class="pri-low">Verified</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Case-study items may share one long stem across several questions. <b>Read the whole scenario once</b> before answering any sub-question. <span class="pitfall">Common misunderstanding:</span> answering sub-questions in isolation and missing a constraint stated earlier in the shared stem.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> For case studies, jot the 2–3 hard constraints (budget, latency, compliance) on your scratch board first; then every answer must satisfy <i>all</i> of them — this eliminates otherwise-attractive distractors.</div>
+  <div class="example"><h4>Mini-scenario</h4>A 400-word case says "must run in-region for GDPR." Three of four options are technically sound but only one keeps data in-region. The compliance constraint, not the architecture elegance, decides it.</div>
+
+  <!-- 68.2 -->
+  <h3 id="s68-2">68.2 Scoring Methodology <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Assumed to follow the same scaled-score model as CCAR-F for consistency across the program. The same <b>720/1000</b> pass threshold is used throughout this guide.</p>
+  <table>
+    <caption>Scoring model <span class="hyp">ILLUSTRATIVE — assumed parity with CCAR-F</span></caption>
+    <tbody><tr><th>Element</th><th>Assumed value</th><th>Note</th></tr>
+    <tr><td>Scaled score range</td><td>100–1000</td><td>Same scale as CCAR-F</td></tr>
+    <tr><td><b>Pass threshold</b></td><td><b>720 / 1000</b></td><td>Identical figure used everywhere in this guide</td></tr>
+    <tr><td>Negative marking</td><td>None reported</td><td>Answer everything</td></tr>
+    <tr><td>Weighting of case studies</td><td>Possibly higher per-item</td><td>Unconfirmed — treat all as equal</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Don't assume case-study items are worth more and over-invest — official per-item weights are not published. <span class="pitfall">Common misunderstanding:</span> spending 12 minutes perfecting one case-study cluster while leaving five standalone items unanswered.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> Keep the same ≥80% practice-margin target as CCAR-F (see <a href="#s67-2">67.2</a>). Consistency in your target across both levels avoids re-learning your pacing math.</div>
+  <div class="example"><h4>Worked example</h4>Practice raw 46/60 = 76.7%. Against the shared 720/1000 bar this is a likely pass, but a case-study-heavy form is higher variance — schedule one more full mock before booking.</div>
+
+  <!-- 68.3 -->
+  <h3 id="s68-3">68.3 Domain Weight Strategy <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> CCAR-P shifts weight from component building toward <b>lifecycle, governance, and delivery</b>. Illustrative planning weights:</p>
+  <table>
+    <caption>Illustrative CCAR-P domain weighting <span class="hyp">ILLUSTRATIVE — weights NOT official</span></caption>
+    <tbody><tr><th>Domain</th><th>Est. Weight</th><th>Priority</th></tr>
+    <tr><td>End-to-end solution architecture</td><td>~30%</td><td class="pri-high">High</td></tr>
+    <tr><td>RAG &amp; data pipelines at scale</td><td>~20%</td><td class="pri-high">High</td></tr>
+    <tr><td>Governance, risk &amp; compliance</td><td>~20%</td><td class="pri-high">High</td></tr>
+    <tr><td>Evaluation, monitoring &amp; operations</td><td>~15%</td><td class="pri-med">Medium</td></tr>
+    <tr><td>Stakeholder communication &amp; delivery</td><td>~15%</td><td class="pri-med">Medium</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Governance jumps in importance vs. CCAR-F (from ~10% to ~20% here). Candidates coming straight from Foundations under-study it. <span class="pitfall">Common misunderstanding:</span> treating governance as a bolt-on rather than an architecture driver.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> For every P-level scenario, ask "what breaks in production and who is accountable?" — this reframes design questions as risk questions, which is how P-level distractors are written.</div>
+  <div class="example"><h4>Mini-scenario</h4>Two RAG designs are equally accurate; one has no PII redaction at ingest. At P-level the governance-safe design wins even if it is marginally slower.</div>
+
+  <!-- 68.4 -->
+  <h3 id="s68-4">68.4 Preparation Timeline <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> A 6-week plan assuming you already hold or are ready for CCAR-F.</p>
+  <table>
+    <caption>6-week CCAR-P preparation schedule <span class="hyp">ILLUSTRATIVE plan</span></caption>
+    <tbody><tr><th>Week</th><th>Focus</th><th>Deliverable</th></tr>
+    <tr><td>1</td><td>Lifecycle framework; read Exam Guide; diagnostic</td><td>Gap map</td></tr>
+    <tr><td>2</td><td>End-to-end architecture from a brief</td><td>Architecture doc (see 70.1)</td></tr>
+    <tr><td>3</td><td>RAG build + evaluation harness</td><td>Evaluated RAG pipeline (see 70.2)</td></tr>
+    <tr><td>4</td><td>Governance &amp; risk assessment</td><td>Risk register (see 70.3)</td></tr>
+    <tr><td>5</td><td>Stakeholder communication; decision memos</td><td>1-page decision brief (see 70.4)</td></tr>
+    <tr><td>6</td><td>Two full timed mocks; review; book exam</td><td>≥80% on a fresh form</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Reuse your CCAR-F projects as the <b>starting point</b> for P-level ones (extend the agent into a full solution). <span class="pitfall">Common misunderstanding:</span> starting from scratch and running out of time before reaching governance/delivery.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> Spend Week 5 on communication artifacts — P-level tests whether you can <i>defend</i> decisions, a skill separate from making them.</div>
+  <div class="example"><h4>Worked example</h4>Extend the 69.1 escalation agent into a full customer-support solution with RAG (70.2), a risk register (70.3), and a stakeholder brief (70.4). One thread → four P-level deliverables.</div>
+
+  <!-- 68.5 -->
+  <h3 id="s68-5">68.5 Bridging Foundations → Professional Knowledge <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> The mental shift is from <b>"can I build this component?"</b> (F) to <b>"can I own this system in production and justify it to a business?"</b> (P).</p>
+  <h4>CCAR-F vs. CCAR-P — comparison chart</h4>
+  <table>
+    <caption>What changes as you move up a level</caption>
+    <tbody><tr><th>Dimension</th><th>CCAR-F (Foundations)</th><th>CCAR-P (Professional)</th></tr>
+    <tr><td>Scope</td><td>Components &amp; single agents</td><td>End-to-end solutions &amp; lifecycle</td></tr>
+    <tr><td>Question style</td><td>Short scenarios</td><td>Extended case studies</td></tr>
+    <tr><td>Governance</td><td>Basics (~10%)</td><td>Core driver (~20%)</td></tr>
+    <tr><td>Deliverable focus</td><td>Working build</td><td>Build + risk + stakeholder sign-off</td></tr>
+    <tr><td>Key question</td><td>"Does it work?"</td><td>"Should we ship it, and who owns the risk?"</td></tr>
+  </tbody></table>
+  <div class="flow" aria-label="Bridge">
+    <span class="node">Build a component</span><span class="arrow">→</span>
+    <span class="node alt">Integrate into a system</span><span class="arrow">→</span>
+    <span class="node alt">Add governance &amp; evals</span><span class="arrow">→</span>
+    <span class="node ok">Defend to stakeholders</span>
+  </div>
+  <div class="tip-box">💡 <b>Tip:</b> Re-take a CCAR-F practice question and ask "what would the <i>Professional</i> version of this add?" — usually cost, compliance, monitoring, or a stakeholder. <span class="pitfall">Common misunderstanding:</span> assuming P is just "harder F questions" rather than a wider scope.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> When a P-level option looks identical to an F-level "correct" answer, prefer the option that also addresses operations or risk — that added dimension is usually what P is testing.</div>
+  <div class="example"><h4>Mini-scenario</h4>F answer: "Use a tool loop with retry." P answer to the same setup: "Use a tool loop with retry, add a dead-letter queue, alerting, and a fallback to human review" — same core, wider ownership.</div>
+
+  <!-- ============================================================= -->
+  <!-- CHAPTER 69 -->
+  <!-- ============================================================= -->
+  <h2 id="ch69">Chapter 69 — CCAR-F Preparation Exercises <span class="badge b-f">CCAR-F</span></h2>
+  <p>Four build exercises mapped to the heaviest Foundations domains. Each is scoped to a single session and lists the exam-relevant failure modes it exposes.</p>
+
+  <!-- 69.1 -->
+  <h3 id="s69-1">69.1 Multi-Tool Agent with Escalation Logic <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Build an agent with ≥2 tools (e.g. weather + calendar) plus an <b>escalation path</b> to a human when confidence is low, a tool fails repeatedly, or the request is out of scope. Core concepts: the tool-use loop, stop conditions, and graceful degradation.</p>
+  <h4>Escalation decision flow</h4>
+  <div class="flow" aria-label="Escalation logic">
+    <div class="col">
+      <span class="node">User request</span>
+    </div>
+    <span class="arrow">→</span>
+    <span class="node alt">Need a tool?</span>
+    <span class="arrow">→</span>
+    <span class="node">Call tool</span>
+    <span class="arrow">→</span>
+    <span class="node alt">Success &amp; confident?</span>
+    <span class="arrow">→</span>
+    <span class="node ok">Answer user</span>
+  </div>
+  <div class="flow" aria-label="Escalation fallback">
+    <span class="node alt">Fail ×N or low confidence</span>
+    <span class="arrow">→</span>
+    <span class="node" style="border-color:var(--warn)">Escalate to human</span>
+  </div>
+  <div class="tip-box">💡 <b>Tip:</b> Always define a <b>max-iteration cap</b> and an explicit "no tool needed → final answer" branch. <span class="pitfall">Common misunderstanding:</span> assuming the model will stop on its own — without a stop condition, agents loop or over-call tools.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> On agent-debugging questions, first locate the <b>termination / escalation</b> logic in the described loop before judging the tool schemas — missing stop conditions are the single most common seeded fault.</div>
+  <div class="example"><h4>Worked example</h4>Escalation rule: <code>if tool_failures &gt;= 2 or confidence &lt; 0.6: route_to_human()</code>. A test asks why an agent "spams" a flaky API — answer: no failure cap before escalation.</div>
+
+  <!-- 69.2 -->
+  <h3 id="s69-2">69.2 Configuring Claude Code for a Team Project <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Set up a shared repo so every teammate gets consistent behavior: a committed project config, a <code>CLAUDE.md</code> conventions file, agreed tool/permission scopes, and secrets kept out of the config.</p>
+  <table>
+    <caption>Team Claude Code setup checklist</caption>
+    <tbody><tr><th>Item</th><th>Purpose</th><th>Pitfall if skipped</th></tr>
+    <tr><td>Committed project config</td><td>Everyone shares tools &amp; settings</td><td>"Works on my machine" drift</td></tr>
+    <tr><td><code>CLAUDE.md</code> conventions</td><td>Coding style, do/don't rules</td><td>Inconsistent output across devs</td></tr>
+    <tr><td>Permission scoping</td><td>Least-privilege tool access</td><td>Unsafe/destructive actions</td></tr>
+    <tr><td>Secrets via env, not config</td><td>Keeps keys out of git</td><td>Leaked credentials</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Commit shared config but <b>never commit secrets</b> — reference environment variables. <span class="pitfall">Common misunderstanding:</span> putting API keys in the committed config "just to get it working."</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> For config questions, the correct answer almost always favors <b>shared + version-controlled + least-privilege</b>. Options that centralize secrets in code or grant blanket permissions are distractors.</div>
+  <div class="example"><h4>Mini-scenario</h4>A teammate gets different results from the same prompt. Cause: their local config overrides the repo config. Fix: commit a canonical config and document precedence in <code>CLAUDE.md</code>.</div>
+
+  <!-- 69.3 -->
+  <h3 id="s69-3">69.3 Structured Data Extraction Pipeline <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Turn unstructured text (invoices, emails) into validated JSON. Core concepts: enforce a schema, validate output, and handle fields the model can't find (null vs. hallucinate).</p>
+  <div class="flow" aria-label="Extraction pipeline">
+    <span class="node">Raw document</span><span class="arrow">→</span>
+    <span class="node alt">Prompt + JSON schema</span><span class="arrow">→</span>
+    <span class="node">Claude extracts</span><span class="arrow">→</span>
+    <span class="node alt">Validate against schema</span><span class="arrow">→</span>
+    <span class="node ok">Store</span>
+  </div>
+  <div class="flow" aria-label="Validation fail path">
+    <span class="node alt">Validation fails</span><span class="arrow">→</span>
+    <span class="node" style="border-color:var(--warn)">Retry / flag for review</span>
+  </div>
+  <div class="tip-box">💡 <b>Tip:</b> Instruct the model to return <code>null</code> for missing fields rather than guessing. <span class="pitfall">Common misunderstanding:</span> assuming valid JSON = correct data — always add a <b>schema-validation</b> step, since well-formed JSON can still contain hallucinated values.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> When options differ only by whether they validate output, pick the one that validates. Extraction items reward defensive pipelines, not just a clever prompt.</div>
+  <div class="example"><h4>Worked example</h4>Invoice missing a PO number. Bad pipeline invents "PO-0000." Good pipeline returns <code>"po_number": null</code> and routes to review — the exam-correct behavior.</div>
+
+  <!-- 69.4 -->
+  <h3 id="s69-4">69.4 Multi-Agent Research Pipeline Design &amp; Debugging <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Coordinate specialized agents (planner → researchers → synthesizer). Core concepts: task decomposition, parallel vs. sequential steps, and where a pipeline breaks (context loss between hops, duplicated work, no aggregation step).</p>
+  <div class="flow" aria-label="Multi-agent pipeline">
+    <span class="node">Planner</span><span class="arrow">→</span>
+    <div class="col">
+      <span class="node alt">Researcher A</span>
+      <span class="node alt">Researcher B</span>
+    </div>
+    <span class="arrow">→</span>
+    <span class="node">Synthesizer</span><span class="arrow">→</span>
+    <span class="node ok">Report</span>
+  </div>
+  <div class="tip-box">💡 <b>Tip:</b> Ensure the synthesizer receives each sub-agent's <b>output</b>, not just its task. <span class="pitfall">Common misunderstanding:</span> assuming shared "memory" — sub-agents are usually isolated, so context must be explicitly passed forward.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> In pipeline-debugging questions, <b>identify the failure point in the diagram first</b>, then evaluate answer choices against that node — don't grade the whole pipeline at once.</div>
+  <div class="example"><h4>Mini-scenario</h4>Final report omits Researcher B's findings. Failure point = the synthesizer only reads A's output. Fix = pass both outputs into the synthesis step (an aggregation/fan-in bug, not a prompt bug).</div>
+
+  <!-- ============================================================= -->
+  <!-- CHAPTER 70 -->
+  <!-- ============================================================= -->
+  <h2 id="ch70">Chapter 70 — CCAR-P Preparation Exercises <span class="badge b-p">CCAR-P</span></h2>
+  <p>Four Professional-level exercises emphasizing lifecycle ownership: architecture, evaluation, governance, and delivery.</p>
+
+  <!-- 70.1 -->
+  <h3 id="s70-1">70.1 Full Solution Architecture from a Business Brief <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Translate a business brief ("reduce support ticket handling time by 40%") into an architecture: components, data flow, model choices, integrations, and non-functional requirements (latency, cost, compliance).</p>
+  <div class="flow" aria-label="Solution architecture layers">
+    <span class="node">Business goal</span><span class="arrow">→</span>
+    <span class="node alt">Requirements (NFRs)</span><span class="arrow">→</span>
+    <span class="node alt">Component design</span><span class="arrow">→</span>
+    <span class="node">Integration &amp; data flow</span><span class="arrow">→</span>
+    <span class="node ok">Success metrics</span>
+  </div>
+  <div class="tip-box">💡 <b>Tip:</b> Tie every component back to the <b>business metric</b>. <span class="pitfall">Common misunderstanding:</span> designing an elegant system that never states how it moves the target KPI — P-level answers must connect architecture to outcome.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> Extract explicit constraints (budget, latency, compliance) from the brief first; any option violating a stated constraint is wrong regardless of technical merit.</div>
+  <div class="example"><h4>Worked example</h4>Brief: cut handling time 40%, keep data in-region, &lt;$0.05/ticket. A cheaper cross-region design is disqualified by the in-region constraint even though it hits cost and latency.</div>
+
+  <!-- 70.2 -->
+  <h3 id="s70-2">70.2 End-to-End RAG Pipeline Build &amp; Evaluation <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Build ingest → chunk → embed → retrieve → generate, then <b>evaluate</b> with retrieval metrics (recall@k) and answer metrics (faithfulness/groundedness). The evaluation loop is the P-level differentiator.</p>
+  <div class="flow" aria-label="RAG pipeline">
+    <span class="node">Ingest</span><span class="arrow">→</span>
+    <span class="node">Chunk</span><span class="arrow">→</span>
+    <span class="node">Embed</span><span class="arrow">→</span>
+    <span class="node alt">Retrieve</span><span class="arrow">→</span>
+    <span class="node">Generate</span><span class="arrow">→</span>
+    <span class="node ok">Evaluate</span>
+  </div>
+  <table>
+    <caption>What to measure — and what a bad score usually means</caption>
+    <tbody><tr><th>Metric</th><th>Measures</th><th>Low score points to…</th></tr>
+    <tr><td>Recall@k</td><td>Did retrieval fetch the right chunks?</td><td>Chunking / embedding / index</td></tr>
+    <tr><td>Faithfulness</td><td>Is the answer grounded in retrieved text?</td><td>Generation prompt / hallucination</td></tr>
+    <tr><td>Answer relevance</td><td>Does it address the question?</td><td>Query understanding</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Diagnose retrieval and generation <b>separately</b>. If recall@k is high but faithfulness is low, the retriever is fine — fix the prompt. <span class="pitfall">Common misunderstanding:</span> "blaming the model" for what is actually a retrieval/chunking failure.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> For RAG-failure scenarios, ask "were the right chunks retrieved?" first. High recall + wrong answer = generation problem; low recall = retrieval problem. This split maps directly to the answer options.</div>
+  <div class="example"><h4>Worked example</h4>Answers cite the wrong policy version. Recall@k shows the correct chunk was never retrieved → root cause is chunk size splitting the version header from its clause; fix chunking, not the prompt.</div>
+
+  <!-- 70.3 -->
+  <h3 id="s70-3">70.3 Governance and Risk Assessment <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Produce a risk register: identify risks (PII exposure, hallucination, prompt injection, cost overrun), rate likelihood × impact, and assign mitigations and owners.</p>
+  <table>
+    <caption>Sample risk register (excerpt)</caption>
+    <tbody><tr><th>Risk</th><th>Likelihood × Impact</th><th>Mitigation</th><th>Owner</th></tr>
+    <tr><td>PII leakage in outputs</td><td class="pri-high">High × High</td><td>Redaction at ingest + output filter</td><td>Data lead</td></tr>
+    <tr><td>Prompt injection via docs</td><td class="pri-med">Med × High</td><td>Input sanitization, tool allow-list</td><td>Security</td></tr>
+    <tr><td>Hallucinated answers</td><td class="pri-med">Med × Med</td><td>RAG grounding + faithfulness evals</td><td>ML lead</td></tr>
+    <tr><td>Cost overrun</td><td class="pri-low">Low × Med</td><td>Token budgets, caching, alerts</td><td>Platform</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Every risk needs a <b>named owner</b> and a mitigation — a risk with neither is just a worry. <span class="pitfall">Common misunderstanding:</span> listing risks without ownership or controls, which P-level questions treat as an incomplete assessment.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> Rank by <b>likelihood × impact</b>, then answer "which risk do we mitigate first?" with the highest product — not the scariest-sounding one. Distractors exploit fear over math.</div>
+  <div class="example"><h4>Mini-scenario</h4>Team wants to fix a low×low edge case first because it's novel. Correct P-level move: mitigate High×High PII leakage first — impact-weighted prioritization.</div>
+
+  <!-- 70.4 -->
+  <h3 id="s70-4">70.4 Presenting Architecture Decisions to Stakeholders <span class="backtop"><a href="#top">↑ TOC</a></span></h3>
+  <p><b>Notes.</b> Communicate a decision to a mixed audience (executives + engineers): state the decision, the options considered, the trade-offs, and the recommendation with its business justification. A one-page decision brief / ADR is the standard artifact.</p>
+  <table>
+    <caption>Decision brief structure (tailor depth to audience)</caption>
+    <tbody><tr><th>Section</th><th>Executive cares about</th><th>Engineer cares about</th></tr>
+    <tr><td>Decision</td><td>What &amp; why, in one line</td><td>Precise scope</td></tr>
+    <tr><td>Options &amp; trade-offs</td><td>Cost, risk, timeline</td><td>Technical constraints</td></tr>
+    <tr><td>Recommendation</td><td>Business impact</td><td>Implementation path</td></tr>
+    <tr><td>Risks &amp; mitigations</td><td>What could go wrong</td><td>Owner &amp; controls</td></tr>
+  </tbody></table>
+  <div class="tip-box">💡 <b>Tip:</b> Lead with the <b>recommendation and its business impact</b>, then support with detail — don't make executives read the reasoning to find the answer. <span class="pitfall">Common misunderstanding:</span> presenting deep technical detail first and burying the decision.</div>
+  <div class="strategy-box">🎯 <b>Strategy:</b> For "how do you present to X?" items, match <b>message to audience</b>: executives → outcomes, cost, risk; engineers → constraints, implementation. The best answer tailors depth, not just content.</div>
+  <div class="example"><h4>Worked example</h4>To a CFO: "Option B costs 20% more up front but cuts per-ticket cost 40% — payback in 4 months." To engineers on the same choice: latency budget, model selection, and the migration plan. Same decision, two framings.</div>
+
+  <hr>
+  <p class="sub">End of Chapters 67–70. Reminder: every numeric figure in this guide is <b>illustrative and unverified</b> — confirm against the official CCAR-F / CCAR-P Exam Guides in Anthropic Partner Academy before relying on it. Program existence and exam codes are verified via
+  <a href="https://www.pearsonvue.com/us/en/anthropic.html" target="_blank" rel="noopener">Pearson VUE / Anthropic</a>.</p>
+
+</div>
+
+
+</body></html>

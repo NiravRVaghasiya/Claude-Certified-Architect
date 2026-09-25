@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 51 — Diagnosing System Issues | Claude Certified Architect</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-alt: #f2f4f7;
+    --ink: #1a2130;
+    --ink-soft: #46536b;
+    --ink-mute: #7b879c;
+    --border: #dfe3ea;
+    --border-strong: #c4cbd8;
+    --brand: #6b4de6;
+    --brand-soft: #efeafd;
+    --brand-ink: #4a30b8;
+    --tip-bg: #eafaf1;
+    --tip-border: #57c98a;
+    --tip-ink: #1c7a49;
+    --exam-bg: #fff6e6;
+    --exam-border: #f0a835;
+    --exam-ink: #9a6100;
+    --warn-bg: #fdecea;
+    --warn-border: #e8836f;
+    --warn-ink: #a23417;
+    --code-bg: #1e2330;
+    --code-ink: #e6e9f0;
+    --ok: #2fa36b;
+    --bad: #d1493a;
+    --mono: 'SF Mono', 'Cascadia Code', Consolas, 'Roboto Mono', monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 40px 28px 96px; }
+
+  /* Header / hero */
+  .hero {
+    background: linear-gradient(135deg, #6b4de6 0%, #4a30b8 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 36px;
+    box-shadow: 0 10px 30px rgba(74,48,184,0.22);
+  }
+  .hero .kicker { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; opacity: .85; font-weight: 600; }
+  .hero h1 { font-size: 34px; line-height: 1.2; margin: 10px 0 12px; font-weight: 700; }
+  .hero p { font-size: 16px; opacity: .92; margin: 0; max-width: 680px; }
+  .hero .badges { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero .badge {
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.28);
+    padding: 5px 12px; border-radius: 100px; font-size: 12.5px; font-weight: 600;
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-bottom: 40px;
+  }
+  .toc h2 { margin: 0 0 14px; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-mute); }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 7px 0; }
+  .toc a { color: var(--brand-ink); text-decoration: none; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* Section wrapper */
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px 34px;
+    margin-bottom: 34px;
+    scroll-margin-top: 20px;
+  }
+  h2 {
+    font-size: 25px; font-weight: 700; margin: 0 0 6px;
+    color: var(--ink); border-bottom: 3px solid var(--brand-soft);
+    padding-bottom: 12px;
+  }
+  h2 .num { color: var(--brand); font-variant-numeric: tabular-nums; }
+  h3 {
+    font-size: 17px; font-weight: 700; margin: 26px 0 10px;
+    color: var(--brand-ink); display: flex; align-items: center; gap: 9px;
+  }
+  h3 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); display: inline-block; }
+  h4 { font-size: 15px; margin: 18px 0 8px; color: var(--ink); }
+  p { margin: 10px 0; color: var(--ink-soft); }
+  ul, ol { margin: 10px 0; padding-left: 24px; }
+  li { margin: 6px 0; color: var(--ink-soft); }
+  strong { color: var(--ink); }
+  code { font-family: var(--mono); font-size: 13px; background: var(--surface-alt); padding: 1.5px 6px; border-radius: 5px; color: var(--brand-ink); }
+
+  /* Code / log blocks */
+  pre {
+    background: var(--code-bg); color: var(--code-ink);
+    border-radius: 10px; padding: 18px 20px; overflow-x: auto;
+    font-family: var(--mono); font-size: 12.8px; line-height: 1.55;
+    margin: 14px 0; border: 1px solid #2c3346;
+  }
+  pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+  .c-user { color: #7fd1ff; } .c-cmt { color: #8b97b3; } .c-ok { color: #5fdb9a; }
+  .c-bad { color: #ff8f7a; } .c-key { color: #d7a4ff; } .c-num { color: #ffce7a; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13.6px; }
+  caption { caption-side: top; text-align: left; font-weight: 600; color: var(--ink-mute); font-size: 12.5px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em; }
+  th { background: var(--surface-alt); text-align: left; padding: 10px 12px; border: 1px solid var(--border); font-weight: 600; color: var(--ink); font-size: 12.8px; }
+  td { padding: 10px 12px; border: 1px solid var(--border); color: var(--ink-soft); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafbfc; }
+  .tag { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 11.5px; font-weight: 700; }
+  .tag.low { background: #e7f6ee; color: #1c7a49; }
+  .tag.med { background: #fff2d6; color: #9a6100; }
+  .tag.high { background: #fde3dd; color: #a23417; }
+
+  /* Callout boxes */
+  .callout { border-radius: 10px; padding: 16px 20px; margin: 20px 0; border-left: 5px solid; }
+  .callout .c-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .callout p:first-of-type { margin-top: 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  .tip { background: var(--tip-bg); border-color: var(--tip-border); }
+  .tip .c-title { color: var(--tip-ink); }
+  .tip p, .tip li { color: #1f6f47; }
+  .exam { background: var(--exam-bg); border-color: var(--exam-border); }
+  .exam .c-title { color: var(--exam-ink); }
+  .exam p, .exam li { color: #85560a; }
+  .warn { background: var(--warn-bg); border-color: var(--warn-border); }
+  .warn .c-title { color: var(--warn-ink); }
+  .warn p, .warn li { color: #8c3016; }
+
+  /* Flowchart (CSS decision tree) */
+  .flow { margin: 20px 0; }
+  .flow-step { display: flex; align-items: stretch; gap: 0; margin: 0; }
+  .flow-node {
+    background: var(--brand-soft); border: 2px solid var(--brand);
+    border-radius: 10px; padding: 12px 16px; color: var(--brand-ink);
+    font-size: 13.5px; font-weight: 600; flex: 1; position: relative;
+  }
+  .flow-arrow { text-align: center; color: var(--brand); font-size: 20px; line-height: 1; margin: 6px 0; }
+  .flow-branch { display: flex; gap: 14px; margin: 8px 0; }
+  .flow-branch > div { flex: 1; }
+  .branch-yes, .branch-no { border-radius: 10px; padding: 11px 14px; font-size: 12.8px; border: 2px solid; }
+  .branch-yes { background: #eafaf1; border-color: var(--tip-border); color: var(--tip-ink); }
+  .branch-no { background: #fdecea; border-color: var(--warn-border); color: var(--warn-ink); }
+  .branch-label { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px; }
+
+  .anchor-note { font-size: 12.5px; color: var(--ink-mute); font-style: italic; margin-top: 4px; }
+  hr.soft { border: none; border-top: 1px dashed var(--border-strong); margin: 26px 0; }
+
+  .foot { text-align: center; color: var(--ink-mute); font-size: 12.5px; margin-top: 40px; }
+  .accuracy-note { background: var(--surface-alt); border: 1px dashed var(--border-strong); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--ink-soft); margin-bottom: 32px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="kicker">Claude Certified Architect · Foundations &amp; Professional</div>
+    <h1>Chapter 51 — Diagnosing System Issues</h1>
+    <p>Identify, diagnose, and resolve the five core failure categories in Claude-based applications, with structured diagnostic workflows and exam-ready recall.</p>
+    <div class="badges">
+      <span class="badge">51.1 Prompt Failure</span>
+      <span class="badge">51.2 Hallucination</span>
+      <span class="badge">51.3 Model Mismatch</span>
+      <span class="badge">51.4 Retrieval Failure</span>
+      <span class="badge">51.5 Hands-On Debug</span>
+    </div>
+  </div>
+
+  <div class="accuracy-note">
+    <strong>Accuracy note.</strong> All technical claims in this chapter reflect real, documented behavior of Anthropic's Claude models (model tiers, context windows, system prompts, temperature, tool use, extended thinking, prompt caching) and standard retrieval-augmented generation architecture (embeddings, chunking, vector indexes, cosine similarity, reranking). No fictional APIs or features are introduced. Where a value is model- or deployment-specific, it is flagged as such rather than stated as a universal constant.
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>In this chapter</h2>
+    <ol>
+      <li><a href="#s1">51.1 — Prompt Failure Diagnosis: When the Model Misunderstands</a></li>
+      <li><a href="#s2">51.2 — Hallucination Detection and Mitigation</a></li>
+      <li><a href="#s3">51.3 — Model Mismatch: When the Wrong Model Is Deployed</a></li>
+      <li><a href="#s4">51.4 — Retrieval Failures: Stale Chunks, Broken Indexes &amp; Mismatched Embeddings</a></li>
+      <li><a href="#s5">51.5 — Hands-On: Debugging a Failing Claude Application</a></li>
+      <li><a href="#summary">Chapter Summary &amp; 5-Minute Review</a></li>
+    </ol>
+  </div>
+
+  <!-- ================= 51.1 ================= -->
+  <section id="s1">
+    <h2><span class="num">51.1</span> &nbsp;Prompt Failure Diagnosis: When the Model Misunderstands</h2>
+
+    <h3><span class="dot"></span>Definition</h3>
+    <p>A <strong>prompt failure</strong> occurs when Claude produces an unhelpful, off-target, or malformed response <em>not</em> because the model lacks capability, but because the instruction it received was ambiguous, under-specified, contradictory, or poorly structured. The model does exactly what it was told — the problem is that what it was told did not match what the architect intended. This is the most common and most fixable failure class, and it should always be ruled out <em>first</em> because it is cheap to test.</p>
+
+    <h3><span class="dot"></span>Root Causes</h3>
+    <ul>
+      <li><strong>Ambiguous instructions</strong> — vague verbs ("analyze this", "make it better") with no success criteria or output shape.</li>
+      <li><strong>Missing context</strong> — the model is asked to reason about data, a document, or a persona that was never supplied in the prompt.</li>
+      <li><strong>Contradictory constraints</strong> — e.g. "be extremely concise" alongside "explain every step in full detail."</li>
+      <li><strong>Unstructured input</strong> — instructions, data, and examples run together with no delimiters, so the model cannot tell the task from the material.</li>
+      <li><strong>Format under-specification</strong> — no explicit output schema (JSON keys, headings, length), leaving the model to guess.</li>
+      <li><strong>Role/system-prompt drift</strong> — the system prompt sets one persona or policy while the user turn implies another.</li>
+      <li><strong>Negation-only instructions</strong> — telling the model only what <em>not</em> to do without stating the desired behavior.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Signals</h3>
+    <ul>
+      <li>Answers are <strong>generic or hedging</strong> ("It depends on many factors…") when a specific answer was expected.</li>
+      <li>Output <strong>format is inconsistent</strong> across otherwise similar requests (sometimes prose, sometimes a list, sometimes JSON).</li>
+      <li>The model <strong>asks for clarification</strong> or restates the task instead of doing it.</li>
+      <li>The model <strong>solves the wrong problem</strong> — a coherent, well-written answer to a question you did not ask.</li>
+      <li><strong>Only part</strong> of a multi-part instruction is addressed.</li>
+      <li>Failures <strong>disappear when you rephrase</strong> the prompt manually — a strong tell that the prompt, not the model, is at fault.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Workflow</h3>
+    <pre><code><span class="c-cmt"># Prompt-failure isolation (run before suspecting anything else)</span>
+Step 1: Re-read the prompt literally. Did the model do <span class="c-key">exactly</span> what the words say?
+        <span class="c-ok">→ YES</span> and result is wrong  → the instruction is the bug, not the model. Go Step 2.
+        <span class="c-bad">→ NO</span>, it ignored instructions → check delimiters &amp; instruction placement (Step 4).
+
+Step 2: Is the desired output shape explicitly stated (schema, length, headings)?
+        <span class="c-bad">→ NO</span>  → add an explicit output contract + 1 example. Re-test.
+        <span class="c-ok">→ YES</span> → Step 3.
+
+Step 3: Was all required context actually in the prompt/context window?
+        <span class="c-bad">→ NO</span>  → this is a context / retrieval gap → jump to Section 51.4.
+        <span class="c-ok">→ YES</span> → Step 4.
+
+Step 4: Are instructions clearly separated from data (XML tags / headings)?
+        <span class="c-bad">→ NO</span>  → wrap data in delimiters, move instructions to a stable position. Re-test.
+        <span class="c-ok">→ YES</span> → Step 5.
+
+Step 5: Are any two constraints in conflict?
+        <span class="c-ok">→ YES</span> → remove/re-rank the conflicting constraint. Re-test.
+        <span class="c-bad">→ NO</span>  → prompt is sound; escalate to model-mismatch (51.3) or hallucination (51.2).</code></pre>
+
+    <h3><span class="dot"></span>Visualization — Symptom → Cause → Fix</h3>
+    <table>
+      <caption>Prompt-failure triage matrix</caption>
+      <thead><tr><th>Observable symptom</th><th>Likely prompt cause</th><th>Targeted fix</th></tr></thead>
+      <tbody>
+        <tr><td>Generic, non-committal answer</td><td>No success criteria / missing context</td><td>State the goal + supply the data explicitly</td></tr>
+        <tr><td>Wrong output format</td><td>Format under-specified</td><td>Give an explicit schema + one worked example</td></tr>
+        <tr><td>Only half the task done</td><td>Instructions buried in a wall of text</td><td>Number the sub-tasks; separate with delimiters</td></tr>
+        <tr><td>Solved the wrong problem</td><td>Ambiguous phrasing</td><td>Rephrase as a single unambiguous imperative</td></tr>
+        <tr><td>Persona/policy keeps slipping</td><td>System vs. user prompt conflict</td><td>Consolidate role rules into the system prompt</td></tr>
+      </tbody>
+    </table>
+
+    <h3><span class="dot"></span>Mitigation Strategies <span style="font-weight:400;font-size:13px;color:var(--ink-mute)">(ranked low→high effort)</span></h3>
+    <ol>
+      <li><span class="tag low">Low effort</span> <strong>Add an explicit output contract</strong> — state format, length, and required fields. Often fixes the issue outright.</li>
+      <li><span class="tag low">Low effort</span> <strong>Delimit structure</strong> — wrap supplied data in XML-style tags (e.g. <code>&lt;document&gt;…&lt;/document&gt;</code>) so the model separates task from material. Claude responds particularly well to XML tags.</li>
+      <li><span class="tag med">Medium</span> <strong>Add 1–3 few-shot examples</strong> showing an input and the exact desired output.</li>
+      <li><span class="tag med">Medium</span> <strong>Move stable instructions into the system prompt</strong>; keep only the variable task in the user turn.</li>
+      <li><span class="tag med">Medium</span> <strong>Ask Claude to reason step-by-step</strong> (or enable extended thinking) for multi-constraint tasks so intermediate logic is visible.</li>
+      <li><span class="tag high">Higher</span> <strong>Prompt-test harness</strong> — a small eval set of representative inputs with expected outputs, run on every prompt change to catch regressions.</li>
+    </ol>
+
+    <div class="callout tip">
+      <div class="c-title">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Put the long, stable material first, the instruction last.</strong> Claude follows the most recent instruction most reliably, and putting reusable content (documents, examples) at the top also makes it eligible for prompt caching.</li>
+        <li><strong>Prefer positive instructions.</strong> "Respond in exactly two sentences" beats "don't be too long."</li>
+        <li><strong>The 30-second manual test:</strong> paste the same prompt into a fresh chat and rephrase it yourself. If the rephrase fixes it, it was a prompt failure — no code change needed.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <div class="c-title">⚠️ Exam Strategy</div>
+      <p>Prompt-failure questions typically show you a <em>prompt + a disappointing output</em> and ask for the <strong>single best fix</strong>. The trap answer usually says "switch to a larger model" — but if the output is coherent and simply off-target, the model is fine and the <em>prompt</em> is the defect. Watch for keywords like <em>"ambiguous," "no output format specified," "instructions and data mixed together."</em> When a question emphasizes that the answer was well-written but wrong, choose the prompt-engineering fix, not a model upgrade.</p>
+    </div>
+  </section>
+
+  <!-- ================= 51.2 ================= -->
+  <section id="s2">
+    <h2><span class="num">51.2</span> &nbsp;Hallucination Detection and Mitigation</h2>
+
+    <h3><span class="dot"></span>Definition</h3>
+    <p>A <strong>hallucination</strong> is a confident, fluent, plausible-sounding output that is <em>not grounded</em> in the provided sources or in verifiable fact — a fabricated citation, invented statistic, non-existent API, or a claim the model cannot support. The danger is stylistic: hallucinations read exactly like correct answers. Unlike a prompt failure (wrong <em>because</em> of the instruction), a hallucination is wrong <em>despite</em> a reasonable instruction, because the model filled a knowledge gap with a probabilistically likely — but false — completion.</p>
+
+    <h3><span class="dot"></span>Root Causes</h3>
+    <ul>
+      <li><strong>No grounding sources</strong> — the model is asked a factual question with nothing authoritative in context, so it draws on parametric memory that may be wrong or outdated.</li>
+      <li><strong>Retrieved context is missing the answer</strong> — the model, primed to be helpful, "completes" the gap rather than admitting it (this overlaps with 51.4).</li>
+      <li><strong>Leading or presuppositional prompts</strong> — "Summarize the three risks the report lists" when the report lists none pressures the model to invent three.</li>
+      <li><strong>Long-context dilution</strong> — the relevant fact is buried among large amounts of loosely related text, weakening grounding.</li>
+      <li><strong>High temperature / sampling</strong> — more randomness increases the chance of confident invention on factual tasks.</li>
+      <li><strong>No permission to say "I don't know"</strong> — the instruction implicitly forbids uncertainty.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Signals</h3>
+    <ul>
+      <li><strong>Fabricated references</strong> — citations, URLs, case numbers, or file names that do not exist in the sources.</li>
+      <li><strong>Over-specific detail</strong> with no traceable origin (exact figures, dates, quotations not present in context).</li>
+      <li><strong>Answer contradicts the supplied source</strong> when you check line by line.</li>
+      <li><strong>Uniform confidence</strong> — the same assured tone for things it knows and things it cannot know.</li>
+      <li><strong>Instability</strong> — re-running the same query yields different "facts" each time.</li>
+      <li><strong>Named entities/APIs that don't exist</strong> in the domain.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Workflow</h3>
+    <pre><code><span class="c-cmt"># Is this output grounded? Trace every load-bearing claim.</span>
+Step 1: List the factual claims in the answer.
+Step 2: For each claim, can you point to a supporting span in the provided context?
+        <span class="c-ok">→ YES</span> for all → not a hallucination; may be a retrieval or prompt issue instead.
+        <span class="c-bad">→ NO</span> for some → those claims are ungrounded. Go Step 3.
+Step 3: Was the supporting fact ever retrieved / supplied at all?
+        <span class="c-bad">→ NO, it was never in context</span> → the model invented it → 51.2 hallucination.
+        <span class="c-ok">→ YES, it was in context but the model contradicted it</span> → grounding/attention issue:
+             tighten the prompt to "answer ONLY from the context; quote the source."
+Step 4: Does the answer degrade at high temperature and stabilize at temp≈0?
+        <span class="c-ok">→ YES</span> → lower temperature for factual tasks.
+Step 5: Add an explicit escape hatch ("If the answer is not in the context, say 'Not stated.'").
+        Re-test: does the model now abstain instead of inventing?</code></pre>
+
+    <h3><span class="dot"></span>Visualization — Grounded vs. Hallucinated (Before / After)</h3>
+    <table>
+      <caption>Before / after a grounding fix</caption>
+      <thead><tr><th>Aspect</th><th>Before (hallucinating)</th><th>After (grounded)</th></tr></thead>
+      <tbody>
+        <tr><td>Prompt</td><td>"What is the refund window in our policy?"</td><td>"Using ONLY the policy below, state the refund window. If not stated, reply 'Not stated.' &lt;policy&gt;…&lt;/policy&gt;"</td></tr>
+        <tr><td>Sources in context</td><td>None</td><td>Policy document supplied</td></tr>
+        <tr><td>Temperature</td><td>0.8</td><td>0.0–0.2</td></tr>
+        <tr><td>Output</td><td>"The refund window is 30 days." <span style="color:var(--bad)">(invented)</span></td><td>"Not stated in the provided policy." <span style="color:var(--ok)">(honest)</span> / or a quoted figure</td></tr>
+        <tr><td>Citation</td><td>References a section that doesn't exist</td><td>Quotes the exact source line</td></tr>
+      </tbody>
+    </table>
+
+    <h3><span class="dot"></span>Mitigation Strategies <span style="font-weight:400;font-size:13px;color:var(--ink-mute)">(ranked low→high effort)</span></h3>
+    <ol>
+      <li><span class="tag low">Low effort</span> <strong>Grant permission to abstain</strong> — instruct the model to answer only from context and say "I don't know" / "Not stated" otherwise.</li>
+      <li><span class="tag low">Low effort</span> <strong>Lower temperature</strong> to near 0 for factual/extraction tasks.</li>
+      <li><span class="tag med">Medium</span> <strong>Ground with retrieval</strong> — supply authoritative source text (RAG) rather than relying on parametric memory.</li>
+      <li><span class="tag med">Medium</span> <strong>Require inline citations / quotes</strong> — ask the model to quote the exact supporting span for each claim, making fabrication self-evident.</li>
+      <li><span class="tag med">Medium</span> <strong>Ask it to reason first, answer second</strong> (extended thinking / "think step by step") so unsupported leaps are visible before the final answer.</li>
+      <li><span class="tag high">Higher</span> <strong>Add a verification pass</strong> — a second Claude call that checks each claim in the draft against the sources and flags anything unsupported before the answer is returned.</li>
+    </ol>
+
+    <div class="callout tip">
+      <div class="c-title">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>"Quote-then-answer" is the cheapest anti-hallucination pattern.</strong> Force the model to first extract verbatim supporting quotes, then answer using only those quotes. If it can't find a quote, it can't fabricate one convincingly.</li>
+        <li><strong>Ungrounded ≠ wrong-model.</strong> Upgrading to a larger model reduces but does not eliminate hallucination — grounding is the real fix.</li>
+        <li><strong>Re-run at temp 0 twice.</strong> Identical answers suggest a deterministic (possibly grounded) response; wildly different "facts" scream fabrication.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <div class="c-title">⚠️ Exam Strategy</div>
+      <p>Hallucination questions almost always present a <em>plausible-sounding but false</em> Claude response — often with a fake citation. Scan the answer choices for the keywords <em>"fabricated," "unverifiable," "not grounded in source," "no supporting evidence."</em> The correct remediation on the exam is usually <strong>grounding + verification</strong> (retrieval, quote-then-answer, an "abstain" instruction), <em>not</em> "increase max tokens" or "raise temperature." If a scenario says the model invented a source, the answer is a grounding/citation control — never a creativity setting.</p>
+    </div>
+  </section>
+
+  <!-- ================= 51.3 ================= -->
+  <section id="s3">
+    <h2><span class="num">51.3</span> &nbsp;Model Mismatch: When the Wrong Model Is Deployed</h2>
+
+    <h3><span class="dot"></span>Definition</h3>
+    <p><strong>Model mismatch</strong> is a configuration failure: the prompt and grounding are fine, but the deployed Claude variant is poorly matched to the task's difficulty, latency budget, or cost profile. The Claude family spans tiers — broadly, <strong>Haiku</strong> (fastest, cheapest, best for high-volume, simpler tasks), <strong>Sonnet</strong> (balanced general-purpose reasoning), and <strong>Opus</strong> (highest capability for the hardest reasoning). Deploying too small a model for a complex task yields shallow reasoning; deploying too large a model for a trivial, high-volume task wastes latency and cost. Mismatch also covers wrong configuration: truncated <strong>max output tokens</strong>, an unsuitable context window, or extended thinking left off for a task that needs deep reasoning.</p>
+
+    <h3><span class="dot"></span>Root Causes</h3>
+    <ul>
+      <li><strong>Undersized model for a hard task</strong> — complex multi-step reasoning, nuanced code, or long-document synthesis routed to a lightweight tier.</li>
+      <li><strong>Oversized model for a trivial task</strong> — simple classification or extraction on a top tier, hurting latency and cost with no quality gain.</li>
+      <li><strong>Truncated <code>max_tokens</code></strong> — the output limit cuts answers off mid-sentence (looks like a "capability" problem but is a config problem).</li>
+      <li><strong>Context window too small</strong> for the input, forcing silent truncation of earlier content.</li>
+      <li><strong>Extended thinking disabled</strong> on tasks that need deliberate reasoning, or enabled where it only adds latency.</li>
+      <li><strong>Version drift</strong> — pinned to an older snapshot while newer, more capable versions exist; or an unpinned alias changing behavior underneath the app.</li>
+      <li><strong>Uniform routing</strong> — one model for every request instead of routing by task complexity.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Signals</h3>
+    <ul>
+      <li><strong>Quality ceiling</strong> — reasoning is consistently shallow or error-prone on hard cases even after prompt tuning (undersized).</li>
+      <li><strong>Truncated / cut-off answers</strong> ending mid-sentence — check <code>max_tokens</code> and the stop reason.</li>
+      <li><strong>Latency or cost out of line with task value</strong> — slow, expensive responses to trivial requests (oversized).</li>
+      <li><strong>Inconsistent quality after a deploy</strong> with no prompt change — a version/alias changed underneath you.</li>
+      <li><strong>Good on short inputs, degrades on long ones</strong> — likely context-window truncation.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Workflow</h3>
+    <pre><code><span class="c-cmt"># Prompt &amp; grounding already ruled out (51.1, 51.2). Now the model config.</span>
+Step 1: Did the response end mid-sentence / abruptly?
+        <span class="c-ok">→ YES</span> → check stop reason &amp; max_tokens. If "max_tokens", raise the output limit. Done.
+        <span class="c-bad">→ NO</span> → Step 2.
+Step 2: Is the input near or over the model's context window?
+        <span class="c-ok">→ YES</span> → earlier content was truncated → enlarge window or chunk/summarize input.
+        <span class="c-bad">→ NO</span> → Step 3.
+Step 3: Is reasoning shallow on genuinely hard cases despite a clean prompt?
+        <span class="c-ok">→ YES</span> → upgrade one tier (Haiku→Sonnet→Opus) and/or enable extended thinking. Re-eval.
+        <span class="c-bad">→ NO</span> → Step 4.
+Step 4: Is the task trivial but latency/cost high?
+        <span class="c-ok">→ YES</span> → downgrade a tier; consider routing simple traffic to Haiku.
+Step 5: Did behavior shift with no code change?
+        <span class="c-ok">→ YES</span> → confirm the exact model version/snapshot; pin it to stop drift.</code></pre>
+
+    <h3><span class="dot"></span>Visualization — Task → Recommended tier</h3>
+    <table>
+      <caption>Matching task profile to Claude tier (illustrative guidance, not fixed rules)</caption>
+      <thead><tr><th>Task profile</th><th>Priority</th><th>Typical tier</th><th>Mismatch symptom if wrong</th></tr></thead>
+      <tbody>
+        <tr><td>High-volume classification / extraction / routing</td><td>Speed + cost</td><td>Haiku</td><td>Oversized: slow &amp; costly for no quality gain</td></tr>
+        <tr><td>General assistants, summarization, most RAG answering</td><td>Balance</td><td>Sonnet</td><td>Undersized (if using Haiku): shallow synthesis</td></tr>
+        <tr><td>Deep multi-step reasoning, hard code, complex agents</td><td>Max capability</td><td>Opus (± extended thinking)</td><td>Undersized: logic errors, missed steps</td></tr>
+        <tr><td>Long-answer generation</td><td>Output length</td><td>Any — but raise <code>max_tokens</code></td><td>Answers cut off mid-sentence</td></tr>
+      </tbody>
+    </table>
+
+    <h3><span class="dot"></span>Mitigation Strategies <span style="font-weight:400;font-size:13px;color:var(--ink-mute)">(ranked low→high effort)</span></h3>
+    <ol>
+      <li><span class="tag low">Low effort</span> <strong>Fix output limits first</strong> — raise <code>max_tokens</code> and confirm the stop reason before touching the model tier.</li>
+      <li><span class="tag low">Low effort</span> <strong>Pin the model version</strong> to a specific snapshot to eliminate drift.</li>
+      <li><span class="tag med">Medium</span> <strong>Right-size the tier</strong> — upgrade for hard reasoning, downgrade for trivial high-volume work.</li>
+      <li><span class="tag med">Medium</span> <strong>Toggle extended thinking</strong> for deliberate reasoning tasks; disable it where it only adds latency.</li>
+      <li><span class="tag high">Higher</span> <strong>Complexity-based routing</strong> — a cheap classifier sends simple traffic to Haiku and hard traffic to Sonnet/Opus, optimizing cost and quality together.</li>
+      <li><span class="tag high">Higher</span> <strong>Tier A/B eval</strong> — run the same eval set across tiers to justify the choice with data rather than intuition.</li>
+    </ol>
+
+    <div class="callout tip">
+      <div class="c-title">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Always check the stop reason before blaming the model.</strong> A cut-off answer with stop reason <code>max_tokens</code> is a config fix, not a capability upgrade — and far cheaper.</li>
+        <li><strong>Bigger is not always better.</strong> On simple, high-volume tasks a smaller tier is often <em>more</em> reliable end-to-end because it's faster and cheaper, letting you add verification passes within the same budget.</li>
+        <li><strong>Pin versions in production.</strong> Unpinned aliases can shift model behavior on their own schedule and produce "mystery regressions."</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <div class="c-title">⚠️ Exam Strategy</div>
+      <p>Model-mismatch questions describe a <em>working</em> prompt whose output is either <strong>cut off</strong>, <strong>too shallow</strong>, or <strong>needlessly slow/expensive.</strong> First distinguish a <em>truncation</em> problem (raise <code>max_tokens</code> / enlarge context) from a <em>capability</em> problem (change tier). The classic trap: a truncated answer that looks like the model "couldn't finish" — the correct fix is the output-token limit, not a model upgrade. Watch for keywords <em>"cut off," "mid-sentence," "stop reason," "latency," "cost per request," "shallow reasoning," "version/snapshot."</em></p>
+    </div>
+  </section>
+
+  <!-- ================= 51.4 ================= -->
+  <section id="s4">
+    <h2><span class="num">51.4</span> &nbsp;Retrieval Failures: Stale Chunks, Broken Indexes &amp; Mismatched Embeddings</h2>
+
+    <h3><span class="dot"></span>Definition</h3>
+    <p>A <strong>retrieval failure</strong> occurs in a RAG system when the wrong context — or no useful context — is fed to Claude, so even a perfect prompt and a perfectly capable model produce a wrong answer. The generation step is only as good as what the retriever hands it: <em>garbage in, confident garbage out.</em> Retrieval failures are especially deceptive because the model's answer is fluent and grounded-<em>looking</em> — it simply grounds on the wrong material. This section covers the retrieval pipeline: chunking → embedding → indexing → query embedding → similarity search → (optional) reranking → context assembly.</p>
+
+    <h3><span class="dot"></span>Root Causes</h3>
+    <ul>
+      <li><strong>Stale index</strong> — source documents changed but the vector store was never re-embedded, so old content is retrieved.</li>
+      <li><strong>Embedding model mismatch</strong> — documents were embedded with one model and queries are embedded with a different one (or a new version), so vectors live in incompatible spaces and similarity is meaningless.</li>
+      <li><strong>Broken / partial index</strong> — an ingestion job failed silently; some documents were never indexed (missing recall) or indexed twice (duplicates).</li>
+      <li><strong>Poor chunking</strong> — chunks too large (diluted, off-topic context) or too small (answer split across chunk boundaries and never fully retrieved).</li>
+      <li><strong>Dimension / metric mismatch</strong> — index configured with the wrong vector dimensionality or distance metric (cosine vs. dot vs. Euclidean).</li>
+      <li><strong>Weak query</strong> — user query phrased very differently from source wording; pure vector search misses it (a lexical/hybrid signal would have caught it).</li>
+      <li><strong>No reranking</strong> — top-k by raw similarity returns loosely related chunks ahead of the truly relevant one.</li>
+      <li><strong>Metadata / access filters</strong> silently excluding the relevant documents.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Signals</h3>
+    <ul>
+      <li><strong>Outdated answers despite correct, updated source docs</strong> — the hallmark of a stale index.</li>
+      <li><strong>Confident answers grounded in the <em>wrong</em> document</strong> — retrieval returned irrelevant chunks.</li>
+      <li><strong>"I couldn't find that"</strong> for content you know exists — missing from the index or filtered out.</li>
+      <li><strong>Uniformly poor retrieval across all queries</strong> — a systemic cause: embedding mismatch, wrong metric, or empty/broken index.</li>
+      <li><strong>Relevant chunk exists but ranks below junk</strong> — a reranking / chunking problem.</li>
+      <li><strong>Similarity scores all near-identical or near-zero</strong> — a red flag for dimension/metric or embedding-space mismatch.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Diagnostic Workflow</h3>
+    <pre><code><span class="c-cmt"># Inspect the RETRIEVED context directly — never diagnose from the final answer alone.</span>
+Step 1: Log &amp; read the exact chunks retrieved for the failing query. Is the answer text present?
+        <span class="c-bad">→ NO, correct chunk not retrieved</span> → retrieval defect → Step 2.
+        <span class="c-ok">→ YES, correct chunk WAS retrieved</span> → not retrieval; revisit prompt (51.1) / hallucination (51.2).
+Step 2: Does the source contain the up-to-date answer, but retrieval returns old text?
+        <span class="c-ok">→ YES</span> → STALE INDEX → re-embed &amp; refresh the index. Done.
+Step 3: Is retrieval bad for EVERY query (not just one)?
+        <span class="c-ok">→ YES</span> → systemic: verify query and docs use the SAME embedding model/version,
+             and the index dimension &amp; distance metric match that model. Fix &amp; re-embed.
+        <span class="c-bad">→ NO, only some queries</span> → Step 4.
+Step 4: Does the relevant chunk exist in the index but rank too low?
+        <span class="c-ok">→ YES</span> → improve chunking (size/overlap), add hybrid (keyword+vector) search, add a reranker.
+        <span class="c-bad">→ NO, chunk absent entirely</span> → ingestion gap → re-run indexing; check failed docs &amp; filters.
+Step 5: Are metadata/access filters excluding the doc?
+        <span class="c-ok">→ YES</span> → correct the filter scope. Re-test.</code></pre>
+
+    <h3><span class="dot"></span>Visualization — Retrieval failure decision tree</h3>
+    <div class="flow">
+      <div class="flow-node">Answer is wrong / outdated in a RAG app</div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-node">Log the retrieved chunks. Is the correct source text in them?</div>
+      <div class="flow-branch">
+        <div class="branch-yes"><span class="branch-label">Yes — text was retrieved</span>Not a retrieval failure → check prompt (51.1) &amp; hallucination (51.2).</div>
+        <div class="branch-no"><span class="branch-label">No — wrong/old text</span>Retrieval failure. Continue ▼</div>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-node">Source is updated but old text returned?</div>
+      <div class="flow-branch">
+        <div class="branch-yes"><span class="branch-label">Yes</span><strong>Stale index</strong> → re-embed &amp; refresh.</div>
+        <div class="branch-no"><span class="branch-label">No</span>Continue ▼</div>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-node">Retrieval bad for <em>every</em> query?</div>
+      <div class="flow-branch">
+        <div class="branch-yes"><span class="branch-label">Yes — systemic</span><strong>Embedding / dimension / metric mismatch.</strong> Align query &amp; doc embedding model; re-embed.</div>
+        <div class="branch-no"><span class="branch-label">No — query-specific</span>Chunk missing (re-index) <em>or</em> ranks too low (better chunking + hybrid search + reranker).</div>
+      </div>
+    </div>
+
+    <h3><span class="dot"></span>Mitigation Strategies <span style="font-weight:400;font-size:13px;color:var(--ink-mute)">(ranked low→high effort)</span></h3>
+    <ol>
+      <li><span class="tag low">Low effort</span> <strong>Log &amp; inspect retrieved chunks</strong> for failing queries — the single highest-value diagnostic step.</li>
+      <li><span class="tag low">Low effort</span> <strong>Re-embed &amp; refresh the index</strong> when sources change (fixes staleness); schedule regular re-indexing.</li>
+      <li><span class="tag med">Medium</span> <strong>Guarantee embedding-model parity</strong> — pin one embedding model+version for both documents and queries; re-embed everything on any change.</li>
+      <li><span class="tag med">Medium</span> <strong>Verify index config</strong> — dimensionality and distance metric must match the embedding model.</li>
+      <li><span class="tag med">Medium</span> <strong>Tune chunking</strong> — right-size chunks with sensible overlap so answers aren't split across boundaries.</li>
+      <li><span class="tag med">Medium</span> <strong>Add hybrid retrieval</strong> — combine keyword (lexical) with vector search to catch wording mismatches.</li>
+      <li><span class="tag high">Higher</span> <strong>Add a reranker</strong> — re-score top-k candidates so the truly relevant chunk surfaces to the top.</li>
+      <li><span class="tag high">Higher</span> <strong>Retrieval evals</strong> — measure recall@k / precision on a labeled query set to catch regressions before users do.</li>
+    </ol>
+
+    <div class="callout tip">
+      <div class="c-title">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Never debug a RAG failure from the final answer.</strong> Print the retrieved chunks first. In &gt;70% of "the model is wrong" RAG cases, the model was handed the wrong context.</li>
+        <li><strong>"Bad for one query" vs. "bad for all"</strong> is the fastest split: all-queries-bad → systemic (embeddings/metric/empty index); one-query-bad → chunking/ranking/coverage.</li>
+        <li><strong>Embedding parity is non-negotiable.</strong> If you upgrade the embedding model, you must re-embed the entire corpus — mixing spaces silently destroys similarity.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <div class="c-title">⚠️ Exam Strategy</div>
+      <p>Retrieval questions hinge on one tell: the <strong>docs are correct but the answer is outdated or off-base.</strong> "Outdated answers despite correct/updated documents" → <strong>stale index, re-embed.</strong> "Retrieval broke for all queries after we swapped the embedding model" → <strong>embedding mismatch, re-embed with a single aligned model.</strong> "The right passage exists but isn't retrieved" → <strong>chunking + reranking + hybrid search.</strong> Watch for <em>"stale," "re-embed," "embedding mismatch," "index," "top-k," "cosine similarity," "chunk."</em> The trap answer blames the model or prompt when the scenario clearly points to the retrieval pipeline.</p>
+    </div>
+  </section>
+
+  <!-- ================= 51.5 ================= -->
+  <section id="s5">
+    <h2><span class="num">51.5</span> &nbsp;Hands-On: Debugging a Failing Claude Application</h2>
+    <p>This walkthrough applies the logic from 51.1–51.4 to a single realistic incident. Follow the reasoning, not just the fix — the exam tests whether you can <em>isolate</em> a failure, not merely recognize one.</p>
+
+    <h3><span class="dot"></span>The Scenario</h3>
+    <p><strong>System:</strong> "PolicyBot", an internal HR RAG assistant. It embeds HR policy PDFs into a vector store and answers employee questions with Claude Sonnet. It worked well at launch three months ago.</p>
+    <p><strong>The complaint (ticket #4471):</strong> Since the company raised parental leave from 12 to 16 weeks last week, PolicyBot still tells employees the entitlement is <strong>12 weeks</strong> — confidently, and it even cites "Section 4.2 of the HR Handbook."</p>
+
+    <h4>Symptom capture</h4>
+    <pre><code><span class="c-user">User:</span> How many weeks of paid parental leave do I get?
+<span class="c-bad">PolicyBot:</span> You are entitled to <span class="c-num">12</span> weeks of paid parental leave,
+          as stated in Section 4.2 of the HR Handbook.
+<span class="c-cmt"># Ground truth (updated last week): 16 weeks. The answer is confident, fluent, and WRONG.</span></code></pre>
+
+    <h3><span class="dot"></span>Step 1 — Rule out prompt failure (51.1)</h3>
+    <p>The prompt is unchanged and previously produced correct answers. The output is well-formed and directly answers the question — it is simply <em>factually</em> wrong. A prompt failure would show as <em>off-target</em> or <em>malformed</em> output, not a confidently wrong fact. We manually re-ran the same prompt against the <em>updated</em> policy text pasted directly into context:</p>
+    <pre><code><span class="c-user">Prompt (manual test, policy pasted inline):</span>
+"Using ONLY the policy below, how many weeks of paid parental leave?
+&lt;policy&gt; ...paid parental leave of <span class="c-num">16</span> weeks... &lt;/policy&gt;"
+<span class="c-ok">Claude:</span> "16 weeks, per the provided policy."   <span class="c-cmt"># Correct when given the right context.</span></code></pre>
+    <p><strong>Conclusion:</strong> With the correct context, Claude answers correctly. The prompt and model are <em>not</em> the problem. → Move on.</p>
+
+    <h3><span class="dot"></span>Step 2 — Is it hallucination? (51.2)</h3>
+    <p>It looks like one — a confident wrong number and a cited section. But hallucination means <em>ungrounded</em> invention. Here the "12 weeks / Section 4.2" claim is suspiciously specific and internally consistent, which suggests the model <em>is</em> grounded — just on the wrong (old) material. We confirm by inspecting what was actually retrieved rather than trusting the answer.</p>
+
+    <h3><span class="dot"></span>Step 3 — Inspect the retrieved chunks (51.4, Step 1)</h3>
+    <pre><code><span class="c-cmt"># Logged retrieval for the query "paid parental leave weeks"</span>
+retrieved_chunks = [
+  {
+    "doc_id": "hr_handbook_v3.pdf",
+    "chunk": "...eligible employees receive <span class="c-num">12</span> weeks of paid parental leave (Section 4.2)...",
+    "similarity": <span class="c-num">0.91</span>,
+    "indexed_at": "<span class="c-num">2026-06-20</span>"        <span class="c-cmt"># &lt;-- three months old</span>
+  }
+]
+<span class="c-cmt"># The updated file hr_handbook_v4.pdf (16 weeks, ingested 2026-09-18) is NOWHERE in the results.</span></code></pre>
+    <p>The retriever confidently returned the <strong>old</strong> handbook. Claude grounded on it faithfully and cited it accurately. This is <strong>not</strong> a hallucination — the model reported exactly what it was given. It is a <strong>retrieval failure</strong>.</p>
+
+    <h3><span class="dot"></span>Step 4 — Which retrieval failure? (51.4 workflow)</h3>
+    <p>Following the 51.4 decision tree:</p>
+    <ul>
+      <li><strong>Is the source updated but old text returned?</strong> The updated PDF exists on disk (v4, 16 weeks), yet only v3 appears in the index. → Strong signal of a <strong>stale / broken index</strong>, not an embedding-space mismatch (retrieval is fine for other, unchanged queries, so it's not systemic).</li>
+    </ul>
+    <p>We check the ingestion logs:</p>
+    <pre><code><span class="c-cmt"># ingestion.log</span>
+2026-09-18 02:00:11  INFO  Ingest start: hr_handbook_v4.pdf
+2026-09-18 02:00:12  <span class="c-bad">ERROR</span> PDF parse failed: encrypted stream, 0 chunks produced
+2026-09-18 02:00:12  WARN  hr_handbook_v4.pdf skipped; previous version retained
+<span class="c-cmt"># Root cause surfaced: the new PDF was password-protected, parsing failed,</span>
+<span class="c-cmt"># the job skipped it silently, and the STALE v3 vectors were left serving traffic.</span></code></pre>
+
+    <h3><span class="dot"></span>Step 5 — Root cause &amp; fix</h3>
+    <p><strong>Root cause:</strong> A <strong>stale index caused by a silent ingestion failure.</strong> The updated policy PDF was encrypted; parsing produced zero chunks; the pipeline skipped it without alerting; the old 12-week vectors kept being retrieved. Claude was never wrong about its input — it faithfully reported stale context.</p>
+    <p><strong>The fix (ordered):</strong></p>
+    <ol>
+      <li>Decrypt / re-export <code>hr_handbook_v4.pdf</code> as a parseable file.</li>
+      <li>Re-ingest and <strong>re-embed</strong>; verify the 16-week chunk now exists in the index and that v3 is removed or superseded.</li>
+      <li>Re-run the failing query and confirm the correct chunk is retrieved (similarity + <code>indexed_at</code> current).</li>
+      <li><strong>Prevent recurrence:</strong> fail the ingestion job loudly on zero-chunk output (alert, don't silently skip); add a freshness check comparing source <code>modified</code> dates against <code>indexed_at</code>; add a retrieval eval that asserts the current parental-leave figure.</li>
+      <li><strong>Defense in depth:</strong> add an "answer only from retrieved context and cite the source date" instruction so a future stale hit is at least visibly dated.</li>
+    </ol>
+    <pre><code><span class="c-cmt"># After re-embedding — verification run</span>
+<span class="c-user">User:</span> How many weeks of paid parental leave do I get?
+<span class="c-ok">PolicyBot:</span> You are entitled to <span class="c-num">16</span> weeks of paid parental leave
+           (HR Handbook v4, Section 4.2, effective 2026-09-18).   <span class="c-ok"># Correct &amp; current.</span></code></pre>
+
+    <h3><span class="dot"></span>Lessons Learned</h3>
+    <table>
+      <caption>Incident #4471 — post-mortem summary</caption>
+      <thead><tr><th>Question asked</th><th>Finding</th><th>Take-away</th></tr></thead>
+      <tbody>
+        <tr><td>Was the prompt at fault? (51.1)</td><td>No — correct with correct context</td><td>Rule out the cheap cause first, but don't stop there</td></tr>
+        <tr><td>Was it a hallucination? (51.2)</td><td>No — the claim was grounded, just on old data</td><td>"Confident + cited" can still be a retrieval bug, not invention</td></tr>
+        <tr><td>Was context inspected? (51.4)</td><td>Yes — retrieved chunks revealed stale v3</td><td>Always read the retrieved chunks, never diagnose from the answer</td></tr>
+        <tr><td>What was the true root cause?</td><td>Silent ingestion failure → stale index</td><td>Pipelines must fail loudly; zero chunks is an error, not a skip</td></tr>
+        <tr><td>How is recurrence prevented?</td><td>Freshness checks + retrieval evals + alerts</td><td>Monitoring turns a repeat incident into a caught regression</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warn">
+      <div class="c-title">🔎 The meta-lesson</div>
+      <p>The most dangerous failures <em>look</em> like the wrong category. This one presented as a hallucination (confident, cited, wrong) but was a retrieval-pipeline defect. The disciplined move — <strong>inspect the actual retrieved context before blaming the model</strong> — is what separates a guess from a diagnosis.</p>
+    </div>
+  </section>
+
+  <!-- ================= SUMMARY ================= -->
+  <section id="summary">
+    <h2>Chapter Summary &amp; 5-Minute Review</h2>
+
+    <h3><span class="dot"></span>Quick-Reference: Failure Type → Key Signal → Fastest Fix</h3>
+    <table>
+      <caption>Master triage table for Chapter 51</caption>
+      <thead><tr><th>Failure type</th><th>Section</th><th>Key signal</th><th>Fastest fix</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Prompt failure</strong></td><td>51.1</td><td>Coherent but off-target / malformed; fixed by rephrasing</td><td>Add explicit output contract + delimit data</td></tr>
+        <tr><td><strong>Hallucination</strong></td><td>51.2</td><td>Confident, ungrounded claim; fabricated citation</td><td>Ground with retrieval + "quote-then-answer" + allow "I don't know"</td></tr>
+        <tr><td><strong>Model mismatch</strong></td><td>51.3</td><td>Cut-off, too shallow, or needlessly slow/costly</td><td>Fix <code>max_tokens</code> first; then right-size the tier / pin version</td></tr>
+        <tr><td><strong>Retrieval failure</strong></td><td>51.4</td><td>Outdated/wrong answer despite correct source docs</td><td>Inspect retrieved chunks → re-embed / align embeddings / rerank</td></tr>
+        <tr><td><strong>Diagnostic discipline</strong></td><td>51.5</td><td>A failure that looks like the wrong category</td><td>Isolate in order: prompt → hallucination → model → retrieval</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <div class="c-title">⏱️ 5-Minute Review (last-minute exam prep)</div>
+      <ul>
+        <li><strong>Diagnose in order of cost:</strong> prompt (cheapest) → hallucination → model config → retrieval. Rule out the cheap cause before the expensive one.</li>
+        <li><strong>Prompt failure = coherent but wrong-target.</strong> Fix with output contracts, delimiters (XML tags), and few-shot examples — <em>not</em> a bigger model.</li>
+        <li><strong>Hallucination = confident + ungrounded.</strong> Fix with grounding, inline citations/quotes, an "abstain" instruction, and low temperature. A bigger model reduces but never eliminates it.</li>
+        <li><strong>Model mismatch:</strong> a cut-off answer with stop reason <code>max_tokens</code> is a config fix (raise the limit), not a capability fix. Right-size the tier; pin versions to avoid drift.</li>
+        <li><strong>Retrieval failure = right docs, wrong answer.</strong> Stale index → re-embed. All-queries-bad → embedding/metric mismatch. One-query-bad → chunking + hybrid search + reranker. <em>Always read the retrieved chunks first.</em></li>
+        <li><strong>Golden rule:</strong> never diagnose a RAG failure from the final answer — inspect the retrieved context. "Confident + cited" can still be a retrieval bug.</li>
+        <li><strong>Keyword map:</strong> "ambiguous / no format" → 51.1 · "fabricated / unverifiable / not grounded" → 51.2 · "cut off / stop reason / shallow / latency" → 51.3 · "stale / re-embed / embedding mismatch / top-k" → 51.4.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam">
+      <div class="c-title">⚠️ Exam-day meta-strategy</div>
+      <p>When a scenario question feels ambiguous, map its keywords to the table above and pick the fix that matches the <em>signal</em>, not the surface impression. The most common trap across all five sections is the tempting "upgrade the model" answer — correct only for genuine capability gaps (51.3), and wrong for prompt (51.1), grounding (51.2), and retrieval (51.4) problems.</p>
+    </div>
+  </section>
+
+  <p class="foot">Chapter 51 · Diagnosing System Issues — Claude Certified Architect: Foundations &amp; Professional · Self-contained study guide, no external dependencies.</p>
+
+</div>
+
+
+</body></html>

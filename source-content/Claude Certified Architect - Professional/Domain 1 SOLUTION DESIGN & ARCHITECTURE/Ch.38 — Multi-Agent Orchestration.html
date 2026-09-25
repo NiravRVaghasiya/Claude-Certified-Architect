@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Study guide for Claude Certified Architect — Chapter 38: Multi-Agent Systems &amp; Orchestration at Scale. Best-practice aligned exam-prep notes.">
+<title>CCAR · Ch.38 — Multi-Agent Systems &amp; Orchestration at Scale</title>
+<style>
+  :root{
+    --bg:#0f1420;
+    --surface:#161d2e;
+    --surface-2:#1d2739;
+    --ink:#e8edf7;
+    --ink-soft:#aab6cc;
+    --line:#2b3650;
+    --accent:#7c9cff;
+    --accent-2:#a78bfa;
+    --tip:#34d399;
+    --tip-bg:rgba(52,211,153,.10);
+    --warn:#f59e0b;
+    --warn-bg:rgba(245,158,11,.10);
+    --exam:#60a5fa;
+    --exam-bg:rgba(96,165,250,.10);
+    --assume:#fbbf24;
+    --assume-bg:rgba(251,191,36,.10);
+    --code:#f472b6;
+    --radius:14px;
+    --maxw:980px;
+    font-synthesis:none;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62;
+    font-size:16.5px;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* ---------- Header ---------- */
+  header.top{
+    background:linear-gradient(135deg,#141b2e 0%,#1b2340 55%,#241b3d 100%);
+    border-bottom:1px solid var(--line);
+    padding:44px 0 34px;
+  }
+  .eyebrow{
+    display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent-2);font-weight:700;border:1px solid var(--line);
+    padding:5px 12px;border-radius:999px;background:rgba(167,139,250,.08);
+  }
+  header.top h1{
+    font-size:clamp(1.6rem,3.6vw,2.5rem);margin:16px 0 6px;line-height:1.15;letter-spacing:-.01em;
+  }
+  header.top .sub{color:var(--ink-soft);font-size:1.02rem;margin:0}
+  .howto{
+    margin-top:22px;background:rgba(0,0,0,.22);border:1px solid var(--line);
+    border-radius:var(--radius);padding:16px 20px;
+  }
+  .howto h2{font-size:.95rem;margin:0 0 8px;color:var(--accent)}
+  .howto ul{margin:0;padding-left:20px;color:var(--ink-soft);font-size:.95rem}
+  .howto li{margin:3px 0}
+
+  /* ---------- Assumptions banner ---------- */
+  .assume-box{
+    border:1px solid var(--assume);background:var(--assume-bg);
+    border-radius:var(--radius);padding:16px 20px;margin:26px 0;
+  }
+  .assume-box h2{margin:0 0 8px;font-size:1rem;color:var(--assume)}
+  .assume-box p,.assume-box li{color:var(--ink);font-size:.93rem;margin:5px 0}
+  .assume-box ul{padding-left:20px;margin:6px 0}
+
+  /* ---------- Nav / TOC ---------- */
+  nav.toc{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;margin:26px 0;
+  }
+  nav.toc h2{margin:0 0 12px;font-size:1.05rem}
+  nav.toc ol{margin:0;padding-left:0;list-style:none;counter-reset:toc}
+  nav.toc li{counter-increment:toc;margin:7px 0;display:flex;gap:12px;align-items:baseline}
+  nav.toc li::before{
+    content:counter(toc);flex:0 0 auto;width:26px;height:26px;border-radius:7px;
+    background:var(--surface-2);border:1px solid var(--line);color:var(--accent);
+    font-size:.8rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;
+  }
+  nav.toc a{font-weight:600}
+  nav.toc .tail{color:var(--ink-soft);font-weight:400;font-size:.9rem}
+
+  /* ---------- Sections ---------- */
+  section.chapter{padding:34px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .sec-num{
+    font-size:.78rem;font-weight:800;letter-spacing:.08em;color:#0f1420;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    padding:5px 11px;border-radius:8px;
+  }
+  section.chapter h2{font-size:clamp(1.3rem,2.6vw,1.7rem);margin:0;letter-spacing:-.01em}
+  h3{font-size:1.06rem;margin:26px 0 8px;color:var(--ink);display:flex;align-items:center;gap:9px}
+  h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-left:22px}
+  li{margin:6px 0}
+  strong{color:#fff}
+  code{
+    background:var(--surface-2);color:var(--code);padding:2px 6px;border-radius:5px;
+    font-family:"SF Mono",Consolas,Menlo,monospace;font-size:.86em;
+  }
+  .lead{color:var(--ink-soft)}
+
+  /* ---------- Callout boxes ---------- */
+  .box{border-radius:var(--radius);padding:15px 18px;margin:18px 0;border:1px solid var(--line)}
+  .box .label{font-weight:800;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .box p:first-of-type{margin-top:0}
+  .box p:last-child,.box ul:last-child{margin-bottom:0}
+  .tip{border-color:var(--tip);background:var(--tip-bg)}
+  .tip .label{color:var(--tip)}
+  .warn{border-color:var(--warn);background:var(--warn-bg)}
+  .warn .label{color:var(--warn)}
+  .exam{border-color:var(--exam);background:var(--exam-bg)}
+  .exam .label{color:var(--exam)}
+
+  /* ---------- Tables ---------- */
+  .tbl-scroll{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:var(--radius)}
+  table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+  caption{caption-side:top;text-align:left;font-size:.8rem;color:var(--ink-soft);padding:10px 14px 6px;font-style:italic}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--surface-2);color:var(--accent);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
+  tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+  td.good{color:var(--tip)}
+  td.bad{color:#f87171}
+
+  /* ---------- Figures / SVG ---------- */
+  figure{margin:20px 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{color:var(--ink-soft);font-size:.85rem;margin-top:10px;text-align:center;font-style:italic}
+  .svg-label{fill:var(--ink);font-size:13px;font-family:inherit;font-weight:600}
+  .svg-sub{fill:var(--ink-soft);font-size:11px;font-family:inherit}
+  .svg-edge{stroke:var(--line);stroke-width:2;fill:none}
+
+  /* ---------- Xref chips ---------- */
+  .xref{
+    display:inline-block;font-size:.78rem;background:var(--surface-2);border:1px solid var(--line);
+    border-radius:999px;padding:2px 10px;color:var(--accent);margin:2px 4px 2px 0;
+  }
+  .xref-row{margin:14px 0 4px}
+
+  /* ---------- Mnemonic pill ---------- */
+  .mnem{font-weight:700;color:var(--accent-2);letter-spacing:.02em}
+
+  /* ---------- Takeaways ---------- */
+  .takeaway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+  .tk{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px}
+  .tk h4{margin:0 0 6px;font-size:.95rem;color:var(--accent)}
+  .tk p{margin:0;font-size:.9rem;color:var(--ink-soft)}
+
+  /* ---------- Back-to-top ---------- */
+  .totop{display:inline-block;font-size:.8rem;color:var(--ink-soft);margin-top:20px}
+
+  /* ---------- Footer ---------- */
+  footer.bottom{border-top:1px solid var(--line);background:var(--surface);padding:30px 0;margin-top:10px}
+  footer.bottom p{color:var(--ink-soft);font-size:.85rem;margin:8px 0}
+  footer.bottom strong{color:var(--ink)}
+
+  /* ---------- Print ---------- */
+  @media print{
+    :root{--bg:#fff;--surface:#fff;--surface-2:#f4f6fb;--ink:#111;--ink-soft:#444;--line:#ccc}
+    body{font-size:11pt}
+    header.top{background:#f4f6fb}
+    a{color:#1a4fd6}
+    nav.toc,figure,.box,.tbl-scroll,.tk{break-inside:avoid}
+    .totop{display:none}
+    section.chapter{break-before:auto}
+    .sec-num{color:#fff;background:#4f46e5}
+  }
+  @media (max-width:560px){
+    body{font-size:15.5px}
+    .sec-head{gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</span>
+    <h1>Chapter 38 — Multi-Agent Systems &amp; Orchestration at Scale</h1>
+    <p class="sub">Architecture decisions, orchestration patterns, decomposition, reliability, and a hands-on enterprise build — framed for exam recall.</p>
+
+    <div class="howto">
+      <h2>How to use this guide</h2>
+      <ul>
+        <li>Each subsection follows the same rhythm: <strong>Concept → Principles → Diagram → Comparison → Tips → Exam Strategy</strong>. Learn the rhythm and you can predict where the exam-relevant nugget lives.</li>
+        <li>Read the <strong>Exam Strategy</strong> callouts last per section — they translate the concept into how a question is likely to be framed and how to eliminate distractors.</li>
+        <li>Follow the <span class="xref">↔ cross-reference</span> chips to connect a pattern to the architecture choice that justifies it.</li>
+        <li>Print-friendly: use your browser's Print → Save as PDF for an offline copy.</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="assume-box" role="note" aria-label="Assumptions and scope">
+    <h2>⚠ Assumptions &amp; scope — read first</h2>
+    <p>The <strong>exact official syllabus, section wording, and question formats</strong> for the Claude Certified Architect exam are not publicly published in a form I can verify. To stay truthful, this guide is written as follows:</p>
+    <ul>
+      <li>All technical content is grounded in <strong>established, vendor-neutral principles</strong> of multi-agent AI systems and distributed-systems engineering (orchestrator–worker patterns, task decomposition, observability, fault tolerance) — these are defensible regardless of exam specifics.</li>
+      <li>Section titles (38.1–38.5) are treated as <strong>topic scaffolding</strong> supplied for this study guide, not as quoted official exam material.</li>
+      <li>No fabricated statistics, case studies, or "official Anthropic exam rules" are presented as fact. Where a number or pattern comes from public engineering guidance, it is described as general guidance, not a certified exam answer.</li>
+      <li>"Exam Strategy" callouts describe <strong>how scenario/MCQ questions on these topics are commonly constructed</strong> in professional architecture exams — treat them as reasoning heuristics, not leaked answers.</li>
+    </ul>
+    <p>Verify against your official exam guide and any Anthropic-provided prep material before relying on specifics.</p>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1">When to Use Multi-Agent vs Single-Agent Architectures</a> <span class="tail">— the "should there be more than one agent?" decision</span></li>
+      <li><a href="#s2">Orchestration Strategies for Enterprise Systems</a> <span class="tail">— how agents coordinate</span></li>
+      <li><a href="#s3">Decomposition Techniques for Complex Problem Solving</a> <span class="tail">— breaking work into subtasks</span></li>
+      <li><a href="#s4">Cross-Cutting Concerns: Logging, Monitoring &amp; Error Handling</a> <span class="tail">— reliability &amp; observability</span></li>
+      <li><a href="#s5">Hands-On: Architecting a Multi-Agent Enterprise Solution</a> <span class="tail">— putting it together</span></li>
+      <li><a href="#takeaways">Chapter 38 — Key Exam Takeaways</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= 38.1 ================= -->
+  <section class="chapter" id="s1">
+    <div class="sec-head">
+      <span class="sec-num">38.1</span>
+      <h2>When to Use Multi-Agent vs Single-Agent Architectures</h2>
+    </div>
+
+    <h3><span class="dot"></span>Concept Overview</h3>
+    <p class="lead">A <strong>single-agent</strong> system is one LLM-driven control loop that reasons, calls tools, and produces output — even if it has many tools. A <strong>multi-agent</strong> system splits work across two or more agents, each with its own role, prompt, tool set, and (critically) its own <strong>context window</strong>, coordinating toward a shared goal.</p>
+    <p>Why it matters at enterprise scale: adding agents is not free. Each agent is effectively an expensive, non-deterministic "thread" — it multiplies token cost, adds coordination latency, and introduces new failure modes (handoff errors, conflicting state). The architectural question is therefore <em>not</em> "how many agents can I use?" but "<strong>what is the smallest topology that meets the requirements?</strong>"</p>
+
+    <h3><span class="dot"></span>Key Principles</h3>
+    <ul>
+      <li><strong>Start single, escalate deliberately.</strong> Default to one agent with tools; introduce additional agents only when a concrete constraint forces it.</li>
+      <li><strong>Context isolation is a first-class reason to split.</strong> When one job would pollute or overflow another's context window, separate agents keep each context clean and focused.</li>
+      <li><strong>Specialization</strong> — distinct system prompts, tools, or model sizes per role (e.g., a fast small model for routing, a stronger model for synthesis).</li>
+      <li><strong>Parallelism</strong> — independent subtasks can run concurrently, cutting wall-clock time (fan-out/fan-in).</li>
+      <li><strong>Fault isolation &amp; security boundaries</strong> — a worker with narrow tool permissions limits blast radius; a failing worker need not crash the whole task.</li>
+      <li><strong>Cost/latency tax</strong> — multi-agent systems typically consume substantially more tokens than a single chat turn because of duplicated context and inter-agent messaging. Budget for it.</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 760 300" role="img" aria-label="Decision flow for choosing single-agent versus multi-agent architecture">
+        <defs>
+          <marker id="arr1" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#7c9cff"></path>
+          </marker>
+        </defs>
+        <!-- Start -->
+        <rect x="300" y="14" width="160" height="42" rx="9" fill="#1d2739" stroke="#7c9cff"></rect>
+        <text x="380" y="40" text-anchor="middle" class="svg-label">Task to architect</text>
+        <!-- Q1 -->
+        <path class="svg-edge" d="M380,56 L380,86" marker-end="url(#arr1)"></path>
+        <rect x="250" y="88" width="260" height="46" rx="9" fill="#161d2e" stroke="#2b3650"></rect>
+        <text x="380" y="107" text-anchor="middle" class="svg-label">Specialized roles OR parallel</text>
+        <text x="380" y="123" text-anchor="middle" class="svg-sub">subtasks OR context isolation needed?</text>
+        <!-- No branch -> single -->
+        <path class="svg-edge" d="M250,111 L120,111 L120,150" marker-end="url(#arr1)"></path>
+        <text x="180" y="104" class="svg-sub">No</text>
+        <rect x="30" y="152" width="180" height="60" rx="9" fill="#0f2a22" stroke="#34d399"></rect>
+        <text x="120" y="178" text-anchor="middle" class="svg-label" style="fill:#34d399">SINGLE AGENT</text>
+        <text x="120" y="196" text-anchor="middle" class="svg-sub">simpler · cheaper · lower latency</text>
+        <!-- Yes branch -> Q2 -->
+        <path class="svg-edge" d="M380,134 L380,164" marker-end="url(#arr1)"></path>
+        <text x="392" y="152" class="svg-sub">Yes</text>
+        <rect x="250" y="166" width="260" height="46" rx="9" fill="#161d2e" stroke="#2b3650"></rect>
+        <text x="380" y="185" text-anchor="middle" class="svg-label">Latency / cost / simplicity</text>
+        <text x="380" y="201" text-anchor="middle" class="svg-sub">the dominant constraint?</text>
+        <!-- Q2 Yes -> single -->
+        <path class="svg-edge" d="M250,189 L120,189 L120,152" marker-end="url(#arr1)"></path>
+        <text x="180" y="182" class="svg-sub">Yes</text>
+        <!-- Q2 No -> multi -->
+        <path class="svg-edge" d="M380,212 L380,242" marker-end="url(#arr1)"></path>
+        <text x="392" y="230" class="svg-sub">No</text>
+        <rect x="290" y="244" width="180" height="50" rx="9" fill="#231b3d" stroke="#a78bfa"></rect>
+        <text x="380" y="266" text-anchor="middle" class="svg-label" style="fill:#a78bfa">MULTI-AGENT</text>
+        <text x="380" y="284" text-anchor="middle" class="svg-sub">specialize · parallelize · isolate</text>
+      </svg>
+      <figcaption>Figure 38.1 — A deliberate escalation path: prove you <em>need</em> multiple agents before you build them.</figcaption>
+    </figure>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>Table 38.1 — Single-agent vs multi-agent tradeoffs</caption>
+        <thead>
+          <tr><th>Dimension</th><th>Single-Agent</th><th>Multi-Agent</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Complexity / debuggability</td><td class="good">Low — one trace to follow</td><td class="bad">High — distributed traces, handoffs</td></tr>
+          <tr><td>Token cost</td><td class="good">Lower</td><td class="bad">Higher (duplicated context + messaging)</td></tr>
+          <tr><td>Latency</td><td class="good">Lower for linear tasks</td><td>Lower for <em>parallelizable</em> tasks; higher otherwise</td></tr>
+          <tr><td>Specialization</td><td class="bad">Limited — one prompt/tool set</td><td class="good">Strong — role-specific prompts, tools, models</td></tr>
+          <tr><td>Context management</td><td class="bad">One window can overflow / blur</td><td class="good">Isolated, focused contexts per agent</td></tr>
+          <tr><td>Fault isolation</td><td class="bad">Single point of failure</td><td class="good">Contained; workers fail independently</td></tr>
+          <tr><td>Best fit</td><td>Linear, latency/cost-sensitive, coherent tasks</td><td>Broad, parallel, multi-skill, long-horizon tasks</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Mnemonic — reach for multi-agent when you have <span class="mnem">"S.P.I.C.E."</span>: <strong>S</strong>pecialization, <strong>P</strong>arallelism, <strong>I</strong>solation (context), <strong>C</strong>ontainment (fault/security), <strong>E</strong>xtensibility (independent scaling). No SPICE? Stay single.</li>
+        <li>Treat an agent like a thread: cheap to <em>describe</em>, expensive to <em>run</em>. Count the tokens before you count the agents.</li>
+        <li>Common pitfall: splitting a fundamentally <em>sequential</em> task into agents — you pay coordination cost for zero parallelism benefit.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <span class="label">🎯 Exam Strategy</span>
+      <p>These appear as <strong>"choose the most appropriate architecture"</strong> scenarios. Scan the stem for constraint keywords:</p>
+      <ul>
+        <li><strong>Points to multi-agent:</strong> "specialized," "parallel/concurrent," "independent subtasks," "isolate context," "different tool permissions," "long-horizon."</li>
+        <li><strong>Points to single-agent:</strong> "low latency," "cost-sensitive," "simple," "tightly coupled steps," "easy to debug/maintain."</li>
+      </ul>
+      <p><strong>Elimination:</strong> if the task is linear and latency/cost-sensitive, eliminate every multi-agent option first. Beware distractors that add agents "for scalability" when no parallelism or specialization exists — that's the trap. <strong>Time tip:</strong> decide the constraint in the first read; don't re-read the whole stem for each option.</p>
+    </div>
+
+    <div class="xref-row">
+      <span class="xref">↔ 38.3 — the decomposition decides <em>how</em> to split once you've chosen multi-agent</span>
+      <span class="xref">↔ 38.2 — the topology you pick becomes an orchestration strategy</span>
+    </div>
+    <a class="totop" href="#s1">▲ back to section top</a>
+  </section>
+
+  <!-- ================= 38.2 ================= -->
+  <section class="chapter" id="s2">
+    <div class="sec-head">
+      <span class="sec-num">38.2</span>
+      <h2>Orchestration Strategies for Enterprise Systems</h2>
+    </div>
+
+    <h3><span class="dot"></span>Concept Overview</h3>
+    <p class="lead">Orchestration is <strong>how agents coordinate</strong>: who decides what runs next, how work and state are passed between agents, and how results are aggregated. The topology you choose determines control flow, latency profile, cost, and how hard the system is to reason about.</p>
+    <p>At enterprise scale the orchestration layer is also where <strong>governance</strong> lives — rate limits, budgets, retries, approvals, and audit trails typically sit at the coordination boundary rather than inside individual agents.</p>
+
+    <h3><span class="dot"></span>Key Principles &amp; Patterns</h3>
+    <ul>
+      <li><strong>Orchestrator–Worker (supervisor):</strong> a central agent plans, delegates subtasks to workers, and synthesizes results. The most common enterprise default — clear control, easy auditing.</li>
+      <li><strong>Sequential pipeline:</strong> agents chained stage-to-stage (A→B→C); each stage's output is the next stage's input. Deterministic, simple, but no parallelism and cumulative latency.</li>
+      <li><strong>Parallel fan-out / fan-in:</strong> orchestrator dispatches independent subtasks concurrently, then aggregates. Best latency win when subtasks are truly independent.</li>
+      <li><strong>Hierarchical:</strong> orchestrators of orchestrators — a supervisor delegates to sub-supervisors, each managing their own workers. Scales to large problem trees.</li>
+      <li><strong>Peer / handoff (network):</strong> agents pass control laterally to whichever peer is best suited (decentralized routing). Flexible but harder to bound and audit.</li>
+      <li><strong>Router / dispatcher:</strong> a lightweight classifier agent routes each request to the right specialist — often paired with a small, fast model.</li>
+      <li><strong>Blackboard / shared state:</strong> agents read/write a shared workspace rather than messaging directly — useful for collaborative, evolving artifacts.</li>
+    </ul>
+    <p><strong>Control-flow axes to keep in mind:</strong> <em>centralized vs decentralized</em> control, <em>deterministic vs dynamic (LLM-planned)</em> routing, and <em>stateless vs shared-state</em> coordination.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 300" role="img" aria-label="Orchestrator-worker topology with three workers reporting to a central orchestrator">
+        <defs>
+          <marker id="arr2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#a78bfa"></path>
+          </marker>
+        </defs>
+        <!-- user -->
+        <rect x="40" y="122" width="120" height="50" rx="9" fill="#1d2739" stroke="#2b3650"></rect>
+        <text x="100" y="152" text-anchor="middle" class="svg-label">User / API</text>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M160,147 L232,147" marker-end="url(#arr2)"></path>
+        <!-- orchestrator -->
+        <rect x="234" y="112" width="170" height="70" rx="11" fill="#231b3d" stroke="#a78bfa" stroke-width="2"></rect>
+        <text x="319" y="140" text-anchor="middle" class="svg-label" style="fill:#a78bfa">Orchestrator</text>
+        <text x="319" y="159" text-anchor="middle" class="svg-sub">plans · delegates · aggregates</text>
+        <!-- workers -->
+        <path class="svg-edge" style="stroke:#a78bfa" d="M404,128 L520,50" marker-end="url(#arr2)"></path>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M404,147 L520,147" marker-end="url(#arr2)"></path>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M404,166 L520,244" marker-end="url(#arr2)"></path>
+        <rect x="522" y="26" width="200" height="52" rx="9" fill="#161d2e" stroke="#34d399"></rect>
+        <text x="622" y="47" text-anchor="middle" class="svg-label">Worker A</text>
+        <text x="622" y="65" text-anchor="middle" class="svg-sub">Data retrieval</text>
+        <rect x="522" y="121" width="200" height="52" rx="9" fill="#161d2e" stroke="#60a5fa"></rect>
+        <text x="622" y="142" text-anchor="middle" class="svg-label">Worker B</text>
+        <text x="622" y="160" text-anchor="middle" class="svg-sub">Analysis</text>
+        <rect x="522" y="216" width="200" height="52" rx="9" fill="#161d2e" stroke="#f59e0b"></rect>
+        <text x="622" y="237" text-anchor="middle" class="svg-label">Worker C</text>
+        <text x="622" y="255" text-anchor="middle" class="svg-sub">Report generation</text>
+        <!-- fan-in dashed -->
+        <path class="svg-edge" style="stroke:#2b3650;stroke-dasharray:5 4" d="M622,78 L622,121"></path>
+        <path class="svg-edge" style="stroke:#2b3650;stroke-dasharray:5 4" d="M622,173 L622,216"></path>
+      </svg>
+      <figcaption>Figure 38.2 — Orchestrator–worker (supervisor) topology: central control, workers fan out; results fan back in for synthesis.</figcaption>
+    </figure>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>Table 38.2 — Orchestration strategy comparison</caption>
+        <thead>
+          <tr><th>Strategy</th><th>Control</th><th>Parallelism</th><th>Best for</th><th>Main risk</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Orchestrator–worker</td><td>Central</td><td class="good">Yes</td><td>General enterprise default; auditable delegation</td><td>Orchestrator is a bottleneck / SPOF</td></tr>
+          <tr><td>Sequential pipeline</td><td>Implicit (order)</td><td class="bad">No</td><td>Deterministic stage transforms (ETL-like)</td><td>Cumulative latency; one slow stage stalls all</td></tr>
+          <tr><td>Parallel fan-out/in</td><td>Central</td><td class="good">High</td><td>Independent subtasks, breadth-first work</td><td>Aggregation complexity; partial failures</td></tr>
+          <tr><td>Hierarchical</td><td>Multi-level</td><td class="good">Yes</td><td>Very large problem trees</td><td>Deep call chains, hard to trace</td></tr>
+          <tr><td>Peer / handoff</td><td>Decentralized</td><td>Varies</td><td>Fluid routing among specialists</td><td>Loops, unbounded control, weak audit</td></tr>
+          <tr><td>Router / dispatcher</td><td>Central (thin)</td><td>N/A</td><td>Intent classification → specialist</td><td>Misroutes cascade downstream</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li><strong>Always define a fallback path.</strong> What happens if a worker times out, loops, or returns malformed output? Specify the default before you ship.</li>
+        <li><strong>Bound everything:</strong> max steps, max delegation depth, and a token/cost budget per run. Unbounded orchestration is the #1 way multi-agent systems run away.</li>
+        <li><strong>Contract at the boundary:</strong> give each agent a clear input/output schema so the orchestrator can validate, not guess.</li>
+        <li>Prefer <strong>orchestrator–worker</strong> as the default; reach for peer/handoff only when routing truly needs to be dynamic and decentralized.</li>
+      </ul>
+    </div>
+
+    <div class="box warn">
+      <span class="label">⚠ Common Pitfall</span>
+      <p>Decentralized <strong>peer/handoff</strong> topologies can form <strong>infinite hand-off loops</strong> (A→B→A…) when no agent "owns" completion. If you must use handoffs, add a step budget, loop detection, and a designated terminator.</p>
+    </div>
+
+    <div class="box exam">
+      <span class="label">🎯 Exam Strategy</span>
+      <p>Expect <strong>pattern-matching</strong> questions: a scenario describes coordination needs and asks for the best orchestration strategy. Map keywords → pattern:</p>
+      <ul>
+        <li>"central control / audit / delegate" → <strong>orchestrator–worker</strong></li>
+        <li>"independent / concurrent / breadth-first" → <strong>parallel fan-out</strong></li>
+        <li>"each stage transforms the previous" → <strong>sequential pipeline</strong></li>
+        <li>"route to the right specialist" → <strong>router/dispatcher</strong></li>
+      </ul>
+      <p><strong>Elimination:</strong> options that add decentralized handoffs without loop bounds are usually distractors on reliability grounds. If two answers seem right, prefer the one with clearer <em>control &amp; auditability</em> — enterprise exams reward governance.</p>
+    </div>
+
+    <div class="xref-row">
+      <span class="xref">↔ 38.1 — the architecture choice justifies the topology</span>
+      <span class="xref">↔ 38.4 — bounds, retries &amp; fallbacks live at the orchestration boundary</span>
+    </div>
+    <a class="totop" href="#s2">▲ back to section top</a>
+  </section>
+
+  <!-- ================= 38.3 ================= -->
+  <section class="chapter" id="s3">
+    <div class="sec-head">
+      <span class="sec-num">38.3</span>
+      <h2>Decomposition Techniques for Complex Problem Solving</h2>
+    </div>
+
+    <h3><span class="dot"></span>Concept Overview</h3>
+    <p class="lead">Decomposition is the act of breaking a complex goal into <strong>subtasks that can be assigned, executed, and recombined</strong>. Good decomposition is what makes multi-agent systems <em>work</em>: it maximizes independence (so subtasks can parallelize and fail in isolation) while keeping interfaces clean enough to recombine reliably.</p>
+    <p>The engineering north star is borrowed from software design: <strong>high cohesion, low coupling</strong>. Each subtask should do one thing well and depend on as few others as possible.</p>
+
+    <h3><span class="dot"></span>Key Principles &amp; Techniques</h3>
+    <ul>
+      <li><strong>Functional decomposition:</strong> split by capability (retrieve / analyze / write). Maps naturally onto specialized agents.</li>
+      <li><strong>Hierarchical / recursive:</strong> break a task into subtasks, then break those further — a task tree. Stop when a subtask is small enough for one agent to own.</li>
+      <li><strong>Pipeline / stage-based:</strong> ordered transforms where each stage refines the artifact.</li>
+      <li><strong>MapReduce-style:</strong> "map" identical work across many items in parallel, then "reduce"/aggregate. Ideal for batch document processing.</li>
+      <li><strong>Plan-and-execute:</strong> a planner produces an explicit plan (often a DAG of steps), an executor runs it. Separates <em>reasoning about the plan</em> from <em>doing the work</em>.</li>
+      <li><strong>Dependency-aware (DAG):</strong> model subtasks as a directed acyclic graph; anything not connected by an edge can run in parallel.</li>
+    </ul>
+    <p><strong>Quality tests for a decomposition:</strong> (1) Can subtasks run independently? (2) Are interfaces (inputs/outputs) explicit? (3) Is anything decomposed so finely that coordination cost exceeds the benefit? (4) Are there hidden cycles?</p>
+
+    <figure>
+      <svg viewBox="0 0 760 300" role="img" aria-label="Decomposition tree breaking a goal into subtasks, some parallel and some dependent">
+        <defs>
+          <marker id="arr3" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#60a5fa"></path>
+          </marker>
+        </defs>
+        <!-- root -->
+        <rect x="300" y="16" width="160" height="46" rx="9" fill="#231b3d" stroke="#a78bfa"></rect>
+        <text x="380" y="44" text-anchor="middle" class="svg-label">Complex Goal</text>
+        <!-- level 1 -->
+        <path class="svg-edge" style="stroke:#60a5fa" d="M320,62 L170,110" marker-end="url(#arr3)"></path>
+        <path class="svg-edge" style="stroke:#60a5fa" d="M380,62 L380,110" marker-end="url(#arr3)"></path>
+        <path class="svg-edge" style="stroke:#60a5fa" d="M440,62 L590,110" marker-end="url(#arr3)"></path>
+        <rect x="70" y="112" width="200" height="46" rx="9" fill="#161d2e" stroke="#34d399"></rect>
+        <text x="170" y="140" text-anchor="middle" class="svg-label">Subtask 1 · independent</text>
+        <rect x="280" y="112" width="200" height="46" rx="9" fill="#161d2e" stroke="#34d399"></rect>
+        <text x="380" y="140" text-anchor="middle" class="svg-label">Subtask 2 · independent</text>
+        <rect x="490" y="112" width="200" height="46" rx="9" fill="#161d2e" stroke="#34d399"></rect>
+        <text x="590" y="140" text-anchor="middle" class="svg-label">Subtask 3 · independent</text>
+        <!-- parallel bracket note -->
+        <text x="380" y="182" text-anchor="middle" class="svg-sub">↑ no edges between them → run in parallel (fan-out)</text>
+        <!-- dependent leaf -->
+        <path class="svg-edge" style="stroke:#f59e0b" d="M170,158 L360,214" marker-end="url(#arr3)"></path>
+        <path class="svg-edge" style="stroke:#f59e0b" d="M380,158 L380,214" marker-end="url(#arr3)"></path>
+        <path class="svg-edge" style="stroke:#f59e0b" d="M590,158 L400,214" marker-end="url(#arr3)"></path>
+        <rect x="270" y="216" width="220" height="52" rx="9" fill="#2a2410" stroke="#f59e0b"></rect>
+        <text x="380" y="238" text-anchor="middle" class="svg-label" style="fill:#f59e0b">Aggregate / Synthesize</text>
+        <text x="380" y="256" text-anchor="middle" class="svg-sub">depends on 1,2,3 → runs last (reduce)</text>
+      </svg>
+      <figcaption>Figure 38.3 — A decomposition DAG: independent subtasks fan out in parallel; the aggregation step depends on all three and runs last.</figcaption>
+    </figure>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>Table 38.3 — Choosing a decomposition technique</caption>
+        <thead>
+          <tr><th>Technique</th><th>Structure</th><th>Parallelizable?</th><th>Use when…</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Functional</td><td>By capability</td><td class="good">Often</td><td>Distinct skills needed (research vs code vs write)</td></tr>
+          <tr><td>Hierarchical / recursive</td><td>Task tree</td><td class="good">Within levels</td><td>Large problems that nest naturally</td></tr>
+          <tr><td>Pipeline / stage</td><td>Linear chain</td><td class="bad">No</td><td>Each step refines the previous artifact</td></tr>
+          <tr><td>MapReduce</td><td>Fan-out + reduce</td><td class="good">High</td><td>Same operation over many items (batch)</td></tr>
+          <tr><td>Plan-and-execute</td><td>Plan (DAG) + runner</td><td class="good">Per plan</td><td>Steps unknown up front; need explicit planning</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Mnemonic — good subtasks are <span class="mnem">"C.L.E.A.R."</span>: <strong>C</strong>ohesive, <strong>L</strong>oosely coupled, <strong>E</strong>xplicit interfaces, <strong>A</strong>tomic (one owner), <strong>R</strong>ecombinable.</li>
+        <li><strong>Draw the dependency graph first.</strong> Edges = forced ordering; no edge = free parallelism. Fewer edges is almost always better.</li>
+        <li><strong>Don't over-decompose.</strong> If a subtask's coordination overhead rivals its work, merge it back. Ten tiny agents can be slower and pricier than three sensible ones.</li>
+        <li>Give every subtask a written <strong>input/output contract</strong> — it doubles as the validation schema in 38.4.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <span class="label">🎯 Exam Strategy</span>
+      <p>Decomposition questions typically present a scenario and ask for the <strong>"most efficient" breakdown</strong>. The reliable heuristic:</p>
+      <ul>
+        <li><strong>Eliminate answers that create unnecessary inter-agent dependencies first</strong> — extra edges kill parallelism and add failure points.</li>
+        <li>Prefer breakdowns where independent subtasks are genuinely independent (can run concurrently) and a single, clear aggregation step recombines them.</li>
+        <li>Watch the trap of <em>over-decomposition</em>: an answer that splits into many micro-agents "for granularity" is usually wrong when coordination cost dominates.</li>
+      </ul>
+      <p><strong>Time tip:</strong> sketch a 3-node dependency graph in the margin; the answer with the fewest edges + one reducer is usually correct.</p>
+    </div>
+
+    <div class="xref-row">
+      <span class="xref">↔ 38.1 — decomposition only pays off if multi-agent was the right choice</span>
+      <span class="xref">↔ 38.2 — a decomposition DAG maps directly onto fan-out/pipeline orchestration</span>
+    </div>
+    <a class="totop" href="#s3">▲ back to section top</a>
+  </section>
+
+  <!-- ================= 38.4 ================= -->
+  <section class="chapter" id="s4">
+    <div class="sec-head">
+      <span class="sec-num">38.4</span>
+      <h2>Cross-Cutting Concerns: Logging, Monitoring &amp; Error Handling</h2>
+    </div>
+
+    <h3><span class="dot"></span>Concept Overview</h3>
+    <p class="lead">Cross-cutting concerns are the qualities that must hold <strong>across every agent</strong> rather than inside any one of them: observability (can you see what happened?) and reliability (does it keep working when things fail?). In non-deterministic LLM systems these are not optional — they're how you make an inherently variable system trustworthy in production.</p>
+    <p>The defining challenge at scale: a single user request may fan out across many agents and tool calls. Without a way to <strong>correlate</strong> those into one story, debugging is impossible.</p>
+
+    <h3><span class="dot"></span>Key Principles</h3>
+    <ul>
+      <li><strong>Structured logging with correlation/trace IDs.</strong> Every agent and tool call carries a shared request ID (and a span ID) so the full path can be reconstructed. Log inputs, outputs, decisions, and tool results — as structured data, not free text.</li>
+      <li><strong>Distributed tracing.</strong> Model the run as a trace of spans (one per agent step / tool call) to see latency, ordering, and where time is spent.</li>
+      <li><strong>Metrics that matter for LLM systems:</strong> end-to-end latency, <strong>token usage &amp; cost per run</strong>, task success rate, tool error rate, retry counts, and step counts. Alert on cost and step-count runaways.</li>
+      <li><strong>Error-handling toolkit:</strong> timeouts, retries with exponential backoff + jitter, circuit breakers, fallbacks/graceful degradation, and idempotency so retries are safe.</li>
+      <li><strong>Output validation / guardrails.</strong> Validate agent output against the subtask's schema (from 38.3) before passing it on; treat malformed output as a handled error, not a crash.</li>
+      <li><strong>Human-in-the-loop escalation.</strong> Define when the system stops and asks a human (low confidence, repeated failure, high-stakes action).</li>
+      <li><strong>Quality monitoring (evals).</strong> Because outputs are non-deterministic, monitor answer quality over time to catch regressions, not just infrastructure health.</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 760 250" role="img" aria-label="Observability pipeline: agents emit structured logs and spans that flow to tracing, metrics, and alerting">
+        <defs>
+          <marker id="arr4" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#34d399"></path>
+          </marker>
+        </defs>
+        <!-- agents column -->
+        <rect x="30" y="30" width="160" height="40" rx="8" fill="#161d2e" stroke="#a78bfa"></rect>
+        <text x="110" y="55" text-anchor="middle" class="svg-label">Orchestrator</text>
+        <rect x="30" y="105" width="160" height="40" rx="8" fill="#161d2e" stroke="#60a5fa"></rect>
+        <text x="110" y="130" text-anchor="middle" class="svg-label">Worker agents</text>
+        <rect x="30" y="180" width="160" height="40" rx="8" fill="#161d2e" stroke="#f59e0b"></rect>
+        <text x="110" y="205" text-anchor="middle" class="svg-label">Tool calls</text>
+        <!-- collector -->
+        <path class="svg-edge" style="stroke:#34d399" d="M190,50 L300,118" marker-end="url(#arr4)"></path>
+        <path class="svg-edge" style="stroke:#34d399" d="M190,125 L300,125" marker-end="url(#arr4)"></path>
+        <path class="svg-edge" style="stroke:#34d399" d="M190,200 L300,132" marker-end="url(#arr4)"></path>
+        <rect x="302" y="95" width="170" height="60" rx="10" fill="#0f2a22" stroke="#34d399" stroke-width="2"></rect>
+        <text x="387" y="120" text-anchor="middle" class="svg-label" style="fill:#34d399">Telemetry collector</text>
+        <text x="387" y="138" text-anchor="middle" class="svg-sub">correlation ID · spans</text>
+        <!-- sinks -->
+        <path class="svg-edge" style="stroke:#34d399" d="M472,110 L580,50" marker-end="url(#arr4)"></path>
+        <path class="svg-edge" style="stroke:#34d399" d="M472,125 L580,125" marker-end="url(#arr4)"></path>
+        <path class="svg-edge" style="stroke:#34d399" d="M472,140 L580,200" marker-end="url(#arr4)"></path>
+        <rect x="582" y="28" width="150" height="44" rx="8" fill="#1d2739" stroke="#2b3650"></rect>
+        <text x="657" y="47" text-anchor="middle" class="svg-label">Traces</text>
+        <text x="657" y="63" text-anchor="middle" class="svg-sub">latency · path</text>
+        <rect x="582" y="103" width="150" height="44" rx="8" fill="#1d2739" stroke="#2b3650"></rect>
+        <text x="657" y="122" text-anchor="middle" class="svg-label">Metrics</text>
+        <text x="657" y="138" text-anchor="middle" class="svg-sub">cost · success</text>
+        <rect x="582" y="178" width="150" height="44" rx="8" fill="#1d2739" stroke="#2b3650"></rect>
+        <text x="657" y="197" text-anchor="middle" class="svg-label">Alerts</text>
+        <text x="657" y="213" text-anchor="middle" class="svg-sub">budget · errors</text>
+      </svg>
+      <figcaption>Figure 38.4 — One correlation ID threads through every agent and tool call, so a fanned-out run reconstructs into a single, traceable story.</figcaption>
+    </figure>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>Table 38.4 — Error-handling strategies at a glance</caption>
+        <thead>
+          <tr><th>Strategy</th><th>What it does</th><th>Use when…</th><th>Watch out for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Timeout</td><td>Caps how long a step may run</td><td>Any external/tool call</td><td>Too short → false failures</td></tr>
+          <tr><td>Retry + backoff (jitter)</td><td>Re-attempts transient failures with growing delays</td><td>Flaky/rate-limited dependencies</td><td>Requires idempotency; cap attempts</td></tr>
+          <tr><td>Circuit breaker</td><td>Stops calling a failing dependency to let it recover</td><td>Repeated downstream failures</td><td>Needs a half-open probe to reset</td></tr>
+          <tr><td>Fallback / graceful degradation</td><td>Returns a reduced but valid result</td><td>Partial failure acceptable</td><td>Silently degrading without signalling</td></tr>
+          <tr><td>Output validation</td><td>Checks output against a schema</td><td>Every inter-agent handoff</td><td>Deciding retry vs escalate on invalid</td></tr>
+          <tr><td>Human-in-the-loop</td><td>Escalates to a person</td><td>Low confidence / high stakes</td><td>Over-escalating erodes the value</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li><strong>Propagate the correlation ID everywhere</strong> — orchestrator → worker → tool. If one hop drops it, your trace breaks exactly where you need it most.</li>
+        <li><strong>Idempotency first, retries second.</strong> Never enable retries on a non-idempotent action (e.g., "send payment") without a dedupe key.</li>
+        <li>Set a hard <strong>token/cost budget and a max-step ceiling per run</strong>, and alert when approached — this is your runaway-loop circuit breaker.</li>
+        <li>Log prompts and responses for debugging, but <strong>redact PII/secrets</strong> and mind retention policy.</li>
+      </ul>
+    </div>
+
+    <div class="box warn">
+      <span class="label">⚠ Common Pitfall</span>
+      <p>Treating LLM output as always-valid. Non-deterministic agents will occasionally emit malformed JSON, hallucinated fields, or empty results. <strong>Validate at every handoff</strong> and define the retry-vs-escalate decision explicitly — don't let bad output flow silently downstream.</p>
+    </div>
+
+    <div class="box exam">
+      <span class="label">🎯 Exam Strategy</span>
+      <p>Reliability/observability questions lean on precise vocabulary. Memorize what each term <em>solves</em>:</p>
+      <ul>
+        <li><strong>Correlation/trace ID</strong> → follow one request across many agents.</li>
+        <li><strong>Idempotency</strong> → makes retries safe.</li>
+        <li><strong>Circuit breaker</strong> → protects a <em>failing dependency</em> (not the same as a retry).</li>
+        <li><strong>Graceful degradation</strong> → partial-but-valid result under failure.</li>
+      </ul>
+      <p><strong>Elimination:</strong> distractors often swap definitions (e.g., calling a retry a "circuit breaker"). Match the mechanism to the problem it solves. If a scenario mentions "retrying a non-idempotent action," the correct answer usually adds idempotency/dedupe <em>before</em> retrying.</p>
+    </div>
+
+    <div class="xref-row">
+      <span class="xref">↔ 38.2 — bounds, retries &amp; fallbacks are enforced at the orchestration layer</span>
+      <span class="xref">↔ 38.3 — subtask I/O contracts become the validation schemas here</span>
+    </div>
+    <a class="totop" href="#s4">▲ back to section top</a>
+  </section>
+
+  <!-- ================= 38.5 ================= -->
+  <section class="chapter" id="s5">
+    <div class="sec-head">
+      <span class="sec-num">38.5</span>
+      <h2>Hands-On: Architecting a Multi-Agent Enterprise Solution</h2>
+    </div>
+
+    <h3><span class="dot"></span>Concept Overview</h3>
+    <p class="lead">This section synthesizes 38.1–38.4 into a repeatable design method, then walks a worked example. The example is <strong>illustrative</strong> (not a real customer case) and is labeled as such.</p>
+
+    <h3><span class="dot"></span>A 6-step design method</h3>
+    <ol>
+      <li><strong>Clarify the goal &amp; constraints</strong> — latency, cost, accuracy, compliance, volume. <span class="xref">↔ 38.1</span></li>
+      <li><strong>Decide single vs multi-agent</strong> using the SPICE test. Only escalate to multi-agent with a concrete justification. <span class="xref">↔ 38.1</span></li>
+      <li><strong>Decompose</strong> the goal into cohesive, loosely-coupled subtasks; draw the dependency DAG. <span class="xref">↔ 38.3</span></li>
+      <li><strong>Choose an orchestration topology</strong> that fits the DAG (fan-out for independent subtasks, pipeline for stage transforms). <span class="xref">↔ 38.2</span></li>
+      <li><strong>Design cross-cutting concerns</strong> — correlation IDs, tracing, metrics, timeouts/retries/circuit breakers, output validation, HITL escalation, budgets. <span class="xref">↔ 38.4</span></li>
+      <li><strong>Validate &amp; iterate</strong> — evaluate quality (evals), watch cost/latency, and simplify anything that isn't earning its complexity.</li>
+    </ol>
+
+    <h3><span class="dot"></span>Worked example — Enterprise "Market Intelligence Brief" generator <em>(illustrative)</em></h3>
+    <p>Goal: on demand, produce a cited market brief for a given company. High accuracy and traceability matter; some latency is acceptable. The subtasks (gather sources, extract facts, analyze, draft) are largely independent up front → <strong>multi-agent</strong> passes the SPICE test (specialization + parallelism + context isolation).</p>
+
+    <figure>
+      <svg viewBox="0 0 760 330" role="img" aria-label="End-to-end multi-agent enterprise architecture for a market intelligence brief generator">
+        <defs>
+          <marker id="arr5" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#a78bfa"></path>
+          </marker>
+        </defs>
+        <!-- request -->
+        <rect x="24" y="140" width="120" height="46" rx="9" fill="#1d2739" stroke="#2b3650"></rect>
+        <text x="84" y="162" text-anchor="middle" class="svg-label">Request</text>
+        <text x="84" y="178" text-anchor="middle" class="svg-sub">company name</text>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M144,163 L200,163" marker-end="url(#arr5)"></path>
+        <!-- orchestrator -->
+        <rect x="202" y="132" width="150" height="62" rx="11" fill="#231b3d" stroke="#a78bfa" stroke-width="2"></rect>
+        <text x="277" y="158" text-anchor="middle" class="svg-label" style="fill:#a78bfa">Supervisor</text>
+        <text x="277" y="176" text-anchor="middle" class="svg-sub">plan · route · synthesize</text>
+        <!-- parallel workers -->
+        <path class="svg-edge" style="stroke:#a78bfa" d="M352,145 L470,50" marker-end="url(#arr5)"></path>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M352,163 L470,140" marker-end="url(#arr5)"></path>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M352,181 L470,230" marker-end="url(#arr5)"></path>
+        <rect x="472" y="26" width="180" height="48" rx="9" fill="#161d2e" stroke="#34d399"></rect>
+        <text x="562" y="46" text-anchor="middle" class="svg-label">Retriever agent</text>
+        <text x="562" y="63" text-anchor="middle" class="svg-sub">search · fetch sources</text>
+        <rect x="472" y="116" width="180" height="48" rx="9" fill="#161d2e" stroke="#60a5fa"></rect>
+        <text x="562" y="136" text-anchor="middle" class="svg-label">Extractor agent</text>
+        <text x="562" y="153" text-anchor="middle" class="svg-sub">facts + citations</text>
+        <rect x="472" y="206" width="180" height="48" rx="9" fill="#161d2e" stroke="#f59e0b"></rect>
+        <text x="562" y="226" text-anchor="middle" class="svg-label">Analyst agent</text>
+        <text x="562" y="243" text-anchor="middle" class="svg-sub">trends · risks</text>
+        <!-- reduce to writer -->
+        <path class="svg-edge" style="stroke:#f59e0b;stroke-dasharray:5 4" d="M562,74 L562,116"></path>
+        <path class="svg-edge" style="stroke:#f59e0b;stroke-dasharray:5 4" d="M562,164 L562,206"></path>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M472,230 L360,285" marker-end="url(#arr5)"></path>
+        <path class="svg-edge" style="stroke:#a78bfa" d="M277,194 L277,268" marker-end="url(#arr5)"></path>
+        <rect x="200" y="270" width="200" height="48" rx="9" fill="#2a2410" stroke="#f59e0b"></rect>
+        <text x="300" y="290" text-anchor="middle" class="svg-label" style="fill:#f59e0b">Writer + Validator</text>
+        <text x="300" y="307" text-anchor="middle" class="svg-sub">draft · check citations · schema</text>
+        <!-- observability bus -->
+        <rect x="24" y="270" width="150" height="48" rx="9" fill="#0f2a22" stroke="#34d399"></rect>
+        <text x="99" y="290" text-anchor="middle" class="svg-label" style="fill:#34d399">Telemetry</text>
+        <text x="99" y="307" text-anchor="middle" class="svg-sub">trace · cost · retries</text>
+      </svg>
+      <figcaption>Figure 38.5 — Supervisor fans out to independent retriever/extractor/analyst agents (parallel), a writer+validator reduces to a cited brief, and a telemetry bus observes every hop. Illustrative architecture.</figcaption>
+    </figure>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>Table 38.5 — Design decisions mapped to Chapter 38 concepts</caption>
+        <thead>
+          <tr><th>Decision</th><th>Choice</th><th>Justification</th><th>Concept</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Architecture</td><td>Multi-agent</td><td>Specialized skills + parallel sources + isolated contexts (SPICE)</td><td>38.1</td></tr>
+          <tr><td>Topology</td><td>Orchestrator–worker w/ fan-out</td><td>Central audit + independent subtasks run concurrently</td><td>38.2</td></tr>
+          <tr><td>Decomposition</td><td>Functional + reduce</td><td>Retrieve/extract/analyze independent; writer aggregates</td><td>38.3</td></tr>
+          <tr><td>Reliability</td><td>Timeouts, retries, validation, HITL on low confidence</td><td>External sources are flaky; citations must be checked</td><td>38.4</td></tr>
+          <tr><td>Observability</td><td>Correlation ID + cost/step budgets</td><td>Trace a fanned-out run; prevent runaway spend</td><td>38.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box tip">
+      <span class="label">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li><strong>Design the reduce step first.</strong> Knowing exactly what the writer/validator needs tells you precisely what each worker must return — that defines the contracts.</li>
+        <li><strong>Right-size the models per role:</strong> a fast, cheap model for routing/extraction; a stronger model for synthesis. Heterogeneous routing is a big cost lever.</li>
+        <li><strong>Make the validator a real gate:</strong> if citations don't resolve, loop back to the retriever (bounded) rather than shipping an unverified brief.</li>
+        <li>Keep a <strong>"why more than one agent?" note</strong> in your design doc — if you can't answer it per agent, collapse that agent.</li>
+      </ul>
+    </div>
+
+    <div class="box exam">
+      <span class="label">🎯 Exam Strategy</span>
+      <p>Hands-on/scenario questions ask you to <strong>assemble</strong> or <strong>critique</strong> an architecture. Approach:</p>
+      <ul>
+        <li><strong>Read the constraints before the options.</strong> The dominant constraint (latency vs accuracy vs cost) usually picks the answer.</li>
+        <li>Prefer designs that are <strong>as simple as the requirements allow</strong> — enterprise exams reward "no unjustified agents," clear control, and explicit failure handling.</li>
+        <li>For "what's wrong with this design?" items, scan for the usual defects: <em>unbounded loops, missing fallback/validation, unnecessary dependencies, no observability, retrying non-idempotent actions.</em></li>
+      </ul>
+      <p><strong>Time tip:</strong> map each answer choice onto the 6-step method; the correct design satisfies all five concept areas without adding complexity that no constraint requires.</p>
+    </div>
+
+    <div class="xref-row">
+      <span class="xref">↔ 38.1</span><span class="xref">↔ 38.2</span><span class="xref">↔ 38.3</span><span class="xref">↔ 38.4</span>
+      <span class="xref">this section integrates all four</span>
+    </div>
+    <a class="totop" href="#s5">▲ back to section top</a>
+  </section>
+
+  <!-- ================= Takeaways ================= -->
+  <section class="chapter" id="takeaways">
+    <div class="sec-head">
+      <span class="sec-num">Σ</span>
+      <h2>Chapter 38 — Key Exam Takeaways</h2>
+    </div>
+    <div class="takeaway-grid">
+      <div class="tk"><h4>Justify every agent</h4><p>Default to single-agent; escalate to multi-agent only with a concrete reason (SPICE). "More agents = better" is the classic trap.</p></div>
+      <div class="tk"><h4>Match topology to control needs</h4><p>Orchestrator–worker is the enterprise default. Fan-out for independent work, pipeline for stage transforms, router for intent.</p></div>
+      <div class="tk"><h4>Decompose for independence</h4><p>High cohesion, low coupling (CLEAR). Fewest dependency edges + one reducer = the "most efficient" breakdown.</p></div>
+      <div class="tk"><h4>Correlate to observe</h4><p>One trace/correlation ID across every agent and tool call. Track cost, steps, success — alert on runaways.</p></div>
+      <div class="tk"><h4>Know your reliability terms</h4><p>Timeout ≠ retry ≠ circuit breaker ≠ fallback. Retries need idempotency. Validate every handoff.</p></div>
+      <div class="tk"><h4>Simplest design that meets constraints</h4><p>Read constraints first; the dominant one usually picks the answer. Reward auditability and explicit failure handling.</p></div>
+    </div>
+
+    <div class="box exam">
+      <span class="label">🎯 Whole-chapter question radar</span>
+      <p>If you see these phrasings, recall the mapped concept instantly: <strong>"most appropriate architecture"</strong> → 38.1 SPICE test · <strong>"best coordination strategy"</strong> → 38.2 topology map · <strong>"most efficient breakdown"</strong> → 38.3 fewest edges · <strong>"ensure reliability/traceability"</strong> → 38.4 correlation ID + error toolkit · <strong>"design/critique this system"</strong> → 38.5 six-step method.</p>
+    </div>
+    <a class="totop" href="#takeaways">▲ back to section top</a>
+  </section>
+
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <p><strong>Disclaimer &amp; sourcing note.</strong> This study guide is <strong>independent, best-practice educational material</strong> aligned to the stated chapter/section titles. It is <em>not</em> official Anthropic exam content and does not quote the Claude Certified Architect syllabus verbatim.</p>
+    <p>Where the exact official exam wording, question formats, or rules could not be verified, content is framed as <strong>general, defensible engineering guidance</strong> for multi-agent AI systems and distributed-systems design. "Exam Strategy" callouts describe common question-construction patterns in professional architecture exams — treat them as reasoning heuristics, not certified answers. The 38.5 worked example is <strong>illustrative</strong>, not a real case study. No statistics or "official rules" have been fabricated. Always confirm specifics against your official exam guide.</p>
+    <p style="opacity:.7">Chapter 38 · Multi-Agent Systems &amp; Orchestration at Scale · Self-contained HTML study guide.</p>
+  </div>
+</footer>
+
+
+
+</body></html>

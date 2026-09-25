@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 43 — Context Window Optimization &amp; Token Management</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --ink:#1a2233; --ink-soft:#48566e; --muted:#7c8aa0;
+    --line:#e3e8ef; --line-strong:#cfd7e3;
+    --brand:#4338ca; --brand-soft:#eef0ff; --brand-ink:#312e81;
+    --accent:#0f766e; --accent-soft:#e6f5f2;
+    --tip-bg:#eff9f0; --tip-ink:#1c5b31; --tip-bar:#22a559;
+    --warn-bg:#fff6e9; --warn-ink:#7a4b00; --warn-bar:#e8920c;
+    --exam-bg:#eef0ff; --exam-ink:#312e81; --exam-bar:#4338ca;
+    --mis-bg:#fdeef0; --mis-ink:#8a1c2b; --mis-bar:#d43a4d;
+    --code-bg:#0f172a; --code-ink:#e2e8f0;
+    --mono:'SF Mono',ui-monospace,'Cascadia Code',Consolas,'Liberation Mono',monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px 80px;}
+
+  /* Header */
+  header.hero{background:linear-gradient(135deg,#312e81 0%,#4338ca 55%,#0f766e 130%);
+    color:#fff;padding:44px 20px 40px;text-align:center;}
+  header.hero .exam-tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:5px 14px;border-radius:100px;margin-bottom:16px;font-weight:600;}
+  header.hero h1{margin:0 0 8px;font-size:30px;line-height:1.25;font-weight:700;letter-spacing:-.01em;}
+  header.hero .chap{font-size:15px;opacity:.9;font-weight:500;}
+  header.hero .sub{margin-top:14px;font-size:14px;opacity:.85;max-width:640px;margin-left:auto;margin-right:auto;}
+
+  /* Table of contents */
+  nav.toc{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:22px 26px;margin:28px 0;box-shadow:0 1px 2px rgba(20,30,60,.04);}
+  nav.toc h2{margin:0 0 14px;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);}
+  nav.toc ol{margin:0;padding-left:0;list-style:none;counter-reset:toc;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 22px;}
+  nav.toc li{counter-increment:toc;}
+  nav.toc a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:var(--ink-soft);
+    padding:7px 10px;border-radius:8px;transition:background .15s,color .15s;font-size:15px;}
+  nav.toc a:hover{background:var(--brand-soft);color:var(--brand-ink);}
+  nav.toc a .num{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--brand);min-width:38px;}
+  nav.toc .aux a .num{color:var(--accent);}
+
+  /* Sections */
+  section{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:30px 30px 34px;margin:22px 0;box-shadow:0 1px 2px rgba(20,30,60,.04);scroll-margin-top:20px;}
+  section > h2.sec-title{margin:0 0 4px;font-size:23px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:12px;}
+  section > h2.sec-title .id{font-family:var(--mono);font-size:15px;font-weight:700;color:#fff;
+    background:var(--brand);padding:4px 11px;border-radius:8px;letter-spacing:0;}
+  .lede{color:var(--ink-soft);font-size:15px;margin:6px 0 20px;}
+  h3.block{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--brand);
+    margin:26px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--brand-soft);font-weight:700;}
+  h3.block.acc{color:var(--accent);border-bottom-color:var(--accent-soft);}
+  p{margin:10px 0;}
+  ul.clean{margin:8px 0;padding-left:20px;}
+  ul.clean li{margin:6px 0;}
+  code{font-family:var(--mono);font-size:.9em;background:#eef1f6;padding:2px 6px;border-radius:5px;color:#334;}
+
+  pre{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:16px 18px;
+    overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.55;margin:14px 0;}
+  pre .c{color:#7dd3fc;} pre .k{color:#c4b5fd;} pre .s{color:#86efac;} pre .m{color:#fca5a5;}
+
+  /* Callout boxes */
+  .box{border-radius:10px;padding:14px 16px 14px 18px;margin:16px 0;font-size:14.5px;position:relative;
+    border-left:5px solid;}
+  .tip-box{background:var(--tip-bg);color:var(--tip-ink);border-left-color:var(--tip-bar);}
+  .warning-box{background:var(--warn-bg);color:var(--warn-ink);border-left-color:var(--warn-bar);}
+  .exam-strategy{background:var(--exam-bg);color:var(--exam-ink);border-left-color:var(--exam-bar);}
+  .misconception{background:var(--mis-bg);color:var(--mis-ink);border-left-color:var(--mis-bar);}
+  .box b{font-weight:700;}
+  .box + .box{margin-top:10px;}
+
+  /* Tables */
+  .tbl-wrap{overflow-x:auto;margin:16px 0;}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface);}
+  th,td{text-align:left;padding:10px 13px;border:1px solid var(--line);vertical-align:top;}
+  th{background:#f2f4f8;color:var(--ink);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;}
+  tbody tr:nth-child(even) td{background:#fafbfd;}
+  td.mono,th.mono{font-family:var(--mono);font-size:13px;}
+  .pos{color:#158a4b;font-weight:700;} .neg{color:#c2344a;font-weight:700;}
+
+  /* Figures / SVG */
+  figure{margin:18px 0;background:#fbfcfe;border:1px solid var(--line);border-radius:12px;padding:18px;}
+  figure svg{display:block;width:100%;height:auto;}
+  figcaption{margin-top:10px;font-size:13px;color:var(--muted);text-align:center;}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:12px;font-size:12.5px;color:var(--ink-soft);}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:13px;height:13px;border-radius:3px;display:inline-block;}
+
+  /* Quiz */
+  details.q{background:#fbfcfe;border:1px solid var(--line);border-radius:10px;padding:0;margin:12px 0;overflow:hidden;}
+  details.q summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:flex-start;}
+  details.q summary::-webkit-details-marker{display:none;}
+  details.q summary .qn{font-family:var(--mono);color:var(--brand);font-weight:700;flex:0 0 auto;}
+  details.q summary::after{content:'Show answer ▸';margin-left:auto;font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap;flex:0 0 auto;}
+  details.q[open] summary::after{content:'Hide answer ▾';}
+  details.q .ans{padding:0 18px 16px 18px;border-top:1px dashed var(--line-strong);margin-top:2px;padding-top:12px;font-size:14.5px;color:var(--ink-soft);}
+  details.q .ans b{color:var(--accent);}
+
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:100px;letter-spacing:.03em;}
+  .pill.core{background:var(--brand-soft);color:var(--brand-ink);}
+
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);}
+  .note-illus{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:6px;}
+  @media(max-width:640px){
+    header.hero h1{font-size:23px;} section{padding:22px 18px 26px;}
+    section > h2.sec-title{font-size:20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="exam-tag">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Context Window Optimization &amp; Token Management</h1>
+  <div class="chap">Chapter 43 · Complete Exam Study Guide</div>
+  <div class="sub">Master the levers that keep high-volume Claude deployments fast, cheap, and within context limits — token budgeting, summarization, prompt caching, modular prompts, and scratchpad memory.</div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s431"><span class="num">43.1</span><span>Understanding Context Windows &amp; Token Budgets</span></a></li>
+    <li><a href="#s432"><span class="num">43.2</span><span>Progressive Summarization vs Full Context</span></a></li>
+    <li><a href="#s433"><span class="num">43.3</span><span>Prompt Caching for Static Prefixes</span></a></li>
+    <li><a href="#s434"><span class="num">43.4</span><span>Modular Prompts &amp; Skills for Reuse</span></a></li>
+    <li><a href="#s435"><span class="num">43.5</span><span>Scratchpad Files for Working Memory</span></a></li>
+    <li><a href="#s436"><span class="num">43.6</span><span>Hands-On: Optimizing a High-Volume App</span></a></li>
+    <li class="aux"><a href="#cheat"><span class="num">★</span><span>Quick Reference Cheat Sheet</span></a></li>
+    <li class="aux"><a href="#quiz"><span class="num">?</span><span>Self-Check Quiz (with answers)</span></a></li>
+    <li class="aux"><a href="#mis"><span class="num">!</span><span>Common Misconceptions</span></a></li>
+  </ol>
+</nav>
+
+<!-- ============================== 43.1 ============================== -->
+<section id="s431">
+  <h2 class="sec-title"><span class="id">43.1</span> Understanding Context Windows &amp; Token Budgets</h2>
+  <p class="lede">The context window is the fixed-size working memory of a single API request. Every optimization technique in this chapter exists to manage the pressure on this one finite resource.</p>
+
+  <h3 class="block">Concept Overview</h3>
+  <p>A <b>context window</b> is the maximum number of <b>tokens</b> a model can consider in a single request — <em>both</em> the input you send (system prompt, tools, conversation history, retrieved documents) <em>and</em> the output the model generates share that same budget. A token is a chunk of text roughly ¾ of a word in English; the exact count depends on the model's tokenizer.</p>
+  <p>As a general principle, current Claude models expose a large window — commonly <b>200K tokens</b> as a baseline, with <b>1M-token</b> windows available on newer models such as the Sonnet 4 generation and later. <span class="note-illus">(Treat specific limits as version-dependent — always confirm against the model card for the exact model you deploy.)</span></p>
+
+  <h3 class="block">Key Mechanics</h3>
+  <ul class="clean">
+    <li><b>Shared budget:</b> <code>input tokens + output tokens ≤ context window</code>. If input consumes too much, you must reserve headroom for the response or generation gets truncated.</li>
+    <li><b>Max output is separate &amp; smaller:</b> models cap output tokens (e.g. an illustrative 64K–128K depending on model) independently of the window — you cannot spend the whole window on a single reply.</li>
+    <li><b>Token counting:</b> use the SDK's token-counting endpoint/utility to measure a prompt <em>before</em> sending. Never eyeball character counts — code, JSON, and non-English text tokenize very differently from prose.</li>
+    <li><b>Everything counts:</b> tool/function schemas, system prompt, few-shot examples, and prior turns all consume the window on <em>every</em> request — a growing conversation silently inflates cost.</li>
+  </ul>
+
+  <h3 class="block">Visualization — Context Window Budget</h3>
+  <figure>
+    <svg viewBox="0 0 760 150" role="img" aria-label="Stacked bar showing how a 200K context window is allocated">
+      <text x="0" y="18" font-family="monospace" font-size="13" font-weight="700" fill="#1a2233">Example 200K-token budget allocation</text>
+      <!-- track -->
+      <rect x="0" y="34" width="760" height="46" rx="8" fill="#eef1f6" stroke="#cfd7e3"></rect>
+      <!-- segments: system 8%, tools 7%, history 45%, retrieved 20%, response reserve 20% -->
+      <rect x="2" y="36" width="59" height="42" rx="6" fill="#4338ca"></rect>
+      <rect x="63" y="36" width="52" height="42" fill="#6d5ee0"></rect>
+      <rect x="117" y="36" width="330" height="42" fill="#0f766e"></rect>
+      <rect x="449" y="36" width="150" height="42" fill="#3ea89b"></rect>
+      <rect x="601" y="36" width="157" height="42" rx="6" fill="#e8920c"></rect>
+      <!-- labels -->
+      <text x="31" y="62" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle">Sys</text>
+      <text x="89" y="62" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle">Tools</text>
+      <text x="282" y="62" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Conversation history</text>
+      <text x="524" y="62" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle">Retrieved docs</text>
+      <text x="679" y="62" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle">Response reserve</text>
+      <!-- danger marker -->
+      <line x1="601" y1="28" x2="601" y2="94" stroke="#c2344a" stroke-width="2" stroke-dasharray="4 3"></line>
+      <text x="601" y="110" font-family="monospace" font-size="11" fill="#c2344a" text-anchor="middle">◀ keep left of this line: reserve room to answer</text>
+    </svg>
+    <div class="legend">
+      <span><i style="background:#4338ca"></i>System prompt</span>
+      <span><i style="background:#6d5ee0"></i>Tool schemas</span>
+      <span><i style="background:#0f766e"></i>History</span>
+      <span><i style="background:#3ea89b"></i>Retrieved context</span>
+      <span><i style="background:#e8920c"></i>Output reserve</span>
+    </div>
+    <figcaption>The window is one shared budget. Uncontrolled history growth (green) is the segment that squeezes out your response reserve first. Proportions shown are illustrative.</figcaption>
+  </figure>
+
+  <h3 class="block">Real-World Use Case</h3>
+  <p>A document-analysis assistant pastes a 150K-token contract into the prompt, then asks for a 10K-token summary. With a 200K window, that leaves only ~40K for the system prompt, tools, and any follow-up turns. By turn three the conversation overflows and the API rejects the request. The fix is a token budget: cap retrieved content and summarize prior turns so the running total stays comfortably under the limit.</p>
+
+  <h3 class="block">Tips &amp; Tricks</h3>
+  <div class="box tip-box">💡 <b>Tip:</b> Budget backwards. Decide your required <b>output reserve</b> first (e.g. 8K tokens), subtract it and your fixed system/tools overhead from the window, and treat the remainder as the ceiling for history + retrieved context.</div>
+  <div class="box tip-box">💡 <b>Tip:</b> Count tokens programmatically before sending. A prompt that "looks short" can be token-heavy if it's JSON, code, or a non-Latin language.</div>
+  <div class="box warning-box">⚠️ <b>Pitfall:</b> A bigger context window is not free performance. Larger prompts cost more per request and can increase latency — capacity is a ceiling, not a target to fill.</div>
+
+  <h3 class="block acc">Exam Strategy</h3>
+  <div class="box exam-strategy">🎯 <b>Exam Strategy:</b> Questions here test whether you know the window is <b>shared</b> between input and output. If a scenario says "the response got cut off" or "the request was rejected as too large," the expected reasoning is <b>insufficient output reserve / total-budget overflow</b> — not a model quality issue. Eliminate answers that suggest "upgrade the model" when the real problem is budget management.</div>
+</section>
+
+<!-- ============================== 43.2 ============================== -->
+<section id="s432">
+  <h2 class="sec-title"><span class="id">43.2</span> Progressive Summarization vs Full Context</h2>
+  <p class="lede">When a conversation or task history outgrows the budget, you choose between carrying <em>everything</em> forward (full context) or carrying a <em>compressed</em> running summary (progressive summarization). Each trades fidelity against cost.</p>
+
+  <h3 class="block">Concept Overview</h3>
+  <p><b>Full context</b> replays the entire history verbatim on every turn — maximum fidelity, but tokens (and cost/latency) grow linearly and eventually hit the window limit. <b>Progressive summarization</b> periodically compresses older turns into a compact summary, keeping only that summary plus the most recent verbatim turns — bounded token growth, at the cost of some detail loss.</p>
+
+  <h3 class="block">Key Mechanics</h3>
+  <ul class="clean">
+    <li><b>Trigger:</b> summarize when a threshold is crossed — e.g. running tokens exceed X% of the window, or every N turns.</li>
+    <li><b>Rolling window:</b> keep the last <em>k</em> turns verbatim (recency matters most) and replace everything older with a summary block.</li>
+    <li><b>Summary as state:</b> the summary becomes part of the system/context prefix; the model treats it as established facts.</li>
+    <li><b>Lossy by design:</b> details dropped in a summary are gone unless preserved elsewhere (see 43.5 Scratchpads for durable facts).</li>
+  </ul>
+
+  <h3 class="block">Visualization — Full Context vs Progressive Summarization</h3>
+  <figure>
+    <svg viewBox="0 0 760 250" role="img" aria-label="Side by side comparison of full context growth versus bounded summarization">
+      <!-- Left: full context -->
+      <text x="10" y="20" font-family="monospace" font-size="13" font-weight="700" fill="#c2344a">Full Context — grows every turn</text>
+      <g font-family="monospace" font-size="10" fill="#fff">
+        <rect x="10" y="34" width="70" height="26" rx="4" fill="#0f766e"></rect><text x="45" y="51" text-anchor="middle">T1</text>
+        <rect x="10" y="66" width="120" height="26" rx="4" fill="#0f766e"></rect><text x="70" y="83" text-anchor="middle">T1+T2</text>
+        <rect x="10" y="98" width="180" height="26" rx="4" fill="#0f766e"></rect><text x="100" y="115" text-anchor="middle">T1..T3</text>
+        <rect x="10" y="130" width="250" height="26" rx="4" fill="#3ea89b"></rect><text x="135" y="147" text-anchor="middle">T1..T4</text>
+        <rect x="10" y="162" width="330" height="26" rx="4" fill="#e8920c"></rect><text x="175" y="179" text-anchor="middle">T1..T5</text>
+        <rect x="10" y="194" width="345" height="26" rx="4" fill="#c2344a"></rect><text x="182" y="211" text-anchor="middle">T1..T6 ⚠ nears limit</text>
+      </g>
+      <!-- divider -->
+      <line x1="400" y1="30" x2="400" y2="228" stroke="#cfd7e3" stroke-width="1.5"></line>
+      <!-- Right: progressive -->
+      <text x="420" y="20" font-family="monospace" font-size="13" font-weight="700" fill="#158a4b">Progressive Summary — bounded</text>
+      <g font-family="monospace" font-size="10" fill="#fff">
+        <rect x="420" y="34" width="70" height="26" rx="4" fill="#0f766e"></rect><text x="455" y="51" text-anchor="middle">T1</text>
+        <rect x="420" y="66" width="120" height="26" rx="4" fill="#0f766e"></rect><text x="480" y="83" text-anchor="middle">T1+T2</text>
+        <rect x="420" y="98" width="150" height="26" rx="4" fill="#4338ca"></rect><text x="495" y="115" text-anchor="middle">Σ(1-2)+T3</text>
+        <rect x="420" y="130" width="150" height="26" rx="4" fill="#4338ca"></rect><text x="495" y="147" text-anchor="middle">Σ(1-3)+T4</text>
+        <rect x="420" y="162" width="150" height="26" rx="4" fill="#4338ca"></rect><text x="495" y="179" text-anchor="middle">Σ(1-4)+T5</text>
+        <rect x="420" y="194" width="150" height="26" rx="4" fill="#4338ca"></rect><text x="495" y="211" text-anchor="middle">Σ(1-5)+T6 ✓ flat</text>
+      </g>
+      <text x="420" y="240" font-family="monospace" font-size="10" fill="#7c8aa0">Σ = compressed summary of older turns · newest turn kept verbatim</text>
+    </svg>
+    <figcaption>Full context (left) grows linearly until it collides with the window limit. Progressive summarization (right) holds token usage roughly flat by compressing older turns.</figcaption>
+  </figure>
+
+  <h3 class="block">Real-World Use Case</h3>
+  <p>A multi-hour support chat would overflow if replayed verbatim. The app keeps the last 4 messages verbatim and maintains a running summary ("Customer: order #8842, requested refund, agent confirmed eligibility, awaiting bank details"). Token usage stays flat across a 60-turn session, and the model still "remembers" the key facts.</p>
+
+  <h3 class="block">Tips &amp; Tricks</h3>
+  <div class="box tip-box">💡 <b>Tip:</b> Keep recent turns verbatim, summarize only the <b>tail</b>. Recency carries the most conversational signal; over-summarizing the latest turn hurts quality most.</div>
+  <div class="box tip-box">💡 <b>Tip:</b> Summarize into <b>structured</b> fields (entities, decisions, open items) rather than free prose — it compresses better and is less lossy for facts.</div>
+  <div class="box warning-box">⚠️ <b>Pitfall:</b> Summarization is lossy and adds an extra model call. Don't summarize prematurely — if the whole session comfortably fits the window, full context is simpler <em>and</em> higher fidelity.</div>
+
+  <h3 class="block acc">Exam Strategy</h3>
+  <div class="box exam-strategy">🎯 <b>Exam Strategy:</b> Watch for the <b>fidelity vs. cost</b> trade-off. If a question stresses "must not lose any detail / audit accuracy," lean <b>full context</b> (or scratchpad persistence). If it stresses "long-running / unbounded conversation" or "keep cost flat," lean <b>progressive summarization</b>. A distractor will often pitch summarization as loss-free — reject it.</div>
+</section>
+
+<!-- ============================== 43.3 ============================== -->
+<section id="s433">
+  <h2 class="sec-title"><span class="id">43.3</span> Prompt Caching: Reducing Latency &amp; Cost for Static Prefixes</h2>
+  <p class="lede">When many requests share an identical, unchanging prefix (system prompt, tool defs, big reference doc), prompt caching lets the model reuse the already-processed prefix instead of paying to reprocess it every time.</p>
+
+  <h3 class="block">Concept Overview</h3>
+  <p><b>Prompt caching</b> stores the encoded state of a prompt <b>prefix</b> up to a marked <b>cache breakpoint</b>. The first request <em>writes</em> the cache (a one-time premium); subsequent requests within the TTL that share the same prefix get a <em>cache hit</em> (read) at a large discount and lower latency, because the prefix does not need to be recomputed.</p>
+
+  <h3 class="block">Key Mechanics</h3>
+  <ul class="clean">
+    <li><b>Prefix order:</b> caching references the prompt in the order <code>tools → system → messages</code>, up to and including the block you mark with <code>cache_control</code>.</li>
+    <li><b>Immutability:</b> the cache key is a cumulative hash of everything up to the breakpoint. Changing <em>any</em> earlier token — even one — produces a different hash and forces a full rewrite.</li>
+    <li><b>TTL:</b> default <b>5-minute</b> lifetime, with an optional <b>1-hour</b> TTL. The clock starts at request <em>start</em>, and every hit refreshes the timer at no extra cost.</li>
+    <li><b>Pricing (per Anthropic docs, as multiples of base input price):</b> 5-min write ≈ <b>1.25×</b>, 1-hour write ≈ <b>2×</b>, and a cache hit/read ≈ <b>0.1×</b> (i.e. ~90% cheaper than uncached input; a few newer models read even cheaper).</li>
+    <li><b>Minimum size &amp; breakpoints:</b> prefixes must exceed a per-model minimum (illustratively ~1K tokens for larger models, higher for the smallest) to be cacheable; up to <b>4</b> breakpoints and a 20-block backward lookback apply.</li>
+  </ul>
+
+  <h3 class="block">Visualization — Cache Write vs Cache Hit</h3>
+  <figure>
+    <svg viewBox="0 0 760 220" role="img" aria-label="Sequence diagram of a cache-writing request followed by a cache-hit request">
+      <!-- lanes -->
+      <text x="60" y="18" font-family="monospace" font-size="12" font-weight="700" fill="#1a2233" text-anchor="middle">Client</text>
+      <text x="400" y="18" font-family="monospace" font-size="12" font-weight="700" fill="#1a2233" text-anchor="middle">Claude API</text>
+      <text x="690" y="18" font-family="monospace" font-size="12" font-weight="700" fill="#1a2233" text-anchor="middle">Cache</text>
+      <line x1="60" y1="26" x2="60" y2="200" stroke="#cfd7e3"></line>
+      <line x1="400" y1="26" x2="400" y2="200" stroke="#cfd7e3"></line>
+      <line x1="690" y1="26" x2="690" y2="200" stroke="#cfd7e3"></line>
+      <!-- Request 1: write -->
+      <text x="70" y="46" font-family="monospace" font-size="11" fill="#7a4b00">Request 1 (cold)</text>
+      <line x1="60" y1="54" x2="400" y2="54" stroke="#e8920c" stroke-width="2" marker-end="url(#ar)"></line>
+      <text x="230" y="49" font-family="monospace" font-size="10" fill="#7a4b00" text-anchor="middle">prefix + query</text>
+      <line x1="400" y1="72" x2="690" y2="72" stroke="#e8920c" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ar)"></line>
+      <text x="545" y="67" font-family="monospace" font-size="10" fill="#7a4b00" text-anchor="middle">WRITE prefix (~1.25× input)</text>
+      <line x1="400" y1="92" x2="60" y2="92" stroke="#0f766e" stroke-width="2" marker-end="url(#ar)"></line>
+      <text x="230" y="87" font-family="monospace" font-size="10" fill="#0f766e" text-anchor="middle">response · full latency</text>
+      <!-- Request 2: hit -->
+      <text x="70" y="126" font-family="monospace" font-size="11" fill="#158a4b">Request 2 (within TTL)</text>
+      <line x1="60" y1="134" x2="400" y2="134" stroke="#158a4b" stroke-width="2" marker-end="url(#ar)"></line>
+      <text x="230" y="129" font-family="monospace" font-size="10" fill="#158a4b" text-anchor="middle">same prefix + new query</text>
+      <line x1="400" y1="152" x2="690" y2="152" stroke="#158a4b" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ar)"></line>
+      <text x="545" y="147" font-family="monospace" font-size="10" fill="#158a4b" text-anchor="middle">HIT: read prefix (~0.1× input)</text>
+      <line x1="400" y1="172" x2="60" y2="172" stroke="#0f766e" stroke-width="2" marker-end="url(#ar)"></line>
+      <text x="230" y="167" font-family="monospace" font-size="10" fill="#0f766e" text-anchor="middle">response · reduced latency ✓</text>
+      <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#555"></path></marker></defs>
+    </svg>
+    <figcaption>Request 1 pays a small write premium to cache the prefix. Every later request within the TTL reads it at ~0.1× input cost with lower latency. Multipliers per Anthropic's published pricing.</figcaption>
+  </figure>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Scenario</th><th class="mono">Prefix cost multiplier</th><th>Latency</th><th>When it wins</th></tr></thead>
+    <tbody>
+      <tr><td>Uncached (baseline)</td><td class="mono">1.0×</td><td>Full reprocess each call</td><td>One-off / ever-changing prompts</td></tr>
+      <tr><td>Cache write (5-min TTL)</td><td class="mono">~1.25×</td><td>Full (first call only)</td><td>Prefix reused ≥2× within 5 min</td></tr>
+      <tr><td>Cache write (1-hour TTL)</td><td class="mono">~2×</td><td>Full (first call only)</td><td>Prefix reused across a longer span</td></tr>
+      <tr><td>Cache hit / read</td><td class="mono pos">~0.1×</td><td class="pos">Reduced (prefix skipped)</td><td>High-volume identical prefixes</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="block">Real-World Use Case</h3>
+  <p>A coding assistant sends a 30K-token style guide + tool schema as a fixed prefix on every request. Marking that prefix with a cache breakpoint means the first request writes it (~1.25×), and the next thousand requests read it at ~0.1× — collapsing both the per-request token bill for the prefix and the time-to-first-token.</p>
+
+  <h3 class="block">Tips &amp; Tricks</h3>
+  <div class="box tip-box">💡 <b>Tip:</b> Treat prompt caching prefixes as <b>immutable</b> — even a single-token change (a timestamp, a request ID) invalidates the cache and forces a full reprocessing cost. Put volatile content <em>after</em> the breakpoint.</div>
+  <div class="box tip-box">💡 <b>Tip:</b> Order prompts <b>static → dynamic</b>: tools and system instructions first (cached), user-specific query last (uncached). This maximizes the reusable prefix.</div>
+  <div class="box tip-box">💡 <b>Tip:</b> Choose TTL by reuse cadence. Bursty traffic within minutes → 5-min TTL. Steady reuse over an hour → 1-hour TTL to avoid repeated write premiums.</div>
+  <div class="box warning-box">⚠️ <b>Pitfall:</b> Caching a prefix that's below the minimum token threshold, or that changes every request, yields <em>no</em> hit — you pay the write premium for nothing.</div>
+
+  <h3 class="block acc">Exam Strategy</h3>
+  <div class="box exam-strategy">🎯 <b>Exam Strategy:</b> When a question describes <b>repeated identical system prompts / large static context across many requests</b>, immediately think <b>Prompt Caching</b> before considering summarization. Key discriminators: caching helps when the <em>prefix is static and reused</em>; summarization helps when the <em>history is growing</em>. If the prompt changes every call, caching is the <em>wrong</em> answer — eliminate it.</div>
+</section>
+
+<!-- ============================== 43.4 ============================== -->
+<section id="s434">
+  <h2 class="sec-title"><span class="id">43.4</span> Modular Prompts &amp; Skills for Prompt Reuse</h2>
+  <p class="lede">Instead of maintaining giant monolithic prompts, compose them from small, reusable, independently-versioned modules ("skills") that plug into a base template. Better maintainability — and a bigger, more stable cacheable prefix.</p>
+
+  <h3 class="block">Concept Overview</h3>
+  <p><b>Modular prompting</b> decomposes a prompt into named components — role, guardrails, tool instructions, domain knowledge, output format — that are assembled per request. A <b>skill</b> is a packaged, reusable unit of instructions (and optionally examples/tools) that can be loaded on demand. This mirrors software modularity: write once, reuse everywhere, version independently.</p>
+
+  <h3 class="block">Key Mechanics</h3>
+  <ul class="clean">
+    <li><b>Base template + slots:</b> a stable scaffold defines slots (<code>{{role}}</code>, <code>{{policies}}</code>, <code>{{format}}</code>); modules fill them at assembly time.</li>
+    <li><b>On-demand loading:</b> load only the skills relevant to the current task, keeping the assembled prompt lean rather than shipping every instruction every time.</li>
+    <li><b>Stable ordering → cache synergy:</b> putting shared modules first, in a fixed order, produces a long, identical prefix — ideal for the caching in 43.3.</li>
+    <li><b>Independent versioning:</b> update the "refund policy" module once and every prompt that includes it inherits the change.</li>
+  </ul>
+
+  <h3 class="block">Visualization — Modules Plugged Into a Base Template</h3>
+  <figure>
+    <svg viewBox="0 0 760 250" role="img" aria-label="Block diagram of reusable prompt modules composing into a base template">
+      <!-- module library -->
+      <text x="20" y="20" font-family="monospace" font-size="12" font-weight="700" fill="#312e81">Reusable module library</text>
+      <g font-family="monospace" font-size="11">
+        <rect x="20" y="32" width="150" height="34" rx="7" fill="#eef0ff" stroke="#4338ca"></rect><text x="95" y="54" text-anchor="middle" fill="#312e81">Role / Persona</text>
+        <rect x="20" y="74" width="150" height="34" rx="7" fill="#eef0ff" stroke="#4338ca"></rect><text x="95" y="96" text-anchor="middle" fill="#312e81">Safety &amp; Guardrails</text>
+        <rect x="20" y="116" width="150" height="34" rx="7" fill="#e6f5f2" stroke="#0f766e"></rect><text x="95" y="138" text-anchor="middle" fill="#0f766e">Tool Instructions</text>
+        <rect x="20" y="158" width="150" height="34" rx="7" fill="#e6f5f2" stroke="#0f766e"></rect><text x="95" y="180" text-anchor="middle" fill="#0f766e">Domain Skill: Refunds</text>
+        <rect x="20" y="200" width="150" height="34" rx="7" fill="#e6f5f2" stroke="#0f766e"></rect><text x="95" y="222" text-anchor="middle" fill="#0f766e">Output Format: JSON</text>
+      </g>
+      <!-- arrows -->
+      <g stroke="#9aa6bd" stroke-width="1.5" marker-end="url(#ar2)" fill="none">
+        <path d="M170 49 C 260 49, 300 90, 360 108"></path>
+        <path d="M170 91 C 260 91, 300 110, 360 122"></path>
+        <path d="M170 133 C 260 133, 300 130, 360 140"></path>
+        <path d="M170 175 C 260 175, 300 155, 360 158"></path>
+        <path d="M170 217 C 260 217, 300 180, 360 176"></path>
+      </g>
+      <!-- base template -->
+      <rect x="360" y="70" width="200" height="120" rx="10" fill="#fff" stroke="#4338ca" stroke-width="2"></rect>
+      <text x="460" y="92" font-family="monospace" font-size="12" font-weight="700" fill="#312e81" text-anchor="middle">Base Template</text>
+      <g font-family="monospace" font-size="10" fill="#48566e">
+        <text x="375" y="112">{{role}}</text>
+        <text x="375" y="128">{{guardrails}}</text>
+        <text x="375" y="144">{{tools}}</text>
+        <text x="375" y="160">{{skill}}</text>
+        <text x="375" y="176">{{format}} + user query</text>
+      </g>
+      <!-- assembled prompt -->
+      <path d="M560 130 C 610 130, 620 130, 650 130" stroke="#9aa6bd" stroke-width="1.5" marker-end="url(#ar2)" fill="none"></path>
+      <rect x="650" y="96" width="96" height="68" rx="9" fill="#4338ca"></rect>
+      <text x="698" y="126" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle">Assembled</text>
+      <text x="698" y="142" font-family="monospace" font-size="11" fill="#fff" text-anchor="middle">prompt →</text>
+      <defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa6bd"></path></marker></defs>
+    </svg>
+    <figcaption>Small, versioned modules snap into fixed slots of a base template. Shared modules placed first create a long, stable prefix that pairs naturally with prompt caching (43.3).</figcaption>
+  </figure>
+
+  <h3 class="block">Real-World Use Case</h3>
+  <p>A company runs 12 different assistants (sales, support, HR…). All share the same "brand voice" and "safety policy" modules. When legal updates the safety policy, they edit one module; all 12 assistants update instantly — and because the shared modules lead every prompt, they form a cacheable common prefix across products.</p>
+
+  <h3 class="block">Tips &amp; Tricks</h3>
+  <div class="box tip-box">💡 <b>Tip:</b> Order modules <b>most-shared first, most-specific last</b>. This maximizes both reuse clarity and the length of the cacheable prefix.</div>
+  <div class="box tip-box">💡 <b>Tip:</b> Load skills <b>on demand</b>. Injecting every possible instruction into every request wastes tokens; pull in the "refund" skill only when the task is about refunds.</div>
+  <div class="box warning-box">⚠️ <b>Pitfall:</b> Over-modularization adds assembly complexity and can fragment context. If a module is used in exactly one place and never changes, inlining it is fine.</div>
+
+  <h3 class="block acc">Exam Strategy</h3>
+  <div class="box exam-strategy">🎯 <b>Exam Strategy:</b> Modular-prompt questions usually reward <b>maintainability + reuse + cache synergy</b>. If a scenario mentions "duplicated instructions across many prompts" or "a policy that must update everywhere at once," pick <b>modular prompts / skills</b>. Note the link to 43.3: modularity's fixed ordering is what makes prefixes cacheable — questions may test that connection.</div>
+</section>
+
+<!-- ============================== 43.5 ============================== -->
+<section id="s435">
+  <h2 class="sec-title"><span class="id">43.5</span> Scratchpad Files for Persistent Working Memory</h2>
+  <p class="lede">A scratchpad is external storage — a file or datastore — the model reads from and writes to across turns and sessions. It offloads durable facts out of the context window, giving the app memory that survives summarization and even restarts.</p>
+
+  <h3 class="block">Concept Overview</h3>
+  <p>The context window is <b>ephemeral</b>: it vanishes when the request ends. A <b>scratchpad file</b> provides <b>persistent working memory</b> — the model (via tools) writes intermediate results, decisions, and facts to a file, and reads them back on later turns. This decouples "what must be remembered" from "what currently fits in the window."</p>
+
+  <h3 class="block">Key Mechanics</h3>
+  <ul class="clean">
+    <li><b>File I/O via tools:</b> the model uses read/write tools (or the app orchestrates them) to persist and retrieve state — e.g. append a decision, read the current task list.</li>
+    <li><b>Selective loading:</b> only the <em>relevant slice</em> of the scratchpad is pulled into context per turn, keeping token usage low.</li>
+    <li><b>Survives compression:</b> facts written to the scratchpad are safe even when conversation history is summarized (43.2) or the session restarts.</li>
+    <li><b>Structured state:</b> works best as structured records (task list, key/value facts, running plan) rather than an unbounded log.</li>
+  </ul>
+
+  <h3 class="block">Visualization — Memory Persisting Across Turns</h3>
+  <figure>
+    <svg viewBox="0 0 760 210" role="img" aria-label="Timeline showing a scratchpad file persisting facts across multiple turns and a session restart">
+      <!-- scratchpad lane -->
+      <rect x="20" y="150" width="720" height="40" rx="8" fill="#eef0ff" stroke="#4338ca"></rect>
+      <text x="30" y="175" font-family="monospace" font-size="12" font-weight="700" fill="#312e81">📄 scratchpad.md  (persistent)</text>
+      <!-- turns -->
+      <g font-family="monospace" font-size="10">
+        <rect x="40" y="30" width="120" height="44" rx="8" fill="#0f766e"></rect><text x="100" y="50" text-anchor="middle" fill="#fff">Turn 1</text><text x="100" y="65" text-anchor="middle" fill="#cbeee7">write facts</text>
+        <rect x="220" y="30" width="120" height="44" rx="8" fill="#0f766e"></rect><text x="280" y="50" text-anchor="middle" fill="#fff">Turn 2</text><text x="280" y="65" text-anchor="middle" fill="#cbeee7">read + update</text>
+        <rect x="400" y="30" width="120" height="44" rx="8" fill="#e8920c"></rect><text x="460" y="47" text-anchor="middle" fill="#fff">— restart —</text><text x="460" y="63" text-anchor="middle" fill="#fff3e0">window cleared</text>
+        <rect x="580" y="30" width="140" height="44" rx="8" fill="#4338ca"></rect><text x="650" y="50" text-anchor="middle" fill="#fff">Turn 3 (new session)</text><text x="650" y="65" text-anchor="middle" fill="#d7d9ff">re-reads state ✓</text>
+      </g>
+      <!-- arrows down/up -->
+      <g stroke="#4338ca" stroke-width="1.6" marker-end="url(#ar3)" fill="none">
+        <path d="M100 74 L100 148"></path>
+        <path d="M280 148 L280 76"></path>
+        <path d="M650 148 L650 76"></path>
+      </g>
+      <text x="120" y="120" font-family="monospace" font-size="10" fill="#48566e">write ↓</text>
+      <text x="300" y="120" font-family="monospace" font-size="10" fill="#48566e">↑ read</text>
+      <text x="150" y="205" font-family="monospace" font-size="10" fill="#7c8aa0">Facts persist below the ephemeral context window — surviving summarization and restarts.</text>
+      <defs><marker id="ar3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4338ca"></path></marker></defs>
+    </svg>
+    <figcaption>The context window resets between sessions, but the scratchpad file persists. Turn 3 — even in a brand-new session — recovers state by re-reading the file.</figcaption>
+  </figure>
+
+  <h3 class="block">Real-World Use Case</h3>
+  <p>An autonomous research agent works a multi-step task over dozens of turns. It writes findings and its running plan to <code>progress.md</code> after each step. When the context window fills and older turns are summarized, the agent still recovers exact figures and its to-do list by reading the file — no detail is silently lost.</p>
+
+  <h3 class="block">Tips &amp; Tricks</h3>
+  <div class="box tip-box">💡 <b>Tip:</b> Use the scratchpad as the <b>source of truth</b> for facts you cannot afford to lose (IDs, numbers, decisions). Summaries can drop detail; a file does not.</div>
+  <div class="box tip-box">💡 <b>Tip:</b> Load <b>only the relevant section</b> of the scratchpad into context each turn. A 50K-token log defeats the purpose if you paste all of it back in.</div>
+  <div class="box warning-box">⚠️ <b>Pitfall:</b> An ever-growing, unstructured scratchpad becomes its own context problem. Keep it structured and periodically compact it.</div>
+
+  <h3 class="block acc">Exam Strategy</h3>
+  <div class="box exam-strategy">🎯 <b>Exam Strategy:</b> Scratchpad questions hinge on the word <b>persistence</b>. If a scenario says state must survive <b>across sessions/restarts</b> or "must not be lost when history is summarized," the answer is a <b>scratchpad / external memory</b> — not summarization (which is in-context and lossy) and not caching (which is a cost optimization, not memory). Eliminate any option that keeps critical state only inside the window.</div>
+</section>
+
+<!-- ============================== 43.6 ============================== -->
+<section id="s436">
+  <h2 class="sec-title"><span class="id">43.6</span> Hands-On: Optimizing Token Usage for a High-Volume Application</h2>
+  <p class="lede">Synthesis time. We take one realistic app hitting token, cost, and latency walls, and apply all four techniques (43.2–43.5) on top of the fundamentals (43.1) in a deliberate decision process.</p>
+
+  <h3 class="block">The Scenario</h3>
+  <p>A <b>customer-support bot</b> handles <b>50,000 conversations/day</b>. Each conversation averages 8 turns. Every request ships:</p>
+  <ul class="clean">
+    <li>A <b>18K-token</b> system prompt (brand voice + full policy manual + tool schemas), sent verbatim every call.</li>
+    <li>The <b>entire conversation history</b>, replayed in full each turn (full-context strategy).</li>
+    <li>Growing latency as later turns re-send everything, plus a rising per-conversation token bill.</li>
+  </ul>
+  <p>Symptoms: high cost per conversation, slow time-to-first-token on later turns, and occasional window-overflow errors on long chats.</p>
+
+  <h3 class="block">The Decision Process</h3>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th style="width:30%">Symptom</th><th style="width:34%">Technique applied</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>18K static prompt reprocessed every call</td><td><b>Prompt Caching (43.3)</b> — mark the system+tools prefix with a breakpoint</td><td>Prefix is identical across all requests → read at ~0.1× instead of 1×, and lower latency.</td></tr>
+      <tr><td>Policy manual duplicated across bots &amp; hard to update</td><td><b>Modular Prompts / Skills (43.4)</b></td><td>Factor policy into a versioned module; fixed ordering also lengthens the cacheable prefix.</td></tr>
+      <tr><td>History grows every turn, overflowing long chats</td><td><b>Progressive Summarization (43.2)</b></td><td>Keep last 3 turns verbatim + a rolling summary → bounded, flat token growth.</td></tr>
+      <tr><td>Key facts (order #, refund eligibility) lost when summarized</td><td><b>Scratchpad File (43.5)</b></td><td>Persist critical facts to a file; recover them exactly even after summarization/restart.</td></tr>
+      <tr><td>No visibility into token spend</td><td><b>Token Budgeting (43.1)</b></td><td>Count tokens pre-send; enforce a ceiling with reserved output headroom.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="block">Before / After Comparison</h3>
+  <p class="note-illus">Illustrative figures for a representative later-turn request (~turn 6), to show the <em>shape</em> of the improvement — not a guarantee for any specific model or workload.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Metric (per later-turn request)</th><th class="mono">Before (naïve)</th><th class="mono">After (optimized)</th><th class="mono">Delta</th></tr></thead>
+    <tbody>
+      <tr><td>Static prefix tokens billed</td><td class="mono">18,000 @ 1×</td><td class="mono">18,000 @ ~0.1× (cache hit)</td><td class="mono pos">~90% ↓ on prefix</td></tr>
+      <tr><td>History tokens sent</td><td class="mono">~14,000 (full replay)</td><td class="mono">~4,000 (summary + last 3 turns)</td><td class="mono pos">~71% ↓</td></tr>
+      <tr><td>Total input tokens (effective)</td><td class="mono">~32,000</td><td class="mono">~9,600 effective</td><td class="mono pos">~70% ↓</td></tr>
+      <tr><td>Relative cost index</td><td class="mono">1.00×</td><td class="mono">~0.28×</td><td class="mono pos">~72% cheaper</td></tr>
+      <tr><td>Time-to-first-token</td><td class="mono">Baseline (reprocess 32K)</td><td class="mono">Reduced (prefix cached, less history)</td><td class="mono pos">Lower latency</td></tr>
+      <tr><td>Overflow risk on long chats</td><td class="mono neg">High (linear growth)</td><td class="mono pos">Low (bounded)</td><td class="mono pos">Stabilized</td></tr>
+      <tr><td>Critical fact retention</td><td class="mono">In-context only (at risk)</td><td class="mono pos">Persisted in scratchpad</td><td class="mono pos">No silent loss</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box tip-box">💡 <b>Tip — order of operations:</b> Apply caching <em>first</em> (biggest, lowest-risk win for static prefixes), then bound history with summarization, then protect facts with a scratchpad. Restructure prompts into modules to make the prefix stable enough to cache well.</div>
+  <div class="box warning-box">⚠️ <b>Pitfall:</b> Don't let summarization drop the exact facts caching and budgeting were meant to preserve — that's precisely why the scratchpad is in the stack. The techniques are complementary, not interchangeable.</div>
+
+  <h3 class="block acc">Exam Strategy</h3>
+  <div class="box exam-strategy">🎯 <b>Exam Strategy:</b> Synthesis questions give you a messy scenario and ask for <b>the best combination</b>. Map each symptom to its technique: <b>static repeated prefix → caching</b>; <b>growing history → summarization</b>; <b>must-not-lose facts → scratchpad</b>; <b>duplicated instructions → modular prompts</b>; <b>overflow/truncation → budgeting</b>. The best answer usually <em>layers</em> techniques; single-technique answers to a multi-symptom problem are distractors.</div>
+</section>
+
+<!-- ============================== CHEAT SHEET ============================== -->
+<section id="cheat">
+  <h2 class="sec-title" style="font-size:21px;">★ Quick Reference Cheat Sheet</h2>
+  <p class="lede">One-line recall for every subtopic — concept, when to reach for it, and its main risk.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th style="width:9%">#</th><th style="width:22%">Concept</th><th style="width:36%">When to use</th><th>Key risk</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">43.1</td><td><b>Context window &amp; token budget</b></td><td>Always — plan input + output within one shared budget; reserve output headroom.</td><td>Overflow / truncated response if reserve ignored.</td></tr>
+      <tr><td class="mono">43.2</td><td><b>Progressive summarization</b></td><td>Long / unbounded conversations where you must keep token growth flat.</td><td>Lossy — can drop details; adds an extra model call.</td></tr>
+      <tr><td class="mono">43.3</td><td><b>Prompt caching</b></td><td>Same large static prefix reused across many requests (system, tools, big docs).</td><td>Any prefix change invalidates cache; write premium wasted if not reused.</td></tr>
+      <tr><td class="mono">43.4</td><td><b>Modular prompts / skills</b></td><td>Instructions duplicated across prompts; policies that must update everywhere.</td><td>Over-modularization adds assembly complexity.</td></tr>
+      <tr><td class="mono">43.5</td><td><b>Scratchpad files</b></td><td>State must persist across turns/sessions or survive summarization.</td><td>Unstructured, ever-growing files become their own context problem.</td></tr>
+      <tr><td class="mono">43.6</td><td><b>Layered optimization</b></td><td>High-volume apps hitting cost/latency/overflow — combine the above.</td><td>Treating techniques as interchangeable instead of complementary.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box tip-box">💡 <b>Mnemonic:</b> <b>B-S-C-M-S</b> → <b>B</b>udget the window, <b>S</b>ummarize the history, <b>C</b>ache the prefix, <b>M</b>odularize the instructions, <b>S</b>cratchpad the facts.</div>
+</section>
+
+<!-- ============================== QUIZ ============================== -->
+<section id="quiz">
+  <h2 class="sec-title" style="font-size:21px;">? Self-Check Quiz</h2>
+  <p class="lede">Eight questions across the whole chapter. Click each to reveal the answer and the reasoning.</p>
+
+  <details class="q"><summary><span class="qn">Q1.</span><span>The context window is best described as a budget shared between which two things?</span></summary>
+    <div class="ans"><b>Answer:</b> Input tokens (system prompt, tools, history, retrieved context) <b>and</b> output tokens (the generated response). They draw from the <em>same</em> fixed limit, so you must reserve headroom for the response. <span class="pill core">43.1</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q2.</span><span>A 60-turn support chat keeps overflowing the window. Cost matters more than perfect recall. Which technique fits best?</span></summary>
+    <div class="ans"><b>Answer:</b> <b>Progressive summarization</b> — keep the last few turns verbatim and compress older ones into a rolling summary to keep token growth flat. Full context would keep overflowing. <span class="pill core">43.2</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q3.</span><span>Roughly what are the cost multipliers for a 5-minute cache write, a 1-hour cache write, and a cache read, relative to base input price?</span></summary>
+    <div class="ans"><b>Answer:</b> Per Anthropic's published pricing: 5-min write ≈ <b>1.25×</b>, 1-hour write ≈ <b>2×</b>, and a cache hit/read ≈ <b>0.1×</b> (about 90% cheaper than uncached input; a few newer models read even cheaper). <span class="pill core">43.3</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q4.</span><span>Your cached prefix suddenly stops getting cache hits after you added a timestamp to the top of the system prompt. Why?</span></summary>
+    <div class="ans"><b>Answer:</b> The cache key is a cumulative hash of everything up to the breakpoint. A changing timestamp alters the prefix on every request → a new hash → no hit, and you pay the write premium repeatedly. <b>Fix:</b> move volatile content <em>after</em> the cache breakpoint. <span class="pill core">43.3</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q5.</span><span>Twelve assistants share an identical safety policy that legal needs to update in one place. Which approach?</span></summary>
+    <div class="ans"><b>Answer:</b> <b>Modular prompts / skills</b> — factor the policy into one versioned module included by all twelve. Bonus: placing it first creates a shared cacheable prefix. <span class="pill core">43.4</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q6.</span><span>An agent must remember exact order numbers across a session restart, even after old turns are summarized away. What do you use?</span></summary>
+    <div class="ans"><b>Answer:</b> A <b>scratchpad file</b> (external persistent memory). Summarization is in-context and lossy; caching is a cost optimization, not memory. Only external persistence survives restarts. <span class="pill core">43.5</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q7.</span><span>In the high-volume support bot, which single change gives the biggest, lowest-risk win for the 18K static prompt, and why?</span></summary>
+    <div class="ans"><b>Answer:</b> <b>Prompt caching</b> the static system+tools prefix. It's identical on every request, so cache reads cut that prefix's cost by ~90% and reduce latency — with essentially no fidelity loss. Apply it before summarization. <span class="pill core">43.6</span></div>
+  </details>
+
+  <details class="q"><summary><span class="qn">Q8.</span><span>Which techniques are complementary rather than interchangeable, and give one pairing that matters?</span></summary>
+    <div class="ans"><b>Answer:</b> All of them layer. Key pairing: <b>summarization + scratchpad</b> — summarization bounds token growth, while the scratchpad preserves the exact facts summarization would otherwise lose. Also <b>modular prompts + caching</b> — stable module ordering is what makes prefixes reliably cacheable. <span class="pill core">43.6</span></div>
+  </details>
+</section>
+
+<!-- ============================== MISCONCEPTIONS ============================== -->
+<section id="mis">
+  <h2 class="sec-title" style="font-size:21px;">! Common Misconceptions</h2>
+  <p class="lede">High-frequency exam traps. Each is stated as the tempting-but-wrong belief, then corrected.</p>
+
+  <div class="box misconception">❌ <b>"A bigger context window means I can stop optimizing."</b><br>
+  ✅ Reality: A larger window raises the ceiling, but bigger prompts still cost more per request and can add latency. Budgeting, caching, and summarization still matter. <span class="pill core">43.1</span></div>
+
+  <div class="box misconception">❌ <b>"Only the input I type counts against the context window."</b><br>
+  ✅ Reality: Tool schemas, the system prompt, few-shot examples, retrieved documents, <em>and</em> the reserved output all consume the same budget on every request. <span class="pill core">43.1</span></div>
+
+  <div class="box misconception">❌ <b>"Progressive summarization is lossless — it just makes things shorter."</b><br>
+  ✅ Reality: Summarization is inherently <em>lossy</em>. Details not captured in the summary are gone unless persisted elsewhere (e.g. a scratchpad). <span class="pill core">43.2</span></div>
+
+  <div class="box misconception">❌ <b>"Prompt caching is free savings — just turn it on everywhere."</b><br>
+  ✅ Reality: The first write costs a premium (~1.25× or ~2×). If the prefix isn't actually reused, or it changes each call, you pay the premium with no hit. Cache only stable, reused prefixes above the minimum size. <span class="pill core">43.3</span></div>
+
+  <div class="box misconception">❌ <b>"Prompt caching remembers my conversation for me."</b><br>
+  ✅ Reality: Caching is a <em>cost/latency</em> optimization for reprocessing a static prefix — it is <b>not</b> a memory feature. For durable memory, use a scratchpad. <span class="pill core">43.3 / 43.5</span></div>
+
+  <div class="box misconception">❌ <b>"A tiny edit to the system prompt is harmless for caching."</b><br>
+  ✅ Reality: Even a one-token change before the breakpoint invalidates the cache and forces a full rewrite. Keep cached prefixes immutable; put dynamic content after the breakpoint. <span class="pill core">43.3</span></div>
+
+  <div class="box misconception">❌ <b>"Modularizing prompts always saves tokens."</b><br>
+  ✅ Reality: Modularity improves maintainability and cache reuse, but if you load every module every time it can <em>increase</em> tokens. Load skills on demand. <span class="pill core">43.4</span></div>
+</section>
+
+<footer>
+  Chapter 43 · Context Window Optimization &amp; Token Management — study guide for the Claude Certified Architect exam.<br>
+  Pricing multipliers, TTLs, and caching mechanics reflect Anthropic's published documentation; token limits are model-version-dependent. Figures marked <em>illustrative</em> are for teaching the shape of the trade-off, not exact guarantees.
+</footer>
+
+</div>
+
+
+</body></html>

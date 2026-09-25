@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 46 — Observability &amp; Monitoring at Scale | Claude Certified Architect</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --ink: #1a2233;
+    --ink-soft: #46536b;
+    --ink-muted: #6b7688;
+    --border: #e2e6ec;
+    --border-strong: #cbd2dc;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-bg: #eef4ff;
+    --tip-bg: #ecfdf5;
+    --tip-border: #10b981;
+    --tip-ink: #065f46;
+    --warn-bg: #fff7ed;
+    --warn-border: #f59e0b;
+    --warn-ink: #7c2d12;
+    --exam-bg: #eef2ff;
+    --exam-border: #6366f1;
+    --exam-ink: #3730a3;
+    --code-bg: #f1f3f7;
+    --shadow: 0 1px 3px rgba(16,24,40,0.06), 0 1px 2px rgba(16,24,40,0.04);
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", "Cascadia Code", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.62;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 40px 28px 96px;
+  }
+
+  header.chapter-head {
+    background: linear-gradient(135deg, #1e293b 0%, #2b3a55 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+  }
+  .chapter-head .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #93c5fd;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  .chapter-head h1 {
+    font-size: 30px;
+    margin: 0 0 10px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .chapter-head p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 15px;
+    max-width: 640px;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+  }
+  nav.toc h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    margin: 0 0 14px;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    gap: 8px;
+  }
+  nav.toc li { counter-increment: toc; }
+  nav.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.15s ease, color 0.15s ease;
+    font-size: 15px;
+  }
+  nav.toc a:hover { background: var(--primary-bg); color: var(--primary-dark); }
+  nav.toc a .num {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+    min-width: 40px;
+  }
+
+  section.subtopic {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px 34px;
+    margin-bottom: 34px;
+    box-shadow: var(--shadow);
+    scroll-margin-top: 20px;
+  }
+
+  h2.sec-title {
+    font-size: 23px;
+    margin: 0 0 6px;
+    line-height: 1.25;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2.sec-title .code {
+    font-family: var(--mono);
+    font-size: 15px;
+    background: var(--primary-bg);
+    color: var(--primary-dark);
+    padding: 3px 10px;
+    border-radius: 7px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .sec-lead {
+    color: var(--ink-muted);
+    font-size: 15px;
+    margin: 0 0 22px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 18px;
+  }
+
+  h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 26px 0 12px;
+    font-weight: 700;
+  }
+  h3:first-of-type { margin-top: 6px; }
+
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  li strong { color: var(--ink); }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 5px;
+    color: #b32d5e;
+  }
+
+  em { color: var(--ink-soft); }
+
+  /* Callout boxes */
+  .tip-box, .warning-box, .exam-box {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    border-left: 5px solid;
+  }
+  .tip-box {
+    background: var(--tip-bg);
+    border-color: var(--tip-border);
+    color: var(--tip-ink);
+  }
+  .warning-box {
+    background: var(--warn-bg);
+    border-color: var(--warn-border);
+    color: var(--warn-ink);
+  }
+  .exam-box {
+    background: var(--exam-bg);
+    border-color: var(--exam-border);
+    color: var(--exam-ink);
+  }
+  .tip-box strong, .warning-box strong, .exam-box strong { font-weight: 700; }
+  .tip-box p, .warning-box p, .exam-box p { margin: 0 0 10px; }
+  .tip-box p:last-child, .warning-box p:last-child, .exam-box p:last-child { margin-bottom: 0; }
+  .exam-box .qbox {
+    background: rgba(255,255,255,0.6);
+    border: 1px solid var(--exam-border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .exam-box .qbox .qlabel {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--exam-border);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .exam-box .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0 0;
+  }
+  .exam-box .keywords span {
+    background: rgba(99,102,241,0.14);
+    border: 1px solid rgba(99,102,241,0.3);
+    color: var(--exam-ink);
+    font-size: 12px;
+    font-family: var(--mono);
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 16px 0 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  th {
+    text-align: left;
+    background: #f0f3f8;
+    color: var(--ink-soft);
+    font-weight: 600;
+    padding: 11px 14px;
+    border-bottom: 2px solid var(--border-strong);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: #fafbfd; }
+
+  .compare-table th:first-child { color: #047857; }
+  .compare-table th:last-child { color: #b45309; }
+
+  /* Flow diagram */
+  .flow {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 18px 0 22px;
+  }
+  .flow .node {
+    flex: 1 1 130px;
+    background: var(--primary-bg);
+    border: 1px solid #bcd2fb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .flow .node .nlabel { font-weight: 700; font-size: 14px; color: var(--primary-dark); }
+  .flow .node .ndesc { font-size: 12px; color: var(--ink-muted); margin-top: 3px; }
+  .flow .arrow {
+    align-self: center;
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 2px;
+  }
+  .flow.vertical { flex-direction: column; align-items: stretch; }
+  .flow.vertical .arrow { transform: rotate(90deg); align-self: center; }
+
+  .layer-stack { display: flex; flex-direction: column; gap: 8px; margin: 18px 0 22px; }
+  .layer-stack .layer {
+    display: flex; align-items: center; gap: 14px;
+    border: 1px solid var(--border); border-left: 5px solid var(--primary);
+    border-radius: 10px; padding: 12px 16px; background: #fbfcfe;
+  }
+  .layer-stack .layer .tag {
+    font-family: var(--mono); font-size: 12px; font-weight: 700;
+    background: var(--primary-bg); color: var(--primary-dark);
+    padding: 4px 9px; border-radius: 6px; white-space: nowrap; min-width: 92px; text-align: center;
+  }
+  .layer-stack .layer .body { font-size: 14px; color: var(--ink-soft); }
+  .layer-stack .layer .body strong { color: var(--ink); }
+
+  /* Summary */
+  section.summary {
+    background: linear-gradient(135deg, #eef4ff 0%, #f5f0ff 100%);
+    border: 1px solid #d6def2;
+    border-radius: 14px;
+    padding: 30px 34px;
+    box-shadow: var(--shadow);
+  }
+  section.summary h2 { font-size: 23px; margin: 0 0 4px; }
+  .remember-list {
+    counter-reset: rem;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: grid;
+    gap: 10px;
+  }
+  .remember-list li {
+    counter-increment: rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px 14px 54px;
+    position: relative;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .remember-list li::before {
+    content: counter(rem);
+    position: absolute;
+    left: 14px; top: 50%; transform: translateY(-50%);
+    width: 28px; height: 28px;
+    background: var(--primary); color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; font-family: var(--mono);
+  }
+  .remember-list li strong { color: var(--ink); }
+
+  .verify-note {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    border-top: 1px dashed var(--border-strong);
+    margin-top: 34px;
+    padding-top: 16px;
+  }
+
+  a.back-top {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    margin-top: 8px;
+  }
+  a.back-top:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 24px 16px 64px; }
+    section.subtopic, section.summary { padding: 22px 18px; }
+    .chapter-head { padding: 26px 22px; }
+    .chapter-head h1 { font-size: 24px; }
+    .flow { flex-direction: column; }
+    .flow .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="chapter-head">
+    <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 46 — Observability &amp; Monitoring at Scale</h1>
+    <p>Exam-ready study notes covering how to make production LLM systems visible, measurable, and defensible — from the unique observability challenges of non-deterministic models to building a full monitoring stack.</p>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>In this chapter</h2>
+    <ol>
+      <li><a href="#s461"><span class="num">46.1</span> Observability Challenges in LLM Systems</a></li>
+      <li><a href="#s462"><span class="num">46.2</span> Selecting Monitoring Strategies for Production</a></li>
+      <li><a href="#s463"><span class="num">46.3</span> Logging Patterns: What to Capture and What to Omit</a></li>
+      <li><a href="#s464"><span class="num">46.4</span> Alerting on Model Quality Degradation</a></li>
+      <li><a href="#s465"><span class="num">46.5</span> Hands-On: Building an Observability Stack</a></li>
+      <li><a href="#summary"><span class="num">★</span> Chapter Summary &amp; Cheat Sheet</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================ 46.1 ============================ -->
+  <section class="subtopic" id="s461">
+    <h2 class="sec-title"><span class="code">46.1</span> Observability Challenges in LLM Systems</h2>
+    <p class="sec-lead">Traditional observability assumes deterministic services with clear pass/fail outcomes. LLM systems break that assumption — the same input can yield different, and differently <em>correct</em>, outputs.</p>
+
+    <h3>Core Concepts</h3>
+    <ul>
+      <li><strong>Monitoring vs. observability.</strong> <em>Monitoring</em> tracks known failure modes you predefined (is latency high? is the error rate up?). <em>Observability</em> is the property of being able to ask <em>new</em> questions of your system from its outputs — critical for LLMs, where failures are often novel and semantic rather than a stack trace.</li>
+      <li><strong>The three pillars.</strong> <em>Metrics</em> (numeric time series — latency, throughput, error rate, token counts), <em>logs</em> (discrete timestamped events), and <em>traces</em> (the end-to-end path of one request across services). LLM apps add a fourth practical concern: capturing prompts, completions, and quality signals.</li>
+      <li><strong>Non-determinism.</strong> With sampling (temperature &gt; 0) the same prompt produces varying outputs, so you cannot assert exact-match correctness. You monitor <em>distributions</em> and <em>quality signals</em> instead of single values.</li>
+      <li><strong>Correctness is fuzzy.</strong> A "wrong" answer rarely throws an exception — it returns HTTP 200 with plausible but incorrect content. Standard error-rate dashboards are blind to this <em>silent failure</em> class.</li>
+      <li><strong>Cost and latency are first-class signals.</strong> Token consumption drives spend, and latency is highly variable (dependent on output length and load). Both must be observable per request, not just in aggregate.</li>
+      <li><strong>Multi-step pipelines.</strong> Agents, tool calls, and retrieval (RAG) chain many operations. Without distributed tracing you cannot tell <em>which</em> step in a chain caused a bad answer.</li>
+    </ul>
+
+    <h3>Visualization — Deterministic service vs. LLM system</h3>
+    <table>
+      <thead>
+        <tr><th>Dimension</th><th>Traditional service</th><th>LLM system</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Output for same input</td><td>Deterministic</td><td>Variable (with sampling)</td></tr>
+        <tr><td>Failure signal</td><td>Exception / non-2xx status</td><td>Often silent — 200 OK with poor content</td></tr>
+        <tr><td>Correctness check</td><td>Assertion / exact match</td><td>Evaluation, scoring, human/LLM judgment</td></tr>
+        <tr><td>Dominant cost driver</td><td>CPU / requests</td><td>Tokens (input + output)</td></tr>
+        <tr><td>Latency profile</td><td>Relatively stable</td><td>Varies with output length &amp; load</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      💡 <strong>Tip:</strong> Anchor the whole chapter on one distinction — <em>infrastructure signals</em> (latency, errors, throughput, cost) behave like any web service and are easy to monitor, while <em>semantic signals</em> (answer quality, hallucination, relevance, safety) are LLM-specific and need evaluation, not just counters. Nearly every exam question maps back to "which category is this?"
+    </div>
+
+    <div class="warning-box">
+      ⚠️ <strong>Common Pitfall:</strong> Assuming a healthy error-rate and latency dashboard means the system is "working." An LLM can be fast, cheap, and returning 200s while producing hallucinated or off-topic answers. <em>Green infra dashboards do not imply good outputs.</em> Treating uptime as a proxy for quality is a classic distractor.
+    </div>
+
+    <div class="exam-box">
+      🎯 <strong>Exam Strategy:</strong>
+      <p>This subtopic is usually tested with <em>definition-matching</em> and "why is LLM observability different?" conceptual questions. Expect them to contrast deterministic and probabilistic systems, or to ask which pillar (metric/log/trace) answers a given question.</p>
+      <p><strong>Signal phrases to watch for:</strong></p>
+      <div class="keywords"><span>non-deterministic</span><span>silent failure</span><span>200 OK but wrong</span><span>semantic vs. infrastructure</span><span>three pillars</span></div>
+      <div class="qbox">
+        <span class="qlabel">Practice question</span>
+        A production Claude-powered assistant shows stable latency, near-zero error rate, and normal token usage, yet users report increasingly irrelevant answers. Which monitoring gap is most likely responsible?<br><br>
+        <strong>Reasoning:</strong> All three cited signals are <em>infrastructure</em> signals — they say nothing about output quality. The gap is the absence of a <em>semantic/quality</em> signal (relevance or answer-quality evaluation). The exam wants you to recognize that infra health ≠ output correctness, and pick the "no output-quality monitoring" answer over tempting distractors like "scale up compute" or "increase timeout."
+      </div>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============================ 46.2 ============================ -->
+  <section class="subtopic" id="s462">
+    <h2 class="sec-title"><span class="code">46.2</span> Selecting Monitoring Strategies for Production</h2>
+    <p class="sec-lead">Choosing <em>what</em> to measure and <em>how</em> to structure alerts. Established SRE frameworks give you a scaffold; LLM-specific quality metrics fill the gap they leave.</p>
+
+    <h3>Core Concepts</h3>
+    <ul>
+      <li><strong>Golden signals (Google SRE).</strong> Four service-health signals: <em>latency</em>, <em>traffic</em>, <em>errors</em>, and <em>saturation</em>. A solid, vendor-neutral starting point for any request-driven service, LLM apps included.</li>
+      <li><strong>RED method.</strong> <em>Rate</em> (requests/sec), <em>Errors</em>, <em>Duration</em> — a request-centric view well suited to API-style LLM endpoints.</li>
+      <li><strong>USE method.</strong> <em>Utilization</em>, <em>Saturation</em>, <em>Errors</em> — a resource-centric view for the infrastructure a service runs on.</li>
+      <li><strong>LLM-specific metrics layered on top.</strong> Token usage (input/output), cost per request, time-to-first-token (TTFT) for streaming, and quality/eval scores. These have no analogue in classic web monitoring and must be added deliberately.</li>
+      <li><strong>SLIs, SLOs, and error budgets.</strong> An <em>SLI</em> is a measured indicator (e.g., p95 latency, % answers passing an eval); an <em>SLO</em> is the target for it; the <em>error budget</em> is the allowed shortfall. Define these before wiring alerts so thresholds are principled, not arbitrary.</li>
+      <li><strong>Percentiles over averages.</strong> Latency is skewed — report p50/p95/p99, not the mean, which hides tail pain that real users feel.</li>
+      <li><strong>Sampling strategy.</strong> Full-fidelity capture of every prompt/completion is expensive at scale. Decide up front on sampling (e.g., log all errors, sample a percentage of successes) balanced against cost and debuggability.</li>
+    </ul>
+
+    <h3>Visualization — Framework selection guide</h3>
+    <table>
+      <thead>
+        <tr><th>Framework</th><th>Focus</th><th>Best when you want to…</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Golden Signals</td><td>Latency, Traffic, Errors, Saturation</td><td>Get broad service health with minimal setup</td></tr>
+        <tr><td>RED</td><td>Rate, Errors, Duration</td><td>Monitor request-driven APIs / endpoints</td></tr>
+        <tr><td>USE</td><td>Utilization, Saturation, Errors</td><td>Diagnose resource / infrastructure limits</td></tr>
+        <tr><td>LLM overlay</td><td>Tokens, cost, TTFT, eval scores</td><td>Capture model-specific quality &amp; spend</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      💡 <strong>Tip:</strong> Remember the pairing — <strong>RED = request-centric</strong>, <strong>USE = resource-centric</strong>. If the stem is about API traffic and response times, think RED. If it's about a saturated GPU, queue, or connection pool, think USE. Golden Signals is the "everything, lightly" default.
+    </div>
+
+    <div class="warning-box">
+      ⚠️ <strong>Common Pitfall:</strong> Alerting on <em>averages</em>. A mean latency that looks fine can mask a slow tail where p99 users are timing out. Equally, setting SLOs after building dashboards leads to arbitrary thresholds — define the SLI/SLO first, then instrument to it.
+    </div>
+
+    <div class="exam-box">
+      🎯 <strong>Exam Strategy:</strong>
+      <p>Expect <em>best-practice selection</em> and <em>framework-matching</em> questions: given a scenario, pick the right method or the right metric. They also test SLI/SLO/error-budget vocabulary directly.</p>
+      <p><strong>Signal phrases to watch for:</strong></p>
+      <div class="keywords"><span>golden signals</span><span>RED / USE</span><span>p95 / p99</span><span>SLO / error budget</span><span>time-to-first-token</span></div>
+      <div class="qbox">
+        <span class="qlabel">Practice question</span>
+        You are asked to define alerting for a streaming Claude endpoint where users care most about responsiveness. Which single indicator best captures perceived responsiveness for streaming, and at which statistic?<br><br>
+        <strong>Reasoning:</strong> For streaming, <em>time-to-first-token</em> reflects when the user starts seeing output, and you should track a tail percentile (p95/p99) rather than the average — a good mean with a bad tail still frustrates users. The exam contrasts TTFT (streaming-relevant) with total generation latency, and rewards choosing percentiles over means.
+      </div>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============================ 46.3 ============================ -->
+  <section class="subtopic" id="s463">
+    <h2 class="sec-title"><span class="code">46.3</span> Logging Patterns: What to Capture and What to Omit</h2>
+    <p class="sec-lead">Logging LLM traffic is a balance between debuggability and risk. Prompts and completions are the richest debugging asset <em>and</em> the highest-risk data you handle.</p>
+
+    <h3>Core Concepts</h3>
+    <ul>
+      <li><strong>Structured logging.</strong> Emit machine-parseable records (e.g., JSON) with consistent fields, not free-text lines. Structured logs are queryable, aggregatable, and traceable.</li>
+      <li><strong>Correlation IDs.</strong> Attach a request/trace ID to every log line so you can reconstruct a single request's journey across services and tie logs to traces.</li>
+      <li><strong>Capture the operational envelope.</strong> Metadata that is safe and high-value: timestamps, model version/ID, prompt-template ID, token counts, latency, finish reason, retry counts, error codes, and eval/quality scores.</li>
+      <li><strong>Handle content carefully.</strong> Raw prompts and completions can contain PII, secrets, or proprietary data. Redact, sanitize, or sample rather than logging everything verbatim.</li>
+      <li><strong>Redaction / scrubbing.</strong> <em>Log redaction</em> and <em>log scrubbing</em> are used synonymously here — both mean removing or masking sensitive fields (PII, credentials) before persistence. Prefer redacting at capture time, not after storage.</li>
+      <li><strong>Retention and access control.</strong> Set retention windows appropriate to data sensitivity and compliance obligations, and restrict who can read raw content logs.</li>
+      <li><strong>Log levels &amp; volume.</strong> Use levels (DEBUG/INFO/WARN/ERROR) deliberately; verbose per-request content logging at full fidelity is expensive at scale — sample successes, keep full detail on errors.</li>
+    </ul>
+
+    <h3>Visualization — Capture vs. Omit / Redact</h3>
+    <table class="compare-table">
+      <thead>
+        <tr><th>Capture (safe &amp; useful)</th><th>Omit / Redact (risky)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Request metadata, latency, token counts</td><td>Raw PII in prompts or completions</td></tr>
+        <tr><td>Model version, prompt-template ID</td><td>Full user-uploaded documents</td></tr>
+        <tr><td>Error codes, finish reason, retry counts</td><td>Auth tokens, API keys, secrets</td></tr>
+        <tr><td>Correlation / trace ID, eval scores</td><td>Sensitive regulated data (health, financial) unless controlled</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      💡 <strong>Tip:</strong> Separate <em>what happened</em> (metadata: always safe, always log) from <em>what was said</em> (content: prompts/completions — sensitive, redact and sample). If a question asks what to log "by default at scale," the answer leans toward structured metadata plus redacted/sampled content, never raw verbatim content for every request.
+    </div>
+
+    <div class="warning-box">
+      ⚠️ <strong>Common Pitfall:</strong> Logging full prompts and completions verbatim "so we can debug later." This creates a PII/secret liability, inflates storage cost, and can violate data-handling policies. Also beware: redacting <em>after</em> writing to storage still leaves the raw data exposed in the interim — redact at capture time.
+    </div>
+
+    <div class="exam-box">
+      🎯 <strong>Exam Strategy:</strong>
+      <p>Tested via <em>scenario-based</em> "what should / shouldn't be logged" questions and <em>best-practice selection</em>. Watch for compliance-flavored stems and terminology (redaction = scrubbing).</p>
+      <p><strong>Signal phrases to watch for:</strong></p>
+      <div class="keywords"><span>PII / redaction</span><span>structured logging</span><span>correlation ID</span><span>retention</span><span>sample vs. verbatim</span></div>
+      <div class="qbox">
+        <span class="qlabel">Practice question</span>
+        A team wants to log every prompt and completion in full to aid debugging of a customer-facing Claude app. What is the primary risk, and what is the better pattern?<br><br>
+        <strong>Reasoning:</strong> The primary risk is capturing PII/secrets in content logs (a privacy/compliance and cost liability). The better pattern is structured metadata for every request plus redacted and <em>sampled</em> content, with correlation IDs, access controls, and defined retention. The exam rewards "redact + sample + control access," not "log everything" or "log nothing."
+      </div>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============================ 46.4 ============================ -->
+  <section class="subtopic" id="s464">
+    <h2 class="sec-title"><span class="code">46.4</span> Alerting on Model Quality Degradation</h2>
+    <p class="sec-lead">The hardest LLM monitoring problem: catching output quality getting worse when nothing "errors." This is where evaluation-based signals and drift detection earn their place.</p>
+
+    <h3>Core Concepts</h3>
+    <ul>
+      <li><strong>Infrastructure drift vs. semantic drift.</strong> <em>Infrastructure drift</em> = latency, error, cost changes. <em>Semantic drift</em> = output quality changes (relevance, correctness, hallucination rate, tone/safety). They need different detectors and different metrics.</li>
+      <li><strong>Sources of degradation.</strong> Input distribution shift (users ask new kinds of questions), prompt/template changes, model or version changes, upstream data/RAG source changes, and configuration drift. Instrument so you can attribute a drop to one of these.</li>
+      <li><strong>Quality signals to alert on.</strong> Automated eval scores on sampled traffic, guardrail/violation rates, refusal or "I don't know" rates, user feedback (thumbs up/down), fallback and retry rates, and output-format validation failures.</li>
+      <li><strong>Automated evaluation.</strong> Score sampled production outputs against reference criteria — using rule-based checks, classifiers, or an LLM-as-judge — to produce a trackable quality metric. Treat judge scores as <em>noisy proxies</em>, not ground truth.</li>
+      <li><strong>Detection vs. remediation.</strong> <em>Alerting</em> tells you quality dropped (detection). <em>Remediation</em> is the response — rollback, revert a prompt, switch models, or route to a fallback. Exams frequently pit these two against each other.</li>
+      <li><strong>Baselines &amp; thresholds.</strong> Alert on deviation from an established baseline (e.g., a sustained drop in pass-rate over a window), not on a single noisy sample. Use windows and sustained-breach conditions to avoid alert fatigue.</li>
+      <li><strong>Canary &amp; guardrails.</strong> Roll changes out to a small slice first and compare quality against the baseline before full deployment; layer input/output guardrails to catch unsafe or malformed responses in real time.</li>
+    </ul>
+
+    <h3>Visualization — Degradation detection &amp; response flow</h3>
+    <div class="flow">
+      <div class="node"><span class="nlabel">Sample</span><span class="ndesc">Select subset of prod traffic</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Evaluate</span><span class="ndesc">Score quality (rules / judge)</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Compare</span><span class="ndesc">Deviation vs. baseline</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Alert</span><span class="ndesc">Sustained breach → notify</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Remediate</span><span class="ndesc">Rollback / reroute / fix</span></div>
+    </div>
+
+    <h3>Visualization — Metric category → alert type</h3>
+    <table>
+      <thead>
+        <tr><th>Symptom</th><th>Category</th><th>Likely response</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>p99 latency rising</td><td>Infrastructure drift</td><td>Scale / investigate resources</td></tr>
+        <tr><td>Eval pass-rate falling</td><td>Semantic drift</td><td>Review prompt/model change; rollback</td></tr>
+        <tr><td>Refusal / fallback rate spiking</td><td>Semantic drift</td><td>Inspect inputs &amp; guardrails</td></tr>
+        <tr><td>Cost per request jumping</td><td>Infrastructure / usage</td><td>Check output length, token limits</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      💡 <strong>Tip:</strong> When monitoring LLM quality degradation, distinguish between <em>infrastructure drift</em> (latency, errors) and <em>semantic drift</em> (output quality, hallucination rate) — exams often test whether you pick the correct metric category. A follow-on trap tests whether you know the alert is only <em>detection</em>; the fix (rollback/retrain/reroute) is <em>remediation</em>.
+    </div>
+
+    <div class="warning-box">
+      ⚠️ <strong>Common Pitfall:</strong> Treating an LLM-as-judge eval score as absolute ground truth, or alerting on a single sampled data point. Judge scores are noisy proxies — alert on <em>sustained</em> deviation from a baseline over a window, and validate the eval itself. Also don't confuse detecting degradation with fixing it.
+    </div>
+
+    <div class="exam-box">
+      🎯 <strong>Exam Strategy:</strong>
+      <p>Questions on alerting thresholds often present a scenario with a specific % drop in a quality metric. Look for whether the question is asking about <em>detection</em> (alerting) vs. <em>remediation</em> (rollback/retraining) — these are commonly confused distractors. Also common: classify a symptom as infrastructure vs. semantic drift.</p>
+      <p><strong>Signal phrases to watch for:</strong></p>
+      <div class="keywords"><span>semantic drift</span><span>eval pass-rate</span><span>LLM-as-judge</span><span>detection vs. remediation</span><span>baseline / threshold</span><span>canary</span></div>
+      <div class="qbox">
+        <span class="qlabel">Practice question</span>
+        Automated evals show answer-quality pass-rate dropped from a stable baseline after a prompt-template update, while latency and errors are unchanged. What does the alert indicate, and what is the appropriate first action?<br><br>
+        <strong>Reasoning:</strong> Unchanged latency/errors but falling eval pass-rate points to <em>semantic drift</em>, likely caused by the template change. The alert is <em>detection</em> only; the appropriate first <em>remediation</em> is to roll back / revert the prompt change and re-measure. The exam rewards separating "what the alert tells you" (detection of semantic drift) from "what you do about it" (remediation), and correctly attributing cause to the recent change.
+      </div>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============================ 46.5 ============================ -->
+  <section class="subtopic" id="s465">
+    <h2 class="sec-title"><span class="code">46.5</span> Hands-On: Building an Observability Stack</h2>
+    <p class="sec-lead">Assembling the pieces into a coherent pipeline: instrument → collect → store → visualize → alert. The tools below are <em>illustrative categories</em>; the exam tests the architecture and roles, not any single vendor.</p>
+
+    <h3>Core Concepts</h3>
+    <ul>
+      <li><strong>Instrumentation layer.</strong> Emit metrics, logs, and traces from the application. Open, vendor-neutral instrumentation standards (for example, OpenTelemetry) let you decouple what you emit from where it's stored.</li>
+      <li><strong>Collection / pipeline.</strong> A collector or agent receives telemetry, processes it (batching, sampling, redaction), and forwards it to backends. This is the natural place to enforce redaction before storage.</li>
+      <li><strong>Storage backends.</strong> Different signal types suit different stores: time-series databases for metrics, log/search stores for logs, and trace stores for traces. LLM-specific eval results are typically stored alongside as metrics or structured records.</li>
+      <li><strong>Visualization &amp; dashboards.</strong> Dashboards turn stored signals into human-readable views — separate infra dashboards (latency, errors, cost, tokens) from quality dashboards (eval pass-rate, feedback, guardrail hits).</li>
+      <li><strong>Alerting layer.</strong> Rules evaluate metrics/eval scores against SLOs and route notifications. Configure sustained-breach windows to reduce noise.</li>
+      <li><strong>Evaluation pipeline.</strong> An offline/online loop that samples production traffic, scores it, and feeds results back as a monitorable quality metric — the LLM-specific addition to the classic stack.</li>
+      <li><strong>Trace-driven debugging.</strong> With distributed traces and correlation IDs, you can drill from an alert to the exact request, view its full chain (retrieval, tool calls, model call), and find the failing step.</li>
+    </ul>
+
+    <h3>Visualization — Reference pipeline (end to end)</h3>
+    <div class="flow">
+      <div class="node"><span class="nlabel">Instrument</span><span class="ndesc">App emits metrics / logs / traces</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Collect</span><span class="ndesc">Process, sample, redact</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Store</span><span class="ndesc">Metrics / logs / traces backends</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Visualize</span><span class="ndesc">Infra + quality dashboards</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nlabel">Alert</span><span class="ndesc">SLO breach → notify → remediate</span></div>
+    </div>
+
+    <h3>Visualization — Layer responsibilities</h3>
+    <div class="layer-stack">
+      <div class="layer"><span class="tag">Instrument</span><span class="body"><strong>What to emit.</strong> Standardized metrics, structured logs with correlation IDs, and spans for each pipeline step.</span></div>
+      <div class="layer"><span class="tag">Collect</span><span class="body"><strong>Enforcement point.</strong> Batching, sampling, and <em>redaction at capture</em> before anything is persisted.</span></div>
+      <div class="layer"><span class="tag">Store</span><span class="body"><strong>Right store per signal.</strong> Time-series for metrics, search store for logs, trace store for traces, eval results as metrics/records.</span></div>
+      <div class="layer"><span class="tag">Visualize</span><span class="body"><strong>Two dashboard families.</strong> Keep infrastructure and semantic-quality views distinct so neither masks the other.</span></div>
+      <div class="layer"><span class="tag">Alert</span><span class="body"><strong>SLO-driven.</strong> Sustained-breach rules on both infra and quality SLIs, routed to on-call, with clear remediation runbooks.</span></div>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Tip:</strong> Memorize the five-stage backbone — <strong>Instrument → Collect → Store → Visualize → Alert</strong> — and remember the LLM twist: an <em>evaluation loop</em> feeds a semantic-quality metric into the same Store/Visualize/Alert stages. If a question drops a tool into the wrong stage (e.g., "use the dashboard tool to redact PII"), that mismatch is usually the wrong answer.
+    </div>
+
+    <div class="warning-box">
+      ⚠️ <strong>Common Pitfall:</strong> Coupling your app tightly to one vendor's SDK, making backends hard to swap; or performing redaction only in the visualization layer (too late — raw data was already stored). Redaction belongs in the collection/instrumentation stage. Another trap: building only infra dashboards and omitting the evaluation loop, so semantic drift stays invisible.
+    </div>
+
+    <div class="exam-box">
+      🎯 <strong>Exam Strategy:</strong>
+      <p>Tested with <em>architecture / component-role</em> questions ("which layer does X?") and <em>best-practice</em> ordering. They favor vendor-neutral, open-standard designs and correct placement of concerns (e.g., where redaction happens).</p>
+      <p><strong>Signal phrases to watch for:</strong></p>
+      <div class="keywords"><span>instrument → collect → store → visualize → alert</span><span>OpenTelemetry (open standard)</span><span>evaluation loop</span><span>vendor-neutral</span><span>trace drill-down</span></div>
+      <div class="qbox">
+        <span class="qlabel">Practice question</span>
+        Your architecture must guarantee that PII never lands in persistent log storage. At which stage of the observability pipeline should redaction occur, and why?<br><br>
+        <strong>Reasoning:</strong> Redaction must occur at <em>instrumentation/collection time</em> — before the data reaches storage — so raw PII is never persisted. Doing it in the visualization or query layer is too late (the raw data already exists at rest). The exam rewards "redact upstream, at capture/collection," and penalizes "redact in the dashboard."
+      </div>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============================ SUMMARY ============================ -->
+  <section class="summary" id="summary">
+    <h2>★ Chapter Summary &amp; Cheat Sheet</h2>
+    <p class="sec-lead" style="border:none;padding-bottom:6px;">One-line takeaways and the exam tip that most often unlocks each subtopic.</p>
+
+    <table>
+      <thead>
+        <tr><th style="width:120px;">Subtopic</th><th>Key takeaway</th><th>Exam tip</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>46.1</strong> Challenges</td>
+          <td>LLMs are non-deterministic and fail silently (200 OK, bad content), so infra health ≠ output quality.</td>
+          <td>Classify every signal as <em>infrastructure</em> vs. <em>semantic</em>.</td>
+        </tr>
+        <tr>
+          <td><strong>46.2</strong> Strategies</td>
+          <td>Reuse SRE frameworks (Golden Signals, RED, USE) and layer LLM metrics (tokens, cost, TTFT, evals) on top; define SLIs/SLOs first.</td>
+          <td>RED = requests, USE = resources; alert on p95/p99, not averages.</td>
+        </tr>
+        <tr>
+          <td><strong>46.3</strong> Logging</td>
+          <td>Always log structured metadata + correlation IDs; redact and sample content; never log secrets/PII verbatim.</td>
+          <td>Separate "what happened" (log) from "what was said" (redact/sample).</td>
+        </tr>
+        <tr>
+          <td><strong>46.4</strong> Alerting</td>
+          <td>Detect semantic drift via sampled evals against a baseline; alerting = detection, rollback/reroute = remediation.</td>
+          <td>Ask: is the question about detection or remediation? Infra or semantic drift?</td>
+        </tr>
+        <tr>
+          <td><strong>46.5</strong> Stack</td>
+          <td>Instrument → Collect → Store → Visualize → Alert, plus an evaluation loop; redact at collection; stay vendor-neutral.</td>
+          <td>Match each concern to the correct layer; redaction lives upstream.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:26px;">If you remember only 5 things</h3>
+    <ol class="remember-list">
+      <li><strong>Infra ≠ quality.</strong> Green latency/error/cost dashboards can hide hallucinated or irrelevant output — LLMs fail silently with 200 OK.</li>
+      <li><strong>Two signal categories.</strong> Every metric is either <em>infrastructure</em> (latency, errors, cost, saturation) or <em>semantic</em> (relevance, correctness, hallucination, safety). Pick the right one.</li>
+      <li><strong>Log metadata, redact content.</strong> Structured metadata + correlation IDs for every request; redact/sample prompts &amp; completions at capture; never persist secrets or PII verbatim.</li>
+      <li><strong>Detection vs. remediation.</strong> Alerts (on sustained deviation from a baseline) only <em>detect</em> semantic drift; rollback, reroute, or fix is the separate <em>remediation</em> step.</li>
+      <li><strong>Five-stage stack + eval loop.</strong> Instrument → Collect → Store → Visualize → Alert, with an evaluation loop feeding a quality metric; redact upstream and keep the design vendor-neutral.</li>
+    </ol>
+
+    <p class="verify-note">
+      <strong>Accuracy note:</strong> Framework names (Golden Signals, RED, USE), the three pillars (metrics/logs/traces), SLI/SLO/error-budget terminology, and the instrument→collect→store→visualize→alert pattern are well-established, vendor-neutral concepts. Tool references (e.g., OpenTelemetry) are given as <em>illustrative examples</em> of open-standard instrumentation, not as required products. No specific benchmark numbers, vendor performance claims, or Claude-internal metrics are asserted; any dashboard figures mentioned are hypothetical and framed as illustrative.
+    </p>
+  </section>
+
+</div>
+
+
+</body></html>

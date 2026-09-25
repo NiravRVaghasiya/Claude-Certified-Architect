@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 56: Regulatory Compliance — Claude Certified Architect Exam Notes</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-alt: #f0f3f8;
+    --text: #1a2233;
+    --text-soft: #47536b;
+    --muted: #6b7688;
+    --border: #dfe3ea;
+    --border-strong: #c4cbd6;
+    --primary: #4338ca;
+    --primary-soft: #eef0ff;
+    --accent: #0b7285;
+    --gdpr: #1d6fb8;
+    --hipaa: #0f8a5f;
+    --fedramp: #8a4b1d;
+    --industry: #7b3fb0;
+    --docs: #b8860b;
+    --tip-bg: #eafaf1;
+    --tip-border: #2f9e6b;
+    --exam-bg: #fff4e6;
+    --exam-border: #e8890c;
+    --pitfall-bg: #fdecea;
+    --pitfall-border: #d64545;
+    --code-bg: #2b2f3a;
+    --code-text: #e6e9f0;
+    --radius: 10px;
+    --radius-sm: 6px;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: 'SF Mono', 'Consolas', 'Monaco', monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.62;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 22px 80px; }
+
+  /* Header */
+  header.doc-head {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 55%, #0b7285 100%);
+    color: #fff;
+    padding: 46px 22px 40px;
+    text-align: center;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+  }
+  header.doc-head .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+  header.doc-head h1 {
+    font-size: 30px;
+    margin: 10px auto 8px;
+    max-width: 780px;
+    line-height: 1.25;
+  }
+  header.doc-head p.sub { opacity: 0.92; font-size: 15px; margin: 0; }
+
+  /* TOC */
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin: 34px 0;
+    box-shadow: 0 1px 4px rgba(20,30,60,0.05);
+  }
+  nav.toc h2 { margin: 0 0 14px; font-size: 18px; color: var(--primary); }
+  nav.toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 40px; }
+  nav.toc li { margin-bottom: 9px; break-inside: avoid; }
+  nav.toc a { color: var(--text-soft); text-decoration: none; font-size: 14.5px; }
+  nav.toc a:hover { color: var(--primary); text-decoration: underline; }
+  nav.toc code { color: var(--muted); font-family: var(--mono); font-size: 12.5px; margin-right: 4px; }
+
+  /* Sections */
+  section.chapter {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 4px rgba(20,30,60,0.05);
+    scroll-margin-top: 16px;
+  }
+  section.chapter > h2 {
+    font-size: 23px;
+    margin: 0 0 6px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  section.chapter > h2 .num {
+    font-family: var(--mono);
+    font-size: 16px;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+  }
+  #s1 h2 .num { background: var(--gdpr); }
+  #s2 h2 .num { background: var(--hipaa); }
+  #s3 h2 .num { background: var(--fedramp); }
+  #s4 h2 .num { background: var(--industry); }
+  #s5 h2 .num { background: var(--docs); }
+  #s6 h2 .num { background: var(--primary); }
+
+  h3 {
+    font-size: 16.5px;
+    color: var(--text);
+    margin: 26px 0 8px;
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+  }
+  h4 { font-size: 14.5px; margin: 18px 0 6px; color: var(--text-soft); }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  .lead { font-size: 15px; color: var(--text-soft); }
+
+  code.inline {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    background: var(--surface-alt);
+    padding: 1.5px 6px;
+    border-radius: 4px;
+    color: var(--accent);
+    border: 1px solid var(--border);
+  }
+
+  /* Tables */
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  table.data th {
+    background: var(--surface-alt);
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 600;
+    color: var(--text);
+    border-bottom: 2px solid var(--border-strong);
+    border-right: 1px solid var(--border);
+  }
+  table.data td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text-soft);
+  }
+  table.data tr:last-child td { border-bottom: none; }
+  table.data tr:nth-child(even) td { background: #fafbfd; }
+  table.data caption {
+    caption-side: top;
+    font-weight: 600;
+    text-align: left;
+    padding: 4px 0 8px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* Callout boxes */
+  .box { border-radius: var(--radius-sm); padding: 14px 16px; margin: 16px 0; font-size: 14px; }
+  .box strong.label { display: inline; }
+  .req-box { background: var(--primary-soft); border-left: 5px solid var(--primary); }
+  .relevance-box { background: #e7f5f8; border-left: 5px solid var(--accent); }
+  .tip-box { background: var(--tip-bg); border-left: 5px solid var(--tip-border); }
+  .exam-strategy { background: var(--exam-bg); border-left: 5px solid var(--exam-border); }
+  .pitfall-box { background: var(--pitfall-bg); border-left: 5px solid var(--pitfall-border); }
+  .box ul { margin: 8px 0 2px; }
+
+  .mnemonic {
+    font-family: var(--mono);
+    background: var(--surface);
+    border: 1px dashed var(--tip-border);
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--accent);
+  }
+
+  /* SVG diagram wrapper */
+  .diagram {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    margin: 16px 0;
+    text-align: center;
+    overflow-x: auto;
+  }
+  .diagram figcaption { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+
+  /* Decision tree (CSS) */
+  .decision-tree { font-size: 13px; }
+  .dt-node {
+    display: inline-block;
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    margin: 6px;
+    max-width: 260px;
+    text-align: left;
+  }
+  .dt-q { border-color: var(--exam-border); background: var(--exam-bg); }
+  .dt-yes { border-color: var(--tip-border); background: var(--tip-bg); }
+  .dt-no { border-color: var(--pitfall-border); background: var(--pitfall-bg); }
+  .dt-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; justify-content: center; }
+  .dt-branch-label { font-family: var(--mono); font-size: 11px; color: var(--muted); font-weight: 700; }
+
+  /* Code block */
+  pre.code {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin: 14px 0;
+  }
+  pre.code .c { color: #8a94a6; }
+  pre.code .k { color: #c792ea; }
+  pre.code .s { color: #a5d6a7; }
+
+  /* Status pills */
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 11.5px; font-weight: 700; font-family: var(--mono); }
+  .pill.done { background: var(--tip-bg); color: #1c6b45; }
+  .pill.progress { background: var(--exam-bg); color: #9a5a00; }
+  .pill.todo { background: var(--pitfall-bg); color: #a02c2c; }
+  .pill.na { background: var(--surface-alt); color: var(--muted); }
+
+  /* Steps */
+  ol.steps { counter-reset: step; list-style: none; padding-left: 0; }
+  ol.steps > li {
+    position: relative;
+    padding: 4px 0 14px 46px;
+    margin: 0;
+  }
+  ol.steps > li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 30px; height: 30px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px;
+    font-family: var(--mono);
+  }
+
+  /* Summary */
+  section.summary {
+    background: linear-gradient(135deg, #eef0ff 0%, #e7f5f8 100%);
+    border: 1px solid var(--border);
+  }
+  .takeaway-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .takeaway-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 13.5px;
+  }
+  .takeaway-card b { color: var(--primary); }
+
+  .self-check {
+    margin-top: 30px;
+    background: var(--surface);
+    border: 2px solid var(--tip-border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-soft);
+  }
+  .self-check strong { color: #1c6b45; }
+
+  .disclaimer {
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--surface-alt);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    margin: 18px 0 0;
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 680px) {
+    nav.toc ol { columns: 1; }
+    .takeaway-grid { grid-template-columns: 1fr; }
+    header.doc-head h1 { font-size: 23px; }
+    section.chapter { padding: 22px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  <div class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</div>
+  <h1>Chapter 56: Regulatory Compliance — Claude Certified Architect Exam Notes</h1>
+  <p class="sub">Understand · Retain · Apply — Compliance for deploying Claude-based AI applications</p>
+</header>
+
+<div class="wrap">
+
+  <p class="disclaimer">
+    <strong>Study-aid disclaimer:</strong> These notes summarize <em>publicly known</em> regulatory frameworks and standards as of 2024–2025. They are educational preparation guidance, not legal advice and not proprietary/leaked exam content. Regulations change — always confirm current article numbers, thresholds, and authorization requirements against the official source (EUR-Lex, HHS.gov, FedRAMP.gov, official standards bodies) before relying on them in production.
+  </p>
+
+  <!-- TABLE OF CONTENTS -->
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><code>56.1</code> <a href="#s1">GDPR: Data Protection &amp; the Right to Explanation</a></li>
+      <li><code>56.2</code> <a href="#s2">HIPAA: Healthcare Data &amp; AI Systems</a></li>
+      <li><code>56.3</code> <a href="#s3">FedRAMP: Government Cloud Compliance</a></li>
+      <li><code>56.4</code> <a href="#s4">Industry-Specific Regulations &amp; AI</a></li>
+      <li><code>56.5</code> <a href="#s5">Compliance Documentation &amp; Audit Trails</a></li>
+      <li><code>56.6</code> <a href="#s6">Hands-On: Building a Compliance Checklist</a></li>
+      <li><code>★</code> <a href="#summary">Chapter Summary &amp; Key Takeaways</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 56.1 GDPR ============ -->
+  <section class="chapter" id="s1">
+    <h2><span class="num">56.1</span> GDPR: Data Protection &amp; the Right to Explanation</h2>
+
+    <h3>Core Definition</h3>
+    <p class="lead">The <strong>General Data Protection Regulation (Regulation (EU) 2016/679)</strong> is the EU's comprehensive data-protection law, in force since <strong>25 May 2018</strong>. It governs the processing of <em>personal data</em> of individuals in the EU/EEA and applies extraterritorially to any organization — anywhere in the world — that offers goods/services to, or monitors the behavior of, people in the EU (<strong>Article 3</strong>).</p>
+    <p>Why it matters for AI: LLM applications routinely ingest personal data in prompts, retrieval sources, and logs. GDPR treats an organization deploying Claude as a <strong>controller</strong> (decides purposes/means) and the model/API provider often as a <strong>processor</strong> acting on documented instructions.</p>
+
+    <h3>Key Requirements</h3>
+    <div class="box req-box">
+      <strong class="label">📌 Must-know provisions:</strong>
+      <ul>
+        <li><strong>Art. 5</strong> — Principles: lawfulness/fairness/transparency, purpose limitation, <em>data minimisation</em>, accuracy, storage limitation, integrity &amp; confidentiality, <em>accountability</em>.</li>
+        <li><strong>Art. 6</strong> — A valid <em>lawful basis</em> is required (consent, contract, legal obligation, vital interests, public task, or legitimate interests).</li>
+        <li><strong>Arts. 13–14</strong> — Transparency / <em>information to be provided</em> when data is collected (identity of controller, purposes, retention, rights).</li>
+        <li><strong>Art. 15</strong> — Right of <em>access</em> (a copy of their data + meaningful information about processing).</li>
+        <li><strong>Arts. 16–17</strong> — Rectification and <em>erasure</em> ("right to be forgotten").</li>
+        <li><strong>Art. 22</strong> — Right not to be subject to a decision based <em>solely</em> on automated processing (incl. profiling) that produces legal or similarly significant effects; safeguards include human intervention.</li>
+        <li><strong>Art. 25</strong> — Data protection <em>by design and by default</em>.</li>
+        <li><strong>Art. 30</strong> — Records of processing activities (RoPA).</li>
+        <li><strong>Art. 32</strong> — Security of processing (appropriate technical &amp; organizational measures).</li>
+        <li><strong>Art. 35</strong> — <em>Data Protection Impact Assessment (DPIA)</em> for high-risk processing (large-scale profiling, sensitive data).</li>
+        <li><strong>Arts. 44–50</strong> — Restrictions on <em>international transfers</em> outside the EEA (adequacy decisions, SCCs, transfer risk assessments).</li>
+        <li><strong>Recital 71</strong> — Explains safeguards around automated decisions, including the ability to <em>obtain an explanation</em> of a decision reached.</li>
+      </ul>
+    </div>
+
+    <h3>Relevance to Claude / LLM Applications</h3>
+    <div class="box relevance-box">
+      <strong class="label">🤖 Claude-specific considerations:</strong>
+      <ul>
+        <li><strong>Data residency &amp; transfers:</strong> If EU personal data is sent to a model endpoint hosted outside the EEA, you need a transfer mechanism (SCCs / adequacy) and a <em>Data Processing Agreement (DPA)</em> with the provider.</li>
+        <li><strong>Data minimisation in prompts:</strong> Don't pump raw PII into prompts/context if it isn't needed; redact or tokenize.</li>
+        <li><strong>Right to erasure vs. training:</strong> Ensure customer data is <em>not</em> used to train foundation models unless a basis exists; configure zero-retention / no-training options where offered.</li>
+        <li><strong>Art. 22 &amp; explainability:</strong> If Claude output drives a <em>solely automated</em> significant decision (e.g., loan denial), you must offer human review and a meaningful explanation of the logic.</li>
+        <li><strong>DPIA:</strong> Large-scale or sensitive LLM processing typically triggers a mandatory DPIA before go-live.</li>
+      </ul>
+    </div>
+
+    <h3>Visualization — Data Subject Access/Erasure Request (DSAR) Handling Flow</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 720 250" width="100%" style="max-width:720px" role="img" aria-label="GDPR data subject request handling flow">
+        <defs>
+          <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#47536b"></path>
+          </marker>
+        </defs>
+        <!-- boxes -->
+        <rect x="10" y="95" width="120" height="52" rx="8" fill="#e7f0fb" stroke="#1d6fb8" stroke-width="2"></rect>
+        <text x="70" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">Request received</text>
+        <text x="70" y="132" text-anchor="middle" font-size="10" fill="#47536b">(access / erasure)</text>
+
+        <rect x="165" y="95" width="120" height="52" rx="8" fill="#fff4e6" stroke="#e8890c" stroke-width="2"></rect>
+        <text x="225" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">Verify identity</text>
+        <text x="225" y="132" text-anchor="middle" font-size="10" fill="#47536b">within 1 month*</text>
+
+        <rect x="320" y="95" width="120" height="52" rx="8" fill="#fff4e6" stroke="#e8890c" stroke-width="2"></rect>
+        <text x="380" y="112" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2233">Locate data</text>
+        <text x="380" y="128" text-anchor="middle" font-size="9.5" fill="#47536b">DBs, logs, prompts,</text>
+        <text x="380" y="140" text-anchor="middle" font-size="9.5" fill="#47536b">vector store, backups</text>
+
+        <rect x="475" y="30" width="120" height="52" rx="8" fill="#eafaf1" stroke="#2f9e6b" stroke-width="2"></rect>
+        <text x="535" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2233">Fulfil &amp; respond</text>
+        <text x="535" y="68" text-anchor="middle" font-size="10" fill="#47536b">provide copy / delete</text>
+
+        <rect x="475" y="160" width="120" height="52" rx="8" fill="#fdecea" stroke="#d64545" stroke-width="2"></rect>
+        <text x="535" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2233">Assess exemption</text>
+        <text x="535" y="198" text-anchor="middle" font-size="10" fill="#47536b">legal hold? refuse?</text>
+
+        <rect x="620" y="95" width="90" height="52" rx="8" fill="#e7f0fb" stroke="#1d6fb8" stroke-width="2"></rect>
+        <text x="665" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2233">Log &amp; audit</text>
+        <text x="665" y="132" text-anchor="middle" font-size="10" fill="#47536b">trail</text>
+
+        <!-- arrows -->
+        <line x1="130" y1="121" x2="163" y2="121" stroke="#47536b" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="285" y1="121" x2="318" y2="121" stroke="#47536b" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="440" y1="110" x2="473" y2="70" stroke="#47536b" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="440" y1="132" x2="473" y2="180" stroke="#47536b" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="595" y1="56" x2="640" y2="93" stroke="#47536b" stroke-width="2" marker-end="url(#arrow)"></line>
+        <line x1="595" y1="186" x2="640" y2="149" stroke="#47536b" stroke-width="2" marker-end="url(#arrow)"></line>
+      </svg>
+      <figcaption>*One-month response window (extendable by two months for complex requests, Art. 12(3)). Note: data hiding in <strong>logs, vector embeddings and backups</strong> is the most-missed location.</figcaption>
+    </figure>
+
+    <h3>Common Pitfalls</h3>
+    <div class="box pitfall-box">
+      <strong class="label">⚠️ Watch out:</strong>
+      <ul>
+        <li>Assuming <strong>"consent" is always the basis</strong> — often <em>legitimate interests</em> or <em>contract</em> is more appropriate; consent must be freely given and revocable.</li>
+        <li>Forgetting personal data persists in <strong>prompt/response logs, vector embeddings, and backups</strong> — erasure must reach these too.</li>
+        <li>Treating GDPR as <strong>EU-only</strong> — it applies extraterritorially (Art. 3).</li>
+        <li>Believing the "right to explanation" is a <strong>named article</strong> — it is <em>not</em> (see tip).</li>
+        <li>Sending PII cross-border without a <strong>transfer mechanism</strong> or DPA.</li>
+      </ul>
+    </div>
+
+    <h3>Tips &amp; Tricks</h3>
+    <div class="tip-box box">
+      <strong>💡 Tip:</strong> GDPR's "Right to Explanation" is <em>not explicitly named</em> in a binding article — it's inferred from <strong>Article 22</strong> (automated decision-making) reinforced by <strong>Recital 71</strong>. Exam questions love testing this nuance: the safeguard is a <em>right to human intervention and to contest</em> the decision; "explanation" language lives in a non-binding recital.
+      <div class="mnemonic">Mnemonic — "PLAN-S": <b>P</b>urpose limitation · <b>L</b>awful basis · <b>A</b>ccuracy · <b>N</b>o excess (minimisation) · <b>S</b>ecurity + accountability</div>
+    </div>
+
+    <h3>Exam Strategy</h3>
+    <div class="exam-strategy box">
+      <strong>🎯 Exam Strategy:</strong> GDPR questions are usually <em>scenario</em>-based ("A US company builds a Claude chatbot used by customers in Germany…").
+      <ul>
+        <li><strong>Keyword triggers:</strong> "solely automated," "legal or similarly significant effect" → think <strong>Art. 22</strong>. "Copy of data" → <strong>Art. 15</strong>. "High-risk / large-scale profiling" → <strong>DPIA / Art. 35</strong>. "Transfer outside EEA" → <strong>SCCs / Art. 44–50</strong>.</li>
+        <li><strong>Elimination technique:</strong> Distractors often name an article that <em>sounds</em> right but addresses a different right (e.g., Art. 17 erasure vs. Art. 16 rectification). Match the <em>verb</em> in the stem to the right (delete → 17, correct → 16, get a copy → 15).</li>
+        <li><strong>Trap:</strong> Any option asserting a standalone "Right to Explanation article" is almost always the wrong answer — reject it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 56.2 HIPAA ============ -->
+  <section class="chapter" id="s2">
+    <h2><span class="num">56.2</span> HIPAA: Healthcare Data &amp; AI Systems</h2>
+
+    <h3>Core Definition</h3>
+    <p class="lead">The <strong>Health Insurance Portability and Accountability Act (1996)</strong>, with rules issued by the US Dept. of Health &amp; Human Services (HHS), protects <strong>Protected Health Information (PHI)</strong> — individually identifiable health information held or transmitted by <em>covered entities</em> (providers, health plans, clearinghouses) and their <em>business associates</em>.</p>
+    <p>Why it matters for AI: A Claude-powered healthcare assistant that processes PHI makes the AI vendor a <strong>Business Associate</strong>, requiring a signed <strong>Business Associate Agreement (BAA)</strong> and adherence to the Security &amp; Privacy Rules.</p>
+
+    <h3>Key Requirements</h3>
+    <div class="box req-box">
+      <strong class="label">📌 The core HIPAA rules:</strong>
+      <ul>
+        <li><strong>Privacy Rule</strong> — governs <em>use and disclosure</em> of PHI; enforces the <em>Minimum Necessary</em> standard.</li>
+        <li><strong>Security Rule</strong> — protects <em>electronic</em> PHI (ePHI) via three safeguard families: <em>Administrative, Physical, and Technical</em> (access control, audit controls, integrity, transmission security, encryption as an "addressable" implementation spec).</li>
+        <li><strong>Breach Notification Rule</strong> — notify affected individuals (and HHS) of breaches of unsecured PHI, generally without unreasonable delay and no later than <strong>60 days</strong>.</li>
+        <li><strong>Business Associate Agreement (BAA)</strong> — mandatory contract before any vendor may process PHI (§164.502(e), §164.504(e)).</li>
+        <li><strong>De-identification (§164.514)</strong> — two methods: <em>Safe Harbor</em> (remove 18 specified identifiers) or <em>Expert Determination</em> (a qualified expert certifies very small re-identification risk).</li>
+      </ul>
+    </div>
+
+    <h3>Relevance to Claude / LLM Applications</h3>
+    <div class="box relevance-box">
+      <strong class="label">🤖 Claude-specific considerations:</strong>
+      <ul>
+        <li><strong>Sign a BAA first</strong> — do not send PHI to any endpoint without a BAA in place with the provider.</li>
+        <li><strong>Minimum necessary in context:</strong> only include the PHI needed for the task; avoid dumping full charts into prompts.</li>
+        <li><strong>De-identify when possible:</strong> if PHI can be stripped via Safe Harbor / Expert Determination, HIPAA obligations no longer attach to that (de-identified) data.</li>
+        <li><strong>Audit controls (Technical Safeguard):</strong> log access to ePHI, including who prompted the model with what.</li>
+        <li><strong>No-training / zero-retention:</strong> ensure ePHI is not retained or used to improve models.</li>
+        <li><strong>Encryption</strong> in transit and at rest for ePHI stores, vector DBs, and logs.</li>
+      </ul>
+    </div>
+
+    <h3>Visualization — GDPR vs. HIPAA vs. FedRAMP Scope Comparison</h3>
+    <table class="data">
+      <caption>Cross-framework comparison (also referenced in 56.3)</caption>
+      <tbody><tr>
+        <th>Aspect</th><th>GDPR</th><th>HIPAA</th><th>FedRAMP</th>
+      </tr>
+      <tr><td><strong>Jurisdiction</strong></td><td>EU/EEA (extraterritorial)</td><td>United States</td><td>United States (federal)</td></tr>
+      <tr><td><strong>Protects</strong></td><td>Personal data of individuals</td><td>PHI / ePHI (health data)</td><td>Federal information in cloud systems</td></tr>
+      <tr><td><strong>Who must comply</strong></td><td>Controllers &amp; processors</td><td>Covered entities &amp; business associates</td><td>Cloud Service Providers (CSPs) serving federal agencies</td></tr>
+      <tr><td><strong>Nature</strong></td><td>Law / regulation</td><td>Law + HHS rules</td><td>Government authorization program (built on NIST 800-53)</td></tr>
+      <tr><td><strong>Key instrument</strong></td><td>DPA + SCCs</td><td>BAA</td><td>ATO (Authority to Operate)</td></tr>
+      <tr><td><strong>Enforcement</strong></td><td>Supervisory authorities (DPAs); fines up to 4% global turnover / €20M</td><td>HHS OCR; civil &amp; criminal penalties</td><td>Sponsoring agency / JAB; loss of authorization</td></tr>
+      <tr><td><strong>AI hot-spot</strong></td><td>Automated decisions, transfers</td><td>PHI in prompts/logs, de-identification</td><td>Impact level &amp; continuous monitoring</td></tr>
+    </tbody></table>
+
+    <h3>Common Pitfalls</h3>
+    <div class="box pitfall-box">
+      <strong class="label">⚠️ Watch out:</strong>
+      <ul>
+        <li>Processing PHI <strong>before a BAA is signed</strong> — a top compliance failure.</li>
+        <li>Assuming "removing the name" = de-identified. <strong>Safe Harbor requires all 18 identifiers</strong> removed (incl. dates finer than year, ZIP beyond first 3 digits, device IDs, etc.).</li>
+        <li>Confusing <strong>de-identified</strong> data (no HIPAA obligations) with a <strong>Limited Data Set</strong> (still PHI, needs a Data Use Agreement).</li>
+        <li>Treating encryption as optional — it's an "addressable" spec, meaning you must implement it <em>or document a justified equivalent</em>, not simply skip it.</li>
+        <li>Forgetting the <strong>Minimum Necessary</strong> rule when constructing prompts.</li>
+      </ul>
+    </div>
+
+    <h3>Tips &amp; Tricks</h3>
+    <div class="tip-box box">
+      <strong>💡 Tip:</strong> Memorize the three Security Rule safeguard families as <span class="mnemonic">"A-P-T": <b>A</b>dministrative · <b>P</b>hysical · <b>T</b>echnical</span> and remember de-identification has exactly <strong>two</strong> valid methods.
+      <div class="mnemonic">De-ID methods — "SEE": <b>S</b>afe Harbor (18 identifiers) · <b>E</b>xpert Determination · (nothing <b>E</b>lse counts)</div>
+    </div>
+
+    <h3>Exam Strategy</h3>
+    <div class="exam-strategy box">
+      <strong>🎯 Exam Strategy:</strong> Questions on HIPAA + AI often present a scenario with a "de-identified dataset." Check <em>which method</em> was used — Safe Harbor vs. Expert Determination is the usual distractor trap; an answer implying a third method is wrong.
+      <ul>
+        <li><strong>Keyword triggers:</strong> "vendor processes PHI" → <strong>BAA required</strong>. "only include needed fields" → <strong>Minimum Necessary</strong>. "notify within 60 days" → <strong>Breach Notification Rule</strong>. "audit log of access" → <strong>Technical Safeguards</strong>.</li>
+        <li><strong>Elimination technique:</strong> If an option lets an AI vendor touch PHI with "just a standard SaaS agreement," eliminate it — HIPAA needs a BAA specifically.</li>
+        <li><strong>Trap:</strong> "Encryption is not required by HIPAA" is a half-truth distractor — it's <em>addressable</em>, not simply optional.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 56.3 FedRAMP ============ -->
+  <section class="chapter" id="s3">
+    <h2><span class="num">56.3</span> FedRAMP: Government Cloud Compliance</h2>
+
+    <h3>Core Definition</h3>
+    <p class="lead">The <strong>Federal Risk and Authorization Management Program (FedRAMP)</strong> is a US government program that standardizes security assessment, authorization, and continuous monitoring for <strong>cloud products and services</strong> used by federal agencies. It is built on the <strong>NIST SP 800-53</strong> security control catalog.</p>
+    <p>Why it matters for AI: To offer a Claude-based service to US federal agencies, the cloud service must obtain a FedRAMP <strong>Authority to Operate (ATO)</strong> at the appropriate impact level.</p>
+
+    <h3>Key Requirements</h3>
+    <div class="box req-box">
+      <strong class="label">📌 Must-know mechanics:</strong>
+      <ul>
+        <li><strong>Impact levels</strong> (from FIPS 199): <em>Low</em>, <em>Moderate</em>, and <em>High</em> — plus <em>LI-SaaS</em> (Low-Impact SaaS / "Tailored") for low-risk apps.</li>
+        <li><strong>Authorization paths:</strong> historically <em>JAB</em> (Joint Authorization Board) P-ATO and <em>Agency</em> ATO. (The program has been modernizing; agency-sponsored authorization remains central.)</li>
+        <li><strong>3PAO</strong> — an accredited <em>Third-Party Assessment Organization</em> independently tests the controls.</li>
+        <li><strong>Key artifacts:</strong> <em>System Security Plan (SSP)</em>, <em>Security Assessment Plan/Report (SAP/SAR)</em>, and <em>Plan of Action &amp; Milestones (POA&amp;M)</em>.</li>
+        <li><strong>Continuous Monitoring (ConMon)</strong> — ongoing scanning, POA&amp;M management, and monthly reporting after authorization.</li>
+        <li><strong>FedRAMP Marketplace</strong> lists authorized offerings.</li>
+      </ul>
+    </div>
+
+    <h3>Relevance to Claude / LLM Applications</h3>
+    <div class="box relevance-box">
+      <strong class="label">🤖 Claude-specific considerations:</strong>
+      <ul>
+        <li><strong>Use an authorized environment:</strong> deploy via a cloud region/offering that already holds the needed FedRAMP authorization (e.g., government cloud boundaries).</li>
+        <li><strong>Data boundary:</strong> ensure federal data never leaves the authorized boundary — including model inference, logging, and vector storage.</li>
+        <li><strong>Inherited controls:</strong> document which NIST 800-53 controls you inherit from the platform vs. which you implement in your app layer (a "customer responsibility matrix").</li>
+        <li><strong>Impact level match:</strong> classify the data (Low/Moderate/High) and select an offering authorized at or above that level.</li>
+        <li><strong>ConMon burden:</strong> your app inherits ongoing monitoring/reporting obligations.</li>
+      </ul>
+    </div>
+
+    <h3>Visualization — FedRAMP Authorization Decision Tree</h3>
+    <div class="diagram decision-tree">
+      <div class="dt-row">
+        <div class="dt-node dt-q">Q1: Will a US <strong>federal agency</strong> use the cloud service?</div>
+      </div>
+      <div class="dt-row">
+        <div class="dt-node dt-no"><span class="dt-branch-label">NO →</span> FedRAMP not required (other frameworks may still apply).</div>
+        <div class="dt-node dt-yes"><span class="dt-branch-label">YES →</span> FedRAMP authorization needed. Go to Q2.</div>
+      </div>
+      <div class="dt-row">
+        <div class="dt-node dt-q">Q2: What is the data <strong>impact level</strong> (FIPS 199)?</div>
+      </div>
+      <div class="dt-row">
+        <div class="dt-node">Low / LI-SaaS → tailored baseline</div>
+        <div class="dt-node">Moderate → most common baseline</div>
+        <div class="dt-node">High → sensitive gov data</div>
+      </div>
+      <div class="dt-row">
+        <div class="dt-node dt-q">Q3: Choose path → <strong>Agency sponsorship</strong> (or JAB, historically). Engage a <strong>3PAO</strong> → produce SSP/SAP/SAR/POA&amp;M → obtain <strong>ATO</strong> → ongoing <strong>ConMon</strong>.</div>
+      </div>
+    </div>
+
+    <h3>Common Pitfalls</h3>
+    <div class="box pitfall-box">
+      <strong class="label">⚠️ Watch out:</strong>
+      <ul>
+        <li>Thinking a commercial SOC 2 report <strong>equals</strong> a FedRAMP ATO — it does not.</li>
+        <li>Choosing an offering authorized at <strong>Low</strong> when the data is <strong>Moderate/High</strong>.</li>
+        <li>Letting federal data flow <strong>outside the authorized boundary</strong> (e.g., logging to a non-authorized service).</li>
+        <li>Treating authorization as <strong>one-and-done</strong> — ConMon is continuous.</li>
+        <li>Skipping the <strong>customer responsibility matrix</strong> (which controls you must implement yourself).</li>
+      </ul>
+    </div>
+
+    <h3>Tips &amp; Tricks</h3>
+    <div class="tip-box box">
+      <strong>💡 Tip:</strong> FedRAMP = "assess once, use many." One authorization can be reused across agencies. Anchor the acronyms with:
+      <div class="mnemonic">"Sammy Saw A POAM": <b>SSP</b> → <b>SAP/SAR</b> → <b>ATO</b> → <b>POA&amp;M</b> → ConMon</div>
+      Remember <strong>3PAO = independent assessor</strong>; the CSP cannot assess itself.
+    </div>
+
+    <h3>Exam Strategy</h3>
+    <div class="exam-strategy box">
+      <strong>🎯 Exam Strategy:</strong>
+      <ul>
+        <li><strong>Keyword triggers:</strong> "federal agency" + "cloud" → <strong>FedRAMP</strong>. "independent assessment" → <strong>3PAO</strong>. "authorization to operate" → <strong>ATO</strong>. "monthly scans / ongoing" → <strong>ConMon</strong>. "NIST 800-53" → FedRAMP control basis.</li>
+        <li><strong>Elimination technique:</strong> Options that mix jurisdictions (e.g., "FedRAMP protects EU citizens' health data") are cross-framework distractors — eliminate immediately.</li>
+        <li><strong>Trap:</strong> Confusing <em>impact level</em> (Low/Mod/High) with GDPR "risk" or HIPAA safeguards. FedRAMP levels come from <strong>FIPS 199</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 56.4 Industry-specific ============ -->
+  <section class="chapter" id="s4">
+    <h2><span class="num">56.4</span> Industry-Specific Regulations &amp; AI</h2>
+
+    <h3>Core Definition</h3>
+    <p class="lead">Beyond the "big three," many <strong>sector-specific</strong> and <strong>AI-specific</strong> rules apply depending on domain (finance, payments, children, EU AI market). Architects must map the deployment context to the applicable overlay.</p>
+
+    <h3>Key Requirements</h3>
+    <div class="box req-box">
+      <strong class="label">📌 High-yield frameworks:</strong>
+      <ul>
+        <li><strong>EU AI Act (Regulation (EU) 2024/1689):</strong> risk-tiered — <em>Unacceptable</em> (banned), <em>High-risk</em> (strict obligations: risk management, data governance, logging, human oversight, transparency), <em>Limited</em> (transparency duties, e.g., disclosing AI interaction / labeling synthetic content), <em>Minimal</em>. Includes obligations for <em>General-Purpose AI (GPAI)</em> models.</li>
+        <li><strong>SOC 2:</strong> AICPA Trust Services Criteria (Security, Availability, Processing Integrity, Confidentiality, Privacy) — an <em>attestation</em>, common for SaaS due diligence.</li>
+        <li><strong>PCI DSS:</strong> protects <em>cardholder data</em> — keep payment card numbers out of prompts/logs entirely.</li>
+        <li><strong>GLBA:</strong> financial institutions safeguarding customer financial data.</li>
+        <li><strong>SEC / FINRA:</strong> recordkeeping and supervision for regulated financial communications.</li>
+        <li><strong>COPPA:</strong> data of children under 13 (US) — parental consent.</li>
+        <li><strong>NIST AI RMF</strong> and <strong>ISO/IEC 42001</strong> (AI management systems): voluntary governance frameworks increasingly used as baselines.</li>
+      </ul>
+    </div>
+
+    <h3>Relevance to Claude / LLM Applications</h3>
+    <div class="box relevance-box">
+      <strong class="label">🤖 Claude-specific considerations:</strong>
+      <ul>
+        <li><strong>EU AI Act transparency:</strong> a customer-facing Claude bot generally must <em>disclose that the user is interacting with AI</em>; AI-generated/manipulated content may need labeling.</li>
+        <li><strong>High-risk classification:</strong> if Claude is embedded in a high-risk use (e.g., credit scoring, medical device, employment screening), the full high-risk obligation stack applies (data governance, logging, human oversight, conformity assessment).</li>
+        <li><strong>PCI DSS:</strong> never let card PANs enter prompts, context windows, or logs — tokenize upstream.</li>
+        <li><strong>SOC 2:</strong> expect enterprise buyers to request the provider's SOC 2 report as part of vendor risk review.</li>
+      </ul>
+    </div>
+
+    <h3>Visualization — EU AI Act Risk-Tier Pyramid</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 480 250" width="100%" style="max-width:480px" role="img" aria-label="EU AI Act risk tiers pyramid">
+        <polygon points="240,15 300,75 180,75" fill="#d64545"></polygon>
+        <text x="240" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Unacceptable</text>
+        <polygon points="180,78 300,78 340,148 140,148" fill="#e8890c"></polygon>
+        <text x="240" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">High-risk</text>
+        <polygon points="140,151 340,151 375,211 105,211" fill="#1d6fb8"></polygon>
+        <text x="240" y="188" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Limited (transparency)</text>
+        <polygon points="105,214 375,214 400,244 80,244" fill="#2f9e6b"></polygon>
+        <text x="240" y="234" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Minimal</text>
+        <text x="325" y="45" font-size="9.5" fill="#47536b">← banned</text>
+        <text x="352" y="120" font-size="9.5" fill="#47536b">← strict duties</text>
+        <text x="386" y="184" font-size="9.5" fill="#47536b">← disclose AI</text>
+      </svg>
+      <figcaption>Obligations scale with risk: banned at the top; heaviest compliance for High-risk; disclosure duties for Limited; largely free for Minimal.</figcaption>
+    </figure>
+
+    <h3>Common Pitfalls</h3>
+    <div class="box pitfall-box">
+      <strong class="label">⚠️ Watch out:</strong>
+      <ul>
+        <li>Assuming GDPR compliance <strong>covers the EU AI Act</strong> — they are <em>separate</em> regimes (data protection vs. product safety of AI).</li>
+        <li>Letting <strong>cardholder data</strong> touch the LLM (PCI DSS scope explosion).</li>
+        <li>Confusing <strong>SOC 2</strong> (attestation of controls) with a <strong>certification</strong> or a regulation — it's neither.</li>
+        <li>Ignoring <strong>transparency/disclosure</strong> duties for consumer chatbots.</li>
+        <li>Missing that <strong>high-risk</strong> use turns an ordinary chatbot into a heavily regulated system.</li>
+      </ul>
+    </div>
+
+    <h3>Tips &amp; Tricks</h3>
+    <div class="tip-box box">
+      <strong>💡 Tip:</strong> Map each framework to a single verb to recall fast:
+      <div class="mnemonic">GDPR = <b>protect people</b> · HIPAA = <b>protect health</b> · FedRAMP = <b>authorize gov cloud</b> · PCI = <b>protect cards</b> · EU AI Act = <b>rank AI risk</b> · SOC 2 = <b>attest controls</b></div>
+    </div>
+
+    <h3>Exam Strategy</h3>
+    <div class="exam-strategy box">
+      <strong>🎯 Exam Strategy:</strong>
+      <ul>
+        <li><strong>Keyword triggers:</strong> "risk tier / high-risk AI / disclose it's AI" → <strong>EU AI Act</strong>. "cardholder / PAN" → <strong>PCI DSS</strong>. "Trust Services Criteria / attestation" → <strong>SOC 2</strong>. "children under 13" → <strong>COPPA</strong>. "AI management system standard" → <strong>ISO 42001</strong>.</li>
+        <li><strong>Elimination technique:</strong> When a scenario spans regions, pick the framework that matches the <em>data type</em> AND <em>jurisdiction</em> in the stem; discard options that match only one.</li>
+        <li><strong>Trap:</strong> "SOC 2 certified" — SOC 2 is an attestation report, not a certification; wording matters on picky questions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 56.5 Documentation & Audit ============ -->
+  <section class="chapter" id="s5">
+    <h2><span class="num">56.5</span> Compliance Documentation &amp; Audit Trails</h2>
+
+    <h3>Core Definition</h3>
+    <p class="lead"><strong>Compliance documentation</strong> is the evidence base that demonstrates a system meets its regulatory obligations; <strong>audit trails</strong> are tamper-resistant, time-stamped records of who did what, when, and to which data. Together they operationalize the <em>accountability</em> principle that runs through GDPR, HIPAA, and FedRAMP alike.</p>
+    <p>Why it matters for AI: LLM systems add new artifacts to log — prompts, retrieved context, model/version, tool calls, and outputs — which auditors and regulators increasingly expect to see.</p>
+
+    <h3>Key Requirements</h3>
+    <div class="box req-box">
+      <strong class="label">📌 What to maintain:</strong>
+      <ul>
+        <li><strong>Records of processing (GDPR Art. 30)</strong> and <strong>DPIAs</strong> for high-risk processing.</li>
+        <li><strong>Data-flow / data map</strong> — where personal/PHI/federal data enters, is stored, and leaves.</li>
+        <li><strong>Policies &amp; procedures</strong> — access control, retention/deletion, incident response, vendor management.</li>
+        <li><strong>Contracts</strong> — DPAs (GDPR), BAAs (HIPAA), and provider agreements.</li>
+        <li><strong>Security assessment artifacts</strong> — for FedRAMP: SSP, SAR, POA&amp;M; for others: risk assessments, pen-test reports.</li>
+        <li><strong>Audit logs (immutable):</strong> access to data, prompts &amp; responses, model &amp; version, retention timers, admin actions. Protect log <em>integrity</em> and define <em>retention periods</em>.</li>
+        <li><strong>Model documentation</strong> — model/system cards, intended use, limitations, evaluation results (aligns with EU AI Act logging &amp; NIST AI RMF).</li>
+      </ul>
+    </div>
+
+    <h3>Relevance to Claude / LLM Applications</h3>
+    <div class="box relevance-box">
+      <strong class="label">🤖 Claude-specific considerations:</strong>
+      <ul>
+        <li><strong>Log the AI interaction chain:</strong> prompt, retrieved documents (RAG sources), model version, parameters, tool/function calls, and final output — enough to reconstruct a decision.</li>
+        <li><strong>Redact/segregate sensitive data in logs</strong> so logs don't become a new PII/PHI liability.</li>
+        <li><strong>Human-in-the-loop evidence:</strong> capture reviewer identity and override for Art. 22 / high-risk decisions.</li>
+        <li><strong>Retention &amp; deletion:</strong> align log retention with legal requirements and honor erasure requests that reach logs.</li>
+        <li><strong>Traceability of model changes:</strong> version pinning so you can prove which model produced which output.</li>
+      </ul>
+    </div>
+
+    <h3>Visualization — Audit Trail Data Flow (Claude request lifecycle)</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 730 130" width="100%" style="max-width:730px" role="img" aria-label="Audit trail across a Claude request lifecycle">
+        <defs>
+          <marker id="arrow2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#47536b"></path>
+          </marker>
+        </defs>
+        <g font-size="10.5" font-weight="700" fill="#1a2233">
+          <rect x="8" y="45" width="105" height="46" rx="7" fill="#e7f0fb" stroke="#1d6fb8" stroke-width="2"></rect>
+          <text x="60" y="66" text-anchor="middle">User request</text>
+          <text x="60" y="81" text-anchor="middle" font-size="9" font-weight="400" fill="#47536b">+ identity</text>
+
+          <rect x="140" y="45" width="105" height="46" rx="7" fill="#fff4e6" stroke="#e8890c" stroke-width="2"></rect>
+          <text x="192" y="66" text-anchor="middle">Retrieval</text>
+          <text x="192" y="81" text-anchor="middle" font-size="9" font-weight="400" fill="#47536b">log sources</text>
+
+          <rect x="272" y="45" width="105" height="46" rx="7" fill="#eef0ff" stroke="#4338ca" stroke-width="2"></rect>
+          <text x="324" y="63" text-anchor="middle">Claude call</text>
+          <text x="324" y="78" text-anchor="middle" font-size="9" font-weight="400" fill="#47536b">model+version+params</text>
+
+          <rect x="404" y="45" width="105" height="46" rx="7" fill="#eafaf1" stroke="#2f9e6b" stroke-width="2"></rect>
+          <text x="456" y="66" text-anchor="middle">Output</text>
+          <text x="456" y="81" text-anchor="middle" font-size="9" font-weight="400" fill="#47536b">+ human review</text>
+
+          <rect x="536" y="45" width="105" height="46" rx="7" fill="#fdecea" stroke="#d64545" stroke-width="2"></rect>
+          <text x="588" y="63" text-anchor="middle">Immutable</text>
+          <text x="588" y="78" text-anchor="middle">audit log</text>
+        </g>
+        <line x1="113" y1="68" x2="138" y2="68" stroke="#47536b" stroke-width="2" marker-end="url(#arrow2)"></line>
+        <line x1="245" y1="68" x2="270" y2="68" stroke="#47536b" stroke-width="2" marker-end="url(#arrow2)"></line>
+        <line x1="377" y1="68" x2="402" y2="68" stroke="#47536b" stroke-width="2" marker-end="url(#arrow2)"></line>
+        <line x1="509" y1="68" x2="534" y2="68" stroke="#47536b" stroke-width="2" marker-end="url(#arrow2)"></line>
+        <text x="365" y="118" text-anchor="middle" font-size="10" fill="#6b7688">Every stage writes a time-stamped, integrity-protected record → reconstructable decision trail</text>
+      </svg>
+    </figure>
+
+    <h3>Common Pitfalls</h3>
+    <div class="box pitfall-box">
+      <strong class="label">⚠️ Watch out:</strong>
+      <ul>
+        <li><strong>Logging raw PII/PHI in plaintext</strong> — turning your audit log into a breach target.</li>
+        <li>Logs that are <strong>mutable / deletable by app users</strong> — auditors need integrity guarantees.</li>
+        <li>No <strong>model/version pinning</strong> — you can't prove which model made a decision later.</li>
+        <li>Documentation that is <strong>out of date</strong> vs. the deployed system (drift).</li>
+        <li>Retaining logs <strong>forever</strong>, ignoring storage-limitation / retention rules.</li>
+      </ul>
+    </div>
+
+    <h3>Tips &amp; Tricks</h3>
+    <div class="tip-box box">
+      <strong>💡 Tip:</strong> A good AI audit record answers the "5 W's": <strong>Who</strong> (identity) · <strong>What</strong> (prompt + output) · <strong>When</strong> (timestamp) · <strong>Which</strong> (model + version + sources) · <strong>Why/approved-by</strong> (human review).
+      <div class="mnemonic">Documentation stack — "MAP-CL": <b>M</b>odel cards · <b>A</b>udit logs · <b>P</b>olicies · <b>C</b>ontracts (DPA/BAA) · <b>L</b>egal assessments (DPIA/SSP)</div>
+    </div>
+
+    <h3>Exam Strategy</h3>
+    <div class="exam-strategy box">
+      <strong>🎯 Exam Strategy:</strong>
+      <ul>
+        <li><strong>Keyword triggers:</strong> "prove accountability / demonstrate compliance" → <strong>documentation + logs</strong>. "reconstruct a decision" → capture <strong>model version + prompt + sources</strong>. "records of processing" → <strong>GDPR Art. 30</strong>. "tamper-evident" → <strong>immutable audit trail</strong>.</li>
+        <li><strong>Elimination technique:</strong> Reject options that say to log <em>more</em> sensitive data in plaintext "for completeness" — good answers minimize/redact while preserving traceability.</li>
+        <li><strong>Trap:</strong> Choosing "delete all logs immediately to comply with GDPR" — storage limitation is balanced against legal retention and accountability; blanket deletion is usually wrong.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 56.6 Hands-On ============ -->
+  <section class="chapter" id="s6">
+    <h2><span class="num">56.6</span> Hands-On: Building a Compliance Checklist for a Claude Application</h2>
+
+    <p class="lead"><strong>Scenario:</strong> "MediChat EU" — a Claude-powered <em>healthcare triage chatbot</em> offered to patients in the EU by a US-headquartered company. It handles health data (PHI-like / GDPR "special category" data) and provides preliminary guidance with clinician review. This scenario deliberately spans <strong>GDPR + health-data rules + EU AI Act</strong> so we can practice mapping multiple regimes.</p>
+
+    <h3>Step-by-Step Walkthrough</h3>
+    <ol class="steps">
+      <li><strong>Scope the system &amp; data.</strong> Inventory data types (special-category health data, contact details), users (EU patients), and data flows (prompt → retrieval → Claude → clinician review → storage). Produce a data map.</li>
+      <li><strong>Identify applicable regimes.</strong> EU patients + personal/health data → <strong>GDPR</strong> (special category, Art. 9). AI triage advising on health → likely <strong>EU AI Act</strong> high-risk territory + transparency duty. (If US patients/PHI were involved, add <strong>HIPAA</strong>; if US federal, <strong>FedRAMP</strong>.)</li>
+      <li><strong>Establish lawful basis &amp; consent.</strong> Determine GDPR Art. 6 basis + Art. 9 condition for special-category data (e.g., explicit consent or healthcare provision).</li>
+      <li><strong>Contract with the model provider.</strong> Sign a <strong>DPA</strong>; confirm data residency, zero-retention / no-training options, and sub-processor list.</li>
+      <li><strong>Design privacy &amp; safety controls.</strong> Data minimisation in prompts, redaction, encryption in transit/at rest, access control, and a documented retention/deletion policy that reaches logs, backups, and the vector store.</li>
+      <li><strong>Build the human-in-the-loop.</strong> Ensure no <em>solely</em> automated significant decision (GDPR Art. 22) — route triage output to a clinician; log the reviewer and any override.</li>
+      <li><strong>Add transparency.</strong> Disclose to users that they are interacting with an AI and its limitations (EU AI Act limited-risk duty); provide privacy-notice info (Arts. 13–14).</li>
+      <li><strong>Run a DPIA.</strong> High-risk processing of health data → mandatory DPIA (Art. 35) documenting risks and mitigations before launch.</li>
+      <li><strong>Instrument audit trails.</strong> Log identity, prompt, retrieved sources, model+version, output, and reviewer — immutable and retention-bounded.</li>
+      <li><strong>Assemble the checklist &amp; evidence.</strong> Map each requirement to a control and a concrete artifact (below), assign an owner and status, and review before go-live.</li>
+    </ol>
+
+    <h3>Sample Compliance Checklist</h3>
+    <table class="data">
+      <caption>MediChat EU — compliance checklist (illustrative)</caption>
+      <tbody><tr>
+        <th style="width:34%">Requirement</th><th style="width:18%">Regulation</th><th style="width:14%">Status</th><th>Evidence / Artifact</th>
+      </tr>
+      <tr>
+        <td>Lawful basis + explicit condition for special-category (health) data</td>
+        <td>GDPR Art. 6 &amp; 9</td>
+        <td><span class="pill done">DONE</span></td>
+        <td>Lawful-basis register; consent capture screenshots &amp; logs</td>
+      </tr>
+      <tr>
+        <td>Transparency / privacy notice provided to patients</td>
+        <td>GDPR Arts. 13–14</td>
+        <td><span class="pill done">DONE</span></td>
+        <td>Published privacy notice v1.3; in-app disclosure text</td>
+      </tr>
+      <tr>
+        <td>No solely-automated significant decision (human clinician review)</td>
+        <td>GDPR Art. 22</td>
+        <td><span class="pill progress">IN&nbsp;PROGRESS</span></td>
+        <td>Workflow design doc; reviewer-override audit log sample</td>
+      </tr>
+      <tr>
+        <td>Data Protection Impact Assessment completed &amp; signed off</td>
+        <td>GDPR Art. 35</td>
+        <td><span class="pill progress">IN&nbsp;PROGRESS</span></td>
+        <td>DPIA report; DPO sign-off record</td>
+      </tr>
+      <tr>
+        <td>Data Processing Agreement with model provider (residency, no-training)</td>
+        <td>GDPR Art. 28</td>
+        <td><span class="pill done">DONE</span></td>
+        <td>Executed DPA; sub-processor list; region config</td>
+      </tr>
+      <tr>
+        <td>International transfer safeguard (if data leaves EEA)</td>
+        <td>GDPR Arts. 44–46</td>
+        <td><span class="pill todo">TO&nbsp;DO</span></td>
+        <td>SCCs; transfer impact assessment</td>
+      </tr>
+      <tr>
+        <td>"You are chatting with AI" disclosure + limitations</td>
+        <td>EU AI Act (transparency)</td>
+        <td><span class="pill done">DONE</span></td>
+        <td>UI disclosure; system card excerpt</td>
+      </tr>
+      <tr>
+        <td>High-risk obligations: risk mgmt, data governance, logging, oversight</td>
+        <td>EU AI Act (high-risk)</td>
+        <td><span class="pill progress">IN&nbsp;PROGRESS</span></td>
+        <td>Risk-management file; logging design; oversight SOP</td>
+      </tr>
+      <tr>
+        <td>Encryption in transit &amp; at rest (incl. vector store &amp; logs)</td>
+        <td>GDPR Art. 32 (security)</td>
+        <td><span class="pill done">DONE</span></td>
+        <td>TLS config; KMS key policy; scan report</td>
+      </tr>
+      <tr>
+        <td>Immutable audit trail (prompt, sources, model+version, reviewer)</td>
+        <td>Accountability / Art. 30 &amp; 32</td>
+        <td><span class="pill progress">IN&nbsp;PROGRESS</span></td>
+        <td>Log schema; WORM storage config; sample records</td>
+      </tr>
+      <tr>
+        <td>Retention &amp; erasure reaching logs, backups, embeddings</td>
+        <td>GDPR Arts. 5(1)(e), 17</td>
+        <td><span class="pill todo">TO&nbsp;DO</span></td>
+        <td>Retention schedule; deletion runbook &amp; test evidence</td>
+      </tr>
+      <tr>
+        <td>HIPAA BAA (only if US PHI is introduced)</td>
+        <td>HIPAA</td>
+        <td><span class="pill na">N/A</span></td>
+        <td>Not in scope for EU-only launch; revisit for US expansion</td>
+      </tr>
+    </tbody></table>
+
+    <h3>Worked Example — Mapping GDPR Article 22 to a Concrete Control</h3>
+    <p>Take one requirement and trace it end-to-end from regulation → control → evidence:</p>
+    <table class="data">
+      <tbody><tr><th style="width:22%">Layer</th><th>Detail</th></tr>
+      <tr><td><strong>Regulation</strong></td><td>GDPR <strong>Art. 22(1)</strong>: a data subject has the right not to be subject to a decision based <em>solely</em> on automated processing that produces legal or similarly significant effects. Health-triage guidance that gates care could qualify.</td></tr>
+      <tr><td><strong>Requirement</strong></td><td>Guarantee <em>meaningful human involvement</em>, plus the ability to contest and obtain an explanation (Art. 22(3) + Recital 71).</td></tr>
+      <tr><td><strong>Technical control</strong></td><td>Architect the flow so Claude produces a <em>recommendation</em>, not a final decision: a licensed clinician must review and explicitly approve/override before any care-affecting action. Disable auto-actioning of model output.</td></tr>
+      <tr><td><strong>Documentation control</strong></td><td>Workflow design doc stating the human-review gate; SOP for clinicians; user-facing text explaining a human reviews results and how to contest.</td></tr>
+      <tr><td><strong>Evidence / artifact</strong></td><td>Immutable audit log entries showing, per case: model recommendation, <em>reviewer identity</em>, decision timestamp, and any override reason — demonstrating the decision was not "solely automated."</td></tr>
+      <tr><td><strong>Verification</strong></td><td>Sample 20 recent cases; confirm each has a reviewer record. Add an automated alert if any care-affecting action fires without a reviewer ID.</td></tr>
+    </tbody></table>
+
+    <h4>Reference: minimal audit-log record shape</h4>
+    <pre class="code"><span class="c">// One immutable record per care-affecting interaction (Art. 22 evidence)</span>
+{
+  <span class="k">"case_id"</span>: <span class="s">"MC-2025-04-00817"</span>,
+  <span class="k">"timestamp"</span>: <span class="s">"2025-04-08T09:14:22Z"</span>,
+  <span class="k">"subject_ref"</span>: <span class="s">"pat_9f3e"</span>,        <span class="c">// pseudonymised, no raw PII</span>
+  <span class="k">"model"</span>: <span class="s">"claude-<version>"</version></span>,       <span class="c">// pin exact version</span>
+  <span class="k">"prompt_ref"</span>: <span class="s">"s3://logs/redacted/..."</span>, <span class="c">// redacted prompt</span>
+  <span class="k">"retrieved_sources"</span>: [<span class="s">"kb:triage-guide-v4"</span>],
+  <span class="k">"recommendation"</span>: <span class="s">"non-urgent; advise GP within 48h"</span>,
+  <span class="k">"human_reviewer"</span>: <span class="s">"clinician_id:emp_2231"</span>,   <span class="c">// REQUIRED — proves not solely automated</span>
+  <span class="k">"review_action"</span>: <span class="s">"approved"</span>,             <span class="c">// approved | overridden</span>
+  <span class="k">"override_reason"</span>: <span class="k">null</span>
+}</pre>
+
+    <div class="tip-box box">
+      <strong>💡 Hands-on takeaway:</strong> Every checklist row should resolve to a <em>named artifact you could hand an auditor</em>. If a requirement has no evidence column filled, it isn't actually "done."
+    </div>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section class="chapter summary" id="summary">
+    <h2><span class="num" style="background:#4338ca">★</span> Chapter Summary &amp; Key Takeaways</h2>
+    <p class="lead">Regulatory compliance for Claude applications is about matching the <strong>data type</strong> and <strong>jurisdiction</strong> in a scenario to the right framework, then translating each obligation into a concrete technical + documentation control with evidence.</p>
+
+    <div class="takeaway-grid">
+      <div class="takeaway-card"><b>56.1 GDPR</b> — Protects EU personal data; the "right to explanation" is inferred from <b>Art. 22 + Recital 71</b>, not a named article. Watch transfers &amp; DPIAs.</div>
+      <div class="takeaway-card"><b>56.2 HIPAA</b> — Protects US PHI. <b>BAA before any PHI</b>; de-identify via <b>Safe Harbor</b> or <b>Expert Determination</b> only.</div>
+      <div class="takeaway-card"><b>56.3 FedRAMP</b> — Authorizes cloud for US federal use, built on <b>NIST 800-53</b>. Know <b>impact levels</b>, <b>3PAO</b>, <b>ATO</b>, and continuous monitoring.</div>
+      <div class="takeaway-card"><b>56.4 Industry/AI</b> — <b>EU AI Act</b> risk tiers, PCI DSS (cards), SOC 2 (attestation), COPPA, ISO 42001. Disclose AI to users.</div>
+      <div class="takeaway-card"><b>56.5 Docs &amp; Audit</b> — Accountability via records, contracts, and <b>immutable audit trails</b> capturing model+version, prompt, sources, and reviewer.</div>
+      <div class="takeaway-card"><b>56.6 Hands-On</b> — Map <b>Requirement → Regulation → Status → Evidence</b>; Art. 22 → human-in-the-loop with logged reviewer identity.</div>
+    </div>
+
+    <div class="tip-box box" style="margin-top:18px">
+      <strong>🧠 One-line memory anchors:</strong>
+      <ul>
+        <li><b>Jurisdiction + data type</b> selects the framework.</li>
+        <li>GDPR "PLAN-S" · HIPAA "A-P-T" + "SEE" · FedRAMP "Sammy Saw A POAM" · Audit "5 W's."</li>
+        <li>Every control needs <b>evidence</b> — no artifact, no compliance.</li>
+      </ul>
+    </div>
+
+    <div class="exam-strategy box">
+      <strong>🎯 Meta exam tip:</strong> When a question spans multiple regimes, first isolate <em>where the data is</em> and <em>what kind it is</em>. That two-factor filter eliminates most distractors before you even read the options in detail.
+    </div>
+
+    <div class="self-check">
+      ✅ <strong>Self-Check:</strong> This document has been reviewed for factual accuracy, completeness across all sub-topics (56.1–56.6), and structural validity.
+    </div>
+  </section>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 28 — Human Review Workflows | Study Guide</title>
+<style>
+  :root{
+    --bg:#f7f9fc; --panel:#ffffff; --ink:#1b2431; --muted:#5b6b7f;
+    --line:#e2e8f0; --accent:#2563eb; --accent2:#7c3aed;
+    --green:#16a34a; --amber:#d97706; --red:#dc2626; --teal:#0891b2;
+    --chip:#eef2ff; --shadow:0 1px 3px rgba(16,24,40,.08),0 1px 2px rgba(16,24,40,.06);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:1040px; margin:0 auto; padding:32px 24px 96px;}
+  header.hero{
+    background:linear-gradient(135deg,#2563eb,#7c3aed); color:#fff;
+    border-radius:16px; padding:34px 34px 28px; box-shadow:var(--shadow); margin-bottom:26px;
+  }
+  header.hero h1{margin:0 0 6px; font-size:28px; letter-spacing:-.2px}
+  header.hero .sub{opacity:.92; font-size:15px}
+  header.hero .badge{
+    display:inline-block; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.35);
+    padding:4px 12px; border-radius:999px; font-size:12.5px; margin-top:14px; font-weight:600; letter-spacing:.3px;
+  }
+  h2{font-size:22px; margin:38px 0 12px; padding-bottom:8px; border-bottom:2px solid var(--line); scroll-margin-top:16px}
+  h3{font-size:17.5px; margin:26px 0 8px; color:#26364a; scroll-margin-top:16px}
+  h4{font-size:14.5px; text-transform:uppercase; letter-spacing:.6px; color:var(--muted); margin:18px 0 6px}
+  p{margin:8px 0}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  code{background:#eef2f7; color:#0f2440; padding:1.5px 6px; border-radius:5px; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:13.5px}
+  .formula{
+    background:#0f172a; color:#e2e8f0; border-radius:10px; padding:14px 16px; margin:10px 0;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace; font-size:14px; overflow-x:auto; line-height:1.7;
+  }
+  .formula .var{color:#7dd3fc} .formula .op{color:#f0abfc} .formula .cmt{color:#94a3b8}
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow); margin:18px 0}
+  .toc{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px 24px; box-shadow:var(--shadow); margin-bottom:26px}
+  .toc h2{border:0; margin:0 0 10px; font-size:18px}
+  .toc ol{margin:0; padding-left:20px}
+  .toc ol li{margin:4px 0}
+  .toc .sub{list-style:none; padding-left:8px; margin-top:4px}
+  .toc .sub li{font-size:14.5px; color:var(--muted)}
+  table{border-collapse:collapse; width:100%; margin:12px 0; font-size:14.5px; background:#fff; border-radius:8px; overflow:hidden}
+  th,td{border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top}
+  th{background:#f1f5fb; font-weight:700; color:#26364a}
+  tr:nth-child(even) td{background:#fafcff}
+  .callout{border-radius:10px; padding:12px 16px; margin:12px 0; font-size:14.5px}
+  .tip{background:#ecfdf5; border-left:4px solid var(--green)}
+  .pitfall{background:#fef2f2; border-left:4px solid var(--red)}
+  .exam{background:#eff6ff; border-left:4px solid var(--accent)}
+  .note{background:#fffbeb; border-left:4px solid var(--amber)}
+  .callout .lbl{font-weight:700; display:block; margin-bottom:2px}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+  .pill{display:inline-block; padding:2px 10px; border-radius:999px; font-size:12px; font-weight:700}
+  .p-green{background:#dcfce7; color:#166534}
+  .p-amber{background:#fef3c7; color:#92400e}
+  .p-orange{background:#ffedd5; color:#9a3412}
+  .p-red{background:#fee2e2; color:#991b1b}
+  details{background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 16px; margin:10px 0}
+  details summary{cursor:pointer; font-weight:600; color:#26364a}
+  details[open]{box-shadow:var(--shadow)}
+  details .ans{margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); font-size:14.5px}
+  .flowrow{display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:14px 0}
+  .fbox{background:#eef2ff; border:1.5px solid #c7d2fe; border-radius:10px; padding:10px 14px; font-size:13.5px; font-weight:600; color:#3730a3; text-align:center; min-width:110px}
+  .farr{color:var(--accent2); font-weight:800; font-size:18px}
+  .legend{display:flex; gap:14px; flex-wrap:wrap; font-size:13px; color:var(--muted); margin:8px 0}
+  .legend span{display:inline-flex; align-items:center; gap:6px}
+  .sw{width:14px; height:14px; border-radius:3px; display:inline-block}
+  .heat td{text-align:center; font-weight:600; color:#1b2431}
+  .barwrap{margin:6px 0}
+  .barlabel{font-size:12.5px; color:var(--muted); display:flex; justify-content:space-between}
+  .bartrack{background:#eef2f7; border-radius:6px; height:20px; overflow:hidden}
+  .barfill{height:100%; border-radius:6px}
+  .cheat{background:linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0; border-radius:14px; padding:24px 26px; margin:20px 0}
+  .cheat h2{color:#fff; border-color:#334155}
+  .cheat h4{color:#93c5fd}
+  .cheat code{background:#334155; color:#e0f2fe}
+  .cheat ul{margin:6px 0 14px; padding-left:20px}
+  .cheat li{margin:5px 0; font-size:14px}
+  .kbd{font-size:12px; color:var(--muted)}
+  .backtop{font-size:12.5px; color:var(--muted); float:right; margin-top:-4px}
+  hr{border:0; border-top:1px solid var(--line); margin:26px 0}
+  .subhdr{display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>Chapter 28 — Human Review Workflows</h1>
+  <div class="sub">Study guide &amp; exam-day quick-review tool · Human-in-the-Loop (HITL) document AI pipelines</div>
+  <div class="badge">Claude Certified Architect — Foundations &amp; Professional (prep material)</div>
+</header>
+
+<div class="note callout">
+  <span class="lbl">📌 Read this first</span>
+  This is independent study material for exam preparation. All numeric thresholds, sample sizes, and accuracy figures below are marked <em>illustrative / example values</em> and are used to demonstrate method, not to state any official policy, benchmark, or pass score. The <strong>methods</strong> (calibration, stratified sampling, segmentation, cost-based routing) follow standard ML evaluation practice.
+</div>
+
+<!-- ================= TOC ================= -->
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#map">Concept Map — how 28.1–28.5 connect</a></li>
+    <li><a href="#s1">28.1 Confidence Calibration: Field-Level Confidence Scoring</a>
+      <ul class="sub">
+        <li><a href="#s1">Definition · Formulas · Worked example · Reliability diagram · Pitfalls · Tips · Exam</a></li>
+      </ul>
+    </li>
+    <li><a href="#s2">28.2 Stratified Sampling for Error Rate Measurement</a></li>
+    <li><a href="#s3">28.3 Accuracy Segmentation by Document Type and Field</a></li>
+    <li><a href="#s4">28.4 Routing Decisions Based on Calibrated Confidence</a></li>
+    <li><a href="#s5">28.5 Hands-On: Designing a Human-in-the-Loop Review Pipeline</a></li>
+    <li><a href="#synth">Chapter-Level Synthesis — the end-to-end pipeline</a></li>
+    <li><a href="#strategy">Chapter-Wide Exam Strategy</a></li>
+    <li><a href="#cheat">Chapter Summary Cheat Sheet</a></li>
+    <li><a href="#quiz">Self-Check Quiz (with hidden answers)</a></li>
+  </ol>
+</nav>
+
+<!-- ================= CONCEPT MAP ================= -->
+<section id="map" class="panel">
+  <h2 style="margin-top:0">Concept Map — how the subtopics connect</h2>
+  <p>The five subtopics form a single feedback loop. Each one produces an input the next one depends on:</p>
+  <div class="flowrow">
+    <div class="fbox">28.1<br>Calibrate confidence<br><span class="kbd">per field</span></div>
+    <span class="farr">→</span>
+    <div class="fbox">28.4<br>Route on calibrated<br>confidence</div>
+    <span class="farr">→</span>
+    <div class="fbox">28.2<br>Stratified sampling<br>measures true error</div>
+    <span class="farr">→</span>
+    <div class="fbox">28.3<br>Segment accuracy<br>by type × field</div>
+    <span class="farr">↺</span>
+    <div class="fbox" style="background:#f3e8ff;border-color:#d8b4fe;color:#6b21a8">28.5<br>Feedback re-tunes<br>28.1 &amp; 28.4</div>
+  </div>
+  <ul>
+    <li><strong>28.1 feeds 28.4:</strong> routing thresholds are only meaningful if confidence is calibrated — otherwise "0.9" doesn't mean 90% correct.</li>
+    <li><strong>28.4 feeds 28.2:</strong> whatever the router auto-approves must be audited by sampling to verify the real error rate.</li>
+    <li><strong>28.2 feeds 28.3:</strong> stratified samples are naturally sliced by segment, giving per-type / per-field accuracy.</li>
+    <li><strong>28.3 feeds back to 28.1 &amp; 28.4 (28.5):</strong> weak segments get recalibration, tighter thresholds, or mandatory review — the loop closes.</li>
+  </ul>
+</section>
+
+<!-- ================= 28.1 ================= -->
+<section id="s1">
+  <div class="subhdr"><h2 style="margin-bottom:0">28.1 Confidence Calibration: Field-Level Confidence Scoring</h2>
+  <a class="backtop" href="#map">↑ top</a></div>
+
+  <h4>Definition</h4>
+  <p>A <strong>confidence score</strong> is the model's self-reported probability that an extracted <em>field value</em> is correct (e.g. "invoice total = $4,210.00", confidence 0.93). <strong>Calibration</strong> is the agreement between that stated confidence and the observed accuracy. A model is <strong>well-calibrated</strong> when, among all predictions it labels 0.90, roughly 90% actually turn out correct.</p>
+  <p><em>Field-level</em> means the score is attached to each extracted field independently (invoice number, date, total…), not to the whole document, because a document can be 99% right on the date and 40% right on a handwritten total.</p>
+
+  <h4>Key Formulas / Metrics</h4>
+  <div class="formula">
+<span class="cmt"># Aggregate token probabilities into one field score (common choices)</span>
+conf_field <span class="op">=</span> min(p_token1, …, p_tokenK)      <span class="cmt"># conservative (weakest link)</span>
+conf_field <span class="op">=</span> (∏ p_tokenᵢ)^(1/K)              <span class="cmt"># geometric mean of token probs</span>
+  </div>
+  <div class="formula">
+<span class="cmt"># Expected Calibration Error — bins predictions, compares conf vs accuracy</span>
+ECE <span class="op">=</span> Σ_{m=1..M}  (|B_m| / N) · | acc(B_m) − conf(B_m) |
+  <span class="cmt"># B_m = predictions in confidence bin m ; N = total predictions</span>
+  </div>
+  <div class="formula">
+<span class="cmt"># Brier score — mean squared error of probabilistic predictions (lower = better)</span>
+Brier <span class="op">=</span> (1/N) · Σ (fᵢ − oᵢ)²      <span class="cmt"># fᵢ = predicted prob, oᵢ ∈ {0,1} outcome</span>
+  </div>
+  <div class="formula">
+<span class="cmt"># Temperature scaling — post-hoc recalibration; tune T on a validation set</span>
+calibrated_prob <span class="op">=</span> softmax( logits / T )   <span class="cmt"># T&gt;1 softens overconfidence</span>
+  </div>
+
+  <h4>Worked Example (illustrative)</h4>
+  <p>Take 100 field extractions the model labelled with confidence ≈ 0.90. Suppose 82 were actually correct. Then for that bin <code>conf = 0.90</code>, <code>acc = 0.82</code>, gap = 0.08. If a second bin (conf ≈ 0.70, 200 items) shows accuracy 0.71, gap = 0.01. With only these two bins over N = 300:</p>
+  <div class="formula">
+ECE <span class="op">=</span> (100/300)·|0.82−0.90| <span class="op">+</span> (200/300)·|0.71−0.70|
+    <span class="op">=</span> 0.333·0.08 <span class="op">+</span> 0.667·0.01 <span class="op">≈</span> <span class="var">0.033</span>   <span class="cmt"># ~3.3% average miscalibration</span>
+  </div>
+  <p>Reading: the model is slightly <strong>overconfident</strong> in its high band (says 90, delivers 82) but well-behaved at 70. Fix: temperature scaling or a tighter auto-approve threshold for the 0.90 band (see 28.4).</p>
+
+  <h4>Visualization — Reliability diagram</h4>
+  <p>A reliability diagram plots mean predicted confidence (x) against observed accuracy (y). Perfect calibration is the diagonal; bars <em>below</em> the diagonal = overconfident.</p>
+  <svg viewBox="0 0 420 260" width="100%" style="max-width:460px;background:#fff;border:1px solid #e2e8f0;border-radius:10px">
+    <!-- axes -->
+    <line x1="50" y1="210" x2="400" y2="210" stroke="#94a3b8" stroke-width="1.5"></line>
+    <line x1="50" y1="210" x2="50" y2="20" stroke="#94a3b8" stroke-width="1.5"></line>
+    <!-- diagonal perfect calibration -->
+    <line x1="50" y1="210" x2="400" y2="20" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"></line>
+    <text x="300" y="70" fill="#16a34a" font-size="11">perfect calibration</text>
+    <!-- bars: predicted (light) vs observed accuracy (solid) -->
+    <!-- bin centers at conf 0.5,0.6,0.7,0.8,0.9 -->
+    <g font-size="10" fill="#5b6b7f">
+      <!-- predicted (outline to diagonal) & observed (filled) -->
+      <rect x="70" y="130" width="28" height="80" fill="#c7d2fe"></rect><rect x="70" y="140" width="28" height="70" fill="#2563eb"></rect>
+      <rect x="135" y="110" width="28" height="100" fill="#c7d2fe"></rect><rect x="135" y="120" width="28" height="90" fill="#2563eb"></rect>
+      <rect x="200" y="90" width="28" height="120" fill="#c7d2fe"></rect><rect x="200" y="96" width="28" height="114" fill="#2563eb"></rect>
+      <rect x="265" y="70" width="28" height="140" fill="#c7d2fe"></rect><rect x="265" y="88" width="28" height="122" fill="#2563eb"></rect>
+      <rect x="330" y="50" width="28" height="160" fill="#c7d2fe"></rect><rect x="330" y="86" width="28" height="124" fill="#dc2626"></rect>
+    </g>
+    <text x="200" y="235" fill="#5b6b7f" font-size="11" text-anchor="middle">predicted confidence bin (0.5 → 0.9)</text>
+    <text x="18" y="115" fill="#5b6b7f" font-size="11" transform="rotate(-90 18 115)" text-anchor="middle">observed accuracy</text>
+    <text x="335" y="45" fill="#dc2626" font-size="10">over-confident</text>
+  </svg>
+  <div class="legend">
+    <span><span class="sw" style="background:#c7d2fe"></span>stated confidence</span>
+    <span><span class="sw" style="background:#2563eb"></span>observed accuracy (calibrated)</span>
+    <span><span class="sw" style="background:#dc2626"></span>observed accuracy (overconfident bin)</span>
+  </div>
+
+  <div class="pitfall callout"><span class="lbl">⚠️ Common Pitfalls</span>
+    <ul style="margin:4px 0">
+      <li>Treating a raw softmax / log-prob as if it were a calibrated probability. Neural models are typically <em>overconfident</em> out of the box.</li>
+      <li>Calibrating at the document level and reusing that number for every field — fields differ wildly in difficulty.</li>
+      <li>Reporting only <em>average</em> confidence and calling it "accuracy". Confidence ≠ accuracy until you measure calibration.</li>
+      <li>Calibrating on the training set (leaks) instead of a held-out validation set.</li>
+    </ul>
+  </div>
+  <div class="tip callout"><span class="lbl">💡 Tips &amp; Tricks</span>
+    <ul style="margin:4px 0">
+      <li>Mnemonic <strong>"C≠A until you draw the diagram"</strong> — Confidence isn't Accuracy until a reliability diagram / ECE proves it.</li>
+      <li>ECE in one line: <em>weight each bin's |confidence − accuracy| by how many items are in it.</em></li>
+      <li>If bars sit <em>below</em> the diagonal → overconfident → raise T or thresholds. Above → underconfident.</li>
+    </ul>
+  </div>
+  <div class="exam callout"><span class="lbl">🎯 Exam Strategy</span>
+    Expect a small table of bins (count, mean confidence, accuracy) and a "compute the ECE" ask. <strong>Weight by bin size</strong> — the classic trap is a plain average of the gaps. Also watch wording: "the model reports 0.95" is a <em>confidence</em> claim, not an accuracy claim; answers that equate the two are distractors.
+  </div>
+  <hr>
+</section>
+
+<!-- ================= 28.2 ================= -->
+<section id="s2">
+  <div class="subhdr"><h2 style="margin-bottom:0">28.2 Stratified Sampling for Error Rate Measurement</h2>
+  <a class="backtop" href="#map">↑ top</a></div>
+
+  <h4>Definition</h4>
+  <p>To learn the <em>true</em> error rate of an extraction system you can't hand-check everything, so you audit a <strong>sample</strong>. <strong>Stratified sampling</strong> splits the population into homogeneous groups (<em>strata</em> — e.g. by document type) and samples within each. Compared to simple random sampling it gives a <strong>lower-variance</strong> estimate and guarantees rare-but-important strata are actually represented.</p>
+
+  <h4>Key Formulas / Metrics</h4>
+  <div class="formula">
+<span class="cmt"># Sample size for a proportion (error rate p), margin of error E, confidence z</span>
+n₀ <span class="op">=</span> z² · p·(1−p) / E²
+n  <span class="op">=</span> n₀ / (1 + (n₀−1)/N)        <span class="cmt"># finite population correction (FPC)</span>
+  <span class="cmt"># z=1.96 for 95%. Use p=0.5 when unknown (worst-case, max variance).</span>
+  </div>
+  <div class="formula">
+<span class="cmt"># Stratified error-rate estimate = weighted sum of per-stratum rates</span>
+p̂_strat <span class="op">=</span> Σ_h  W_h · p̂_h          <span class="cmt"># W_h = N_h / N  (stratum's share of population)</span>
+Var(p̂_strat) <span class="op">=</span> Σ_h  W_h² · p̂_h(1−p̂_h) / n_h
+  </div>
+  <div class="formula">
+<span class="cmt"># Allocating the total sample n across strata</span>
+Proportional:  n_h <span class="op">=</span> n · W_h
+Neyman (optimal):  n_h <span class="op">=</span> n · (N_h·S_h) / Σ(N_k·S_k)   <span class="cmt"># more sample where variance S_h is high</span>
+  </div>
+
+  <h4>Worked Example (illustrative)</h4>
+  <p>Population N = 50,000 extracted fields across 3 doc types. Target margin E = 0.03 at 95% confidence, unknown p ⇒ use p = 0.5:</p>
+  <div class="formula">
+n₀ <span class="op">=</span> 1.96² · 0.5·0.5 / 0.03² <span class="op">=</span> 3.8416·0.25/0.0009 <span class="op">≈</span> 1067
+n  <span class="op">=</span> 1067 / (1 + 1066/50000) <span class="op">≈</span> <span class="var">1045</span>   <span class="cmt"># FPC barely changes it — population is large</span>
+  </div>
+  <p>Now allocate proportionally and compute the stratified rate (example measured values):</p>
+  <table>
+    <thead><tr><th>Stratum (doc type)</th><th>N<sub>h</sub></th><th>W<sub>h</sub></th><th>n<sub>h</sub> (prop.)</th><th>errors found</th><th>p̂<sub>h</sub></th><th>W<sub>h</sub>·p̂<sub>h</sub></th></tr></thead>
+    <tbody>
+      <tr><td>Invoices</td><td>30,000</td><td>0.60</td><td>627</td><td>19</td><td>0.030</td><td>0.0180</td></tr>
+      <tr><td>Receipts</td><td>15,000</td><td>0.30</td><td>314</td><td>22</td><td>0.070</td><td>0.0210</td></tr>
+      <tr><td>Contracts</td><td>5,000</td><td>0.10</td><td>104</td><td>12</td><td>0.115</td><td>0.0115</td></tr>
+      <tr><td><strong>Total</strong></td><td>50,000</td><td>1.00</td><td>1,045</td><td>53</td><td>—</td><td><strong>0.0505</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Stratified error rate <code>p̂_strat ≈ 5.1%</code>. Note the <strong>trap</strong>: naively averaging the three raw rates (3.0 + 7.0 + 11.5)/3 = <span class="pill p-red">7.2%</span> overstates error, because contracts (worst) are only 10% of volume. Weighting by W<sub>h</sub> is what makes it correct.</p>
+
+  <div class="pitfall callout"><span class="lbl">⚠️ Common Pitfalls</span>
+    <ul style="margin:4px 0">
+      <li><strong>Averaging raw per-stratum rates</strong> instead of weighting by stratum size.</li>
+      <li>Thinking sample size scales with population — it scales with <em>variance</em> and the desired margin E. A 50k and a 5M population need almost the same n.</li>
+      <li>Strata so small that <code>n_h</code> is a handful — per-stratum estimates become noise.</li>
+      <li>Sampling only what the router auto-approved (survivorship): you must also audit the auto-approved stream, or you never see its silent errors.</li>
+    </ul>
+  </div>
+  <div class="tip callout"><span class="lbl">💡 Tips &amp; Tricks</span>
+    <ul style="margin:4px 0">
+      <li>Rule of thumb <strong>"Sample size scales with variance, not population size."</strong></li>
+      <li>Unknown error rate? Use <code>p = 0.5</code> — it maximises <code>p(1−p)</code> and gives the safest (largest) n.</li>
+      <li><strong>Neyman = "spend sample where it's noisy"</strong>: bigger and more variable strata get more samples.</li>
+      <li>Halving the margin E roughly <em>quadruples</em> the required n (E is squared).</li>
+    </ul>
+  </div>
+  <div class="exam callout"><span class="lbl">🎯 Exam Strategy</span>
+    If a question gives per-stratum error rates and stratum sizes and asks for the <em>overall / stratified</em> error rate, compute <code>Σ W_h·p̂_h</code> — never the plain mean. If it gives E and confidence and asks for n, plug into <code>z²p(1−p)/E²</code> and only apply FPC when the population is small relative to n. Distractors often swap proportional and Neyman allocation, or forget to square E.
+  </div>
+  <hr>
+</section>
+
+<!-- ================= 28.3 ================= -->
+<section id="s3">
+  <div class="subhdr"><h2 style="margin-bottom:0">28.3 Accuracy Segmentation by Document Type and Field</h2>
+  <a class="backtop" href="#map">↑ top</a></div>
+
+  <h4>Definition</h4>
+  <p><strong>Segmentation</strong> means reporting accuracy metrics <em>sliced</em> by meaningful dimensions — here the (document type × field) matrix — instead of one headline number. A 96% aggregate accuracy can hide a field that is 55% accurate. Segmentation localises where the pipeline actually fails so remediation (28.5) is targeted.</p>
+
+  <h4>Key Formulas / Metrics</h4>
+  <div class="formula">
+<span class="cmt"># Per-segment classification metrics (computed within each cell)</span>
+Precision <span class="op">=</span> TP / (TP + FP)      Recall <span class="op">=</span> TP / (TP + FN)
+F1 <span class="op">=</span> 2·P·R / (P + R)
+<span class="cmt"># Field-value extraction metrics</span>
+Exact-Match(EM) <span class="op">=</span> #exactly-correct-values / #values
+CER <span class="op">=</span> edit_distance(pred, gold) / len(gold)   <span class="cmt"># Character Error Rate</span>
+  </div>
+
+  <h4>Worked Example — accuracy heatmap (illustrative)</h4>
+  <p>Exact-match accuracy per (doc type × field). Green = strong, red = weak. Instantly you see <em>handwritten totals on receipts</em> and <em>signature dates on contracts</em> are the failure hotspots — the aggregate 91% hid them.</p>
+  <table class="heat">
+    <thead><tr><th>Field ↓ / Type →</th><th>Invoice</th><th>Receipt</th><th>Contract</th></tr></thead>
+    <tbody>
+      <tr><td>Document number</td>
+        <td style="background:#bbf7d0">0.99</td><td style="background:#bbf7d0">0.98</td><td style="background:#dcfce7">0.96</td></tr>
+      <tr><td>Date</td>
+        <td style="background:#bbf7d0">0.98</td><td style="background:#fef9c3">0.89</td><td style="background:#fecaca">0.62</td></tr>
+      <tr><td>Total / amount</td>
+        <td style="background:#dcfce7">0.95</td><td style="background:#fecaca">0.58</td><td style="background:#fef08a">0.84</td></tr>
+      <tr><td>Party / vendor name</td>
+        <td style="background:#dcfce7">0.94</td><td style="background:#fef9c3">0.90</td><td style="background:#fef08a">0.86</td></tr>
+    </tbody>
+  </table>
+  <div class="legend">
+    <span><span class="sw" style="background:#bbf7d0"></span>≥ 0.96</span>
+    <span><span class="sw" style="background:#dcfce7"></span>0.92–0.95</span>
+    <span><span class="sw" style="background:#fef08a"></span>0.83–0.91</span>
+    <span><span class="sw" style="background:#fecaca"></span>&lt; 0.65</span>
+  </div>
+  <p><strong>Simpson's paradox watch:</strong> a field can look fine in aggregate yet be poor in the segment that carries most business risk. Always keep the <em>support</em> (count) beside each cell — a 0.58 over 12 samples is a hypothesis, over 600 it's a finding.</p>
+
+  <div class="pitfall callout"><span class="lbl">⚠️ Common Pitfalls</span>
+    <ul style="margin:4px 0">
+      <li>Reporting a single aggregate accuracy that averages away a critical weak segment.</li>
+      <li>Comparing segments with wildly different support as if equally reliable.</li>
+      <li>Using plain accuracy on imbalanced fields where a field is usually blank — precision/recall or F1 is more honest.</li>
+      <li>Over-segmenting until every cell has 3 samples — noise masquerading as signal.</li>
+    </ul>
+  </div>
+  <div class="tip callout"><span class="lbl">💡 Tips &amp; Tricks</span>
+    <ul style="margin:4px 0">
+      <li>Mnemonic <strong>"Segment until it stops surprising you"</strong> — stop slicing when new cuts no longer reveal new weak spots.</li>
+      <li>Always print <em>support</em> next to each metric; a low score on tiny support is a to-do, not a verdict.</li>
+      <li>Sort the heatmap by weakest cell — the top-left of your attention should be the worst (type × field).</li>
+    </ul>
+  </div>
+  <div class="exam callout"><span class="lbl">🎯 Exam Strategy</span>
+    Segmentation questions usually hand you a matrix or confusion table and ask "which segment needs review / retraining first?" Pick the one that is both <strong>low accuracy AND high volume/risk</strong> — not merely the single lowest number on tiny support. Watch distractors that point at a red cell backed by only a handful of samples.
+  </div>
+  <hr>
+</section>
+
+<!-- ================= 28.4 ================= -->
+<section id="s4">
+  <div class="subhdr"><h2 style="margin-bottom:0">28.4 Routing Decisions Based on Calibrated Confidence</h2>
+  <a class="backtop" href="#map">↑ top</a></div>
+
+  <h4>Definition</h4>
+  <p><strong>Routing</strong> uses the <em>calibrated</em> confidence (from 28.1) plus business cost to decide each field's fate: auto-approve, spot-check, full human review, or escalate/reject. The threshold isn't arbitrary — it's chosen to balance the <strong>cost of an undetected error</strong> against the <strong>cost of human review</strong>.</p>
+
+  <h4>Key Formulas / Metrics</h4>
+  <div class="formula">
+<span class="cmt"># Expected cost of AUTO-APPROVING a field at calibrated confidence c</span>
+E[cost_auto] <span class="op">=</span> (1 − c) · C_error          <span class="cmt"># prob wrong × cost of a slipped error</span>
+E[cost_review] <span class="op">=</span> C_review               <span class="cmt"># fixed cost of a human check</span>
+<span class="cmt"># Auto-approve is rational only when it's cheaper:</span>
+Auto-approve if  (1 − c)·C_error  ≤  C_review
+⇔  c ≥ 1 − (C_review / C_error)        <span class="cmt"># the break-even threshold τ*</span>
+  </div>
+  <p>So the "right" threshold falls out of costs: if a slipped error costs 100× a review, <code>τ* = 1 − 1/100 = 0.99</code>. If it costs only 5×, <code>τ* = 0.80</code>. High-stakes fields get high thresholds.</p>
+
+  <h4>Worked Example — routing table (illustrative thresholds)</h4>
+  <table>
+    <thead><tr><th>Calibrated confidence</th><th>Action</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill p-green">≥ 95%</span></td><td>Auto-approve</td><td>High reliability, low error risk (example value)</td></tr>
+      <tr><td><span class="pill p-amber">80–94%</span></td><td>Light-touch spot check</td><td>Moderate risk — sample a fraction for QA</td></tr>
+      <tr><td><span class="pill p-orange">50–79%</span></td><td>Route to human reviewer</td><td>Uncertain — needs verification</td></tr>
+      <tr><td><span class="pill p-red">&lt; 50%</span></td><td>Escalate / reject</td><td>High error risk — do not auto-use</td></tr>
+    </tbody>
+  </table>
+  <p><em>These bands are illustrative.</em> In practice each field's thresholds come from its own cost ratio and its own calibration curve. A "signature date on a contract" (28.3 showed 0.62 accuracy) should get a much higher review threshold than an "invoice number".</p>
+
+  <h4>Visualization — routing flow</h4>
+  <svg viewBox="0 0 720 220" width="100%" style="background:#fff;border:1px solid #e2e8f0;border-radius:10px">
+    <defs><marker id="ah" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7c3aed"></path></marker></defs>
+    <rect x="20" y="90" width="120" height="44" rx="8" fill="#eef2ff" stroke="#c7d2fe"></rect>
+    <text x="80" y="110" font-size="12" text-anchor="middle" fill="#3730a3" font-weight="600">extracted field</text>
+    <text x="80" y="125" font-size="10" text-anchor="middle" fill="#5b6b7f">+ calibrated conf</text>
+    <line x1="140" y1="112" x2="200" y2="112" stroke="#7c3aed" stroke-width="2" marker-end="url(#ah)"></line>
+    <polygon points="205,112 250,86 295,112 250,138" fill="#fef3c7" stroke="#f59e0b"></polygon>
+    <text x="250" y="116" font-size="11" text-anchor="middle" fill="#92400e" font-weight="600">c ≥ τ ?</text>
+    <!-- branches -->
+    <line x1="295" y1="100" x2="360" y2="55" stroke="#16a34a" stroke-width="2" marker-end="url(#ah)"></line>
+    <rect x="360" y="34" width="150" height="42" rx="8" fill="#dcfce7" stroke="#86efac"></rect>
+    <text x="435" y="60" font-size="12" text-anchor="middle" fill="#166534" font-weight="600">Auto-approve</text>
+    <line x1="295" y1="112" x2="360" y2="112" stroke="#d97706" stroke-width="2" marker-end="url(#ah)"></line>
+    <rect x="360" y="90" width="150" height="42" rx="8" fill="#ffedd5" stroke="#fdba74"></rect>
+    <text x="435" y="116" font-size="12" text-anchor="middle" fill="#9a3412" font-weight="600">Spot check / Review</text>
+    <line x1="295" y1="124" x2="360" y2="168" stroke="#dc2626" stroke-width="2" marker-end="url(#ah)"></line>
+    <rect x="360" y="150" width="150" height="42" rx="8" fill="#fee2e2" stroke="#fca5a5"></rect>
+    <text x="435" y="176" font-size="12" text-anchor="middle" fill="#991b1b" font-weight="600">Escalate / Reject</text>
+    <!-- audit feedback -->
+    <line x1="510" y1="55" x2="600" y2="55" stroke="#0891b2" stroke-width="2" marker-end="url(#ah)"></line>
+    <rect x="600" y="34" width="100" height="42" rx="8" fill="#cffafe" stroke="#67e8f9"></rect>
+    <text x="650" y="52" font-size="10.5" text-anchor="middle" fill="#155e75" font-weight="600">audit sample</text>
+    <text x="650" y="66" font-size="9.5" text-anchor="middle" fill="#155e75">(28.2)</text>
+    <line x1="650" y1="76" x2="650" y2="196" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4 3"></line>
+    <line x1="650" y1="196" x2="255" y2="196" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ah)"></line>
+    <line x1="250" y1="138" x2="250" y2="188" stroke="#0891b2" stroke-width="0"></line>
+    <text x="440" y="210" font-size="10" text-anchor="middle" fill="#0891b2">feedback: sampled error rate re-tunes τ (28.5 loop)</text>
+  </svg>
+
+  <div class="pitfall callout"><span class="lbl">⚠️ Common Pitfalls</span>
+    <ul style="margin:4px 0">
+      <li>Routing on <em>raw</em> uncalibrated scores — the whole table is meaningless if 0.95 ≠ 95% accurate.</li>
+      <li>One global threshold for all fields, ignoring that error costs differ by field and doc type.</li>
+      <li>Ignoring cost <em>asymmetry</em> — a slipped payment error ≫ a review minute; symmetric thresholds under-protect high-stakes fields.</li>
+      <li>Never auditing the auto-approved stream, so threshold drift goes unnoticed.</li>
+    </ul>
+  </div>
+  <div class="tip callout"><span class="lbl">💡 Tips &amp; Tricks</span>
+    <ul style="margin:4px 0">
+      <li>Mnemonic <strong>"Route on calibrated confidence, cost sets the cut."</strong></li>
+      <li>Break-even threshold shortcut: <code>τ* = 1 − C_review / C_error</code>. Expensive errors → threshold near 1.</li>
+      <li>Higher threshold ⇒ fewer auto-approvals ⇒ more human cost but fewer slipped errors. It's a dial, not a truth.</li>
+    </ul>
+  </div>
+  <div class="exam callout"><span class="lbl">🎯 Exam Strategy</span>
+    "Best next action" questions give a field's confidence + a cost scenario. Compute (or reason about) <code>(1−c)·C_error vs C_review</code> and pick the action that minimises expected cost — not the one that "feels safe". If the stem stresses that errors are catastrophic, the correct answer routes to human even at fairly high confidence. Distractors typically auto-approve a high-stakes low-confidence field, or apply one threshold to everything.
+  </div>
+  <hr>
+</section>
+
+<!-- ================= 28.5 ================= -->
+<section id="s5">
+  <div class="subhdr"><h2 style="margin-bottom:0">28.5 Hands-On: Designing a Human-in-the-Loop Review Pipeline</h2>
+  <a class="backtop" href="#map">↑ top</a></div>
+
+  <h4>Definition</h4>
+  <p>The capstone: assemble 28.1–28.4 into one operating pipeline where machine extraction and human reviewers collaborate, and where measured error <em>feeds back</em> to improve the system. HITL = the model handles volume, humans handle uncertainty, and the boundary between them is set by calibrated confidence and cost.</p>
+
+  <h4>Pipeline stages</h4>
+  <ol>
+    <li><strong>Ingestion</strong> — receive &amp; classify documents by type (drives segmentation, 28.3).</li>
+    <li><strong>Field extraction</strong> — model extracts each field value + raw scores.</li>
+    <li><strong>Confidence scoring &amp; calibration</strong> — convert raw scores to calibrated per-field confidence (28.1).</li>
+    <li><strong>Routing</strong> — apply per-field, cost-aware thresholds (28.4).</li>
+    <li><strong>Sampling / QA</strong> — stratified audit of the auto-approved stream to measure true error (28.2).</li>
+    <li><strong>Human review</strong> — reviewers correct routed / escalated items; corrections are logged as ground truth.</li>
+    <li><strong>Feedback loop</strong> — audit + corrections update the accuracy segmentation (28.3), recalibrate confidence (28.1), and re-tune thresholds (28.4).</li>
+  </ol>
+
+  <h4>Worked Example — a design decision (illustrative)</h4>
+  <p>Contracts show 0.62 accuracy on "date" and slipped-date errors are costly (C_error ≈ 60× C_review). Break-even <code>τ* = 1 − 1/60 ≈ 0.983</code>. Because calibrated confidence on that field rarely exceeds 0.90, in practice <em>every contract date is routed to a human</em> — correct outcome. Meanwhile invoice numbers (0.99 accuracy, cheap errors) auto-approve at ≥ 0.95, keeping human cost focused where it pays off.</p>
+
+  <div class="pitfall callout"><span class="lbl">⚠️ Common Pitfalls</span>
+    <ul style="margin:4px 0">
+      <li><strong>No feedback loop</strong> — a "HITL pipeline" that never feeds corrections back is just review theatre; calibration drifts.</li>
+      <li>Not monitoring for <em>data drift</em> — new document formats silently degrade a field the router still trusts.</li>
+      <li>Auditing only routed items and never the auto-approved stream (see 28.2 survivorship).</li>
+      <li>Reviewer fatigue / no inter-annotator agreement check — the "ground truth" itself becomes noisy.</li>
+    </ul>
+  </div>
+  <div class="tip callout"><span class="lbl">💡 Tips &amp; Tricks</span>
+    <ul style="margin:4px 0">
+      <li>Mnemonic for the loop: <strong>"Extract → Calibrate → Route → Sample → Segment → Repeat"</strong> (ECRSSR — "each careful reviewer surfaces slipped risk").</li>
+      <li>A HITL pipeline without a feedback edge is an open loop — closing it is what makes it "learning".</li>
+      <li>Design thresholds per (field × type), not globally — 28.3's heatmap tells you where.</li>
+    </ul>
+  </div>
+  <div class="exam callout"><span class="lbl">🎯 Exam Strategy</span>
+    System-design questions describe a pipeline missing one piece and ask what to add. The answer is almost always the <strong>measurement or feedback</strong> component (stratified audit, recalibration, drift monitoring) — the parts teams forget. If a design "auto-approves everything above a fixed global threshold with no auditing", the correct fix adds sampling + feedback, not a bigger model.
+  </div>
+  <hr>
+</section>
+
+<!-- ================= SYNTHESIS ================= -->
+<section id="synth" class="panel">
+  <div class="subhdr"><h2 style="margin-top:0">Chapter-Level Synthesis — the end-to-end HITL pipeline</h2>
+  <a class="backtop" href="#map">↑ top</a></div>
+  <p>All five subtopics are one loop. Read the master flowchart left-to-right; the dashed blue edge is the feedback that makes it a learning system.</p>
+
+  <svg viewBox="0 0 960 300" width="100%" style="background:#fff;border:1px solid #e2e8f0;border-radius:10px">
+    <defs><marker id="a2" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"></path></marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#0891b2"></path></marker></defs>
+    <!-- row of stages -->
+    <g font-size="11.5" text-anchor="middle">
+      <rect x="15" y="70" width="120" height="56" rx="10" fill="#eef2ff" stroke="#c7d2fe"></rect>
+      <text x="75" y="94" fill="#3730a3" font-weight="700">Ingestion</text><text x="75" y="110" fill="#5b6b7f" font-size="10">classify doc type</text>
+
+      <rect x="165" y="70" width="120" height="56" rx="10" fill="#eef2ff" stroke="#c7d2fe"></rect>
+      <text x="225" y="94" fill="#3730a3" font-weight="700">Field extraction</text><text x="225" y="110" fill="#5b6b7f" font-size="10">values + raw scores</text>
+
+      <rect x="315" y="70" width="130" height="56" rx="10" fill="#ede9fe" stroke="#ddd6fe"></rect>
+      <text x="380" y="90" fill="#5b21b6" font-weight="700">Confidence &amp;</text><text x="380" y="105" fill="#5b21b6" font-weight="700">calibration</text><text x="380" y="119" fill="#7c3aed" font-size="10">28.1</text>
+
+      <rect x="475" y="70" width="120" height="56" rx="10" fill="#ede9fe" stroke="#ddd6fe"></rect>
+      <text x="535" y="94" fill="#5b21b6" font-weight="700">Routing</text><text x="535" y="110" fill="#7c3aed" font-size="10">28.4 · cost-aware τ</text>
+
+      <rect x="625" y="20" width="150" height="50" rx="10" fill="#dcfce7" stroke="#86efac"></rect>
+      <text x="700" y="42" fill="#166534" font-weight="700">Auto-approve</text><text x="700" y="58" fill="#166534" font-size="10">high calibrated conf</text>
+
+      <rect x="625" y="125" width="150" height="50" rx="10" fill="#ffedd5" stroke="#fdba74"></rect>
+      <text x="700" y="147" fill="#9a3412" font-weight="700">Human review</text><text x="700" y="163" fill="#9a3412" font-size="10">correct + log truth</text>
+
+      <rect x="805" y="70" width="140" height="56" rx="10" fill="#cffafe" stroke="#67e8f9"></rect>
+      <text x="875" y="90" fill="#155e75" font-weight="700">Sampling / QA</text><text x="875" y="105" fill="#155e75" font-weight="700">+ segmentation</text><text x="875" y="119" fill="#0891b2" font-size="10">28.2 · 28.3</text>
+    </g>
+    <!-- arrows -->
+    <line x1="135" y1="98" x2="163" y2="98" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"></line>
+    <line x1="285" y1="98" x2="313" y2="98" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"></line>
+    <line x1="445" y1="98" x2="473" y2="98" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"></line>
+    <line x1="595" y1="88" x2="623" y2="52" stroke="#16a34a" stroke-width="2" marker-end="url(#a2)"></line>
+    <line x1="595" y1="108" x2="623" y2="145" stroke="#d97706" stroke-width="2" marker-end="url(#a2)"></line>
+    <line x1="775" y1="45" x2="875" y2="45" stroke="#0891b2" stroke-width="2"></line>
+    <line x1="875" y1="45" x2="875" y2="68" stroke="#0891b2" stroke-width="2" marker-end="url(#a3)"></line>
+    <line x1="775" y1="150" x2="875" y2="150" stroke="#0891b2" stroke-width="2"></line>
+    <line x1="875" y1="150" x2="875" y2="128" stroke="#0891b2" stroke-width="2" marker-end="url(#a3)"></line>
+    <!-- feedback edge -->
+    <line x1="875" y1="126" x2="875" y2="250" stroke="#0891b2" stroke-width="2" stroke-dasharray="6 4"></line>
+    <line x1="875" y1="250" x2="380" y2="250" stroke="#0891b2" stroke-width="2" stroke-dasharray="6 4"></line>
+    <line x1="380" y1="250" x2="380" y2="128" stroke="#0891b2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a3)"></line>
+    <text x="600" y="270" fill="#0891b2" font-size="11" text-anchor="middle">Feedback loop (28.5): measured error → recalibrate (28.1) &amp; re-tune thresholds (28.4)</text>
+  </svg>
+
+  <p><strong>One-sentence synthesis:</strong> Calibrate per-field confidence (28.1) so a cost-aware router (28.4) can auto-approve the safe and escalate the risky, then use stratified audits (28.2) and per-segment accuracy (28.3) to measure true error and feed it back (28.5) — a closed loop that keeps thresholds honest as data drifts.</p>
+</section>
+
+<!-- ================= EXAM STRATEGY ================= -->
+<section id="strategy">
+  <div class="subhdr"><h2>Chapter-Wide Exam Strategy</h2><a class="backtop" href="#map">↑ top</a></div>
+
+  <h3>Likely question types</h3>
+  <table>
+    <thead><tr><th>Type</th><th>Looks like</th><th>How to attack</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Calculation</strong></td><td>Compute ECE / Brier / sample size n / stratified error rate</td><td>Identify the formula, weight by bin or stratum size, square E for sample size, apply FPC only for small populations.</td></tr>
+      <tr><td><strong>Scenario / "best next action"</strong></td><td>Given a field's confidence + costs, what should the router do?</td><td>Compare <code>(1−c)·C_error</code> vs <code>C_review</code>; minimise expected cost.</td></tr>
+      <tr><td><strong>Diagnosis</strong></td><td>A reliability diagram or heatmap — "what's wrong / fix first?"</td><td>Bars below diagonal = overconfident; fix worst high-volume/high-risk segment first.</td></tr>
+      <tr><td><strong>System design</strong></td><td>Pipeline missing a component</td><td>Usually the missing piece is measurement/feedback: stratified audit, recalibration, drift monitoring.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Time management</h3>
+  <ul>
+    <li>Do the <strong>1-step reasoning</strong> scenario questions first; save multi-step calculations (sample size + FPC + stratified rate) for a second pass.</li>
+    <li>For calc questions, jot the formula before touching numbers — it prevents the "average the rates" trap.</li>
+    <li>Budget ~60–90 s per scenario item; if a calc drags past ~2 min, flag and move on.</li>
+  </ul>
+
+  <h3>Red-flag phrases in distractor answers</h3>
+  <ul>
+    <li>"<em>Average the per-stratum error rates</em>" → wrong; must weight by stratum size.</li>
+    <li>"<em>Use the raw model score as the probability</em>" → ignores calibration.</li>
+    <li>"<em>Increase the sample size because the population is larger</em>" → sample size tracks variance/margin, not population.</li>
+    <li>"<em>Apply one global confidence threshold to all fields</em>" → ignores cost/accuracy differences by field and type.</li>
+    <li>"<em>Auto-approve everything above 0.9 and skip auditing</em>" → no feedback, silent drift.</li>
+    <li>"<em>A bigger/better model</em>" as the fix for a <em>measurement</em> gap → off-target.</li>
+  </ul>
+</section>
+
+<!-- ================= CHEAT SHEET ================= -->
+<section id="cheat" class="cheat">
+  <div class="subhdr"><h2 style="margin-top:0">Chapter Summary Cheat Sheet</h2></div>
+  <div class="grid2">
+    <div>
+      <h4>28.1 Calibration</h4>
+      <ul>
+        <li>Confidence = self-reported P(correct); calibrated ⇒ conf ≈ accuracy.</li>
+        <li><code>ECE = Σ (|B_m|/N)·|acc−conf|</code> — weight by bin size.</li>
+        <li><code>Brier = (1/N)Σ(f−o)²</code>; temperature scaling <code>softmax(logits/T)</code>.</li>
+        <li>Below diagonal = overconfident.</li>
+      </ul>
+      <h4>28.2 Stratified sampling</h4>
+      <ul>
+        <li><code>n₀ = z²p(1−p)/E²</code>; FPC <code>n = n₀/(1+(n₀−1)/N)</code>.</li>
+        <li><code>p̂_strat = Σ W_h·p̂_h</code> — never plain-average rates.</li>
+        <li>Unknown p → use 0.5. Neyman: sample where variance is high.</li>
+        <li>Size tracks <em>variance</em>, not population.</li>
+      </ul>
+      <h4>28.3 Segmentation</h4>
+      <ul>
+        <li>Slice accuracy by (doc type × field); aggregate hides weak cells.</li>
+        <li>P, R, F1, Exact-Match, CER per segment; keep support beside metric.</li>
+        <li>Fix worst <em>high-volume/high-risk</em> cell first (Simpson's paradox).</li>
+      </ul>
+    </div>
+    <div>
+      <h4>28.4 Routing</h4>
+      <ul>
+        <li>Route on <em>calibrated</em> confidence + cost.</li>
+        <li>Break-even <code>τ* = 1 − C_review/C_error</code>.</li>
+        <li>Auto-approve if <code>(1−c)·C_error ≤ C_review</code>.</li>
+        <li>Per-field thresholds; costly errors → τ near 1.</li>
+      </ul>
+      <h4>28.5 HITL pipeline</h4>
+      <ul>
+        <li>Ingest → Extract → Calibrate → Route → Sample/QA → Human → <strong>Feedback</strong>.</li>
+        <li>No feedback loop = not learning; monitor drift.</li>
+        <li>Audit the auto-approved stream, not just routed items.</li>
+      </ul>
+      <h4>Exam quick-fires</h4>
+      <ul>
+        <li>Weight, don't average (strata &amp; bins).</li>
+        <li>Square E in sample size.</li>
+        <li>"Best action" = minimise expected cost.</li>
+        <li>Missing component ≈ measurement/feedback.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section id="quiz">
+  <div class="subhdr"><h2>Self-Check Quiz</h2><a class="backtop" href="#map">↑ top</a></div>
+  <p>Try each before opening the answer. <em>(All numbers illustrative.)</em></p>
+
+  <details>
+    <summary>Q1. A model labels 200 fields with confidence ≈ 0.95, and 168 are correct. What does this tell you, and in which direction is it miscalibrated?</summary>
+    <div class="ans">Observed accuracy = 168/200 = 0.84 vs stated 0.95 → gap 0.11. The model is <strong>overconfident</strong> in this band (bars below the diagonal). Fix: temperature scaling (T&gt;1) and/or raise the auto-approve threshold for this field.</div>
+  </details>
+
+  <details>
+    <summary>Q2. Strata error rates: A (N=8,000) 2%, B (N=1,500) 9%, C (N=500) 15%. What is the overall stratified error rate — and what's the trap answer?</summary>
+    <div class="ans">Weights: A=0.80, B=0.15, C=0.05. <code>p̂ = 0.80·0.02 + 0.15·0.09 + 0.05·0.15 = 0.016 + 0.0135 + 0.0075 = 0.037 ≈ 3.7%</code>. Trap answer = plain average (2+9+15)/3 = 8.7%, which massively overstates error because C is only 5% of volume.</div>
+  </details>
+
+  <details>
+    <summary>Q3. You need a 95% CI with margin E = 0.02 and have no prior estimate of the error rate. Roughly what sample size (ignore FPC)?</summary>
+    <div class="ans">Use p = 0.5 (worst case). <code>n₀ = 1.96²·0.25/0.02² = 3.8416·0.25/0.0004 ≈ 2,401</code>. (Halving E from 0.04 to 0.02 quadruples n — E is squared.)</div>
+  </details>
+
+  <details>
+    <summary>Q4. A field has calibrated confidence 0.90. A slipped error costs $50; a human review costs $2. Auto-approve or review?</summary>
+    <div class="ans">E[cost_auto] = (1−0.90)·$50 = $5. E[cost_review] = $2. Since $5 &gt; $2, <strong>route to review</strong>. Break-even τ* = 1 − 2/50 = 0.96, so 0.90 is below threshold.</div>
+  </details>
+
+  <details>
+    <summary>Q5. Your aggregate extraction accuracy is 94%, but finance keeps hitting wrong contract totals. What analysis do you run and what's the likely finding?</summary>
+    <div class="ans">Run <strong>accuracy segmentation</strong> by (doc type × field). Likely finding: contract "total/amount" (or "date") is a low-accuracy cell hidden by the high-volume, high-accuracy invoice fields — aggregate masking / Simpson's paradox. Remediate that segment (higher review threshold, recalibration).</div>
+  </details>
+
+  <details>
+    <summary>Q6. A pipeline auto-approves every field above a single fixed 0.9 threshold and never samples the output. Name two defects and the fix.</summary>
+    <div class="ans">Defects: (1) single global threshold ignores per-field cost/accuracy; (2) no auditing/feedback of the auto-approved stream → silent drift and no recalibration. Fix: per-(field×type) cost-aware thresholds + stratified sampling of auto-approved items feeding a recalibration/threshold-tuning loop.</div>
+  </details>
+
+  <details>
+    <summary>Q7. Why is <code>p = 0.5</code> used for sample-size planning when the true error rate is unknown?</summary>
+    <div class="ans">Because <code>p(1−p)</code> is maximised at p = 0.5, giving the largest (most conservative) required sample size — so you're guaranteed enough samples regardless of the true rate.</div>
+  </details>
+
+  <details>
+    <summary>Q8. You have a fixed review budget. Allocation across strata: proportional or Neyman — and why?</summary>
+    <div class="ans"><strong>Neyman</strong> allocation is optimal for minimising the variance of the overall estimate: <code>n_h ∝ N_h·S_h</code>, spending more sample on strata that are both large and high-variance. Proportional (<code>n_h ∝ N_h</code>) is simpler but ignores variance — fine when strata variances are similar.</div>
+  </details>
+</section>
+
+<hr>
+<p style="font-size:13px;color:#5b6b7f;text-align:center">Study guide for Chapter 28 · methods reflect standard ML evaluation practice · all thresholds and figures are illustrative examples, not official policy.</p>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 55 — Human-in-the-Loop Validation Strategies | Claude Certified Architect Study Notes</title>
+<style>
+  :root{
+    --bg:#f5f7fa;
+    --surface:#ffffff;
+    --ink:#1c2733;
+    --ink-soft:#4a5a6a;
+    --muted:#7a8a99;
+    --line:#e2e8f0;
+    --line-strong:#cbd5e1;
+    --brand:#2563eb;
+    --brand-dark:#1e3a8a;
+    --brand-soft:#eff4ff;
+    --tip:#0f9d6f;
+    --tip-bg:#e9f9f2;
+    --tip-line:#9be3c8;
+    --exam:#b45309;
+    --exam-bg:#fff6e6;
+    --exam-line:#f3cf94;
+    --warn:#dc2626;
+    --warn-bg:#fdeaea;
+    --ok:#16a34a;
+    --ok-bg:#e7f7ec;
+    --mid:#d97706;
+    --mid-bg:#fdf1e0;
+    --radius:12px;
+    --radius-sm:7px;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",Consolas,"Liberation Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font);line-height:1.6;
+    padding:0 0 80px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px;}
+
+  /* Header */
+  header.hero{
+    background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 60%,#3b82f6 100%);
+    color:#fff;padding:38px 0 44px;margin-bottom:30px;
+    box-shadow:0 4px 18px rgba(30,58,138,.28);
+  }
+  header.hero .eyebrow{
+    text-transform:uppercase;letter-spacing:.14em;font-size:12px;
+    font-weight:700;opacity:.85;margin:0 0 8px;
+  }
+  header.hero h1{margin:0 0 6px;font-size:30px;line-height:1.2;}
+  header.hero .sub{font-size:15px;opacity:.92;margin:0;}
+  header.hero .chapmeta{
+    margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;
+  }
+  header.hero .pill{
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px;border-radius:100px;font-size:12.5px;font-weight:600;
+  }
+
+  /* TOC */
+  nav.toc{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 24px;margin-bottom:34px;
+    box-shadow:0 1px 3px rgba(20,40,60,.05);
+  }
+  nav.toc h2{margin:0 0 12px;font-size:16px;color:var(--brand-dark);
+    display:flex;align-items:center;gap:8px;}
+  nav.toc ol{margin:0;padding-left:0;list-style:none;
+    display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;}
+  nav.toc li{padding:5px 0;border-bottom:1px dashed var(--line);}
+  nav.toc a{color:var(--ink-soft);text-decoration:none;font-size:14px;
+    display:flex;gap:10px;align-items:baseline;}
+  nav.toc a:hover{color:var(--brand);}
+  nav.toc a .num{font-family:var(--mono);color:var(--brand);font-weight:700;
+    font-size:13px;min-width:38px;}
+  nav.toc .cheat a .num{color:var(--exam);}
+
+  /* Sections */
+  section{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 28px 30px;margin-bottom:26px;
+    box-shadow:0 1px 3px rgba(20,40,60,.05);scroll-margin-top:18px;
+  }
+  section > h2{
+    margin:0 0 4px;font-size:22px;color:var(--brand-dark);
+    padding-bottom:10px;border-bottom:3px solid var(--brand-soft);
+  }
+  section > h2 .sec-num{
+    font-family:var(--mono);background:var(--brand);color:#fff;
+    padding:2px 10px;border-radius:6px;font-size:15px;margin-right:10px;
+    vertical-align:middle;
+  }
+  h3{
+    font-size:15px;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--ink);margin:24px 0 8px;
+    display:flex;align-items:center;gap:8px;
+  }
+  h3 .ic{font-size:16px;}
+  p{margin:8px 0;}
+  ul.keys{margin:8px 0;padding-left:0;list-style:none;}
+  ul.keys li{
+    position:relative;padding:5px 0 5px 26px;font-size:14.5px;
+    border-bottom:1px solid var(--line);
+  }
+  ul.keys li:last-child{border-bottom:none;}
+  ul.keys li::before{
+    content:"▸";position:absolute;left:4px;top:5px;color:var(--brand);font-weight:700;
+  }
+  strong{color:var(--ink);}
+  em{color:var(--brand-dark);font-style:italic;}
+  code{font-family:var(--mono);background:#eef2f7;padding:1px 6px;
+    border-radius:4px;font-size:.9em;color:#b4295f;}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;
+    border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;}
+  caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--muted);
+    margin-bottom:6px;font-style:italic;}
+  th{background:var(--brand-dark);color:#fff;text-align:left;padding:9px 12px;
+    font-weight:600;font-size:12.5px;letter-spacing:.02em;}
+  td{padding:8px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tr:nth-child(even) td{background:#fafcff;}
+  td.c{text-align:center;font-family:var(--mono);}
+  .tag{display:inline-block;padding:2px 9px;border-radius:100px;font-size:11.5px;
+    font-weight:700;white-space:nowrap;}
+  .tag.ok{background:var(--ok-bg);color:var(--ok);}
+  .tag.mid{background:var(--mid-bg);color:var(--mid);}
+  .tag.hi{background:var(--warn-bg);color:var(--warn);}
+
+  /* Callout boxes */
+  .tip-box,.exam-strategy,.example-box{
+    border-radius:var(--radius-sm);padding:14px 16px 14px 18px;margin:16px 0;
+    font-size:14px;border-left:5px solid;
+  }
+  .tip-box{background:var(--tip-bg);border-color:var(--tip);}
+  .tip-box strong{color:var(--tip);}
+  .exam-strategy{background:var(--exam-bg);border-color:var(--exam);}
+  .exam-strategy strong{color:var(--exam);}
+  .example-box{background:var(--brand-soft);border-color:var(--brand);}
+  .example-box strong{color:var(--brand-dark);}
+  .callout-title{font-weight:700;display:block;margin-bottom:4px;}
+
+  /* Diagram scaffolding */
+  .diagram{
+    background:linear-gradient(180deg,#fbfdff,#f4f8ff);
+    border:1px dashed var(--line-strong);border-radius:var(--radius-sm);
+    padding:20px 18px;margin:16px 0;overflow-x:auto;
+  }
+  .flow{display:flex;align-items:stretch;gap:0;flex-wrap:nowrap;
+    justify-content:center;min-width:min-content;}
+  .node{
+    background:#fff;border:2px solid var(--brand);border-radius:10px;
+    padding:11px 14px;min-width:118px;max-width:150px;text-align:center;
+    box-shadow:0 2px 6px rgba(37,99,235,.12);
+  }
+  .node .nt{font-weight:700;font-size:13px;color:var(--brand-dark);display:block;}
+  .node .nd{font-size:11.5px;color:var(--ink-soft);margin-top:3px;line-height:1.35;}
+  .node.alt{border-color:var(--tip);}
+  .node.alt .nt{color:var(--tip);}
+  .node.warnn{border-color:var(--warn);}
+  .node.warnn .nt{color:var(--warn);}
+  .arrow{align-self:center;color:var(--muted);font-size:22px;padding:0 8px;
+    font-weight:700;}
+  .stack{display:flex;flex-direction:column;gap:8px;align-items:center;}
+
+  /* legend row */
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);
+    margin-top:12px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .swatch{width:13px;height:13px;border-radius:3px;display:inline-block;}
+
+  /* Cheat sheet */
+  section.cheat{border:2px solid var(--exam-line);background:#fffdf7;}
+  section.cheat > h2{color:var(--exam);border-bottom-color:var(--exam-bg);}
+  section.cheat > h2 .sec-num{background:var(--exam);}
+  .cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+  .cheat-card{background:#fff;border:1px solid var(--line);border-radius:9px;
+    padding:14px 16px;}
+  .cheat-card h4{margin:0 0 8px;font-size:13.5px;color:var(--brand-dark);
+    border-bottom:2px solid var(--brand-soft);padding-bottom:6px;}
+  .cheat-card ul{margin:0;padding-left:18px;font-size:13px;}
+  .cheat-card li{margin:4px 0;}
+  .trap{color:var(--warn);font-weight:600;}
+
+  footer{max-width:960px;margin:20px auto 0;padding:0 22px;
+    font-size:12px;color:var(--muted);text-align:center;}
+
+  @media(max-width:680px){
+    nav.toc ol{grid-template-columns:1fr;}
+    .cheat-grid{grid-template-columns:1fr;}
+    header.hero h1{font-size:24px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+    <h1>Chapter 55 — Human-in-the-Loop Validation Strategies</h1>
+    <p class="sub">Exam-ready revision notes: when to insert humans, how to route work, and how to close the feedback loop in production AI/ML systems.</p>
+    <div class="chapmeta">
+      <span class="pill">5 Subsections</span>
+      <span class="pill">Decision matrices &amp; diagrams</span>
+      <span class="pill">Mnemonics + exam traps</span>
+      <span class="pill">Hands-on architecture</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>📑 Table of Contents</h2>
+  <ol>
+    <li><a href="#s551"><span class="num">55.1</span> Required vs. Optional Review</a></li>
+    <li><a href="#s552"><span class="num">55.2</span> Efficient Review Workflows</a></li>
+    <li><a href="#s553"><span class="num">55.3</span> Confidence-Based Routing</a></li>
+    <li><a href="#s554"><span class="num">55.4</span> Feedback Loops</a></li>
+    <li><a href="#s555"><span class="num">55.5</span> Hands-On: Designing a HITL Pipeline</a></li>
+    <li class="cheat"><a href="#cheat"><span class="num">★</span> Chapter 55 Cheat Sheet</a></li>
+  </ol>
+</nav>
+
+<!-- ================= 55.1 ================= -->
+<section id="s551">
+  <h2><span class="sec-num">55.1</span>Required vs. Optional Review</h2>
+
+  <h3><span class="ic">🧭</span>Definition / Core Concept</h3>
+  <p><strong>Human-in-the-loop (HITL)</strong> validation inserts a human decision point into an otherwise automated AI pipeline. The first design question is not <em>how</em> to review, but <em>whether a human must review at all</em>.</p>
+  <p>A review is <strong>required (mandatory)</strong> when the cost of an automated error is high, hard to undo, or governed by regulation — the system may not act until a human signs off. A review is <strong>optional (discretionary)</strong> when the model can proceed autonomously and human oversight is available but not blocking (e.g. spot-checks or on-demand escalation).</p>
+
+  <h3><span class="ic">🔑</span>Key Points</h3>
+  <ul class="keys">
+    <li><strong>Impact / risk of error</strong> — the more damaging a wrong output, the more likely review is required.</li>
+    <li><strong>Reversibility</strong> — irreversible actions (payments, deletions, publishing, dosing) push toward mandatory review; easily undone actions can stay optional.</li>
+    <li><strong>Model confidence</strong> — low or poorly-calibrated confidence is a trigger for review even in low-risk domains.</li>
+    <li><strong>Domain sensitivity / regulation</strong> — legal, medical, financial, and safety domains often <em>require</em> a human by policy or law, regardless of confidence.</li>
+    <li><strong>Rarity / novelty</strong> — inputs the model rarely sees (edge cases, out-of-distribution data) warrant human eyes.</li>
+    <li>Required vs. optional is a <strong>gate</strong> decision (block vs. proceed); confidence routing (55.3) then decides <em>which</em> items within that gate a human actually sees.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Review-Requirement Decision Matrix</h3>
+  <div class="diagram">
+    <table>
+      <caption>Mandatory-review matrix: <em>Risk level</em> × <em>Model confidence</em> × <em>Domain</em>. "Regulated" domains override confidence.</caption>
+      <thead>
+        <tr>
+          <th>Risk / Impact</th>
+          <th>Model Confidence</th>
+          <th>Regulated / Sensitive Domain</th>
+          <th>Everyday / Low-Stakes Domain</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>High</strong> (irreversible, safety, financial)</td>
+          <td class="c">High</td>
+          <td><span class="tag hi">Required</span></td>
+          <td><span class="tag mid">Required / sample</span></td>
+        </tr>
+        <tr>
+          <td><strong>High</strong></td>
+          <td class="c">Low</td>
+          <td><span class="tag hi">Required</span></td>
+          <td><span class="tag hi">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Medium</strong></td>
+          <td class="c">High</td>
+          <td><span class="tag mid">Required / sample</span></td>
+          <td><span class="tag ok">Optional</span></td>
+        </tr>
+        <tr>
+          <td><strong>Medium</strong></td>
+          <td class="c">Low</td>
+          <td><span class="tag hi">Required</span></td>
+          <td><span class="tag mid">Spot-check</span></td>
+        </tr>
+        <tr>
+          <td><strong>Low</strong> (reversible, cosmetic)</td>
+          <td class="c">High</td>
+          <td><span class="tag mid">Sample</span></td>
+          <td><span class="tag ok">Optional</span></td>
+        </tr>
+        <tr>
+          <td><strong>Low</strong></td>
+          <td class="c">Low</td>
+          <td><span class="tag mid">Spot-check</span></td>
+          <td><span class="tag ok">Optional</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="legend">
+      <span><span class="swatch" style="background:#fdeaea"></span> Required = human must approve before action</span>
+      <span><span class="swatch" style="background:#fdf1e0"></span> Sample / spot-check = review a subset</span>
+      <span><span class="swatch" style="background:#e7f7ec"></span> Optional = auto-proceed, human on demand</span>
+    </div>
+  </div>
+
+  <h3><span class="ic">🌍</span>Real-World Example</h3>
+  <div class="example-box">
+    <span class="callout-title">Loan underwriting assistant</span>
+    A model pre-scores loan applications. <em>Declines</em> and high-value <em>approvals</em> are high-impact, hard to reverse, and fall under lending regulation, so a human underwriter's sign-off is <strong>required</strong>. Routine document-classification steps inside the same pipeline (e.g. "is this a payslip?") are low-risk and reversible, so human review there is <strong>optional</strong> and handled by sampling.
+  </div>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tip-box">
+    💡 <strong>Tip — the "3 R's" of HITL triggers:</strong> <em>Risk, Rarity, Reversibility.</em> If <u>any</u> of the three is high, lean toward mandatory human review. A handy extension is <strong>"3 R's + C"</strong> — add low <em>Confidence</em> as the fourth trigger.
+  </div>
+
+  <div class="exam-strategy">
+    🎯 <strong>Exam Strategy:</strong> Questions describe a scenario and ask "should this require human review?" Scan for the trigger keywords — <em>"irreversible," "regulated," "safety-critical," "low confidence," "novel/edge case."</em> Any one of these signals <strong>mandatory</strong> review. Distractor answers usually argue "the model is accurate enough" — high accuracy does <u>not</u> waive a review that is required for <em>regulatory or reversibility</em> reasons. Don't confuse "the model is confident" with "review is unnecessary."
+  </div>
+</section>
+
+<!-- ================= 55.2 ================= -->
+<section id="s552">
+  <h2><span class="sec-num">55.2</span>Efficient Review Workflows</h2>
+
+  <h3><span class="ic">🧭</span>Definition / Core Concept</h3>
+  <p>Once you know <em>what</em> needs review (55.1), you must move those items through people efficiently. A <strong>review workflow</strong> is the operational pipeline that carries a flagged item from a <strong>queue</strong>, through <strong>reviewer assignment</strong>, to a <strong>resolution</strong> (approve / correct / reject), and finally into a <strong>durable log</strong>. Good workflow design maximizes reviewer throughput and consistency while preserving a complete audit trail.</p>
+
+  <h3><span class="ic">🔑</span>Key Points</h3>
+  <ul class="keys">
+    <li><strong>Prioritized queue</strong> — order items by urgency, risk, or SLA deadline rather than pure first-in-first-out.</li>
+    <li><strong>Smart assignment</strong> — route to the right reviewer by skill, language, or domain; balance load to avoid bottlenecks.</li>
+    <li><strong>Context packaging</strong> — give reviewers the input, the model's proposed output, its confidence, and rationale so they decide fast.</li>
+    <li><strong>Resolution options</strong> — approve, edit/correct, reject, or escalate to a senior reviewer for hard cases.</li>
+    <li><strong>Consensus / adjudication</strong> — for critical or ambiguous items, use multiple reviewers and resolve disagreement (majority vote or a senior tie-breaker).</li>
+    <li><strong>Logging &amp; audit trail</strong> — record who reviewed, the decision, timestamp, and original vs. corrected output. This log becomes training data (see 55.4).</li>
+    <li><strong>SLAs &amp; metrics</strong> — track queue depth, time-to-resolution, and reviewer agreement rate to catch overload early.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Review Workflow</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="node"><span class="nt">1 · Queue</span><span class="nd">Flagged items, prioritized by risk / SLA</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">2 · Assign</span><span class="nd">Route by skill &amp; load; attach context</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">3 · Review</span><span class="nd">Human inspects input + model output</span></div>
+      <span class="arrow">→</span>
+      <div class="stack">
+        <div class="node alt"><span class="nt">4a · Resolve</span><span class="nd">Approve / correct / reject</span></div>
+        <div class="node warnn"><span class="nt">4b · Escalate</span><span class="nd">Senior / adjudication</span></div>
+      </div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">5 · Log</span><span class="nd">Decision, actor, timestamp, correction</span></div>
+    </div>
+    <div class="legend">
+      <span><span class="swatch" style="background:#e9f9f2;border:1px solid #9be3c8"></span> Standard resolution path</span>
+      <span><span class="swatch" style="background:#fdeaea;border:1px solid #dc2626"></span> Escalation for hard/ambiguous cases</span>
+    </div>
+  </div>
+
+  <h3><span class="ic">🌍</span>Real-World Example</h3>
+  <div class="example-box">
+    <span class="callout-title">Support-ticket triage</span>
+    An LLM drafts replies to customer tickets. Low-confidence or refund-related drafts land in a review queue, prioritized so refund tickets (higher risk) jump ahead. The system assigns billing tickets to billing-trained agents. A reviewer approves, edits, or rejects the draft; genuinely ambiguous tickets escalate to a team lead. Every action is logged with the original draft and the human's edit, feeding later model improvement.
+  </div>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tip-box">
+    💡 <strong>Tip — remember the workflow as "QAR-L"</strong>: <em>Queue → Assign → Resolve → Log.</em> If a design "forgets" the final <strong>L</strong> (logging), it has no audit trail and no feedback data — a classic incomplete-design trap. Also recall the throughput levers: <em>prioritize, batch, and specialize</em>.
+  </div>
+
+  <div class="exam-strategy">
+    🎯 <strong>Exam Strategy:</strong> Expect "which step is missing / what would most improve this workflow?" questions. If a scenario mentions "reviewers are overwhelmed," the intended fix is usually <em>prioritization</em>, <em>load-balancing</em>, or <em>raising the auto-approve threshold</em> — not "hire more people." Watch for answers that drop the <strong>logging/audit</strong> step: they look efficient but break compliance and feedback loops. Keyword <em>"audit trail"</em> almost always maps to the logging step.
+  </div>
+</section>
+
+<!-- ================= 55.3 ================= -->
+<section id="s553">
+  <h2><span class="sec-num">55.3</span>Confidence-Based Routing</h2>
+
+  <h3><span class="ic">🧭</span>Definition / Core Concept</h3>
+  <p><strong>Confidence-based routing</strong> uses a model's own certainty signal to decide each item's path automatically: high-confidence outputs are auto-approved, mid-range outputs are sampled or spot-checked, and low-confidence (or high-risk) outputs are escalated to humans or rejected. It is how you keep <em>required</em> review (55.1) affordable — humans see only the items that most need them.</p>
+
+  <h3><span class="ic">🔑</span>Key Points</h3>
+  <ul class="keys">
+    <li><strong>Confidence signal</strong> — may be a class probability, a self-reported score, log-probabilities, or an ensemble/verifier agreement measure.</li>
+    <li><strong>Calibration matters</strong> — routing is only trustworthy if a stated "90%" is right ~90% of the time. <em>Uncalibrated confidence makes thresholds meaningless.</em></li>
+    <li><strong>Thresholds are a business tradeoff</strong> — raising the auto-approve bar increases safety but sends more items (and cost) to humans; lowering it does the reverse.</li>
+    <li><strong>Precision vs. recall of the "needs-review" flag</strong> — tune thresholds to catch enough true errors (recall) without drowning reviewers in false alarms (precision).</li>
+    <li><strong>Risk can override confidence</strong> — a high-risk action may be escalated even at high confidence (ties back to 55.1).</li>
+    <li>Thresholds should be <strong>reviewed and re-tuned</strong> as the model, data, or reviewer capacity changes.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Confidence Threshold Routing</h3>
+  <div class="diagram">
+    <table>
+      <caption>Illustrative thresholds — <em>exact cut-offs are tuned per use case and risk tolerance, not fixed by the standard</em>.</caption>
+      <thead>
+        <tr><th>Confidence Score</th><th>Action</th><th>Rationale</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="c">&gt; 95%</td><td><span class="tag ok">Auto-approve</span></td><td>High certainty, low risk — proceed without a human.</td></tr>
+        <tr><td class="c">85–95%</td><td><span class="tag mid">Sample / spot-check</span></td><td>Mostly reliable; audit a random subset for quality.</td></tr>
+        <tr><td class="c">60–85%</td><td><span class="tag hi">Route to human</span></td><td>Meaningful uncertainty — a reviewer resolves.</td></tr>
+        <tr><td class="c">&lt; 60%</td><td><span class="tag hi">Escalate / reject</span></td><td>Very uncertain — senior review or refuse to act.</td></tr>
+      </tbody>
+    </table>
+    <div class="flow" style="margin-top:6px;">
+      <div class="node"><span class="nt">Model output<br>+ confidence</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">Threshold gate</span><span class="nd">Compare score &amp; risk</span></div>
+      <span class="arrow">→</span>
+      <div class="stack">
+        <div class="node alt"><span class="nt">Auto-approve</span><span class="nd">&gt; high bar</span></div>
+        <div class="node"><span class="nt">Sample</span><span class="nd">mid band</span></div>
+        <div class="node warnn"><span class="nt">Human / reject</span><span class="nd">below bar</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3><span class="ic">🌍</span>Real-World Example</h3>
+  <div class="example-box">
+    <span class="callout-title">Document extraction (invoices)</span>
+    An extraction model returns field values with per-field confidence. Fields above 95% post automatically; 85–95% are sampled by an auditor; below 85% are queued for a human to key in. Because "total amount" is high-risk, it is always routed to a human below 99% — a deliberate <em>risk override</em> of the generic threshold.
+  </div>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Memorize the ladder <em>"Approve → Audit → Ask → Abort"</em> (the <strong>4 A's</strong>) for descending confidence bands. And remember the golden rule: <em>confidence routing is only as good as its calibration</em> — if the exam mentions the model is "overconfident" or "poorly calibrated," thresholds alone won't save you.
+  </div>
+
+  <div class="exam-strategy">
+    🎯 <strong>Exam Strategy:</strong> These questions love the <em>calibration</em> distractor — an option that says "just raise the threshold" when the real problem is that confidence scores are unreliable (fix = <em>calibrate first</em>). Also watch the tradeoff framing: "reduce reviewer load" ⇒ <em>raise</em> auto-approve threshold (accepting more risk); "reduce errors reaching users" ⇒ <em>lower</em> it (more human review). Numbers in the prompt are usually illustrative — reason about the <u>direction</u> of the threshold change, not memorized cut-offs.
+  </div>
+</section>
+
+<!-- ================= 55.4 ================= -->
+<section id="s554">
+  <h2><span class="sec-num">55.4</span>Feedback Loops</h2>
+
+  <h3><span class="ic">🧭</span>Definition / Core Concept</h3>
+  <p>A <strong>feedback loop</strong> turns human review from a one-time gate into a continuous improvement engine. Human corrections captured during review become <strong>labeled data</strong> that is fed back to improve the system — via retraining/fine-tuning, prompt or rule updates, or retrieval-content fixes — so the model steadily makes fewer errors and needs less human intervention over time. This closed loop is often called the <em>data flywheel</em>.</p>
+
+  <h3><span class="ic">🔑</span>Key Points</h3>
+  <ul class="keys">
+    <li><strong>Corrections are gold</strong> — a human's edit is a high-value label precisely because it targets a case the model got wrong or was unsure about.</li>
+    <li><strong>Active learning</strong> — prioritize labeling the <em>uncertain / disagreed</em> items; they teach the model the most per label.</li>
+    <li><strong>Multiple update paths</strong> — not every fix needs retraining. Options: <em>fine-tune / retrain</em>, <em>update the prompt or system instructions</em>, <em>edit rules/guardrails</em>, or <em>fix retrieved knowledge (RAG source)</em>.</li>
+    <li><strong>Drift detection</strong> — rising correction rates or falling confidence signal data/concept drift and trigger a refresh.</li>
+    <li><strong>Validate before deploy</strong> — evaluate the updated model/prompt against a held-out set to confirm it improved and did not regress.</li>
+    <li><strong>Governance</strong> — version data, models, and prompts so every change is traceable and reversible.</li>
+  </ul>
+
+  <h3><span class="ic">🔁</span>Visualization — HITL Feedback Cycle</h3>
+  <div class="diagram" style="text-align:center;">
+    <svg viewBox="0 0 520 360" width="100%" style="max-width:520px;" role="img" aria-label="Cyclical feedback loop: model output to human correction to data labeling to retrain or prompt update to improved model, back to model output">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"></path>
+        </marker>
+        <style>
+          .lbl{font:600 12px -apple-system,Segoe UI,Roboto,sans-serif;fill:#1e3a8a;}
+          .sub{font:11px -apple-system,Segoe UI,Roboto,sans-serif;fill:#4a5a6a;}
+          .box{fill:#ffffff;stroke:#2563eb;stroke-width:2;}
+          .box.h{stroke:#0f9d6f;}
+          .arc{fill:none;stroke:#2563eb;stroke-width:2.4;marker-end:url(#ah);}
+        </style>
+      </defs>
+      <!-- pentagon-ish layout, 5 nodes around a circle -->
+      <!-- Node coords (cx,cy): top, upper-right, lower-right, lower-left, upper-left -->
+      <!-- 1 Model output (top) -->
+      <g>
+        <rect class="box" x="200" y="14" width="120" height="46" rx="9"></rect>
+        <text class="lbl" x="260" y="34" text-anchor="middle">1 · Model output</text>
+        <text class="sub" x="260" y="50" text-anchor="middle">prediction + confidence</text>
+      </g>
+      <!-- 2 Human correction (right) -->
+      <g>
+        <rect class="box h" x="378" y="120" width="128" height="46" rx="9"></rect>
+        <text class="lbl" x="442" y="140" text-anchor="middle" style="fill:#0f9d6f">2 · Human review</text>
+        <text class="sub" x="442" y="156" text-anchor="middle">approve / correct</text>
+      </g>
+      <!-- 3 Data labeling (lower right) -->
+      <g>
+        <rect class="box" x="330" y="270" width="128" height="46" rx="9"></rect>
+        <text class="lbl" x="394" y="290" text-anchor="middle">3 · Data labeling</text>
+        <text class="sub" x="394" y="306" text-anchor="middle">corrections → labels</text>
+      </g>
+      <!-- 4 Retrain / prompt update (lower left) -->
+      <g>
+        <rect class="box" x="62" y="270" width="140" height="46" rx="9"></rect>
+        <text class="lbl" x="132" y="288" text-anchor="middle">4 · Retrain /</text>
+        <text class="lbl" x="132" y="303" text-anchor="middle">prompt update</text>
+      </g>
+      <!-- 5 Improved model (left) -->
+      <g>
+        <rect class="box" x="14" y="120" width="128" height="46" rx="9"></rect>
+        <text class="lbl" x="78" y="140" text-anchor="middle">5 · Improved model</text>
+        <text class="sub" x="78" y="156" text-anchor="middle">deploy new version</text>
+      </g>
+      <!-- Arcs between nodes (clockwise) -->
+      <path class="arc" d="M320,40 C368,52 400,84 420,116"></path>
+      <path class="arc" d="M440,166 C438,200 424,238 410,266"></path>
+      <path class="arc" d="M330,300 C280,316 224,316 204,300"></path>
+      <path class="arc" d="M120,270 C96,236 82,200 80,168"></path>
+      <path class="arc" d="M92,120 C120,80 160,52 198,42"></path>
+      <!-- center caption -->
+      <text x="260" y="178" text-anchor="middle" style="font:700 13px -apple-system,Segoe UI,Roboto,sans-serif;fill:#7a8a99">DATA</text>
+      <text x="260" y="196" text-anchor="middle" style="font:700 13px -apple-system,Segoe UI,Roboto,sans-serif;fill:#7a8a99">FLYWHEEL</text>
+    </svg>
+    <div class="legend" style="justify-content:center;">
+      <span><span class="swatch" style="background:#fff;border:2px solid #0f9d6f"></span> Human step</span>
+      <span><span class="swatch" style="background:#fff;border:2px solid #2563eb"></span> Automated / model step</span>
+    </div>
+  </div>
+
+  <h3><span class="ic">🌍</span>Real-World Example</h3>
+  <div class="example-box">
+    <span class="callout-title">Chatbot answer quality</span>
+    A support assistant's answers are reviewed; agents correct wrong answers and tag the reason. Weekly, the corrected pairs are added to an evaluation set and used to update the system prompt and fix outdated documents in the retrieval store. When a new product launch causes a spike in corrections (drift), the team retrains the intent classifier. Each cycle, the auto-approve rate climbs and reviewer load falls.
+  </div>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tip-box">
+    💡 <strong>Tip — the loop is "OC-LRI"</strong>: <em>Output → Correction → Label → Retrain/Refine → Improved model</em> (then back to Output). Remember that <strong>"retrain" is only one exit</strong> — a prompt tweak, guardrail rule, or RAG-content fix can close the loop faster and cheaper. And <em>always validate before redeploying</em> to avoid silent regressions.
+  </div>
+
+  <div class="exam-strategy">
+    🎯 <strong>Exam Strategy:</strong> Look for <em>"data flywheel," "active learning," "continuous improvement,"</em> and <em>"model drift"</em> as loop keywords. A common distractor is "collect corrections but never use them" — that's an <u>open</u> loop and is wrong when the question asks how the system <em>improves</em>. Another trap: assuming the only fix is full retraining; the best answer often prefers the <em>cheapest effective</em> update (prompt/RAG) and reserves retraining for drift or systematic errors. If drift is mentioned, the loop should <em>detect and trigger</em> an update automatically.
+  </div>
+</section>
+
+<!-- ================= 55.5 ================= -->
+<section id="s555">
+  <h2><span class="sec-num">55.5</span>Hands-On: Designing a HITL Pipeline</h2>
+
+  <h3><span class="ic">🧭</span>Definition / Core Concept</h3>
+  <p>This section synthesizes 55.1–55.4 into an end-to-end design. The goal: given a use case, decide <em>where humans are required</em>, <em>how items are routed by confidence</em>, <em>how reviewers work efficiently</em>, and <em>how corrections feed improvement</em> — then draw the architecture. We use <strong>content moderation for a user-generated-content platform</strong> as the worked example (the same recipe applies to medical-document review).</p>
+
+  <h3><span class="ic">🔑</span>Worked Example — Step by Step</h3>
+  <ul class="keys">
+    <li><strong>Step 1 · Frame risk (55.1).</strong> Publishing harmful content is high-impact and hard to fully reverse; the platform is subject to safety policy. So <em>removals and borderline safety calls require human review</em>; clearly-benign posts do not.</li>
+    <li><strong>Step 2 · Model scores each post.</strong> A classifier/LLM returns a policy-violation probability per category (e.g. hate, violence, spam) with confidence.</li>
+    <li><strong>Step 3 · Confidence-based routing (55.3).</strong> Very-low-risk score ⇒ <em>auto-publish</em>; very-high-risk score ⇒ <em>auto-block + human confirm</em>; the uncertain middle band ⇒ <em>human review queue</em>. High-severity categories always get a human even at high confidence (risk override).</li>
+    <li><strong>Step 4 · Efficient review workflow (55.2).</strong> The queue is prioritized by potential harm and virality; items are assigned to moderators by language/policy specialty with full context (post, predicted category, confidence). Moderators approve, remove, or escalate; hard calls go to a senior policy team.</li>
+    <li><strong>Step 5 · Log every decision (55.2).</strong> Store post, model score, moderator action, reason code, and timestamp for audit and appeals.</li>
+    <li><strong>Step 6 · Close the feedback loop (55.4).</strong> Moderator decisions become labels; disagreements drive active learning; the model is periodically retrained and thresholds re-tuned. Rising overturn rates flag drift (e.g. a new slang term) and trigger a refresh.</li>
+    <li><strong>Step 7 · Monitor &amp; iterate.</strong> Track queue depth, moderator agreement, appeal reversals, and auto-approve rate to keep the system safe <em>and</em> affordable.</li>
+  </ul>
+
+  <h3><span class="ic">🏗️</span>Visualization — HITL Architecture (Content Moderation)</h3>
+  <div class="diagram">
+    <!-- Row 1: ingestion + model -->
+    <div class="flow" style="margin-bottom:10px;">
+      <div class="node"><span class="nt">User post</span><span class="nd">Ingested content</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">Moderation model</span><span class="nd">Per-category score + confidence</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">Routing gate</span><span class="nd">Thresholds + risk override</span></div>
+    </div>
+    <!-- Row 2: three routes -->
+    <div class="flow" style="margin-bottom:10px;">
+      <div class="node alt"><span class="nt">Auto-publish</span><span class="nd">Very low risk</span></div>
+      <div class="node"><span class="nt">Review queue</span><span class="nd">Uncertain band → humans</span></div>
+      <div class="node warnn"><span class="nt">Auto-block</span><span class="nd">Very high risk + human confirm</span></div>
+    </div>
+    <!-- Row 3: reviewer + log -->
+    <div class="flow" style="margin-bottom:10px;">
+      <div class="node"><span class="nt">Moderator</span><span class="nd">Assign by skill; approve / remove / escalate</span></div>
+      <span class="arrow">→</span>
+      <div class="node warnn"><span class="nt">Senior policy</span><span class="nd">Escalation &amp; adjudication</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">Decision log</span><span class="nd">Action, reason, actor, time</span></div>
+    </div>
+    <!-- Row 4: feedback loop back to model -->
+    <div class="flow">
+      <div class="node"><span class="nt">Label store</span><span class="nd">Corrections → training data</span></div>
+      <span class="arrow">→</span>
+      <div class="node"><span class="nt">Retrain / re-tune</span><span class="nd">Active learning + drift check</span></div>
+      <span class="arrow">↺</span>
+      <div class="node alt"><span class="nt">Updated model</span><span class="nd">Feeds back to scoring</span></div>
+    </div>
+    <div class="legend">
+      <span><span class="swatch" style="background:#fff;border:2px solid #2563eb"></span> Automated component</span>
+      <span><span class="swatch" style="background:#fff;border:2px solid #0f9d6f"></span> Auto-safe path</span>
+      <span><span class="swatch" style="background:#fff;border:2px solid #dc2626"></span> Block / escalation path</span>
+      <span>↺ = feedback loop back to the moderation model</span>
+    </div>
+  </div>
+
+  <h3><span class="ic">🌍</span>Transfer to Another Domain</h3>
+  <div class="example-box">
+    <span class="callout-title">Same recipe — medical document review</span>
+    Swap "harmful post" for "clinical extraction error." Extraction runs on records; high-confidence, low-risk fields auto-fill; anything affecting diagnosis, medication, or dosage is <em>required</em> review (regulated + irreversible). Clinicians correct errors, decisions are logged for compliance, and corrections retrain the extractor. The five building blocks — <em>risk gate → confidence routing → efficient review → logging → feedback loop</em> — are identical; only the risk definitions and reviewer roles change.
+  </div>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tip-box">
+    💡 <strong>Tip — design in this fixed order:</strong> <em>(1) Where is a human required? (2) How is work routed by confidence? (3) How do reviewers work efficiently? (4) How is everything logged? (5) How do corrections improve the model?</em> If a design answer skips <strong>logging</strong> or the <strong>feedback loop</strong>, it is incomplete. Anchor it as <em>"Gate → Route → Review → Log → Loop."</em>
+  </div>
+
+  <div class="exam-strategy">
+    🎯 <strong>Exam Strategy:</strong> Scenario-design questions reward the answer that includes <u>all five</u> building blocks in a sensible order. The best distractor usually omits one piece — often the <em>feedback loop</em> or the <em>audit log</em> — or over-automates a high-risk step (auto-approving something that is <em>required</em> to be human-reviewed). When asked "what's the biggest gap in this pipeline?", check for a missing human gate on an irreversible/regulated action first, then a missing log or loop.
+  </div>
+</section>
+
+<!-- ================= CHEAT SHEET ================= -->
+<section id="cheat" class="cheat">
+  <h2><span class="sec-num">★</span>Chapter 55 — Cheat Sheet (One-Page Recall)</h2>
+  <p style="margin-top:0;color:var(--ink-soft);">Consolidated key terms, thresholds/heuristics, mnemonics, and exam traps across 55.1–55.5.</p>
+
+  <div class="cheat-grid">
+    <div class="cheat-card">
+      <h4>Core Mnemonics</h4>
+      <ul>
+        <li><strong>3 R's (+C)</strong> — <em>Risk, Rarity, Reversibility</em> (+ low <em>Confidence</em>) → triggers for human review. <em>(55.1)</em></li>
+        <li><strong>QAR-L</strong> — <em>Queue → Assign → Resolve → Log</em> = review workflow. <em>(55.2)</em></li>
+        <li><strong>4 A's</strong> — <em>Approve → Audit → Ask → Abort</em> down the confidence ladder. <em>(55.3)</em></li>
+        <li><strong>OC-LRI</strong> — <em>Output → Correction → Label → Retrain/Refine → Improved</em> loop. <em>(55.4)</em></li>
+        <li><strong>Gate → Route → Review → Log → Loop</strong> = full pipeline design order. <em>(55.5)</em></li>
+      </ul>
+    </div>
+
+    <div class="cheat-card">
+      <h4>Key Terms</h4>
+      <ul>
+        <li><strong>Required vs. optional review</strong> — blocking sign-off vs. discretionary oversight.</li>
+        <li><strong>Confidence routing</strong> — score-driven auto/sample/human paths.</li>
+        <li><strong>Calibration</strong> — stated confidence matches real accuracy.</li>
+        <li><strong>Active learning</strong> — label the most uncertain items first.</li>
+        <li><strong>Data flywheel</strong> — corrections → labels → better model.</li>
+        <li><strong>Model / concept drift</strong> — performance decay over time.</li>
+        <li><strong>Audit trail</strong> — durable log of who decided what, when.</li>
+      </ul>
+    </div>
+
+    <div class="cheat-card">
+      <h4>Thresholds &amp; Heuristics <span style="font-weight:400;font-size:11px;color:var(--muted)">(illustrative — tune per use case)</span></h4>
+      <ul>
+        <li><code>&gt;95%</code> → auto-approve · <code>85–95%</code> → sample · <code>60–85%</code> → human · <code>&lt;60%</code> → escalate/reject.</li>
+        <li>Reduce reviewer load ⇒ <strong>raise</strong> auto-approve bar (more risk).</li>
+        <li>Reduce user-facing errors ⇒ <strong>lower</strong> the bar (more review).</li>
+        <li>High-risk action ⇒ human even at high confidence (<em>risk override</em>).</li>
+        <li>Re-tune thresholds when model/data/capacity changes.</li>
+      </ul>
+    </div>
+
+    <div class="cheat-card">
+      <h4>Exam Traps ⚠️</h4>
+      <ul>
+        <li><span class="trap">High accuracy ≠ skip required review</span> — regulation/irreversibility still mandate a human.</li>
+        <li><span class="trap">"Just raise the threshold"</span> when the real issue is <em>poor calibration</em> (fix calibration first).</li>
+        <li><span class="trap">Workflow with no logging</span> — breaks audit + feedback.</li>
+        <li><span class="trap">Collecting corrections but never using them</span> — open loop, no improvement.</li>
+        <li><span class="trap">Assuming retraining is the only fix</span> — prompt/rule/RAG updates are often cheaper.</li>
+        <li><span class="trap">Over-automating a high-risk step</span> — auto-approving something that must be human-reviewed.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exam-strategy" style="margin-top:18px;">
+    🎯 <strong>Final exam mindset:</strong> When a scenario asks whether to involve a human, screen for <em>irreversible · regulated · low-confidence · novel</em> signals. When asked to fix or complete a pipeline, verify all five blocks exist — <em>Gate, Route, Review, Log, Loop</em> — and pick the answer that adds the missing one rather than the flashiest option. Treat numeric thresholds as illustrative; reason about the <u>direction</u> of change.
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Chapter 55 · Human-in-the-Loop Validation Strategies — self-contained revision notes. Threshold values shown are illustrative best-practice ranges, not fixed certification constants; always calibrate and tune to your own risk tolerance.
+</footer>
+
+
+
+</body></html>

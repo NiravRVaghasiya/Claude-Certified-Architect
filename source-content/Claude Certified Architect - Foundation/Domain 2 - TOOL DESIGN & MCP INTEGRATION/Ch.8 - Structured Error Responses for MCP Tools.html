@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 8: Structured Error Responses for MCP Tools — Claude Certified Architect Study Notes</title>
+<style>
+  :root {
+    --color-bg: #fafbfc;
+    --color-bg-secondary: #ffffff;
+    --color-text: #1a1a2e;
+    --color-text-secondary: #44546f;
+    --color-text-muted: #8993a4;
+    --color-border-light: #e8eaed;
+    --color-border: #d0d5dd;
+    --color-primary: #4f46e5;
+    --color-primary-soft: #eef2ff;
+    --color-success: #16a34a;
+    --color-success-bg: #f0fdf4;
+    --color-error: #dc2626;
+    --color-error-bg: #fef2f2;
+    --color-warning: #d97706;
+    --color-warning-bg: #fffbeb;
+    --color-info: #2563eb;
+    --color-info-bg: #eff6ff;
+    --color-surface: #ffffff;
+    --color-accent-purple: #7c3aed;
+    --color-accent-purple-bg: #f5f3ff;
+    --color-accent-teal: #0d9488;
+    --color-accent-teal-bg: #f0fdfa;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.65;
+    font-size: 15px;
+    padding: 0;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* ============= HEADER ============= */
+  .chapter-header {
+    background: linear-gradient(135deg, #312e81, #4f46e5, #7c3aed);
+    color: white;
+    padding: 48px 40px 40px;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    margin-bottom: 32px;
+  }
+  .chapter-header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    padding: 4px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .chapter-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .chapter-header .subtitle {
+    font-size: 15px;
+    opacity: 0.88;
+    max-width: 640px;
+  }
+
+  /* ============= TOC ============= */
+  .toc {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin: 0 16px 36px;
+  }
+  .toc h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: var(--color-primary); }
+  .toc ol { padding-left: 22px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+  .toc a:hover { color: var(--color-primary); text-decoration: underline; }
+  .toc .sub-items { font-weight: 400; color: var(--color-text-secondary); font-size: 13px; margin-top: 2px; }
+
+  /* ============= SECTIONS ============= */
+  .section {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin: 0 16px 28px;
+  }
+  .section-number {
+    display: inline-block;
+    background: var(--color-primary);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-text);
+  }
+  .section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 24px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--color-border-light);
+    color: var(--color-text);
+  }
+  .section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 18px 0 8px;
+    color: var(--color-text-secondary);
+  }
+  .section p { margin-bottom: 12px; }
+
+  /* ============= CALLOUT BOXES ============= */
+  .callout {
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin: 18px 0;
+    border-left: 4px solid;
+  }
+  .callout-concept {
+    background: var(--color-info-bg);
+    border-color: var(--color-info);
+  }
+  .callout-concept .callout-title { color: var(--color-info); }
+  .callout-tip {
+    background: var(--color-success-bg);
+    border-color: var(--color-success);
+  }
+  .callout-tip .callout-title { color: var(--color-success); }
+  .callout-warning {
+    background: var(--color-warning-bg);
+    border-color: var(--color-warning);
+  }
+  .callout-warning .callout-title { color: var(--color-warning); }
+  .callout-exam {
+    background: var(--color-accent-purple-bg);
+    border-color: var(--color-accent-purple);
+  }
+  .callout-exam .callout-title { color: var(--color-accent-purple); }
+  .callout-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .callout ul, .callout ol { padding-left: 20px; margin: 6px 0; }
+  .callout li { margin-bottom: 4px; font-size: 14px; }
+
+  /* ============= DEFINITION LIST ============= */
+  .def-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .def-grid dt {
+    background: var(--color-bg);
+    padding: 10px 14px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .def-grid dd {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-secondary);
+  }
+  .def-grid dt:last-of-type, .def-grid dd:last-of-type { border-bottom: none; }
+
+  /* ============= TABLES ============= */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 14px 0;
+  }
+  th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 10px 14px;
+    background: var(--color-bg);
+    border-bottom: 2px solid var(--color-border);
+    font-size: 13px;
+    letter-spacing: 0.01em;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-secondary);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  .table-wrap {
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin: 14px 0;
+  }
+
+  /* ============= CODE BLOCKS ============= */
+  pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.6;
+    font-family: var(--font-mono);
+    margin: 14px 0;
+  }
+  code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  :not(pre) > code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #be185d;
+    font-size: 12.5px;
+  }
+  .code-comment { color: #6c7086; }
+  .code-keyword { color: #cba6f7; }
+  .code-string { color: #a6e3a1; }
+  .code-function { color: #89b4fa; }
+  .code-number { color: #fab387; }
+  .code-decorator { color: #f9e2af; }
+  .code-type { color: #89dceb; }
+  .code-bool { color: #fab387; }
+  .code-operator { color: #94e2d5; }
+
+  /* ============= VISUAL DIAGRAMS ============= */
+  .diagram-container {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin: 18px 0;
+    text-align: center;
+  }
+  .diagram-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+
+  .flow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+  .flow-node {
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    min-width: 100px;
+    text-align: center;
+  }
+  .flow-arrow {
+    font-size: 20px;
+    color: var(--color-text-muted);
+    padding: 0 6px;
+  }
+  .flow-arrow-down {
+    font-size: 20px;
+    color: var(--color-text-muted);
+    padding: 6px 0;
+  }
+
+  /* ============= COMPARISON LAYOUT ============= */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 18px 0;
+  }
+  .compare-card {
+    border: 2px solid;
+    border-radius: var(--radius-md);
+    padding: 20px;
+  }
+  .compare-card h4 {
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+  .compare-card ul { padding-left: 18px; margin: 0; }
+  .compare-card li { margin-bottom: 4px; font-size: 13.5px; }
+
+  /* ============= TAG / BADGE ============= */
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .tag-transient { background: var(--color-warning-bg); color: var(--color-warning); }
+  .tag-business { background: var(--color-error-bg); color: var(--color-error); }
+  .tag-permission { background: var(--color-accent-purple-bg); color: var(--color-accent-purple); }
+  .tag-success { background: var(--color-success-bg); color: var(--color-success); }
+  .tag-info { background: var(--color-info-bg); color: var(--color-info); }
+
+  /* ============= TRUTH TABLE ============= */
+  .truth-table td:first-child, .truth-table td:nth-child(2), .truth-table td:nth-child(3) {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  /* ============= QUIZ ============= */
+  .quiz-question {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin: 12px 0;
+  }
+  .quiz-question p { font-weight: 600; margin-bottom: 6px; }
+  .quiz-question .options { padding-left: 20px; font-size: 14px; color: var(--color-text-secondary); }
+  .quiz-question .options li { margin-bottom: 3px; }
+  details {
+    margin-top: 8px;
+  }
+  details summary {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 13px;
+  }
+  details .answer {
+    margin-top: 8px;
+    padding: 12px 16px;
+    background: var(--color-success-bg);
+    border-radius: var(--radius-sm);
+    font-size: 13.5px;
+    color: var(--color-text);
+  }
+
+  /* ============= DECISION TREE (CSS) ============= */
+  .decision-tree {
+    text-align: center;
+    padding: 12px 0;
+  }
+  .dt-node {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 600;
+    margin: 4px;
+  }
+  .dt-diamond {
+    display: inline-block;
+    padding: 10px 18px;
+    transform: rotate(0deg);
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary-soft);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 4px;
+  }
+  .dt-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 4px 0;
+    font-size: 12px;
+    color: var(--color-text-muted);
+  }
+
+  /* ============= QUICK REF CARD ============= */
+  .qref-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 14px 0;
+  }
+  .qref-item {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+  }
+  .qref-term {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--color-text);
+    margin-bottom: 4px;
+  }
+  .qref-def {
+    font-size: 12.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ============= UTILITIES ============= */
+  .mt-0 { margin-top: 0; }
+  .mb-0 { margin-bottom: 0; }
+  .text-sm { font-size: 13px; }
+  .text-muted { color: var(--color-text-muted); }
+  .text-center { text-align: center; }
+  .font-mono { font-family: var(--font-mono); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  strong { font-weight: 700; }
+  .divider { border: none; border-top: 1px solid var(--color-border-light); margin: 28px 0; }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<div class="chapter-header">
+  <div class="badge">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Chapter 8: Structured Error Responses for MCP Tools</h1>
+  <div class="subtitle">Master the error taxonomy, signaling mechanisms, and recovery patterns that separate production-grade MCP tool implementations from brittle prototypes.</div>
+</div>
+
+<!-- ===================== TABLE OF CONTENTS ===================== -->
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s8-1">8.1 — Structured Error Context: Failure Type, Attempted Query &amp; Partial Results</a>
+      <div class="sub-items">Error anatomy · Three pillars of context · Partial-result patterns</div>
+    </li>
+    <li><a href="#s8-2">8.2 — The <code>isError</code> Flag in MCP Tool Responses</a>
+      <div class="sub-items">CallToolResult schema · Flag semantics · Truth table · Common misconceptions</div>
+    </li>
+    <li><a href="#s8-3">8.3 — Transient Errors vs Business Errors vs Permission Errors</a>
+      <div class="sub-items">Error taxonomy · Retry logic · Escalation policy · Comparison matrix</div>
+    </li>
+    <li><a href="#s8-4">8.4 — Enabling Intelligent Coordinator Recovery Decisions</a>
+      <div class="sub-items">Decision flowchart · Recovery strategies · Coordinator responsibilities</div>
+    </li>
+    <li><a href="#s8-5">8.5 — Access Failures vs Valid Empty Results</a>
+      <div class="sub-items">Semantic distinction · Side-by-side comparison · Anti-patterns</div>
+    </li>
+    <li><a href="#s8-6">8.6 — Hands-On: Implementing Error-Handling Strategies</a>
+      <div class="sub-items">Annotated code · Schema design · Integration tests · Best practices</div>
+    </li>
+    <li><a href="#summary">Chapter Summary &amp; Master Reference</a>
+      <div class="sub-items">Comparison table · Quick-reference card · Self-assessment quiz</div>
+    </li>
+  </ol>
+</div>
+
+<!-- =========================================================================
+     SECTION 8.1
+     ========================================================================= -->
+<div class="section" id="s8-1">
+  <span class="section-number">Section 8.1</span>
+  <h2>Structured Error Context: Failure Type, Attempted Query &amp; Partial Results</h2>
+
+  <!-- Concept Overview -->
+  <h3>📘 Concept Overview</h3>
+  <p>
+    In the Model Context Protocol, an MCP tool is expected to <strong>communicate failure with the same structural discipline as success</strong>.
+    A bare <code>"Something went wrong"</code> string is never enough. Structured error context gives the LLM coordinator (Claude, or any orchestrating model)
+    the information it needs to decide what to do next — without hallucinating reasons or retrying blindly.
+  </p>
+  <p>
+    Structured error context consists of <strong>three pillars</strong> returned together whenever a tool fails:
+  </p>
+
+  <div class="diagram-container">
+    <div class="diagram-title">The Three Pillars of Structured Error Context</div>
+    <div class="flow-row">
+      <div class="flow-node" style="background:#4f46e5;">① Failure Type</div>
+      <span class="flow-arrow">+</span>
+      <div class="flow-node" style="background:#7c3aed;">② Attempted Query</div>
+      <span class="flow-arrow">+</span>
+      <div class="flow-node" style="background:#0d9488;">③ Partial Results</div>
+    </div>
+    <div style="margin-top:14px; font-size:13px; color:var(--color-text-muted);">
+      Together, these give the coordinator enough signal to recover, reroute, or report.
+    </div>
+  </div>
+
+  <!-- Key Definitions -->
+  <h3>📖 Key Definitions</h3>
+  <dl class="def-grid">
+    <dt>Failure Type</dt>
+    <dd>A machine-readable category (e.g., <code>"transient"</code>, <code>"business_rule"</code>, <code>"permission_denied"</code>) that classifies <em>why</em> the tool call failed. This replaces opaque error strings with actionable categories.</dd>
+    <dt>Attempted Query</dt>
+    <dd>An echo of exactly what the tool tried to do — the parameters, filters, and resource identifiers it used. This allows the coordinator to understand <em>what was attempted</em> without re-parsing its own prior request.</dd>
+    <dt>Partial Results</dt>
+    <dd>Any data the tool was able to retrieve before the failure occurred. For example, a database tool may return 3 of 5 requested rows before a timeout. Partial results prevent unnecessary re-fetching of already-available data.</dd>
+    <dt>Error Context Object</dt>
+    <dd>The composite JSON structure within the MCP tool response that bundles all three pillars alongside the <code>isError: true</code> flag.</dd>
+  </dl>
+
+  <!-- Visual Aid: Error Response Structure -->
+  <h3>🎨 Visual: Anatomy of a Structured Error Response</h3>
+  <pre><span class="code-comment">// MCP Tool Response with structured error context</span>
+{
+  <span class="code-string">"content"</span>: [
+    {
+      <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+      <span class="code-string">"text"</span>: <span class="code-string">"{\"error\": {\"type\": \"transient\", \"message\": \"Database connection timed out after 30s\", \"attempted_query\": {\"table\": \"orders\", \"filters\": {\"status\": \"pending\"}, \"limit\": 50}, \"partial_results\": {\"rows_fetched\": 12, \"data\": [...]}, \"retry_after_seconds\": 5}}"</span>
+    }
+  ],
+  <span class="code-string">"isError"</span>: <span class="code-bool">true</span>
+}</pre>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Always serialize error context as JSON within the text content</strong> — MCP content items are text or image; structured error metadata goes inside the text body as parseable JSON.</li>
+      <li><strong>Echo parameters faithfully.</strong> Don't summarize the attempted query — return the exact parameters. The coordinator may use them to construct a follow-up call.</li>
+      <li><strong>Include timestamps.</strong> Adding <code>"timestamp"</code> and <code>"duration_ms"</code> to the error object helps the coordinator gauge transient vs. persistent failure.</li>
+      <li><strong>Partial results should include a progress indicator</strong> (e.g., <code>"fetched": 12, "expected": 50</code>) so the coordinator knows how much is missing.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-exam">
+    <div class="callout-title">🎯 Exam Strategy — Section 8.1</div>
+    <ul>
+      <li><strong>Question type:</strong> Scenario-based MCQ — "Given this tool failure, which error context fields are essential?"</li>
+      <li><strong>Watch for:</strong> Distractors that include HTTP status codes or transport-layer headers as part of MCP error context. MCP error context lives <em>inside the response body</em>, not in protocol headers.</li>
+      <li><strong>Common distractor:</strong> Options suggesting that the <em>coordinator</em> should infer the failure type from the error message string. The correct answer always involves an explicit, machine-readable <code>type</code> field.</li>
+      <li><strong>Memory anchor:</strong> <em>"Three pillars: What failed (type), what was tried (query), what survived (partial)."</em></li>
+      <li><strong>Likely format:</strong> MCQ and "select all that apply"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =========================================================================
+     SECTION 8.2
+     ========================================================================= -->
+<div class="section" id="s8-2">
+  <span class="section-number">Section 8.2</span>
+  <h2>The <code>isError</code> Flag in MCP Tool Responses</h2>
+
+  <!-- Concept Overview -->
+  <h3>📘 Concept Overview</h3>
+  <p>
+    Every MCP tool invocation returns a <code>CallToolResult</code> object. This object contains a <code>content</code> array
+    (with one or more text/image items) and a boolean flag called <strong><code>isError</code></strong>. This flag is MCP's
+    <strong>application-level error signal</strong> — it tells the coordinating LLM whether the tool call succeeded or failed,
+    regardless of how the data was transported.
+  </p>
+  <p>
+    <code>isError</code> is <strong>not</strong> analogous to HTTP status codes. A tool call can arrive successfully over the
+    transport layer (HTTP 200, stdio stream intact) yet still carry <code>isError: true</code> because the tool's <em>business logic</em>
+    encountered a problem. Conversely, a transport-layer failure (network error, process crash) produces a
+    <strong>protocol-level error</strong>, which is handled differently from a tool-level <code>isError</code>.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>📖 Key Definitions</h3>
+  <dl class="def-grid">
+    <dt><code>CallToolResult</code></dt>
+    <dd>The MCP response schema returned by every tool invocation. Fields: <code>content</code> (array of content items) and <code>isError</code> (optional boolean, defaults to <code>false</code>).</dd>
+    <dt><code>isError: true</code></dt>
+    <dd>Signals that the tool executed but the operation it attempted <em>failed</em>. The content array describes <em>what went wrong</em>. The coordinator should treat this as an error to be handled, not data to present to the user.</dd>
+    <dt><code>isError: false</code></dt>
+    <dd>The default. Indicates the tool succeeded. Content represents the requested result. May be omitted (absence ≡ <code>false</code>).</dd>
+    <dt>Protocol-level error</dt>
+    <dd>A JSON-RPC error (e.g., method not found, invalid params, internal error) that occurs at the <em>transport/protocol</em> layer. These are separate from tool-level errors and don't use <code>isError</code> — they use the JSON-RPC <code>error</code> object with numeric codes.</dd>
+  </dl>
+
+  <!-- Visual: isError Truth Table -->
+  <h3>🎨 Visual: <code>isError</code> Truth Table</h3>
+  <div class="table-wrap">
+    <table class="truth-table">
+      <thead>
+        <tr>
+          <th style="text-align:center"><code>isError</code></th>
+          <th style="text-align:center">Transport OK?</th>
+          <th style="text-align:center">Tool Succeeded?</th>
+          <th>Interpretation</th>
+          <th>Coordinator Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-success">false</span></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>Normal success — content contains the requested data</td>
+          <td>Use result; present to user or continue chain</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-business">true</span></td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>Tool error — transport worked, but the tool's operation failed</td>
+          <td>Read error context; decide on retry, fallback, or report</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center; font-style:italic; color: var(--color-text-muted);">N/A</td>
+          <td>❌</td>
+          <td>Protocol error — transport itself broke (JSON-RPC error)</td>
+          <td>Handle at protocol level; tool never executed</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-success">false / absent</span></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>Success with no <code>isError</code> field — treated as <code>false</code></td>
+          <td>Same as row 1; field is optional</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="diagram-container">
+    <div class="diagram-title">isError: Two-Layer Error Model</div>
+    <div style="display:flex; gap:24px; justify-content:center; flex-wrap:wrap;">
+      <div style="border:2px solid var(--color-info); border-radius:var(--radius-md); padding:16px 24px; text-align:center; min-width:200px;">
+        <div style="font-weight:700; color:var(--color-info); margin-bottom:6px;">Layer 1: Transport / Protocol</div>
+        <div style="font-size:13px; color:var(--color-text-secondary);">JSON-RPC error codes<br>Network failures<br>Method not found<br><em>No <code>isError</code> involved</em></div>
+      </div>
+      <div style="font-size:28px; color:var(--color-text-muted); display:flex; align-items:center;">→</div>
+      <div style="border:2px solid var(--color-accent-purple); border-radius:var(--radius-md); padding:16px 24px; text-align:center; min-width:200px;">
+        <div style="font-weight:700; color:var(--color-accent-purple); margin-bottom:6px;">Layer 2: Tool / Application</div>
+        <div style="font-size:13px; color:var(--color-text-secondary);"><code>isError: true|false</code><br>Business logic failures<br>Auth / scope failures<br><em>Inside <code>CallToolResult</code></em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Example -->
+  <h3>💻 Code: Reading <code>isError</code></h3>
+  <pre><span class="code-comment"># CallToolResult schema (simplified)</span>
+<span class="code-keyword">class</span> <span class="code-type">CallToolResult</span>:
+    content: <span class="code-type">list</span>[<span class="code-type">TextContent</span> | <span class="code-type">ImageContent</span> | <span class="code-type">EmbeddedResource</span>]
+    isError: <span class="code-type">bool</span> = <span class="code-bool">False</span>   <span class="code-comment"># Optional, defaults to False</span>
+
+<span class="code-comment"># How the coordinator should interpret it</span>
+<span class="code-keyword">def</span> <span class="code-function">process_tool_result</span>(result: <span class="code-type">CallToolResult</span>):
+    <span class="code-keyword">if</span> result.isError:
+        <span class="code-comment"># Content describes the error — parse and route to recovery</span>
+        error_info = json.loads(result.content[<span class="code-number">0</span>].text)
+        <span class="code-keyword">return</span> handle_error(error_info)
+    <span class="code-keyword">else</span>:
+        <span class="code-comment"># Content is the actual result — use it</span>
+        <span class="code-keyword">return</span> use_result(result.content)</pre>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks</div>
+    <ul>
+      <li><strong><code>isError</code> is optional and defaults to <code>false</code>.</strong> If a tool response has no <code>isError</code> field, treat it as a success.</li>
+      <li><strong>Don't confuse <code>isError</code> with JSON-RPC errors.</strong> A JSON-RPC <code>error</code> object (code + message) means the <em>protocol</em> failed. <code>isError</code> means the tool ran but its operation didn't succeed.</li>
+      <li><strong>Content is always present.</strong> Even when <code>isError: true</code>, the <code>content</code> array is populated — it describes the error. Tools should never return an empty content array on error.</li>
+      <li><strong>Think of <code>isError</code> as an in-band signal.</strong> It travels inside the successful response envelope, not as a separate error mechanism.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-exam">
+    <div class="callout-title">🎯 Exam Strategy — Section 8.2</div>
+    <ul>
+      <li><strong>Question type:</strong> Scenario-based MCQ — "A tool returns HTTP 200 with isError: true. What should the coordinator do?"</li>
+      <li><strong>Watch for:</strong> Distractors that conflate <code>isError</code> with HTTP 4xx/5xx codes. The exam tests whether you understand the two-layer model.</li>
+      <li><strong>Common trap:</strong> "If <code>isError</code> is absent, the tool failed silently." — <strong>Wrong.</strong> Absent means <code>false</code> (success).</li>
+      <li><strong>Memory anchor:</strong> <em>"<code>isError</code> is MCP's internal signal — it lives INSIDE the response body, not in the transport layer."</em></li>
+      <li><strong>Likely format:</strong> MCQ, true/false</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =========================================================================
+     SECTION 8.3
+     ========================================================================= -->
+<div class="section" id="s8-3">
+  <span class="section-number">Section 8.3</span>
+  <h2>Transient Errors vs Business Errors vs Permission Errors</h2>
+
+  <!-- Concept Overview -->
+  <h3>📘 Concept Overview</h3>
+  <p>
+    Not all errors are equal. MCP tool implementations should <strong>classify</strong> errors into distinct categories
+    because the <em>correct recovery strategy</em> differs radically between them. An error taxonomy allows the
+    coordinator to take <strong>immediate, appropriate action</strong> rather than applying a one-size-fits-all retry
+    or giving up entirely.
+  </p>
+  <p>
+    The three canonical error categories in MCP tool design are:
+  </p>
+
+  <!-- Visual: Three-Column Comparison -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:18px 0;">
+    <div style="border:2px solid var(--color-warning); border-radius:var(--radius-md); padding:18px;">
+      <div style="font-weight:700; color:var(--color-warning); font-size:15px; margin-bottom:8px;">⏳ Transient Errors</div>
+      <div style="font-size:13px; color:var(--color-text-secondary); line-height:1.6;">
+        Temporary infrastructure or capacity failures that are expected to self-resolve.
+        <br><br><strong>Examples:</strong> Network timeouts, rate limits, database connection pool exhausted, service temporarily unavailable.
+        <br><br><strong>Key signal:</strong> The same request, sent again later, is likely to succeed.
+      </div>
+    </div>
+    <div style="border:2px solid var(--color-error); border-radius:var(--radius-md); padding:18px;">
+      <div style="font-weight:700; color:var(--color-error); font-size:15px; margin-bottom:8px;">🚫 Business Errors</div>
+      <div style="font-size:13px; color:var(--color-text-secondary); line-height:1.6;">
+        The request was well-formed but violates a business rule, validation constraint, or domain logic.
+        <br><br><strong>Examples:</strong> Invalid date range, referenced entity not found, exceeding a balance limit, conflicting parameters.
+        <br><br><strong>Key signal:</strong> Retrying the exact same request will always fail. The <em>input</em> needs to change.
+      </div>
+    </div>
+    <div style="border:2px solid var(--color-accent-purple); border-radius:var(--radius-md); padding:18px;">
+      <div style="font-weight:700; color:var(--color-accent-purple); font-size:15px; margin-bottom:8px;">🔒 Permission Errors</div>
+      <div style="font-size:13px; color:var(--color-text-secondary); line-height:1.6;">
+        The caller lacks the authorization or scope to perform the requested operation.
+        <br><br><strong>Examples:</strong> Expired OAuth token, insufficient scope, IP-restricted resource, role-based access denied.
+        <br><br><strong>Key signal:</strong> The request itself is valid, but the caller's identity or credentials are insufficient.
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Definitions -->
+  <h3>📖 Key Definitions</h3>
+  <dl class="def-grid">
+    <dt>Transient Error</dt>
+    <dd>An error caused by temporary infrastructure conditions. Retry with exponential backoff is the standard recovery.</dd>
+    <dt>Business Error</dt>
+    <dd>An error caused by invalid input or violated domain rules. Recovery requires <em>modifying the request</em>, not retrying it.</dd>
+    <dt>Permission Error</dt>
+    <dd>An error caused by insufficient authorization. Recovery requires credential refresh, scope escalation, or user intervention.</dd>
+    <dt>Retry Budget</dt>
+    <dd>The maximum number of retries the coordinator should attempt for transient errors before escalating. Typically 2–3 retries with exponential backoff.</dd>
+    <dt>Exponential Backoff</dt>
+    <dd>A retry strategy where the wait time between attempts increases exponentially (e.g., 1s → 2s → 4s) to avoid overwhelming recovering services.</dd>
+  </dl>
+
+  <!-- Visual: Master Comparison Table -->
+  <h3>🎨 Visual: Error Type Comparison Matrix</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th><span class="tag tag-transient">Transient</span></th>
+          <th><span class="tag tag-business">Business</span></th>
+          <th><span class="tag tag-permission">Permission</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Root Cause</strong></td>
+          <td>Infrastructure / capacity</td>
+          <td>Invalid input / domain rule</td>
+          <td>Auth / authorization</td>
+        </tr>
+        <tr>
+          <td><strong>Retry Same Request?</strong></td>
+          <td>✅ Yes (with backoff)</td>
+          <td>❌ No (will always fail)</td>
+          <td>❌ No (unless creds refreshed)</td>
+        </tr>
+        <tr>
+          <td><strong>Coordinator Recovery</strong></td>
+          <td>Exponential backoff → retry</td>
+          <td>Adjust parameters → re-request</td>
+          <td>Refresh token, or escalate to user</td>
+        </tr>
+        <tr>
+          <td><strong>User Notification</strong></td>
+          <td>⚠️ Only if retries exhausted</td>
+          <td>✅ Yes — explain what input was wrong</td>
+          <td>✅ Yes — need user to authorize</td>
+        </tr>
+        <tr>
+          <td><strong>Typical <code>retry_after</code></strong></td>
+          <td>1–30 seconds</td>
+          <td>N/A (not retryable)</td>
+          <td>N/A (needs new credentials)</td>
+        </tr>
+        <tr>
+          <td><strong>Example Message</strong></td>
+          <td><code>"Database timeout after 30s"</code></td>
+          <td><code>"Date range cannot exceed 90 days"</code></td>
+          <td><code>"Scope 'admin:write' required"</code></td>
+        </tr>
+        <tr>
+          <td><strong>Error Object Fields</strong></td>
+          <td><code>retry_after_seconds</code>, <code>attempt</code></td>
+          <td><code>violated_rule</code>, <code>suggestion</code></td>
+          <td><code>required_scope</code>, <code>current_scope</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-warning">
+    <div class="callout-title">⚠️ Common Confusion: Rate Limits</div>
+    <p>
+      Rate limit errors (<code>429 Too Many Requests</code>) are <strong>transient</strong>, not business errors.
+      They are caused by temporary capacity constraints and will resolve when the rate window resets.
+      Many candidates incorrectly classify them as business errors because "the server rejected the request."
+      The litmus test: <em>would the same request succeed later without changing anything?</em> If yes → transient.
+    </p>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Error type is a tool-design decision.</strong> The MCP spec doesn't mandate specific type strings — it's the tool author's responsibility to include a clear, machine-readable classification. Best practice: use a consistent enum like <code>"transient" | "business" | "permission"</code>.</li>
+      <li><strong>Include a human-readable message AND a machine-readable type.</strong> The coordinator needs the type; the message is for fallback or user-facing output.</li>
+      <li><strong>For business errors, suggest a fix.</strong> A <code>"suggestion"</code> field (e.g., <code>"Try a date range ≤ 90 days"</code>) lets the coordinator self-correct without user intervention.</li>
+      <li><strong>Permission errors should specify exactly what's needed</strong> — e.g., <code>"required_scope": "calendar:write"</code> — so the coordinator or user can request precisely the missing permission.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-exam">
+    <div class="callout-title">🎯 Exam Strategy — Section 8.3</div>
+    <ul>
+      <li><strong>Question type:</strong> Classification scenarios — "Given this error message, what type is it?"</li>
+      <li><strong>Watch for:</strong> Rate limit traps (transient, not business). Also: token expiry is <strong>permission</strong> not transient, even though it "happens temporarily."</li>
+      <li><strong>Key distinction:</strong> Retryability. The exam loves testing: "Should the coordinator retry?" If the <em>same identical request</em> can succeed later → transient. If the request must change → business. If credentials must change → permission.</li>
+      <li><strong>Memory anchor:</strong> <em>"Transient: wait and retry. Business: fix the input. Permission: fix the credentials."</em></li>
+      <li><strong>Likely format:</strong> MCQ, classification matching</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =========================================================================
+     SECTION 8.4
+     ========================================================================= -->
+<div class="section" id="s8-4">
+  <span class="section-number">Section 8.4</span>
+  <h2>Enabling Intelligent Coordinator Recovery Decisions</h2>
+
+  <!-- Concept Overview -->
+  <h3>📘 Concept Overview</h3>
+  <p>
+    The purpose of structured error responses is to <strong>enable the coordinator (Claude) to make intelligent recovery decisions autonomously</strong>.
+    Rather than immediately escalating every failure to the user, a well-structured error response gives the coordinator a decision tree:
+    Can I retry? Can I adjust the parameters? Should I try a different tool? Do I need user input?
+  </p>
+  <p>
+    This section maps out the <strong>coordinator's decision logic</strong> when it receives an <code>isError: true</code> response, and
+    explains how each field in the structured error context feeds into that logic.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>📖 Key Definitions</h3>
+  <dl class="def-grid">
+    <dt>Coordinator</dt>
+    <dd>The orchestrating LLM (e.g., Claude) that invokes MCP tools and processes their results. It decides what to do next based on the tool response.</dd>
+    <dt>Recovery Strategy</dt>
+    <dd>The action the coordinator takes after a tool error: retry, adjust parameters, try an alternative tool, ask the user, or gracefully degrade.</dd>
+    <dt>Graceful Degradation</dt>
+    <dd>Presenting partial results or a helpful explanation to the user when full recovery is impossible, rather than showing a raw error.</dd>
+    <dt>Fallback Tool</dt>
+    <dd>An alternative MCP tool that can serve the same purpose via a different mechanism (e.g., a cached search tool when the live API is down).</dd>
+    <dt>Retry Budget</dt>
+    <dd>Maximum retries before the coordinator gives up on transient errors. Prevents infinite retry loops.</dd>
+  </dl>
+
+  <!-- Visual: Decision Flowchart -->
+  <h3>🎨 Visual: Coordinator Recovery Decision Flowchart</h3>
+  <div class="diagram-container">
+    <div class="diagram-title">Decision Tree: What Does the Coordinator Do on Error?</div>
+
+    <!-- Row 1: Entry -->
+    <div class="flow-row">
+      <div class="dt-node" style="background:var(--color-error); color:white;">Tool returns <code style="color:white;">isError: true</code></div>
+    </div>
+    <div class="flow-arrow-down">↓</div>
+
+    <!-- Row 2: Read type -->
+    <div class="flow-row">
+      <div class="dt-diamond">Read error.type</div>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:40px; margin:12px 0; flex-wrap:wrap;">
+      <!-- Branch 1: Transient -->
+      <div style="text-align:center;">
+        <div style="font-size:12px; font-weight:600; color:var(--color-warning); margin-bottom:8px;">type = "transient"</div>
+        <div class="flow-arrow-down">↓</div>
+        <div class="dt-diamond" style="border-color:var(--color-warning); background:var(--color-warning-bg); color:var(--color-warning);">Retry budget left?</div>
+        <div style="display:flex; gap:24px; margin-top:8px; justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-size:11px; color:var(--color-success); font-weight:600;">YES</div>
+            <div class="dt-node" style="background:var(--color-success); font-size:12px; padding:8px 14px;">Wait (backoff) → Retry</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:11px; color:var(--color-error); font-weight:600;">NO</div>
+            <div class="dt-node" style="background:var(--color-text-muted); font-size:12px; padding:8px 14px;">Use partial results<br>or notify user</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Branch 2: Business -->
+      <div style="text-align:center;">
+        <div style="font-size:12px; font-weight:600; color:var(--color-error); margin-bottom:8px;">type = "business"</div>
+        <div class="flow-arrow-down">↓</div>
+        <div class="dt-diamond" style="border-color:var(--color-error); background:var(--color-error-bg); color:var(--color-error);">Suggestion available?</div>
+        <div style="display:flex; gap:24px; margin-top:8px; justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-size:11px; color:var(--color-success); font-weight:600;">YES</div>
+            <div class="dt-node" style="background:var(--color-info); font-size:12px; padding:8px 14px;">Adjust params →<br>Re-call tool</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:11px; color:var(--color-error); font-weight:600;">NO</div>
+            <div class="dt-node" style="background:var(--color-text-muted); font-size:12px; padding:8px 14px;">Explain to user →<br>Ask for correction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Branch 3: Permission -->
+      <div style="text-align:center;">
+        <div style="font-size:12px; font-weight:600; color:var(--color-accent-purple); margin-bottom:8px;">type = "permission"</div>
+        <div class="flow-arrow-down">↓</div>
+        <div class="dt-diamond" style="border-color:var(--color-accent-purple); background:var(--color-accent-purple-bg); color:var(--color-accent-purple);">Can refresh token?</div>
+        <div style="display:flex; gap:24px; margin-top:8px; justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-size:11px; color:var(--color-success); font-weight:600;">YES</div>
+            <div class="dt-node" style="background:var(--color-accent-teal); font-size:12px; padding:8px 14px;">Refresh creds →<br>Re-call tool</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:11px; color:var(--color-error); font-weight:600;">NO</div>
+            <div class="dt-node" style="background:var(--color-text-muted); font-size:12px; padding:8px 14px;">Notify user →<br>Request auth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coordinator Responsibilities Table -->
+  <h3>📋 Coordinator Responsibilities by Error Type</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Error Type</th>
+          <th>Primary Action</th>
+          <th>Secondary Action</th>
+          <th>Last Resort</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-transient">Transient</span></td>
+          <td>Retry with exponential backoff</td>
+          <td>Try fallback tool if available</td>
+          <td>Present partial results + explain delay</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-business">Business</span></td>
+          <td>Adjust input using <code>suggestion</code></td>
+          <td>Ask user to clarify requirements</td>
+          <td>Explain the constraint to the user</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-permission">Permission</span></td>
+          <td>Attempt credential refresh</td>
+          <td>Try a lower-privilege alternative</td>
+          <td>Ask user to grant permission</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-concept">
+    <div class="callout-title">📐 How Error Fields Map to Recovery Decisions</div>
+    <ul>
+      <li><code>error.type</code> → Selects the <strong>recovery branch</strong> (retry / adjust / re-auth)</li>
+      <li><code>error.retry_after_seconds</code> → Determines <strong>backoff duration</strong> for transient errors</li>
+      <li><code>error.suggestion</code> → Provides <strong>parameter correction</strong> for business errors</li>
+      <li><code>error.required_scope</code> → Identifies <strong>missing permission</strong> for permission errors</li>
+      <li><code>error.attempted_query</code> → Allows coordinator to <strong>modify and re-submit</strong> without re-inferring parameters</li>
+      <li><code>error.partial_results</code> → Enables <strong>graceful degradation</strong> when full recovery is impossible</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Every field in the error object should map to a coordinator action.</strong> If a field doesn't help the coordinator decide what to do, it's noise. Keep error payloads actionable.</li>
+      <li><strong>Partial results are the coordinator's safety net.</strong> When all retries are exhausted, presenting partial data with a caveat ("Here's what I found before the timeout; 12 of 50 rows were retrieved") is far better than "An error occurred."</li>
+      <li><strong>Chain-of-thought matters.</strong> The coordinator should reason through the error type → available fields → best recovery action step by step. This is how Claude processes errors in practice.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-exam">
+    <div class="callout-title">🎯 Exam Strategy — Section 8.4</div>
+    <ul>
+      <li><strong>Question type:</strong> Scenario-based — "A tool returns a transient error with partial results. What should the coordinator do first?"</li>
+      <li><strong>Watch for:</strong> Distractors suggesting immediate user notification for transient errors. The correct answer is almost always: <em>retry first, notify only if budget exhausted.</em></li>
+      <li><strong>Key pattern:</strong> The exam tests the <em>priority order</em> of recovery strategies. Memorize: Retry → Fallback → Partial → Notify. Business: Adjust → Ask → Explain. Permission: Refresh → Alternative → Escalate.</li>
+      <li><strong>Memory anchor:</strong> <em>"The coordinator's job is to exhaust all autonomous recovery options before bothering the user."</em></li>
+      <li><strong>Likely format:</strong> Scenario-based MCQ, ordering/priority questions</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =========================================================================
+     SECTION 8.5
+     ========================================================================= -->
+<div class="section" id="s8-5">
+  <span class="section-number">Section 8.5</span>
+  <h2>Access Failures vs Valid Empty Results</h2>
+
+  <!-- Concept Overview -->
+  <h3>📘 Concept Overview</h3>
+  <p>
+    One of the most critical — and most commonly confused — distinctions in MCP error design is the difference between:
+  </p>
+  <ul>
+    <li><strong>Access Failure:</strong> The tool <em>could not reach</em> the data (permission denied, service down, auth expired)</li>
+    <li><strong>Valid Empty Result:</strong> The tool <em>successfully queried</em> the data source and found zero matching records</li>
+  </ul>
+  <p>
+    These produce radically different coordinator behaviors. Conflating them is a serious design flaw that leads
+    the coordinator to either (a) report "no results found" when it actually couldn't access the data, or
+    (b) trigger error recovery when there truly are just no matching records.
+  </p>
+
+  <!-- Visual: Side-by-Side Comparison -->
+  <h3>🎨 Visual: Side-by-Side Comparison</h3>
+  <div class="compare-grid">
+    <div class="compare-card" style="border-color: var(--color-error);">
+      <h4 style="color: var(--color-error); margin-top:0;">🔴 Access Failure</h4>
+      <div class="table-wrap" style="margin:0;">
+        <table style="margin:0;">
+          <tbody><tr><td><strong><code>isError</code></strong></td><td><code>true</code></td></tr>
+          <tr><td><strong>Content</strong></td><td>Error description with type, message</td></tr>
+          <tr><td><strong>Data source reached?</strong></td><td>❌ No</td></tr>
+          <tr><td><strong>Result count</strong></td><td>Unknown (could not query)</td></tr>
+          <tr><td><strong>Coordinator action</strong></td><td>Error recovery (retry, re-auth, etc.)</td></tr>
+          <tr><td><strong>User message</strong></td><td>"I couldn't access that data — let me try again"</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="compare-card" style="border-color: var(--color-success);">
+      <h4 style="color: var(--color-success); margin-top:0;">🟢 Valid Empty Result</h4>
+      <div class="table-wrap" style="margin:0;">
+        <table style="margin:0;">
+          <tbody><tr><td><strong><code>isError</code></strong></td><td><code>false</code></td></tr>
+          <tr><td><strong>Content</strong></td><td>Explicit "zero results" with query context</td></tr>
+          <tr><td><strong>Data source reached?</strong></td><td>✅ Yes (query succeeded)</td></tr>
+          <tr><td><strong>Result count</strong></td><td>0 (confirmed empty)</td></tr>
+          <tr><td><strong>Coordinator action</strong></td><td>Report to user, suggest broadening query</td></tr>
+          <tr><td><strong>User message</strong></td><td>"No orders match that filter. Want to try a wider date range?"</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSON Contrast -->
+  <h3>💻 Code: Response Contrast</h3>
+  <h4>❌ Access Failure Response</h4>
+  <pre>{
+  <span class="code-string">"content"</span>: [{
+    <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+    <span class="code-string">"text"</span>: <span class="code-string">"{\"error\": {\"type\": \"permission\", \"message\": \"OAuth token expired\", \"required_scope\": \"orders:read\", \"attempted_query\": {\"table\": \"orders\", \"status\": \"pending\"}}}"</span>
+  }],
+  <span class="code-string">"isError"</span>: <span class="code-bool">true</span>   <span class="code-comment">// ← Signals failure</span>
+}</pre>
+
+  <h4>✅ Valid Empty Result Response</h4>
+  <pre>{
+  <span class="code-string">"content"</span>: [{
+    <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+    <span class="code-string">"text"</span>: <span class="code-string">"{\"results\": [], \"total_count\": 0, \"query\": {\"table\": \"orders\", \"status\": \"pending\"}, \"message\": \"No pending orders found for the specified criteria.\"}"</span>
+  }],
+  <span class="code-string">"isError"</span>: <span class="code-bool">false</span>  <span class="code-comment">// ← Signals success (query worked, just no matches)</span>
+}</pre>
+
+  <h3>📖 Key Definitions</h3>
+  <dl class="def-grid">
+    <dt>Access Failure</dt>
+    <dd>The tool was <em>unable to execute its query</em> against the data source. No reliable information about the result set exists. <code>isError: true</code>.</dd>
+    <dt>Valid Empty Result</dt>
+    <dd>The tool <em>successfully queried</em> the data source and the result set is genuinely empty. This is <strong>not</strong> an error — it is a successful operation that returned zero records. <code>isError: false</code>.</dd>
+    <dt>False Negative</dt>
+    <dd>When an access failure is misrepresented as an empty result, causing the user to believe no data exists when in fact the data was unreachable. This is the most dangerous consequence of conflating the two.</dd>
+  </dl>
+
+  <div class="callout callout-warning">
+    <div class="callout-title">⚠️ The Dangerous Anti-Pattern</div>
+    <p>
+      <strong>Never return <code>isError: false</code> with empty results when the data source was unreachable.</strong>
+      This creates a <em>false negative</em> — the coordinator tells the user "there are no matching records" when it simply
+      couldn't check. In high-stakes domains (medical, financial, safety), this can lead to harmful decisions.
+    </p>
+    <p>
+      <strong>Rule of thumb:</strong> If the tool didn't successfully complete its query, <code>isError</code> must be <code>true</code> — even if the failure was silent or partial.
+    </p>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Include <code>"total_count": 0</code> in empty results.</strong> This explicitly confirms the query ran and found nothing. It disambiguates from cases where count is unknown.</li>
+      <li><strong>Echo the query in both cases.</strong> For empty results, the <code>query</code> field helps the coordinator suggest alternative parameters. For access failures, it helps with retry construction.</li>
+      <li><strong>Use distinct response schemas.</strong> Access failures should always include <code>error.type</code>. Empty results should always include <code>total_count</code> or <code>results: []</code>. If you see both patterns in the same response, it's a design smell.</li>
+      <li><strong>Semantic clarity test:</strong> Ask yourself — "If I showed only the content to a coordinator with no other context, could it tell whether the data source was reached?" If not, your response is ambiguous.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-exam">
+    <div class="callout-title">🎯 Exam Strategy — Section 8.5</div>
+    <ul>
+      <li><strong>Question type:</strong> Scenario-based — "A tool returns zero results. Which response is correct?"</li>
+      <li><strong>Watch for:</strong> The exam loves presenting a scenario where a database is unreachable and asking whether <code>isError</code> should be <code>true</code> or <code>false</code>. The answer is <strong>always <code>true</code></strong> when the data source wasn't reached, regardless of what data was returned.</li>
+      <li><strong>Trap question:</strong> "An empty array <code>[]</code> with <code>isError: false</code> always means no data exists." — <strong>Correct only if the query actually executed.</strong></li>
+      <li><strong>Memory anchor:</strong> <em>"Couldn't look → error. Looked and found nothing → success with zero results."</em></li>
+      <li><strong>Likely format:</strong> MCQ, true/false, scenario classification</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =========================================================================
+     SECTION 8.6
+     ========================================================================= -->
+<div class="section" id="s8-6">
+  <span class="section-number">Section 8.6</span>
+  <h2>Hands-On: Implementing Error-Handling Strategies</h2>
+
+  <!-- Concept Overview -->
+  <h3>📘 Concept Overview</h3>
+  <p>
+    This section bridges theory and practice. You will see <strong>production-grade code patterns</strong> for implementing structured error responses
+    in MCP tool servers, and for writing coordinator-side logic that consumes them intelligently.
+    The focus is on two perspectives: <strong>tool author</strong> (producing errors) and <strong>coordinator</strong> (consuming errors).
+  </p>
+
+  <h3>📖 Key Definitions</h3>
+  <dl class="def-grid">
+    <dt>Tool Author</dt>
+    <dd>The developer implementing an MCP tool server. Responsible for catching exceptions, classifying errors, and returning structured <code>CallToolResult</code> responses.</dd>
+    <dt>Error Schema</dt>
+    <dd>A consistent JSON structure used across all tools for error payloads, enabling the coordinator to parse errors uniformly regardless of which tool produced them.</dd>
+    <dt>Error Boundary</dt>
+    <dd>A try/except wrapper at the tool handler level that catches all exceptions and converts them to structured MCP responses rather than allowing raw crashes.</dd>
+  </dl>
+
+  <!-- Code Example 1: Tool-Side Error Production -->
+  <h3>💻 Code Example 1: Tool-Side — Producing Structured Error Responses</h3>
+  <p>This example shows how to implement a robust MCP tool handler that classifies exceptions into the three error categories and returns consistent, structured error context.</p>
+
+  <pre><span class="code-keyword">import</span> json
+<span class="code-keyword">from</span> datetime <span class="code-keyword">import</span> datetime
+<span class="code-keyword">from</span> typing <span class="code-keyword">import</span> <span class="code-type">Any</span>, <span class="code-type">Optional</span>
+
+<span class="code-comment"># ──────────────────────────────────────────────────────────────</span>
+<span class="code-comment"># 1. Define a consistent error schema used by ALL tools</span>
+<span class="code-comment"># ──────────────────────────────────────────────────────────────</span>
+<span class="code-keyword">def</span> <span class="code-function">build_error_context</span>(
+    error_type: <span class="code-type">str</span>,        <span class="code-comment"># "transient" | "business" | "permission"</span>
+    message: <span class="code-type">str</span>,            <span class="code-comment"># Human-readable error description</span>
+    attempted_query: <span class="code-type">dict</span>,   <span class="code-comment"># Echo of what the tool tried to do</span>
+    partial_results: <span class="code-type">Optional</span>[<span class="code-type">dict</span>] = <span class="code-bool">None</span>,
+    suggestion: <span class="code-type">Optional</span>[<span class="code-type">str</span>] = <span class="code-bool">None</span>,
+    retry_after: <span class="code-type">Optional</span>[<span class="code-type">int</span>] = <span class="code-bool">None</span>,
+    required_scope: <span class="code-type">Optional</span>[<span class="code-type">str</span>] = <span class="code-bool">None</span>,
+) -&gt; <span class="code-type">dict</span>:
+    <span class="code-string">"""Build a standardized error context object."""</span>
+    error = {
+        <span class="code-string">"type"</span>: error_type,
+        <span class="code-string">"message"</span>: message,
+        <span class="code-string">"timestamp"</span>: datetime.utcnow().isoformat() + <span class="code-string">"Z"</span>,
+        <span class="code-string">"attempted_query"</span>: attempted_query,
+    }
+    <span class="code-comment"># Include optional fields only when relevant to the error type</span>
+    <span class="code-keyword">if</span> partial_results:
+        error[<span class="code-string">"partial_results"</span>] = partial_results
+    <span class="code-keyword">if</span> suggestion <span class="code-keyword">and</span> error_type == <span class="code-string">"business"</span>:
+        error[<span class="code-string">"suggestion"</span>] = suggestion     <span class="code-comment"># Only for business errors</span>
+    <span class="code-keyword">if</span> retry_after <span class="code-keyword">and</span> error_type == <span class="code-string">"transient"</span>:
+        error[<span class="code-string">"retry_after_seconds"</span>] = retry_after  <span class="code-comment"># Only for transient errors</span>
+    <span class="code-keyword">if</span> required_scope <span class="code-keyword">and</span> error_type == <span class="code-string">"permission"</span>:
+        error[<span class="code-string">"required_scope"</span>] = required_scope  <span class="code-comment"># Only for permission errors</span>
+    <span class="code-keyword">return</span> {<span class="code-string">"error"</span>: error}
+
+<span class="code-comment"># ──────────────────────────────────────────────────────────────</span>
+<span class="code-comment"># 2. MCP tool handler with error boundary pattern</span>
+<span class="code-comment"># ──────────────────────────────────────────────────────────────</span>
+<span class="code-keyword">async def</span> <span class="code-function">handle_query_orders</span>(params: <span class="code-type">dict</span>) -&gt; <span class="code-type">dict</span>:
+    <span class="code-string">"""MCP tool: query_orders — fetch orders by status and date range."""</span>
+    attempted = {<span class="code-string">"tool"</span>: <span class="code-string">"query_orders"</span>, <span class="code-string">"params"</span>: params}
+
+    <span class="code-keyword">try</span>:
+        <span class="code-comment"># ── Validate input (catches business errors early) ──</span>
+        <span class="code-keyword">if</span> params.get(<span class="code-string">"days_back"</span>, <span class="code-number">0</span>) &gt; <span class="code-number">90</span>:
+            <span class="code-keyword">return</span> {
+                <span class="code-string">"content"</span>: [{
+                    <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+                    <span class="code-string">"text"</span>: json.dumps(build_error_context(
+                        error_type=<span class="code-string">"business"</span>,
+                        message=<span class="code-string">"Date range cannot exceed 90 days"</span>,
+                        attempted_query=attempted,
+                        suggestion=<span class="code-string">"Use days_back ≤ 90, or paginate with date windows"</span>
+                    ))
+                }],
+                <span class="code-string">"isError"</span>: <span class="code-bool">True</span>
+            }
+
+        <span class="code-comment"># ── Execute the query ──</span>
+        results = <span class="code-keyword">await</span> db.query_orders(
+            status=params[<span class="code-string">"status"</span>],
+            days_back=params.get(<span class="code-string">"days_back"</span>, <span class="code-number">30</span>)
+        )
+
+        <span class="code-comment"># ── Success: return results (even if empty — NOT an error) ──</span>
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"content"</span>: [{
+                <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+                <span class="code-string">"text"</span>: json.dumps({
+                    <span class="code-string">"results"</span>: results,
+                    <span class="code-string">"total_count"</span>: len(results),
+                    <span class="code-string">"query"</span>: attempted
+                })
+            }],
+            <span class="code-string">"isError"</span>: <span class="code-bool">False</span>
+        }
+
+    <span class="code-keyword">except</span> <span class="code-type">TimeoutError</span> <span class="code-keyword">as</span> e:
+        <span class="code-comment"># ── Transient: timeout is temporary, can retry ──</span>
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"content"</span>: [{
+                <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+                <span class="code-string">"text"</span>: json.dumps(build_error_context(
+                    error_type=<span class="code-string">"transient"</span>,
+                    message=<span class="code-keyword">f</span><span class="code-string">"Query timed out: {e}"</span>,
+                    attempted_query=attempted,
+                    retry_after=<span class="code-number">5</span>
+                ))
+            }],
+            <span class="code-string">"isError"</span>: <span class="code-bool">True</span>
+        }
+
+    <span class="code-keyword">except</span> <span class="code-type">PermissionError</span> <span class="code-keyword">as</span> e:
+        <span class="code-comment"># ── Permission: caller lacks required access ──</span>
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"content"</span>: [{
+                <span class="code-string">"type"</span>: <span class="code-string">"text"</span>,
+                <span class="code-string">"text"</span>: json.dumps(build_error_context(
+                    error_type=<span class="code-string">"permission"</span>,
+                    message=<span class="code-keyword">f</span><span class="code-string">"Access denied: {e}"</span>,
+                    attempted_query=attempted,
+                    required_scope=<span class="code-string">"orders:read"</span>
+                ))
+            }],
+            <span class="code-string">"isError"</span>: <span class="code-bool">True</span>
+        }</pre>
+
+  <!-- Code Example 2: Coordinator-Side Error Consumption -->
+  <h3>💻 Code Example 2: Coordinator-Side — Consuming Errors Intelligently</h3>
+  <p>This example shows how a coordinator (or orchestration framework) processes structured error responses to make recovery decisions.</p>
+
+  <pre><span class="code-keyword">import</span> json
+<span class="code-keyword">import</span> asyncio
+
+<span class="code-comment"># ──────────────────────────────────────────────────────────────</span>
+<span class="code-comment"># Coordinator-side error handler with full recovery logic</span>
+<span class="code-comment"># ──────────────────────────────────────────────────────────────</span>
+<span class="code-keyword">class</span> <span class="code-type">MCPErrorHandler</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self, max_retries: <span class="code-type">int</span> = <span class="code-number">3</span>):
+        self.max_retries = max_retries
+        self.attempt_count: <span class="code-type">dict</span>[<span class="code-type">str</span>, <span class="code-type">int</span>] = {}  <span class="code-comment"># Track retries per tool call</span>
+
+    <span class="code-keyword">async def</span> <span class="code-function">handle_tool_response</span>(
+        self,
+        tool_name: <span class="code-type">str</span>,
+        response: <span class="code-type">dict</span>,
+        call_tool_fn  <span class="code-comment"># async callable to re-invoke the tool</span>
+    ) -&gt; <span class="code-type">dict</span>:
+        <span class="code-string">"""Process a tool response, handling errors with appropriate strategy."""</span>
+
+        <span class="code-comment"># ── Happy path: tool succeeded ──</span>
+        <span class="code-keyword">if not</span> response.get(<span class="code-string">"isError"</span>, <span class="code-bool">False</span>):
+            <span class="code-keyword">return</span> {<span class="code-string">"status"</span>: <span class="code-string">"success"</span>, <span class="code-string">"data"</span>: response[<span class="code-string">"content"</span>]}
+
+        <span class="code-comment"># ── Parse the structured error ──</span>
+        error_text = response[<span class="code-string">"content"</span>][<span class="code-number">0</span>][<span class="code-string">"text"</span>]
+        error_ctx = json.loads(error_text).get(<span class="code-string">"error"</span>, {})
+        error_type = error_ctx.get(<span class="code-string">"type"</span>, <span class="code-string">"unknown"</span>)
+
+        <span class="code-comment"># ── Route to the correct recovery strategy ──</span>
+        <span class="code-keyword">if</span> error_type == <span class="code-string">"transient"</span>:
+            <span class="code-keyword">return await</span> self.<span class="code-function">_handle_transient</span>(
+                tool_name, error_ctx, call_tool_fn
+            )
+        <span class="code-keyword">elif</span> error_type == <span class="code-string">"business"</span>:
+            <span class="code-keyword">return</span> self.<span class="code-function">_handle_business</span>(error_ctx)
+        <span class="code-keyword">elif</span> error_type == <span class="code-string">"permission"</span>:
+            <span class="code-keyword">return</span> self.<span class="code-function">_handle_permission</span>(error_ctx)
+        <span class="code-keyword">else</span>:
+            <span class="code-comment"># Unknown error type — cannot recover autonomously</span>
+            <span class="code-keyword">return</span> {
+                <span class="code-string">"status"</span>: <span class="code-string">"escalate"</span>,
+                <span class="code-string">"reason"</span>: <span class="code-keyword">f</span><span class="code-string">"Unknown error type: {error_type}"</span>,
+                <span class="code-string">"original_error"</span>: error_ctx
+            }
+
+    <span class="code-keyword">async def</span> <span class="code-function">_handle_transient</span>(self, tool_name, error_ctx, call_tool_fn):
+        <span class="code-string">"""Retry with exponential backoff for transient errors."""</span>
+        call_key = <span class="code-keyword">f</span><span class="code-string">"{tool_name}:{json.dumps(error_ctx.get('attempted_query', {}))}"</span>
+        attempts = self.attempt_count.get(call_key, <span class="code-number">0</span>)
+
+        <span class="code-keyword">if</span> attempts &gt;= self.max_retries:
+            <span class="code-comment"># Budget exhausted — degrade gracefully</span>
+            partial = error_ctx.get(<span class="code-string">"partial_results"</span>)
+            <span class="code-keyword">if</span> partial:
+                <span class="code-keyword">return</span> {
+                    <span class="code-string">"status"</span>: <span class="code-string">"partial"</span>,
+                    <span class="code-string">"data"</span>: partial,
+                    <span class="code-string">"warning"</span>: <span class="code-string">"Retries exhausted; returning partial results."</span>
+                }
+            <span class="code-keyword">return</span> {<span class="code-string">"status"</span>: <span class="code-string">"escalate"</span>, <span class="code-string">"reason"</span>: <span class="code-string">"Transient error persisted after max retries."</span>}
+
+        <span class="code-comment"># Wait, then retry</span>
+        wait = error_ctx.get(<span class="code-string">"retry_after_seconds"</span>, <span class="code-number">2</span> ** attempts)
+        <span class="code-keyword">await</span> asyncio.sleep(wait)
+        self.attempt_count[call_key] = attempts + <span class="code-number">1</span>
+        <span class="code-comment"># Re-invoke with original parameters</span>
+        new_response = <span class="code-keyword">await</span> call_tool_fn(error_ctx[<span class="code-string">"attempted_query"</span>][<span class="code-string">"params"</span>])
+        <span class="code-keyword">return await</span> self.handle_tool_response(tool_name, new_response, call_tool_fn)
+
+    <span class="code-keyword">def</span> <span class="code-function">_handle_business</span>(self, error_ctx):
+        <span class="code-string">"""Route business errors — suggest fix or escalate to user."""</span>
+        suggestion = error_ctx.get(<span class="code-string">"suggestion"</span>)
+        <span class="code-keyword">if</span> suggestion:
+            <span class="code-keyword">return</span> {
+                <span class="code-string">"status"</span>: <span class="code-string">"adjust_and_retry"</span>,
+                <span class="code-string">"suggestion"</span>: suggestion,
+                <span class="code-string">"original_query"</span>: error_ctx.get(<span class="code-string">"attempted_query"</span>)
+            }
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"status"</span>: <span class="code-string">"escalate"</span>,
+            <span class="code-string">"reason"</span>: error_ctx.get(<span class="code-string">"message"</span>, <span class="code-string">"Business rule violation"</span>)
+        }
+
+    <span class="code-keyword">def</span> <span class="code-function">_handle_permission</span>(self, error_ctx):
+        <span class="code-string">"""Route permission errors — identify what's needed."""</span>
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"status"</span>: <span class="code-string">"auth_required"</span>,
+            <span class="code-string">"required_scope"</span>: error_ctx.get(<span class="code-string">"required_scope"</span>, <span class="code-string">"unknown"</span>),
+            <span class="code-string">"message"</span>: error_ctx.get(<span class="code-string">"message"</span>)
+        }</pre>
+
+  <div class="callout callout-concept">
+    <div class="callout-title">📐 Design Principles for Error Handling in MCP Tools</div>
+    <ol>
+      <li><strong>Fail structured, not raw.</strong> Never let an unhandled exception escape. Wrap every tool handler in an error boundary that catches all exceptions and converts them to structured <code>CallToolResult</code> responses.</li>
+      <li><strong>Classify at the source.</strong> The tool — not the coordinator — should determine the error type. The tool knows whether an exception represents a timeout (transient), an invalid parameter (business), or a denied scope (permission).</li>
+      <li><strong>Be generous with context.</strong> Include the attempted query, partial results, timing info, and actionable suggestions. More context = better coordinator decisions.</li>
+      <li><strong>Idempotent retries.</strong> Transient error handlers assume the original request can be safely re-sent. Tool operations should be idempotent (or clearly documented when they aren't).</li>
+      <li><strong>Consistent schema across all tools.</strong> If every tool on the server uses the same error schema, the coordinator can use a single parsing strategy rather than tool-specific handling.</li>
+    </ol>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Test error paths, not just happy paths.</strong> Write integration tests that verify your tool returns correct <code>isError</code>, proper error types, and parseable JSON for every failure mode.</li>
+      <li><strong>Log error responses server-side.</strong> Even though the coordinator processes errors, the tool server should log them for observability and debugging.</li>
+      <li><strong>Version your error schema.</strong> Include a <code>"schema_version"</code> field so coordinators can adapt if the error format evolves.</li>
+      <li><strong>Don't leak sensitive info.</strong> Error messages should be informative but never expose internal stack traces, database connection strings, or API keys.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-exam">
+    <div class="callout-title">🎯 Exam Strategy — Section 8.6</div>
+    <ul>
+      <li><strong>Question type:</strong> Code reading / "What's wrong with this implementation?" — The exam may show a flawed tool handler and ask you to identify the error-handling mistake.</li>
+      <li><strong>Watch for:</strong> Code that returns <code>isError: false</code> in a <code>catch</code> block, or that retries business errors infinitely, or that exposes stack traces in error messages.</li>
+      <li><strong>Key patterns to know:</strong> Error boundary (try/except at handler level), <code>build_error_context()</code> factory, coordinator dispatch by <code>error.type</code>, retry budget tracking.</li>
+      <li><strong>Memory anchor:</strong> <em>"Tool authors classify. Coordinators decide. Error boundaries catch everything."</em></li>
+      <li><strong>Likely format:</strong> Code-based MCQ, "find the bug", implementation ordering</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =========================================================================
+     CHAPTER SUMMARY
+     ========================================================================= -->
+<div class="section" id="summary">
+  <span class="section-number">Chapter Summary</span>
+  <h2>Master Reference &amp; Self-Assessment</h2>
+
+  <!-- Master Comparison Table -->
+  <h3>📊 Master Comparison Table — All Error Types</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th><span class="tag tag-transient">Transient</span></th>
+          <th><span class="tag tag-business">Business</span></th>
+          <th><span class="tag tag-permission">Permission</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Root Cause</strong></td>
+          <td>Infrastructure / capacity</td>
+          <td>Invalid input / domain rule</td>
+          <td>Auth / authorization failure</td>
+        </tr>
+        <tr>
+          <td><strong><code>isError</code></strong></td>
+          <td><code>true</code></td>
+          <td><code>true</code></td>
+          <td><code>true</code></td>
+        </tr>
+        <tr>
+          <td><strong>Retry Same Request?</strong></td>
+          <td>✅ Yes (with backoff)</td>
+          <td>❌ No</td>
+          <td>❌ No (unless creds refreshed)</td>
+        </tr>
+        <tr>
+          <td><strong>Primary Recovery</strong></td>
+          <td>Wait + retry</td>
+          <td>Adjust parameters</td>
+          <td>Refresh credentials</td>
+        </tr>
+        <tr>
+          <td><strong>Secondary Recovery</strong></td>
+          <td>Fallback tool</td>
+          <td>Ask user to clarify</td>
+          <td>Try lower-privilege path</td>
+        </tr>
+        <tr>
+          <td><strong>Last Resort</strong></td>
+          <td>Partial results + explain</td>
+          <td>Explain constraint</td>
+          <td>Ask user to grant access</td>
+        </tr>
+        <tr>
+          <td><strong>User Notification</strong></td>
+          <td>Only if retries exhausted</td>
+          <td>Always</td>
+          <td>Always</td>
+        </tr>
+        <tr>
+          <td><strong>Key Error Field</strong></td>
+          <td><code>retry_after_seconds</code></td>
+          <td><code>suggestion</code></td>
+          <td><code>required_scope</code></td>
+        </tr>
+        <tr>
+          <td><strong>Common Example</strong></td>
+          <td>Timeout, rate limit, 503</td>
+          <td>Invalid date range, not found</td>
+          <td>Token expired, scope denied</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Quick Reference Card -->
+  <h3>🃏 Quick Reference Card</h3>
+  <div class="qref-grid">
+    <div class="qref-item">
+      <div class="qref-term"><code>isError</code></div>
+      <div class="qref-def">Boolean flag on <code>CallToolResult</code> signaling tool-level success (<code>false</code>/absent) or failure (<code>true</code>).</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term"><code>CallToolResult</code></div>
+      <div class="qref-def">MCP response schema: <code>content[]</code> (text/image items) + <code>isError</code> (optional bool).</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Structured Error Context</div>
+      <div class="qref-def">JSON in the text content with three pillars: failure type, attempted query, partial results.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Transient Error</div>
+      <div class="qref-def">Temp infra failure (timeout, rate limit). Retry with backoff. Same request may succeed later.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Business Error</div>
+      <div class="qref-def">Invalid input or domain rule violated. Input must change. Retrying is pointless.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Permission Error</div>
+      <div class="qref-def">Auth/scope failure. Credentials must change. Escalate to user if refresh fails.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Protocol-Level Error</div>
+      <div class="qref-def">JSON-RPC error (method not found, invalid params). Not <code>isError</code> — separate layer entirely.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Graceful Degradation</div>
+      <div class="qref-def">Returning partial results + explanation when full recovery is impossible. Always better than a raw error.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">False Negative</div>
+      <div class="qref-def">Reporting "no results" when data was actually unreachable. The most dangerous error-handling bug.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Error Boundary</div>
+      <div class="qref-def">Try/except wrapper at the tool handler level. Converts all exceptions to structured MCP responses.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Retry Budget</div>
+      <div class="qref-def">Max retries for transient errors (typically 2–3). Prevents infinite loops. Tracked per tool call.</div>
+    </div>
+    <div class="qref-item">
+      <div class="qref-term">Attempted Query Echo</div>
+      <div class="qref-def">Including the exact params in the error response so the coordinator can modify and re-submit.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Self-Assessment Quiz -->
+  <h3>📝 Self-Assessment Quiz (5 Questions)</h3>
+  <p class="text-muted text-sm" style="margin-bottom:16px;">Click "Show Answer" to reveal the correct answer and explanation.</p>
+
+  <!-- Q1 -->
+  <div class="quiz-question">
+    <p>Q1. An MCP tool returns HTTP 200 with the following body: <code>{"content": [{"type": "text", "text": "Rate limit exceeded"}], "isError": true}</code>. What type of error is this, and should the coordinator retry?</p>
+    <ol class="options" type="A">
+      <li>Business error — do not retry</li>
+      <li>Transient error — retry with exponential backoff</li>
+      <li>Permission error — refresh credentials</li>
+      <li>Protocol error — the tool never executed</li>
+    </ol>
+    <details>
+      <summary>Show Answer</summary>
+      <div class="answer">
+        <strong>B. Transient error — retry with exponential backoff.</strong><br>
+        Rate limiting is a temporary capacity constraint. The same request will succeed once the rate window resets.
+        HTTP 200 confirms the transport layer succeeded; <code>isError: true</code> is the application-level error signal.
+        Option D is wrong because protocol errors use JSON-RPC error objects, not <code>isError</code>.
+      </div>
+    </details>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-question">
+    <p>Q2. A database tool encounters a connection timeout but managed to fetch 12 of 50 requested rows before failing. What should the structured error response include?</p>
+    <ol class="options" type="A">
+      <li>Only <code>isError: true</code> and a generic error message</li>
+      <li><code>isError: true</code>, error type "transient", attempted query, and partial results (12 rows)</li>
+      <li><code>isError: false</code> with the 12 rows (since some data was retrieved)</li>
+      <li><code>isError: true</code> with the 12 rows returned as a successful result in a separate field</li>
+    </ol>
+    <details>
+      <summary>Show Answer</summary>
+      <div class="answer">
+        <strong>B.</strong> The response should include all three pillars of structured error context: failure type (<code>"transient"</code>),
+        attempted query (the parameters used), and partial results (the 12 rows). This gives the coordinator enough
+        information to decide between retrying for the remaining 38 rows or presenting the 12 partial rows.
+        Option C is wrong because the operation didn't complete — <code>isError</code> must be <code>true</code>.
+      </div>
+    </details>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-question">
+    <p>Q3. True or False: If the <code>isError</code> field is absent from a <code>CallToolResult</code>, the coordinator should treat the response as an error because the tool forgot to set it.</p>
+    <ol class="options" type="A">
+      <li>True</li>
+      <li>False</li>
+    </ol>
+    <details>
+      <summary>Show Answer</summary>
+      <div class="answer">
+        <strong>B. False.</strong> The <code>isError</code> field is optional and defaults to <code>false</code>.
+        Its absence indicates success, not a missing field. This is by design in the MCP specification —
+        tools only need to set <code>isError</code> when reporting a failure.
+      </div>
+    </details>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-question">
+    <p>Q4. A tool attempts to query a customer's order history but the customer database is completely unreachable. The tool returns: <code>{"content": [{"type": "text", "text": "{\"results\": [], \"total_count\": 0}"}], "isError": false}</code>. What is wrong with this response?</p>
+    <ol class="options" type="A">
+      <li>Nothing — zero results is a valid response when the database is empty</li>
+      <li>It creates a false negative — the coordinator will tell the user "no orders found" when it actually couldn't check</li>
+      <li>The <code>total_count</code> should be <code>null</code> instead of <code>0</code></li>
+      <li>The content should be an image, not text</li>
+    </ol>
+    <details>
+      <summary>Show Answer</summary>
+      <div class="answer">
+        <strong>B.</strong> This is the "false negative" anti-pattern. The database was unreachable, so the tool doesn't know
+        whether orders exist. Returning <code>isError: false</code> with empty results makes the coordinator believe the query
+        ran successfully and found nothing. The correct response would be <code>isError: true</code> with error type
+        <code>"transient"</code> (or appropriate type), indicating the data source was not reached.
+      </div>
+    </details>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-question">
+    <p>Q5. A coordinator receives a business error with a <code>"suggestion"</code> field: <code>"Try a date range ≤ 90 days"</code>. What is the coordinator's first action?</p>
+    <ol class="options" type="A">
+      <li>Retry the exact same request with exponential backoff</li>
+      <li>Adjust the parameters based on the suggestion and re-call the tool</li>
+      <li>Immediately ask the user to re-enter their request</li>
+      <li>Refresh OAuth credentials and retry</li>
+    </ol>
+    <details>
+      <summary>Show Answer</summary>
+      <div class="answer">
+        <strong>B. Adjust the parameters based on the suggestion and re-call the tool.</strong><br>
+        Business errors are not retryable with the same input. The <code>suggestion</code> field provides a specific,
+        machine-readable hint for how to fix the request. The coordinator should modify the parameters accordingly
+        and re-call the tool — this is autonomous recovery without user intervention.
+        Option A is wrong because retrying the same request will always fail for a business error.
+        Option C is the secondary action (only if no suggestion is available).
+        Option D applies to permission errors, not business errors.
+      </div>
+    </details>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Final Takeaway -->
+  <div class="callout callout-concept">
+    <div class="callout-title">🏆 Chapter 8 — The One Sentence You Need</div>
+    <p style="font-size:16px; font-weight:600; color:var(--color-text); margin:0;">
+      "Structured error responses transform the coordinator from a dumb pipeline into an intelligent recovery agent — but only if the tool tells it <em>what failed</em>, <em>what was tried</em>, and <em>what survived</em>."
+    </p>
+  </div>
+
+  <div style="text-align:center; padding:28px 0 12px; color:var(--color-text-muted); font-size:13px;">
+    Claude Certified Architect — Foundations &amp; Professional • Chapter 8 Study Notes<br>
+    <span style="font-family:var(--font-mono); font-size:11px;">Generated for exam preparation • All content reflects MCP specification behavior</span>
+  </div>
+</div>
+
+
+
+</body></html>

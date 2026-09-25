@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 16 — Iterative Refinement Patterns | CCAR Study Notes</title>
+<style>
+  :root {
+    --bg: #FAFBFC;
+    --surface: #FFFFFF;
+    --text: #1A202C;
+    --text-muted: #4A5568;
+    --border: #E2E8F0;
+    --accent-blue: #2563EB;
+    --accent-purple: #7C3AED;
+    --accent-green: #059669;
+    --accent-orange: #D97706;
+    --accent-red: #DC2626;
+    --s1: #2563EB;
+    --s1-bg: #EFF6FF;
+    --s2: #7C3AED;
+    --s2-bg: #F5F3FF;
+    --s3: #059669;
+    --s3-bg: #ECFDF5;
+    --s4: #D97706;
+    --s4-bg: #FFFBEB;
+    --s5: #DC2626;
+    --s5-bg: #FEF2F2;
+    --tip-bg: #FEFCE8;
+    --tip-border: #FACC15;
+    --exam-bg: #EFF6FF;
+    --exam-border: #3B82F6;
+    --pitfall-bg: #FEF2F2;
+    --pitfall-border: #EF4444;
+    --code-bg: #1E293B;
+    --code-text: #E2E8F0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .container { max-width: 920px; margin: 0 auto; padding: 32px 24px; }
+
+  /* Header */
+  .page-header {
+    text-align: center;
+    padding: 48px 32px;
+    background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+    color: white;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+  .page-header .exam-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+  .page-header .subtitle { font-size: 18px; opacity: 0.85; font-weight: 400; }
+  .page-header .chapter-num { font-size: 14px; opacity: 0.6; margin-top: 12px; }
+
+  /* TOC */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  .toc h2 { font-size: 18px; margin-bottom: 16px; color: var(--text); }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 8px; }
+  .toc a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--accent-purple); text-decoration: underline; }
+  .toc .sub-items { padding-left: 20px; margin-top: 4px; font-size: 13px; color: var(--text-muted); list-style: disc; }
+  .toc .sub-items li { margin-bottom: 2px; }
+
+  /* Thesis */
+  .thesis {
+    background: linear-gradient(135deg, var(--s2-bg), var(--s1-bg));
+    border-left: 4px solid var(--accent-purple);
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+    margin-bottom: 40px;
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+  .thesis strong { color: var(--accent-purple); }
+
+  /* Section wrapper */
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 36px;
+  }
+
+  /* Section badge */
+  .section-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .badge-s1 { background: var(--s1-bg); color: var(--s1); border: 1px solid var(--s1); }
+  .badge-s2 { background: var(--s2-bg); color: var(--s2); border: 1px solid var(--s2); }
+  .badge-s3 { background: var(--s3-bg); color: var(--s3); border: 1px solid var(--s3); }
+  .badge-s4 { background: var(--s4-bg); color: var(--s4); border: 1px solid var(--s4); }
+  .badge-s5 { background: var(--s5-bg); color: var(--s5); border: 1px solid var(--s5); }
+
+  .section h2 { font-size: 22px; font-weight: 700; margin-bottom: 20px; color: var(--text); }
+  .section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 28px 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  .section h4 { font-size: 14px; font-weight: 700; margin: 16px 0 8px 0; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; }
+
+  p { margin-bottom: 12px; }
+
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  li { margin-bottom: 6px; }
+
+  /* Callout boxes */
+  .callout {
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .callout .callout-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .callout-tip {
+    background: var(--tip-bg);
+    border: 1px solid var(--tip-border);
+    border-left: 4px solid var(--tip-border);
+  }
+  .callout-tip .callout-title { color: #A16207; }
+
+  .callout-exam {
+    background: var(--exam-bg);
+    border: 1px solid var(--exam-border);
+    border-left: 4px solid var(--exam-border);
+  }
+  .callout-exam .callout-title { color: #1D4ED8; }
+
+  .callout-pitfall {
+    background: var(--pitfall-bg);
+    border: 1px solid var(--pitfall-border);
+    border-left: 4px solid var(--pitfall-border);
+  }
+  .callout-pitfall .callout-title { color: #B91C1C; }
+
+  /* Code blocks */
+  pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 16px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  }
+  pre code { color: inherit; background: none; padding: 0; }
+  code {
+    background: #F1F5F9;
+    color: #C2410C;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  }
+  pre code .comment { color: #64748B; }
+  pre code .keyword { color: #C084FC; }
+  pre code .string { color: #34D399; }
+  pre code .func { color: #60A5FA; }
+  pre code .param { color: #FDBA74; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th {
+    background: #1E293B;
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  tr:hover td { background: #EFF6FF; }
+
+  /* ASCII diagram container */
+  .diagram {
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 16px 0;
+    overflow-x: auto;
+  }
+  .diagram pre {
+    background: transparent;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .diagram-title {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  /* Summary box */
+  .summary-box {
+    background: linear-gradient(135deg, #F8FAFC, #EFF6FF);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .summary-box h4 { color: var(--accent-blue); margin-bottom: 10px; }
+  .summary-box ul { margin-bottom: 0; }
+
+  /* Cross-connections */
+  .cross-connections {
+    background: linear-gradient(135deg, #FEFCE8, #FEF3C7);
+    border: 1px solid #FDE68A;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 36px;
+  }
+  .cross-connections h2 { color: #92400E; }
+
+  /* Cheat sheet */
+  .cheat-sheet {
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+    color: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 36px;
+  }
+  .cheat-sheet h2 { color: white; margin-bottom: 16px; }
+  .cheat-sheet .cheat-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .cheat-sheet .cheat-label {
+    font-weight: 700;
+    color: #93C5FD;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .cheat-sheet .cheat-value {
+    color: #E2E8F0;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  /* Connection arrow */
+  .connection-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .connection-node {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .connection-arrow { color: var(--text-muted); font-weight: 700; }
+
+  /* Inline highlight */
+  .hl { background: #FEF9C3; padding: 1px 4px; border-radius: 3px; font-weight: 600; }
+  .hl-blue { background: #DBEAFE; color: #1E40AF; }
+  .hl-green { background: #D1FAE5; color: #065F46; }
+  .hl-purple { background: #EDE9FE; color: #5B21B6; }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .container { padding: 16px 12px; }
+    .section { padding: 20px 16px; }
+    .page-header { padding: 32px 20px; }
+    .page-header h1 { font-size: 24px; }
+    pre { font-size: 11.5px; padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE HEADER                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<header class="page-header">
+  <div class="exam-badge">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Iterative Refinement Patterns</h1>
+  <div class="subtitle">From vague instructions to production-quality prompts through disciplined iteration</div>
+  <div class="chapter-num">Chapter 16 &nbsp;·&nbsp; 5 Sections &nbsp;·&nbsp; Comprehensive Study Notes</div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- TABLE OF CONTENTS                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<nav class="toc">
+  <h2>📑 Table of Contents</h2>
+  <ol>
+    <li><a href="#thesis">Chapter Thesis</a></li>
+    <li>
+      <a href="#s16-1">16.1 — Concrete Input/Output Examples for Transformation Requirements</a>
+      <ul class="sub-items">
+        <li>Example-driven specification · Edge case coverage · Progressive complexity</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#s16-2">16.2 — Test-Driven Iteration: Write Tests First, Then Iterate</a>
+      <ul class="sub-items">
+        <li>Prompt TDD cycle · Assertion design · Regression prevention</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#s16-3">16.3 — The Interview Pattern: Having Claude Surface Considerations</a>
+      <ul class="sub-items">
+        <li>Two-phase discovery · Structured elicitation · Requirement completeness</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#s16-4">16.4 — Single Message vs Sequential Fixes: Interacting vs Independent Problems</a>
+      <ul class="sub-items">
+        <li>Dependency analysis · Batch vs. iterate · Fix-ordering strategies</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#s16-5">16.5 — Hands-On: Applying Iterative Refinement</a>
+      <ul class="sub-items">
+        <li>End-to-end workflow · Combined pattern application · Real-world synthesis</li>
+      </ul>
+    </li>
+    <li><a href="#cross">Cross-Section Connections</a></li>
+    <li><a href="#master-table">Master Summary Table</a></li>
+    <li><a href="#cheat">Quick-Reference Cheat Sheet</a></li>
+  </ol>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CHAPTER THESIS                                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="thesis" id="thesis">
+  <strong>Chapter Thesis:</strong> Prompt engineering is not a one-shot activity — it is an <strong>iterative, feedback-driven process</strong> analogous to software development. Chapter 16 teaches that the highest-quality Claude interactions emerge from a disciplined cycle of <em>specifying expectations concretely</em> (via input/output examples), <em>validating outputs systematically</em> (via test-driven iteration), <em>uncovering hidden requirements proactively</em> (via the interview pattern), and <em>choosing the right fix granularity</em> (single message vs. sequential). Mastering these patterns transforms prompt engineering from ad-hoc experimentation into a <strong>repeatable, measurable, production-grade discipline</strong>. The unifying theme is: <span class="hl">define "done" before you start, then converge on it through structured feedback loops</span>.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 16.1                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s16-1">
+  <span class="section-badge badge-s1">Section 16.1</span>
+  <h2>Concrete Input/Output Examples for Transformation Requirements</h2>
+
+  <!-- Concept Overview -->
+  <h3>Concept Overview</h3>
+  <p>
+    Instead of describing a transformation in abstract prose, you <strong>show Claude exactly what you want</strong> by providing concrete input→output pairs inside the prompt. This technique eliminates ambiguity, reduces back-and-forth, and gives Claude a precise specification to pattern-match against. Think of each example as a <em>unit test embedded in the prompt</em> — it defines the contract the output must satisfy.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>Key Definitions</h3>
+  <ul>
+    <li><strong>Transformation Requirement</strong> — A task that takes an input in one form and produces an output in another, e.g., parsing unstructured text into JSON, reformatting dates, or translating domain-specific notation.</li>
+    <li><strong>Example Pair</strong> — A concrete (input, expected_output) tuple embedded in the prompt to demonstrate the desired behavior.</li>
+    <li><strong>Boundary Example</strong> — An example deliberately chosen to illustrate edge cases, ambiguous inputs, or limit conditions.</li>
+    <li><strong>Progressive Complexity</strong> — Ordering examples from simple to complex so Claude infers the generalization gradient.</li>
+    <li><strong>Few-Shot Prompting</strong> — Providing 2–5 example pairs to establish a pattern (distinct from zero-shot, which gives no examples).</li>
+    <li><strong>Canonical Form</strong> — The exact structure/format you expect in the output (e.g., specific JSON schema, date format, field ordering).</li>
+  </ul>
+
+  <!-- Core Principles -->
+  <h3>Core Principles</h3>
+  <ol>
+    <li><strong>Show, don't tell.</strong> A single concrete example is worth a paragraph of abstract description. Ambiguity in natural language disappears when you demonstrate the expected behavior.</li>
+    <li><strong>Cover the edges.</strong> Select examples that expose edge cases: empty inputs, malformed data, boundary values, multi-line content, special characters. Claude generalizes from your examples — if edge cases aren't shown, behavior is undefined.</li>
+    <li><strong>Order matters — simple first.</strong> Start with a straightforward example that establishes the basic pattern, then layer in complexity. This helps Claude build an internal model incrementally.</li>
+    <li><strong>Match format exactly.</strong> If you want JSON output, your examples must show exact JSON. If you want markdown tables, show a markdown table. The example's output format IS the specification.</li>
+    <li><strong>Keep examples representative, not exhaustive.</strong> 3–5 well-chosen examples outperform 20 random ones. Each example should teach Claude something the previous ones didn't.</li>
+    <li><strong>Annotate the "why" sparingly.</strong> If a transformation rule is non-obvious, a brief comment next to the example (e.g., <code>// edge case: empty array returns null</code>) helps Claude understand the intent.</li>
+  </ol>
+
+  <!-- Detailed Explanation -->
+  <h3>Detailed Explanation</h3>
+  <p>
+    The fundamental challenge of prompt engineering is <strong>specification transfer</strong>: the mental model in your head must be translated into instructions Claude can execute reliably. Natural language is inherently ambiguous — the phrase "extract the date" could mean extract as ISO 8601, as a Unix timestamp, as a human-readable string, or as separate year/month/day fields. Concrete examples resolve this ambiguity completely.
+  </p>
+  <p>
+    <strong>How Claude processes examples:</strong> When Claude encounters input/output pairs in a prompt, it performs in-context learning — treating the examples as a form of implicit instruction. Each pair constrains the output space. The model identifies structural patterns (format, field names, transformations applied) and behavioral patterns (how edge cases are handled, what is omitted, what is added). With 3+ examples, Claude can reliably generalize to unseen inputs of similar structure.
+  </p>
+  <p>
+    <strong>The Example Selection Strategy:</strong> Think of examples as a <em>spanning set</em> for your input space. Each example should cover a distinct region:
+  </p>
+  <ul>
+    <li><strong>Base case</strong> — the simplest, most typical input.</li>
+    <li><strong>Variation case</strong> — a different structure within the same family (e.g., different number of fields).</li>
+    <li><strong>Edge case</strong> — boundary conditions: empty input, missing fields, unexpected types.</li>
+    <li><strong>Negative case (optional)</strong> — what the transformation should NOT do, or how to handle invalid input.</li>
+  </ul>
+  <p>
+    <strong>Example placement:</strong> In Claude's API, examples work best when placed inside the <code>system</code> prompt or early in the <code>user</code> message, using clear delimiters (XML tags like <code>&lt;example&gt;</code>, or markdown headers). Placing them after the task instruction but before the actual input creates a natural "here's the pattern → now apply it" flow.
+  </p>
+
+  <!-- Visualization -->
+  <h3>Visualization</h3>
+  <div class="diagram">
+    <div class="diagram-title">Example Selection Coverage Strategy</div>
+<pre>  INPUT SPACE
+  ┌───────────────────────────────────────────────────────┐
+  │                                                       │
+  │   ┌─────────┐         ┌──────────────┐               │
+  │   │ BASE    │         │  VARIATION   │               │
+  │   │ CASE    │         │  CASE        │               │
+  │   │ Ex. #1  │         │  Ex. #2      │               │
+  │   └─────────┘         └──────────────┘               │
+  │                                                       │
+  │              ┌──────────────┐                         │
+  │              │  EDGE CASE   │     ┌──────────────┐   │
+  │              │  Ex. #3      │     │  NEGATIVE    │   │
+  │              │ (empty/null) │     │  Ex. #4      │   │
+  │              └──────────────┘     │ (invalid)    │   │
+  │                                   └──────────────┘   │
+  │                                                       │
+  └───────────────────────────────────────────────────────┘
+  Goal: 3–5 examples that SPAN the input space
+  Each example covers a distinct region → Claude generalizes
+</pre>
+  </div>
+
+  <!-- Concrete Examples -->
+  <h3>Concrete Examples</h3>
+  <h4>❌ Before: Vague Instruction (Prone to Drift)</h4>
+<pre><code><span class="comment"># Prompt (vague)</span>
+<span class="string">"""
+Extract dates from the text and format them nicely.
+"""</span>
+
+<span class="comment"># Input</span>
+<span class="string">"The meeting is on 3/15/2026 and the deadline is March 20th."</span>
+
+<span class="comment"># Possible outputs (all "valid" interpretations):</span>
+<span class="comment"># → "March 15, 2026 and March 20, 2026"</span>
+<span class="comment"># → "2026-03-15, 2026-03-20"</span>
+<span class="comment"># → ["3/15/2026", "March 20th"]</span>
+<span class="comment"># → {"dates": ["2026-03-15T00:00:00Z", ...]}</span>
+</code></pre>
+
+  <h4>✅ After: Example-Driven Specification (Unambiguous)</h4>
+<pre><code><span class="comment"># Prompt with concrete examples</span>
+<span class="string">"""
+Extract all dates from the text. Return a JSON array of objects.
+
+&lt;example&gt;
+Input: "Meeting on 1/5/2026, review by Jan 12."
+Output: [
+  {"original": "1/5/2026", "iso": "2026-01-05", "display": "January 5, 2026"},
+  {"original": "Jan 12", "iso": "2026-01-12", "display": "January 12, 2026"}
+]
+&lt;/example&gt;
+
+&lt;example&gt;
+Input: "No dates here, just a regular sentence."
+Output: []
+&lt;/example&gt;
+
+&lt;example&gt;
+Input: "Fiscal year ends 12/31."
+Output: [
+  {"original": "12/31", "iso": null, "display": "December 31 (year unknown)"}
+]
+&lt;/example&gt;
+
+Now extract dates from the following text:
+"""</span>
+</code></pre>
+
+  <p>Notice how the three examples cover: (1) a base case with two dates in different formats, (2) the empty-input edge case, and (3) an ambiguous year situation. Claude now has an unambiguous specification for format, structure, and edge case handling.</p>
+
+  <!-- Tips & Tricks -->
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks — 16.1</div>
+    <p><strong>Mnemonic → "BVEN"</strong> — Base, Variation, Edge, Negative. Pick one example from each category for optimal coverage with minimal tokens.</p>
+    <p><strong>Use XML delimiters:</strong> Wrapping examples in <code>&lt;example&gt;</code> tags makes them structurally distinct from instructions and actual input, reducing confusion for Claude.</p>
+    <p><strong>Copy real data:</strong> Use sanitized versions of your actual production data as examples, not synthetic toy inputs. This ensures your examples are representative of real-world complexity.</p>
+    <p><strong>Format the output yourself:</strong> Don't ask Claude to "figure out" the format. Manually write the exact output you expect in each example — this is the specification.</p>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="callout callout-exam">
+    <div class="callout-title">📝 Exam Strategy — Section 16.1</div>
+    <p><strong>Question Types:</strong> Scenario-based ("Which prompt revision best reduces output ambiguity?"), best-practice ("How many examples are recommended for a transformation task?").</p>
+    <p><strong>Signal Words:</strong> "concrete examples", "input/output pairs", "transformation", "specification", "edge case", "few-shot".</p>
+    <p><strong>Strategy:</strong> Prefer answers that include specific examples over those that rely on verbose natural-language instructions. Eliminate choices that provide only abstract descriptions without concrete demonstrations.</p>
+    <p><strong>Watch For:</strong> Distractors suggesting "more examples is always better" — quality and coverage beat quantity. Also beware answers that mix instructions inside examples (polluting the pattern).</p>
+  </div>
+
+  <!-- Common Pitfalls -->
+  <div class="callout callout-pitfall">
+    <div class="callout-title">⚠️ Common Pitfalls — 16.1</div>
+    <ul>
+      <li><strong>Redundant examples:</strong> Providing 5 examples that all demonstrate the same basic case wastes tokens without improving coverage.</li>
+      <li><strong>Inconsistent formatting between examples:</strong> If example 1 returns <code>{"date": "..."}</code> and example 2 returns <code>{"Date": "..."}</code>, Claude won't know which casing to follow.</li>
+      <li><strong>Omitting edge cases:</strong> If you don't show how to handle missing/null fields, Claude will improvise — and its improvisation may not match your expectations.</li>
+      <li><strong>Overfitting to examples:</strong> If all examples are about dates, Claude may struggle with a different entity type. Ensure examples represent the actual input variety.</li>
+    </ul>
+  </div>
+
+  <!-- Section Summary -->
+  <div class="summary-box">
+    <h4>📌 Section 16.1 Summary</h4>
+    <ul>
+      <li>Concrete input/output examples eliminate ambiguity more effectively than natural-language descriptions.</li>
+      <li>Select 3–5 examples using the <strong>BVEN</strong> strategy: Base, Variation, Edge, Negative.</li>
+      <li>Format examples exactly as you expect the output — the example IS the specification.</li>
+      <li>Use XML delimiters (<code>&lt;example&gt;</code>) to separate examples from instructions and actual input.</li>
+      <li>Quality of examples matters far more than quantity — each should teach Claude something new.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 16.2                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s16-2">
+  <span class="section-badge badge-s2">Section 16.2</span>
+  <h2>Test-Driven Iteration: Write Tests First, Then Iterate</h2>
+
+  <!-- Concept Overview -->
+  <h3>Concept Overview</h3>
+  <p>
+    Borrowing from Test-Driven Development (TDD) in software engineering, <strong>test-driven prompt iteration</strong> means defining your success criteria as automated checks <em>before</em> you start refining the prompt. You write assertions about what the output must contain, what format it must follow, and what constraints it must satisfy — then iterate on the prompt until all tests pass. This turns subjective "does this look right?" evaluations into objective, repeatable, binary pass/fail signals.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>Key Definitions</h3>
+  <ul>
+    <li><strong>Prompt Test</strong> — An automated assertion that evaluates Claude's output against expected criteria (structural, semantic, or exact-match).</li>
+    <li><strong>Test Suite</strong> — A collection of prompt tests covering multiple input scenarios and evaluation dimensions.</li>
+    <li><strong>Red-Green-Refine Cycle</strong> — (1) RED: A test fails against the current prompt's output. (2) GREEN: Refine the prompt until the test passes. (3) REFINE: Generalize the fix so it works across all cases without regressing.</li>
+    <li><strong>Regression</strong> — When a prompt change that fixes one test case breaks a previously passing case.</li>
+    <li><strong>Evaluation Function (Eval)</strong> — A programmatic function that scores or validates Claude's output, ranging from simple string checks to LLM-based grading.</li>
+    <li><strong>Golden Dataset</strong> — A curated set of (input, expected_output) pairs used as the ground truth for testing.</li>
+    <li><strong>Eval Harness</strong> — The infrastructure that runs prompts against test cases and reports results systematically.</li>
+  </ul>
+
+  <!-- Core Principles -->
+  <h3>Core Principles</h3>
+  <ol>
+    <li><strong>Define "done" before you start.</strong> Write the tests first. If you can't articulate what good output looks like as a test, you don't yet understand your requirements well enough.</li>
+    <li><strong>Automated over manual.</strong> Every prompt change should be validated against the full test suite automatically. Manual spot-checking misses regressions.</li>
+    <li><strong>Test at multiple granularities.</strong> Combine exact-match tests (format, field names), structural tests (JSON validity, required keys), semantic tests (LLM-graded relevance), and constraint tests (word count, language, tone).</li>
+    <li><strong>One fix per iteration.</strong> Change one thing in the prompt per cycle. If you change multiple things and a test flips, you won't know which change caused it.</li>
+    <li><strong>Track every version.</strong> Keep a prompt changelog: what changed, which test it targeted, and whether regressions occurred. This history is invaluable for debugging.</li>
+    <li><strong>Regressions are information.</strong> When a new fix breaks an old test, it reveals a tension in your requirements or an over-specific patch. Address the root cause, not the symptom.</li>
+  </ol>
+
+  <!-- Detailed Explanation -->
+  <h3>Detailed Explanation</h3>
+  <p>
+    Prompt engineering without tests is like coding without a compiler — you're flying blind. The <strong>Red-Green-Refine</strong> cycle provides the discipline:
+  </p>
+  <p>
+    <strong>Phase 1: RED — Write failing tests.</strong> Before touching the prompt, define what success looks like. This could be:
+  </p>
+  <ul>
+    <li><strong>Format assertions:</strong> <code>assert output.startswith("{")</code> — Is it valid JSON?</li>
+    <li><strong>Key presence:</strong> <code>assert "summary" in json.loads(output)</code> — Does it have the required field?</li>
+    <li><strong>Content constraints:</strong> <code>assert len(output.split()) &lt; 200</code> — Is it within the word limit?</li>
+    <li><strong>Semantic checks:</strong> Use a second Claude call to grade: "Does this output correctly answer the question? Return YES or NO."</li>
+    <li><strong>Negative assertions:</strong> <code>assert "I cannot" not in output</code> — Does it avoid refusal patterns?</li>
+  </ul>
+  <p>
+    <strong>Phase 2: GREEN — Refine the prompt.</strong> Make a targeted change to the prompt aimed at fixing exactly one failing test. Common refinement moves:
+  </p>
+  <ul>
+    <li>Adding a concrete example that demonstrates the expected behavior.</li>
+    <li>Adding an explicit constraint: "Your response must be valid JSON."</li>
+    <li>Reordering instructions to put the most critical requirement first.</li>
+    <li>Adding a negative instruction: "Do NOT include explanations outside the JSON."</li>
+  </ul>
+  <p>
+    <strong>Phase 3: REFINE — Check for regressions and generalize.</strong> Run the full test suite. If the fix is too narrow (works for one case but breaks others), look for a more general solution. Often this means replacing a specific patch with a broader principle or a well-chosen example.
+  </p>
+  <p>
+    <strong>Types of evaluation functions:</strong>
+  </p>
+  <table>
+    <tbody><tr>
+      <th>Eval Type</th>
+      <th>Method</th>
+      <th>Best For</th>
+      <th>Limitation</th>
+    </tr>
+    <tr>
+      <td>Exact Match</td>
+      <td><code>output == expected</code></td>
+      <td>Deterministic formats, codes</td>
+      <td>Brittle to whitespace/ordering</td>
+    </tr>
+    <tr>
+      <td>Structural</td>
+      <td>JSON schema validation, regex</td>
+      <td>Format compliance</td>
+      <td>Doesn't check content quality</td>
+    </tr>
+    <tr>
+      <td>Contains/Excludes</td>
+      <td>Substring checks</td>
+      <td>Required/forbidden phrases</td>
+      <td>Coarse — misses paraphrases</td>
+    </tr>
+    <tr>
+      <td>LLM-Graded</td>
+      <td>Second LLM evaluates output</td>
+      <td>Semantic accuracy, tone, quality</td>
+      <td>Non-deterministic, adds latency &amp; cost</td>
+    </tr>
+    <tr>
+      <td>Human Rubric</td>
+      <td>Manual scoring on a rubric</td>
+      <td>Subjective quality, final sign-off</td>
+      <td>Doesn't scale; inter-rater variance</td>
+    </tr>
+  </tbody></table>
+
+  <!-- Visualization -->
+  <h3>Visualization</h3>
+  <div class="diagram">
+    <div class="diagram-title">Red-Green-Refine Cycle for Prompt Iteration</div>
+<pre>    ┌──────────────────────────────────────────────────────────────┐
+    │                                                              │
+    │   ┌──────────────┐                                           │
+    │   │  1. WRITE    │    Define success criteria as automated   │
+    │   │  TESTS (RED) │    assertions BEFORE touching the prompt  │
+    │   └──────┬───────┘                                           │
+    │          │                                                    │
+    │          ▼                                                    │
+    │   ┌──────────────┐       ┌──────────────┐                    │
+    │   │  2. RUN ALL  │ FAIL  │  3. REFINE   │                    │
+    │   │  TESTS       │──────►│  PROMPT      │                    │
+    │   └──────┬───────┘       │  (one change)│                    │
+    │          │               └──────┬───────┘                    │
+    │          │ ALL PASS             │                             │
+    │          │               ┌──────┘                             │
+    │          │               │                                    │
+    │          │               ▼                                    │
+    │          │        ┌──────────────┐                            │
+    │          │        │  4. RE-RUN   │ REGRESSION?                │
+    │          │        │  FULL SUITE  │──────┐                     │
+    │          │        └──────┬───────┘      │                     │
+    │          │               │ PASS         ▼                     │
+    │          │               │       ┌──────────────┐            │
+    │          │               │       │  GENERALIZE  │            │
+    │          │               │       │  THE FIX     │────►(back  │
+    │          │               │       └──────────────┘     to 2)  │
+    │          ▼               ▼                                    │
+    │   ┌──────────────────────────┐                               │
+    │   │  ✅  ALL TESTS PASS      │                               │
+    │   │  → Prompt is validated   │                               │
+    │   │  → Ship / Deploy         │                               │
+    │   └──────────────────────────┘                               │
+    │                                                              │
+    └──────────────────────────────────────────────────────────────┘
+</pre>
+  </div>
+
+  <!-- Concrete Examples -->
+  <h3>Concrete Examples</h3>
+  <h4>Building a Prompt Test Suite (Python)</h4>
+<pre><code><span class="keyword">import</span> json
+
+<span class="comment"># Golden test cases: (input, assertions)</span>
+test_cases = [
+    {
+        <span class="string">"input"</span>: <span class="string">"Summarize: AI is transforming healthcare..."</span>,
+        <span class="string">"assertions"</span>: [
+            <span class="keyword">lambda</span> out: len(out.split()) &lt; 100,         <span class="comment"># concise</span>
+            <span class="keyword">lambda</span> out: <span class="string">"healthcare"</span> <span class="keyword">in</span> out.lower(),     <span class="comment"># on-topic</span>
+            <span class="keyword">lambda</span> out: <span class="keyword">not</span> out.startswith(<span class="string">"I "</span>),       <span class="comment"># no first-person</span>
+        ]
+    },
+    {
+        <span class="string">"input"</span>: <span class="string">"Summarize: "</span>,                         <span class="comment"># edge: empty</span>
+        <span class="string">"assertions"</span>: [
+            <span class="keyword">lambda</span> out: <span class="string">"insufficient"</span> <span class="keyword">in</span> out.lower()
+                        <span class="keyword">or</span> <span class="string">"no content"</span> <span class="keyword">in</span> out.lower(),
+        ]
+    },
+]
+
+<span class="comment"># Run tests (pseudo-code)</span>
+<span class="keyword">for</span> i, case <span class="keyword">in</span> enumerate(test_cases):
+    output = <span class="func">call_claude</span>(prompt_template, case[<span class="string">"input"</span>])
+    <span class="keyword">for</span> j, assertion <span class="keyword">in</span> enumerate(case[<span class="string">"assertions"</span>]):
+        result = assertion(output)
+        print(f<span class="string">"Case {i}, Assert {j}: {'✅ PASS' if result else '❌ FAIL'}"</span>)
+</code></pre>
+
+  <h4>Prompt Changelog Example</h4>
+<pre><code><span class="comment">## Prompt Changelog — Summarization Task</span>
+
+<span class="string">v1.0</span>  Base prompt. Tests: 3/5 passing.
+      ❌ FAIL: Word count exceeds 100 on long inputs
+      ❌ FAIL: Uses first-person ("I think...")
+
+<span class="string">v1.1</span>  Added: "Respond in under 80 words. Use third-person."
+      Tests: 4/5 passing.
+      ❌ FAIL: Empty input returns generic summary instead of error
+
+<span class="string">v1.2</span>  Added edge-case example for empty input.
+      Tests: 5/5 passing. ✅ Shipped.
+</code></pre>
+
+  <!-- Tips & Tricks -->
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks — 16.2</div>
+    <p><strong>Mnemonic → "RED-GREEN-REFINE"</strong><br>
+    RED = Test fails (expected output not met)<br>
+    GREEN = Test passes after prompt refinement<br>
+    REFINE = Generalize the fix across all cases</p>
+    <p><strong>Start with 5 tests.</strong> You don't need 100 tests on day one. Start with 5 that cover format, content, edge cases, constraints, and a negative case. Expand as you discover new failure modes.</p>
+    <p><strong>Use temperature 0 for testing.</strong> Set <code>temperature=0</code> during test runs to maximize reproducibility. Non-determinism at higher temperatures makes test results unreliable.</p>
+    <p><strong>Version your prompts alongside tests.</strong> Store them in the same repository or file. A prompt without its test suite is undocumented; a test suite without its prompt is useless.</p>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="callout callout-exam">
+    <div class="callout-title">📝 Exam Strategy — Section 16.2</div>
+    <p><strong>Question Types:</strong> Process-ordering ("What is the correct first step in iterative refinement?"), best-practice ("Which evaluation method is most appropriate for…?"), scenario-based ("A prompt passes 4/5 tests after a change. What should the engineer do next?").</p>
+    <p><strong>Signal Words:</strong> "test-driven", "regression", "evaluation", "assertion", "iterate", "validate".</p>
+    <p><strong>Strategy:</strong> The correct answer almost always involves (1) running the <em>full</em> test suite after every change, and (2) changing only one thing at a time. Eliminate answers that suggest skipping regression checks or making multiple simultaneous changes.</p>
+    <p><strong>Watch For:</strong> Distractors that confuse "automated testing of prompts" with "asking Claude to test itself." Self-evaluation is a separate technique — TDD here means external, programmatic validation.</p>
+  </div>
+
+  <!-- Common Pitfalls -->
+  <div class="callout callout-pitfall">
+    <div class="callout-title">⚠️ Common Pitfalls — 16.2</div>
+    <ul>
+      <li><strong>Skipping the red phase:</strong> Writing the prompt first, then tests, biases your tests toward what the prompt already does — not what it should do.</li>
+      <li><strong>Testing only the happy path:</strong> If all test cases are "normal" inputs, you'll miss failures on edge cases that appear in production.</li>
+      <li><strong>Over-reliance on exact match:</strong> LLM outputs are non-deterministic; tests that require exact string equality will be flaky. Use structural/semantic checks instead.</li>
+      <li><strong>Ignoring regressions:</strong> "It's fine, the other tests still mostly pass" is how production failures start. Every regression demands investigation.</li>
+      <li><strong>Multiple changes per iteration:</strong> If you change the system prompt, add an example, AND adjust temperature in one step, you can't isolate which change helped or hurt.</li>
+    </ul>
+  </div>
+
+  <!-- Section Summary -->
+  <div class="summary-box">
+    <h4>📌 Section 16.2 Summary</h4>
+    <ul>
+      <li>Define success criteria as automated tests <strong>before</strong> writing or refining the prompt.</li>
+      <li>Follow the <strong>Red-Green-Refine</strong> cycle: fail → fix → regression check → generalize.</li>
+      <li>Use multiple evaluation types: exact match, structural, semantic (LLM-graded), and constraint-based.</li>
+      <li>Change only <strong>one thing per iteration</strong> and run the full test suite after every change.</li>
+      <li>Maintain a <strong>prompt changelog</strong> to track what changed, why, and what it affected.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 16.3                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s16-3">
+  <span class="section-badge badge-s3">Section 16.3</span>
+  <h2>The Interview Pattern: Having Claude Surface Considerations</h2>
+
+  <!-- Concept Overview -->
+  <h3>Concept Overview</h3>
+  <p>
+    The <strong>Interview Pattern</strong> inverts the typical human→Claude instruction flow. Instead of specifying everything upfront (which risks missing requirements), you ask Claude to <em>interview you</em> — asking clarifying questions, surfacing edge cases, and identifying considerations you may not have thought of. This two-phase approach (discovery → execution) produces higher-quality outcomes because the requirements are more complete before Claude begins the actual task.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>Key Definitions</h3>
+  <ul>
+    <li><strong>Interview Pattern</strong> — A prompting technique where Claude is instructed to ask the user clarifying questions before executing the task, ensuring requirement completeness.</li>
+    <li><strong>Discovery Phase</strong> — The first phase where Claude asks questions and surfaces considerations. No task execution occurs.</li>
+    <li><strong>Execution Phase</strong> — The second phase where Claude performs the task using the answers gathered during discovery.</li>
+    <li><strong>Requirement Elicitation</strong> — The process of drawing out implicit requirements that the user hasn't stated.</li>
+    <li><strong>Consideration Surfacing</strong> — Claude proactively identifies trade-offs, edge cases, assumptions, and dependencies the user should decide on.</li>
+    <li><strong>Bounded Interview</strong> — Constraining the discovery phase to a specific number of questions or categories to prevent endless back-and-forth.</li>
+  </ul>
+
+  <!-- Core Principles -->
+  <h3>Core Principles</h3>
+  <ol>
+    <li><strong>You don't know what you don't know.</strong> The interview pattern's power is in surfacing unknown unknowns — requirements you wouldn't have thought to specify.</li>
+    <li><strong>Separate discovery from execution.</strong> Never let Claude start executing while still gathering requirements. The phases must be distinct.</li>
+    <li><strong>Bound the interview.</strong> Without constraints, Claude may ask dozens of questions. Specify: "Ask me up to 5 critical questions before proceeding" or "Focus your questions on [specific dimension]."</li>
+    <li><strong>Claude's questions are diagnostic.</strong> The quality of Claude's questions reveals how well it understands the task. Poor questions signal a poor task description.</li>
+    <li><strong>Answers become specifications.</strong> Your answers to Claude's questions should be fed back into the prompt as explicit constraints for the execution phase.</li>
+    <li><strong>Use for complex, ambiguous, or high-stakes tasks.</strong> Don't use the interview pattern for simple, well-defined tasks — it adds unnecessary latency.</li>
+  </ol>
+
+  <!-- Detailed Explanation -->
+  <h3>Detailed Explanation</h3>
+  <p>
+    The interview pattern addresses the <strong>cold-start specification problem</strong>: when you begin a complex task, you often don't know all the requirements upfront. In traditional prompt engineering, this leads to a lengthy back-and-forth cycle of "generate → review → correct → regenerate." The interview pattern front-loads this discovery.
+  </p>
+  <p>
+    <strong>How to implement the interview pattern:</strong>
+  </p>
+  <p>
+    <strong>Step 1 — Frame the task and trigger the interview:</strong>
+  </p>
+<pre><code><span class="string">"I want to build an API rate limiter. Before you write any code,
+ask me the questions you'd need answered to design this correctly.
+Limit yourself to your 5 most important questions."</span>
+</code></pre>
+  <p>
+    <strong>Step 2 — Claude surfaces considerations:</strong> Claude might ask about request volume, rate limit algorithm (token bucket vs. sliding window), scope (per-user vs. global), storage backend, and how to handle bursting. These are the exact design decisions that, if unspecified, would lead to wrong assumptions.
+  </p>
+  <p>
+    <strong>Step 3 — You answer, providing specifications:</strong> Your answers become the requirement document. Claude now has explicit, user-confirmed constraints.
+  </p>
+  <p>
+    <strong>Step 4 — Claude executes with full context:</strong> With the interview answers in context, Claude produces output that is aligned with your actual needs, not its default assumptions.
+  </p>
+  <p>
+    <strong>Variants of the pattern:</strong>
+  </p>
+  <table>
+    <tbody><tr>
+      <th>Variant</th>
+      <th>Description</th>
+      <th>When to Use</th>
+    </tr>
+    <tr>
+      <td>Open Interview</td>
+      <td>Claude asks any questions it deems relevant</td>
+      <td>Exploratory tasks, brainstorming</td>
+    </tr>
+    <tr>
+      <td>Bounded Interview</td>
+      <td>Fixed number of questions (e.g., "ask up to 5")</td>
+      <td>Time-sensitive tasks, clear scope</td>
+    </tr>
+    <tr>
+      <td>Categorized Interview</td>
+      <td>Questions organized by dimension (technical, business, UX)</td>
+      <td>Multi-stakeholder projects</td>
+    </tr>
+    <tr>
+      <td>Assumption-Check</td>
+      <td>Claude lists its assumptions and asks you to confirm/correct</td>
+      <td>When you have a partial spec already</td>
+    </tr>
+    <tr>
+      <td>Devil's Advocate</td>
+      <td>Claude challenges your stated requirements and surfaces risks</td>
+      <td>High-stakes decisions, architecture review</td>
+    </tr>
+  </tbody></table>
+
+  <!-- Visualization -->
+  <h3>Visualization</h3>
+  <div class="diagram">
+    <div class="diagram-title">Interview Pattern: Two-Phase Flow</div>
+<pre>  TRADITIONAL (one-shot)             INTERVIEW PATTERN
+  ════════════════════               ═══════════════════
+
+  User ──► Task Spec ──► Claude      User ──► Rough Task Idea
+                           │                       │
+                           ▼                       ▼
+                      Output v1           ┌─────────────────┐
+                           │              │ DISCOVERY PHASE  │
+                           ▼              │                  │
+                      "Not quite..."      │ Claude asks 3-5  │
+                           │              │ critical Qs      │
+                           ▼              │                  │
+                      User corrects       │ User answers     │
+                           │              │ → constraints     │
+                           ▼              │ are now explicit  │
+                      Output v2           └────────┬────────┘
+                           │                       │
+                           ▼                       ▼
+                      "Still off..."      ┌─────────────────┐
+                           │              │ EXECUTION PHASE  │
+                      (repeat 3-5×)       │                  │
+                                          │ Claude builds    │
+                                          │ with full context│
+                                          └────────┬────────┘
+                                                   │
+                                                   ▼
+                                            Output v1  ✅
+                                          (usually right on
+                                            first attempt)
+</pre>
+  </div>
+
+  <!-- Concrete Examples -->
+  <h3>Concrete Examples</h3>
+  <h4>Example: Bounded Interview for a Data Pipeline</h4>
+<pre><code><span class="comment"># User prompt:</span>
+<span class="string">"""
+I need to build a data pipeline that processes customer feedback.
+Before designing anything, ask me up to 5 critical questions that
+would affect the architecture. Format each as:
+
+Q[n]: [question]
+Why it matters: [brief explanation]
+Default assumption if unanswered: [what you'd assume]
+"""</span>
+
+<span class="comment"># Claude's response:</span>
+<span class="string">"""
+Q1: What is the expected volume of feedback per day?
+Why it matters: Determines batch vs. stream processing architecture.
+Default assumption if unanswered: &lt;1000/day → batch is sufficient.
+
+Q2: Do you need real-time sentiment scores or is daily aggregation OK?
+Why it matters: Real-time requires streaming + low-latency ML inference.
+Default assumption if unanswered: Daily aggregation is acceptable.
+
+Q3: What downstream systems consume the processed data?
+Why it matters: Affects output format (JSON API, database writes, S3 parquet).
+Default assumption if unanswered: Results go to a PostgreSQL database.
+
+Q4: Is PII present in the feedback? Any compliance requirements?
+Why it matters: PII handling affects storage, encryption, and data retention.
+Default assumption if unanswered: No PII; standard security practices.
+
+Q5: What is your team's infrastructure stack (AWS/GCP/Azure, K8s, etc.)?
+Why it matters: Solution should use tools your team can maintain.
+Default assumption if unanswered: AWS-based, serverless preferred.
+"""</span>
+</code></pre>
+  <p>Notice the <strong>"Default assumption"</strong> field — this is a power technique. It lets the user skip questions where the default is acceptable, while making Claude's assumptions transparent and correctable.</p>
+
+  <!-- Tips & Tricks -->
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks — 16.3</div>
+    <p><strong>Mnemonic → "ASK before ACT"</strong> — Always Surface Knowledge before Acting on the Task.</p>
+    <p><strong>Request "default assumptions":</strong> Ask Claude to state what it would assume if you don't answer. This makes implicit assumptions explicit and correctable.</p>
+    <p><strong>Combine with 16.1:</strong> After the interview phase, ask Claude to produce example input/output pairs based on your answers — this validates that Claude understood your requirements correctly before execution begins.</p>
+    <p><strong>Use for system prompt design:</strong> The interview pattern is especially powerful when designing system prompts for agents or chatbots — Claude can surface all the behavioral edge cases you need to specify.</p>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="callout callout-exam">
+    <div class="callout-title">📝 Exam Strategy — Section 16.3</div>
+    <p><strong>Question Types:</strong> Scenario-based ("A developer needs to build a complex workflow but has vague requirements. What technique should they use?"), comparison ("How does the interview pattern differ from iterating on outputs?").</p>
+    <p><strong>Signal Words:</strong> "clarifying questions", "surface considerations", "requirements gathering", "unknown unknowns", "before starting".</p>
+    <p><strong>Strategy:</strong> When the scenario involves ambiguity, incomplete requirements, or a complex task where the user doesn't know all the constraints — the interview pattern is almost certainly the correct answer. Eliminate answers that jump straight to execution.</p>
+    <p><strong>Watch For:</strong> Distractors suggesting "ask Claude to figure it out on its own" — the interview pattern is collaborative (Claude asks, human answers), not autonomous.</p>
+  </div>
+
+  <!-- Common Pitfalls -->
+  <div class="callout callout-pitfall">
+    <div class="callout-title">⚠️ Common Pitfalls — 16.3</div>
+    <ul>
+      <li><strong>Unbounded interviews:</strong> Without a limit, Claude may ask 15+ questions, exhausting the user. Always cap it (e.g., "up to 5 questions").</li>
+      <li><strong>Mixing phases:</strong> If Claude starts executing partway through the interview, the output will be based on incomplete information. Enforce phase separation.</li>
+      <li><strong>Using it for simple tasks:</strong> Asking Claude to interview you about "What's 2+2?" is overhead without value. Reserve the pattern for genuinely complex/ambiguous tasks.</li>
+      <li><strong>Ignoring the answers:</strong> If you collect interview answers but don't feed them back explicitly into the execution prompt, Claude may not use them consistently.</li>
+    </ul>
+  </div>
+
+  <!-- Section Summary -->
+  <div class="summary-box">
+    <h4>📌 Section 16.3 Summary</h4>
+    <ul>
+      <li>The interview pattern <strong>front-loads requirement discovery</strong> by having Claude ask clarifying questions before executing.</li>
+      <li>Separate <strong>Discovery Phase</strong> (questions) from <strong>Execution Phase</strong> (task work) — never mix them.</li>
+      <li>Bound the interview: specify the number of questions or focus categories.</li>
+      <li>Ask Claude to state <strong>default assumptions</strong> — makes implicit decisions transparent and correctable.</li>
+      <li>Best suited for <strong>complex, ambiguous, or high-stakes tasks</strong> where missing requirements would be costly.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 16.4                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s16-4">
+  <span class="section-badge badge-s4">Section 16.4</span>
+  <h2>Single Message vs Sequential Fixes: Interacting vs Independent Problems</h2>
+
+  <!-- Concept Overview -->
+  <h3>Concept Overview</h3>
+  <p>
+    When Claude's output has multiple issues, you face a choice: fix them all in <strong>one message</strong> (batch), or fix them <strong>one at a time</strong> (sequential). The correct strategy depends on whether the problems are <strong>independent</strong> (fixing one doesn't affect the others) or <strong>interacting</strong> (fixing one changes the context for the others). Choosing the wrong strategy wastes tokens, introduces confusion, or causes cascading regressions.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>Key Definitions</h3>
+  <ul>
+    <li><strong>Independent Problems</strong> — Issues that exist in isolation; fixing one has no effect on the others. Example: a formatting error in section A and a factual error in section B.</li>
+    <li><strong>Interacting Problems</strong> — Issues where fixing one changes the context, content, or validity of another. Example: restructuring the document outline (fix 1) affects the content of every section (fix 2+).</li>
+    <li><strong>Batch Fix</strong> — Sending all corrections in a single message. Efficient for independent problems.</li>
+    <li><strong>Sequential Fix</strong> — Sending one correction at a time, waiting for the result before sending the next. Necessary for interacting problems.</li>
+    <li><strong>Fix Ordering</strong> — The deliberate sequencing of fixes from structural/high-level to granular/low-level to prevent rework.</li>
+    <li><strong>Cascading Regression</strong> — When a fix to one issue inadvertently creates or changes another issue downstream.</li>
+  </ul>
+
+  <!-- Core Principles -->
+  <h3>Core Principles</h3>
+  <ol>
+    <li><strong>Classify before fixing.</strong> Before sending corrections, categorize each issue as independent or interacting. This determines your strategy.</li>
+    <li><strong>Independent problems → batch.</strong> If issues don't interact, fix them all in one message. This is token-efficient and faster.</li>
+    <li><strong>Interacting problems → sequential, high-level first.</strong> Fix structural/architectural issues before content/detail issues. Each fix changes the landscape for subsequent fixes.</li>
+    <li><strong>When in doubt, go sequential.</strong> Sequential fixes are always safe (if slower). Batching interacting problems can cause Claude to resolve conflicts unpredictably.</li>
+    <li><strong>Be specific about which text to change.</strong> Whether batching or sequencing, reference the exact location of each issue (line number, section header, quoted text). Vague instructions like "fix the error in the middle" invite mistakes.</li>
+    <li><strong>The fix hierarchy: Structure → Logic → Content → Style.</strong> Always fix in this order. Structural changes (reorganization, adding/removing sections) invalidate lower-level fixes.</li>
+  </ol>
+
+  <!-- Detailed Explanation -->
+  <h3>Detailed Explanation</h3>
+  <p>
+    This section addresses a practical problem every prompt engineer faces: <strong>multi-issue correction</strong>. After Claude generates a response, it's rare that only one thing needs fixing. The question is: how do you communicate multiple corrections effectively?
+  </p>
+  <p>
+    <strong>The Dependency Test:</strong> For each pair of issues (A, B), ask: "If I fix A, does that change what B's fix looks like?" If yes, they interact — sequence them. If no, they're independent — batch them.
+  </p>
+
+  <h4>Decision Matrix</h4>
+  <table>
+    <tbody><tr>
+      <th>Problem Type</th>
+      <th>Examples</th>
+      <th>Strategy</th>
+      <th>Rationale</th>
+    </tr>
+    <tr>
+      <td><strong>Independent</strong></td>
+      <td>Typo in paragraph 2 + wrong date in paragraph 5</td>
+      <td>Single message (batch)</td>
+      <td>Fixes don't affect each other; one round-trip is enough</td>
+    </tr>
+    <tr>
+      <td><strong>Interacting (same scope)</strong></td>
+      <td>Change the main argument + update all supporting evidence</td>
+      <td>Sequential</td>
+      <td>New argument changes what evidence is relevant</td>
+    </tr>
+    <tr>
+      <td><strong>Interacting (hierarchical)</strong></td>
+      <td>Reorganize sections + rewrite section content</td>
+      <td>Sequential (structure first)</td>
+      <td>New structure determines what content goes where</td>
+    </tr>
+    <tr>
+      <td><strong>Mixed</strong></td>
+      <td>Fix typo (independent) + restructure + rewrite (interacting)</td>
+      <td>Sequence the interacting fixes; batch the independent ones at the end</td>
+      <td>Hybrid approach: structural changes first, cosmetic fixes last</td>
+    </tr>
+  </tbody></table>
+
+  <!-- Visualization -->
+  <h3>Visualization</h3>
+  <div class="diagram">
+    <div class="diagram-title">Decision Flowchart: Single Message vs. Sequential Fixes</div>
+<pre>                   ┌────────────────────────────────┐
+                   │  Claude output has N issues     │
+                   └───────────────┬────────────────┘
+                                   │
+                                   ▼
+                   ┌────────────────────────────────┐
+                   │  For each pair of issues:       │
+                   │  Does fixing A affect B?         │
+                   └───────────────┬────────────────┘
+                                   │
+                    ┌──────────────┴──────────────┐
+                    │                              │
+              ALL "No"                       ANY "Yes"
+                    │                              │
+                    ▼                              ▼
+         ┌──────────────────┐        ┌───────────────────────┐
+         │  BATCH FIX       │        │  CLASSIFY HIERARCHY   │
+         │  Single message   │        │                       │
+         │  List all fixes   │        │  1. Structural issues │
+         │  in one go        │        │  2. Logic issues      │
+         └──────────────────┘        │  3. Content issues    │
+                                     │  4. Style issues      │
+                                     └───────────┬───────────┘
+                                                  │
+                                                  ▼
+                                     ┌───────────────────────┐
+                                     │  SEQUENTIAL FIX       │
+                                     │  Fix level 1 → wait   │
+                                     │  Fix level 2 → wait   │
+                                     │  ...                   │
+                                     │  Batch remaining       │
+                                     │  independent issues    │
+                                     └───────────────────────┘
+</pre>
+  </div>
+
+  <!-- Concrete Examples -->
+  <h3>Concrete Examples</h3>
+  <h4>✅ Independent Issues → Batch Fix (Correct)</h4>
+<pre><code><span class="comment"># All three issues are independent — batch is efficient</span>
+<span class="string">"""
+Please make these three corrections to the report:
+
+1. In the Executive Summary (paragraph 2), change "Q3 2025" to "Q3 2026"
+2. In Section 3.1, the table header says "Reveue" — fix to "Revenue"
+3. In the Conclusion, add a bullet point: "• Expand to APAC in Q1 2027"
+
+All other content should remain unchanged.
+"""</span>
+</code></pre>
+
+  <h4>✅ Interacting Issues → Sequential Fix (Correct)</h4>
+<pre><code><span class="comment"># Message 1: Structural fix first</span>
+<span class="string">"""
+Reorganize the report: merge Sections 2 and 3 into a single
+"Market Analysis" section, and move Section 5 to come before
+the new Section 3. Keep all existing content.
+"""</span>
+
+<span class="comment"># Wait for output...</span>
+
+<span class="comment"># Message 2: Content fix (depends on new structure)</span>
+<span class="string">"""
+Good. Now in the new "Market Analysis" section, the competitive
+landscape data is outdated. Replace it with: [new data].
+Also update all section cross-references to match the new numbering.
+"""</span>
+
+<span class="comment"># Wait for output...</span>
+
+<span class="comment"># Message 3: Style fix (lowest priority)</span>
+<span class="string">"""
+Finally, change the tone of the Executive Summary from academic
+to conversational. Use shorter sentences and active voice.
+"""</span>
+</code></pre>
+
+  <h4>❌ Anti-Pattern: Batching Interacting Issues</h4>
+<pre><code><span class="comment"># WRONG — these issues interact, but are batched</span>
+<span class="string">"""
+1. Restructure the document into 4 sections instead of 6
+2. Rewrite the introduction to reference the new structure
+3. Update all cross-references
+4. Add a new conclusion summarizing the new sections
+"""</span>
+<span class="comment"># Problem: Claude must resolve #1 before it can do #2-#4,</span>
+<span class="comment"># but it's processing them "simultaneously" in one pass.</span>
+<span class="comment"># Result: inconsistent cross-references, wrong section numbers.</span>
+</code></pre>
+
+  <!-- Tips & Tricks -->
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks — 16.4</div>
+    <p><strong>Mnemonic → "SLCS" (Structure → Logic → Content → Style)</strong> — fix in this order whenever issues interact.</p>
+    <p><strong>The "Pair Test":</strong> For every pair of fixes, ask: "If I do A, does B change?" If yes → sequential. If no → batchable. This is a O(n²) check, but with typical 3-5 issues, it takes seconds.</p>
+    <p><strong>Quote the exact text:</strong> Instead of "fix the error in paragraph 3", say <code>Change "the company's reveue" to "the company's revenue" in paragraph 3.</code> Precision prevents misapplied corrections.</p>
+    <p><strong>End with "All other content should remain unchanged":</strong> This anchoring instruction prevents Claude from making unrequested changes while applying your fixes.</p>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="callout callout-exam">
+    <div class="callout-title">📝 Exam Strategy — Section 16.4</div>
+    <p><strong>Question Types:</strong> Scenario-based ("An output has three issues: a structural reorganization, a factual correction, and a typo. What is the best fix strategy?"), classification ("Which of these issue pairs are independent?").</p>
+    <p><strong>Signal Words:</strong> "single message", "sequential", "interacting", "independent", "batch", "fix order", "dependency".</p>
+    <p><strong>Strategy:</strong> Look for the dependency relationship between the issues described. If any fix changes the context for another fix, the answer should involve sequential processing. Structural fixes always come first.</p>
+    <p><strong>Watch For:</strong> Distractors suggesting "always fix one at a time" or "always batch for efficiency." The correct answer is context-dependent — it depends on whether problems interact.</p>
+  </div>
+
+  <!-- Common Pitfalls -->
+  <div class="callout callout-pitfall">
+    <div class="callout-title">⚠️ Common Pitfalls — 16.4</div>
+    <ul>
+      <li><strong>Defaulting to batch for everything:</strong> Token-efficient but risky when issues interact — causes inconsistencies and cascading errors.</li>
+      <li><strong>Defaulting to sequential for everything:</strong> Safe but wasteful when issues are independent — costs unnecessary API calls and latency.</li>
+      <li><strong>Wrong fix ordering:</strong> Fixing style before structure means the style fix gets overwritten. Always fix top-down: structure → logic → content → style.</li>
+      <li><strong>Vague references:</strong> "Fix the second issue" is ambiguous when the document has changed. Always quote specific text or use section identifiers.</li>
+    </ul>
+  </div>
+
+  <!-- Section Summary -->
+  <div class="summary-box">
+    <h4>📌 Section 16.4 Summary</h4>
+    <ul>
+      <li>Classify issues as <strong>independent</strong> (fix doesn't affect others) or <strong>interacting</strong> (fix changes context for others).</li>
+      <li>Independent problems → <strong>batch fix</strong> in a single message. Interacting problems → <strong>sequential fix</strong>.</li>
+      <li>Follow the <strong>SLCS hierarchy</strong>: Structure → Logic → Content → Style.</li>
+      <li>Use the <strong>Pair Test</strong> ("Does fixing A change B?") to classify dependencies.</li>
+      <li>Always reference fixes with <strong>exact text quotes or section identifiers</strong>, not vague descriptions.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SECTION 16.5                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="s16-5">
+  <span class="section-badge badge-s5">Section 16.5</span>
+  <h2>Hands-On: Applying Iterative Refinement</h2>
+
+  <!-- Concept Overview -->
+  <h3>Concept Overview</h3>
+  <p>
+    Section 16.5 is the <strong>practical synthesis</strong> of all preceding patterns. It walks through an end-to-end iterative refinement workflow: starting from a vague task, using the interview pattern to clarify requirements, encoding those requirements as concrete examples, building a test suite, and applying the correct fix strategy (batch vs. sequential) as you converge on a production-quality prompt. This section transforms theoretical knowledge into a repeatable, practical methodology.
+  </p>
+
+  <!-- Key Definitions -->
+  <h3>Key Definitions</h3>
+  <ul>
+    <li><strong>Iterative Refinement Workflow</strong> — The full end-to-end process: Interview → Specify → Test → Refine → Validate → Ship.</li>
+    <li><strong>Convergence</strong> — The process of each iteration getting closer to the desired output, measured by test pass rate.</li>
+    <li><strong>Prompt Maturity Levels</strong> — The stages a prompt goes through: Draft → Tested → Refined → Production → Monitored.</li>
+    <li><strong>Refinement Velocity</strong> — How quickly each iteration improves the test pass rate. Declining velocity signals diminishing returns or a fundamentally misaligned approach.</li>
+    <li><strong>Production Readiness</strong> — A prompt that passes all tests, handles edge cases, and has been validated against real-world input variety.</li>
+  </ul>
+
+  <!-- Core Principles -->
+  <h3>Core Principles</h3>
+  <ol>
+    <li><strong>The workflow is sequential, not optional.</strong> Skipping steps (e.g., jumping to testing without examples, or to execution without interviewing) degrades quality predictably.</li>
+    <li><strong>Each pattern feeds the next.</strong> Interview answers become example pairs (16.3 → 16.1). Example pairs become test assertions (16.1 → 16.2). Test failures determine fix strategy (16.2 → 16.4).</li>
+    <li><strong>Measure convergence.</strong> Track your test pass rate across iterations. If it plateaus or regresses, step back and re-examine your approach — don't keep patching.</li>
+    <li><strong>Know when to stop.</strong> 100% test pass on well-chosen tests is "done." Over-refining past this point is wasted effort. Define your acceptance threshold upfront.</li>
+    <li><strong>Document the journey.</strong> The prompt changelog, test suite, and interview notes are as valuable as the final prompt — they're your institutional knowledge for maintenance and debugging.</li>
+  </ol>
+
+  <!-- Detailed Explanation -->
+  <h3>Detailed Explanation</h3>
+  <p>
+    The hands-on workflow integrates all four preceding techniques into a single, disciplined methodology. Here is the complete process:
+  </p>
+
+  <h4>The 6-Step Iterative Refinement Workflow</h4>
+
+  <table>
+    <tbody><tr><th>Step</th><th>Pattern Used</th><th>Action</th><th>Output</th></tr>
+    <tr>
+      <td><strong>1. Discover</strong></td>
+      <td>Interview (16.3)</td>
+      <td>Have Claude surface considerations; answer its questions</td>
+      <td>Explicit requirements list</td>
+    </tr>
+    <tr>
+      <td><strong>2. Specify</strong></td>
+      <td>Examples (16.1)</td>
+      <td>Encode requirements as concrete input/output examples</td>
+      <td>3–5 example pairs (BVEN)</td>
+    </tr>
+    <tr>
+      <td><strong>3. Test</strong></td>
+      <td>TDD (16.2)</td>
+      <td>Write automated assertions based on examples and requirements</td>
+      <td>Test suite (5–10 assertions)</td>
+    </tr>
+    <tr>
+      <td><strong>4. Iterate</strong></td>
+      <td>Red-Green-Refine (16.2)</td>
+      <td>Run tests, fix failures one at a time, check for regressions</td>
+      <td>Refined prompt (versioned)</td>
+    </tr>
+    <tr>
+      <td><strong>5. Fix</strong></td>
+      <td>Fix Strategy (16.4)</td>
+      <td>Classify remaining issues; batch or sequence fixes appropriately</td>
+      <td>Corrected output</td>
+    </tr>
+    <tr>
+      <td><strong>6. Validate</strong></td>
+      <td>All patterns</td>
+      <td>Run full test suite; confirm convergence; document final prompt</td>
+      <td>Production-ready prompt + documentation</td>
+    </tr>
+  </tbody></table>
+
+  <!-- Visualization -->
+  <h3>Visualization</h3>
+  <div class="diagram">
+    <div class="diagram-title">End-to-End Iterative Refinement Workflow</div>
+<pre>  ┌──────────────────────────────────────────────────────────────────────┐
+  │                                                                      │
+  │  Step 1          Step 2          Step 3          Step 4              │
+  │  DISCOVER        SPECIFY         TEST            ITERATE             │
+  │  ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐          │
+  │  │Interview│───►│Examples │───►│Write    │───►│Red-Green│──┐       │
+  │  │Pattern  │    │(BVEN)   │    │Tests    │    │-Refine  │  │       │
+  │  │(16.3)   │    │(16.1)   │    │(16.2)   │    │(16.2)   │  │       │
+  │  └─────────┘    └─────────┘    └─────────┘    └────┬────┘  │       │
+  │                                                     │       │       │
+  │       Requirements   Example       Test        Prompt  FAIL │       │
+  │       List           Pairs         Suite       v(n)    │    │       │
+  │                                                     │  │    │       │
+  │                                                     │  └────┘       │
+  │                                                     │ ALL PASS      │
+  │                                                     ▼               │
+  │  Step 6          Step 5                                             │
+  │  VALIDATE        FIX                                                │
+  │  ┌─────────┐    ┌─────────┐    ┌───────────────────────────┐       │
+  │  │Full     │◄───│Batch vs │◄───│ Classify remaining issues │       │
+  │  │Suite    │    │Sequence │    │ Independent? Interacting?  │       │
+  │  │Pass ✅  │    │(16.4)   │    └───────────────────────────┘       │
+  │  └────┬────┘    └─────────┘                                         │
+  │       │                                                              │
+  │       ▼                                                              │
+  │  ┌───────────────────────────────────────┐                          │
+  │  │ 🚀 PRODUCTION-READY PROMPT            │                          │
+  │  │ + Test suite + Changelog + Docs       │                          │
+  │  └───────────────────────────────────────┘                          │
+  │                                                                      │
+  └──────────────────────────────────────────────────────────────────────┘
+</pre>
+  </div>
+
+  <!-- Concrete Examples -->
+  <h3>Concrete Examples</h3>
+  <h4>Complete Walkthrough: Building a Customer Email Classifier</h4>
+<pre><code><span class="comment">## Step 1: DISCOVER (Interview Pattern)</span>
+
+<span class="string">User: "I need Claude to classify customer emails."
+Claude asks:
+  Q1: What categories? → Billing, Technical, General, Urgent
+  Q2: Can an email have multiple categories? → No, single-label
+  Q3: What if the email is ambiguous? → Return "General" + confidence &lt; 0.7
+  Q4: Output format? → JSON: {"category": "...", "confidence": 0.0-1.0}
+  Q5: Language? → English only for now</span>
+
+<span class="comment">## Step 2: SPECIFY (Examples)</span>
+
+<span class="string">&lt;example&gt;
+Input: "My invoice shows $500 but I was quoted $300."
+Output: {"category": "Billing", "confidence": 0.95}
+&lt;/example&gt;
+
+&lt;example&gt;
+Input: "The app crashes when I click the export button."
+Output: {"category": "Technical", "confidence": 0.92}
+&lt;/example&gt;
+
+&lt;example&gt;
+Input: "Hi, just wanted to say your product is great!"
+Output: {"category": "General", "confidence": 0.88}
+&lt;/example&gt;
+
+&lt;example&gt;
+Input: "My server is down and we're losing $10k/hour!"
+Output: {"category": "Urgent", "confidence": 0.97}
+&lt;/example&gt;
+
+&lt;example&gt;
+Input: "I think there might be a billing issue but also the app is slow?"
+Output: {"category": "General", "confidence": 0.55}
+&lt;/example&gt;</span>
+
+<span class="comment">## Step 3: TEST (Write assertions)</span>
+
+<span class="keyword">tests</span> = [
+    <span class="comment"># Format tests</span>
+    (<span class="string">"valid_json"</span>,     <span class="keyword">lambda</span> o: json.loads(o)),
+    (<span class="string">"has_category"</span>,   <span class="keyword">lambda</span> o: <span class="string">"category"</span> <span class="keyword">in</span> json.loads(o)),
+    (<span class="string">"has_confidence"</span>, <span class="keyword">lambda</span> o: 0 &lt;= json.loads(o)[<span class="string">"confidence"</span>] &lt;= 1),
+    (<span class="string">"valid_category"</span>, <span class="keyword">lambda</span> o: json.loads(o)[<span class="string">"category"</span>]
+                         <span class="keyword">in</span> [<span class="string">"Billing"</span>,<span class="string">"Technical"</span>,<span class="string">"General"</span>,<span class="string">"Urgent"</span>]),
+    <span class="comment"># Semantic tests</span>
+    (<span class="string">"billing_correct"</span>, <span class="keyword">lambda</span> o: json.loads(o)[<span class="string">"category"</span>] == <span class="string">"Billing"</span>
+                          <span class="keyword">if</span> <span class="string">"invoice"</span> <span class="keyword">in</span> test_input <span class="keyword">else</span> True),
+    <span class="comment"># Edge case tests</span>
+    (<span class="string">"ambiguous_low_conf"</span>, <span class="keyword">lambda</span> o: json.loads(o)[<span class="string">"confidence"</span>] &lt; 0.7
+                            <span class="keyword">if</span> <span class="string">"ambiguous"</span> <span class="keyword">in</span> test_input <span class="keyword">else</span> True),
+]
+
+<span class="comment">## Step 4: ITERATE (Red-Green-Refine)</span>
+
+<span class="string">v1.0: 4/6 tests pass. Fails: ambiguous_low_conf, valid_json (extra text)
+v1.1: Added "Return ONLY valid JSON, no other text." → 5/6 pass
+v1.2: Added ambiguous example with confidence=0.55 → 6/6 pass ✅</span>
+
+<span class="comment">## Step 5: FIX (no remaining issues — all tests pass)</span>
+
+<span class="comment">## Step 6: VALIDATE → Ship prompt v1.2 with test suite</span>
+</code></pre>
+
+  <h4>Prompt Maturity Model</h4>
+  <div class="diagram">
+    <div class="diagram-title">Prompt Maturity Levels</div>
+<pre>  Level 1        Level 2        Level 3         Level 4          Level 5
+  DRAFT          TESTED         REFINED         PRODUCTION       MONITORED
+  ┌──────┐      ┌──────┐      ┌──────┐        ┌──────┐         ┌──────┐
+  │Ad-hoc│─────►│Has   │─────►│All   │───────►│Edge  │────────►│Live  │
+  │prompt│      │tests │      │tests │        │cases │         │perf  │
+  │no    │      │some  │      │pass  │        │pass  │         │tracked│
+  │tests │      │fail  │      │      │        │docs  │         │alerts│
+  └──────┘      └──────┘      └──────┘        └──────┘         └──────┘
+  ─────────────────────────────────────────────────────────────────────►
+  Maturity increases →
+</pre>
+  </div>
+
+  <!-- Tips & Tricks -->
+  <div class="callout callout-tip">
+    <div class="callout-title">💡 Tips &amp; Tricks — 16.5</div>
+    <p><strong>Mnemonic → "DSTIFV" (Discover → Specify → Test → Iterate → Fix → Validate)</strong> — the 6-step workflow in order.</p>
+    <p><strong>Time-box your iterations.</strong> Set a limit: "If I can't reach 90% test pass in 5 iterations, I'll reconsider my approach." Infinite refinement loops are a real trap.</p>
+    <p><strong>Start with the interview pattern for new tasks.</strong> Even if you think you know the requirements, Claude will almost always surface something you missed. The 5 minutes of interviewing saves 30 minutes of debugging.</p>
+    <p><strong>Reuse test suites across prompt versions.</strong> When you update a prompt for a new feature, your existing tests become your regression safety net.</p>
+    <p><strong>The 80/20 rule applies.</strong> The first 3 iterations typically fix 80% of issues. The remaining 20% often requires rethinking the approach, not just patching the prompt.</p>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="callout callout-exam">
+    <div class="callout-title">📝 Exam Strategy — Section 16.5</div>
+    <p><strong>Question Types:</strong> Process-ordering ("What is the correct sequence of steps?"), scenario-based ("A prompt passes 80% of tests but convergence has stalled. What should the engineer do?"), synthesis ("Which combination of patterns is most appropriate for this scenario?").</p>
+    <p><strong>Signal Words:</strong> "workflow", "end-to-end", "combine", "apply", "production-ready", "maturity".</p>
+    <p><strong>Strategy:</strong> Questions about 16.5 test your ability to orchestrate all patterns together. The correct answer will usually involve the correct ORDERING of techniques (interview before examples, examples before tests, tests before refinement). Eliminate answers that skip steps or reverse the order.</p>
+    <p><strong>Watch For:</strong> Distractors that suggest starting with coding/execution before discovery, or testing after deployment. The workflow is always: understand → specify → test → iterate → ship.</p>
+  </div>
+
+  <!-- Common Pitfalls -->
+  <div class="callout callout-pitfall">
+    <div class="callout-title">⚠️ Common Pitfalls — 16.5</div>
+    <ul>
+      <li><strong>Skipping the interview:</strong> Jumping straight to examples without discovering requirements leads to incomplete specifications.</li>
+      <li><strong>Writing tests after the prompt works:</strong> This creates tests that match the prompt's current behavior, not the desired behavior — it's a false safety net.</li>
+      <li><strong>Infinite refinement:</strong> If test pass rate stalls after 5+ iterations, the approach may be wrong. Step back and reconsider the task decomposition or model choice.</li>
+      <li><strong>Not versioning:</strong> Without a changelog, you can't revert when a "fix" makes things worse. Every prompt change should be a trackable version.</li>
+      <li><strong>Treating the prompt as final:</strong> Production prompts need monitoring. Real-world input distribution shifts over time — re-validate periodically.</li>
+    </ul>
+  </div>
+
+  <!-- Section Summary -->
+  <div class="summary-box">
+    <h4>📌 Section 16.5 Summary</h4>
+    <ul>
+      <li>The full workflow is <strong>Discover → Specify → Test → Iterate → Fix → Validate</strong> — in that order.</li>
+      <li>Each pattern feeds the next: interviews produce requirements, requirements become examples, examples become tests, tests drive refinement.</li>
+      <li>Track <strong>convergence</strong> (test pass rate over iterations); stalling signals the need to rethink, not patch.</li>
+      <li>A production-ready prompt includes: the prompt itself, a test suite, example pairs, and a changelog.</li>
+      <li>The <strong>Prompt Maturity Model</strong>: Draft → Tested → Refined → Production → Monitored.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CROSS-SECTION CONNECTIONS                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="cross-connections" id="cross">
+  <h2>🔗 Cross-Section Connections</h2>
+
+  <h3>Progressive Build Chain</h3>
+  <p>Chapter 16 follows a deliberate progression — each section builds on the one before it:</p>
+
+  <div class="connection-flow">
+    <span class="connection-node" style="background: var(--s3-bg); color: var(--s3);">16.3 Interview</span>
+    <span class="connection-arrow">→</span>
+    <span class="connection-node" style="background: var(--s1-bg); color: var(--s1);">16.1 Examples</span>
+    <span class="connection-arrow">→</span>
+    <span class="connection-node" style="background: var(--s2-bg); color: var(--s2);">16.2 Testing</span>
+    <span class="connection-arrow">→</span>
+    <span class="connection-node" style="background: var(--s4-bg); color: var(--s4);">16.4 Fix Strategy</span>
+    <span class="connection-arrow">→</span>
+    <span class="connection-node" style="background: var(--s5-bg); color: var(--s5);">16.5 Synthesis</span>
+  </div>
+
+  <h3>Key Interdependencies</h3>
+  <table>
+    <tbody><tr><th>From</th><th>To</th><th>Relationship</th></tr>
+    <tr>
+      <td><strong>16.3</strong> Interview</td>
+      <td><strong>16.1</strong> Examples</td>
+      <td>Interview answers become the <em>requirements</em> that examples must demonstrate. The interview surfaces what examples are needed.</td>
+    </tr>
+    <tr>
+      <td><strong>16.1</strong> Examples</td>
+      <td><strong>16.2</strong> Testing</td>
+      <td>Each example pair is a natural test case. The expected output in an example IS an assertion.</td>
+    </tr>
+    <tr>
+      <td><strong>16.2</strong> Testing</td>
+      <td><strong>16.4</strong> Fix Strategy</td>
+      <td>When tests fail, you need to fix. Fix strategy (16.4) determines HOW to apply corrections efficiently.</td>
+    </tr>
+    <tr>
+      <td><strong>16.4</strong> Fix Strategy</td>
+      <td><strong>16.2</strong> Testing</td>
+      <td>After applying a fix (batch or sequential), you re-run the test suite to check for regressions — a circular dependency.</td>
+    </tr>
+    <tr>
+      <td><strong>16.5</strong> Synthesis</td>
+      <td><strong>All</strong></td>
+      <td>16.5 is the orchestration layer that sequences all four patterns into a single workflow.</td>
+    </tr>
+  </tbody></table>
+
+  <h3>Foundational vs. Advanced Concepts</h3>
+  <table>
+    <tbody><tr><th>Level</th><th>Section</th><th>Why</th></tr>
+    <tr>
+      <td>🟢 <strong>Foundational</strong></td>
+      <td>16.1 (Examples), 16.3 (Interview)</td>
+      <td>These are individual techniques usable in isolation. Every prompt engineer needs these.</td>
+    </tr>
+    <tr>
+      <td>🟡 <strong>Intermediate</strong></td>
+      <td>16.2 (TDD), 16.4 (Fix Strategy)</td>
+      <td>These require a process discipline mindset. They're techniques for <em>systems</em> of prompts, not one-offs.</td>
+    </tr>
+    <tr>
+      <td>🔴 <strong>Advanced</strong></td>
+      <td>16.5 (Synthesis)</td>
+      <td>Requires orchestrating all patterns together — the Architect-level skill being assessed.</td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- MASTER SUMMARY TABLE                                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" id="master-table">
+  <h2>📊 Master Summary Table</h2>
+  <table>
+    <tbody><tr>
+      <th>Section</th>
+      <th>Core Concept</th>
+      <th>Key Technique</th>
+      <th>Exam Weight</th>
+    </tr>
+    <tr>
+      <td><span class="section-badge badge-s1" style="font-size:11px;">16.1</span></td>
+      <td>Specify transformations via concrete I/O examples</td>
+      <td>BVEN example selection (Base, Variation, Edge, Negative)</td>
+      <td><strong>High</strong></td>
+    </tr>
+    <tr>
+      <td><span class="section-badge badge-s2" style="font-size:11px;">16.2</span></td>
+      <td>Validate prompts with automated tests before and during refinement</td>
+      <td>Red-Green-Refine cycle; multi-granularity eval functions</td>
+      <td><strong>High</strong></td>
+    </tr>
+    <tr>
+      <td><span class="section-badge badge-s3" style="font-size:11px;">16.3</span></td>
+      <td>Front-load requirement discovery by having Claude ask questions</td>
+      <td>Interview pattern; bounded questions with default assumptions</td>
+      <td><strong>Medium</strong></td>
+    </tr>
+    <tr>
+      <td><span class="section-badge badge-s4" style="font-size:11px;">16.4</span></td>
+      <td>Choose fix granularity based on problem dependencies</td>
+      <td>Pair test for independence; SLCS fix hierarchy</td>
+      <td><strong>Medium</strong></td>
+    </tr>
+    <tr>
+      <td><span class="section-badge badge-s5" style="font-size:11px;">16.5</span></td>
+      <td>Orchestrate all patterns into an end-to-end workflow</td>
+      <td>DSTIFV workflow; Prompt Maturity Model</td>
+      <td><strong>High</strong></td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- QUICK-REFERENCE CHEAT SHEET                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="cheat-sheet" id="cheat">
+  <h2>⚡ Quick-Reference Cheat Sheet</h2>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Example Selection Formula</div>
+    <div class="cheat-value"><strong>BVEN</strong> — Base case + Variation + Edge case + Negative case = minimum viable example set (3–5 pairs)</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Prompt TDD Cycle</div>
+    <div class="cheat-value"><strong>RED → GREEN → REFINE</strong> — Fail → Fix prompt (one change) → Re-run full suite → Generalize if regression</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Interview Pattern Rule</div>
+    <div class="cheat-value"><strong>ASK before ACT</strong> — Always Surface Knowledge before Acting. Separate discovery phase from execution phase. Bound to 3–5 questions.</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Fix Strategy Decision</div>
+    <div class="cheat-value"><strong>Pair Test</strong> — "Does fixing A change B?" → Yes = sequential. No = batch. Fix order: <strong>SLCS</strong> (Structure → Logic → Content → Style)</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Full Workflow Sequence</div>
+    <div class="cheat-value"><strong>DSTIFV</strong> — Discover → Specify → Test → Iterate → Fix → Validate. Never skip or reorder steps.</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Prompt Maturity Model</div>
+    <div class="cheat-value">Draft → Tested → Refined → Production → Monitored. A prompt without tests is Level 1 (Draft).</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Eval Function Types (ranked by rigor)</div>
+    <div class="cheat-value">Exact Match → Structural (JSON/regex) → Contains/Excludes → LLM-Graded → Human Rubric</div>
+  </div>
+
+  <div class="cheat-item">
+    <div class="cheat-label">Golden Rules</div>
+    <div class="cheat-value">
+      ① Show, don't tell (examples &gt; descriptions)<br>
+      ② Test before you refine (write tests first)<br>
+      ③ One change per iteration (isolate variables)<br>
+      ④ Structure before style (fix hierarchy)<br>
+      ⑤ Define "done" before you start
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- FOOTER                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="footer">
+  <p><strong>Chapter 16 — Iterative Refinement Patterns</strong> · Claude Certified Architect Study Notes v1.0</p>
+  <p>Prepared: September 2026 · All content reflects documented Claude API behaviors and prompt engineering best practices.</p>
+  <p style="color:#94A3B8; margin-top:8px;">Disclaimer: These notes are study aids. Exam weights are estimated based on topic depth and practical importance. Always verify against the official exam guide.</p>
+</div>
+
+</div><!-- end container -->
+
+
+</body></html>

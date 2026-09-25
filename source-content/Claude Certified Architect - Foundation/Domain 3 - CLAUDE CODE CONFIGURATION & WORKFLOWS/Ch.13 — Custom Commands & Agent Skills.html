@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 13 — Custom Commands &amp; Agent Skills | Claude Certified Architect Study Notes</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --bg-card: #181b23;
+    --bg-card-alt: #1e2230;
+    --bg-code: #12141c;
+    --bg-highlight: #1a2332;
+    --bg-sidebar: #0c0e14;
+    --text: #e1e4ea;
+    --text-secondary: #9ba3b5;
+    --text-muted: #6b7280;
+    --text-heading: #f4f5f8;
+    --accent: #6c8cff;
+    --accent-dim: rgba(108,140,255,0.12);
+    --accent-bright: #8aa5ff;
+    --green: #4ade80;
+    --green-bg: rgba(74,222,128,0.08);
+    --green-text: #86efac;
+    --red: #f87171;
+    --red-bg: rgba(248,113,113,0.08);
+    --red-text: #fca5a5;
+    --yellow: #fbbf24;
+    --yellow-bg: rgba(251,191,36,0.08);
+    --yellow-text: #fde68a;
+    --blue: #60a5fa;
+    --blue-bg: rgba(96,165,250,0.08);
+    --purple: #a78bfa;
+    --purple-bg: rgba(167,139,250,0.08);
+    --orange: #fb923c;
+    --orange-bg: rgba(251,146,60,0.08);
+    --border: #2a2e3a;
+    --border-light: #23272f;
+    --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 15px; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.7;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* === SIDEBAR NAV === */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 24px 16px;
+    z-index: 100;
+  }
+  .sidebar-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  .sidebar a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    line-height: 1.5;
+    transition: all 0.15s;
+  }
+  .sidebar a:hover {
+    background: var(--accent-dim);
+    color: var(--accent-bright);
+  }
+  .sidebar a.section-link {
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 12px;
+  }
+  .sidebar a.sub-link { padding-left: 24px; font-size: 12.5px; }
+
+  /* === MAIN CONTENT === */
+  .main {
+    margin-left: 280px;
+    max-width: 920px;
+    padding: 40px 48px 80px;
+    width: 100%;
+  }
+
+  /* === HEADER === */
+  .hero {
+    background: linear-gradient(135deg, rgba(108,140,255,0.08) 0%, rgba(167,139,250,0.06) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    margin-bottom: 40px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    color: var(--text-heading);
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .hero p { color: var(--text-secondary); font-size: 15px; }
+
+  /* === HEADINGS === */
+  h2 {
+    font-size: 22px;
+    color: var(--text-heading);
+    font-weight: 700;
+    margin: 48px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+  h3 {
+    font-size: 17px;
+    color: var(--accent-bright);
+    font-weight: 600;
+    margin: 32px 0 12px;
+    scroll-margin-top: 24px;
+  }
+  h4 {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 24px 0 10px;
+  }
+
+  /* === TEXT === */
+  p { margin-bottom: 14px; }
+  strong { color: var(--text-heading); }
+  em { color: var(--text-secondary); font-style: italic; }
+
+  ul, ol { margin: 0 0 16px 24px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: var(--text-muted); }
+
+  /* === CALLOUT BOXES === */
+  .callout {
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.65;
+    border-left: 3px solid;
+  }
+  .callout-icon { font-size: 16px; margin-right: 8px; }
+  .callout-title { font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .callout.trap { background: var(--red-bg); border-color: var(--red); }
+  .callout.trap .callout-title { color: var(--red-text); }
+  .callout.tip { background: var(--green-bg); border-color: var(--green); }
+  .callout.tip .callout-title { color: var(--green-text); }
+  .callout.pin { background: var(--blue-bg); border-color: var(--blue); }
+  .callout.pin .callout-title { color: var(--blue); }
+  .callout.xref { background: var(--purple-bg); border-color: var(--purple); }
+  .callout.xref .callout-title { color: var(--purple); }
+  .callout.note { background: var(--yellow-bg); border-color: var(--yellow); }
+  .callout.note .callout-title { color: var(--yellow-text); }
+
+  /* === CODE === */
+  code {
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--bg-code);
+    color: var(--accent-bright);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+  }
+  pre {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    overflow-x: auto;
+    margin: 16px 0;
+    line-height: 1.6;
+  }
+  pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: var(--text);
+    font-size: 13px;
+  }
+  .comment { color: var(--text-muted); }
+  .keyword { color: var(--purple); }
+  .string { color: var(--green); }
+  .field { color: var(--yellow); }
+  .value { color: var(--blue); }
+
+  /* === TABLES === */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13.5px;
+  }
+  th {
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--border);
+    background: var(--bg-card-alt);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:hover td { background: rgba(108,140,255,0.03); }
+
+  /* === DIRECTORY TREE === */
+  .tree {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 16px 0;
+    color: var(--text-secondary);
+  }
+  .tree .folder { color: var(--accent); font-weight: 600; }
+  .tree .file { color: var(--text); }
+  .tree .note { color: var(--text-muted); font-style: italic; }
+
+  /* === EXAM QUESTIONS === */
+  .exam-q {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .exam-q-num {
+    display: inline-block;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  .exam-q-text { font-weight: 600; color: var(--text-heading); margin-bottom: 10px; }
+  .exam-option { padding: 4px 0; color: var(--text-secondary); }
+  .exam-option.correct { color: var(--green); font-weight: 600; }
+  .exam-rationale {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .exam-rationale strong { color: var(--green); }
+
+  /* === COLLAPSIBLE === */
+  details {
+    margin: 16px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  details > summary {
+    background: var(--bg-card);
+    padding: 14px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-heading);
+    font-size: 14px;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  details > summary::before {
+    content: '▸';
+    transition: transform 0.15s;
+    color: var(--accent);
+    font-size: 12px;
+  }
+  details[open] > summary::before { transform: rotate(90deg); }
+  details > summary::-webkit-details-marker { display: none; }
+  details .detail-content { padding: 20px 24px; }
+
+  /* === MNEMONIC === */
+  .mnemonic {
+    background: linear-gradient(135deg, var(--purple-bg), var(--accent-dim));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .mnemonic-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple); font-weight: 700; margin-bottom: 6px; }
+  .mnemonic-text { font-size: 20px; font-weight: 800; color: var(--text-heading); letter-spacing: 0.02em; }
+  .mnemonic-decode { font-size: 13px; color: var(--text-secondary); margin-top: 6px; }
+
+  /* === COMPARISON GRID === */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .compare-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .compare-card h4 { margin-top: 0; color: var(--accent); text-transform: none; letter-spacing: normal; font-size: 15px; }
+
+  /* === CHEAT SHEET === */
+  .cheat-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 13.5px;
+  }
+  .cheat-key { font-family: var(--mono); color: var(--accent); font-weight: 600; font-size: 13px; }
+  .cheat-val { color: var(--text-secondary); }
+
+  /* === SVG DIAGRAM === */
+  .diagram-container { margin: 20px 0; text-align: center; overflow-x: auto; }
+  .diagram-container svg { max-width: 100%; height: auto; }
+
+  /* === INLINE BADGE === */
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    vertical-align: middle;
+  }
+  .badge-project { background: var(--green-bg); color: var(--green); }
+  .badge-user { background: var(--blue-bg); color: var(--blue); }
+  .badge-required { background: var(--red-bg); color: var(--red); }
+  .badge-optional { background: var(--yellow-bg); color: var(--yellow); }
+
+  /* === COT ANNOTATION === */
+  .cot {
+    background: var(--bg-highlight);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic;
+  }
+  .cot::before { content: '🧠 Think: '; font-style: normal; font-weight: 700; color: var(--accent); }
+
+  @media (max-width: 1024px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 24px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- SIDEBAR NAVIGATION                                           -->
+<!-- ============================================================ -->
+<nav class="sidebar">
+  <div class="sidebar-title">Chapter 13 — Navigation</div>
+  <a href="#s13-1" class="section-link">13.1 Custom Slash Commands</a>
+  <a href="#s13-1-overview" class="sub-link">Concept Overview</a>
+  <a href="#s13-1-how" class="sub-link">How It Works</a>
+  <a href="#s13-1-exam" class="sub-link">Exam Strategy</a>
+
+  <a href="#s13-2" class="section-link">13.2 Project vs User Scoped</a>
+  <a href="#s13-2-overview" class="sub-link">Concept Overview</a>
+  <a href="#s13-2-table" class="sub-link">Comparison Table</a>
+  <a href="#s13-2-exam" class="sub-link">Exam Strategy</a>
+
+  <a href="#s13-3" class="section-link">13.3 Agent Skills &amp; SKILL.md</a>
+  <a href="#s13-3-overview" class="sub-link">Concept Overview</a>
+  <a href="#s13-3-frontmatter" class="sub-link">Frontmatter Reference</a>
+  <a href="#s13-3-exam" class="sub-link">Exam Strategy</a>
+
+  <a href="#s13-4" class="section-link">13.4 Key Frontmatter Options</a>
+  <a href="#s13-4-fork" class="sub-link">context: fork</a>
+  <a href="#s13-4-tools" class="sub-link">allowed-tools</a>
+  <a href="#s13-4-hint" class="sub-link">argument-hint</a>
+  <a href="#s13-4-exam" class="sub-link">Exam Strategy</a>
+
+  <a href="#s13-5" class="section-link">13.5 /memory &amp; /compact</a>
+  <a href="#s13-5-memory" class="sub-link">/memory Deep Dive</a>
+  <a href="#s13-5-compact" class="sub-link">/compact Deep Dive</a>
+  <a href="#s13-5-exam" class="sub-link">Exam Strategy</a>
+
+  <a href="#s13-6" class="section-link">13.6 Hands-On Lab</a>
+  <a href="#s13-6-cmd" class="sub-link">Build a Custom Command</a>
+  <a href="#s13-6-skill" class="sub-link">Build an Agent Skill</a>
+  <a href="#s13-6-session" class="sub-link">Session Management</a>
+
+  <a href="#cheat" class="section-link">📋 Cheat Sheet</a>
+  <a href="#concept-map" class="section-link">🗺️ Concept Map</a>
+  <a href="#top10" class="section-link">🎯 Top 10 Exam Questions</a>
+</nav>
+
+<!-- ============================================================ -->
+<!-- MAIN CONTENT                                                  -->
+<!-- ============================================================ -->
+<div class="main">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Chapter 13: Custom Commands &amp; Agent Skills</h1>
+  <p>Comprehensive exam-ready study notes covering custom slash commands, scoping, SKILL.md frontmatter, key options, built-in commands, and hands-on lab exercises.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- 13.1 — CREATING CUSTOM SLASH COMMANDS                        -->
+<!-- ============================================================ -->
+<h2 id="s13-1">13.1 — Creating Custom Slash Commands</h2>
+
+<h3 id="s13-1-overview">Concept Overview</h3>
+<p>
+  Custom slash commands are the simplest extensibility mechanism in Claude Code. A slash command is a <strong>Markdown file</strong> placed in a recognized <code>commands/</code> directory; its filename (minus the <code>.md</code> extension) becomes the <code>/command-name</code> you type at the Claude Code prompt. When invoked, Claude receives the file's contents as if you had typed the prompt yourself, enabling you to package repeatable workflows into a single keystroke.
+</p>
+<p>
+  As of mid-2026, custom commands have been <strong>merged with skills</strong>. A file at <code>.claude/commands/fix-issue.md</code> and a skill at <code>.claude/skills/fix-issue/SKILL.md</code> both create <code>/fix-issue</code> and behave the same way. The <code>commands/</code> path is the lightweight, single-file shorthand; skills are the full-featured version. Both are valid, and existing commands continue to work.
+</p>
+
+<h4>Key Definitions</h4>
+<ul>
+  <li><strong>Slash command</strong> — A shortcut typed with a <code>/</code> prefix in Claude Code, executing either a built-in action or user-defined instructions from a Markdown file.</li>
+  <li><strong>Built-in command</strong> — A command that ships with Claude Code (e.g., <code>/help</code>, <code>/clear</code>) running fixed internal logic.</li>
+  <li><strong>Bundled skill</strong> — A command that ships with Claude Code but runs by handing Claude a skill's instructions (e.g., <code>/code-review</code>, <code>/design</code>).</li>
+  <li><strong>Custom command</strong> — A user-authored Markdown file in <code>.claude/commands/</code> (project) or <code>~/.claude/commands/</code> (user) that becomes a <code>/name</code> command.</li>
+  <li><strong><code>$ARGUMENTS</code></strong> — A placeholder replaced by all text the user types after the command name.</li>
+  <li><strong><code>$0</code>, <code>$1</code>, <code>$N</code></strong> — Zero-indexed positional argument placeholders. Quoting groups words into a single argument.</li>
+  <li><strong><code>!`command`</code></strong> — Inline shell execution syntax. The command runs <em>before</em> Claude sees the prompt; output is substituted in place.</li>
+</ul>
+
+<h3 id="s13-1-how">How It Works</h3>
+<ol>
+  <li><strong>Author</strong> — Create a <code>.md</code> file in a <code>commands/</code> directory. Add optional YAML frontmatter (<code>description</code>, <code>argument-hint</code>, <code>allowed-tools</code>, etc.) between <code>---</code> delimiters.</li>
+  <li><strong>Discover</strong> — When you type <code>/</code> in Claude Code, the autocomplete menu shows all available commands (built-in + custom). The <code>description</code> from frontmatter is displayed beside each entry.</li>
+  <li><strong>Invoke</strong> — Type <code>/command-name &lt;args&gt;</code> and press Enter.</li>
+  <li><strong>Expand</strong> — Claude Code replaces <code>$ARGUMENTS</code> with the full input string, <code>$0</code>/<code>$1</code>/etc. with positional args, and <code>!`...`</code> with shell output.</li>
+  <li><strong>Execute</strong> — The rendered Markdown is passed to Claude as a prompt. Claude follows the instructions using the tools available in the session.</li>
+  <li><strong>Persist</strong> — The rendered content remains in the conversation for the rest of the session. Re-invoking an identical command adds a short "already loaded" note rather than a duplicate.</li>
+</ol>
+
+<div class="tree">
+<span class="folder">my-project/</span>
+├── <span class="folder">.claude/</span>
+│   ├── <span class="folder">commands/</span>                   <span class="note">← custom commands (legacy path, still works)</span>
+│   │   ├── <span class="file">deploy-check.md</span>          <span class="note">→ /deploy-check</span>
+│   │   ├── <span class="file">commit.md</span>                <span class="note">→ /commit</span>
+│   │   └── <span class="folder">frontend/</span>              <span class="note">← namespace folder (label only)</span>
+│   │       └── <span class="file">component.md</span>         <span class="note">→ /component (namespace: frontend)</span>
+│   └── <span class="folder">skills/</span>                    <span class="note">← skills (recommended path)</span>
+│       └── <span class="folder">security-review/</span>       <span class="note">→ /security-review</span>
+│           ├── <span class="file">SKILL.md</span>             <span class="note">← must be exactly SKILL.md (case-sensitive)</span>
+│           └── <span class="folder">reference/</span>         <span class="note">← supporting files loaded on demand</span>
+│               └── <span class="file">owasp-top-10.md</span>
+│
+├── <span class="file">CLAUDE.md</span>                        <span class="note">← project memory (always loaded)</span>
+└── <span class="file">src/...</span>
+</div>
+
+<h4>Argument Expansion Rules</h4>
+<table>
+  <thead>
+    <tr><th>Placeholder</th><th>Behavior</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>$ARGUMENTS</code></td><td>Entire input string after the command name</td><td><code>/fix 123 high</code> → <code>$ARGUMENTS</code> = <code>123 high</code></td></tr>
+    <tr><td><code>$0</code>, <code>$1</code>, <code>$N</code></td><td>Zero-indexed positional args; quotes group words</td><td><code>/migrate "search bar" React</code> → <code>$0</code> = <code>search bar</code>, <code>$1</code> = <code>React</code></td></tr>
+    <tr><td><code>$ARGUMENTS[N]</code></td><td>Long form of <code>$N</code></td><td>Same as above</td></tr>
+    <tr><td>Named args (frontmatter)</td><td>Declared via <code>arguments:</code> field; map to positions by order; expand to empty string if missing</td><td><code>arguments: [file, format]</code> → <code>$file</code> = first arg</td></tr>
+    <tr><td>Missing <code>$N</code></td><td>Stays literal in the text (not expanded)</td><td>If 1 arg passed, <code>$2</code> remains as <code>$2</code></td></tr>
+    <tr><td>No placeholder at all</td><td>Args appended as <code>ARGUMENTS: &lt;input&gt;</code></td><td>Input is never silently dropped</td></tr>
+    <tr><td><code>!`git diff HEAD`</code></td><td>Shell executes before Claude sees prompt; output replaces the block</td><td>Claude receives actual diff content</td></tr>
+  </tbody>
+</table>
+
+<div class="callout pin">
+  <div class="callout-title">📌 Must-Memorize</div>
+  <code>$0</code> is the <strong>first</strong> argument (zero-based), not the command name. This is different from shell scripting where <code>$0</code> is the program name. Missing indexed placeholders (<code>$2</code> with only 1 arg) stay literal. Missing named placeholders expand to empty string.
+</div>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Pro Tip</div>
+  <code>!`command`</code> is a single-pass substitution. The output cannot emit another <code>!`…`</code> for re-expansion. Use it to ground prompts in real data (e.g., <code>!`git diff HEAD`</code>, <code>!`cat package.json`</code>) — Claude receives the actual content instead of an instruction to go fetch it, saving one tool round-trip.
+</div>
+
+<h4>Common Pitfalls</h4>
+<ul>
+  <li><strong>Escaping dollar signs:</strong> If you need a literal <code>$1.00</code> in your command text, write <code>\$1.00</code> — otherwise it's interpreted as positional arg <code>$1</code> followed by <code>.00</code>.</li>
+  <li><strong>Name collisions:</strong> If a project skill and a <code>commands/</code> file share the same name, the <strong>skill takes precedence</strong>. A project skill named like a bundled one (e.g., <code>code-review</code>) <strong>replaces</strong> the bundled skill.</li>
+  <li><strong>Persistence:</strong> Once invoked, the rendered content stays in context for the entire session. Write instructions as <strong>standing rules</strong> ("always run tests after editing"), not one-time steps — Claude does not re-read the file on later turns.</li>
+</ul>
+
+<h3 id="s13-1-exam">Exam Strategy — 13.1</h3>
+<div class="callout trap">
+  <div class="callout-title">⚠️ Exam Trap</div>
+  Questions may test whether <code>$0</code> is zero-indexed or one-indexed. Remember: <strong>zero-indexed</strong>. The entire string is <code>$ARGUMENTS</code>; the first word is <code>$0</code>.
+</div>
+
+<p><strong>How questions are typically framed:</strong></p>
+<ul>
+  <li>"Where should you place a Markdown file to create a custom command available to the team?" → <code>.claude/commands/</code></li>
+  <li>"What happens if a user passes arguments but the command file contains no <code>$ARGUMENTS</code> placeholder?" → Arguments are appended as <code>ARGUMENTS: &lt;input&gt;</code></li>
+  <li>Scenario questions about <code>!`command`</code> syntax and when shell expansion occurs (answer: <em>before</em> Claude sees the prompt)</li>
+</ul>
+
+<details>
+  <summary>Sample Question — 13.1</summary>
+  <div class="detail-content">
+    <div class="exam-q">
+      <div class="exam-q-num">Q — Scenario</div>
+      <div class="exam-q-text">A developer creates <code>.claude/commands/migrate.md</code> with the content: <code>Migrate $0 from $1 to $2</code>. They invoke <code>/migrate "user table" MySQL Postgres</code>. What does Claude receive?</div>
+      <div class="exam-option">A) Migrate $0 from MySQL to Postgres</div>
+      <div class="exam-option correct">B) Migrate user table from MySQL to Postgres ✓</div>
+      <div class="exam-option">C) Migrate "user table" from MySQL to Postgres</div>
+      <div class="exam-option">D) Migrate user from table to MySQL</div>
+      <div class="exam-rationale"><strong>Rationale:</strong> Quoted strings are treated as a single argument. <code>$0</code> = "user table" (quotes stripped), <code>$1</code> = MySQL, <code>$2</code> = Postgres. The quotes group the words but are not preserved in the expansion.</div>
+    </div>
+  </div>
+</details>
+
+
+<!-- ============================================================ -->
+<!-- 13.2 — PROJECT-SCOPED vs USER-SCOPED                         -->
+<!-- ============================================================ -->
+<h2 id="s13-2">13.2 — Project-Scoped vs User-Scoped Commands</h2>
+
+<h3 id="s13-2-overview">Concept Overview</h3>
+<p>
+  Claude Code supports two distinct scopes for commands and skills, determined entirely by <strong>filesystem location</strong>. Project-scoped items live inside the repository's <code>.claude/</code> directory and are shared with anyone who clones the repo. User-scoped items live in the home directory (<code>~/.claude/</code>) and follow you across every project on your machine but are never shared with teammates.
+</p>
+<p>
+  This scoping mechanism is fundamental to understanding how teams standardize workflows (project-scoped) while individuals retain personal productivity shortcuts (user-scoped). The exam tests this distinction heavily — especially the implications for version control, visibility, and precedence.
+</p>
+
+<h4>Key Definitions</h4>
+<ul>
+  <li><strong>Project-scoped</strong> — Stored in the repo at <code>.claude/commands/</code> or <code>.claude/skills/</code>. Committed to version control. Available to all collaborators working in that repo.</li>
+  <li><strong>User-scoped</strong> — Stored in <code>~/.claude/commands/</code> or <code>~/.claude/skills/</code>. Local to the machine and user. Not version-controlled. Available across all projects.</li>
+</ul>
+
+<h3 id="s13-2-table">Comparison Table</h3>
+<table>
+  <thead>
+    <tr><th>Feature</th><th><span class="badge badge-project">Project-Scoped</span></th><th><span class="badge badge-user">User-Scoped</span></th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Commands Path</strong></td><td><code>.claude/commands/</code></td><td><code>~/.claude/commands/</code></td></tr>
+    <tr><td><strong>Skills Path</strong></td><td><code>.claude/skills/&lt;name&gt;/SKILL.md</code></td><td><code>~/.claude/skills/&lt;name&gt;/SKILL.md</code></td></tr>
+    <tr><td><strong>Availability</strong></td><td>Only in that specific project repo</td><td>All projects on the user's machine</td></tr>
+    <tr><td><strong>Who sees it</strong></td><td>All repo collaborators</td><td>Only the individual user</td></tr>
+    <tr><td><strong>Version Controlled</strong></td><td>✅ Yes — committed to Git</td><td>❌ No — local to <code>~/</code></td></tr>
+    <tr><td><strong>Best For</strong></td><td>Team-shared workflows, project-specific conventions, CI/CD integration</td><td>Personal productivity shortcuts, cross-project utilities</td></tr>
+    <tr><td><strong>Precedence on name conflict</strong></td><td>User-scoped wins over project-scoped when names collide</td><td>User-scoped wins over project-scoped when names collide</td></tr>
+    <tr><td><strong>Example Use Cases</strong></td><td>PR checklists, deploy scripts, debug pipelines</td><td>Personal commit formatter, private logging shortcuts</td></tr>
+  </tbody>
+</table>
+
+<div class="cot">Ask yourself: "Should this workflow survive across repos, or does it belong to this specific codebase?" → If it belongs to the codebase, it's project-scoped. If it follows the developer, it's user-scoped.</div>
+
+<h4>How It Works</h4>
+<ol>
+  <li><strong>Discovery:</strong> On session start, Claude Code scans both <code>.claude/</code> (project) and <code>~/.claude/</code> (user) for <code>commands/</code> and <code>skills/</code> directories.</li>
+  <li><strong>Registration:</strong> Each <code>.md</code> file or skill folder is registered as a slash command. The autocomplete menu merges all sources.</li>
+  <li><strong>Precedence:</strong> When a user-scoped and project-scoped command share the same name, the <strong>user-scoped command takes precedence</strong>.</li>
+  <li><strong>Namespacing:</strong> Subdirectories within <code>commands/</code> create namespace labels in the menu (e.g., <code>commands/frontend/component.md</code> → <code>/component</code> with "frontend" label) but do <strong>not</strong> change the command name.</li>
+</ol>
+
+<div class="callout trap">
+  <div class="callout-title">⚠️ Exam Trap — Scope Confusion</div>
+  "Global" does <strong>NOT</strong> mean project-scoped. A common wrong answer conflates "available everywhere" (user-scoped, <code>~/</code>) with "shared across the team" (project-scoped, <code>.claude/</code>). User-scoped = global for one person. Project-scoped = shared for one repo.
+</div>
+
+<div class="callout xref">
+  <div class="callout-title">🔗 Cross-Reference</div>
+  This scoping pattern mirrors <strong>CLAUDE.md files</strong>: project-level <code>CLAUDE.md</code> is in the repo root (shared), while <code>~/.claude/CLAUDE.md</code> is user-level (personal). The same principle applies. See §13.5 for more on <code>/memory</code> and <code>CLAUDE.md</code>.
+</div>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Pro Tip</div>
+  Subdirectories in <code>commands/</code> are for organization only — they appear as <strong>namespace labels</strong> in autocomplete but don't change the actual command name. <code>.claude/commands/frontend/component.md</code> is still invoked as <code>/component</code>, not <code>/frontend/component</code>.
+</div>
+
+<h4>Common Pitfalls</h4>
+<ul>
+  <li><strong>Precedence surprise:</strong> A personal user-scoped command will silently override a team project-scoped command with the same name. If a team workflow seems broken for one developer, check for a naming collision in <code>~/.claude/commands/</code>.</li>
+  <li><strong>Skills vs. commands path for user-scope:</strong> For user-scoped skills, the recommended modern path is <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>. The <code>~/.claude/commands/</code> path still works for simple single-file commands.</li>
+  <li><strong>Version control assumption:</strong> Project-scoped commands in <code>.claude/commands/</code> are version-controlled <em>only if</em> the <code>.claude/</code> directory is committed to Git. Check <code>.gitignore</code>.</li>
+</ul>
+
+<h3 id="s13-2-exam">Exam Strategy — 13.2</h3>
+<p><strong>Keywords to watch for:</strong> "team-wide," "shared," "version-controlled," "personal," "cross-project," "override," "precedence."</p>
+<p><strong>Elimination technique:</strong> If an answer says a project-scoped command is "available across all projects" — eliminate it. If it says user-scoped is "committed to Git" — eliminate it. These properties are mutually exclusive.</p>
+
+<div class="mnemonic">
+  <div class="mnemonic-label">Mnemonic</div>
+  <div class="mnemonic-text">P.R.O.J. — Project Repo Only, Jointly-shared</div>
+  <div class="mnemonic-decode">Project-scoped lives in the Repo, is shared with the team (Jointly). User-scoped lives in <code>~/</code>, is personal.</div>
+</div>
+
+<details>
+  <summary>Sample Question — 13.2</summary>
+  <div class="detail-content">
+    <div class="exam-q">
+      <div class="exam-q-num">Q — MCQ</div>
+      <div class="exam-q-text">A developer has <code>.claude/commands/lint.md</code> in the project repo and <code>~/.claude/commands/lint.md</code> on their machine. They type <code>/lint</code>. Which command executes?</div>
+      <div class="exam-option">A) The project-scoped command in <code>.claude/commands/</code></div>
+      <div class="exam-option correct">B) The user-scoped command in <code>~/.claude/commands/</code> ✓</div>
+      <div class="exam-option">C) Both are merged and sent to Claude together</div>
+      <div class="exam-option">D) Claude Code throws a name collision error</div>
+      <div class="exam-rationale"><strong>Rationale:</strong> When both scopes define the same command name, the user-scoped command takes precedence. No error is thrown — the project-scoped version is silently overridden.</div>
+    </div>
+  </div>
+</details>
+
+
+<!-- ============================================================ -->
+<!-- 13.3 — AGENT SKILLS WITH SKILL.md                            -->
+<!-- ============================================================ -->
+<h2 id="s13-3">13.3 — Agent Skills with <code>SKILL.md</code> Frontmatter</h2>
+
+<h3 id="s13-3-overview">Concept Overview</h3>
+<p>
+  An <strong>Agent Skill</strong> is the full-featured evolution of a custom command. While a command is a single Markdown file, a skill is a <strong>directory</strong> containing a <code>SKILL.md</code> file (case-sensitive!) plus optional supporting files (templates, scripts, reference docs). Skills can be invoked manually via <code>/skill-name</code>, or Claude can load them <strong>automatically</strong> when the conversation matches the skill's <code>description</code> field — something commands cannot do.
+</p>
+<p>
+  Skills use YAML frontmatter to configure behavior: what tools are allowed, whether to run in an isolated subagent, who can invoke it (user, model, or both), and more. The body of <code>SKILL.md</code> contains the instructions Claude follows, written as Markdown. Once loaded, the skill's content persists in the conversation like standing orders — it is not re-read on subsequent turns.
+</p>
+
+<h4>Key Definitions</h4>
+<ul>
+  <li><strong>SKILL.md</strong> — The mandatory entry file for a skill. Must be named <em>exactly</em> <code>SKILL.md</code> (case-sensitive). <code>skill.md</code>, <code>Skill.md</code>, or <code>Skills.md</code> will be silently ignored.</li>
+  <li><strong>Frontmatter</strong> — YAML metadata block between <code>---</code> delimiters at the top of <code>SKILL.md</code>. Processed at the system level; never shown to Claude directly.</li>
+  <li><strong>Auto-discovery</strong> — Claude reads all skill <code>description</code> fields and automatically loads a skill when the conversation matches. This is the key difference from basic commands.</li>
+  <li><strong>Skill listing budget</strong> — The combined descriptions of all skills count toward a ~1,536-character cap in the skill listing Claude sees. Exceeding this means descriptions get truncated.</li>
+  <li><strong>Supporting files</strong> — Additional files (reference docs, templates, scripts) stored alongside <code>SKILL.md</code>. Referenced from instructions and loaded on demand.</li>
+</ul>
+
+<h4>How It Works</h4>
+<ol>
+  <li><strong>Create:</strong> Make a kebab-case directory under <code>.claude/skills/</code> (project) or <code>~/.claude/skills/</code> (user). Place a <code>SKILL.md</code> file inside.</li>
+  <li><strong>Describe:</strong> Write a clear <code>description</code> in frontmatter. This is what Claude reads to decide when to auto-load the skill. Format: <em>What it does + When to use it + Key capabilities</em>.</li>
+  <li><strong>Configure:</strong> Set frontmatter options: <code>allowed-tools</code>, <code>context</code>, <code>model</code>, invocation control flags, etc.</li>
+  <li><strong>Instruct:</strong> Write the body below the closing <code>---</code>. These are Claude's instructions when the skill activates.</li>
+  <li><strong>Activate:</strong> User types <code>/skill-name</code>, <strong>or</strong> Claude auto-discovers it based on the <code>description</code> matching the task context.</li>
+  <li><strong>Execute:</strong> Claude follows the instructions, using the configured tools. Content persists in conversation context.</li>
+</ol>
+
+<div class="compare-grid">
+  <div class="compare-card">
+    <h4>📁 Command (Legacy)</h4>
+    <ul>
+      <li>Single <code>.md</code> file</li>
+      <li>Manual invoke only (<code>/name</code>)</li>
+      <li>No supporting files</li>
+      <li>No auto-discovery</li>
+      <li>Quick personal shortcuts</li>
+    </ul>
+  </div>
+  <div class="compare-card">
+    <h4>🧠 Skill (Modern)</h4>
+    <ul>
+      <li>Directory with <code>SKILL.md</code></li>
+      <li>Manual <strong>and/or</strong> auto-discovery</li>
+      <li>Supporting files (reference docs, scripts)</li>
+      <li>Invocation control (user-only, model-only, both)</li>
+      <li>Subagent isolation (<code>context: fork</code>)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout pin">
+  <div class="callout-title">📌 Must-Memorize — Naming Rules</div>
+  <ul>
+    <li>Directory name must be <strong>kebab-case</strong>: <code>security-review</code> ✅ / <code>SecurityReview</code> ❌ / <code>security_review</code> ❌</li>
+    <li>File must be named exactly <code>SKILL.md</code> (all caps + .md)</li>
+    <li>Name cannot contain "anthropic" or "claude"</li>
+    <li>Description cannot contain angle brackets or XML tags</li>
+    <li>Description has a <strong>1,536-character cap</strong> (shared across all skills in the listing)</li>
+  </ul>
+</div>
+
+<h3 id="s13-3-frontmatter">Frontmatter Reference</h3>
+<table>
+  <thead>
+    <tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>name</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Display name and /slash-command identifier. Defaults to directory name.</td></tr>
+    <tr><td><code>description</code></td><td>string</td><td><span class="badge badge-required">Recommended</span></td><td>What the skill does. Used by Claude for auto-discovery. <strong>Most important field.</strong></td></tr>
+    <tr><td><code>when_to_use</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Additional trigger context. Appended to description. Counts toward 1,536-char cap.</td></tr>
+    <tr><td><code>argument-hint</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Autocomplete hint (e.g., <code>[issue-number]</code>, <code>[filename]</code>).</td></tr>
+    <tr><td><code>arguments</code></td><td>string/list</td><td><span class="badge badge-optional">No</span></td><td>Named positional arguments for <code>$name</code> substitution.</td></tr>
+    <tr><td><code>allowed-tools</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Tools pre-approved without permission prompts. <strong>One-turn grant only.</strong></td></tr>
+    <tr><td><code>disallowed-tools</code></td><td>string/list</td><td><span class="badge badge-optional">No</span></td><td>Tools removed from Claude's pool while skill is active.</td></tr>
+    <tr><td><code>disable-model-invocation</code></td><td>boolean</td><td><span class="badge badge-optional">No</span></td><td><code>true</code> = only user can invoke (manual <code>/name</code> only).</td></tr>
+    <tr><td><code>user-invocable</code></td><td>boolean</td><td><span class="badge badge-optional">No</span></td><td><code>false</code> = hidden from <code>/</code> menu; Claude-only background knowledge.</td></tr>
+    <tr><td><code>model</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Override model for this skill (e.g., <code>haiku</code>, <code>sonnet</code>, <code>opus</code>).</td></tr>
+    <tr><td><code>effort</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Override effort level: <code>low</code>, <code>medium</code>, <code>high</code>, <code>xhigh</code>, <code>max</code>.</td></tr>
+    <tr><td><code>context</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td><code>fork</code> = run in isolated subagent. See §13.4.</td></tr>
+    <tr><td><code>agent</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Subagent type when <code>context: fork</code> is set (default: general-purpose).</td></tr>
+    <tr><td><code>background</code></td><td>boolean</td><td><span class="badge badge-optional">No</span></td><td>With <code>context: fork</code>: <code>false</code> = wait for subagent result (default: <code>true</code>).</td></tr>
+    <tr><td><code>hooks</code></td><td>object</td><td><span class="badge badge-optional">No</span></td><td>Lifecycle hooks scoped to this skill.</td></tr>
+    <tr><td><code>paths</code></td><td>string/list</td><td><span class="badge badge-optional">No</span></td><td>Glob patterns limiting auto-activation to matching files.</td></tr>
+    <tr><td><code>shell</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Shell for <code>!`command`</code> blocks: <code>bash</code> (default) or <code>powershell</code>.</td></tr>
+    <tr><td><code>metadata</code></td><td>YAML map</td><td><span class="badge badge-optional">No</span></td><td>Free-form key-value data for your tooling. Claude Code ignores contents.</td></tr>
+    <tr><td><code>license</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>License covering the skill (Agent Skills spec).</td></tr>
+    <tr><td><code>compatibility</code></td><td>string</td><td><span class="badge badge-optional">No</span></td><td>Environment requirements (max 500 chars).</td></tr>
+  </tbody>
+</table>
+
+<h4>Invocation Control Matrix</h4>
+<table>
+  <thead>
+    <tr><th>Configuration</th><th>User Can Invoke?</th><th>Claude Can Invoke?</th><th>Use Case</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><em>(defaults — both omitted)</em></td><td>✅ Yes</td><td>✅ Yes</td><td>General-purpose skills</td></tr>
+    <tr><td><code>disable-model-invocation: true</code></td><td>✅ Yes</td><td>❌ No</td><td>Destructive/expensive ops (deploy, commit)</td></tr>
+    <tr><td><code>user-invocable: false</code></td><td>❌ No</td><td>✅ Yes</td><td>Background knowledge Claude loads as needed</td></tr>
+  </tbody>
+</table>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Pro Tip — Description Writing Formula</div>
+  Write descriptions using: <strong>What it does</strong> + <strong>When to use it</strong> + <strong>Key capabilities</strong>. Bad: <code>"Helps with code"</code>. Good: <code>"Reviews PRs for security vulnerabilities using OWASP Top 10. Use when reviewing PRs that touch auth code. Checks for SQLi, XSS, CSRF."</code>
+</div>
+
+<h3 id="s13-3-exam">Exam Strategy — 13.3</h3>
+<div class="callout trap">
+  <div class="callout-title">⚠️ Exam Trap — SKILL.md Casing</div>
+  The file <strong>must</strong> be named <code>SKILL.md</code> exactly. <code>skill.md</code>, <code>Skill.md</code>, or <code>README.md</code> inside a skill folder will be silently ignored. If an exam question says "the skill isn't loading," check the filename casing first.
+</div>
+
+<p><strong>Keywords to watch:</strong> "auto-discovery," "description field," "kebab-case," "1,536 characters," "supporting files," "disable-model-invocation."</p>
+
+<details>
+  <summary>Sample Question — 13.3</summary>
+  <div class="detail-content">
+    <div class="exam-q">
+      <div class="exam-q-num">Q — Scenario</div>
+      <div class="exam-q-text">A team creates a skill at <code>.claude/skills/deploy-prod/</code> with <code>SKILL.md</code>. The description reads: "Deploys application to production." They want only manual invocation — Claude should never auto-trigger this. What frontmatter field should they add?</div>
+      <div class="exam-option">A) <code>user-invocable: false</code></div>
+      <div class="exam-option correct">B) <code>disable-model-invocation: true</code> ✓</div>
+      <div class="exam-option">C) <code>auto-discovery: false</code></div>
+      <div class="exam-option">D) <code>context: fork</code></div>
+      <div class="exam-rationale"><strong>Rationale:</strong> <code>disable-model-invocation: true</code> prevents Claude from auto-triggering the skill — only the user can invoke it via <code>/deploy-prod</code>. (A) hides it from the user menu. (C) is a fabricated option. (D) controls isolation, not invocation.</div>
+    </div>
+  </div>
+</details>
+
+
+<!-- ============================================================ -->
+<!-- 13.4 — KEY FRONTMATTER OPTIONS                               -->
+<!-- ============================================================ -->
+<h2 id="s13-4">13.4 — Key Frontmatter Options</h2>
+
+<h3 id="s13-4-fork"><code>context: fork</code></h3>
+<h4>Concept Overview</h4>
+<p>
+  Setting <code>context: fork</code> runs the skill in an <strong>isolated subagent context</strong> — a separate conversation that does not pollute your main session's context window. This is essential for skills that perform extensive exploration, generate verbose output, or run multiple tool calls. Without forking, a skill's output stays in the main context and consumes tokens permanently.
+</p>
+
+<h4>How It Works</h4>
+<ol>
+  <li>Skill is invoked (manually or auto-discovered).</li>
+  <li>Claude Code spawns a <strong>subagent</strong> — a fresh context with access to the project filesystem but no shared conversation history.</li>
+  <li>The subagent executes the skill's instructions independently.</li>
+  <li>By default, the subagent runs in the <strong>background</strong> (<code>background: true</code>) — the main session continues while the skill works.</li>
+  <li>Set <code>background: false</code> to make the main session <strong>wait</strong> for the subagent's result before continuing.</li>
+  <li>The <code>agent</code> field can specify the subagent type (default: <code>general-purpose</code>).</li>
+</ol>
+
+<div class="cot">Ask yourself: "Will this skill generate a lot of intermediate output that I don't need in my main conversation?" → If yes, use <code>context: fork</code> to isolate it.</div>
+
+<pre><code><span class="comment"># Forked skill — runs in isolated subagent</span>
+<span class="field">---</span>
+<span class="field">description:</span> <span class="string">"Deep security audit of the codebase"</span>
+<span class="field">context:</span> <span class="value">fork</span>           <span class="comment"># ← isolated subagent</span>
+<span class="field">agent:</span> <span class="value">Explore</span>           <span class="comment"># ← subagent type (optional)</span>
+<span class="field">background:</span> <span class="value">false</span>        <span class="comment"># ← wait for result (default: true = background)</span>
+<span class="field">allowed-tools:</span> <span class="value">Read, Grep, Glob</span>
+<span class="field">---</span>
+
+Perform a comprehensive security audit...
+</code></pre>
+
+<div class="callout pin">
+  <div class="callout-title">📌 Must-Memorize</div>
+  <code>context: fork</code> = isolated subagent. <code>background: true</code> (default) = runs in background. <code>background: false</code> = main session waits. Forked skills <strong>cannot see the main conversation history</strong> — they start fresh with only the skill instructions and project filesystem.
+</div>
+
+<div class="callout note">
+  <div class="callout-title">⚠️ Cost Implication</div>
+  Forked subagents use their own context window, which means they can consume <strong>additional tokens</strong> (some sources cite up to ~5× for complex explorations). Use forking deliberately for tasks that justify the isolation.
+</div>
+
+<h3 id="s13-4-tools"><code>allowed-tools</code></h3>
+<h4>Concept Overview</h4>
+<p>
+  The <code>allowed-tools</code> frontmatter field pre-approves specific tools so Claude can use them <strong>without permission prompts</strong> during the skill's execution. This is a convenience feature that eliminates the "Do you want to allow…" dialog for tools the skill legitimately needs. Critically, this is a <strong>one-turn grant</strong>, not a session-wide setting.
+</p>
+
+<h4>How It Works</h4>
+<ol>
+  <li>When the skill is invoked, the tools listed in <code>allowed-tools</code> are pre-approved for that turn.</li>
+  <li>The grant <strong>clears on your next message</strong> — even though the skill's instructions remain in context.</li>
+  <li><code>allowed-tools</code> does <strong>not restrict</strong> anything — unlisted tools remain available under your normal permission settings.</li>
+  <li>Re-invoking the skill re-applies the grant for another turn.</li>
+  <li><code>${CLAUDE_SKILL_DIR}</code> expands in both the body and <code>allowed-tools</code>, allowing skills to pre-approve their own bundled scripts.</li>
+</ol>
+
+<pre><code><span class="field">allowed-tools:</span> <span class="value">Read, Grep, Glob, Bash(git add:*), Bash(git commit:*)</span>
+<span class="comment"># Pre-approves: Read, Grep, Glob tools + git add/commit bash commands</span>
+<span class="comment"># This grant clears when the user sends their next message</span>
+</code></pre>
+
+<div class="callout trap">
+  <div class="callout-title">⚠️ Exam Trap — One-Turn Grant</div>
+  The most common surprise: <code>allowed-tools</code> is a <strong>one-turn grant</strong>, not a session setting. If Claude asks permission again for the same command later, it's because the grant expired on the next user message. The instructions persist, but the tool approval does not.
+</div>
+
+<h4><code>disallowed-tools</code> (Related)</h4>
+<p><code>disallowed-tools</code> does the opposite: it <strong>removes</strong> tools from Claude's available pool while the skill is active. Use it to prevent a skill from doing something dangerous — for example, blocking <code>AskUserQuestion</code> for a background loop skill. The restriction also clears on the next message.</p>
+
+<h3 id="s13-4-hint"><code>argument-hint</code></h3>
+<h4>Concept Overview</h4>
+<p>
+  The <code>argument-hint</code> field provides inline terminal usage hints displayed in the autocomplete menu when typing <code>/</code>. It tells the user what arguments the command expects, improving discoverability and reducing invocation errors.
+</p>
+
+<pre><code><span class="field">argument-hint:</span> <span class="string">"&lt;issue-number&gt; [priority]"</span>
+<span class="comment"># Shown in autocomplete: /fix-issue &lt;issue-number&gt; [priority]</span>
+<span class="comment"># Helps users know what to pass without reading the file</span>
+</code></pre>
+
+<h4>How It Works</h4>
+<ol>
+  <li>The hint appears next to the command name in the autocomplete dropdown.</li>
+  <li>It is <strong>purely cosmetic</strong> — it doesn't enforce argument types or counts.</li>
+  <li>Convention: use <code>&lt;required&gt;</code> for required args, <code>[optional]</code> for optional ones.</li>
+  <li>Works with both commands and skills.</li>
+</ol>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Pro Tip</div>
+  Use <code>argument-hint</code> even for commands with no required arguments. A hint like <code>[optional focus area]</code> tells users they <em>can</em> pass something without making it feel required.
+</div>
+
+<h3 id="s13-4-exam">Exam Strategy — 13.4</h3>
+
+<div class="mnemonic">
+  <div class="mnemonic-label">Mnemonic — Key Frontmatter</div>
+  <div class="mnemonic-text">F.A.H. — Fork, Approve, Hint</div>
+  <div class="mnemonic-decode"><strong>F</strong>ork the context (<code>context: fork</code>), <strong>A</strong>pprove the tools (<code>allowed-tools</code>), <strong>H</strong>int the arguments (<code>argument-hint</code>).</div>
+</div>
+
+<p><strong>How questions are framed:</strong></p>
+<ul>
+  <li>"A skill grants <code>allowed-tools: Bash(npm test:*)</code>. The user invokes it, then sends a follow-up message. Does the tool grant persist?" → <strong>No</strong> — one-turn grant, cleared on next message.</li>
+  <li>"A developer wants a skill to run without polluting the main context. What frontmatter option should they use?" → <code>context: fork</code></li>
+  <li>Scenario: "Claude keeps asking for permission even though <code>allowed-tools</code> is set." → Because the grant is one-turn only. The user sent a new message, clearing the approval.</li>
+</ul>
+
+<details>
+  <summary>Sample Question — 13.4</summary>
+  <div class="detail-content">
+    <div class="exam-q">
+      <div class="exam-q-num">Q — MCQ</div>
+      <div class="exam-q-text">A skill has <code>allowed-tools: Read, Bash(npm test:*)</code> in its frontmatter. A user invokes the skill, and Claude runs tests successfully. The user then says "now check the logs." What happens?</div>
+      <div class="exam-option">A) Claude runs <code>Bash(npm test:*)</code> again without prompting</div>
+      <div class="exam-option correct">B) Claude asks for permission before running any Bash commands ✓</div>
+      <div class="exam-option">C) The skill's <code>allowed-tools</code> persist for the full session</div>
+      <div class="exam-option">D) Claude cannot use Bash at all after the skill's turn</div>
+      <div class="exam-rationale"><strong>Rationale:</strong> <code>allowed-tools</code> is a one-turn grant. The moment the user sends their next message ("now check the logs"), the grant clears. Bash commands revert to the user's normal permission settings.</div>
+    </div>
+  </div>
+</details>
+
+
+<!-- ============================================================ -->
+<!-- 13.5 — /memory AND /compact                                  -->
+<!-- ============================================================ -->
+<h2 id="s13-5">13.5 — The <code>/memory</code> and <code>/compact</code> Commands</h2>
+
+<h3 id="s13-5-memory"><code>/memory</code> — Persistent Memory Management</h3>
+<h4>Concept Overview</h4>
+<p>
+  The <code>/memory</code> command opens the project's <code>CLAUDE.md</code> file in your default editor, allowing you to edit persistent memory that Claude Code reads at the start of every session. Changes take effect immediately in the current session. This is Claude Code's mechanism for durable project-level context: coding conventions, build commands, style rules, business logic, and recurring instructions.
+</p>
+
+<h4>Key Definitions</h4>
+<ul>
+  <li><strong>CLAUDE.md</strong> — A Markdown file at the project root that Claude Code loads automatically. Acts as persistent memory across all sessions for that project.</li>
+  <li><strong>Memory hierarchy:</strong>
+    <ul>
+      <li><code>~/. claude/CLAUDE.md</code> — User-level (personal, cross-project)</li>
+      <li><code>./CLAUDE.md</code> — Project-level (shared, repo root)</li>
+      <li><code>./.claude/CLAUDE.md</code> — Project-level alternative location</li>
+      <li><code>./path/to/subdir/CLAUDE.md</code> — Directory-level (active when working in that subtree)</li>
+    </ul>
+  </li>
+  <li><strong><code>/init</code></strong> — A companion command that <strong>auto-generates</strong> an initial <code>CLAUDE.md</code> by scanning the project structure, detecting languages, package managers, and conventions.</li>
+</ul>
+
+<h4>How It Works</h4>
+<ol>
+  <li>Type <code>/memory</code> at the Claude Code prompt.</li>
+  <li>Your default editor opens with the project's <code>CLAUDE.md</code> file.</li>
+  <li>Edit the file: add conventions, build commands, style rules, business-specific instructions.</li>
+  <li>Save and close the editor. Changes are immediately reflected in the current session.</li>
+  <li>On every new session start, Claude Code automatically loads the applicable <code>CLAUDE.md</code> files (user → project → directory-level).</li>
+</ol>
+
+<div class="callout pin">
+  <div class="callout-title">📌 Must-Memorize</div>
+  <code>/memory</code> edits <code>CLAUDE.md</code> (persistent, survives sessions). <code>/compact</code> summarizes conversation (ephemeral, within-session). They are complementary, not alternatives. Use <code>/init</code> to generate the initial <code>CLAUDE.md</code> instead of writing from scratch.
+</div>
+
+<h3 id="s13-5-compact"><code>/compact</code> — Context Window Management</h3>
+<h4>Concept Overview</h4>
+<p>
+  The <code>/compact</code> command summarizes the current conversation, freeing up context window space while preserving key decisions and working state. It is Claude Code's primary tool for managing long sessions. Unlike <code>/clear</code> which wipes everything, <code>/compact</code> intelligently compresses older context into a summary — minimal information loss with substantial token savings.
+</p>
+
+<h4>How It Works</h4>
+<ol>
+  <li>Type <code>/compact</code> (optionally with focus instructions: <code>/compact focus on the database migration decisions</code>).</li>
+  <li>Claude Code analyzes the conversation history, identifying key decisions, file states, and task progress.</li>
+  <li>Older messages are replaced with a condensed summary. Recent context is preserved at full fidelity.</li>
+  <li><code>CLAUDE.md</code> content is always preserved (it's re-loaded, not part of the compactible conversation).</li>
+  <li>After compaction, recently-loaded skills are re-attached within a fixed token budget. Long sessions may silently drop older skills.</li>
+  <li>Claude confirms what was retained — verify that critical decisions and file states are captured.</li>
+</ol>
+
+<h4><code>/compact</code> vs <code>/clear</code> Comparison</h4>
+<table>
+  <thead>
+    <tr><th>Feature</th><th><code>/compact</code></th><th><code>/clear</code></th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Clears context</strong></td><td>Summarizes (partial)</td><td>Wipes completely</td></tr>
+    <tr><td><strong>Preserves CLAUDE.md</strong></td><td>✅ Yes</td><td>✅ Yes (re-loaded)</td></tr>
+    <tr><td><strong>Information loss</strong></td><td>Minimal (summary-based)</td><td>Total</td></tr>
+    <tr><td><strong>Use case</strong></td><td>Extending a long session</td><td>Switching to unrelated task</td></tr>
+    <tr><td><strong>Custom focus</strong></td><td>✅ Yes (<code>/compact focus on...</code>)</td><td>❌ No</td></tr>
+    <tr><td><strong>Preserves loaded skills</strong></td><td>Recent skills re-attached (within budget)</td><td>❌ All cleared</td></tr>
+    <tr><td><strong>When to use</strong></td><td>Proactively, before quality degrades</td><td>When context is entirely irrelevant</td></tr>
+  </tbody>
+</table>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Pro Tip — Proactive Compaction</div>
+  Don't wait until output quality degrades. Run <code>/compact</code> as routine session hygiene on any session longer than 30 minutes. By the time responses worsen, useful context may already be lost. Use <code>/cost</code> or <code>/context</code> to monitor your context usage.
+</div>
+
+<div class="callout trap">
+  <div class="callout-title">⚠️ Exam Trap — Compaction Doesn't Mean Deletion</div>
+  <code>/compact</code> does <strong>not</strong> delete context — it <strong>summarizes</strong> it. An exam answer saying "/compact deletes older messages" is wrong. It <em>replaces</em> them with a summary. Also: older skills may be dropped during compaction if the re-attachment budget is exceeded.
+</div>
+
+<div class="callout xref">
+  <div class="callout-title">🔗 Cross-Reference</div>
+  <code>/memory</code> edits what Claude <em>always</em> knows (persistent). <code>/compact</code> manages what Claude <em>currently</em> remembers (ephemeral). Skills persist in context after invocation (§13.3) but may be dropped after compaction if the token budget overflows.
+</div>
+
+<h3 id="s13-5-exam">Exam Strategy — 13.5</h3>
+<p><strong>Differentiation questions:</strong> Expect questions testing whether you can distinguish between <code>/memory</code> (edits <code>CLAUDE.md</code>, persistent), <code>/compact</code> (summarizes conversation, ephemeral), <code>/clear</code> (wipes conversation, fresh start), and <code>/init</code> (auto-generates initial <code>CLAUDE.md</code>).</p>
+
+<div class="mnemonic">
+  <div class="mnemonic-label">Mnemonic</div>
+  <div class="mnemonic-text">M.I.C.C. — Memory edits, Init generates, Compact summarizes, Clear wipes</div>
+  <div class="mnemonic-decode"><strong>M</strong>emory = edit CLAUDE.md. <strong>I</strong>nit = generate CLAUDE.md. <strong>C</strong>ompact = summarize session. <strong>C</strong>lear = fresh start.</div>
+</div>
+
+<details>
+  <summary>Sample Question — 13.5</summary>
+  <div class="detail-content">
+    <div class="exam-q">
+      <div class="exam-q-num">Q — Scenario</div>
+      <div class="exam-q-text">A developer is 2 hours into a complex refactoring session. Response quality is starting to degrade. The CLAUDE.md file contains critical project conventions. What is the recommended action?</div>
+      <div class="exam-option">A) Run <code>/clear</code> to start fresh</div>
+      <div class="exam-option">B) Run <code>/memory</code> to add more context</div>
+      <div class="exam-option correct">C) Run <code>/compact</code> to summarize and free context ✓</div>
+      <div class="exam-option">D) Close and restart Claude Code</div>
+      <div class="exam-rationale"><strong>Rationale:</strong> <code>/compact</code> frees context while preserving working state and decisions. <code>/clear</code> would lose all session progress. <code>/memory</code> adds context (making the problem worse). Restarting is unnecessary.</div>
+    </div>
+  </div>
+</details>
+
+
+<!-- ============================================================ -->
+<!-- 13.6 — HANDS-ON LAB                                          -->
+<!-- ============================================================ -->
+<h2 id="s13-6">13.6 — Hands-On: Building Custom Commands and Skills</h2>
+
+<h3 id="s13-6-cmd">Exercise 1: Create a Custom Slash Command</h3>
+<p>We'll build a <code>/commit</code> command that generates conventional commit messages for staged changes.</p>
+
+<h4>Step 1 — Project-Scoped Command</h4>
+<pre><code><span class="comment"># File: .claude/commands/commit.md</span>
+<span class="comment"># This creates the /commit command, available to all repo collaborators.</span>
+<span class="comment"># Placed in .claude/commands/ → project-scoped → committed to Git.</span>
+
+<span class="field">---</span>
+<span class="field">description:</span> <span class="string">"Write a conventional commit message for staged changes"</span>
+<span class="field">argument-hint:</span> <span class="string">"[optional scope]"</span>    <span class="comment"># shown in autocomplete menu</span>
+<span class="field">allowed-tools:</span> <span class="value">Read, Bash(git:*)</span>      <span class="comment"># pre-approve git commands (one-turn grant!)</span>
+<span class="field">---</span>
+
+<span class="comment"># WHY: !`git diff --cached` runs BEFORE Claude sees this prompt.</span>
+<span class="comment"># Claude receives the actual diff, not an instruction to fetch it.</span>
+## Staged Changes
+!`git diff --cached --stat`
+
+## Full Diff
+!`git diff --cached`
+
+## Instructions
+Write a conventional commit message for the staged changes above.
+
+- Use the format: type(scope): summary
+- Keep the summary under 60 characters
+- If a scope was provided via arguments, use it: $ARGUMENTS   <span class="comment"># ← replaced with user input</span>
+- List the key changes as bullet points in the body
+- If no scope was given, infer it from the changed files        <span class="comment"># ← handles missing args gracefully</span>
+</code></pre>
+
+<p><strong>Usage:</strong></p>
+<pre><code><span class="comment"># Basic invocation — Claude infers scope from files</span>
+/commit
+
+<span class="comment"># With explicit scope argument — $ARGUMENTS becomes "auth"</span>
+/commit auth
+
+<span class="comment"># Multi-word scope — quotes group into single argument</span>
+/commit "user registration"
+</code></pre>
+
+<h4>Step 2 — User-Scoped Version</h4>
+<pre><code><span class="comment"># File: ~/.claude/commands/commit.md</span>
+<span class="comment"># Same file, different location → user-scoped.</span>
+<span class="comment"># Available across ALL your projects, not version-controlled.</span>
+<span class="comment"># ⚠️ If both exist, this user-scoped version takes precedence!</span>
+
+<span class="field">---</span>
+<span class="field">description:</span> <span class="string">"Personal commit formatter with my preferred style"</span>
+<span class="field">argument-hint:</span> <span class="string">"[scope] [--emoji]"</span>
+<span class="field">allowed-tools:</span> <span class="value">Read, Bash(git:*)</span>
+<span class="field">---</span>
+
+## Staged Changes
+!`git diff --cached --stat`
+
+Write a commit message using MY conventions:
+- Format: type(scope): emoji summary
+- Always include a relevant emoji before the summary
+- Scope from args if provided: $ARGUMENTS
+</code></pre>
+
+<h3 id="s13-6-skill">Exercise 2: Build an Agent Skill with Full Frontmatter</h3>
+<p>We'll create a <code>/security-audit</code> skill with all key frontmatter options.</p>
+
+<pre><code><span class="comment"># Directory: .claude/skills/security-audit/SKILL.md</span>
+<span class="comment"># ⚠️ MUST be exactly SKILL.md (case-sensitive)</span>
+<span class="comment"># ⚠️ Directory MUST be kebab-case: security-audit/ ✅, SecurityAudit/ ❌</span>
+<span class="comment"># This creates /security-audit as a project-scoped skill.</span>
+
+<span class="field">---</span>
+<span class="comment"># === IDENTITY ===</span>
+<span class="field">name:</span> <span class="value">security-audit</span>                <span class="comment"># Optional: defaults to dir name if omitted</span>
+<span class="field">description:</span> <span class="string">&gt;</span>                          <span class="comment"># THE most important field</span>
+<span class="string">  Performs a deep security audit of the codebase using OWASP Top 10.</span>
+<span class="string">  Use when reviewing code that touches authentication, authorization,</span>
+<span class="string">  or data handling. Checks for SQLi, XSS, CSRF, hardcoded secrets.</span>
+
+<span class="comment"># === ARGUMENTS ===</span>
+<span class="field">argument-hint:</span> <span class="string">"[path-or-pattern]"</span>     <span class="comment"># Shown in autocomplete: /security-audit [path-or-pattern]</span>
+<span class="field">arguments:</span> <span class="value">target</span>                      <span class="comment"># Named arg: $target maps to first positional arg</span>
+
+<span class="comment"># === EXECUTION CONTEXT ===</span>
+<span class="field">context:</span> <span class="value">fork</span>                          <span class="comment"># Runs in isolated subagent (won't pollute main context)</span>
+<span class="field">agent:</span> <span class="value">Explore</span>                         <span class="comment"># Subagent type (uses explore-focused behavior)</span>
+<span class="field">background:</span> <span class="value">false</span>                     <span class="comment"># Wait for result (don't run in background)</span>
+
+<span class="comment"># === TOOL PERMISSIONS ===</span>
+<span class="field">allowed-tools:</span> <span class="value">Read, Grep, Glob</span>        <span class="comment"># Pre-approve read-only tools (one-turn grant!)</span>
+<span class="field">disallowed-tools:</span> <span class="value">Write, Bash</span>          <span class="comment"># Block write/exec tools (audit should be read-only)</span>
+
+<span class="comment"># === INVOCATION CONTROL ===</span>
+<span class="field">disable-model-invocation:</span> <span class="value">true</span>        <span class="comment"># User-only — Claude won't auto-trigger this</span>
+<span class="comment"># user-invocable: true                 # (default) — user CAN invoke via /security-audit</span>
+
+<span class="comment"># === MODEL OVERRIDE ===</span>
+<span class="field">model:</span> <span class="value">opus</span>                              <span class="comment"># Use Opus for complex security reasoning</span>
+<span class="field">effort:</span> <span class="value">high</span>                            <span class="comment"># High effort level for thorough analysis</span>
+
+<span class="comment"># === FILE ACTIVATION FILTER ===</span>
+<span class="field">paths:</span> <span class="string">"src/**/*.ts, src/**/*.js"</span>     <span class="comment"># Only auto-activate for TS/JS files</span>
+<span class="field">---</span>
+
+<span class="comment"># Everything below is the skill body — instructions Claude follows</span>
+
+# Security Audit
+
+## Role
+You are an expert security code reviewer specializing in application security.
+
+## Target
+Audit the following target: $target
+<span class="comment"># ↑ $target is replaced by the first positional argument.</span>
+<span class="comment"># If no argument given, $target expands to empty string (named arg behavior).</span>
+
+## Procedure
+1. Use Grep to scan for common vulnerability patterns:
+   - Hardcoded secrets: API keys, passwords, tokens
+   - SQL injection: string concatenation in queries
+   - XSS: unsanitized user input in output
+   - CSRF: missing token validation
+2. Use Read to examine flagged files in detail
+3. Cross-reference against OWASP Top 10 checklist
+
+## Output Format
+For each finding, report:
+- **File**: path and line number
+- **Severity**: CRITICAL / HIGH / MEDIUM
+- **Category**: OWASP classification
+- **Description**: What the vulnerability is
+- **Fix**: Concrete code example showing the remediation
+
+## Reference
+Refer to `./reference/owasp-top-10.md` for the detailed checklist.
+<span class="comment"># ↑ Supporting file loaded on demand from the skill directory</span>
+</code></pre>
+
+<h3 id="s13-6-session">Exercise 3: Session Management with <code>/memory</code> and <code>/compact</code></h3>
+
+<pre><code><span class="comment"># === STEP 1: Initialize project memory ===</span>
+&gt; /init
+<span class="comment"># Claude scans the project and generates CLAUDE.md with:</span>
+<span class="comment"># - Detected stack (Node.js, TypeScript, etc.)</span>
+<span class="comment"># - Build commands (npm run build, npm test)</span>
+<span class="comment"># - Project structure overview</span>
+
+<span class="comment"># === STEP 2: Customize persistent memory ===</span>
+&gt; /memory
+<span class="comment"># Opens CLAUDE.md in your editor. Add team conventions:</span>
+<span class="comment"># - "Always use Prettier for formatting"</span>
+<span class="comment"># - "Run `npm test` before committing"</span>
+<span class="comment"># - "API routes follow RESTful naming conventions"</span>
+<span class="comment"># Save and close → changes take effect immediately.</span>
+
+<span class="comment"># === STEP 3: Work on a task... (time passes) ===</span>
+&gt; Refactor the auth module to use JWT tokens
+<span class="comment"># ... Claude reads files, makes changes, runs tests ...</span>
+<span class="comment"># ... 45 minutes later, context is getting full ...</span>
+
+<span class="comment"># === STEP 4: Check context usage ===</span>
+&gt; /context
+<span class="comment"># Shows: 73% of context window used</span>
+
+&gt; /cost
+<span class="comment"># Shows: Input: 312K tokens, Output: 45K tokens, Cost: $1.24</span>
+
+<span class="comment"># === STEP 5: Compact with focus ===</span>
+&gt; /compact focus on the JWT migration decisions and current file state
+<span class="comment"># Claude summarizes conversation, preserving:</span>
+<span class="comment"># - JWT migration decisions (because we asked)</span>
+<span class="comment"># - Current file states</span>
+<span class="comment"># - CLAUDE.md content (always preserved)</span>
+<span class="comment"># Context freed: significant (varies by conversation)</span>
+
+<span class="comment"># === STEP 6: Continue working with freed context ===</span>
+&gt; Now add refresh token support
+<span class="comment"># Claude still remembers the JWT decisions from the summary.</span>
+<span class="comment"># CLAUDE.md conventions are still in effect.</span>
+
+<span class="comment"># === ALTERNATIVE: If switching to unrelated task ===</span>
+&gt; /clear
+<span class="comment"># Wipes everything except CLAUDE.md. Fresh start.</span>
+<span class="comment"># Use when the old context would confuse the new task.</span>
+</code></pre>
+
+<div class="callout tip">
+  <div class="callout-title">💡 Real-World Workflow Pattern</div>
+  <strong>Start of project:</strong> <code>/init</code> → generates <code>CLAUDE.md</code> → <code>/memory</code> to refine it.<br>
+  <strong>During session:</strong> Monitor with <code>/cost</code> and <code>/context</code> → <code>/compact</code> every 30–45 min.<br>
+  <strong>Switching tasks:</strong> <code>/compact</code> if related, <code>/clear</code> if unrelated.<br>
+  <strong>Invoking skills:</strong> <code>/skill-name args</code> → work → re-invoke if tool grants expire.
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHEAT SHEET                                                   -->
+<!-- ============================================================ -->
+<h2 id="cheat">📋 One-Page Cheat Sheet</h2>
+
+<h4>File Locations</h4>
+<div class="cheat-row"><span class="cheat-key">.claude/commands/*.md</span><span class="cheat-val">Project-scoped custom commands (shared, version-controlled)</span></div>
+<div class="cheat-row"><span class="cheat-key">~/.claude/commands/*.md</span><span class="cheat-val">User-scoped custom commands (personal, cross-project)</span></div>
+<div class="cheat-row"><span class="cheat-key">.claude/skills/&lt;name&gt;/SKILL.md</span><span class="cheat-val">Project-scoped skill (shared)</span></div>
+<div class="cheat-row"><span class="cheat-key">~/.claude/skills/&lt;name&gt;/SKILL.md</span><span class="cheat-val">User-scoped skill (personal)</span></div>
+<div class="cheat-row"><span class="cheat-key">CLAUDE.md</span><span class="cheat-val">Project memory (auto-loaded every session)</span></div>
+
+<h4>Argument Expansion</h4>
+<div class="cheat-row"><span class="cheat-key">$ARGUMENTS</span><span class="cheat-val">Entire input string after command name</span></div>
+<div class="cheat-row"><span class="cheat-key">$0, $1, $N</span><span class="cheat-val">Zero-indexed positional args (quotes group words)</span></div>
+<div class="cheat-row"><span class="cheat-key">$name</span><span class="cheat-val">Named arg (via <code>arguments:</code> frontmatter); empty if missing</span></div>
+<div class="cheat-row"><span class="cheat-key">!`cmd`</span><span class="cheat-val">Shell output, expanded before Claude sees prompt (single-pass)</span></div>
+<div class="cheat-row"><span class="cheat-key">\$N</span><span class="cheat-val">Escaped — literal dollar sign (not expanded)</span></div>
+
+<h4>Key Frontmatter Fields</h4>
+<div class="cheat-row"><span class="cheat-key">description</span><span class="cheat-val">Most important field — drives auto-discovery (1,536 char cap)</span></div>
+<div class="cheat-row"><span class="cheat-key">allowed-tools</span><span class="cheat-val">One-turn grant — pre-approves tools, clears on next user message</span></div>
+<div class="cheat-row"><span class="cheat-key">disallowed-tools</span><span class="cheat-val">Removes tools from Claude's pool while skill is active</span></div>
+<div class="cheat-row"><span class="cheat-key">context: fork</span><span class="cheat-val">Runs in isolated subagent (separate context window)</span></div>
+<div class="cheat-row"><span class="cheat-key">background: false</span><span class="cheat-val">With fork — waits for result instead of running in background</span></div>
+<div class="cheat-row"><span class="cheat-key">disable-model-invocation</span><span class="cheat-val">true = user-only (no auto-trigger by Claude)</span></div>
+<div class="cheat-row"><span class="cheat-key">user-invocable</span><span class="cheat-val">false = hidden from / menu (Claude-only background knowledge)</span></div>
+<div class="cheat-row"><span class="cheat-key">argument-hint</span><span class="cheat-val">Autocomplete hint shown in / menu (cosmetic only)</span></div>
+<div class="cheat-row"><span class="cheat-key">model</span><span class="cheat-val">Override model: haiku, sonnet, opus</span></div>
+
+<h4>Built-in Commands</h4>
+<div class="cheat-row"><span class="cheat-key">/help</span><span class="cheat-val">Show all available commands</span></div>
+<div class="cheat-row"><span class="cheat-key">/init</span><span class="cheat-val">Auto-generate CLAUDE.md from project scan</span></div>
+<div class="cheat-row"><span class="cheat-key">/memory</span><span class="cheat-val">Edit CLAUDE.md in your editor (persistent)</span></div>
+<div class="cheat-row"><span class="cheat-key">/compact [focus]</span><span class="cheat-val">Summarize conversation to free context</span></div>
+<div class="cheat-row"><span class="cheat-key">/clear</span><span class="cheat-val">Wipe conversation (CLAUDE.md re-loads)</span></div>
+<div class="cheat-row"><span class="cheat-key">/cost</span><span class="cheat-val">Show token usage and cost</span></div>
+<div class="cheat-row"><span class="cheat-key">/context</span><span class="cheat-val">Visualize context window usage</span></div>
+<div class="cheat-row"><span class="cheat-key">/model</span><span class="cheat-val">Switch model mid-session</span></div>
+<div class="cheat-row"><span class="cheat-key">/doctor</span><span class="cheat-val">Diagnose installation/config issues</span></div>
+<div class="cheat-row"><span class="cheat-key">/permissions</span><span class="cheat-val">Manage tool allow/deny rules</span></div>
+
+<h4>Naming Rules</h4>
+<div class="cheat-row"><span class="cheat-key">SKILL.md</span><span class="cheat-val">Exact casing required (not skill.md or Skill.md)</span></div>
+<div class="cheat-row"><span class="cheat-key">kebab-case dirs</span><span class="cheat-val">security-review ✅ | SecurityReview ❌ | security_review ❌</span></div>
+<div class="cheat-row"><span class="cheat-key">No "anthropic"/"claude"</span><span class="cheat-val">Forbidden in skill names</span></div>
+<div class="cheat-row"><span class="cheat-key">No angle brackets</span><span class="cheat-val">Forbidden in description field</span></div>
+
+
+<!-- ============================================================ -->
+<!-- CONCEPT RELATIONSHIP MAP                                      -->
+<!-- ============================================================ -->
+<h2 id="concept-map">🗺️ Concept Relationship Map</h2>
+<p>This diagram shows how all six subtopics interconnect:</p>
+
+<div class="diagram-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" style="max-width:800px;">
+  <!-- Background -->
+  <rect width="800" height="520" rx="12" fill="#12141c" stroke="#2a2e3a"></rect>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" fill="#f4f5f8" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="700">Chapter 13 — Concept Relationship Map</text>
+
+  <!-- Node: Custom Commands (13.1) -->
+  <rect x="30" y="70" width="200" height="64" rx="10" fill="#1a2332" stroke="#6c8cff" stroke-width="1.5"></rect>
+  <text x="130" y="96" text-anchor="middle" fill="#8aa5ff" font-family="Inter,sans-serif" font-size="11" font-weight="700">13.1</text>
+  <text x="130" y="118" text-anchor="middle" fill="#e1e4ea" font-family="Inter,sans-serif" font-size="13" font-weight="600">Custom Slash Commands</text>
+
+  <!-- Node: Project vs User Scope (13.2) -->
+  <rect x="300" y="70" width="200" height="64" rx="10" fill="#1a2332" stroke="#4ade80" stroke-width="1.5"></rect>
+  <text x="400" y="96" text-anchor="middle" fill="#86efac" font-family="Inter,sans-serif" font-size="11" font-weight="700">13.2</text>
+  <text x="400" y="118" text-anchor="middle" fill="#e1e4ea" font-family="Inter,sans-serif" font-size="13" font-weight="600">Project vs User Scope</text>
+
+  <!-- Node: Agent Skills (13.3) -->
+  <rect x="570" y="70" width="200" height="64" rx="10" fill="#1a2332" stroke="#a78bfa" stroke-width="1.5"></rect>
+  <text x="670" y="96" text-anchor="middle" fill="#a78bfa" font-family="Inter,sans-serif" font-size="11" font-weight="700">13.3</text>
+  <text x="670" y="118" text-anchor="middle" fill="#e1e4ea" font-family="Inter,sans-serif" font-size="13" font-weight="600">Agent Skills &amp; SKILL.md</text>
+
+  <!-- Node: Key Frontmatter (13.4) -->
+  <rect x="110" y="220" width="240" height="80" rx="10" fill="#1e2230" stroke="#fbbf24" stroke-width="1.5"></rect>
+  <text x="230" y="248" text-anchor="middle" fill="#fde68a" font-family="Inter,sans-serif" font-size="11" font-weight="700">13.4</text>
+  <text x="230" y="268" text-anchor="middle" fill="#e1e4ea" font-family="Inter,sans-serif" font-size="13" font-weight="600">Key Frontmatter Options</text>
+  <text x="230" y="288" text-anchor="middle" fill="#9ba3b5" font-family="SF Mono,Consolas,monospace" font-size="10">fork · allowed-tools · argument-hint</text>
+
+  <!-- Node: /memory & /compact (13.5) -->
+  <rect x="430" y="220" width="240" height="80" rx="10" fill="#1e2230" stroke="#60a5fa" stroke-width="1.5"></rect>
+  <text x="550" y="248" text-anchor="middle" fill="#60a5fa" font-family="Inter,sans-serif" font-size="11" font-weight="700">13.5</text>
+  <text x="550" y="268" text-anchor="middle" fill="#e1e4ea" font-family="Inter,sans-serif" font-size="13" font-weight="600">/memory &amp; /compact</text>
+  <text x="550" y="288" text-anchor="middle" fill="#9ba3b5" font-family="SF Mono,Consolas,monospace" font-size="10">CLAUDE.md · context management</text>
+
+  <!-- Node: Hands-On Lab (13.6) -->
+  <rect x="250" y="390" width="300" height="64" rx="10" fill="rgba(108,140,255,0.08)" stroke="#6c8cff" stroke-width="2" stroke-dasharray="6,3"></rect>
+  <text x="400" y="416" text-anchor="middle" fill="#8aa5ff" font-family="Inter,sans-serif" font-size="11" font-weight="700">13.6</text>
+  <text x="400" y="438" text-anchor="middle" fill="#e1e4ea" font-family="Inter,sans-serif" font-size="14" font-weight="600">Hands-On Lab (integrates all)</text>
+
+  <!-- Arrows -->
+  <!-- 13.1 → 13.2 -->
+  <line x1="230" y1="102" x2="300" y2="102" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></line>
+  <text x="265" y="93" text-anchor="middle" fill="#6b7280" font-family="Inter,sans-serif" font-size="9">scopes into</text>
+
+  <!-- 13.1 → 13.3 -->
+  <path d="M 230 120 Q 400 170 570 102" fill="none" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></path>
+  <text x="400" y="155" text-anchor="middle" fill="#6b7280" font-family="Inter,sans-serif" font-size="9">evolves into</text>
+
+  <!-- 13.2 → 13.3 -->
+  <line x1="500" y1="102" x2="570" y2="102" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></line>
+  <text x="535" y="93" text-anchor="middle" fill="#6b7280" font-family="Inter,sans-serif" font-size="9">same scopes</text>
+
+  <!-- 13.3 → 13.4 -->
+  <path d="M 630 134 Q 480 180 350 230" fill="none" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></path>
+  <text x="510" y="178" text-anchor="middle" fill="#6b7280" font-family="Inter,sans-serif" font-size="9">configured by</text>
+
+  <!-- 13.1 → 13.4 -->
+  <path d="M 130 134 Q 160 180 180 220" fill="none" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></path>
+  <text x="135" y="178" text-anchor="middle" fill="#6b7280" font-family="Inter,sans-serif" font-size="9">uses</text>
+
+  <!-- 13.5 → 13.2 (CLAUDE.md scoping) -->
+  <path d="M 550 220 Q 510 170 450 134" fill="none" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></path>
+  <text x="510" y="168" text-anchor="middle" fill="#6b7280" font-family="Inter,sans-serif" font-size="9">same scope model</text>
+
+  <!-- 13.4 → 13.6 -->
+  <path d="M 280 300 Q 320 345 340 390" fill="none" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></path>
+
+  <!-- 13.5 → 13.6 -->
+  <path d="M 500 300 Q 470 345 450 390" fill="none" stroke="#4a5568" stroke-width="1.2" marker-end="url(#arr)"></path>
+
+  <!-- 13.1 → 13.6 (long arrow down) -->
+  <path d="M 80 134 Q 80 320 280 410" fill="none" stroke="#4a5568" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"></path>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"></path>
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <text x="40" y="490" fill="#6b7280" font-family="Inter,sans-serif" font-size="10">Solid border = standalone concept · Dashed border = integrating exercise · Arrows = dependency/relationship</text>
+</svg>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- TOP 10 EXAM QUESTIONS                                         -->
+<!-- ============================================================ -->
+<h2 id="top10">🎯 Top 10 Exam Questions</h2>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q1 — 13.1</div>
+  <div class="exam-q-text">A custom command file at <code>.claude/commands/deploy.md</code> contains no <code>$ARGUMENTS</code> placeholder. A developer types <code>/deploy staging</code>. What happens to the word "staging"?</div>
+  <div class="exam-option">A) It is silently discarded</div>
+  <div class="exam-option correct">B) It is appended as <code>ARGUMENTS: staging</code> at the end of the prompt ✓</div>
+  <div class="exam-option">C) Claude Code throws a "no arguments expected" error</div>
+  <div class="exam-option">D) It replaces the first occurrence of the word "deploy" in the file</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> When a command file has no <code>$ARGUMENTS</code> placeholder, Claude Code appends the input as <code>ARGUMENTS: &lt;value&gt;</code> to ensure user input is never silently dropped.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q2 — 13.2</div>
+  <div class="exam-q-text">Which of the following is true about project-scoped commands?</div>
+  <div class="exam-option">A) They are stored in <code>~/.claude/commands/</code></div>
+  <div class="exam-option">B) They are available across all projects on the user's machine</div>
+  <div class="exam-option correct">C) They can be committed to version control and shared with the team ✓</div>
+  <div class="exam-option">D) They override user-scoped commands when names conflict</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> Project-scoped commands in <code>.claude/commands/</code> are part of the repo and can be committed to Git. (A) describes user-scoped. (B) is user-scoped behavior. (D) is reversed — user-scoped overrides project-scoped.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q3 — 13.3</div>
+  <div class="exam-q-text">A team creates a directory <code>.claude/skills/CodeReview/SKILL.md</code>. The skill does not appear in the autocomplete menu. What is the most likely cause?</div>
+  <div class="exam-option correct">A) The directory name is not kebab-case ✓</div>
+  <div class="exam-option">B) The <code>description</code> field is missing</div>
+  <div class="exam-option">C) The <code>user-invocable</code> field is set to <code>false</code></div>
+  <div class="exam-option">D) Skills cannot be project-scoped</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> Skill directories must be kebab-case (<code>code-review</code>). <code>CodeReview</code> uses PascalCase and will be silently ignored. (B) may reduce auto-discovery but won't prevent the skill from loading. (C) hides from the user menu but the skill still exists. (D) is false — skills can be in <code>.claude/skills/</code>.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q4 — 13.4</div>
+  <div class="exam-q-text">A skill has <code>context: fork</code> and <code>background: true</code> (default). What happens when the skill is invoked?</div>
+  <div class="exam-option">A) The skill runs in the main conversation context</div>
+  <div class="exam-option">B) The main session pauses until the skill completes</div>
+  <div class="exam-option correct">C) The skill runs in an isolated subagent while the main session continues ✓</div>
+  <div class="exam-option">D) The skill is queued and runs after the session ends</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> <code>context: fork</code> spawns an isolated subagent. <code>background: true</code> (default) means the main session continues without waiting. (B) describes <code>background: false</code>. (D) is fabricated.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q5 — 13.4</div>
+  <div class="exam-q-text">Which statement about <code>allowed-tools</code> is correct?</div>
+  <div class="exam-option">A) It restricts Claude to only those tools for the entire session</div>
+  <div class="exam-option">B) It permanently grants tool access that persists across messages</div>
+  <div class="exam-option correct">C) It pre-approves listed tools for the invocation turn only; the grant clears on the next user message ✓</div>
+  <div class="exam-option">D) It requires a separate permissions config file to function</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> <code>allowed-tools</code> is a one-turn grant that clears when the user sends their next message. It does not restrict unlisted tools and does not persist.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q6 — 13.5</div>
+  <div class="exam-q-text">A developer types <code>/compact focus on database schema decisions</code>. What happens?</div>
+  <div class="exam-option">A) Only database-related messages are kept; everything else is deleted</div>
+  <div class="exam-option correct">B) The conversation is summarized with emphasis on database schema decisions; older context is replaced with the summary ✓</div>
+  <div class="exam-option">C) The CLAUDE.md file is updated with a section about database schemas</div>
+  <div class="exam-option">D) Claude creates a new CLAUDE.md focused on database schemas</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> <code>/compact</code> with focus instructions tells Claude to prioritize those topics in the summary. The conversation is summarized (not deleted). <code>CLAUDE.md</code> is not modified — that's what <code>/memory</code> does.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q7 — 13.5</div>
+  <div class="exam-q-text">Which command should you use to create the initial <code>CLAUDE.md</code> file for a new project?</div>
+  <div class="exam-option">A) <code>/memory</code></div>
+  <div class="exam-option correct">B) <code>/init</code> ✓</div>
+  <div class="exam-option">C) <code>/compact</code></div>
+  <div class="exam-option">D) <code>/config</code></div>
+  <div class="exam-rationale"><strong>Rationale:</strong> <code>/init</code> scans the project structure and auto-generates a <code>CLAUDE.md</code> file. <code>/memory</code> is for editing an existing one. <code>/compact</code> manages conversation context. <code>/config</code> manages settings.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q8 — 13.3</div>
+  <div class="exam-q-text">A skill's description is 2,000 characters long. What happens?</div>
+  <div class="exam-option">A) The skill fails to load with a validation error</div>
+  <div class="exam-option correct">B) The description is truncated in the skill listing, potentially reducing auto-discovery accuracy ✓</div>
+  <div class="exam-option">C) Claude reads the full description regardless of length</div>
+  <div class="exam-option">D) The description is silently dropped entirely</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> Descriptions count toward a ~1,536-character shared listing budget. Exceeding it causes truncation in what Claude sees, reducing the likelihood of accurate auto-discovery. The skill itself still loads; it's the listing that's affected.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q9 — 13.1</div>
+  <div class="exam-q-text">In a custom command, what does the <code>!`git log --oneline -5`</code> syntax do?</div>
+  <div class="exam-option">A) Instructs Claude to run <code>git log</code> during execution</div>
+  <div class="exam-option">B) Creates a code block showing the git command</div>
+  <div class="exam-option correct">C) Runs the shell command before Claude sees the prompt; output replaces the block ✓</div>
+  <div class="exam-option">D) Passes the command to a subagent for background execution</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> <code>!`command`</code> is live data injection — the shell command runs during expansion (before Claude), and its output replaces the placeholder. Claude receives the actual output, not the command.</div>
+</div>
+
+<div class="exam-q">
+  <div class="exam-q-num">Q10 — 13.6</div>
+  <div class="exam-q-text">A developer wants to create a skill that: (1) only they can trigger, (2) runs in isolation, (3) uses only read tools, and (4) shows what file to audit. Which frontmatter is correct?</div>
+  <div class="exam-option correct" style="white-space:pre-wrap;">A)
+  disable-model-invocation: true
+  context: fork
+  allowed-tools: Read, Grep, Glob
+  argument-hint: "[file-path]" ✓</div>
+  <div class="exam-option" style="white-space:pre-wrap; margin-top:6px;">B)
+  user-invocable: false
+  context: fork
+  allowed-tools: Read, Write
+  argument-hint: "[file-path]"</div>
+  <div class="exam-option" style="white-space:pre-wrap; margin-top:6px;">C)
+  disable-model-invocation: true
+  allowed-tools: Read, Grep, Glob
+  argument-hint: "[file-path]"</div>
+  <div class="exam-option" style="white-space:pre-wrap; margin-top:6px;">D)
+  disable-model-invocation: true
+  context: fork
+  disallowed-tools: Read
+  argument-hint: "[file-path]"</div>
+  <div class="exam-rationale"><strong>Rationale:</strong> (A) satisfies all four requirements: <code>disable-model-invocation</code> = user-only, <code>context: fork</code> = isolated, <code>allowed-tools</code> = read-only tools, <code>argument-hint</code> = file path. (B) uses <code>user-invocable: false</code> which hides it from the user. (C) is missing <code>context: fork</code>. (D) disallows Read which contradicts the requirement.</div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                        -->
+<!-- ============================================================ -->
+<div style="margin-top:60px; padding:24px 0; border-top:1px solid var(--border); text-align:center;">
+  <p style="color:var(--text-muted); font-size:12px; margin:0;">
+    Claude Certified Architect — Chapter 13 Study Notes<br>
+    Generated for exam preparation · Verify all details against official Anthropic documentation
+  </p>
+</div>
+
+</div><!-- end .main -->
+
+
+</body></html>

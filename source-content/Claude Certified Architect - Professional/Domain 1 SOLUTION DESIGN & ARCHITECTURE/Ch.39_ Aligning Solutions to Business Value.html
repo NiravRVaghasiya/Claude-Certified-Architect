@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 39: Aligning Solutions to Business Value</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-alt: #f0f4fa;
+      --text: #16233a;
+      --text-soft: #48576f;
+      --muted: #7a879c;
+      --border: #dde4ee;
+      --border-strong: #c6d1e0;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --primary-soft: #e8f0ff;
+      --tip: #0f766e;
+      --tip-bg: #e6f7f4;
+      --tip-border: #99e2d8;
+      --exam: #b45309;
+      --exam-bg: #fff5e6;
+      --exam-border: #f5cf94;
+      --pitfall: #b91c1c;
+      --pitfall-bg: #fdeaea;
+      --pitfall-border: #f3b6b6;
+      --ok: #15803d;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --mono: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow: 0 1px 3px rgba(20,35,58,0.06), 0 6px 18px rgba(20,35,58,0.05);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px 80px; }
+
+    /* Header */
+    header.doc-header {
+      background: linear-gradient(135deg, #1e293b 0%, #1e40af 100%);
+      color: #fff;
+      padding: 44px 20px 40px;
+      text-align: center;
+    }
+    header.doc-header .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      font-weight: 700;
+      color: #bcd0ff;
+      margin: 0 0 10px;
+    }
+    header.doc-header h1 { margin: 0; font-size: 30px; line-height: 1.25; font-weight: 800; }
+    header.doc-header p.sub { margin: 12px auto 0; max-width: 640px; color: #d6e2ff; font-size: 15px; }
+
+    /* TOC */
+    nav.toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin: 28px 0 8px;
+      box-shadow: var(--shadow);
+    }
+    nav.toc h2 { margin: 0 0 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+    nav.toc li { margin: 4px 0; break-inside: avoid; }
+    nav.toc a { color: var(--primary-dark); text-decoration: none; font-weight: 500; font-size: 14px; }
+    nav.toc a:hover { text-decoration: underline; }
+
+    /* Sections */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 30px 30px;
+      margin: 24px 0;
+      box-shadow: var(--shadow);
+    }
+    section > h2 {
+      margin: 0 0 4px;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    section > h2 .num {
+      font-family: var(--mono);
+      font-size: 15px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      flex: none;
+    }
+    h3 { font-size: 17px; margin: 24px 0 8px; color: var(--primary-dark); }
+    h4 { font-size: 15px; margin: 18px 0 6px; color: var(--text); }
+
+    .concept {
+      background: var(--surface-alt);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 18px;
+      margin: 12px 0 18px;
+      font-size: 15px;
+      color: var(--text-soft);
+    }
+    .concept strong { color: var(--text); }
+
+    p { margin: 10px 0; }
+    ul, ol { margin: 10px 0; padding-left: 22px; }
+    li { margin: 5px 0; }
+    li > ul { margin: 4px 0; }
+    code { font-family: var(--mono); background: var(--surface-alt); padding: 1px 6px; border-radius: 5px; font-size: 0.88em; color: var(--primary-dark); }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+    caption { caption-side: top; text-align: left; font-size: 13px; color: var(--muted); margin-bottom: 6px; font-style: italic; }
+    th { background: #1e293b; color: #fff; text-align: left; padding: 10px 12px; font-weight: 600; font-size: 13px; }
+    td { padding: 10px 12px; border-top: 1px solid var(--border); vertical-align: top; color: var(--text-soft); }
+    tbody tr:nth-child(even) td { background: var(--surface-alt); }
+    tbody tr:hover td { background: var(--primary-soft); }
+    td strong { color: var(--text); }
+
+    /* Callout boxes */
+    .tip-box, .exam-strategy-box, .pitfall-box {
+      border-radius: var(--radius-sm);
+      padding: 14px 16px 14px 18px;
+      margin: 16px 0;
+      font-size: 14.5px;
+      border: 1px solid;
+      border-left-width: 5px;
+    }
+    .tip-box { background: var(--tip-bg); border-color: var(--tip-border); border-left-color: var(--tip); color: #114f49; }
+    .tip-box strong { color: var(--tip); }
+    .exam-strategy-box { background: var(--exam-bg); border-color: var(--exam-border); border-left-color: var(--exam); color: #7c4a0a; }
+    .exam-strategy-box strong { color: var(--exam); }
+    .pitfall-box { background: var(--pitfall-bg); border-color: var(--pitfall-border); border-left-color: var(--pitfall); color: #8a1c1c; }
+    .pitfall-box strong { color: var(--pitfall); }
+    .pitfall-box ul { margin: 6px 0 0; }
+
+    /* 4-quadrant value pillar grid */
+    .pillar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 18px 0; }
+    .pillar-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; }
+    .pillar-card.efficiency::before { background: #2563eb; }
+    .pillar-card.transformation::before { background: #7c3aed; }
+    .pillar-card.productivity::before { background: #0f766e; }
+    .pillar-card.cost::before { background: #b45309; }
+    .pillar-card .icon { font-size: 24px; }
+    .pillar-card h4 { margin: 6px 0 4px; font-size: 16px; color: var(--text); }
+    .pillar-card .metric { font-size: 12.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px; }
+    .pillar-card p { margin: 0; font-size: 13.5px; color: var(--text-soft); }
+
+    /* Cost-performance quadrant (SVG) */
+    .quadrant-wrap { display: flex; justify-content: center; margin: 20px 0; }
+    figure { margin: 18px 0; }
+    figcaption { font-size: 13px; color: var(--muted); text-align: center; margin-top: 8px; font-style: italic; }
+
+    /* Mermaid */
+    .mermaid { background: var(--surface-alt); border: 1px dashed var(--border-strong); border-radius: var(--radius-sm); padding: 18px; text-align: center; margin: 18px 0; }
+
+    /* Case study */
+    .case-study { border: 2px solid var(--primary); border-radius: var(--radius); padding: 4px 22px 22px; margin: 22px 0; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--surface) 60px); }
+    .case-study .badge { display: inline-block; background: var(--primary); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 12px; border-radius: 0 0 8px 8px; margin-left: 4px; }
+
+    .proposal-template { border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface); padding: 0; overflow: hidden; margin: 18px 0; }
+    .proposal-template .pt-row { display: grid; grid-template-columns: 190px 1fr; border-top: 1px solid var(--border); }
+    .proposal-template .pt-row:first-child { border-top: none; }
+    .proposal-template .pt-label { background: var(--surface-alt); font-weight: 600; padding: 12px 14px; font-size: 13.5px; color: var(--text); border-right: 1px solid var(--border); }
+    .proposal-template .pt-value { padding: 12px 14px; font-size: 14px; color: var(--text-soft); }
+
+    .business-case-quote { border-left: 4px solid var(--ok); background: #edf7f0; border-radius: 0 8px 8px 0; padding: 14px 18px; font-size: 14.5px; color: #14532d; margin: 14px 0; }
+
+    /* Summary table emphasis */
+    #summary table td:first-child { font-weight: 600; color: var(--text); white-space: nowrap; }
+
+    footer.doc-footer { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 30px; padding: 20px; }
+
+    @media (max-width: 640px) {
+      .pillar-grid { grid-template-columns: 1fr; }
+      nav.toc ol { columns: 1; }
+      .proposal-template .pt-row { grid-template-columns: 1fr; }
+      .proposal-template .pt-label { border-right: none; border-bottom: 1px solid var(--border); }
+      section { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="doc-header">
+    <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 39: Aligning Solutions to Business Value</h1>
+    <p class="sub">An exam-ready study guide covering value pillars, performance SLAs, cost–performance tradeoffs, business-case construction, and a hands-on value-aligned architecture proposal.</p>
+  </header>
+
+  <div class="wrap">
+
+    <nav class="toc">
+      <h2>In this chapter</h2>
+      <ol>
+        <li><a href="#s39-1">Business Value Pillars: Efficiency, Transformation, Productivity &amp; Cost</a></li>
+        <li><a href="#s39-2">Performance SLAs and Architectural Implications</a></li>
+        <li><a href="#s39-3">Cost–Performance Tradeoff Analysis</a></li>
+        <li><a href="#s39-4">Building the Business Case for Claude-Based Solutions</a></li>
+        <li><a href="#s39-5">Hands-On: Creating a Value-Aligned Architecture Proposal</a></li>
+        <li><a href="#summary">Chapter Summary &amp; Quick-Revision Table</a></li>
+      </ol>
+    </nav>
+
+    <p style="font-size:13px;color:var(--muted);font-style:italic;margin:14px 2px;">
+      Note on figures: This guide deliberately uses <strong>qualitative and relative</strong> language for Claude
+      capabilities, pricing, and SLA behaviour. Exact token prices, latency numbers, and uptime percentages change
+      over time and vary by deployment platform — always confirm current figures against Anthropic's official
+      documentation and your provider's SLA before quoting them in a real proposal or exam scenario.
+    </p>
+
+    <!-- ============ 39.1 ============ -->
+    <section id="s39-1">
+      <h2><span class="num">39.1</span> Business Value Pillars: Efficiency, Transformation, Productivity &amp; Cost</h2>
+
+      <div class="concept">
+        <strong>Concept.</strong> Every AI solution should be justified against one or more of four value pillars.
+        <em>Efficiency</em> is doing the same work for less, <em>Productivity</em> is doing more work in the same time,
+        <em>Transformation</em> is doing something that was previously impossible or economically unviable, and
+        <em>Cost</em> is the resource envelope that constrains all three. A well-aligned architecture makes explicit
+        which pillar it primarily serves and picks metrics that prove it.
+      </div>
+
+      <h3>The four pillars at a glance</h3>
+      <div class="pillar-grid">
+        <div class="pillar-card efficiency">
+          <div class="icon">⚙️</div>
+          <h4>Efficiency</h4>
+          <p class="metric">Metric: cost / unit of work</p>
+          <p>Automate or accelerate existing processes so each task consumes fewer human or compute resources. Levers: model-tier selection, prompt caching, batch processing.</p>
+        </div>
+        <div class="pillar-card productivity">
+          <div class="icon">🚀</div>
+          <h4>Productivity</h4>
+          <p class="metric">Metric: time saved / throughput</p>
+          <p>Expand what a person or team can accomplish. Levers: tool-use, agentic workflows, drafting &amp; summarisation, developer assistance.</p>
+        </div>
+        <div class="pillar-card transformation">
+          <div class="icon">🔭</div>
+          <h4>Transformation</h4>
+          <p class="metric">Metric: new capability / revenue</p>
+          <p>Unlock offerings that weren't feasible before — e.g. natural-language products, 24/7 multilingual service, large-scale document understanding.</p>
+        </div>
+        <div class="pillar-card cost">
+          <div class="icon">💰</div>
+          <h4>Cost</h4>
+          <p class="metric">Metric: total cost of ownership</p>
+          <p>The constraint layer. Every other pillar is evaluated <em>net of</em> the token, integration, and operational cost required to achieve it.</p>
+        </div>
+      </div>
+
+      <h3>Mapping pillars to metrics and architectural levers</h3>
+      <table>
+        <caption>Table 39.1 — Pillar → measurable outcome → architectural lever</caption>
+        <thead>
+          <tr><th>Pillar</th><th>Primary metric</th><th>Typical architectural lever</th><th>Example outcome</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Efficiency</strong></td><td>Cost per completed task</td><td>Right-size the model tier; cache repeated context; batch non-urgent jobs</td><td>Same ticket volume handled at lower unit cost</td></tr>
+          <tr><td><strong>Productivity</strong></td><td>Tasks per person per day; time saved</td><td>Tool-use, retrieval, agentic multi-step workflows</td><td>Analysts produce more reports in the same hours</td></tr>
+          <tr><td><strong>Transformation</strong></td><td>New revenue / newly addressable use case</td><td>Long-context understanding, multimodal input, new product surface</td><td>A capability the business could not previously offer</td></tr>
+          <tr><td><strong>Cost</strong></td><td>Total cost of ownership (TCO)</td><td>Token optimisation, caching, tier routing, batch discounts</td><td>Predictable spend within budget envelope</td></tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> When a stakeholder says "we want to use AI to save money," push them to name the pillar.
+        "Save money" usually means <em>Efficiency</em> (lower unit cost) but is often confused with <em>Productivity</em>
+        (more output for the same spend). They lead to different architectures and different success metrics — naming
+        the pillar upfront prevents a mis-scoped solution.
+      </div>
+
+      <div class="exam-strategy-box">
+        <strong>🎯 Exam Strategy:</strong> Pillar questions are usually <em>classification</em> questions: a short business
+        scenario is given and you must identify the <strong>primary</strong> value pillar. Read for the outcome the
+        stakeholder actually cares about. "Reduce handle time" → Efficiency/Productivity; "launch a capability we
+        never had" → Transformation. When two pillars seem to fit, choose the one tied to the <em>headline business
+        goal</em>, not the enabling side-effect.
+      </div>
+
+      <div class="pitfall-box">
+        <strong>⚠️ Common pitfalls:</strong>
+        <ul>
+          <li>Conflating <strong>Efficiency</strong> (cheaper per task) with <strong>Productivity</strong> (more tasks) — they optimise for different metrics.</li>
+          <li>Claiming <strong>Transformation</strong> for what is really incremental efficiency; reserve it for genuinely new capability.</li>
+          <li>Treating <strong>Cost</strong> as a pillar to <em>maximise savings on</em> rather than a constraint to satisfy while delivering the primary pillar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 39.2 ============ -->
+    <section id="s39-2">
+      <h2><span class="num">39.2</span> Performance SLAs and Architectural Implications</h2>
+
+      <div class="concept">
+        <strong>Concept.</strong> A Service-Level Agreement (SLA) is a commitment about <em>measurable</em> behaviour of the
+        system. For LLM-based solutions an SLA is rarely a single number — it decomposes into <em>latency</em>,
+        <em>throughput</em>, <em>availability</em>, and <em>output quality</em>. The architect's job is to translate each SLA
+        dimension into concrete design choices (model tier, streaming, caching, fallback routing, batch vs. real-time).
+      </div>
+
+      <h3>The four SLA dimensions</h3>
+      <table>
+        <caption>Table 39.2 — SLA dimensions and their architectural response</caption>
+        <thead>
+          <tr><th>Dimension</th><th>What it measures</th><th>Architectural response</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Latency</strong></td><td>Time to first token / time to full response</td><td>Choose a faster model tier; stream tokens; trim prompt/context; cache repeated context</td></tr>
+          <tr><td><strong>Throughput</strong></td><td>Requests or tokens processed per unit time</td><td>Concurrency &amp; rate-limit planning; batch API for bulk jobs; queueing and back-pressure</td></tr>
+          <tr><td><strong>Availability</strong></td><td>Uptime / successful-response rate</td><td>Retries with backoff; multi-region or multi-platform fallback; graceful degradation to a smaller model</td></tr>
+          <tr><td><strong>Quality</strong></td><td>Accuracy, faithfulness, task success rate</td><td>Higher-capability tier for hard steps; evaluation harness; human-in-the-loop for high-stakes output</td></tr>
+        </tbody>
+      </table>
+
+      <h3>SLA-driven architecture decision flow</h3>
+      <figure>
+        <div class="mermaid">
+flowchart TD
+    A[Capture business requirement] --&gt; B{Primary SLA constraint?}
+    B --&gt;|Low latency| C[Fast/economical tier + streaming + trimmed context]
+    B --&gt;|High quality| D[High-capability tier + eval harness + optional human review]
+    B --&gt;|High throughput| E[Batch API / async queue + concurrency planning]
+    B --&gt;|High availability| F[Retries + backoff + fallback tier/region]
+    C --&gt; G[Define measurable target &amp; monitor]
+    D --&gt; G
+    E --&gt; G
+    F --&gt; G
+    G --&gt; H{Target met in test?}
+    H --&gt;|No| B
+    H --&gt;|Yes| I[Commit SLA &amp; document assumptions]
+        </div>
+        <figcaption>Figure 39.2 — Start from the dominant constraint, design to it, then measure before committing.</figcaption>
+      </figure>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> A latency SLA has two parts: <strong>time-to-first-token</strong> (perceived responsiveness)
+        and <strong>total completion time</strong>. Streaming can satisfy a "feels fast" requirement even when the full
+        response is long — useful when the business constraint is user experience rather than raw completion speed.
+      </div>
+
+      <div class="exam-strategy-box">
+        <strong>🎯 Exam Strategy:</strong> SLA questions typically present a scenario with <em>conflicting</em>
+        latency/quality/cost requirements. First identify the <strong>primary business constraint</strong>, then eliminate
+        answer choices that optimise for the wrong dimension. Watch for distractors that offer the "best" model everywhere
+        (ignores latency/cost) or the fastest model everywhere (ignores quality on hard steps). The right answer usually
+        <em>routes</em> — different tiers for different steps.
+      </div>
+
+      <div class="pitfall-box">
+        <strong>⚠️ Common pitfalls:</strong>
+        <ul>
+          <li>Treating the SLA as one number instead of four independent dimensions.</li>
+          <li>Promising a hard uptime/latency percentage that depends on an upstream provider whose own SLA you don't control — commit only to what your architecture can actually enforce.</li>
+          <li>Ignoring that quality is measurable: without an evaluation harness, a "quality SLA" is unverifiable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 39.3 ============ -->
+    <section id="s39-3">
+      <h2><span class="num">39.3</span> Cost–Performance Tradeoff Analysis</h2>
+
+      <div class="concept">
+        <strong>Concept.</strong> Cost and performance are a curve, not a single point. Higher-capability model tiers
+        generally cost more per token and may be slower, while faster/economical tiers cost less but may need more
+        retries or human correction on hard tasks. The architect's goal is not the cheapest call — it is the lowest
+        <strong>cost per successful outcome</strong> that still meets the SLA.
+      </div>
+
+      <h3>What actually drives cost</h3>
+      <ul>
+        <li><strong>Tokens in &amp; out</strong> — input and output tokens are billed separately; output tokens typically cost more than input, so verbose responses are expensive.</li>
+        <li><strong>Model tier</strong> — more capable tiers carry a higher per-token price.</li>
+        <li><strong>Context length</strong> — large retrieved/attached context inflates input tokens on every call.</li>
+        <li><strong>Retries &amp; corrections</strong> — a "cheap" call that fails and is retried (or manually fixed) can cost more than one right-first-time call on a stronger tier.</li>
+        <li><strong>Caching &amp; batching</strong> — prompt caching reduces the cost of repeated context; batch/async processing typically earns a discount for non-real-time work.</li>
+      </ul>
+
+      <h3>The cost–performance quadrant</h3>
+      <div class="quadrant-wrap">
+        <svg width="460" height="340" viewBox="0 0 460 340" role="img" aria-label="Cost versus performance quadrant chart">
+          <!-- axes -->
+          <line x1="60" y1="20" x2="60" y2="290" stroke="#c6d1e0" stroke-width="2"></line>
+          <line x1="60" y1="290" x2="430" y2="290" stroke="#c6d1e0" stroke-width="2"></line>
+          <!-- axis arrows -->
+          <polygon points="60,14 55,26 65,26" fill="#7a879c"></polygon>
+          <polygon points="436,290 424,285 424,295" fill="#7a879c"></polygon>
+          <!-- axis labels -->
+          <text x="16" y="160" fill="#48576f" font-size="13" font-family="sans-serif" transform="rotate(-90 16,160)">Cost per task →</text>
+          <text x="200" y="325" fill="#48576f" font-size="13" font-family="sans-serif">Performance / quality →</text>
+          <!-- quadrant divider -->
+          <line x1="245" y1="20" x2="245" y2="290" stroke="#dde4ee" stroke-width="1" stroke-dasharray="4 4"></line>
+          <line x1="60" y1="155" x2="430" y2="155" stroke="#dde4ee" stroke-width="1" stroke-dasharray="4 4"></line>
+          <!-- quadrant labels -->
+          <text x="150" y="90" fill="#b45309" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="600">Overspend</text>
+          <text x="150" y="106" fill="#7a879c" font-size="10.5" font-family="sans-serif" text-anchor="middle">high cost, low value</text>
+          <text x="338" y="90" fill="#1e40af" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="600">Premium / justified</text>
+          <text x="338" y="106" fill="#7a879c" font-size="10.5" font-family="sans-serif" text-anchor="middle">high cost, high value</text>
+          <text x="150" y="228" fill="#15803d" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="600">Efficient</text>
+          <text x="150" y="244" fill="#7a879c" font-size="10.5" font-family="sans-serif" text-anchor="middle">low cost, adequate</text>
+          <text x="338" y="228" fill="#0f766e" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="600">Sweet spot</text>
+          <text x="338" y="244" fill="#7a879c" font-size="10.5" font-family="sans-serif" text-anchor="middle">low cost, high value</text>
+          <!-- sample points -->
+          <circle cx="150" cy="70" r="7" fill="#b45309" opacity="0.85"></circle>
+          <text x="150" y="58" fill="#48576f" font-size="9.5" font-family="sans-serif" text-anchor="middle">Top tier on easy task</text>
+          <circle cx="345" cy="70" r="7" fill="#1e40af" opacity="0.85"></circle>
+          <text x="360" y="58" fill="#48576f" font-size="9.5" font-family="sans-serif" text-anchor="middle">Top tier, hard task</text>
+          <circle cx="150" cy="235" r="7" fill="#15803d" opacity="0.85"></circle>
+          <circle cx="345" cy="215" r="8" fill="#0f766e"></circle>
+          <text x="345" y="200" fill="#0f766e" font-size="10" font-family="sans-serif" text-anchor="middle" font-weight="600">← target</text>
+        </svg>
+      </div>
+      <figure style="margin-top:0;">
+        <figcaption>Figure 39.3 — Aim for the "sweet spot": adequate cost with the quality your SLA requires. Reaching it usually means <em>routing</em> — economical tiers for easy steps, stronger tiers for hard steps.</figcaption>
+      </figure>
+
+      <h3>Normalise on the right unit</h3>
+      <table>
+        <caption>Table 39.3 — Why the unit of measurement matters</caption>
+        <thead>
+          <tr><th>Naïve metric</th><th>Problem</th><th>Better metric</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cost per API call</td><td>Ignores failed calls, retries, and human rework</td><td><strong>Cost per successful task</strong></td></tr>
+          <tr><td>Tokens per request</td><td>Says nothing about whether the task was completed</td><td>Tokens per completed outcome</td></tr>
+          <tr><td>Latency of one call</td><td>Multi-step agents make several calls</td><td>End-to-end task latency</td></tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> When comparing model tiers, always normalise on <strong>cost per <em>successful</em> task</strong>,
+        not cost per API call. A cheaper model that needs two retries or a human correction can be more expensive overall
+        than a stronger model that succeeds on the first attempt.
+      </div>
+
+      <div class="exam-strategy-box">
+        <strong>🎯 Exam Strategy:</strong> Tradeoff questions often give you per-token or per-call prices and tempt you to
+        pick the cheapest option. Re-frame the numbers as <em>cost per successful outcome</em> (factor in retry/failure
+        rate). The correct answer is frequently a <strong>routing / tiered</strong> design, not "use the cheapest model for
+        everything" or "use the best model for everything."
+      </div>
+
+      <div class="pitfall-box">
+        <strong>⚠️ Common pitfalls:</strong>
+        <ul>
+          <li>Optimising cost per call while ignoring retries, failures, and downstream human rework.</li>
+          <li>Forgetting that output tokens usually cost more than input — long, chatty responses quietly inflate cost.</li>
+          <li>Overlooking prompt caching / batching, which can materially change the tradeoff for repeated-context or non-real-time workloads.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 39.4 ============ -->
+    <section id="s39-4">
+      <h2><span class="num">39.4</span> Building the Business Case for Claude-Based Solutions</h2>
+
+      <div class="concept">
+        <strong>Concept.</strong> A business case connects the technical solution to a financial and strategic decision.
+        It quantifies <em>value</em> (against the four pillars), subtracts <em>total cost of ownership</em>, accounts for
+        <em>risk</em>, and states a <em>value-realisation timeline</em>. A strong case is defensible: every number is
+        traceable to an assumption a reviewer can challenge.
+      </div>
+
+      <h3>Anatomy of the business case</h3>
+      <table>
+        <caption>Table 39.4 — Components of a defensible business case</caption>
+        <thead>
+          <tr><th>Component</th><th>Question it answers</th><th>What to include</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Value / benefit</strong></td><td>What do we gain?</td><td>Quantified outcome per pillar (cost saved, hours freed, new revenue) with stated assumptions</td></tr>
+          <tr><td><strong>Total cost of ownership</strong></td><td>What will it really cost?</td><td>Model/token spend + integration + monitoring/eval + maintenance + human-in-the-loop</td></tr>
+          <tr><td><strong>ROI / payback</strong></td><td>Is it worth it, and when?</td><td>Net benefit vs. cost; payback period; sensitivity to key assumptions</td></tr>
+          <tr><td><strong>Risk &amp; mitigation</strong></td><td>What could go wrong?</td><td>Quality/accuracy risk, dependency/availability risk, cost-overrun risk + mitigations</td></tr>
+          <tr><td><strong>Value realisation</strong></td><td>When do benefits land?</td><td>Pilot → scale timeline, adoption ramp, leading indicators to track</td></tr>
+        </tbody>
+      </table>
+
+      <h3>A simple, defensible ROI frame</h3>
+      <p>Use plain, auditable relationships rather than invented precision:</p>
+      <ul>
+        <li><code>Net value = Annual benefit − Total cost of ownership</code></li>
+        <li><code>ROI (%) = (Net value ÷ Total cost of ownership) × 100</code></li>
+        <li><code>Payback period = Total upfront cost ÷ Monthly net benefit</code></li>
+      </ul>
+      <p style="font-size:13.5px;color:var(--muted);">Populate these with your own validated assumptions — the exam rewards the <em>method and traceability</em>, not a memorised dollar figure.</p>
+
+      <h3>How the case comes together</h3>
+      <figure>
+        <div class="mermaid">
+flowchart LR
+    P[Value pillars 39.1] --&gt; V[Quantify benefit]
+    S[SLA targets 39.2] --&gt; A[Architecture &amp; tier choice]
+    A --&gt; C[Estimate TCO 39.3]
+    V --&gt; R[ROI / payback]
+    C --&gt; R
+    R --&gt; K[Risk &amp; mitigation]
+    K --&gt; B[[Business case &amp; recommendation]]
+        </div>
+        <figcaption>Figure 39.4 — The business case is the convergence of value (39.1), SLA-driven architecture (39.2), and cost analysis (39.3).</figcaption>
+      </figure>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Include a <strong>sensitivity line</strong>: show how ROI changes if adoption is 20% lower
+        or token cost is 20% higher. Reviewers trust a case that survives a pessimistic scenario far more than one that
+        only works under best-case assumptions.
+      </div>
+
+      <div class="exam-strategy-box">
+        <strong>🎯 Exam Strategy:</strong> Business-case questions test whether you include the <em>full</em> TCO, not just
+        token spend. Distractors typically present an attractive benefit while hiding integration, monitoring, or
+        human-review costs. Choose the answer that nets benefit against <strong>complete</strong> cost and ties value to a
+        realisation timeline — not the one with the biggest headline saving.
+      </div>
+
+      <div class="pitfall-box">
+        <strong>⚠️ Common pitfalls:</strong>
+        <ul>
+          <li>Counting only per-token cost and omitting integration, evaluation, monitoring, and human-in-the-loop TCO.</li>
+          <li>Presenting benefits with false precision instead of stated, challengeable assumptions.</li>
+          <li>Ignoring the adoption ramp — value that lands in month 9 shouldn't be booked in month 1.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 39.5 ============ -->
+    <section id="s39-5">
+      <h2><span class="num">39.5</span> Hands-On: Creating a Value-Aligned Architecture Proposal</h2>
+
+      <div class="concept">
+        <strong>Concept.</strong> This section synthesises 39.1–39.4 into a single worked deliverable. Given a
+        scenario, you (1) map it to the value pillars, (2) define measurable SLAs, (3) run a cost–performance
+        tradeoff, and (4) write a one-paragraph business case — captured in a reusable proposal template.
+      </div>
+
+      <div class="case-study">
+        <span class="badge">Worked Case Study</span>
+        <h3 style="margin-top:14px;">Scenario: Customer-support automation for a mid-size retailer</h3>
+        <p>"ShopNorth," a mid-size online retailer, handles a high volume of repetitive support tickets (order status,
+        returns, sizing questions) plus a smaller set of complex cases (disputes, escalations). Agents are overloaded at
+        peak; response times slip and CSAT drops. The company wants AI to help — without degrading answer quality on the
+        hard cases.</p>
+
+        <h4>Step 1 — Map to the four value pillars</h4>
+        <table>
+          <thead><tr><th>Pillar</th><th>How it applies to ShopNorth</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Efficiency</strong></td><td>Deflect/auto-draft answers to repetitive tickets → lower cost per resolved ticket.</td></tr>
+            <tr><td><strong>Productivity</strong></td><td>Agents handle more tickets per shift by editing AI drafts instead of writing from scratch.</td></tr>
+            <tr><td><strong>Transformation</strong></td><td>24/7 first-response coverage and multilingual support the team couldn't previously staff.</td></tr>
+            <tr><td><strong>Cost</strong></td><td>Constraint: stay within the support-tooling budget; spend must scale sub-linearly with ticket volume.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Step 2 — Define measurable SLAs</h4>
+        <ul>
+          <li><strong>Latency:</strong> streamed first response should feel immediate for self-serve users; full draft available quickly for agents.</li>
+          <li><strong>Quality:</strong> factual, policy-compliant answers on common tickets; complex/dispute tickets routed to a human (with an AI-prepared summary).</li>
+          <li><strong>Availability:</strong> graceful fallback — if the primary path is unavailable, degrade to a smaller model or a canned response + queue, never a dead end.</li>
+          <li><strong>Throughput:</strong> absorb peak spikes via async queueing for non-urgent categories.</li>
+        </ul>
+
+        <h4>Step 3 — Cost–performance tradeoff (routing design)</h4>
+        <table>
+          <thead><tr><th>Ticket type</th><th>Model tier</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>Repetitive / FAQ</td><td>Fast, economical tier + prompt caching of policy context</td><td>High volume, low difficulty → optimise cost per successful task</td></tr>
+            <tr><td>Moderate (returns logic, sizing)</td><td>Balanced tier</td><td>Needs reasoning but not top capability</td></tr>
+            <tr><td>Complex / disputes</td><td>High-capability tier → then human review</td><td>Quality &amp; risk dominate; wrong answer is costly</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:13.5px;color:var(--text-soft);">Measured on <strong>cost per resolved ticket</strong>, the routed design beats "one model for everything" — cheap tickets stay cheap, hard tickets stay accurate.</p>
+
+        <h4>Step 4 — One-paragraph business case</h4>
+        <div class="business-case-quote">
+          Deploying a tiered, Claude-based support assistant lets ShopNorth auto-resolve or auto-draft the majority of
+          repetitive tickets (Efficiency + Productivity) and offer 24/7 multilingual first response (Transformation),
+          while routing complex disputes to human agents with an AI-prepared summary to protect answer quality. Benefits
+          are estimated from current ticket mix and agent-hour cost; total cost of ownership includes token spend
+          (reduced via caching and batch for non-urgent categories), integration, an evaluation harness, and
+          human-in-the-loop review. Net value is projected positive after an initial pilot-and-tune ramp, with ROI most
+          sensitive to deflection rate and adoption — both tracked as leading indicators before scaling.
+        </div>
+
+        <h4>Reusable proposal template</h4>
+        <div class="proposal-template">
+          <div class="pt-row"><div class="pt-label">Business problem</div><div class="pt-value">One or two sentences on the pain and who feels it.</div></div>
+          <div class="pt-row"><div class="pt-label">Primary value pillar(s)</div><div class="pt-value">Efficiency / Productivity / Transformation (with Cost as constraint).</div></div>
+          <div class="pt-row"><div class="pt-label">Success metric(s)</div><div class="pt-value">e.g. cost per resolved task, CSAT, agent throughput, deflection rate.</div></div>
+          <div class="pt-row"><div class="pt-label">SLA targets</div><div class="pt-value">Latency, quality, availability, throughput — each measurable.</div></div>
+          <div class="pt-row"><div class="pt-label">Architecture &amp; routing</div><div class="pt-value">Which tier per task type; caching / batch / fallback strategy.</div></div>
+          <div class="pt-row"><div class="pt-label">Cost model (TCO)</div><div class="pt-value">Token + integration + eval/monitoring + human-in-the-loop.</div></div>
+          <div class="pt-row"><div class="pt-label">ROI &amp; payback</div><div class="pt-value">Net value, payback period, and a sensitivity line.</div></div>
+          <div class="pt-row"><div class="pt-label">Risks &amp; mitigations</div><div class="pt-value">Quality, dependency/availability, cost overrun — with controls.</div></div>
+          <div class="pt-row"><div class="pt-label">Rollout &amp; value realisation</div><div class="pt-value">Pilot → measure → scale; leading indicators to watch.</div></div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Lead the proposal with the <strong>business problem and primary pillar</strong>, not the
+        model choice. Architecture should read as a <em>consequence</em> of the value and SLA requirements — reviewers
+        (and exam graders) look for that direction of reasoning.
+      </div>
+
+      <div class="exam-strategy-box">
+        <strong>🎯 Exam Strategy:</strong> Hands-on / scenario questions ask you to <em>assemble</em> the pieces. Work in
+        order — pillar → SLA → tradeoff → business case — and make sure each step references the previous one. Answers that
+        jump straight to "use model X" without grounding it in a pillar and an SLA are the trap; the correct answer shows
+        the chain of reasoning.
+      </div>
+
+      <div class="pitfall-box">
+        <strong>⚠️ Common pitfalls:</strong>
+        <ul>
+          <li>Choosing the model first and back-filling the justification.</li>
+          <li>Defining SLAs you can't measure, or omitting the fallback/availability path.</li>
+          <li>Using one tier for all ticket types instead of routing by difficulty and risk.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SUMMARY ============ -->
+    <section id="summary">
+      <h2>📋 Chapter Summary &amp; Quick-Revision Table</h2>
+      <div class="concept"><strong>Use this as your last-minute revision sheet.</strong> Every row maps a key term to what it means and the one decision heuristic to remember.</div>
+      <table>
+        <caption>Table 39.5 — Consolidated key terms, relationships, and decision heuristics</caption>
+        <thead>
+          <tr><th>Term / concept</th><th>Meaning</th><th>Decision heuristic to remember</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Efficiency</td><td>Same work, lower unit cost</td><td>Metric = cost per completed task</td></tr>
+          <tr><td>Productivity</td><td>More work in the same time</td><td>Metric = throughput / time saved</td></tr>
+          <tr><td>Transformation</td><td>A newly feasible capability</td><td>Reserve for genuinely new capability, not incremental savings</td></tr>
+          <tr><td>Cost</td><td>Resource constraint on all pillars</td><td>A constraint to satisfy, not a pillar to "maximise savings" on</td></tr>
+          <tr><td>SLA dimensions</td><td>Latency, throughput, availability, quality</td><td>An SLA is four numbers, not one</td></tr>
+          <tr><td>Latency (two parts)</td><td>Time-to-first-token &amp; total completion</td><td>Streaming can satisfy "feels fast" for long outputs</td></tr>
+          <tr><td>Quality SLA</td><td>Accuracy / task success rate</td><td>Unverifiable without an evaluation harness</td></tr>
+          <tr><td>Cost drivers</td><td>Tokens in/out, tier, context, retries, caching/batch</td><td>Output tokens usually cost more than input</td></tr>
+          <tr><td>Cost per successful task</td><td>Cost normalised to outcomes, not calls</td><td>Always normalise here when comparing tiers</td></tr>
+          <tr><td>Tiered routing</td><td>Different model tiers per step/difficulty</td><td>Usually the correct answer over "one model for all"</td></tr>
+          <tr><td>Net value</td><td>Annual benefit − TCO</td><td><code>ROI = (Net value ÷ TCO) × 100</code></td></tr>
+          <tr><td>Payback period</td><td>Time to recover upfront cost</td><td><code>Upfront cost ÷ monthly net benefit</code></td></tr>
+          <tr><td>Total cost of ownership</td><td>Tokens + integration + eval + monitoring + human-in-loop</td><td>Never quote token cost alone as "the cost"</td></tr>
+          <tr><td>Sensitivity analysis</td><td>ROI under pessimistic assumptions</td><td>A case must survive −20% adoption / +20% cost</td></tr>
+          <tr><td>Value realisation</td><td>When benefits actually land</td><td>Book value on the adoption ramp, not day one</td></tr>
+          <tr><td>Proposal order</td><td>Pillar → SLA → tradeoff → business case</td><td>Architecture is a consequence of value + SLA</td></tr>
+        </tbody>
+      </table>
+
+      <div class="exam-strategy-box">
+        <strong>🎯 Whole-chapter strategy:</strong> Almost every Chapter 39 question reduces to one move — <em>identify the
+        primary business constraint or pillar first</em>, then evaluate options against it. When numbers appear, convert
+        them to <strong>cost per successful outcome</strong>. When a design appears, prefer <strong>routing</strong> over a
+        single tier. When a case appears, check for <strong>complete TCO</strong> and a <strong>realisation timeline</strong>.
+      </div>
+    </section>
+
+    <footer class="doc-footer">
+      Study guide — Chapter 39: Aligning Solutions to Business Value · Claude Certified Architect (Foundations &amp; Professional).<br>
+      Figures are intentionally qualitative; verify current model pricing, latency, and SLA terms against official documentation before use.
+    </footer>
+
+  </div>
+
+  <script>
+    // Initialise Mermaid after the DOM is present (scripts placed at end of body).
+    if (window.mermaid) {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          primaryColor: '#e8f0ff',
+          primaryTextColor: '#16233a',
+          primaryBorderColor: '#2563eb',
+          lineColor: '#7a879c',
+          fontSize: '14px',
+          fontFamily: 'sans-serif'
+        }
+      });
+    }
+  </script>
+
+
+</body></html>

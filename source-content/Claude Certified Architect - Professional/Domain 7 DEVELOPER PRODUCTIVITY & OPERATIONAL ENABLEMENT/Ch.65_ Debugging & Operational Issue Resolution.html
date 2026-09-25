@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 65: Debugging &amp; Operational Issue Resolution — Claude Certified Architect</title>
+<style>
+  :root {
+    --navy: #1E293B;
+    --blue: #2563EB;
+    --blue-soft: #EFF6FF;
+    --green: #059669;
+    --green-soft: #ECFDF5;
+    --amber: #D97706;
+    --amber-soft: #FFFBEB;
+    --red: #DC2626;
+    --red-soft: #FEF2F2;
+    --purple: #7C3AED;
+    --purple-soft: #F5F3FF;
+    --grey-bg: #F8FAFC;
+    --card: #FFFFFF;
+    --border: #E2E8F0;
+    --text: #0F172A;
+    --muted: #64748B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--grey-bg);
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 24px 80px; }
+  header.hero {
+    background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(15,23,42,0.25);
+  }
+  header.hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #93C5FD;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  header.hero h1 { margin: 0 0 10px; font-size: 30px; line-height: 1.2; }
+  header.hero p { margin: 0; color: #CBD5E1; font-size: 15px; max-width: 680px; }
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 26px;
+    margin-bottom: 36px;
+  }
+  .toc h3 { margin: 0 0 12px; font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 6px 0; }
+  .toc a { color: var(--blue); text-decoration: none; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px 34px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.04);
+  }
+  h2 {
+    color: var(--navy);
+    font-size: 23px;
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 10px;
+    margin: 0 0 20px;
+  }
+  h3 { color: var(--navy); font-size: 17px; margin: 26px 0 10px; }
+  h4 { color: var(--blue); font-size: 15px; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0; padding-left: 24px; }
+  li { margin: 5px 0; }
+  code {
+    background: #F1F5F9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: #BE185D;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 14px;
+    background: #fff;
+  }
+  th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--navy); color: #fff; font-weight: 600; }
+  tbody tr:nth-child(even) { background: var(--grey-bg); }
+  caption { caption-side: bottom; font-size: 12px; color: var(--muted); padding-top: 8px; font-style: italic; }
+
+  /* Callout boxes */
+  .callout {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-left: 5px solid;
+    font-size: 14.5px;
+  }
+  .callout strong { display: inline; }
+  .tip-box { background: var(--green-soft); border-color: var(--green); }
+  .exam-box { background: var(--blue-soft); border-color: var(--blue); }
+  .pitfall-box { background: var(--red-soft); border-color: var(--red); }
+  .note-box { background: var(--purple-soft); border-color: var(--purple); }
+  .callout ul { margin: 8px 0 2px; }
+
+  /* Code blocks */
+  pre {
+    background: #0D1117;
+    color: #E6EDF3;
+    padding: 18px 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 16px 0;
+  }
+  pre code { background: none; color: inherit; padding: 0; }
+  .cm { color: #8B949E; }   /* comment */
+  .kw { color: #FF7B72; }   /* keyword */
+  .st { color: #A5D6FF; }   /* string */
+  .fn { color: #D2A8FF; }   /* function */
+  .nb { color: #79C0FF; }   /* number/builtin */
+
+  /* Flowchart (CSS) */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 18px 0;
+    justify-content: center;
+  }
+  .flow .step {
+    background: var(--blue);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13.5px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+  }
+  .flow .arrow { color: var(--muted); font-size: 20px; font-weight: 700; }
+  .flow .loop { background: var(--purple); box-shadow: 0 2px 6px rgba(124,58,237,0.3); }
+
+  .diagram-wrap { text-align: center; margin: 20px 0; }
+  .badge {
+    display: inline-block;
+    background: var(--blue-soft);
+    color: var(--blue);
+    border: 1px solid #BFDBFE;
+    border-radius: 999px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px 4px 2px 0;
+  }
+  .checklist { list-style: none; padding-left: 4px; }
+  .checklist li { margin: 8px 0; }
+  .checklist li::before { content: "✅ "; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+  <h1>Chapter 65: Debugging &amp; Operational Issue Resolution</h1>
+  <p>An exam-ready study guide for diagnosing, triaging, and resolving operational issues in production Claude-powered systems — covering debugging methodology, root-cause analysis, incident response, blameless post-mortems, and a hands-on walkthrough.</p>
+</header>
+
+<nav class="toc">
+  <h3>In this chapter</h3>
+  <ol>
+    <li><a href="#s1">65.1 — Debugging LLM-Powered Systems: Strategies &amp; Tools</a></li>
+    <li><a href="#s2">65.2 — Common Operational Issues and Their Root Causes</a></li>
+    <li><a href="#s3">65.3 — Incident Response for AI Systems</a></li>
+    <li><a href="#s4">65.4 — Post-Mortem Analysis and Continuous Improvement</a></li>
+    <li><a href="#s5">65.5 — Hands-On: Debugging a Production Claude Application</a></li>
+    <li><a href="#summary">Chapter Summary / Quick Revision Checklist</a></li>
+  </ol>
+</nav>
+
+<!-- ============ 65.1 ============ -->
+<section id="s1">
+  <h2>65.1 Debugging LLM-Powered Systems: Strategies and Tools</h2>
+
+  <p>Debugging an LLM application differs from debugging traditional software in one crucial way: <strong>the model is non-deterministic and opaque</strong>. The same prompt can yield different outputs, and there is no stack trace inside the model. Effective debugging therefore focuses on everything <em>around</em> the model — inputs, context assembly, parameters, tool calls, and outputs — and treats the model as a probabilistic component you observe rather than step through.</p>
+
+  <h3>A systematic debugging methodology</h3>
+  <p>Follow a disciplined loop rather than randomly tweaking the prompt. The canonical cycle is <strong>Isolate → Reproduce → Hypothesize → Test → Fix → Verify</strong>, feeding back into monitoring.</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 860 210" role="img" aria-label="Debugging workflow flowchart">
+      <defs>
+        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#64748B"></path>
+        </marker>
+      </defs>
+      <!-- boxes -->
+      <g font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+        <rect x="10" y="30" width="115" height="48" rx="9" fill="#2563EB"></rect>
+        <text x="67" y="59" fill="#fff">Isolate</text>
+        <rect x="155" y="30" width="115" height="48" rx="9" fill="#2563EB"></rect>
+        <text x="212" y="59" fill="#fff">Reproduce</text>
+        <rect x="300" y="30" width="120" height="48" rx="9" fill="#2563EB"></rect>
+        <text x="360" y="59" fill="#fff">Hypothesize</text>
+        <rect x="450" y="30" width="115" height="48" rx="9" fill="#2563EB"></rect>
+        <text x="507" y="59" fill="#fff">Test</text>
+        <rect x="595" y="30" width="115" height="48" rx="9" fill="#059669"></rect>
+        <text x="652" y="59" fill="#fff">Fix</text>
+        <rect x="730" y="30" width="118" height="48" rx="9" fill="#059669"></rect>
+        <text x="789" y="59" fill="#fff">Verify</text>
+        <!-- feedback loop box -->
+        <rect x="300" y="140" width="255" height="46" rx="9" fill="#7C3AED"></rect>
+        <text x="427" y="168" fill="#fff">Feed learnings into monitoring &amp; evals</text>
+      </g>
+      <!-- arrows -->
+      <g stroke="#64748B" stroke-width="2" fill="none">
+        <line x1="125" y1="54" x2="150" y2="54" marker-end="url(#arrow1)"></line>
+        <line x1="270" y1="54" x2="295" y2="54" marker-end="url(#arrow1)"></line>
+        <line x1="420" y1="54" x2="445" y2="54" marker-end="url(#arrow1)"></line>
+        <line x1="565" y1="54" x2="590" y2="54" marker-end="url(#arrow1)"></line>
+        <line x1="710" y1="54" x2="727" y2="54" marker-end="url(#arrow1)"></line>
+        <!-- verify back to hypothesize if fails -->
+        <path d="M789,78 L789,110 L360,110 L360,84" marker-end="url(#arrow1)" stroke-dasharray="5,4"></path>
+        <text x="600" y="103" fill="#64748B" font-size="11" font-family="sans-serif">if still failing → new hypothesis</text>
+        <!-- verify to feedback -->
+        <path d="M652,78 L652,163 L557,163" marker-end="url(#arrow1)"></path>
+      </g>
+    </svg>
+  </div>
+
+  <ul>
+    <li><strong>Isolate</strong> — Determine which layer owns the bug: input/retrieval, prompt template, model parameters, tool execution, or output parsing. Narrow before you dig.</li>
+    <li><strong>Reproduce</strong> — Capture the exact request (full messages array, <code>system</code> prompt, <code>temperature</code>, <code>max_tokens</code>, model version, tool definitions). Non-determinism makes this the hardest step — set <code>temperature=0</code> and pin the model version to increase reproducibility.</li>
+    <li><strong>Hypothesize</strong> — Form a single, testable theory (e.g., "the retrieved context is being truncated before it reaches the model").</li>
+    <li><strong>Test</strong> — Change one variable at a time. Use an eval harness so results are measured, not eyeballed.</li>
+    <li><strong>Fix &amp; Verify</strong> — Apply the change and confirm against a regression set, not just the single failing case.</li>
+  </ul>
+
+  <h3>The debugging toolbox</h3>
+  <ul>
+    <li><strong>Structured logging</strong> — Log the full request/response pair, token usage, latency, model version, and <code>stop_reason</code>. Never log raw secrets or full PII.</li>
+    <li><strong>Tracing / observability</strong> — Distributed tracing (e.g., OpenTelemetry-style spans) around each API call, retrieval step, and tool invocation lets you see where latency and errors originate. Third-party LLM observability platforms (LangSmith, Langfuse, Arize Phoenix, etc.) specialize in capturing prompt/response traces.</li>
+    <li><strong>Prompt inspection</strong> — Render and inspect the <em>fully assembled</em> prompt after template substitution and context injection — the bug is often in what actually reached the model, not the template.</li>
+    <li><strong>Eval harnesses</strong> — Automated test suites that score outputs (exact-match, LLM-as-judge, rubric grading) against a curated dataset so you can measure regressions objectively.</li>
+    <li><strong>Anthropic Console &amp; token counting</strong> — Use the Console's Workbench to iterate on prompts interactively, and the token-counting endpoint to measure input size before sending.</li>
+  </ul>
+
+  <div class="callout tip-box">
+    💡 <strong>Tips &amp; Tricks:</strong>
+    <ul>
+      <li>Set <code>temperature=0</code> while debugging to make behavior as deterministic as possible, then restore production settings once fixed.</li>
+      <li>Always inspect <code>stop_reason</code> — <code>"max_tokens"</code> means the model was cut off (raise <code>max_tokens</code> or shorten the prompt), <code>"end_turn"</code> means it finished naturally.</li>
+      <li>Log a request ID with every call so a user complaint maps directly to a stored trace.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-box">
+    🎯 <strong>Exam Strategy:</strong> Questions here often present a symptom and ask for the <em>first</em> or <em>best</em> diagnostic step. The expected answer is almost always "reproduce with logging/tracing and inspect the assembled prompt," not "immediately rewrite the prompt." Watch for distractors that jump to a fix before isolating the cause. When you see "non-deterministic," the tie-breaker answer usually involves <code>temperature=0</code> and pinning the model version.
+  </div>
+
+  <div class="callout pitfall-box">
+    ⚠️ <strong>Common Pitfalls:</strong>
+    <ul>
+      <li>Judging a fix on a single lucky run — non-determinism means you must test across many runs / a dataset.</li>
+      <li>Debugging the prompt <em>template</em> instead of the fully-rendered prompt that the model actually received.</li>
+      <li>Logging secrets, API keys, or unredacted PII in your traces.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 65.2 ============ -->
+<section id="s2">
+  <h2>65.2 Common Operational Issues and Their Root Causes</h2>
+
+  <p>Operational issues in Claude applications cluster into a handful of recurring categories. Recognizing the <strong>symptom → root cause → resolution</strong> chain quickly is the core skill this section tests.</p>
+
+  <table>
+    <caption>Table 65.2 — Common operational issues, symptoms, root causes, and resolutions</caption>
+    <thead>
+      <tr><th>Issue</th><th>Symptoms</th><th>Root Cause</th><th>Resolution</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Context window overflow</strong></td>
+        <td>Truncated or missing context; API returns an input-too-large error; earlier turns "forgotten"</td>
+        <td>Total input tokens exceed the model's context window (e.g., 200K for Claude)</td>
+        <td>Chunk, summarize, or window the conversation; use retrieval to inject only relevant context; count tokens before sending</td>
+      </tr>
+      <tr>
+        <td><strong>Output truncation</strong></td>
+        <td>Response cut off mid-sentence; JSON that won't parse; <code>stop_reason: "max_tokens"</code></td>
+        <td><code>max_tokens</code> set too low for the required output</td>
+        <td>Raise <code>max_tokens</code>; ask for more concise output; stream and continue if needed</td>
+      </tr>
+      <tr>
+        <td><strong>Rate limiting</strong></td>
+        <td>HTTP <code>429</code> <code>rate_limit_error</code>; bursts of failures under load</td>
+        <td>Exceeding requests-per-minute (RPM) or tokens-per-minute (input/output TPM) limits</td>
+        <td>Exponential backoff with jitter; honor <code>retry-after</code> header; queue/throttle; request a limit increase or use the Message Batches API for bulk work</td>
+      </tr>
+      <tr>
+        <td><strong>Server overload</strong></td>
+        <td>HTTP <code>529</code> <code>overloaded_error</code>; intermittent failures</td>
+        <td>The API is temporarily overloaded (transient, server-side)</td>
+        <td>Retry with exponential backoff; degrade gracefully; consider a fallback model</td>
+      </tr>
+      <tr>
+        <td><strong>High latency</strong></td>
+        <td>Slow responses; timeouts; poor UX</td>
+        <td>Large input/output token counts, oversized context, or network/gateway bottleneck — <em>not always the model</em></td>
+        <td>Stream responses; trim context; use a smaller/faster model where adequate; enable prompt caching for repeated prefixes</td>
+      </tr>
+      <tr>
+        <td><strong>Hallucination / inaccuracy</strong></td>
+        <td>Confident but wrong answers; fabricated facts, citations, or APIs</td>
+        <td>Missing grounding context; ambiguous prompt; asking beyond model knowledge</td>
+        <td>Ground with retrieval (RAG); instruct the model to say "I don't know"; request citations; add verification/eval checks</td>
+      </tr>
+      <tr>
+        <td><strong>Cost spikes</strong></td>
+        <td>Unexpected bill increase; budget alerts firing</td>
+        <td>Bloated prompts, redundant context on every call, retry storms, or a more expensive model than needed</td>
+        <td>Enable prompt caching; trim/summarize context; route simple tasks to smaller models; cap retries; monitor token usage per request</td>
+      </tr>
+      <tr>
+        <td><strong>Malformed structured output</strong></td>
+        <td>Invalid JSON; parser exceptions; downstream failures</td>
+        <td>Free-form generation without constraints; truncation</td>
+        <td>Use tool use / structured output; provide a schema and examples; validate and retry on parse failure</td>
+      </tr>
+      <tr>
+        <td><strong>Auth / config errors</strong></td>
+        <td>HTTP <code>401</code>/<code>403</code>; sudden total failure after a deploy</td>
+        <td>Invalid/expired API key, wrong environment, or missing permissions</td>
+        <td>Rotate/verify keys via secret manager; separate keys per environment; fail fast with a clear error</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout note-box">
+    📌 <strong>Know your HTTP status codes:</strong>
+    <span class="badge">400 invalid_request</span>
+    <span class="badge">401 authentication</span>
+    <span class="badge">403 permission</span>
+    <span class="badge">404 not_found</span>
+    <span class="badge">413 request too large</span>
+    <span class="badge">429 rate_limit</span>
+    <span class="badge">500 api_error</span>
+    <span class="badge">529 overloaded</span>
+  </div>
+
+  <div class="callout tip-box">
+    💡 <strong>Tips &amp; Tricks:</strong>
+    <ul>
+      <li><strong>429 vs 529:</strong> <code>429</code> means <em>you</em> hit a rate limit (back off + throttle); <code>529</code> means the <em>server</em> is overloaded (back off + retry). Both are retriable; <code>4xx</code> like 400/401 are usually <em>not</em>.</li>
+      <li>Latency is frequently driven by output tokens — the model generates sequentially, so shorter outputs are faster. Trim before blaming the model.</li>
+      <li>Prompt caching dramatically cuts both latency and cost when a large, stable prefix (system prompt, docs) is reused across calls.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-box">
+    🎯 <strong>Exam Strategy:</strong> Expect "match the symptom to the root cause" and "which resolution is most appropriate" questions. Memorize the status-code semantics — especially the <strong>429 (rate limit) vs 529 (overloaded)</strong> distinction, a classic trap. When a question says "cut off mid-response," the keyword is <code>stop_reason: max_tokens</code>. When it says "forgets earlier conversation," think context-window management.
+  </div>
+
+  <div class="callout pitfall-box">
+    ⚠️ <strong>Common Pitfalls:</strong>
+    <ul>
+      <li>Assuming all latency is model-side — a gateway, network, or oversized retrieval step is often the real culprit.</li>
+      <li>Retrying <code>4xx</code> errors (e.g., 400/401) — they won't succeed on retry and can cause retry storms.</li>
+      <li>Treating hallucination as a "model bug" rather than a grounding/prompting problem.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 65.3 ============ -->
+<section id="s3">
+  <h2>65.3 Incident Response for AI Systems</h2>
+
+  <p>An <strong>incident</strong> is any unplanned degradation of service quality — including AI-specific degradations like a drop in answer quality that never throws an error. AI incident response follows the classic lifecycle but adds considerations unique to non-deterministic, model-driven systems.</p>
+
+  <h3>The incident lifecycle</h3>
+  <div class="flow">
+    <span class="step">Detect</span><span class="arrow">→</span>
+    <span class="step">Triage</span><span class="arrow">→</span>
+    <span class="step">Contain</span><span class="arrow">→</span>
+    <span class="step">Resolve</span><span class="arrow">→</span>
+    <span class="step loop">Communicate</span><span class="arrow">→</span>
+    <span class="step loop">Review</span>
+  </div>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 860 250" role="img" aria-label="AI incident response flow with severity triage">
+      <defs>
+        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#64748B"></path>
+        </marker>
+      </defs>
+      <g font-family="sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">
+        <!-- detect -->
+        <rect x="20" y="20" width="150" height="52" rx="9" fill="#DC2626"></rect>
+        <text x="95" y="42" fill="#fff">Detect</text>
+        <text x="95" y="60" fill="#fff" font-size="10.5" font-weight="400">alerts / evals / user reports</text>
+        <!-- triage -->
+        <rect x="210" y="20" width="150" height="52" rx="9" fill="#D97706"></rect>
+        <text x="285" y="42" fill="#fff">Triage &amp; Severity</text>
+        <text x="285" y="60" fill="#fff" font-size="10.5" font-weight="400">SEV1 / SEV2 / SEV3</text>
+        <!-- contain -->
+        <rect x="400" y="20" width="150" height="52" rx="9" fill="#2563EB"></rect>
+        <text x="475" y="42" fill="#fff">Contain</text>
+        <text x="475" y="60" fill="#fff" font-size="10.5" font-weight="400">rollback / fallback / kill-switch</text>
+        <!-- resolve -->
+        <rect x="590" y="20" width="150" height="52" rx="9" fill="#059669"></rect>
+        <text x="665" y="42" fill="#fff">Resolve</text>
+        <text x="665" y="60" fill="#fff" font-size="10.5" font-weight="400">root-cause fix + verify</text>
+        <!-- communicate (spanning) -->
+        <rect x="120" y="120" width="520" height="46" rx="9" fill="#7C3AED"></rect>
+        <text x="380" y="148" fill="#fff">Communicate to stakeholders throughout (status, ETA, impact)</text>
+        <!-- review -->
+        <rect x="300" y="192" width="260" height="44" rx="9" fill="#334155"></rect>
+        <text x="430" y="219" fill="#fff">Blameless post-mortem (→ 65.4)</text>
+      </g>
+      <g stroke="#64748B" stroke-width="2" fill="none">
+        <line x1="170" y1="46" x2="207" y2="46" marker-end="url(#arrow3)"></line>
+        <line x1="360" y1="46" x2="397" y2="46" marker-end="url(#arrow3)"></line>
+        <line x1="550" y1="46" x2="587" y2="46" marker-end="url(#arrow3)"></line>
+        <path d="M665,72 L665,143 L642,143" marker-end="url(#arrow3)"></path>
+        <path d="M380,166 L380,190" marker-end="url(#arrow3)"></path>
+      </g>
+    </svg>
+  </div>
+
+  <ul>
+    <li><strong>Detect</strong> — Alerts on latency, error rate, cost, <em>and</em> quality (eval scores, thumbs-down rate, guardrail triggers). AI systems need quality monitoring, not just uptime monitoring.</li>
+    <li><strong>Triage</strong> — Assign a severity (SEV) based on user impact and scope. Designate an incident commander for higher severities.</li>
+    <li><strong>Contain</strong> — Stop the bleeding <em>before</em> root-causing: roll back the last deploy, revert a prompt change, switch to a fallback model, or flip a feature kill-switch.</li>
+    <li><strong>Resolve</strong> — Apply and verify the actual fix against a regression/eval set.</li>
+    <li><strong>Communicate</strong> — Keep stakeholders and users informed throughout with status, impact, and ETA.</li>
+    <li><strong>Review</strong> — Feed into a blameless post-mortem (Section 65.4).</li>
+  </ul>
+
+  <h3>AI-specific incident considerations</h3>
+  <ul>
+    <li><strong>Model / config drift</strong> — Behavior can change when you upgrade the model version, edit the system prompt, or change retrieval data. Always pin model versions in production and treat prompt changes as deploys.</li>
+    <li><strong>Non-determinism</strong> — Failures may be intermittent and hard to reproduce. Rely on aggregate metrics and captured traces, not one-off reproduction.</li>
+    <li><strong>Silent failures</strong> — The most dangerous AI incidents throw no errors: the system returns confident, well-formed, <em>wrong</em> answers. Only quality evals and user feedback catch these — uptime dashboards stay green.</li>
+    <li><strong>Upstream/data drift</strong> — Stale or corrupted retrieval sources degrade answers without any code change.</li>
+  </ul>
+
+  <div class="callout tip-box">
+    💡 <strong>Tips &amp; Tricks:</strong>
+    <ul>
+      <li>Build a <strong>kill-switch and fallback path</strong> before you need them — a degraded static response beats an outage.</li>
+      <li>Because prompt and model changes are effective "deploys," version them and make them instantly revertible.</li>
+      <li>Contain first, root-cause later. Restoring service is the priority during an active incident.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-box">
+    🎯 <strong>Exam Strategy:</strong> Look for the ordering trap: the correct first action in an active incident is usually <strong>contain (rollback/mitigate)</strong>, not "find the root cause." Root-causing belongs in the post-mortem. "Silent failure" and "model drift" are frequently the correct answers to "which AI-specific risk is described." Remember that AI monitoring must include <em>quality</em> signals, not just availability.
+  </div>
+
+  <div class="callout pitfall-box">
+    ⚠️ <strong>Common Pitfalls:</strong>
+    <ul>
+      <li>Only monitoring uptime/latency and missing silent quality regressions.</li>
+      <li>Spending an active SEV1 hunting the root cause while users suffer, instead of rolling back first.</li>
+      <li>Not pinning the model version — an upstream model update silently changes behavior.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 65.4 ============ -->
+<section id="s4">
+  <h2>65.4 Post-Mortem Analysis and Continuous Improvement</h2>
+
+  <p>A <strong>post-mortem</strong> (a.k.a. incident retrospective) is a structured, written analysis conducted after an incident is resolved. Its purpose is organizational learning and prevention — <em>not</em> assigning blame.</p>
+
+  <h3>Post-mortem template</h3>
+  <table>
+    <caption>Table 65.4 — Standard blameless post-mortem structure</caption>
+    <thead>
+      <tr><th>Section</th><th>What it captures</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Summary</strong></td><td>One-paragraph plain-language description of what happened.</td></tr>
+      <tr><td><strong>Impact</strong></td><td>Who/what was affected, for how long, and by how much (users, requests, cost, quality drop).</td></tr>
+      <tr><td><strong>Timeline</strong></td><td>Timestamped sequence: detection → key actions → resolution.</td></tr>
+      <tr><td><strong>Root cause(s)</strong></td><td>The underlying cause(s), reached via techniques like the "5 Whys." Often more than one contributing factor.</td></tr>
+      <tr><td><strong>Detection &amp; response</strong></td><td>How it was found, how long detection took, what went well and poorly in the response.</td></tr>
+      <tr><td><strong>Action items</strong></td><td>Concrete, owned, dated preventive tasks (tracked to completion).</td></tr>
+      <tr><td><strong>Lessons learned</strong></td><td>What the team now understands that it didn't before.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Blameless culture principles</h3>
+  <ul>
+    <li><strong>Focus on systems, not individuals.</strong> Assume everyone acted reasonably with the information they had; ask "how did the system allow this?" not "who broke it?"</li>
+    <li><strong>Psychological safety</strong> — People must feel safe reporting mistakes; blame drives incidents underground and prevents learning.</li>
+    <li><strong>Actionable outcomes</strong> — Every post-mortem ends with owned, dated, tracked action items — otherwise the same incident recurs.</li>
+    <li><strong>Share widely</strong> — Publish post-mortems so the whole org learns, not just the responders.</li>
+  </ul>
+
+  <h3>Feedback loop into the system</h3>
+  <p>Continuous improvement means the learnings flow back into concrete safeguards:</p>
+  <div class="flow">
+    <span class="step">Incident &amp; Post-mortem</span><span class="arrow">→</span>
+    <span class="step">New evals / regression tests</span><span class="arrow">→</span>
+    <span class="step">Better monitoring &amp; alerts</span><span class="arrow">→</span>
+    <span class="step">Prompt / system fixes</span><span class="arrow">→</span>
+    <span class="step loop">Fewer / smaller incidents</span>
+  </div>
+  <ul>
+    <li><strong>Into monitoring</strong> — Add an alert that would have caught this incident sooner.</li>
+    <li><strong>Into evals</strong> — Turn the failing case into a permanent regression test so the bug can never silently return.</li>
+    <li><strong>Into prompt engineering</strong> — Refine the system prompt or add guardrails/output validation.</li>
+    <li><strong>Into system design</strong> — Add retries, fallbacks, caching, or better context management at the architecture level.</li>
+  </ul>
+
+  <div class="callout tip-box">
+    💡 <strong>Tips &amp; Tricks:</strong>
+    <ul>
+      <li>The single most valuable post-mortem output is a <strong>new automated eval</strong> capturing the failure — it prevents silent regressions forever.</li>
+      <li>Use the "5 Whys" to push past the surface symptom to a systemic root cause.</li>
+      <li>Track action items in your normal issue tracker with owners and due dates — a post-mortem with no follow-through is theater.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-box">
+    🎯 <strong>Exam Strategy:</strong> "Blameless" is the keyword — the correct answer always favors <em>systemic</em> causes and psychological safety over individual fault. Watch for distractors that name a person or recommend discipline. A frequently-correct answer to "how do you prevent recurrence?" is "add a regression test / eval" and "improve monitoring." Remember post-mortems happen <em>after</em> resolution, not during the incident.
+  </div>
+
+  <div class="callout pitfall-box">
+    ⚠️ <strong>Common Pitfalls:</strong>
+    <ul>
+      <li>Producing a post-mortem with no owned, dated action items (nothing changes).</li>
+      <li>Stopping at the proximate cause instead of the systemic root cause.</li>
+      <li>Assigning individual blame, which erodes the safety needed for honest reporting.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 65.5 ============ -->
+<section id="s5">
+  <h2>65.5 Hands-On: Debugging a Production Claude Application</h2>
+
+  <p>Let's walk through a realistic incident end-to-end, applying the methodology from 65.1–65.4.</p>
+
+  <h3>The scenario</h3>
+  <p>A customer-support assistant built on the Claude Messages API begins intermittently returning <strong>truncated JSON</strong> that breaks the downstream parser. Users report "the bot froze." Error dashboards are mostly green; the failures are sporadic.</p>
+
+  <h4>Step 1 — Reproduce &amp; capture</h4>
+  <p>Pull the traces for the failing request IDs. You notice every failure shares <code>"stop_reason": "max_tokens"</code> and a large retrieved-context payload. Uptime looked fine because the API calls <em>succeeded</em> (HTTP 200) — this is a classic <strong>silent failure</strong>: valid response, unusable content.</p>
+
+  <h4>Step 2 — Hypothesize &amp; isolate</h4>
+  <p>Hypothesis: on long conversations, the assembled prompt is large and <code>max_tokens</code> is too low, so the model runs out of output budget mid-JSON. Confirm by inspecting the fully-rendered prompt token count and comparing failing vs passing requests.</p>
+
+  <h4>Step 3 — Instrument, harden, and fix</h4>
+  <p>Add structured logging, robust retry/backoff for transient <code>429</code>/<code>529</code> errors, explicit handling of the <code>max_tokens</code> stop reason, and JSON validation with a bounded retry. Example (Python-style, illustrative):</p>
+
+  <pre><code><span class="cm"># Illustrative debugging + hardening for a Claude Messages API call</span>
+<span class="kw">import</span> time, json, logging, random
+
+logging.basicConfig(level=logging.INFO)
+log = logging.getLogger(<span class="st">"support-bot"</span>)
+
+<span class="kw">def</span> <span class="fn">call_claude</span>(client, messages, request_id):
+    max_retries = <span class="nb">4</span>
+    <span class="kw">for</span> attempt <span class="kw">in</span> range(max_retries):
+        <span class="kw">try</span>:
+            resp = client.messages.create(
+                model=<span class="st">"claude-sonnet-4-5"</span>,   <span class="cm"># pin the version</span>
+                max_tokens=<span class="nb">2048</span>,               <span class="cm"># enough budget for full JSON</span>
+                temperature=<span class="nb">0</span>,                 <span class="cm"># deterministic while debugging</span>
+                messages=messages,
+            )
+            <span class="cm"># 1) Log the essentials for every call</span>
+            log.info(json.dumps({
+                <span class="st">"request_id"</span>: request_id,
+                <span class="st">"stop_reason"</span>: resp.stop_reason,
+                <span class="st">"input_tokens"</span>: resp.usage.input_tokens,
+                <span class="st">"output_tokens"</span>: resp.usage.output_tokens,
+            }))
+
+            <span class="cm"># 2) Detect the silent failure explicitly</span>
+            <span class="kw">if</span> resp.stop_reason == <span class="st">"max_tokens"</span>:
+                log.warning(<span class="st">"Output truncated — raise max_tokens or trim context"</span>)
+                <span class="kw">raise</span> ValueError(<span class="st">"truncated_output"</span>)
+
+            <span class="cm"># 3) Validate structured output before trusting it</span>
+            text = resp.content[<span class="nb">0</span>].text
+            <span class="kw">return</span> json.loads(text)          <span class="cm"># raises on malformed JSON</span>
+
+        <span class="kw">except</span> (RateLimitError, OverloadedError) <span class="kw">as</span> e:   <span class="cm"># 429 / 529 → retriable</span>
+            wait = (<span class="nb">2</span> ** attempt) + random.random()      <span class="cm"># backoff + jitter</span>
+            log.warning(<span class="st">f"Transient {e}; retry in {wait:.1f}s"</span>)
+            time.sleep(wait)
+        <span class="kw">except</span> (ValueError, json.JSONDecodeError) <span class="kw">as</span> e:
+            log.error(<span class="st">f"Bad output ({e}); retrying with more budget"</span>)
+            <span class="cm"># optionally bump max_tokens / trim context here, then retry</span>
+
+    <span class="kw">raise</span> RuntimeError(<span class="st">f"Failed after {max_retries} attempts: {request_id}"</span>)</code></pre>
+
+  <h4>Step 4 — Verify &amp; prevent recurrence</h4>
+  <ul>
+    <li>Verify against a dataset of long conversations, not just one request.</li>
+    <li><strong>Contain</strong> immediately by raising <code>max_tokens</code> (or trimming/summarizing context) in production.</li>
+    <li>Add a <strong>regression eval</strong> that submits a long-context request and asserts valid JSON with <code>stop_reason == "end_turn"</code>.</li>
+    <li>Add an <strong>alert</strong> on the rate of <code>stop_reason == "max_tokens"</code> so this silent failure is caught automatically next time.</li>
+    <li>Long-term: add context-window management (summarize old turns) so growth can't silently blow the budget.</li>
+  </ul>
+
+  <div class="callout note-box">
+    📌 <strong>Note on names:</strong> Model identifiers and exact status codes evolve — always confirm the current model string and limits against the official Anthropic documentation. The <em>patterns</em> above (backoff on 429/529, checking <code>stop_reason</code>, validating structured output, adding a regression eval) are what the exam tests, and they remain stable.
+  </div>
+
+  <div class="callout tip-box">
+    💡 <strong>Tips &amp; Tricks:</strong>
+    <ul>
+      <li>Retry only on <em>retriable</em> errors (429/529, transient network) — never blindly retry a 400/401.</li>
+      <li>Add <strong>jitter</strong> to exponential backoff to avoid a thundering-herd of synchronized retries.</li>
+      <li>Validate structured output at the boundary and fail loudly — don't pass malformed JSON downstream.</li>
+    </ul>
+  </div>
+
+  <div class="callout exam-box">
+    🎯 <strong>Exam Strategy:</strong> Code/scenario questions favor answers that show <strong>exponential backoff with jitter</strong>, honoring <code>retry-after</code>, checking <code>stop_reason</code>, and validating output. If a snippet retries on every exception, that's the wrong answer — good code distinguishes retriable (429/529) from non-retriable (4xx). Expect "what's wrong with this code?" items where the flaw is a missing backoff or retrying a non-retriable error.
+  </div>
+
+  <div class="callout pitfall-box">
+    ⚠️ <strong>Common Pitfalls:</strong>
+    <ul>
+      <li>Ignoring <code>stop_reason</code> and treating a truncated 200 response as success.</li>
+      <li>Fixed-interval retries with no jitter, amplifying load during an outage.</li>
+      <li>No output validation, so malformed JSON silently corrupts downstream systems.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section id="summary">
+  <h2>Chapter Summary / Quick Revision Checklist</h2>
+  <p>Fast pre-exam recall for Chapter 65:</p>
+  <ul class="checklist">
+    <li><strong>Debugging loop:</strong> Isolate → Reproduce → Hypothesize → Test → Fix → Verify. Use <code>temperature=0</code> + pinned model version for reproducibility.</li>
+    <li><strong>Toolbox:</strong> structured logging, tracing/observability, prompt inspection (rendered prompt!), and eval harnesses.</li>
+    <li><strong>Status codes:</strong> 429 = rate limit (you), 529 = overloaded (server) — both retriable with backoff; 4xx like 400/401 are not.</li>
+    <li><strong>stop_reason:</strong> <code>"max_tokens"</code> = truncated (raise budget / trim); <code>"end_turn"</code> = complete.</li>
+    <li><strong>Context overflow:</strong> chunk, summarize, retrieve; count tokens before sending.</li>
+    <li><strong>Latency:</strong> often output-token or network/gateway driven — not always the model; stream + prompt caching help.</li>
+    <li><strong>Incident lifecycle:</strong> Detect → Triage → Contain → Resolve → Communicate → Review. <em>Contain (rollback/fallback) before root-causing.</em></li>
+    <li><strong>AI-specific risks:</strong> model/config drift, non-determinism, and silent failures (green dashboards, wrong answers) — monitor quality, not just uptime.</li>
+    <li><strong>Post-mortems are blameless:</strong> systems over individuals; every one ends with owned, dated action items and a new regression eval.</li>
+    <li><strong>Continuous improvement loop:</strong> incident → new evals + alerts → prompt/system fixes → fewer incidents.</li>
+    <li><strong>Hardened API calls:</strong> exponential backoff + jitter on 429/529, honor <code>retry-after</code>, check <code>stop_reason</code>, validate structured output.</li>
+  </ul>
+
+  <div class="callout exam-box">
+    🎯 <strong>Final exam reminder:</strong> When two answers look correct, prefer the one that (a) contains before root-causing during an incident, (b) distinguishes retriable from non-retriable errors, (c) adds an eval/regression test to prevent recurrence, and (d) blames the system, not a person.
+  </div>
+</section>
+
+<footer>
+  Chapter 65 · Debugging &amp; Operational Issue Resolution — Study Guide · Claude Certified Architect (Foundations &amp; Professional)
+</footer>
+
+</div>
+
+</body></html>

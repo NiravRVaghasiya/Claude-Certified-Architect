@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Certified Architect — Chapter 33 Notes</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1f2b;
+    --muted: #4a5568;
+    --line: #d9dee7;
+    --brand: #5a3ec8;
+    --brand-soft: #ede9fb;
+    --accent: #b5530a;
+    --tip-bg: #eafaf1;
+    --tip-line: #1e9e5a;
+    --exam-bg: #fff4e6;
+    --exam-line: #d97706;
+    --warn-bg: #fdecea;
+    --warn-line: #d64545;
+    --code-bg: #f4f5f8;
+    --client: #1d6fb8;
+    --server: #7a3fb0;
+    --table-head: #37325a;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 24px 96px; }
+  header.doc-head {
+    border-bottom: 4px solid var(--brand);
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+  }
+  header.doc-head .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--brand);
+  }
+  header.doc-head h1 { font-size: 2rem; margin: 6px 0 4px; line-height: 1.2; }
+  header.doc-head .sub { color: var(--muted); font-size: 1.02rem; }
+
+  .disclaimer {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    border-left: 6px solid var(--warn-line);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 22px 0;
+    font-size: 0.95rem;
+  }
+  .disclaimer strong { color: var(--warn-line); }
+
+  nav.toc {
+    background: var(--brand-soft);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 24px 0 36px;
+  }
+  nav.toc h2 { margin: 0 0 10px; font-size: 1.05rem; color: var(--brand); }
+  nav.toc ol { margin: 0; padding-left: 20px; }
+  nav.toc li { margin: 5px 0; }
+  nav.toc a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  nav.toc a:hover { text-decoration: underline; color: var(--brand); }
+  nav.toc .lead { color: var(--muted); font-weight: 400; }
+
+  section { margin: 46px 0; scroll-margin-top: 16px; }
+  h2.sec {
+    font-size: 1.55rem;
+    color: var(--brand);
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  h3 { font-size: 1.18rem; margin: 28px 0 6px; color: var(--table-head); }
+  h4 { font-size: 1.02rem; margin: 18px 0 4px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0; padding-left: 26px; }
+  li { margin: 4px 0; }
+  code {
+    font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    color: #7a2c8f;
+  }
+  strong { color: #14181f; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.94rem;
+  }
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 700;
+    color: var(--muted);
+    padding-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  thead th { background: var(--table-head); color: #fff; }
+  tbody tr:nth-child(even) { background: #f7f8fb; }
+
+  .callout {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-size: 0.96rem;
+  }
+  .tip-box { background: var(--tip-bg); border-left: 6px solid var(--tip-line); }
+  .exam-strategy-box { background: var(--exam-bg); border-left: 6px solid var(--exam-line); }
+  .tip-box strong { color: #157a44; }
+  .exam-strategy-box strong { color: var(--exam-line); }
+  .callout ul { margin: 8px 0 2px; }
+
+  .figure {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background: #fbfcfe;
+  }
+  .figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 10px; text-align: center; }
+
+  /* Flow diagram (CSS) */
+  .flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; }
+  .flow .node {
+    border: 2px solid var(--brand);
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-align: center;
+    min-width: 120px;
+  }
+  .flow .node small { display: block; font-weight: 400; color: var(--muted); font-size: 0.78rem; }
+  .flow .arrow { font-size: 1.4rem; color: var(--brand); font-weight: 700; }
+  .node.client { border-color: var(--client); }
+  .node.server { border-color: var(--server); }
+
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.85rem; margin-top: 14px; justify-content: center; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+
+  .question {
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--brand);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    background: #fff;
+  }
+  .question p.q { font-weight: 600; margin-top: 0; }
+  .question .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .tag.mcq { background: #e3f0fb; color: #1d6fb8; }
+  .tag.scenario { background: #f0e8fb; color: #7a3fb0; }
+  .question ol[type="A"] { margin: 6px 0 12px; }
+  details {
+    border-top: 1px dashed var(--line);
+    padding-top: 10px;
+    margin-top: 8px;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--brand);
+  }
+  summary:hover { text-decoration: underline; }
+  details[open] summary { margin-bottom: 8px; }
+  .ans { background: var(--tip-bg); border-radius: 6px; padding: 4px 8px; font-weight: 700; color: #157a44; }
+
+  footer.doc-foot {
+    margin-top: 60px;
+    border-top: 2px solid var(--line);
+    padding-top: 20px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .backtop { font-size: 0.82rem; }
+  .backtop a { color: var(--brand); text-decoration: none; }
+
+  @media print {
+    body { font-size: 12pt; }
+    nav.toc { break-inside: avoid; }
+    section, .question, .figure, table { break-inside: avoid; }
+    details { border: 0; }
+    details > summary { display: none; }
+    details[open] > *, details > *:not(summary) { display: block !important; }
+    details:not([open]) > *:not(summary) { display: block; } /* force answers visible in print */
+    a { color: var(--ink); text-decoration: none; }
+    .backtop { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc-head">
+    <div class="kicker">Claude Certified Architect — Foundations &amp; Professional</div>
+    <h1>Chapter 33 · Scenario 4: Developer Productivity Tools</h1>
+    <p class="sub">Study Notes &amp; Exam-Prep Guide — Built-In Tools &amp; Model Context Protocol (MCP)</p>
+  </header>
+
+  <div class="disclaimer">
+    <strong>⚠ Scope &amp; truthfulness note.</strong> "Claude Certified Architect" is <em>not</em> a publicly
+    verifiable, standardized Anthropic certification. This guide does <strong>not</strong> assert exam-specific
+    procedural facts (pass scores, question counts, proctoring vendors, exam dates) as confirmed. Any such details
+    are labeled <em>"typical certification-style guidance"</em> and are illustrative only. All
+    <strong>technical</strong> content about Claude's built-in tools and MCP reflects real, documented behavior.
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#33-1">33.1 — Scenario Overview &amp; Tooling</a> <span class="lead">· the developer-productivity landscape and how to choose a tool</span></li>
+      <li><a href="#33-2">33.2 — Built-In Tools for Codebase Exploration</a> <span class="lead">· bash, text_editor, code_execution, web_search/web_fetch</span></li>
+      <li><a href="#33-3">33.3 — MCP Server Integration for Developer Workflows</a> <span class="lead">· hosts, clients, servers, transports, primitives</span></li>
+      <li><a href="#33-4">33.4 — Practice Questions &amp; Walkthroughs</a> <span class="lead">· 8 questions with full answer keys</span></li>
+    </ol>
+  </nav>
+
+  <!-- ============================ 33.1 ============================ -->
+  <section id="33-1">
+    <h2 class="sec">33.1 · Scenario Overview &amp; Tooling</h2>
+
+    <p><strong>The scenario.</strong> A developer wants Claude to act as a productive engineering collaborator inside
+    a real software project: exploring an unfamiliar codebase, reading and editing files, running tests, fetching
+    documentation, and reaching into external systems (issue trackers, databases, internal APIs). Chapter 33 asks:
+    <em>which capability do you reach for, and why?</em></p>
+
+    <p>Claude's developer-productivity capabilities fall into <strong>two families</strong>, and the single most
+    important skill this chapter tests is telling them apart:</p>
+
+    <ul>
+      <li><strong>Built-in tools</strong> — a fixed, Anthropic-defined set (e.g. <code>bash</code>,
+      <code>text_editor</code>, <code>code_execution</code>, <code>web_search</code>, <code>web_fetch</code>,
+      <code>computer_use</code>). You enable them by declaring the tool in the API request. They cover general
+      coding and web operations.</li>
+      <li><strong>MCP (Model Context Protocol) servers</strong> — an open, extensible integration layer. When you need
+      Claude to talk to a <em>specific</em> or <em>private</em> system (Jira, GitHub, Postgres, an internal service),
+      you connect an MCP server that exposes that system as callable tools/resources/prompts.</li>
+    </ul>
+
+    <p><strong>Rule of thumb:</strong> built-in tools answer <em>"can Claude run code / read files / browse the
+    open web?"</em> MCP answers <em>"can Claude interact with <u>this particular</u> external system in a governed,
+    reusable way?"</em> They are complementary, not competing — a real workflow often uses both.</p>
+
+    <h3>Decision aid: which capability fits the need?</h3>
+    <figure class="figure">
+      <figcaption style="caption-side:top; text-align:left; margin-bottom:12px; color:var(--muted); font-weight:700;">
+        Figure 33.1 — Capability selection flow</figcaption>
+      <div class="flow">
+        <div class="node">Need to interact<br>with an external system<small>Jira · DB · internal API</small></div>
+        <div class="arrow">→</div>
+        <div class="node server">Use an<br>MCP server</div>
+      </div>
+      <div class="flow" style="margin-top:12px;">
+        <div class="node">Need to run code /<br>edit files / shell<small>local project work</small></div>
+        <div class="arrow">→</div>
+        <div class="node client">Built-in bash /<br>text_editor /<br>code_execution</div>
+      </div>
+      <div class="flow" style="margin-top:12px;">
+        <div class="node">Need public web<br>info or a URL<small>docs · release notes</small></div>
+        <div class="arrow">→</div>
+        <div class="node">Built-in<br>web_search / web_fetch</div>
+      </div>
+      <figcaption>Match the <em>nature of the target</em> (external system vs. local execution vs. open web) to the capability family.</figcaption>
+    </figure>
+
+    <table>
+      <caption>Table 33.1 — Built-in tools vs. MCP servers at a glance</caption>
+      <thead>
+        <tr><th>Dimension</th><th>Built-In Tools</th><th>MCP Servers</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Setup</td><td>Declare the tool in the API request; no separate server</td><td>Requires connecting/configuring an MCP server (a running process or endpoint)</td></tr>
+        <tr><td>Extensibility</td><td>Fixed set defined by Anthropic</td><td>Open-ended — anyone can build custom/third-party servers</td></tr>
+        <tr><td>Best for</td><td>Running code, editing files, general web access</td><td>Reaching specific/private systems &amp; data sources in a reusable way</td></tr>
+        <tr><td>Interface</td><td>Tool-use messages in the Messages API</td><td>JSON-RPC 2.0 over a transport (stdio or HTTP)</td></tr>
+        <tr><td>Reusability</td><td>Per-request configuration</td><td>One server reused across many hosts/agents/teams</td></tr>
+        <tr><td>Governance</td><td>Controlled by the app calling the API</td><td>Server enforces its own scoping, auth, and exposed surface</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip-box">
+      <strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li>Read the <em>target</em> in the question, not the verb. "Query <strong>our internal</strong> service" ⇒ MCP. "Run this Python" ⇒ <code>code_execution</code>. "Read this public docs page" ⇒ <code>web_fetch</code>.</li>
+        <li>Keywords that scream <strong>MCP</strong>: <em>private, internal, third-party, connect to, our database, our Jira, reusable across teams</em>.</li>
+        <li>Keywords that scream <strong>built-in</strong>: <em>run, execute, shell command, edit this file, browse the web, fetch this URL</em>.</li>
+        <li>"Complementary, not either/or" is the most common correct framing — a workflow can use <code>bash</code> to run tests <em>and</em> an MCP server to update the ticket.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-strategy-box">
+      <strong>🎯 Exam Strategy</strong>
+      <ul>
+        <li>Selection questions almost always hinge on <strong>where the data/system lives</strong>. Classify first: open web, local execution, or a specific external system.</li>
+        <li>Distractors pair a <em>plausible</em> built-in tool with an external-system task (e.g. "use <code>web_fetch</code> to read Jira"). Reject built-in tools when the target is private/authenticated — <code>web_fetch</code> retrieves public URLs, not gated internal systems.</li>
+        <li>If two options seem valid, prefer the one that is <strong>reusable and governed</strong> for repeated organizational use (MCP) over a one-off command.</li>
+      </ul>
+    </div>
+    <p class="backtop"><a href="#">↑ Back to top</a></p>
+  </section>
+
+  <!-- ============================ 33.2 ============================ -->
+  <section id="33-2">
+    <h2 class="sec">33.2 · Built-In Tools for Codebase Exploration</h2>
+
+    <p><strong>What they are.</strong> Built-in tools are Anthropic-defined tool types you enable in a Messages API
+    request. For coding work the core set is <code>bash</code>, <code>text_editor</code>,
+    <code>code_execution</code>, and the web tools <code>web_search</code>/<code>web_fetch</code>;
+    <code>computer_use</code> extends Claude to GUI/desktop control.</p>
+
+    <p><strong>The key architectural distinction — <em>where does the tool run?</em></strong></p>
+    <ul>
+      <li><strong>Client-side (you execute):</strong> <code>bash</code>, <code>text_editor</code>,
+      <code>computer_use</code>. The API returns a <code>tool_use</code> block describing the requested action;
+      <em>your application</em> executes it in your own environment and returns a <code>tool_result</code>. Anthropic
+      never touches your filesystem — you are responsible for sandboxing and safety.</li>
+      <li><strong>Server-side (Anthropic executes):</strong> <code>code_execution</code>, <code>web_search</code>,
+      <code>web_fetch</code>. These run inside Anthropic-hosted infrastructure (e.g. a sandboxed Python
+      environment for code execution) and return results directly — no local execution loop required.</li>
+    </ul>
+
+    <h4>How each tool supports codebase exploration</h4>
+    <ul>
+      <li><code>bash</code> — run shell commands in a persistent session: <code>grep -r</code>/<code>rg</code> to
+      search, <code>ls</code>/<code>find</code> to map structure, <code>git log</code> to inspect history,
+      <code>npm test</code>/<code>pytest</code> to run suites. Session state (cwd, env) persists across calls.</li>
+      <li><code>text_editor</code> — structured file viewing and editing via commands such as <code>view</code>
+      (read a file or directory, optionally a line range), <code>str_replace</code> (surgical edit),
+      <code>create</code>, and <code>insert</code>. Preferred over <code>bash</code> for <em>precise</em> reads/edits
+      because it is targeted and less error-prone than stream editing.</li>
+      <li><code>code_execution</code> — runs code (Python) in an Anthropic-hosted sandbox for analysis, quick
+      computations, data processing, and validating snippets — <em>without</em> exposing your machine.</li>
+      <li><code>web_search</code> / <code>web_fetch</code> — pull in <strong>public</strong> reference material:
+      library docs, changelogs, error-message lookups, API references. <code>web_search</code> queries the open web;
+      <code>web_fetch</code> retrieves the contents of a specific URL.</li>
+      <li><code>computer_use</code> — screenshot-driven mouse/keyboard control of a GUI; used when a task requires a
+      desktop app or browser UI rather than a shell. Runs in an environment <em>you</em> provide.</li>
+    </ul>
+
+    <table>
+      <caption>Table 33.2 — Built-in coding tools: execution locus and typical use</caption>
+      <thead>
+        <tr><th>Tool</th><th>Runs where</th><th>Primary use in a codebase</th><th>Reach for it when…</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>bash</code></td><td>Client-side</td><td>Search, navigate, run tests, git ops</td><td>You need shell commands / process execution</td></tr>
+        <tr><td><code>text_editor</code></td><td>Client-side</td><td>View &amp; make surgical edits to files</td><td>You need precise reads/edits, not stream hacks</td></tr>
+        <tr><td><code>code_execution</code></td><td>Server-side (Anthropic sandbox)</td><td>Run/validate code, data analysis</td><td>You want isolated execution, not your machine</td></tr>
+        <tr><td><code>web_search</code></td><td>Server-side</td><td>Find public docs / solutions</td><td>You need current info from the open web</td></tr>
+        <tr><td><code>web_fetch</code></td><td>Server-side</td><td>Read a known public URL</td><td>You have the exact doc/reference link</td></tr>
+        <tr><td><code>computer_use</code></td><td>Client-side (your VM)</td><td>Drive GUI apps/browser</td><td>No API/shell path exists — only a UI</td></tr>
+      </tbody>
+    </table>
+
+    <figure class="figure">
+      <figcaption style="caption-side:top; text-align:left; margin-bottom:12px; color:var(--muted); font-weight:700;">
+        Figure 33.2 — Client-side tool-use loop (bash / text_editor / computer_use)</figcaption>
+      <div class="flow">
+        <div class="node">Claude<small>emits tool_use</small></div>
+        <div class="arrow">→</div>
+        <div class="node client">Your app<small>executes command</small></div>
+        <div class="arrow">→</div>
+        <div class="node client">Environment<small>shell / files</small></div>
+        <div class="arrow">→</div>
+        <div class="node">tool_result<small>back to Claude</small></div>
+      </div>
+      <figcaption>For client-side tools, <strong>your application</strong> performs the action and returns the result; Anthropic only orchestrates. Server-side tools (<code>code_execution</code>, web tools) skip this loop and run inside Anthropic's sandbox.</figcaption>
+    </figure>
+
+    <div class="callout tip-box">
+      <strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li><strong>Editing?</strong> Default to <code>text_editor</code> for precision (<code>str_replace</code>/<code>view</code>). Use <code>bash</code> when you genuinely need a <em>process</em> (tests, git, package managers).</li>
+        <li><strong>Isolation matters?</strong> <code>code_execution</code> = Anthropic sandbox (safe, disposable). <code>bash</code> = <em>your</em> machine (you own the risk). Exam distractors blur this.</li>
+        <li><code>web_fetch</code> ≠ private data. It reads <strong>public</strong> URLs. For anything authenticated/internal, that's an MCP job (see 33.3).</li>
+        <li>Remember the loop: client-side tools require <em>you</em> to run the command and post a <code>tool_result</code>; forgetting this is a classic "why isn't it working" trap.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-strategy-box">
+      <strong>🎯 Exam Strategy</strong>
+      <ul>
+        <li>When a question stresses <strong>safety / isolation / "without touching my machine,"</strong> the answer is the server-side option (<code>code_execution</code>), not <code>bash</code>.</li>
+        <li>When it stresses <strong>"exact edit to one function"</strong> or <strong>"view lines 40–60,"</strong> choose <code>text_editor</code> over <code>bash</code> stream edits.</li>
+        <li>Watch for <em>execution-locus</em> traps: any option claiming <code>bash</code> runs "on Anthropic's servers" is wrong — <code>bash</code>/<code>text_editor</code>/<code>computer_use</code> execute in <strong>your</strong> environment.</li>
+        <li><code>computer_use</code> is the answer only when there's <strong>no</strong> API/CLI path — i.e. a GUI-only task. If a shell or API works, prefer it.</li>
+      </ul>
+    </div>
+    <p class="backtop"><a href="#">↑ Back to top</a></p>
+  </section>
+
+  <!-- ============================ 33.3 ============================ -->
+  <section id="33-3">
+    <h2 class="sec">33.3 · MCP Server Integration for Developer Workflows</h2>
+
+    <p><strong>What MCP is.</strong> The <strong>Model Context Protocol (MCP)</strong> is an open standard
+    (open-sourced by Anthropic in late 2024) for connecting LLM applications to external tools and data sources
+    through a uniform interface. Think of it as a universal adapter: instead of writing a bespoke integration for
+    every model + every system, a system exposes an <strong>MCP server</strong> once, and any MCP-capable host can
+    use it.</p>
+
+    <h4>Architecture</h4>
+    <ul>
+      <li><strong>Host</strong> — the LLM application (e.g. an IDE assistant, Claude Desktop, a custom agent). It
+      manages one or more clients.</li>
+      <li><strong>Client</strong> — lives inside the host and maintains a <strong>1:1 connection</strong> to a single
+      MCP server. If a host uses three servers, it runs three clients.</li>
+      <li><strong>Server</strong> — a program that exposes capabilities (Tools, Resources, Prompts) for one system
+      (GitHub, Postgres, a filesystem, an internal API).</li>
+    </ul>
+    <p>Messages travel as <strong>JSON-RPC 2.0</strong>. The connection begins with an <strong>initialize</strong>
+    handshake where host and server negotiate protocol version and capabilities; the client then <em>discovers</em>
+    what the server offers by listing its tools/resources/prompts (e.g. <code>tools/list</code>) and invoking them
+    (e.g. <code>tools/call</code>).</p>
+
+    <figure class="figure">
+      <figcaption style="caption-side:top; text-align:left; margin-bottom:12px; color:var(--muted); font-weight:700;">
+        Figure 33.3 — MCP host / client / server architecture (1 client ↔ 1 server)</figcaption>
+      <div class="flow">
+        <div class="node">Host (LLM app)<small>IDE · Claude Desktop · agent</small></div>
+        <div class="arrow">→</div>
+        <div class="node client">Client A<small>1:1</small></div>
+        <div class="arrow">→</div>
+        <div class="node server">Server: GitHub<small>Tools · Resources · Prompts</small></div>
+      </div>
+      <div class="flow" style="margin-top:10px;">
+        <div class="node" style="visibility:hidden;">spacer</div>
+        <div class="arrow" style="visibility:hidden;">→</div>
+        <div class="node client">Client B<small>1:1</small></div>
+        <div class="arrow">→</div>
+        <div class="node server">Server: Postgres<small>Tools · Resources · Prompts</small></div>
+      </div>
+      <div class="legend">
+        <span><span class="swatch" style="background:var(--client)"></span> Client (in host)</span>
+        <span><span class="swatch" style="background:var(--server)"></span> MCP server (external system)</span>
+      </div>
+      <figcaption>One host, many clients — each bound to exactly one server. Servers are reusable across different hosts and teams.</figcaption>
+    </figure>
+
+    <h4>Transports — how client and server talk</h4>
+    <table>
+      <caption>Table 33.3a — MCP transports</caption>
+      <thead>
+        <tr><th>Transport</th><th>How it works</th><th>Typical use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>stdio</strong></td><td>Client launches the server as a local subprocess; messages flow over standard input/output</td><td>Local servers on the same machine (e.g. a local filesystem or git server)</td></tr>
+        <tr><td><strong>Streamable HTTP</strong> <small>(supersedes the earlier HTTP + Server-Sent Events transport)</small></td><td>Client connects to the server over HTTP; supports streaming responses</td><td>Remote / hosted servers, shared services, cloud deployments</td></tr>
+      </tbody>
+    </table>
+
+    <h4>The three server primitives</h4>
+    <table>
+      <caption>Table 33.3b — MCP primitives and who controls them</caption>
+      <thead>
+        <tr><th>Primitive</th><th>What it is</th><th>Control model</th><th>Dev-workflow example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Tools</strong></td><td>Executable functions the model can invoke (actions with effects)</td><td><strong>Model-controlled</strong> (the LLM decides to call)</td><td><code>create_issue</code>, <code>run_query</code>, <code>open_pull_request</code></td></tr>
+        <tr><td><strong>Resources</strong></td><td>Read-only data/context identified by a URI</td><td><strong>Application-controlled</strong> (host decides what to load)</td><td>A file's contents, a DB record, a doc referenced by URI</td></tr>
+        <tr><td><strong>Prompts</strong></td><td>Reusable templated messages/workflows</td><td><strong>User-controlled</strong> (user selects/triggers)</td><td>A "review this PR" or "summarize incident" prompt template</td></tr>
+      </tbody>
+    </table>
+    <p><small>Note: MCP also defines <em>client</em> features such as <strong>Sampling</strong> (a server can ask the
+    host's model to generate a completion) and <strong>Roots</strong> (the host tells the server which
+    files/directories are in scope). These are client-side capabilities, distinct from the three server
+    primitives above.</small></p>
+
+    <h4>Why MCP for developer workflows</h4>
+    <ul>
+      <li><strong>Repo analysis:</strong> a GitHub/Git MCP server exposes issues, PRs, and file history as
+      tools/resources — Claude can triage, summarize, or open PRs through governed actions.</li>
+      <li><strong>CI/CD &amp; internal services:</strong> wrap build systems, deployment APIs, or feature-flag
+      services as MCP tools so agents can trigger or read pipeline state safely.</li>
+      <li><strong>IDE integration:</strong> the IDE acts as the host; MCP servers give the in-editor assistant
+      access to the project's real systems (tracker, DB, secrets-scoped services) without hardcoding integrations.</li>
+      <li><strong>Reusability &amp; governance:</strong> build the server once; every team/host reuses it. The server
+      controls exactly what surface is exposed, centralizing auth and scoping.</li>
+    </ul>
+
+    <div class="callout tip-box">
+      <strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li>Memorize the control-model triad: <strong>Tools = model-controlled</strong>, <strong>Resources = application-controlled</strong>, <strong>Prompts = user-controlled</strong>. This exact mapping is a favorite test point.</li>
+        <li><strong>1:1</strong> client-to-server is a fact to lock in — "one client can manage many servers" is a classic wrong answer.</li>
+        <li>Transport picker: <strong>local subprocess → stdio</strong>; <strong>remote/hosted → Streamable HTTP</strong>.</li>
+        <li>MCP rides on <strong>JSON-RPC 2.0</strong> — if an option says "REST-only" or "GraphQL protocol," it's wrong.</li>
+        <li>When a question says <em>"real-time external data"</em> or <em>"third-party API,"</em> think MCP server — not a built-in tool.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-strategy-box">
+      <strong>🎯 Exam Strategy</strong>
+      <ul>
+        <li>Primitive questions: match the noun to the control model. "Read-only data by URI" ⇒ <strong>Resource</strong>; "action the model invokes" ⇒ <strong>Tool</strong>; "reusable user-triggered template" ⇒ <strong>Prompt</strong>.</li>
+        <li>Architecture questions: the safe answers are <em>host contains clients</em>, <em>client:server is 1:1</em>, <em>JSON-RPC 2.0</em>, and <em>transports are stdio or HTTP</em>.</li>
+        <li>Beware conflating <strong>Sampling/Roots</strong> (client features) with the three server primitives. If asked "which are the server primitives," the answer is <strong>Tools, Resources, Prompts</strong> only.</li>
+        <li>"Why MCP over a one-off integration?" ⇒ emphasize <strong>standardization, reusability, and governance</strong>, not raw speed.</li>
+      </ul>
+    </div>
+    <p class="backtop"><a href="#">↑ Back to top</a></p>
+  </section>
+
+  <!-- ============================ 33.4 ============================ -->
+  <section id="33-4">
+    <h2 class="sec">33.4 · Practice Questions &amp; Walkthroughs</h2>
+    <p>Eight questions (MCQ + scenario). Reveal each answer to see the full walkthrough. At least one item explicitly
+    tests the <strong>MCP vs. built-in-tool</strong> distinction (see Q1 and Q7).</p>
+
+    <div class="question">
+      <span class="tag scenario">Scenario</span>
+      <p class="q">Q1. A developer wants Claude to query the team's <em>private, authenticated</em> Jira instance during a coding session and later create tickets from findings. Which approach is correct?</p>
+      <ol type="A">
+        <li>Use the <code>bash</code> tool</li>
+        <li>Use an MCP server connector for Jira</li>
+        <li>Use <code>web_fetch</code> on the Jira URL</li>
+        <li>Use <code>code_execution</code></li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: B</span></p>
+        <p><strong>Why:</strong> Jira is a <em>specific, private, authenticated</em> external system. MCP servers exist
+        precisely to expose such systems as governed tools/resources — here, a Jira MCP server offers actions like
+        <code>create_issue</code> and read access to tickets.</p>
+        <p><strong>Why not the others:</strong> <code>bash</code> (A) runs local shell commands, not a governed Jira
+        integration. <code>web_fetch</code> (C) retrieves <em>public</em> URLs and can't authenticate into a private
+        instance. <code>code_execution</code> (D) runs code in a sandbox with no built-in Jira access.</p>
+        <p><strong>Takeaway:</strong> private/third-party system ⇒ MCP.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag mcq">MCQ</span>
+      <p class="q">Q2. Which set correctly lists the <strong>three MCP server primitives</strong>?</p>
+      <ol type="A">
+        <li>Tools, Resources, Prompts</li>
+        <li>Tools, Sampling, Roots</li>
+        <li>Clients, Servers, Transports</li>
+        <li>Functions, Files, Sessions</li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: A</span></p>
+        <p><strong>Why:</strong> The server exposes <strong>Tools</strong> (model-controlled actions),
+        <strong>Resources</strong> (application-controlled read-only data by URI), and <strong>Prompts</strong>
+        (user-controlled templates).</p>
+        <p><strong>Trap:</strong> B mixes in <em>Sampling</em> and <em>Roots</em>, which are <em>client</em> features,
+        not server primitives. C names architectural components, not primitives. D is invented.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag mcq">MCQ</span>
+      <p class="q">Q3. A developer needs Claude to run a Python snippet to validate an algorithm <em>without</em> executing anything on their own machine. Best choice?</p>
+      <ol type="A">
+        <li><code>bash</code> tool</li>
+        <li><code>code_execution</code> tool</li>
+        <li><code>computer_use</code> tool</li>
+        <li>An MCP server</li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: B</span></p>
+        <p><strong>Why:</strong> <code>code_execution</code> runs in an <em>Anthropic-hosted sandbox</em> (server-side),
+        so nothing runs on the developer's machine — matching the "without executing on my machine" requirement.</p>
+        <p><strong>Why not:</strong> <code>bash</code> (A) executes client-side on <em>your</em> environment.
+        <code>computer_use</code> (C) drives a GUI you host. MCP (D) is for integrating external systems, not general
+        code execution.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag mcq">MCQ</span>
+      <p class="q">Q4. In MCP, what is the relationship between a client and a server?</p>
+      <ol type="A">
+        <li>One client connects to many servers simultaneously</li>
+        <li>One client maintains a 1:1 connection with one server</li>
+        <li>Servers connect to many clients in a mesh</li>
+        <li>Clients and servers are the same component</li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: B</span></p>
+        <p><strong>Why:</strong> Each MCP client holds a dedicated <strong>1:1</strong> connection to a single server.
+        A host that needs multiple servers simply runs multiple clients.</p>
+        <p><strong>Trap:</strong> A is the most tempting distractor — the <em>host</em> can use many servers, but it
+        does so via many clients, one per server.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag scenario">Scenario</span>
+      <p class="q">Q5. Claude must make a <em>surgical</em> edit — replace one function body in <code>service.py</code> without disturbing the rest of the file. Which built-in tool is the best fit?</p>
+      <ol type="A">
+        <li><code>bash</code> with <code>sed</code></li>
+        <li><code>text_editor</code> (<code>str_replace</code>)</li>
+        <li><code>web_fetch</code></li>
+        <li><code>code_execution</code></li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: B</span></p>
+        <p><strong>Why:</strong> <code>text_editor</code> is purpose-built for precise reads/edits; its
+        <code>str_replace</code> command targets an exact string, making it safer and more reliable than stream
+        editing.</p>
+        <p><strong>Why not:</strong> <code>sed</code> via <code>bash</code> (A) works but is error-prone for structured
+        edits and is not the <em>best</em> fit. <code>web_fetch</code> (C) and <code>code_execution</code> (D) don't
+        edit local files at all.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag mcq">MCQ</span>
+      <p class="q">Q6. A team wants an MCP server that a <em>local</em> host launches as a subprocess on the same machine. Which transport is most appropriate?</p>
+      <ol type="A">
+        <li>Streamable HTTP</li>
+        <li>stdio</li>
+        <li>WebSockets-only</li>
+        <li>FTP</li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: B</span></p>
+        <p><strong>Why:</strong> <strong>stdio</strong> is the standard transport for local servers launched as a
+        subprocess — messages flow over standard input/output. Remote/hosted servers use <strong>Streamable HTTP</strong>
+        (A). C and D are not MCP transports.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag scenario">Scenario</span>
+      <p class="q">Q7. <strong>(MCP vs. built-in)</strong> A workflow needs to: (1) read the latest <em>public</em> release notes for a library, (2) run the project's test suite locally, and (3) update the status of a ticket in the company's <em>internal</em> tracker. Match each step to the right capability.</p>
+      <ol type="A">
+        <li>(1) web_fetch/web_search · (2) bash · (3) MCP server</li>
+        <li>(1) MCP server · (2) code_execution · (3) web_fetch</li>
+        <li>(1) bash · (2) MCP server · (3) text_editor</li>
+        <li>All three via a single MCP server</li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: A</span></p>
+        <p><strong>Step (1) — public release notes:</strong> open-web content ⇒ built-in <code>web_search</code>/<code>web_fetch</code>.</p>
+        <p><strong>Step (2) — run tests locally:</strong> process execution in the project environment ⇒ built-in <code>bash</code>.</p>
+        <p><strong>Step (3) — internal tracker:</strong> a specific private system ⇒ <strong>MCP server</strong>.</p>
+        <p><strong>Key insight:</strong> real workflows are <em>mixed</em> — built-in tools for open-web + local
+        execution, MCP for private/external systems. Option D wrongly forces everything through MCP; MCP is not a
+        general code runner or web browser.</p>
+      </details>
+    </div>
+
+    <div class="question">
+      <span class="tag mcq">MCQ</span>
+      <p class="q">Q8. Which statement about MCP <strong>primitive control models</strong> is correct?</p>
+      <ol type="A">
+        <li>Resources are model-controlled; Tools are user-controlled</li>
+        <li>Tools are model-controlled; Resources are application-controlled; Prompts are user-controlled</li>
+        <li>All three primitives are always model-controlled</li>
+        <li>Prompts are model-controlled; Tools are application-controlled</li>
+      </ol>
+      <details>
+        <summary>Answer &amp; Walkthrough</summary>
+        <p><span class="ans">Correct: B</span></p>
+        <p><strong>Why:</strong> <strong>Tools</strong> are invoked by the model (model-controlled);
+        <strong>Resources</strong> are selected/loaded by the host application (application-controlled);
+        <strong>Prompts</strong> are chosen/triggered by the user (user-controlled).</p>
+        <p><strong>Trap:</strong> Options A, C, and D scramble the mapping. Memorize the triad exactly — it is a
+        recurring test point.</p>
+      </details>
+    </div>
+
+    <div class="callout exam-strategy-box">
+      <strong>🎯 Section 33.4 — Answer key summary</strong>
+      <p style="margin:6px 0 0;">Q1 · B &nbsp;|&nbsp; Q2 · A &nbsp;|&nbsp; Q3 · B &nbsp;|&nbsp; Q4 · B &nbsp;|&nbsp;
+      Q5 · B &nbsp;|&nbsp; Q6 · B &nbsp;|&nbsp; Q7 · A &nbsp;|&nbsp; Q8 · B</p>
+    </div>
+    <p class="backtop"><a href="#">↑ Back to top</a></p>
+  </section>
+
+  <footer class="doc-foot">
+    <p><strong>Chapter summary.</strong> Developer-productivity work with Claude combines two capability families:
+    <strong>built-in tools</strong> (<code>bash</code>, <code>text_editor</code>, <code>code_execution</code>,
+    <code>web_search</code>/<code>web_fetch</code>, <code>computer_use</code>) for general code, file, and open-web
+    operations, and <strong>MCP servers</strong> for governed, reusable integration with specific/private systems.
+    The decisive skills are (a) classifying a task by <em>where the target lives</em>, (b) knowing each built-in
+    tool's <em>execution locus</em> (client-side vs. Anthropic-hosted), and (c) mastering MCP's architecture
+    (host → client 1:1 → server), transports (stdio, Streamable HTTP), and primitives (Tools/Resources/Prompts with
+    their model/application/user control models).</p>
+    <p><strong>Speculative-content disclaimer.</strong> "Claude Certified Architect — Foundations &amp; Professional"
+    is used here as a study framing and is not a confirmed, publicly standardized Anthropic certification. No
+    exam-specific procedural facts (scores, question counts, vendors, dates) are asserted as official. All technical
+    descriptions of Claude's built-in tools and the Model Context Protocol reflect real, documented behavior at the
+    time of writing; verify against current Anthropic documentation, as tool type identifiers, transport names, and
+    protocol details evolve.</p>
+  </footer>
+
+</div>
+
+
+</body></html>

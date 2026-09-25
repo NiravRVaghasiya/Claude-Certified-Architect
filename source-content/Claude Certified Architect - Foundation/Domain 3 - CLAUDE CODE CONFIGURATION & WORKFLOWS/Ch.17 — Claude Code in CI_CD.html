@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 17: Claude Code in CI/CD Pipelines — CCA-F&amp;P Study Notes</title>
+<style>
+/* ═══════════════════════════════════════════════════════════
+   THEME & RESET
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --bg-primary: #0f1117;
+  --bg-secondary: #161822;
+  --bg-card: #1c1f2e;
+  --bg-code: #12141f;
+  --bg-highlight: #1e2235;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-blue: #60a5fa;
+  --accent-purple: #a78bfa;
+  --accent-green: #34d399;
+  --accent-orange: #fb923c;
+  --accent-red: #f87171;
+  --accent-cyan: #22d3ee;
+  --accent-yellow: #fbbf24;
+  --border-color: #2d3148;
+  --border-active: #4f46e5;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --radius: 10px;
+  --nav-width: 280px;
+  --code-font: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-code: #f1f5f9;
+  --bg-highlight: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent-blue: #2563eb;
+  --accent-purple: #7c3aed;
+  --accent-green: #059669;
+  --accent-orange: #ea580c;
+  --accent-red: #dc2626;
+  --accent-cyan: #0891b2;
+  --accent-yellow: #d97706;
+  --border-color: #e2e8f0;
+  --border-active: #4f46e5;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0;
+  width: var(--nav-width); height: 100vh;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  z-index: 100;
+  padding: 24px 16px;
+  transition: transform 0.3s ease;
+}
+nav .logo {
+  font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--accent-purple);
+  margin-bottom: 6px;
+}
+nav h2 {
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+nav ul { list-style: none; }
+nav li { margin-bottom: 2px; }
+nav a {
+  display: block; padding: 7px 12px;
+  font-size: 0.82rem; color: var(--text-secondary);
+  text-decoration: none; border-radius: 6px;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+nav a:hover { background: var(--bg-highlight); color: var(--text-primary); }
+nav a.active {
+  background: rgba(99,102,241,0.12);
+  color: var(--accent-blue);
+  border-left-color: var(--accent-blue);
+  font-weight: 600;
+}
+nav .nav-divider {
+  height: 1px; background: var(--border-color);
+  margin: 12px 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MAIN CONTENT
+   ═══════════════════════════════════════════════════════════ */
+main {
+  margin-left: var(--nav-width);
+  padding: 40px 48px 80px;
+  max-width: 920px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed; top: 16px; right: 20px; z-index: 200;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  color: var(--text-primary); font-size: 1.2rem;
+  width: 40px; height: 40px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.theme-toggle:hover { border-color: var(--accent-blue); }
+
+/* ═══════════════════════════════════════════════════════════
+   HERO CARD
+   ═══════════════════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, #312e81 0%, #1e1b4b 50%, #0f172a 100%);
+  border-radius: 16px; padding: 40px;
+  margin-bottom: 40px; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero .badge {
+  display: inline-block; padding: 4px 12px;
+  background: rgba(99,102,241,0.25); border: 1px solid rgba(99,102,241,0.4);
+  border-radius: 20px; font-size: 0.72rem; font-weight: 600;
+  color: #a5b4fc; text-transform: uppercase; letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: 1.8rem; font-weight: 800; color: #fff;
+  line-height: 1.3; margin-bottom: 12px;
+}
+.hero p { color: #c7d2fe; font-size: 0.95rem; max-width: 600px; }
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION STYLING
+   ═══════════════════════════════════════════════════════════ */
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.section-header {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 14px;
+  transition: background 0.2s;
+  user-select: none;
+}
+.section-header:hover { background: var(--bg-highlight); }
+.section-header .num {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: #fff; font-weight: 800; font-size: 0.85rem; flex-shrink: 0;
+}
+.section-header h2 {
+  font-size: 1.1rem; font-weight: 700; flex: 1;
+}
+.section-header .chevron {
+  font-size: 1.2rem; color: var(--text-muted);
+  transition: transform 0.3s;
+}
+.section.open .section-header .chevron { transform: rotate(180deg); }
+.section-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.section.open .section-body { max-height: none; }
+.section-content { padding: 0 24px 28px; }
+
+/* ═══════════════════════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════════════════════ */
+h3 {
+  font-size: 1rem; font-weight: 700;
+  color: var(--accent-blue);
+  margin: 24px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+h3:first-child { margin-top: 8px; }
+h4 {
+  font-size: 0.9rem; font-weight: 600;
+  color: var(--accent-purple);
+  margin: 18px 0 8px;
+}
+p { margin-bottom: 12px; font-size: 0.92rem; }
+ul, ol { margin: 8px 0 16px 20px; font-size: 0.92rem; }
+li { margin-bottom: 6px; }
+strong { color: var(--text-primary); }
+em { color: var(--accent-cyan); font-style: normal; font-weight: 500; }
+
+/* ═══════════════════════════════════════════════════════════
+   CODE BLOCKS
+   ═══════════════════════════════════════════════════════════ */
+pre {
+  background: var(--bg-code);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 12px 0 16px;
+  font-family: var(--code-font);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  position: relative;
+}
+pre .lang-label {
+  position: absolute; top: 6px; right: 10px;
+  font-size: 0.65rem; text-transform: uppercase;
+  color: var(--text-muted); letter-spacing: 1px;
+  font-family: sans-serif;
+}
+code {
+  font-family: var(--code-font);
+  font-size: 0.85em;
+  background: var(--bg-code);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent-cyan);
+}
+pre code { background: none; padding: 0; color: var(--text-primary); }
+
+/* Syntax coloring for inline display */
+.kw { color: var(--accent-purple); font-weight: 600; }
+.str { color: var(--accent-green); }
+.flag { color: var(--accent-orange); }
+.cmt { color: var(--text-muted); font-style: italic; }
+.val { color: var(--accent-cyan); }
+.fn { color: var(--accent-blue); }
+
+/* ═══════════════════════════════════════════════════════════
+   TABLES
+   ═══════════════════════════════════════════════════════════ */
+.table-wrap { overflow-x: auto; margin: 12px 0 16px; }
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  background: var(--bg-highlight);
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--accent-blue);
+  border-bottom: 2px solid var(--border-color);
+  white-space: nowrap;
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+}
+tr:hover td { background: rgba(99,102,241,0.04); }
+
+/* ═══════════════════════════════════════════════════════════
+   CALLOUT BOXES
+   ═══════════════════════════════════════════════════════════ */
+.callout {
+  border-radius: 8px; padding: 14px 18px;
+  margin: 14px 0; font-size: 0.88rem;
+  border-left: 4px solid;
+}
+.callout.exam {
+  background: rgba(251,191,36,0.08);
+  border-color: var(--accent-yellow);
+}
+.callout.exam .callout-title { color: var(--accent-yellow); }
+.callout.danger {
+  background: rgba(248,113,113,0.08);
+  border-color: var(--accent-red);
+}
+.callout.danger .callout-title { color: var(--accent-red); }
+.callout.tip {
+  background: rgba(52,211,153,0.08);
+  border-color: var(--accent-green);
+}
+.callout.tip .callout-title { color: var(--accent-green); }
+.callout.info {
+  background: rgba(96,165,250,0.08);
+  border-color: var(--accent-blue);
+}
+.callout.info .callout-title { color: var(--accent-blue); }
+.callout-title {
+  font-weight: 700; font-size: 0.82rem;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   ASCII DIAGRAMS
+   ═══════════════════════════════════════════════════════════ */
+.diagram {
+  background: var(--bg-code);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 14px 0;
+  font-family: var(--code-font);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--accent-cyan);
+}
+.diagram .label {
+  display: block; text-align: center;
+  font-family: sans-serif; font-size: 0.75rem;
+  color: var(--text-muted); margin-top: 10px;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   QUICK RECALL BOXES
+   ═══════════════════════════════════════════════════════════ */
+.quick-recall {
+  background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(167,139,250,0.06));
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 18px 0;
+}
+.quick-recall h4 {
+  color: var(--accent-purple);
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+}
+.quick-recall ul { margin: 0; }
+.quick-recall li { margin-bottom: 4px; font-size: 0.88rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   QUIZ
+   ═══════════════════════════════════════════════════════════ */
+.quiz-q {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 14px 0;
+}
+.quiz-q .q-num {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: #fff; font-weight: 800; font-size: 0.75rem;
+  padding: 2px 10px; border-radius: 12px;
+  margin-bottom: 10px;
+}
+.quiz-q .question { font-weight: 600; margin-bottom: 10px; }
+.quiz-q .options { list-style: upper-alpha; margin-left: 24px; }
+.quiz-q .options li { margin-bottom: 4px; }
+.quiz-answer {
+  display: none;
+  background: rgba(52,211,153,0.08);
+  border: 1px solid rgba(52,211,153,0.2);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 0.88rem;
+}
+.quiz-answer.show { display: block; }
+.quiz-answer .correct { color: var(--accent-green); font-weight: 700; }
+.reveal-btn {
+  background: var(--bg-highlight);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+.reveal-btn:hover { border-color: var(--accent-blue); background: rgba(99,102,241,0.1); }
+
+/* Chapter summary table */
+.summary-table th { font-size: 0.8rem; }
+.summary-table td { font-size: 0.82rem; }
+.summary-table .priority-high { color: var(--accent-red); font-weight: 700; }
+.summary-table .priority-med { color: var(--accent-yellow); font-weight: 600; }
+.summary-table .priority-low { color: var(--accent-green); }
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════ */
+footer {
+  margin-top: 48px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════════════════════ */
+@media print {
+  nav { display: none; }
+  .theme-toggle { display: none; }
+  main { margin-left: 0; padding: 20px; max-width: 100%; }
+  .section-body { max-height: none !important; }
+  .section { break-inside: avoid; }
+  .hero { background: #1e1b4b !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-size: 11pt; }
+  pre { font-size: 9pt; }
+  .quiz-answer { display: block !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  nav { transform: translateX(-100%); }
+  nav.open { transform: translateX(0); }
+  main { margin-left: 0; padding: 20px 16px 60px; }
+  .hero { padding: 24px; }
+  .hero h1 { font-size: 1.4rem; }
+  .mobile-nav-btn { display: flex !important; }
+}
+.mobile-nav-btn {
+  display: none !important;
+  position: fixed; bottom: 20px; left: 20px; z-index: 200;
+  width: 44px; height: 44px;
+  background: var(--accent-blue); color: #fff;
+  border: none; border-radius: 50%;
+  font-size: 1.3rem; cursor: pointer;
+  align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ MOBILE NAV BUTTON ═══ -->
+<button class="mobile-nav-btn" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Toggle navigation">☰</button>
+
+<!-- ═══ THEME TOGGLE ═══ -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="sidebar">
+  <div class="logo">CCA — Foundations &amp; Professional</div>
+  <h2>Ch. 17: Claude Code in CI/CD Pipelines</h2>
+  <ul>
+    <li><a href="#s17-1">17.1 The <code>-p</code> / <code>--print</code> Flag</a></li>
+    <li><a href="#s17-2">17.2 Output Formats &amp; Structured Output</a></li>
+    <li><a href="#s17-3">17.3 CI/CD Pipeline Integration</a></li>
+    <li><a href="#s17-4">17.4 Session Management &amp; Isolation</a></li>
+    <li><a href="#s17-5">17.5 Guardrails &amp; Permission Mgmt</a></li>
+    <li><a href="#s17-6">17.6 CLAUDE.md in CI/CD</a></li>
+    <li><a href="#s17-7">17.7 JSON Schema Validation</a></li>
+    <li><a href="#s17-8">17.8 Hands-On: End-to-End Pipeline</a></li>
+    <div class="nav-divider"></div>
+    <li><a href="#summary">📋 Chapter Summary Table</a></li>
+    <li><a href="#exam-strategy">🎯 Exam Strategy</a></li>
+    <li><a href="#quiz">🧪 Practice Quiz</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ MAIN CONTENT ═══ -->
+<main>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="badge">Exam-Ready Study Notes</div>
+  <h1>Chapter 17: Claude Code in CI/CD Pipelines</h1>
+  <p>Everything you need to understand, recall, and ace exam questions on running Claude Code non-interactively in automated workflows — from headless mode to guardrails to production integration patterns.</p>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.1
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section open" id="s17-1">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.1</span>
+    <h2>The <code>-p</code> / <code>--print</code> Flag for Non-Interactive Mode</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>The <code>--print</code> flag (shorthand <code>-p</code>) switches Claude Code from its interactive REPL into a <strong>single-shot batch invocation</strong>: it reads a prompt, runs to completion, prints the response to stdout, and exits. This is the <strong>foundational mechanism</strong> for all CI/CD, scripted, and automated usage of Claude Code — without it, headless execution is impossible.</p>
+    <p>Think of <code>-p</code> as the difference between a chat window (interactive) and a Unix command-line tool (batch). With <code>-p</code>, Claude Code behaves like <code>grep</code> or <code>jq</code> — it takes input, produces output, and exits with a status code.</p>
+
+    <h3>Key Mechanics</h3>
+    <ul>
+      <li><strong>Syntax:</strong> <code>claude -p "your prompt here"</code></li>
+      <li><strong>Exit codes:</strong> <code>0</code> on success, non-zero on failure — enabling <code>if/else</code> branching in shell scripts</li>
+      <li><strong>Stdin piping:</strong> <code>cat file.py | claude -p "review this"</code> — reads stdin up to a <strong>10 MB cap</strong></li>
+      <li><strong>Stdout output:</strong> Result goes to stdout; errors go to stderr</li>
+      <li><strong>No TTY needed:</strong> Fully headless — no terminal, no user interaction</li>
+      <li><strong>Combinable flags:</strong> Works with <code>--output-format</code>, <code>--allowedTools</code>, <code>--max-turns</code>, <code>--model</code>, <code>--continue</code>, <code>--resume</code></li>
+      <li><strong>Incompatible flags:</strong> Rejects <code>--bg</code>; rejects <code>--cloud</code> with a task description</li>
+      <li><strong><code>--bare</code> mode:</strong> Skips auto-discovery of hooks, skills, plugins, MCP servers, auto memory, and CLAUDE.md — recommended for CI for deterministic, fast startup</li>
+    </ul>
+
+    <h3>Visual Aid</h3>
+    <div class="diagram">┌─────────────────────────────────────────────────────────────────┐
+│  CI Runner Environment (no TTY available)                       │
+│                                                                 │
+│  ┌───────────┐    ┌────────────────┐    ┌──────────────────┐   │
+│  │  Trigger   │───▶│  claude -p      │───▶│  stdout → parse  │   │
+│  │ (PR open,  │    │  "review this"  │    │  exit(0) → pass  │   │
+│  │  push,     │    │  --output json  │    │  exit(N) → fail  │   │
+│  │  cron)     │    │  --max-turns 10 │    │                  │   │
+│  └───────────┘    └────────────────┘    └──────────────────┘   │
+│                          │                                      │
+│                    ┌─────┴─────┐                                │
+│                    │ stdin pipe │                                │
+│                    │ (optional) │                                │
+│                    │ ≤ 10 MB    │                                │
+│                    └───────────┘                                │
+└─────────────────────────────────────────────────────────────────┘
+<span class="label">Figure 17.1 — The -p flag turns Claude Code into a batch CLI tool</span></div>
+
+    <h3>Comparison: Interactive vs. Headless</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Aspect</th><th>Interactive (default)</th><th>Headless (<code>-p</code>)</th></tr>
+      <tr><td>User presence</td><td>Required — human approves actions</td><td>None — fully unattended</td></tr>
+      <tr><td>Input</td><td>Keyboard via REPL</td><td>CLI argument or stdin pipe</td></tr>
+      <tr><td>Output</td><td>Formatted terminal UI</td><td>Plain text / JSON to stdout</td></tr>
+      <tr><td>Permission prompts</td><td>Pause and ask user</td><td>Auto-deny or auto-approve per config</td></tr>
+      <tr><td>Session lifecycle</td><td>Persistent until user quits</td><td>Single prompt → single response → exit</td></tr>
+      <tr><td>Exit code</td><td>N/A</td><td>0 = success, non-zero = failure</td></tr>
+    </tbody></table></div>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Distractor Alert:</strong> Exams may offer <code>--silent</code>, <code>--batch</code>, <code>--headless</code>, or <code>--non-interactive</code> as alternatives. <strong>None of these exist.</strong> Only <code>-p</code> / <code>--print</code> enables headless mode.</p>
+      <p><strong>Key fact:</strong> <code>-p</code> is <em>required</em> for any CI/CD usage. Without it, Claude Code opens an interactive REPL and hangs waiting for input.</p>
+      <p><strong>Tricky scenario:</strong> "What happens if you run <code>claude</code> without <code>-p</code> in a CI runner?" → It hangs or times out because there's no TTY for the REPL.</p>
+    </div>
+
+    <div class="callout danger">
+      <div class="callout-title">❌ Common Pitfalls</div>
+      <p><strong>Pitfall 1:</strong> Assuming Claude Code works interactively in CI — it will hang indefinitely waiting for keyboard input.</p>
+      <p><strong>Pitfall 2:</strong> Feeding prompts that ask follow-up questions ("let me know if you want…") — there's nobody to answer. Write self-contained, complete prompts.</p>
+      <p><strong>Pitfall 3:</strong> Piping more than 10 MB via stdin — Claude Code rejects it with an error, not a silent truncation.</p>
+      <p><strong>Pitfall 4:</strong> Forgetting <code>--bare</code> in CI — without it, the session loads hooks, plugins, and CLAUDE.md from the working directory, which may pull in unintended configuration.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li><code>-p</code> = <code>--print</code> = non-interactive, headless, stdout output</li>
+        <li><strong>Required</strong> for all CI/CD integrations — no exceptions</li>
+        <li>Supports stdin piping (≤ 10 MB cap) and stdout redirection</li>
+        <li>Returns standard exit codes (0 = success, non-zero = failure)</li>
+        <li><code>--bare</code> = skip auto-discovery → faster, deterministic startup for CI</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.2
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-2">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.2</span>
+    <h2>Output Formats &amp; Structured Output</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>The <code>--output-format</code> flag controls the <strong>shape of what <code>-p</code> prints</strong>. It determines whether the output is human-readable prose, a single structured JSON object, or a real-time stream of newline-delimited JSON events. Choosing the right format is critical for building reliable pipelines — text is for humans; JSON is for machines.</p>
+
+    <h3>Key Mechanics — The Three Formats</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Value</th><th>Shape</th><th>Best For</th></tr>
+      <tr>
+        <td><code>text</code> <em>(default)</em></td>
+        <td>Plain text — what you'd read in a terminal</td>
+        <td>Human-readable logs; no machine decision depends on it</td>
+      </tr>
+      <tr>
+        <td><code>json</code></td>
+        <td>One structured JSON object with <code>result</code>, <code>session_id</code>, <code>total_cost_usd</code>, and metadata</td>
+        <td>Pipeline parses the outcome after the run finishes</td>
+      </tr>
+      <tr>
+        <td><code>stream-json</code></td>
+        <td>Newline-delimited JSON (JSONL) — one object per event, emitted in real-time</td>
+        <td>Live UIs, streaming logs, real-time event processing</td>
+      </tr>
+    </tbody></table></div>
+
+    <h4>JSON Output Structure</h4>
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Get a single JSON object with the result</span>
+claude -p "Summarize this project" --output-format json
+
+<span class="cmt"># Extract specific fields with jq</span>
+claude -p "Review auth.py" --output-format json | jq -r '.result'
+claude -p "Review auth.py" --output-format json | jq -r '.session_id'
+claude -p "Review auth.py" --output-format json | jq -r '.total_cost_usd'</code></pre>
+
+    <h4>Stream-JSON Event Types</h4>
+<pre><code><span class="lang-label">jsonl</span><span class="cmt"># system/init — first event: session metadata</span>
+{"type":"system","subtype":"init","session_id":"...","model":"...","tools":["Read","Grep"]}
+
+<span class="cmt"># assistant — model reasoning / tool calls</span>
+{"type":"assistant","message":{"content":[{"type":"text","text":"Reviewing the diff..."}]}}
+
+<span class="cmt"># system/api_retry — emitted before retrying a transient API error</span>
+{"type":"system","subtype":"api_retry","attempt":1,"max_retries":3,"error":"rate_limit"}
+
+<span class="cmt"># result — terminal event with final outcome</span>
+{"type":"result","result":"No regressions found.","session_id":"..."}</code></pre>
+
+    <h4>Stream-JSON Requires Additional Flags</h4>
+    <ul>
+      <li><code>--verbose</code> — Required to emit the full turn-by-turn stream</li>
+      <li><code>--include-partial-messages</code> — Optional; adds token-level deltas for real-time display</li>
+    </ul>
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Full streaming with token-level deltas</span>
+claude -p "Explain recursion" \
+  --output-format stream-json \
+  --verbose \
+  --include-partial-messages</code></pre>
+
+    <h3>Visual Aid — Parsing Pipeline</h3>
+    <div class="diagram">                   ┌──────────────────┐
+  claude -p        │  --output-format  │
+  "review..."  ──▶ │     json          │ ──▶  Single JSON Object
+                   │   stream-json     │ ──▶  JSONL Stream (line-by-line)
+                   │     text          │ ──▶  Plain text string
+                   └──────────────────┘
+                            │
+                      ┌─────┴─────┐
+                      │  jq parse  │   ←── Use jq, not grep/sed!
+                      └─────┬─────┘
+                            │
+                   ┌────────┴────────┐
+                   │ .result         │  → final text
+                   │ .session_id     │  → for --resume
+                   │ .total_cost_usd │  → cost tracking
+                   │ .structured_output │ → when --json-schema used
+                   └─────────────────┘
+<span class="label">Figure 17.2 — Output format selection and JSON field extraction</span></div>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Common question pattern:</strong> "Which <code>--output-format</code> should you use when building an automated CI pipeline that needs to branch on the result?" → <code>json</code> (single structured object, easy to parse).</p>
+      <p><strong>Distractor:</strong> <code>stream-json</code> is NOT required for basic CI — it's for real-time streaming UIs. Most CI jobs should use <code>json</code>.</p>
+      <p><strong>Key field:</strong> The final text lives in <code>.result</code> — not <code>.text</code>, not <code>.output</code>, not <code>.response</code>.</p>
+      <p><strong>Cost tracking:</strong> <code>total_cost_usd</code> is an <em>estimate</em> and may differ from your actual bill. The exam may test this distinction.</p>
+    </div>
+
+    <div class="callout danger">
+      <div class="callout-title">❌ Common Pitfalls</div>
+      <p><strong>Fatal mistake:</strong> Parsing <code>text</code> output with <code>grep</code>/<code>sed</code> to extract structured data. The wording changes between runs. <strong>Always use <code>--output-format json</code> + <code>jq</code>.</strong></p>
+      <p><strong>Forgotten flag:</strong> Using <code>--output-format stream-json</code> without <code>--verbose</code> — you'll get a minimal stream without full turn-by-turn events.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li><code>text</code> = default, human-readable — never parse programmatically</li>
+        <li><code>json</code> = single JSON object — use for CI pipeline decisions</li>
+        <li><code>stream-json</code> = JSONL real-time stream — needs <code>--verbose</code></li>
+        <li>Key JSON fields: <code>.result</code>, <code>.session_id</code>, <code>.total_cost_usd</code></li>
+        <li>Always parse with <code>jq</code>, never with <code>grep</code>/<code>sed</code></li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.3
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-3">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.3</span>
+    <h2>CI/CD Pipeline Integration</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>Claude Code integrates into any CI/CD system that can execute a shell command. For GitHub specifically, there's an official action (<code>anthropics/claude-code-action@v1</code>). For all other systems (GitLab CI, Jenkins, CircleCI, etc.), you run <code>claude -p</code> directly. The pattern is always: <strong>trigger → authenticate → guardrailed <code>claude -p</code> → parse output → act on result</strong>.</p>
+
+    <h3>Key Mechanics</h3>
+
+    <h4>Universal CI Pattern (Any System)</h4>
+    <ol>
+      <li><strong>Install</strong> Claude Code: <code>npm install -g @anthropic-ai/claude-code</code></li>
+      <li><strong>Set</strong> <code>ANTHROPIC_API_KEY</code> as a secret environment variable</li>
+      <li><strong>Run</strong> <code>claude -p</code> with guardrail flags</li>
+      <li><strong>Parse</strong> the structured JSON output</li>
+    </ol>
+
+    <h4>GitHub Actions — Official Action</h4>
+<pre><code><span class="lang-label">yaml</span>name: PR Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Review this pull request for correctness and security.
+            Comment on specific lines. Do not modify files.
+          claude_args: |
+            --max-turns 12
+            --model sonnet
+            --allowedTools "Read,Grep,Glob"</code></pre>
+
+    <h4>GitHub Actions — Direct CLI</h4>
+<pre><code><span class="lang-label">yaml</span>- name: Install Claude Code
+  run: npm install -g @anthropic-ai/claude-code
+
+- name: Review PR diff
+  env:
+    ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  run: |
+    git diff origin/main...HEAD | claude -p \
+      "Review this PR diff. Flag bugs and security issues." \
+      --max-turns 3 \
+      --output-format json &gt; review.json</code></pre>
+
+    <h4>GitLab CI</h4>
+<pre><code><span class="lang-label">yaml</span>claude_review:
+  image: node:22
+  variables:
+    ANTHROPIC_API_KEY: $ANTHROPIC_API_KEY
+  script:
+    - npm install -g @anthropic-ai/claude-code
+    - |
+      claude -p "Review the changes in this MR." \
+        --max-turns 10 --model sonnet \
+        --allowedTools "Read,Grep,Glob" \
+        --output-format json &gt; review.json
+    - jq -r '.result' review.json
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"</code></pre>
+
+    <h4>Jenkins</h4>
+<pre><code><span class="lang-label">groovy</span>pipeline {
+  agent any
+  environment { ANTHROPIC_API_KEY = credentials('anthropic-api-key') }
+  stages {
+    stage('Review') {
+      when { changeRequest() }
+      steps {
+        sh '''
+          npm install -g @anthropic-ai/claude-code
+          claude -p "Review this change for bugs." \
+            --max-turns 10 --model sonnet \
+            --allowedTools "Read,Grep,Glob" \
+            --output-format json &gt; review.json
+        '''
+        sh 'jq -r .result review.json'
+      }
+    }
+  }
+}</code></pre>
+
+    <h3>Visual Aid — Integration Flow</h3>
+    <div class="diagram">┌──────────────┐     ┌──────────────┐     ┌──────────────────────────┐
+│   TRIGGER    │     │   AUTH       │     │      CLAUDE -p           │
+│              │     │              │     │                          │
+│ • PR opened  │────▶│ • API key    │────▶│ --max-turns 10           │
+│ • Push       │     │ • Bedrock    │     │ --model sonnet           │
+│ • Cron       │     │   (OIDC)    │     │ --allowedTools "Read,…"  │
+│ • Comment    │     │ • Vertex AI  │     │ --output-format json     │
+│   (@claude)  │     │   (WIF)     │     │                          │
+└──────────────┘     └──────────────┘     └────────────┬─────────────┘
+                                                       │
+                                          ┌────────────▼─────────────┐
+                                          │     PARSE &amp; ACT          │
+                                          │                          │
+                                          │ • jq '.result'           │
+                                          │ • Post PR comment        │
+                                          │ • Open new PR            │
+                                          │ • Gate on exit code      │
+                                          └──────────────────────────┘
+<span class="label">Figure 17.3 — Universal CI/CD integration pattern</span></div>
+
+    <h3>Authentication Methods for CI</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Provider</th><th>Environment Variables</th><th>Best Practice</th></tr>
+      <tr>
+        <td><strong>Direct Anthropic API</strong></td>
+        <td><code>ANTHROPIC_API_KEY</code></td>
+        <td>Store as CI secret; simplest path</td>
+      </tr>
+      <tr>
+        <td><strong>Amazon Bedrock</strong></td>
+        <td><code>CLAUDE_CODE_USE_BEDROCK=1</code>, <code>AWS_REGION</code>, AWS credentials</td>
+        <td>Use OIDC role assumption — no long-lived keys</td>
+      </tr>
+      <tr>
+        <td><strong>Google Vertex AI</strong></td>
+        <td><code>CLAUDE_CODE_USE_VERTEX=1</code>, <code>ANTHROPIC_VERTEX_PROJECT_ID</code>, <code>CLOUD_ML_REGION</code></td>
+        <td>Use Workload Identity Federation — no service account keys</td>
+      </tr>
+    </tbody></table></div>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Official Action name:</strong> <code>anthropics/claude-code-action@v1</code> — exams may test the exact name. Note: <code>anthropics</code> (with an 's'), not <code>anthropic</code>.</p>
+      <p><strong>Scenario question:</strong> "Which authentication method avoids storing long-lived secrets?" → OIDC (Bedrock) or Workload Identity Federation (Vertex AI).</p>
+      <p><strong>Cross-CI universality:</strong> The pattern is identical everywhere — only the YAML/Groovy dialect changes. The exam may present an unfamiliar CI system and ask if Claude Code works there → <strong>Yes, any system that runs shell commands works.</strong></p>
+    </div>
+
+    <div class="callout danger">
+      <div class="callout-title">❌ Common Pitfalls</div>
+      <p><strong>Never</strong> put the API key directly in the workflow YAML. Always use the CI's secret store.</p>
+      <p><strong>Never</strong> let secrets end up in the prompt, transcript, or committed diff.</p>
+      <p>Pick exactly one credential path — mixing (e.g., <code>ANTHROPIC_API_KEY</code> + OAuth) invites confusing precedence bugs.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li>Official GitHub Action: <code>anthropics/claude-code-action@v1</code></li>
+        <li>Universal pattern: install → auth → <code>claude -p</code> → parse → act</li>
+        <li>Three auth paths: API key, Bedrock (OIDC), Vertex AI (WIF)</li>
+        <li>Prefer OIDC/WIF over stored keys to avoid secret leakage</li>
+        <li>Works on <strong>any</strong> CI system — GitHub, GitLab, Jenkins, CircleCI, etc.</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.4
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-4">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.4</span>
+    <h2>Session Management &amp; Isolation</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>A single <code>-p</code> run is stateless from the caller's perspective, but Claude Code can <strong>continue prior conversations</strong> for multi-step automated workflows that share context. Session management controls whether each run is isolated or part of a conversation chain, and how to safely handle concurrency in scheduled jobs.</p>
+
+    <h3>Key Mechanics — Session Flags</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Flag</th><th>Purpose</th><th>Use Case</th></tr>
+      <tr>
+        <td><code>--continue</code> / <code>-c</code></td>
+        <td>Resume the most recent conversation in the current directory</td>
+        <td>Multi-step reviews: "review" → "now focus on DB queries" → "summarize"</td>
+      </tr>
+      <tr>
+        <td><code>--resume &lt;session_id&gt;</code> / <code>-r</code></td>
+        <td>Resume a specific session by ID</td>
+        <td>Pipeline stage 2 picks up exactly where stage 1 left off</td>
+      </tr>
+      <tr>
+        <td><code>--session-id &lt;UUID&gt;</code></td>
+        <td>Run under a caller-chosen session ID</td>
+        <td>Deterministic naming for idempotent/addressable jobs</td>
+      </tr>
+      <tr>
+        <td><code>--fork-session</code></td>
+        <td>Branch a new session from an existing one (with <code>--resume</code>/<code>--continue</code>)</td>
+        <td>Try a follow-up without mutating the original transcript</td>
+      </tr>
+    </tbody></table></div>
+
+    <h4>Multi-Step Pattern</h4>
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Step 1: Start review, capture session ID</span>
+session_id=$(claude -p "Start a review of the auth module." \
+  --output-format json | jq -r '.session_id')
+
+<span class="cmt"># Step 2: Continue the same conversation</span>
+claude -p "Now focus on the database queries." \
+  --resume "$session_id"
+
+<span class="cmt"># Step 3: Generate summary from full context</span>
+claude -p "Generate a summary of all issues found." \
+  --resume "$session_id"</code></pre>
+
+    <h3>Session Isolation in CI</h3>
+    <p>Each CI job run creates an isolated environment. Key isolation concepts:</p>
+    <ul>
+      <li><strong>Ephemeral environments:</strong> Docker containers and CI runners are disposable — sessions don't persist across job runs unless you explicitly save the session ID</li>
+      <li><strong><code>--bare</code> mode:</strong> Prevents loading ambient configuration (hooks, plugins, CLAUDE.md) from the workspace, ensuring identical behavior across machines</li>
+      <li><strong>Concurrency locks:</strong> Use <code>flock</code> or CI concurrency groups to prevent overlapping scheduled runs</li>
+    </ul>
+
+    <h3>Visual Aid — Session Decision Tree</h3>
+    <div class="diagram">                         Start
+                           │
+                    ┌──────┴──────┐
+                    │ Need prior  │
+                    │  context?   │
+                    └──────┬──────┘
+                      ╱         ╲
+                   Yes            No
+                    │              │
+             ┌──────┴──────┐    ┌─┴──────────────┐
+             │ Same dir as  │    │ Fresh run with  │
+             │ last session?│    │ claude -p only  │
+             └──────┬──────┘    └────────────────┘
+               ╱        ╲
+            Yes           No / specific
+              │              │
+       ┌──────┴──────┐  ┌───┴───────────┐
+       │  --continue  │  │  --resume     │
+       │  (latest in  │  │  &lt;session_id&gt; │
+       │   this dir)  │  │               │
+       └─────────────┘  └───────────────┘
+                              │
+                       ┌──────┴──────┐
+                       │ Want to     │
+                       │ fork?       │
+                       └──────┬──────┘
+                         ╱        ╲
+                      Yes           No
+                        │            │
+                 ┌──────┴──────┐  ┌──┴──────────┐
+                 │--fork-session│  │  Mutates    │
+                 │ (new branch) │  │  original   │
+                 └─────────────┘  └─────────────┘
+<span class="label">Figure 17.4 — Session flag decision tree</span></div>
+
+    <h4>Preventing Overlapping Scheduled Runs</h4>
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Use flock to prevent concurrent runs</span>
+flock -n /tmp/claude-nightly.lock -c '
+  claude -p "Nightly refactor sweep." \
+    --max-turns 15 --model sonnet --output-format json
+' || echo "Previous run still in progress; skipping."</code></pre>
+
+<pre><code><span class="lang-label">yaml</span><span class="cmt"># GitHub Actions: cancel overlapping scheduled runs</span>
+concurrency:
+  group: nightly-docs
+  cancel-in-progress: true</code></pre>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Exam scenario:</strong> "A pipeline has two stages that need shared context. How do you connect them?" → Capture <code>.session_id</code> from JSON output, then <code>--resume</code> in the next stage.</p>
+      <p><strong>Trick question:</strong> "<code>--continue</code> resumes any session anywhere." → <strong>False.</strong> It resumes the most recent session <em>in the current directory</em>.</p>
+      <p><strong>Key distinction:</strong> <code>--fork-session</code> creates a new branch; <code>--resume</code> mutates the original.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li><code>--continue</code> = resume latest session in current directory</li>
+        <li><code>--resume &lt;id&gt;</code> = resume specific session by ID</li>
+        <li><code>--session-id &lt;UUID&gt;</code> = deterministic, idempotent session naming</li>
+        <li><code>--fork-session</code> = branch without mutating original</li>
+        <li>Use <code>flock</code> or CI concurrency groups to prevent overlap</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.5
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-5">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.5</span>
+    <h2>Guardrails &amp; Permission Management</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>In interactive mode, the human IS the guardrail — approving each risky action. In CI/CD, there's no human, so you must encode all safety decisions in advance using three layers: <strong>tool restrictions</strong> (<code>--allowedTools</code> / <code>--disallowedTools</code>), <strong>permission modes</strong> (<code>--permission-mode</code>), and <strong>hooks</strong> (deterministic veto scripts).</p>
+    <p>This is <strong>the most exam-critical section</strong> — the difference between responsible and reckless automation.</p>
+
+    <h3>Key Mechanics</h3>
+
+    <h4>Layer 1: Tool Restrictions</h4>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Flag</th><th>Purpose</th><th>Example</th></tr>
+      <tr>
+        <td><code>--allowedTools</code></td>
+        <td>Whitelist tools that may run without prompting</td>
+        <td><code>--allowedTools "Read,Grep,Glob"</code> (read-only)</td>
+      </tr>
+      <tr>
+        <td><code>--disallowedTools</code></td>
+        <td>Blacklist specific tools or tool invocations</td>
+        <td><code>--disallowedTools "Bash(rm *)"</code></td>
+      </tr>
+    </tbody></table></div>
+
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Read-only reviewer: can search and read, nothing else</span>
+claude -p "Review this diff for bugs." \
+  --allowedTools "Read,Grep,Glob"
+
+<span class="cmt"># Allow git inspection but block destructive commands</span>
+claude -p "Summarize recent history." \
+  --allowedTools "Bash(git log *)" "Bash(git diff *)" "Read" \
+  --disallowedTools "Bash(rm *)"
+
+<span class="cmt"># Auto-commit with specific git commands allowed</span>
+claude -p "Commit staged changes with a descriptive message." \
+  --allowedTools "Bash(git diff *),Bash(git log *),Bash(git status *),Bash(git commit *)"</code></pre>
+
+    <div class="callout info">
+      <div class="callout-title">ℹ️ Important Detail — Prefix Matching</div>
+      <p><code>Bash(git diff *)</code> — the trailing <code>*</code> with a <strong>space before it</strong> enables prefix matching. Without the space, <code>Bash(git diff*)</code> would also match <code>git diff-index</code>. The exam may test this nuance.</p>
+    </div>
+
+    <h4>Layer 2: Permission Modes</h4>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Mode</th><th>Behavior</th><th>CI Suitability</th></tr>
+      <tr>
+        <td><code>default</code></td>
+        <td>Standard interactive prompting</td>
+        <td>❌ Hangs in CI — no one to answer</td>
+      </tr>
+      <tr>
+        <td><code>auto</code></td>
+        <td>Classifier reviews most actions instead of human</td>
+        <td>⚠️ Usable with <code>--permission-prompts none</code></td>
+      </tr>
+      <tr>
+        <td><code>acceptEdits</code></td>
+        <td>Auto-approves file writes + common filesystem commands</td>
+        <td>✅ For code-changing jobs</td>
+      </tr>
+      <tr>
+        <td><code>dontAsk</code></td>
+        <td>Auto-denies everything not pre-approved</td>
+        <td>✅ <strong>The CI-shaped mode</strong> — fully non-interactive</td>
+      </tr>
+      <tr>
+        <td><code>bypassPermissions</code></td>
+        <td>Disables ALL permission checks — every tool call executes</td>
+        <td>🔴 <strong>ONLY in disposable sandboxes</strong></td>
+      </tr>
+    </tbody></table></div>
+
+    <h4><code>--dangerously-skip-permissions</code></h4>
+    <p>Shorthand for <code>bypassPermissions</code>. Disables all permission prompts. <strong>Refuses to run as root on Linux/macOS.</strong> Use ONLY in ephemeral, sandboxed environments where there's nothing valuable to damage.</p>
+
+<pre><code><span class="lang-label">bash</span><span class="cmt"># ✅ SAFE: dontAsk mode with tight tool restrictions</span>
+claude -p "Review src/ for bugs." \
+  --permission-mode dontAsk \
+  --allowedTools "Read,Grep,Glob"
+
+<span class="cmt"># ⚠️ SANDBOXED ONLY: bypass all permissions in a disposable container</span>
+docker run --rm -e ANTHROPIC_API_KEY node:20-slim bash -c '
+  npm install -g @anthropic-ai/claude-code &amp;&amp;
+  claude -p "Fix the failing tests." \
+    --dangerously-skip-permissions \
+    --max-turns 5
+'</code></pre>
+
+    <h4>Layer 3: Hooks (Deterministic Veto)</h4>
+    <p>A <code>PreToolUse</code> hook is a shell script that runs before every tool execution. It can <strong>block an action by exiting non-zero</strong> — a deterministic veto that doesn't depend on the model's judgment.</p>
+    <ul>
+      <li>Encoded in <code>.claude/settings.json</code></li>
+      <li>Exit 0 = allow, exit non-zero = deny</li>
+      <li>Sees the full proposed action — can inspect and decide programmatically</li>
+      <li>Holds even if the prompt is adversarial or the model misbehaves</li>
+    </ul>
+
+    <h3>Visual Aid — Permission Decision Flow</h3>
+    <div class="diagram">                     Tool Call Proposed
+                            │
+                   ┌────────▼────────┐
+                   │ PreToolUse Hook │
+                   │  (if defined)   │
+                   └────────┬────────┘
+                        ╱       ╲
+               exit(0)            exit(N)
+               Allow               BLOCKED ✗
+                  │
+          ┌───────▼────────┐
+          │ --allowedTools  │
+          │ match?          │
+          └───────┬────────┘
+              ╱       ╲
+           Yes          No
+            │            │
+         EXECUTE    ┌────▼──────────┐
+            ✓       │ Permission    │
+                    │ Mode decides  │
+                    └────┬──────────┘
+                         │
+              ┌──────────┼──────────┐
+              │          │          │
+          dontAsk    acceptEdits  bypass
+              │          │          │
+          AUTO-DENY   IS EDIT?   EXECUTE
+              ✗       ╱    ╲        ✓
+               Yes      No
+                │        │
+            EXECUTE  AUTO-DENY
+                ✓        ✗
+<span class="label">Figure 17.5 — How hooks, allow-lists, and permission modes compose</span></div>
+
+    <h3>The Write/Commit/Push Boundary</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Authority Level</th><th>Agent Can Do</th><th>Pipeline Does</th><th>Guardrails</th></tr>
+      <tr>
+        <td><strong>Read-only</strong> (review)</td>
+        <td>Read files, search, analyze</td>
+        <td>Post comments</td>
+        <td><code>--allowedTools "Read,Grep,Glob"</code></td>
+      </tr>
+      <tr>
+        <td><strong>Write-to-tree</strong> (fix/refactor)</td>
+        <td>Edit files in working tree</td>
+        <td>Open PR if tests pass</td>
+        <td><code>--permission-mode acceptEdits</code></td>
+      </tr>
+      <tr>
+        <td><strong>Full auto</strong> (sandboxed)</td>
+        <td>Everything</td>
+        <td>—</td>
+        <td>Only in disposable containers</td>
+      </tr>
+    </tbody></table></div>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>High-weight topic:</strong> Expect 2–3 questions on guardrails/permissions. The exam loves testing which permission mode is appropriate for which scenario.</p>
+      <p><strong>"Which mode for CI?" → <code>dontAsk</code></strong> is the safe default answer unless the question specifically describes a disposable sandbox.</p>
+      <p><strong>Tricky distractor:</strong> <code>--dangerously-skip-permissions</code> is NOT required for CI. You can (and should) use <code>--permission-mode dontAsk</code> + <code>--allowedTools</code> instead.</p>
+      <p><strong>Hook fact:</strong> Hooks run <em>before</em> the allow-list check. A hook can block something that's on the allow-list.</p>
+    </div>
+
+    <div class="callout danger">
+      <div class="callout-title">❌ Common Pitfalls</div>
+      <p><strong>Over-permissioning:</strong> Using <code>--dangerously-skip-permissions</code> against a real repo because it was easier. An automated agent can push, delete, or call external APIs.</p>
+      <p><strong>Confusing "allow" vs "approve":</strong> <code>--allowedTools</code> skips the permission prompt, but a hook can still veto.</p>
+      <p><strong>Forgetting turn limits:</strong> Without <code>--max-turns</code>, a looping agent bills indefinitely.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li>Three guardrail layers: tools → permission mode → hooks</li>
+        <li><code>--allowedTools</code> = whitelist; <code>--disallowedTools</code> = blacklist</li>
+        <li><code>dontAsk</code> = the CI permission mode (auto-deny unapproved)</li>
+        <li><code>--dangerously-skip-permissions</code> = sandbox-only, refuses to run as root</li>
+        <li>Hooks = deterministic veto via <code>PreToolUse</code> shell scripts</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.6
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-6">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.6</span>
+    <h2>CLAUDE.md in CI/CD Context</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p><code>CLAUDE.md</code> is a special Markdown file that provides Claude Code with <strong>project-specific context</strong> — coding conventions, architecture decisions, tool preferences, and team practices. In CI/CD, it determines what context the agent has about your codebase, but also introduces a risk: ambient configuration that may not be appropriate for automated runs.</p>
+
+    <h3>Key Mechanics</h3>
+
+    <h4>CLAUDE.md Hierarchy (Resolution Order)</h4>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Location</th><th>Scope</th><th>Loaded in <code>-p</code>?</th><th>Loaded in <code>--bare</code>?</th></tr>
+      <tr><td><code>~/.claude/CLAUDE.md</code></td><td>Global — all projects</td><td>✅ Yes</td><td>❌ No</td></tr>
+      <tr><td><code>&lt;parent-dirs&gt;/CLAUDE.md</code></td><td>Parent directories (monorepo)</td><td>✅ Yes</td><td>❌ No</td></tr>
+      <tr><td><code>&lt;project-root&gt;/CLAUDE.md</code></td><td>Project-level — shared with team</td><td>✅ Yes</td><td>❌ No</td></tr>
+      <tr><td><code>&lt;project-root&gt;/.claude/CLAUDE.md</code></td><td>Same as above (alternative path)</td><td>✅ Yes</td><td>❌ No</td></tr>
+    </tbody></table></div>
+
+    <div class="callout info">
+      <div class="callout-title">ℹ️ Critical CI Distinction</div>
+      <p><strong><code>--bare</code> mode skips ALL CLAUDE.md files.</strong> This is the recommended mode for CI because it ensures deterministic behavior. Without <code>--bare</code>, a teammate's <code>~/.claude/CLAUDE.md</code> or a project's uncommitted configuration can change agent behavior unpredictably.</p>
+    </div>
+
+    <h4>What Goes in CLAUDE.md for CI</h4>
+    <p>If you intentionally want CI runs to use project context (without <code>--bare</code>), include:</p>
+    <ul>
+      <li><strong>Coding conventions:</strong> "We use pnpm, not npm" / "Tests go next to the source file"</li>
+      <li><strong>Architecture notes:</strong> "src/auth/ handles all authentication"</li>
+      <li><strong>CI-specific instructions:</strong> "When reviewing PRs, focus on security and API contracts"</li>
+      <li><strong>Tool restrictions:</strong> "Never modify files in the config/ directory"</li>
+    </ul>
+
+<pre><code><span class="lang-label">markdown</span># CLAUDE.md
+
+## Project Conventions
+- Package manager: pnpm (never npm or yarn)
+- Tests: colocated with source files (*.test.ts)
+- Import style: absolute paths with @/ alias
+
+## CI Review Instructions
+When reviewing pull requests:
+- Focus on security vulnerabilities, type safety, and API contracts
+- Check for proper error handling in async functions
+- Verify new endpoints have corresponding tests
+- Do NOT suggest style changes — the linter handles those
+
+## Architecture
+- src/auth/ — Authentication and authorization
+- src/api/ — REST API routes
+- src/db/ — Database models and migrations</code></pre>
+
+    <h4>Alternative: <code>--append-system-prompt</code></h4>
+    <p>Instead of relying on CLAUDE.md, you can inject context directly via CLI flags:</p>
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Add security review context without CLAUDE.md</span>
+gh pr diff "$1" | claude -p --bare \
+  --append-system-prompt "You are a security engineer. Review for vulnerabilities." \
+  --output-format json</code></pre>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Key exam question:</strong> "How do you ensure identical Claude Code behavior across all CI machines?" → Use <code>--bare</code> mode, which skips all ambient CLAUDE.md files, hooks, plugins, and auto-memory.</p>
+      <p><strong>Scenario:</strong> "Agent behaves differently on two developers' CI forks." → Likely cause: different <code>~/.claude/CLAUDE.md</code> files being loaded. Fix: add <code>--bare</code>.</p>
+      <p><strong>Alternative injection:</strong> <code>--append-system-prompt</code> adds to default behavior; <code>--system-prompt</code> fully replaces it.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li><code>CLAUDE.md</code> = project context file read at session start</li>
+        <li><code>--bare</code> skips ALL CLAUDE.md + hooks + plugins — use for deterministic CI</li>
+        <li><code>--append-system-prompt</code> = add context without CLAUDE.md files</li>
+        <li><code>--system-prompt</code> = fully replace default system prompt</li>
+        <li>Without <code>--bare</code>, CI loads ambient config from the workspace and home dir</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.7
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-7">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.7</span>
+    <h2>JSON Schema Validation (<code>--json-schema</code>)</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>The <code>--json-schema</code> flag constrains Claude Code's output to conform to a specific <strong>JSON Schema definition</strong>. Instead of hoping the model returns parseable data from free-text prose, you get <strong>schema-validated structured output</strong> in the <code>structured_output</code> field of the JSON response. This is what turns a brittle "grep the prose" pipeline into a robust, typed data pipeline.</p>
+
+    <h3>Key Mechanics</h3>
+    <ul>
+      <li><strong>Requires:</strong> <code>--output-format json</code> must be used together with <code>--json-schema</code></li>
+      <li><strong>Schema format:</strong> Standard JSON Schema (passed as a JSON string or file reference)</li>
+      <li><strong>Output location:</strong> Validated output in <code>.structured_output</code> field (not <code>.result</code>)</li>
+      <li><strong>Validation:</strong> If the schema is invalid, Claude exits with <code>Error: --json-schema is not a valid JSON Schema</code> and a diagnostic</li>
+      <li><strong><code>format</code> keyword:</strong> Accepted but treated as an annotation only — NOT enforced (e.g., <code>"format": "email"</code> won't validate emails)</li>
+    </ul>
+
+    <h4>Example: Extracting Function Names</h4>
+<pre><code><span class="lang-label">bash</span>claude -p "Extract the main function names from auth.py" \
+  --output-format json \
+  --json-schema '{
+    "type": "object",
+    "properties": {
+      "functions": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "required": ["functions"]
+  }' \
+| jq '.structured_output'</code></pre>
+
+    <h4>Example: Bug Report Extraction</h4>
+<pre><code><span class="lang-label">bash</span>claude -p "Analyze this code for bugs and report findings." \
+  --output-format json \
+  --json-schema '{
+    "type": "object",
+    "properties": {
+      "bugs": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "file": { "type": "string" },
+            "line": { "type": "integer" },
+            "severity": { "type": "string", "enum": ["critical","high","medium","low"] },
+            "description": { "type": "string" }
+          },
+          "required": ["file", "line", "severity", "description"]
+        }
+      },
+      "summary": { "type": "string" }
+    },
+    "required": ["bugs", "summary"]
+  }'</code></pre>
+
+    <h3>Visual Aid — With vs. Without Schema</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Approach</th><th>Output</th><th>Robustness</th></tr>
+      <tr>
+        <td><code>--output-format text</code><br>then grep for function names</td>
+        <td><em>"The main functions are: authenticate(), validate(), and logout()…"</em></td>
+        <td>🔴 Brittle — wording changes break parsing</td>
+      </tr>
+      <tr>
+        <td><code>--output-format json</code><br>(no schema)</td>
+        <td><code>{"result": "The main functions are..."}</code></td>
+        <td>🟡 Better — structured wrapper, but result is still prose</td>
+      </tr>
+      <tr>
+        <td><code>--output-format json</code><br><code>--json-schema {...}</code></td>
+        <td><code>{"structured_output": {"functions": ["authenticate","validate","logout"]}}</code></td>
+        <td>🟢 Robust — typed, validated, parseable</td>
+      </tr>
+    </tbody></table></div>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Critical distinction:</strong> With <code>--json-schema</code>, the structured result is in <code>.structured_output</code>, NOT <code>.result</code>. The exam will test this.</p>
+      <p><strong>Trap question:</strong> "Does <code>--json-schema</code> work with <code>--output-format text</code>?" → <strong>No.</strong> It requires <code>--output-format json</code>.</p>
+      <p><strong>Format keyword:</strong> The <code>"format": "email"</code> annotation is <em>accepted</em> but <em>not enforced</em>. Before v2.1.205, schemas containing <code>format</code> were treated as invalid entirely.</p>
+      <p><strong>When to use:</strong> Whenever a downstream pipeline step branches on the agent's output. Prefer schema over parsing free text.</p>
+    </div>
+
+    <div class="callout danger">
+      <div class="callout-title">❌ Common Pitfalls</div>
+      <p><strong>Wrong field:</strong> Reading <code>.result</code> when you should read <code>.structured_output</code>.</p>
+      <p><strong>Invalid schema:</strong> Passing malformed JSON Schema — Claude exits with an error. Always validate your schema before deploying.</p>
+      <p><strong>Over-reliance on <code>format</code>:</strong> Assuming <code>"format": "uri"</code> validates URIs — it doesn't; it's annotation-only.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li><code>--json-schema</code> + <code>--output-format json</code> = schema-validated structured output</li>
+        <li>Validated result lives in <code>.structured_output</code> (not <code>.result</code>)</li>
+        <li>Invalid schema → error exit with diagnostic message</li>
+        <li><code>format</code> keyword = accepted as annotation, NOT enforced</li>
+        <li>Use whenever downstream steps branch on agent output</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     SECTION 17.8
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s17-8">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">17.8</span>
+    <h2>Hands-On: End-to-End CI/CD Pipeline</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Concept Overview</h3>
+    <p>This section ties together <strong>every concept from 17.1–17.7</strong> into a complete, production-grade GitHub Actions workflow that performs automated PR review with structured output, guardrails, cost controls, and observability — the kind of end-to-end integration the exam tests with scenario questions.</p>
+
+    <h3>Architecture Diagram</h3>
+    <div class="diagram">┌────────────────────────────────────────────────────────────────────┐
+│                    GitHub Actions Workflow                          │
+│                                                                    │
+│  ┌──────────┐    ┌──────────────┐    ┌──────────────────────────┐ │
+│  │ TRIGGER   │    │ CHECKOUT     │    │  CLAUDE CODE STEP        │ │
+│  │           │    │              │    │                          │ │
+│  │ on: PR    │───▶│ actions/     │───▶│  claude -p \             │ │
+│  │ opened /  │    │ checkout@v4  │    │    --bare \              │ │
+│  │ sync      │    │ fetch-       │    │    --max-turns 12 \      │ │
+│  │           │    │ depth: 0     │    │    --model sonnet \      │ │
+│  └──────────┘    └──────────────┘    │    --permission-mode     │ │
+│                                      │      dontAsk \           │ │
+│                                      │    --allowedTools        │ │
+│                                      │      "Read,Grep,Glob" \  │ │
+│                                      │    --output-format json \ │ │
+│                                      │    --json-schema '...'   │ │
+│                                      └────────────┬─────────────┘ │
+│                                                   │               │
+│                                      ┌────────────▼─────────────┐ │
+│                                      │  PARSE &amp; POST            │ │
+│                                      │                          │ │
+│                                      │  jq '.structured_output' │ │
+│                                      │  → Post PR comment       │ │
+│                                      │  → Log session_id + cost │ │
+│                                      │  → Gate on exit code     │ │
+│                                      └──────────────────────────┘ │
+└────────────────────────────────────────────────────────────────────┘
+<span class="label">Figure 17.8 — Complete end-to-end CI pipeline architecture</span></div>
+
+    <h3>Complete Workflow File</h3>
+<pre><code><span class="lang-label">yaml</span>name: Claude Code PR Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read          # Read repo, but cannot push
+  pull-requests: write    # Post review comments
+
+concurrency:
+  group: claude-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10     # Wall-clock safety net
+
+    steps:
+      # Step 1: Checkout with full history for diff
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Step 2: Install Claude Code
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      # Step 3: Run the review with full guardrails
+      - name: Review PR
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          git diff origin/main...HEAD | claude -p \
+            --bare \
+            --max-turns 12 \
+            --model sonnet \
+            --permission-mode dontAsk \
+            --allowedTools "Read,Grep,Glob" \
+            --output-format json \
+            --json-schema '{
+              "type": "object",
+              "properties": {
+                "issues": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "file": {"type":"string"},
+                      "line": {"type":"integer"},
+                      "severity": {"type":"string","enum":["critical","high","medium","low"]},
+                      "description": {"type":"string"}
+                    },
+                    "required": ["file","line","severity","description"]
+                  }
+                },
+                "summary": {"type":"string"},
+                "risk_level": {"type":"string","enum":["none","low","medium","high"]}
+              },
+              "required": ["issues","summary","risk_level"]
+            }' \
+            "Review this pull request for bugs, security issues, and correctness. \
+             Be concise — one issue per finding with file:line reference." \
+          | tee review.json
+
+      # Step 4: Parse and log results
+      - name: Parse results
+        run: |
+          echo "## Review Summary" &gt;&gt; $GITHUB_STEP_SUMMARY
+          jq -r '.structured_output.summary' review.json &gt;&gt; $GITHUB_STEP_SUMMARY
+          echo "Risk: $(jq -r '.structured_output.risk_level' review.json)"
+          echo "Issues: $(jq '.structured_output.issues | length' review.json)"
+          echo "Cost: $(jq -r '.total_cost_usd' review.json)"
+          echo "Session: $(jq -r '.session_id' review.json)"</code></pre>
+
+    <h3>Key Design Decisions Explained</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Element</th><th>Why</th></tr>
+      <tr><td><code>--bare</code></td><td>Deterministic startup — no ambient config from workspace</td></tr>
+      <tr><td><code>--max-turns 12</code></td><td>Cost cap — fail if the task takes too many iterations</td></tr>
+      <tr><td><code>--model sonnet</code></td><td>Cost-efficient for review tasks — save Opus for complex work</td></tr>
+      <tr><td><code>--permission-mode dontAsk</code></td><td>Fully non-interactive — auto-deny anything not on the allow-list</td></tr>
+      <tr><td><code>--allowedTools "Read,Grep,Glob"</code></td><td>Read-only — reviewer shouldn't modify code</td></tr>
+      <tr><td><code>--json-schema '{...}'</code></td><td>Typed output — pipeline can reliably parse findings</td></tr>
+      <tr><td><code>timeout-minutes: 10</code></td><td>Wall-clock safety net — prevents infinite billing</td></tr>
+      <tr><td><code>concurrency: cancel-in-progress</code></td><td>Prevents overlapping reviews on the same PR</td></tr>
+      <tr><td><code>tee review.json</code></td><td>Log raw output AND parse it — audit trail</td></tr>
+      <tr><td><code>contents: read</code> only</td><td>GitHub permission — agent can't push even if it tried</td></tr>
+    </tbody></table></div>
+
+    <h3>Cost Control Checklist for Production</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Control</th><th>Flag / Config</th><th>Purpose</th></tr>
+      <tr><td><code>--max-turns</code></td><td><code>--max-turns N</code></td><td>Cap agentic iterations</td></tr>
+      <tr><td><code>--max-budget-usd</code></td><td><code>--max-budget-usd N</code></td><td>Hard dollar ceiling per run</td></tr>
+      <tr><td>Model selection</td><td><code>--model sonnet</code></td><td>Cheaper model for routine tasks</td></tr>
+      <tr><td>Concurrency</td><td>CI concurrency groups</td><td>Prevent parallel job explosion</td></tr>
+      <tr><td>Timeout</td><td><code>timeout-minutes: N</code></td><td>Wall-clock limit on the step</td></tr>
+      <tr><td>Fallback</td><td><code>--fallback-model</code></td><td>Switch to backup if primary is unavailable</td></tr>
+    </tbody></table></div>
+
+    <h3>Observability — Telemetry Setup</h3>
+<pre><code><span class="lang-label">bash</span><span class="cmt"># Enable OpenTelemetry for fleet-wide monitoring</span>
+export CLAUDE_CODE_ENABLE_TELEMETRY=1
+export OTEL_METRICS_EXPORTER=otlp
+export OTEL_LOGS_EXPORTER=otlp
+export OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://collector.internal:4317
+
+<span class="cmt"># Content logging is OFF by default (security).</span>
+<span class="cmt"># Opt-in only if appropriate:</span>
+<span class="cmt"># export OTEL_LOG_USER_PROMPTS=true</span>
+<span class="cmt"># export OTEL_LOG_TOOL_DETAILS=true</span></code></pre>
+
+    <div class="callout exam">
+      <div class="callout-title">⚠️ Exam Tips &amp; Tricks</div>
+      <p><strong>Scenario question:</strong> "Design a CI workflow that reviews PRs without modifying code." → This section is the model answer. Key elements: <code>--bare</code>, <code>dontAsk</code>, read-only tools, <code>--json-schema</code>, <code>--max-turns</code>, timeout, concurrency group.</p>
+      <p><strong>Cost controls:</strong> Expect a question asking you to identify all cost-control mechanisms. The five knobs: <code>--max-turns</code>, <code>--max-budget-usd</code>, <code>--model</code>, concurrency groups, and wall-clock timeouts.</p>
+      <p><strong>Audit trail:</strong> "What three things should every unattended run capture?" → Session ID, structured result, and the diff/artifact produced.</p>
+    </div>
+
+    <div class="quick-recall">
+      <h4>⚡ Quick-Recall Summary</h4>
+      <ul>
+        <li>Complete pipeline: trigger → auth → <code>claude -p</code> (guardrailed) → parse → act</li>
+        <li>Five cost controls: <code>--max-turns</code>, <code>--max-budget-usd</code>, model, concurrency, timeout</li>
+        <li>Audit: always capture session_id + structured result + artifact</li>
+        <li>Telemetry: <code>CLAUDE_CODE_ENABLE_TELEMETRY=1</code> + OTLP for fleet monitoring</li>
+        <li>Content logging is OFF by default — opt-in only with <code>OTEL_LOG_*</code> vars</li>
+      </ul>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     CHAPTER SUMMARY TABLE
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="summary">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">📋</span>
+    <h2>Chapter Summary Table</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <div class="table-wrap"><table class="summary-table">
+      <tbody><tr><th>Section</th><th>Core Concept</th><th>Key Flag / Tool</th><th>Must-Know Fact</th></tr>
+      <tr>
+        <td>17.1</td>
+        <td>Headless mode</td>
+        <td><code>-p</code> / <code>--print</code></td>
+        <td>Required for ALL CI/CD; exits 0 on success</td>
+      </tr>
+      <tr>
+        <td>17.2</td>
+        <td>Output formats</td>
+        <td><code>--output-format</code></td>
+        <td>3 formats: text, json, stream-json; parse with jq</td>
+      </tr>
+      <tr>
+        <td>17.3</td>
+        <td>CI integration</td>
+        <td><code>anthropics/claude-code-action@v1</code></td>
+        <td>Works on ANY CI system; 3 auth methods</td>
+      </tr>
+      <tr>
+        <td>17.4</td>
+        <td>Session management</td>
+        <td><code>--continue</code>, <code>--resume</code></td>
+        <td>Capture session_id from JSON to chain stages</td>
+      </tr>
+      <tr>
+        <td>17.5</td>
+        <td>Guardrails</td>
+        <td><code>--permission-mode dontAsk</code></td>
+        <td>3 layers: tools → permission mode → hooks</td>
+      </tr>
+      <tr>
+        <td>17.6</td>
+        <td>CLAUDE.md in CI</td>
+        <td><code>--bare</code></td>
+        <td>--bare skips ALL ambient config for deterministic runs</td>
+      </tr>
+      <tr>
+        <td>17.7</td>
+        <td>Schema validation</td>
+        <td><code>--json-schema</code></td>
+        <td>Output in .structured_output, NOT .result</td>
+      </tr>
+      <tr>
+        <td>17.8</td>
+        <td>End-to-end pipeline</td>
+        <td>All flags combined</td>
+        <td>5 cost controls: turns, budget, model, concurrency, timeout</td>
+      </tr>
+    </tbody></table></div>
+
+    <h3>Complete CI/CD Flag Reference Card</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Flag</th><th>Purpose</th><th>CI Required?</th></tr>
+      <tr><td><code>-p</code> / <code>--print</code></td><td>Non-interactive batch mode</td><td>✅ Required</td></tr>
+      <tr><td><code>--bare</code></td><td>Skip auto-discovery (hooks, CLAUDE.md, plugins)</td><td>✅ Recommended</td></tr>
+      <tr><td><code>--output-format json</code></td><td>Machine-readable structured output</td><td>✅ Recommended</td></tr>
+      <tr><td><code>--json-schema</code></td><td>Enforce output schema</td><td>When branching on output</td></tr>
+      <tr><td><code>--max-turns N</code></td><td>Cap agentic iterations</td><td>✅ Always</td></tr>
+      <tr><td><code>--max-budget-usd N</code></td><td>Hard dollar ceiling</td><td>Recommended</td></tr>
+      <tr><td><code>--model</code></td><td>Select model (cost lever)</td><td>Recommended</td></tr>
+      <tr><td><code>--allowedTools</code></td><td>Whitelist tools</td><td>✅ Always</td></tr>
+      <tr><td><code>--disallowedTools</code></td><td>Blacklist specific tool invocations</td><td>When needed</td></tr>
+      <tr><td><code>--permission-mode dontAsk</code></td><td>Auto-deny unapproved actions</td><td>✅ Recommended</td></tr>
+      <tr><td><code>--dangerously-skip-permissions</code></td><td>Skip ALL permission checks</td><td>🔴 Sandbox only</td></tr>
+      <tr><td><code>--continue</code> / <code>--resume</code></td><td>Session continuation</td><td>Multi-stage workflows</td></tr>
+      <tr><td><code>--append-system-prompt</code></td><td>Add to default system prompt</td><td>Optional context injection</td></tr>
+      <tr><td><code>--verbose</code></td><td>Full turn-by-turn stream output</td><td>With stream-json</td></tr>
+      <tr><td><code>--fallback-model</code></td><td>Backup model if primary unavailable</td><td>For overnight reliability</td></tr>
+    </tbody></table></div>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     EXAM STRATEGY
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="exam-strategy">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">🎯</span>
+    <h2>Exam Strategy</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <h3>Question Type Patterns</h3>
+    <div class="table-wrap"><table>
+      <tbody><tr><th>Type</th><th>Frequency</th><th>Example</th></tr>
+      <tr>
+        <td><strong>Scenario-based MCQ</strong></td>
+        <td>Most common (40–50%)</td>
+        <td>"A team wants to automate PR reviews. Which flags should they use?"</td>
+      </tr>
+      <tr>
+        <td><strong>Flag identification</strong></td>
+        <td>Common (25–30%)</td>
+        <td>"Which flag enables non-interactive mode?"</td>
+      </tr>
+      <tr>
+        <td><strong>True/False traps</strong></td>
+        <td>Moderate (15–20%)</td>
+        <td>"<code>--json-schema</code> output appears in the <code>.result</code> field."</td>
+      </tr>
+      <tr>
+        <td><strong>"Select all that apply"</strong></td>
+        <td>Occasional (10%)</td>
+        <td>"Which are valid permission modes? (Select 3)"</td>
+      </tr>
+    </tbody></table></div>
+
+    <h3>Priority Ranking by Exam Weight</h3>
+    <div class="table-wrap"><table class="summary-table">
+      <tbody><tr><th>Priority</th><th>Section</th><th>Reason</th></tr>
+      <tr><td class="priority-high">🔴 HIGH</td><td>17.1 — <code>-p</code> flag</td><td>Foundation of everything; tested directly and indirectly</td></tr>
+      <tr><td class="priority-high">🔴 HIGH</td><td>17.5 — Guardrails</td><td>Multiple permission modes + tool restrictions = many question combos</td></tr>
+      <tr><td class="priority-high">🔴 HIGH</td><td>17.7 — JSON Schema</td><td>Tricky <code>.structured_output</code> vs <code>.result</code> distinction</td></tr>
+      <tr><td class="priority-med">🟡 MEDIUM</td><td>17.2 — Output formats</td><td>Three formats with specific use cases</td></tr>
+      <tr><td class="priority-med">🟡 MEDIUM</td><td>17.3 — CI Integration</td><td>GitHub Action name + auth methods</td></tr>
+      <tr><td class="priority-med">🟡 MEDIUM</td><td>17.8 — End-to-end</td><td>Synthesis questions combining all concepts</td></tr>
+      <tr><td class="priority-low">🟢 LOW</td><td>17.4 — Sessions</td><td>Fewer question variations; simple flag matching</td></tr>
+      <tr><td class="priority-low">🟢 LOW</td><td>17.6 — CLAUDE.md</td><td>Usually 1 question; <code>--bare</code> is the key fact</td></tr>
+    </tbody></table></div>
+
+    <h3>Tricky Distractor Patterns to Watch</h3>
+    <ul>
+      <li><strong>Fake flags:</strong> <code>--silent</code>, <code>--batch</code>, <code>--headless</code>, <code>--non-interactive</code>, <code>--ci-mode</code> — none of these exist</li>
+      <li><strong>Wrong field names:</strong> <code>.text</code>, <code>.output</code>, <code>.response</code> instead of <code>.result</code>; <code>.schema_output</code> instead of <code>.structured_output</code></li>
+      <li><strong>Permission mode confusion:</strong> <code>skip</code>, <code>bypass</code>, <code>unsafe</code> instead of the real <code>bypassPermissions</code></li>
+      <li><strong>Action name:</strong> <code>anthropic/claude-code-action</code> (missing 's') vs. the real <code>anthropics/claude-code-action</code></li>
+      <li><strong>Auth variable swap:</strong> <code>CLAUDE_API_KEY</code> instead of <code>ANTHROPIC_API_KEY</code></li>
+    </ul>
+
+    <h3>Golden Rules for This Chapter</h3>
+    <ol>
+      <li><strong>No <code>-p</code>, no CI.</strong> Every unattended invocation requires <code>--print</code>.</li>
+      <li><strong>Parse JSON, not text.</strong> Always use <code>--output-format json</code> + <code>jq</code>.</li>
+      <li><strong>Least privilege.</strong> <code>--allowedTools</code> + <code>--permission-mode dontAsk</code> is the safe default.</li>
+      <li><strong>Always cap cost.</strong> <code>--max-turns</code> + timeout + model selection.</li>
+      <li><strong>Schema for structure.</strong> <code>--json-schema</code> → read <code>.structured_output</code>.</li>
+      <li><strong>Bare for determinism.</strong> <code>--bare</code> ensures identical behavior across all machines.</li>
+    </ol>
+
+  </div></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════════════════════════
+     PRACTICE QUIZ
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="quiz">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="num">🧪</span>
+    <h2>Practice Quiz (8 Questions)</h2>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="section-body"><div class="section-content">
+
+    <!-- Q1 -->
+    <div class="quiz-q">
+      <div class="q-num">Q1</div>
+      <div class="question">Which flag is <strong>required</strong> to run Claude Code non-interactively in a CI pipeline?</div>
+      <ol class="options">
+        <li><code>--batch</code></li>
+        <li><code>--headless</code></li>
+        <li><code>-p</code> / <code>--print</code></li>
+        <li><code>--ci-mode</code></li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ C) <code>-p</code> / <code>--print</code></span></p>
+        <p>The <code>--print</code> flag (shorthand <code>-p</code>) is the ONLY flag that switches Claude Code into non-interactive batch mode. Options A, B, and D are fabricated flags that do not exist in Claude Code.</p>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="quiz-q">
+      <div class="q-num">Q2</div>
+      <div class="question">When using <code>--output-format json</code> with <code>--json-schema</code>, where does the schema-validated output appear in the response?</div>
+      <ol class="options">
+        <li><code>.result</code></li>
+        <li><code>.structured_output</code></li>
+        <li><code>.schema_result</code></li>
+        <li><code>.validated_json</code></li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ B) <code>.structured_output</code></span></p>
+        <p>When <code>--json-schema</code> is used, the validated output is placed in the <code>.structured_output</code> field, NOT <code>.result</code>. The <code>.result</code> field contains the free-text response. This is a critical distinction for building reliable pipelines.</p>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="quiz-q">
+      <div class="q-num">Q3</div>
+      <div class="question">A team wants their CI job to review PRs without any ability to modify files. Which combination is the MOST appropriate?</div>
+      <ol class="options">
+        <li><code>--dangerously-skip-permissions --allowedTools "Read,Write,Edit"</code></li>
+        <li><code>--permission-mode dontAsk --allowedTools "Read,Grep,Glob"</code></li>
+        <li><code>--permission-mode bypassPermissions --allowedTools "Read,Grep"</code></li>
+        <li><code>--permission-mode acceptEdits --allowedTools "Read,Grep,Edit"</code></li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ B) <code>--permission-mode dontAsk --allowedTools "Read,Grep,Glob"</code></span></p>
+        <p><code>dontAsk</code> auto-denies anything not pre-approved, and the allow-list contains ONLY read-only tools. Option A uses the dangerous bypass with write access. Option C uses bypassPermissions unnecessarily. Option D includes Edit which allows file modifications.</p>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="quiz-q">
+      <div class="q-num">Q4</div>
+      <div class="question">What does the <code>--bare</code> flag skip when running <code>claude -p</code>? (Select ALL that apply)</div>
+      <ol class="options">
+        <li>CLAUDE.md files from the project and home directory</li>
+        <li>Hooks defined in <code>.claude/settings.json</code></li>
+        <li>The <code>ANTHROPIC_API_KEY</code> environment variable</li>
+        <li>MCP servers, plugins, and auto-memory</li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ A, B, and D</span></p>
+        <p><code>--bare</code> skips auto-discovery of hooks, skills, plugins, MCP servers, auto memory, CLAUDE.md files, and OAuth/keychain credentials. It does NOT skip <code>ANTHROPIC_API_KEY</code> from the environment — that's the intended auth method for bare mode.</p>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="quiz-q">
+      <div class="q-num">Q5</div>
+      <div class="question">A pipeline has two stages. Stage 1 analyzes code; Stage 2 needs Stage 1's context to generate tests. How should Stage 2 access Stage 1's conversation?</div>
+      <ol class="options">
+        <li>Stage 2 uses <code>--continue</code> to resume the latest session</li>
+        <li>Stage 1 saves <code>.session_id</code> from JSON output; Stage 2 uses <code>--resume &lt;session_id&gt;</code></li>
+        <li>They share context automatically because they're in the same CI job</li>
+        <li>Stage 2 passes <code>--shared-context stage1</code></li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ B) Capture <code>.session_id</code> and use <code>--resume</code></span></p>
+        <p>The reliable pattern: extract <code>.session_id</code> from the JSON output of Stage 1, then pass it to <code>--resume</code> in Stage 2. Option A works but is less reliable (what if they run in different directories?). Option C is false — there's no automatic sharing. Option D is a fabricated flag.</p>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="quiz-q">
+      <div class="q-num">Q6</div>
+      <div class="question">Which authentication method avoids storing long-lived secrets in a GitHub Actions CI environment for Amazon Bedrock?</div>
+      <ol class="options">
+        <li>Hard-coded <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> in the workflow file</li>
+        <li>OIDC role assumption via <code>aws-actions/configure-aws-credentials</code> with <code>id-token: write</code></li>
+        <li><code>ANTHROPIC_API_KEY</code> stored as a GitHub secret</li>
+        <li>Service account JSON key stored in repository settings</li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ B) OIDC role assumption</span></p>
+        <p>OIDC federation mints short-lived credentials at job runtime — no static secret is stored anywhere. The job requests <code>id-token: write</code> permission, assumes an IAM role, and receives temporary credentials scoped to that role. Option A hard-codes secrets (worst practice). Option C is for direct Anthropic API, not Bedrock. Option D is a GCP concept.</p>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="quiz-q">
+      <div class="q-num">Q7</div>
+      <div class="question">True or False: <code>--dangerously-skip-permissions</code> is required for running Claude Code in any CI/CD pipeline.</div>
+      <ol class="options">
+        <li>True — CI has no human to approve, so all permissions must be skipped</li>
+        <li>False — you should use <code>--permission-mode dontAsk</code> with <code>--allowedTools</code> instead</li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ B) False</span></p>
+        <p><code>--dangerously-skip-permissions</code> is NOT required for CI. The recommended approach is <code>--permission-mode dontAsk</code> combined with <code>--allowedTools</code> to whitelist only what the task needs. The dangerous flag should only be used in disposable sandboxed environments. It refuses to run as root as an additional safety measure.</p>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="quiz-q">
+      <div class="q-num">Q8</div>
+      <div class="question">Which of these are valid cost controls for unattended Claude Code runs? (Select ALL that apply)</div>
+      <ol class="options">
+        <li><code>--max-turns N</code> to cap agentic iterations</li>
+        <li><code>--max-budget-usd N</code> to set a hard dollar ceiling</li>
+        <li><code>--cost-limit N</code> to restrict per-token pricing</li>
+        <li><code>--model sonnet</code> to use a cheaper model for routine tasks</li>
+        <li>CI <code>timeout-minutes</code> as a wall-clock safety net</li>
+      </ol>
+      <button class="reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show Answer</button>
+      <div class="quiz-answer">
+        <p><span class="correct">✅ A, B, D, and E</span></p>
+        <p>The five valid cost controls are: <code>--max-turns</code> (iteration cap), <code>--max-budget-usd</code> (dollar ceiling), model selection (cheaper models for routine work), concurrency groups (prevent parallel job explosion), and wall-clock timeouts. Option C (<code>--cost-limit</code>) is a fabricated flag that does not exist.</p>
+      </div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>💡 <strong>Study Tip:</strong> Review the Quick-Recall boxes before the exam — they contain the distilled facts you need most. Focus extra time on Sections 17.1, 17.5, and 17.7 (highest exam weight).</p>
+  <p>📅 Last Updated: September 14, 2026 &nbsp;|&nbsp; Sources: Official Anthropic Documentation, claude-code-action@v1, Claude Code Best Practices</p>
+</footer>
+
+</main>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+function toggleSection(header) {
+  const section = header.parentElement;
+  section.classList.toggle('open');
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+}
+
+// Scroll spy for navigation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      const id = entry.target.id;
+      const link = document.querySelector(`nav a[href="#${id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -60% 0px' });
+
+document.querySelectorAll('.section').forEach(s => observer.observe(s));
+
+// Smooth scroll for nav links + close mobile nav
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelector('nav').classList.remove('open');
+  });
+});
+</script>
+
+
+</body></html>

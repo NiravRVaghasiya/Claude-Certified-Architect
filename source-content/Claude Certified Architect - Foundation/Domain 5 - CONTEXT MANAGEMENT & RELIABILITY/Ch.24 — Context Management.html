@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 24: Managing Conversation Context — Study Notes</title>
+<style>
+  :root{
+    --blue:#2563eb; --blue-dark:#1e3a8a; --ink:#0f172a; --muted:#475569;
+    --line:#e2e8f0; --bg:#f8fafc; --card:#ffffff; --amber:#b45309;
+    --green:#047857; --red:#b91c1c; --violet:#6d28d9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.6; margin:0; padding:0;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:32px 24px 80px;}
+  header.hero{
+    background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff;
+    border-radius:14px; padding:28px 30px; margin-bottom:28px;
+    box-shadow:0 6px 22px rgba(37,99,235,.25);
+  }
+  header.hero .exam{font-size:13px; letter-spacing:.08em; text-transform:uppercase; opacity:.85; margin:0 0 6px;}
+  header.hero h1{margin:0 0 8px; font-size:28px; line-height:1.25;}
+  header.hero p{margin:0; opacity:.92; font-size:15px;}
+  h2{
+    font-size:23px; color:var(--blue-dark); margin:44px 0 6px;
+    padding-bottom:8px; border-bottom:3px solid var(--blue); scroll-margin-top:16px;
+  }
+  h3{font-size:16px; color:var(--ink); margin:20px 0 6px; text-transform:uppercase; letter-spacing:.03em;}
+  h3::before{content:"▸ "; color:var(--blue);}
+  p{margin:8px 0;}
+  ul,ol{margin:8px 0 8px 4px; padding-left:22px;}
+  li{margin:4px 0;}
+  a{color:var(--blue); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  section.topic{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:20px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(15,23,42,.05);
+  }
+  code{background:#eef2ff; color:#3730a3; padding:1px 5px; border-radius:4px; font-size:.9em;}
+  table{border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; background:#fff;}
+  th,td{border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top;}
+  th{background:#eff6ff; color:var(--blue-dark); font-weight:600;}
+  tbody tr:nth-child(even) td, table tr:nth-child(even) td{background:#fafbff;}
+  /* callout boxes */
+  .recall{background:#f0f7ff; border-left:5px solid var(--blue); padding:12px 14px; margin:16px 0; border-radius:0 8px 8px 0;}
+  .tips{background:#ecfdf5; border-left:5px solid var(--green); padding:6px 14px; margin:14px 0; border-radius:0 8px 8px 0;}
+  .pitfall{background:#fef2f2; border-left:5px solid var(--red); padding:6px 14px; margin:14px 0; border-radius:0 8px 8px 0;}
+  .exam{background:#fffbeb; border-left:5px solid var(--amber); padding:6px 14px; margin:14px 0; border-radius:0 8px 8px 0;}
+  .concept{background:#faf5ff; border-left:5px solid var(--violet); padding:6px 14px; margin:14px 0; border-radius:0 8px 8px 0;}
+  .badge{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:2px 8px; border-radius:20px; margin-left:8px; vertical-align:middle;}
+  .badge.prob{background:#fee2e2; color:#991b1b;}
+  .badge.mit{background:#d1fae5; color:#065f46;}
+  .badge.lab{background:#e0e7ff; color:#3730a3;}
+  /* CSS flow diagram */
+  .flow{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:16px 0; font-size:13px;}
+  .node{background:#eff6ff; border:1.5px solid var(--blue); color:var(--blue-dark); padding:8px 12px; border-radius:8px; font-weight:600; text-align:center;}
+  .node.warn{background:#fef2f2; border-color:var(--red); color:#991b1b;}
+  .node.ok{background:#ecfdf5; border-color:var(--green); color:#065f46;}
+  .arrow{color:var(--muted); font-weight:700; font-size:18px;}
+  .col{display:flex; flex-direction:column; gap:6px; align-items:stretch;}
+  /* token bar */
+  .bar{display:flex; height:34px; border-radius:6px; overflow:hidden; border:1px solid var(--line); margin:10px 0; font-size:12px; font-weight:600; color:#fff;}
+  .seg{display:flex; align-items:center; justify-content:center; white-space:nowrap; padding:0 6px;}
+  pre{background:#0f172a; color:#e2e8f0; padding:16px; border-radius:10px; overflow-x:auto; font-size:13px; line-height:1.5; font-family:"SF Mono",Consolas,Menlo,monospace;}
+  pre .u{color:#93c5fd;} pre .a{color:#86efac;} pre .sys{color:#fca5a5;} pre .note{color:#fcd34d;}
+  .toc{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 24px; margin-bottom:24px;}
+  .toc ol{columns:2; column-gap:36px;}
+  @media(max-width:640px){.toc ol{columns:1;} header.hero h1{font-size:22px;}}
+  .legend{font-size:12px; color:var(--muted); margin-top:6px;}
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media(max-width:680px){.two{grid-template-columns:1fr;}}
+  .mini-h{font-weight:700; color:var(--blue-dark); font-size:13px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:4px;}
+  footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="exam">Claude Certified Architect — Foundations &amp; Professional</p>
+  <h1>Chapter 24 · Managing Conversation Context Across Long Interactions</h1>
+  <p>Exam-ready study notes · 8 subtopics (24.1–24.8) · problem chain → mitigation toolkit → hands-on lab</p>
+</header>
+
+<!-- ============ TABLE OF CONTENTS ============ -->
+<nav class="toc" aria-label="Table of contents">
+  <h2 style="margin-top:0;border:none;">Table of Contents</h2>
+  <ol>
+    <li><a href="#s241">24.1 Context Windows &amp; Token Budgets</a></li>
+    <li><a href="#s242">24.2 Context Overflow &amp; Truncation</a></li>
+    <li><a href="#s243">24.3 Attention Dilution &amp; "Lost in the Middle"</a></li>
+    <li><a href="#s244">24.4 Progressive Summarization &amp; Compaction</a></li>
+    <li><a href="#s245">24.5 Structured Fact Extraction &amp; Persistent State</a></li>
+    <li><a href="#s246">24.6 Tool-Output Management &amp; Selective Retention</a></li>
+    <li><a href="#s247">24.7 Retrieval-Augmented Context / External Memory</a></li>
+    <li><a href="#s248">24.8 Hands-On: Optimizing a Support Session</a></li>
+  </ol>
+  <p style="margin:10px 0 0;"><a href="#summary">↳ Chapter Summary Table</a> &nbsp;·&nbsp; <a href="#rapid">↳ Rapid Revision (5-min)</a></p>
+</nav>
+
+<!-- ============ CHAPTER OVERVIEW ============ -->
+<section class="topic" id="overview">
+  <h2 style="margin-top:0;">Chapter Overview</h2>
+  <p>Every Claude interaction is <em>stateless under the hood</em>: the model has no memory between API calls, so the entire conversation — system prompt, all prior turns, tool results, and documents — must be re-sent inside a finite <strong>context window</strong> on every request. As a long-running agent accumulates turns, that window fills, forcing architects to decide <strong>what to keep, what to compress, and what to offload</strong>. Get this wrong and the agent silently forgets critical facts, contradicts itself, slows down, and burns cost linearly with history length.</p>
+  <p>This chapter walks the <strong>problem chain</strong> (24.1 budgets → 24.2 overflow → 24.3 degraded recall), then the <strong>mitigation toolkit</strong> (24.4 summarization, 24.5 structured state, 24.6 tool-output trimming, 24.7 external retrieval), and finishes with a <strong>hands-on lab</strong> (24.8) that applies every technique to a real support transcript. Mastering context management is the single highest-leverage skill for building reliable, affordable, long-horizon Claude agents.</p>
+  <p class="legend"><span class="badge prob">Problem</span> 24.1–24.3 &nbsp; <span class="badge mit">Mitigation</span> 24.4–24.7 &nbsp; <span class="badge lab">Lab</span> 24.8</p>
+</section>
+
+<!-- ================= 24.1 ================= -->
+<section class="topic" id="s241">
+  <h2>24.1 Context Windows &amp; Token Budgets <span class="badge prob">Problem · Foundations</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p>A <strong>context window</strong> is the maximum number of <strong>tokens</strong> a model can process in a single request — it holds the <em>input</em> (system prompt + full history + tool results + documents) <em>and</em> reserves room for the <em>output</em>. A <strong>token budget</strong> is the architect's plan for how that fixed capacity is divided among competing consumers.</p>
+  <div class="concept"><strong>Key idea:</strong> Tokens are sub-word units (roughly ~3–4 English characters, or ~0.75 words each). The window is a <em>hard ceiling</em> shared by input and output — every token spent on stale history is a token unavailable for reasoning or the answer.</div>
+
+  <h3>Why It Happens / Root Cause</h3>
+  <ul>
+    <li><strong>Transformers are fixed-context:</strong> self-attention computes relationships across all positions at once, so the architecture defines a maximum sequence length it was trained/served to handle.</li>
+    <li><strong>Statelessness:</strong> the API resends the whole conversation each turn, so token usage grows with cumulative history — not just the latest message.</li>
+    <li><strong>Cost &amp; latency scale with input tokens:</strong> longer prompts mean more compute per call; attention cost grows roughly quadratically with sequence length, and price is billed per input/output token.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>A coding agent starts a session with a 1,500-token system prompt and pastes an 18,000-token file. After 30 turns of back-and-forth plus verbose tool logs, the "input" alone approaches the window ceiling. The next tool result is rejected because there is no room left for the model to actually respond.</p>
+
+  <h3>Visualization — Token Budget Allocation</h3>
+  <div class="bar">
+    <div class="seg" style="background:#6d28d9; width:12%;">System</div>
+    <div class="seg" style="background:#b91c1c; width:34%;">Conversation history</div>
+    <div class="seg" style="background:#b45309; width:24%;">Tool results</div>
+    <div class="seg" style="background:#2563eb; width:18%;">RAG / docs</div>
+    <div class="seg" style="background:#047857; width:12%;">Output reserve</div>
+  </div>
+  <p class="legend">Illustrative allocation of one shared window. If history balloons, the output reserve (green) shrinks first — the model runs out of room to answer.</p>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li>Always <strong>reserve output headroom</strong> explicitly (e.g., leave 10–20% for <code>max_tokens</code>) — never plan to fill the window with input.</li>
+    <li>Instrument a live <strong>token counter</strong> per turn; track input growth, not just message count.</li>
+    <li>Treat the system prompt as <strong>fixed overhead</strong> — keep it lean; it is paid on every single call.</li>
+    <li>Estimate early: ~4 chars ≈ 1 token for English; code and JSON are token-dense.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Assuming a "big" window means you never have to manage it — cost and latency still scale linearly with what you send.</li>
+    <li>Counting <em>turns</em> instead of <em>tokens</em>; one pasted document can equal 100 chat turns.</li>
+    <li>Forgetting that the window is shared by input <em>and</em> output — a full input can leave no room to reply.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>Expect <strong>calculation / allocation MCQs</strong>: "Given a system prompt of X tokens, a Y-token document, and Z tokens reserved for output, how many tokens remain for conversation history?" Also "why did the request fail?" scenarios where the answer is <em>input+output exceeded the window</em>. Approach: subtract fixed consumers (system, docs, output reserve) from the window first, then reason about what's left for history.</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> The context window is a single fixed token budget shared by input <em>and</em> output; because Claude is stateless, cumulative history is re-sent every turn — manage tokens, not turns.</div>
+</section>
+
+<!-- ================= 24.2 ================= -->
+<section class="topic" id="s242">
+  <h2>24.2 Context Overflow &amp; Truncation <span class="badge prob">Problem · Hard Loss</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p><strong>Overflow</strong> is what happens when the assembled prompt exceeds the window. <strong>Truncation</strong> is the crude fix: dropping tokens — usually the <em>oldest</em> turns (a sliding window) — so the request fits. This is <strong>hard, irreversible information loss</strong>: dropped content is simply gone from the model's view.</p>
+  <div class="concept"><strong>Key idea:</strong> Truncation is silent by default. The model doesn't announce "I forgot turn 3" — it just answers as if that content never existed.</div>
+
+  <h3>Why It Happens / Root Cause</h3>
+  <ul>
+    <li><strong>Fixed ceiling met by growing history:</strong> once cumulative tokens exceed the window, something must be removed or the call errors.</li>
+    <li><strong>Naive eviction policy:</strong> the common default is FIFO (drop the earliest messages), which often evicts the <em>most important</em> setup facts (customer ID, original goal, constraints stated up front).</li>
+    <li><strong>System-prompt pinning gaps:</strong> if the framework doesn't protect key content, it can be evicted alongside chit-chat.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>In turn 1 a customer gives order ID <code>#88213</code> and a refund amount <code>$129.99</code>. Twenty turns later the sliding window has evicted turn 1. The agent, asked to "process the refund we discussed," now has no order ID — it hallucinates a plausible-looking one or asks the customer to repeat information they already gave, eroding trust.</p>
+
+  <h3>Visualization — FIFO Truncation Timeline</h3>
+  <div class="flow">
+    <div class="node warn">T1 · Order&nbsp;#88213 <br><small>(evicted ✖)</small></div>
+    <span class="arrow">→</span>
+    <div class="node">T2</div><span class="arrow">→</span>
+    <div class="node">T3 … T18</div><span class="arrow">→</span>
+    <div class="node ok">T19 · kept</div><span class="arrow">→</span>
+    <div class="node ok">T20 · kept</div>
+  </div>
+  <p class="legend">Sliding window keeps the newest turns and drops the oldest — but the oldest turn held the critical case facts.</p>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li><strong>Never rely on raw truncation</strong> for anything that must persist — extract facts to a pinned block (see 24.5) <em>before</em> they can be evicted.</li>
+    <li>Prefer <strong>compaction/summarization</strong> (24.4) over blind eviction so early context survives in condensed form.</li>
+    <li>Pin the system prompt and a "case facts" region so the eviction policy can't touch them.</li>
+    <li>Set a <strong>proactive threshold</strong> (e.g., compact at ~70% window) instead of waiting for a hard overflow error.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Believing "the model still remembers earlier turns" after truncation — it cannot see what was removed.</li>
+    <li>Letting FIFO eviction quietly delete the original task goal or key identifiers.</li>
+    <li>Only handling overflow reactively (after an error) rather than compacting ahead of the ceiling.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>Look for <strong>"identify the flaw"</strong> and root-cause scenarios: an agent "forgets" a detail after many turns — the correct diagnosis is truncation/eviction, and the correct fix is fact extraction or summarization <em>before</em> eviction, not "use a bigger model." Beware distractors that blame the model's intelligence rather than the context pipeline.</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> Overflow forces truncation; default FIFO eviction silently drops the oldest turns — which often hold setup facts. Extract or summarize <em>before</em> the window fills.</div>
+</section>
+
+<!-- ================= 24.3 ================= -->
+<section class="topic" id="s243">
+  <h2>24.3 Attention Dilution &amp; "Lost in the Middle" <span class="badge prob">Problem · Soft Loss</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p>Even when content <em>fits</em> in the window, the model may not <em>use</em> it well. <strong>"Lost in the middle"</strong> describes the empirically observed pattern where models retrieve information placed at the <strong>beginning and end</strong> of a long context more reliably than information buried in the <strong>middle</strong>. <strong>Attention dilution</strong> is the broader effect: as context grows, relevant signal competes with more distractors.</p>
+  <div class="concept"><strong>Key idea:</strong> This is <em>soft</em> loss — the facts are present but under-weighted. Position and signal-to-noise ratio matter, not just presence.</div>
+
+  <h3>Why It Happens / Root Cause</h3>
+  <ul>
+    <li><strong>Positional effects:</strong> primacy/recency-like biases mean edges of the context are attended to more strongly than the middle (documented by Liu et al., 2023, "Lost in the Middle").</li>
+    <li><strong>Signal dilution:</strong> softmax attention spreads weight across many tokens; a needle fact competes with a large haystack of low-value tokens.</li>
+    <li><strong>Distraction:</strong> irrelevant but topically-similar content can pull attention away from the truly relevant span.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>An agent is given 40 pages of policy plus the user question. The exact clause needed sits on page 20 (the middle). The model answers using a more prominent clause from page 1, producing a confidently wrong response — despite the correct text being "in context."</p>
+
+  <h3>Visualization — Recall vs. Position</h3>
+  <table>
+    <tbody><tr><th>Position of key fact in context</th><th>Relative recall reliability</th></tr>
+    <tr><td>Start (system prompt / first turns)</td><td>★★★★★ Highest</td></tr>
+    <tr><td>Middle (buried among many turns/docs)</td><td>★★ Lowest — "lost in the middle"</td></tr>
+    <tr><td>End (most recent turn / instruction)</td><td>★★★★★ Highest</td></tr>
+  </tbody></table>
+  <p class="legend">Illustrative pattern: recall is a "U-shape" — strong at the edges, weak in the middle.</p>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li><strong>Position matters:</strong> place the most critical facts and the actual instruction at the <em>start or the very end</em> of the prompt.</li>
+    <li>Put the <strong>question after the documents</strong> (or restate it at the end) so the ask sits in a high-recall position.</li>
+    <li>Reduce the haystack: retrieve only relevant chunks (24.7) instead of dumping everything.</li>
+    <li>Use <strong>structured highlighting</strong> (headers, a "CASE FACTS" block) to make key spans stand out.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Assuming "if it's in the window, the model will use it" — presence ≠ reliable retrieval.</li>
+    <li>Burying the actual instruction in the middle of a huge context.</li>
+    <li>Stuffing more context to "be safe," which <em>increases</em> dilution and lowers accuracy.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>Scenario MCQs will show a correct answer that exists in the provided context yet the agent got it wrong; the tested insight is <strong>positional recall / dilution</strong>, with the fix being <em>reduce &amp; reposition</em> (retrieve relevant chunks, put key facts at edges) rather than "add more context." Watch for the trap answer "increase the context window."</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> Fitting ≠ using. Models recall edges better than the middle ("lost in the middle"); keep contexts lean and put critical facts and the instruction at the start or end.</div>
+</section>
+
+<!-- ================= 24.4 ================= -->
+<section class="topic" id="s244">
+  <h2>24.4 Progressive Summarization &amp; Compaction <span class="badge mit">Mitigation</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p><strong>Progressive summarization</strong> (a.k.a. <strong>compaction</strong>) replaces older raw turns with a running condensed summary, so the conversation's <em>meaning</em> survives at a fraction of the token cost. It's the primary defense against overflow while preserving continuity.</p>
+  <div class="concept"><strong>Key idea:</strong> Trade <em>fidelity</em> for <em>capacity</em> — condense what happened so the window keeps room for what happens next.</div>
+
+  <h3>Why It Happens / Root Cause (why it's needed &amp; how it works)</h3>
+  <ul>
+    <li><strong>Mechanism:</strong> when history nears a threshold, the older segment is fed to the model with a "summarize this" instruction; the raw turns are then replaced by the summary in subsequent prompts.</li>
+    <li><strong>Lossy compression:</strong> summarization is inherently lossy — it keeps gist and can drop exact specifics (numbers, IDs, dates) unless explicitly told to preserve them.</li>
+    <li><strong>Rolling vs. hierarchical:</strong> you can summarize on a rolling basis (summary + last N raw turns) or hierarchically (summaries of summaries) for very long sessions.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>A 60-turn planning session is compacted every 20 turns into a 300-token "state so far" block. The agent stays coherent about decisions made hours ago — but the first naive summary dropped the exact budget figure <code>$47,500</code>, which had to be re-anchored via a structured facts block (24.5).</p>
+
+  <h3>Visualization — Rolling Compaction Flow</h3>
+  <div class="flow">
+    <div class="node">Turns 1–20 (raw)</div>
+    <span class="arrow">→</span>
+    <div class="node ok">Summary&nbsp;S1 <br><small>(~300 tok)</small></div>
+    <span class="arrow">+</span>
+    <div class="node">Turns 21–30 (raw)</div>
+    <span class="arrow">→</span>
+    <div class="node ok">Summary&nbsp;S2</div>
+    <span class="arrow">+</span>
+    <div class="node">latest turns</div>
+  </div>
+  <p class="legend">Old raw turns collapse into a compact running summary; only recent turns stay verbatim.</p>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li>Use a <strong>structured summary template</strong> (Goal / Decisions / Open items / Key facts) — free-form summaries drift and drop specifics.</li>
+    <li><strong>Extract critical facts first</strong> (24.5), <em>then</em> summarize the prose — protect IDs, amounts, and dates from lossy compression.</li>
+    <li>Keep the <strong>last N turns verbatim</strong> so fine-grained recent detail (needed for the next reply) isn't blurred.</li>
+    <li>Summarize on a <strong>threshold</strong> (e.g., ~70% window), not every turn — over-summarizing wastes calls and compounds loss.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Summarizing exact figures/IDs into vague prose ("a refund was discussed") — losing the data the task needs.</li>
+    <li>Summaries-of-summaries drifting further from the truth each cycle (compounding error).</li>
+    <li>Compacting the <em>most recent</em> turn and losing the immediate detail needed to answer.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>Expect "<strong>what did summarization risk losing?</strong>" and "<strong>best-practice ordering</strong>" questions. The high-scoring answer usually pairs summarization <em>with</em> structured fact extraction and keeps recent turns raw. A classic distractor: "summarize everything including the latest turn" — wrong, because recent detail must stay verbatim.</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> Compaction condenses old turns into a running summary to save tokens — but it's lossy; extract exact facts first and keep the last few turns verbatim.</div>
+</section>
+
+<!-- ================= 24.5 ================= -->
+<section class="topic" id="s245">
+  <h2>24.5 Structured Fact Extraction &amp; Persistent State <span class="badge mit">Mitigation</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p>Instead of hoping key data survives summarization, <strong>explicitly extract critical facts into a compact, structured block</strong> that is pinned to the top of every prompt. This <strong>persistent state / "case facts" block</strong> is the source of truth for identifiers, decisions, and constraints.</p>
+  <div class="concept"><strong>Key idea:</strong> Facts that <em>must not be lost</em> should live in a durable, structured region — not scattered across evictable prose.</div>
+
+  <h3>Why It Happens / Root Cause (why it's needed)</h3>
+  <ul>
+    <li><strong>Complements summarization:</strong> 24.4 preserves gist; 24.5 guarantees exact specifics that summarization would blur.</li>
+    <li><strong>Placement leverages 24.3:</strong> pinning the block near the top (a high-recall position) makes the model attend to it reliably.</li>
+    <li><strong>Machine-updatable:</strong> a structured schema (key: value) is easy to update, deduplicate, and validate across turns.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>The support agent maintains a pinned block updated each turn. When the conversation is later compacted, the order ID and amount remain exact because they live in the facts block, not in the summarized prose.</p>
+  <pre><span class="note">CASE FACTS (pinned, updated each turn):</span>
+- Customer ID:   88213
+- Order Date:    2024-03-14
+- Issue:         Refund not processed
+- Amount:        $129.99
+- Status:        Escalated to Tier 2 (turn 4)</pre>
+
+  <h3>Visualization — State Block vs. Summary Roles</h3>
+  <table>
+    <tbody><tr><th>Content type</th><th>Where it lives</th><th>Guarantee</th></tr>
+    <tr><td>Exact IDs, amounts, dates, decisions</td><td><strong>Structured facts block</strong> (pinned, top)</td><td>Lossless, high-recall</td></tr>
+    <tr><td>Narrative "what happened" gist</td><td>Rolling summary (24.4)</td><td>Lossy but compact</td></tr>
+    <tr><td>Recent fine-grained detail</td><td>Last N raw turns</td><td>Verbatim, short-lived</td></tr>
+  </tbody></table>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li>Define a <strong>fixed schema</strong> up front (IDs, dates, amounts, status, open actions) and update it every turn.</li>
+    <li><strong>Pin it near the top</strong> of the prompt so it sits in a high-recall position and survives eviction.</li>
+    <li>Keep it <strong>terse</strong> — key:value lines, not paragraphs — so it stays cheap.</li>
+    <li>Have the model <strong>update the block explicitly</strong> as part of each turn's output, then feed it back next turn.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Letting the facts block grow unbounded (append-only) until it becomes bloat itself — deduplicate and prune stale entries.</li>
+    <li>Storing prose instead of structured key:value pairs, reintroducing ambiguity.</li>
+    <li>Extracting facts but then forgetting to re-inject the block on subsequent turns.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>MCQs frame this as the <strong>correct fix</strong> when a scenario shows lost exact data: "how do you guarantee the order ID survives 50 turns of summarization?" → maintain a pinned structured facts block. Recognize it as the <em>complement</em> to summarization, not an alternative.</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> Extract must-keep specifics (IDs, amounts, dates, decisions) into a compact pinned key:value block — lossless, high-recall, and immune to summarization drift.</div>
+</section>
+
+<!-- ================= 24.6 ================= -->
+<section class="topic" id="s246">
+  <h2>24.6 Tool-Output Management &amp; Selective Retention <span class="badge mit">Mitigation</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p>Tool/API calls often return large, verbose payloads (full JSON, HTML, logs). <strong>Tool-output management</strong> means <strong>trimming, parsing, and selectively retaining</strong> only the fields the agent actually needs before those results re-enter the context on future turns.</p>
+  <div class="concept"><strong>Key idea:</strong> Raw tool output is frequently the single biggest, least-valuable consumer of the window. Keep the signal, drop the wrapper.</div>
+
+  <h3>Why It Happens / Root Cause</h3>
+  <ul>
+    <li><strong>APIs are verbose:</strong> a single response can be thousands of tokens of metadata, pagination, and nesting — most irrelevant to the task.</li>
+    <li><strong>Accumulation:</strong> in an agentic loop, every tool call's full output can persist in history, multiplying bloat across turns.</li>
+    <li><strong>Token density:</strong> JSON/HTML is token-heavy (braces, quotes, keys), so raw payloads cost disproportionately.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>An order-lookup tool returns a 2,000-token JSON object. The agent only needs 5 fields (status, amount, date, ID, ETA). Retaining the full blob across 10 turns would waste ~20,000 tokens; retaining a 5-field digest costs ~50 tokens per turn.</p>
+
+  <h3>Visualization — Before vs. After Trimming</h3>
+  <table>
+    <tbody><tr><th>Aspect</th><th>Before Optimization</th><th>After Optimization</th></tr>
+    <tr><td>Tool output retained</td><td>Full 2,000-token JSON response</td><td>Trimmed to 5 relevant fields (~50 tokens)</td></tr>
+    <tr><td>Cost across 10 turns</td><td>~20,000 tokens</td><td>~500 tokens</td></tr>
+    <tr><td>Signal-to-noise</td><td>Low — key fields buried</td><td>High — only what's needed</td></tr>
+    <tr><td>Effect on recall (24.3)</td><td>Dilutes attention</td><td>Sharpens attention</td></tr>
+  </tbody></table>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li><strong>Parse then persist:</strong> extract the needed fields <em>outside</em> the model and inject only the digest, not the raw payload.</li>
+    <li><strong>Summarize large results</strong> (e.g., long documents returned by a tool) before they enter history.</li>
+    <li>Keep the <strong>full raw output only for the current turn</strong> if needed, then collapse it to a digest afterward.</li>
+    <li>Store bulky results externally (24.7) and pass a <strong>reference/ID</strong> instead of the payload.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Dumping raw JSON straight into context and leaving it there every subsequent turn.</li>
+    <li>Over-trimming — removing a field the next step actually needs, forcing a re-call.</li>
+    <li>Ignoring tool output as a context consumer because it "isn't chat" — it counts against the same window.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>Expect <strong>before/after token-math</strong> questions and "which change most reduces context growth?" — trimming verbose tool output is often the highest-impact single lever. Distractors suggest summarizing chat while ignoring the far larger tool payloads.</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> Verbose tool/API output is often the biggest context hog — parse it down to the few needed fields (or an external reference) before it re-enters history.</div>
+</section>
+
+<!-- ================= 24.7 ================= -->
+<section class="topic" id="s247">
+  <h2>24.7 Retrieval-Augmented Context / External Memory <span class="badge mit">Mitigation</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p><strong>Retrieval-Augmented Generation (RAG)</strong> and <strong>external memory</strong> move the bulk of knowledge <em>out</em> of the context window and into a store (vector DB, database, files). At each turn, only the <strong>most relevant</strong> chunks are retrieved and injected — turning "keep everything in context" into "fetch what's needed, when it's needed."</p>
+  <div class="concept"><strong>Key idea:</strong> The window becomes a <em>working set</em>, not a warehouse. Long-term memory lives externally and is queried on demand.</div>
+
+  <h3>Why It Happens / Root Cause (how it works)</h3>
+  <ul>
+    <li><strong>Embedding + similarity search:</strong> documents/turns are embedded into vectors; a query embedding retrieves the top-k most similar chunks.</li>
+    <li><strong>Decouples knowledge from window size:</strong> a store can hold gigabytes; only a few relevant chunks enter the prompt.</li>
+    <li><strong>Directly fights dilution (24.3):</strong> retrieving only relevant chunks raises signal-to-noise and improves recall.</li>
+  </ul>
+
+  <h3>Real-World Example</h3>
+  <p>A support agent embeds the full 500-page product manual once. When a user asks about "warranty on refurbished units," it retrieves the 3 relevant paragraphs (~600 tokens) instead of stuffing the whole manual — cheaper, faster, and more accurate.</p>
+
+  <h3>Visualization — RAG Context Flow</h3>
+  <div class="flow">
+    <div class="node">User query</div><span class="arrow">→</span>
+    <div class="node">Embed &amp; search</div><span class="arrow">→</span>
+    <div class="col">
+      <div class="node ok">Top-k chunks</div>
+      <div class="node warn" style="font-size:11px;">(rest stays in store, out of window)</div>
+    </div>
+    <span class="arrow">→</span>
+    <div class="node">Prompt = system + facts + top-k + query</div><span class="arrow">→</span>
+    <div class="node ok">Claude answer</div>
+  </div>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li><strong>Chunk thoughtfully:</strong> right-sized, semantically coherent chunks retrieve better than arbitrary splits.</li>
+    <li>Tune <strong>top-k</strong>: too few misses context, too many reintroduces dilution — retrieve the minimum that answers.</li>
+    <li>Use <strong>metadata filters</strong> (date, source, customer) to narrow before similarity search.</li>
+    <li>Combine with a <strong>facts block (24.5)</strong>: RAG for knowledge, structured state for session-specific identifiers.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Retrieving too many chunks and recreating the very dilution RAG was meant to solve.</li>
+    <li>Poor chunking/embeddings → retrieving irrelevant passages (garbage in, garbage out).</li>
+    <li>Treating RAG as a replacement for session state — it retrieves knowledge, not the live conversation's exact IDs.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>Questions contrast <strong>"put it all in context" vs. "retrieve on demand"</strong> for large/static knowledge bases — RAG is the scalable answer. Also expect "why did RAG return a wrong passage?" (chunking/embedding quality) and "RAG vs. structured state" distinctions (knowledge vs. session facts).</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> RAG keeps bulk knowledge in an external store and injects only the top-k relevant chunks per turn — the window becomes a working set, not a warehouse.</div>
+</section>
+
+<!-- ================= 24.8 ================= -->
+<section class="topic" id="s248">
+  <h2>24.8 Hands-On: Optimizing a Multi-Turn Support Session <span class="badge lab">Lab</span></h2>
+
+  <h3>Definition / Concept</h3>
+  <p>This lab applies the full mitigation toolkit (24.4–24.7) to a realistic support session that suffers growing <strong>context bloat</strong>. You'll see a <strong>Before</strong> (verbose, unoptimized) transcript, an <strong>After</strong> (optimized) version, and a per-turn walkthrough of what technique was applied and why.</p>
+
+  <h3>Scenario</h3>
+  <p>A customer contacts support about a failed refund. The agent must look up the order (tool call), escalate, check policy (knowledge base), and confirm resolution — across ~7 turns. Watch the token cost diverge.</p>
+
+  <h3>BEFORE — Unoptimized (context grows every turn)</h3>
+  <pre><span class="sys">[SYSTEM] You are a support agent... (1,500 tokens)</span>
+
+<span class="u">[T1 User]</span> Hi, my refund for order #88213 ($129.99, ordered 2024-03-14) hasn't come through.
+<span class="a">[T1 Agent]</span> Let me look that up.
+<span class="note">→ TOOL get_order(88213) returns FULL 2,000-token JSON (all fields, metadata, history) — kept verbatim in context</span>
+
+<span class="u">[T2 User]</span> Any update?
+<span class="a">[T2 Agent]</span> Checking payment status...
+<span class="note">→ TOOL get_payment(88213) returns ANOTHER 1,800-token JSON — kept verbatim</span>
+
+<span class="u">[T3 User]</span> Is it a policy issue?
+<span class="a">[T3 Agent]</span> Let me check the refund policy.
+<span class="note">→ ENTIRE 40-page refund policy pasted into context (~30,000 tokens)</span>
+
+<span class="u">[T4 User]</span> So what now?
+<span class="a">[T4 Agent]</span> Escalating to Tier 2.  <span class="note">(all prior raw turns + 2 huge JSONs + full policy still present)</span>
+
+<span class="u">[T5 User]</span> Can you confirm my order number again?
+<span class="a">[T5 Agent]</span> <span class="sys">...order #88213 has now been EVICTED by truncation — agent asks user to repeat it ✖</span>
+
+<span class="note">RESULT: context near ceiling by T4; by T5 the earliest turn (with the order ID) is truncated.
+Cost balloons every turn; recall of the key ID is lost (24.2) and the needed policy clause is
+"lost in the middle" of 30k tokens (24.3).</span></pre>
+
+  <h3>AFTER — Optimized (applies 24.4–24.7)</h3>
+  <pre><span class="sys">[SYSTEM] You are a support agent... (1,500 tokens, fixed)</span>
+<span class="note">CASE FACTS (pinned, top — 24.5):</span>
+- Customer/Order ID: 88213
+- Order Date:        2024-03-14
+- Amount:            $129.99
+- Issue:             Refund not processed
+- Status:            (updated each turn)
+
+<span class="u">[T1 User]</span> Refund for #88213 ($129.99, 2024-03-14) hasn't arrived.
+<span class="a">[T1 Agent]</span> Looking it up.
+<span class="note">→ TOOL get_order(88213) → parsed to DIGEST (24.6): {status: shipped, refund: pending, method: card} (~40 tokens)</span>
+
+<span class="u">[T2 User]</span> Update?
+<span class="a">[T2 Agent]</span> Payment digest: {refund_state: not_initiated, gateway: OK} (~30 tokens)  <span class="note">(24.6)</span>
+
+<span class="u">[T3 User]</span> Policy issue?
+<span class="a">[T3 Agent]</span> <span class="note">→ RAG retrieves ONLY the 2 relevant clauses (~500 tokens) from the policy store (24.7)</span>
+Per policy §4.2, card refunds take 5–7 business days; yours is day 8 → eligible for manual push.
+
+<span class="u">[T4 User]</span> So what now?
+<span class="a">[T4 Agent]</span> Escalating to Tier 2.  → updates CASE FACTS: Status = "Escalated T2 (T4)" (24.5)
+<span class="note">→ Turns 1–2 raw exchanges COMPACTED into 1-line summary (24.4): "Looked up order+payment; refund pending, gateway OK."</span>
+
+<span class="u">[T5 User]</span> Confirm my order number?
+<span class="a">[T5 Agent]</span> Order #88213, $129.99 — still exact, read from pinned CASE FACTS ✔ (survives — 24.5)
+
+<span class="u">[T6 User]</span> Great, when will I see it?
+<span class="a">[T6 Agent]</span> Manual refund pushed; 1–2 business days per §4.2 (retrieved clause still available). ✔
+
+<span class="note">RESULT: context stays flat and small. Order ID never lost; policy answer accurate;
+cost per turn ~constant instead of exploding.</span></pre>
+
+  <h3>Step-by-Step Optimization Walkthrough</h3>
+  <table>
+    <tbody><tr><th>Turn</th><th>Bloat source (Before)</th><th>Technique applied (After)</th><th>Subtopic</th></tr>
+    <tr><td>Setup</td><td>Key IDs live only in T1 prose (evictable)</td><td>Pin a structured <strong>CASE FACTS</strong> block at top</td><td>24.5</td></tr>
+    <tr><td>T1</td><td>2,000-token order JSON kept verbatim</td><td>Parse to a ~40-token <strong>digest</strong></td><td>24.6</td></tr>
+    <tr><td>T2</td><td>1,800-token payment JSON kept verbatim</td><td>Parse to a ~30-token digest</td><td>24.6</td></tr>
+    <tr><td>T3</td><td>Full 40-page policy pasted (~30k tokens)</td><td><strong>RAG</strong>: retrieve only the 2 relevant clauses</td><td>24.7</td></tr>
+    <tr><td>T4</td><td>All raw early turns still present</td><td><strong>Compact</strong> turns 1–2 into a 1-line summary; update facts block status</td><td>24.4, 24.5</td></tr>
+    <tr><td>T5</td><td>Order ID already truncated → asks user to repeat</td><td>Read exact ID from pinned facts block — <strong>lossless</strong></td><td>24.5</td></tr>
+    <tr><td>T6</td><td>Would re-paste policy to answer ETA</td><td>Reuse the already-retrieved clause; no re-dump</td><td>24.6, 24.7</td></tr>
+  </tbody></table>
+
+  <h3>Before vs. After — Outcome Summary</h3>
+  <table>
+    <tbody><tr><th>Metric</th><th>Before</th><th>After</th></tr>
+    <tr><td>Context growth</td><td>Explodes (near ceiling by T4)</td><td>~Flat, small working set</td></tr>
+    <tr><td>Order ID recall at T5</td><td>Lost (truncated) ✖</td><td>Exact, from facts block ✔</td></tr>
+    <tr><td>Policy answer quality</td><td>Risk of "lost in the middle" ✖</td><td>Precise, retrieved clause ✔</td></tr>
+    <tr><td>Cost per turn</td><td>Rising steeply</td><td>Roughly constant</td></tr>
+  </tbody></table>
+
+  <h3>Tips &amp; Tricks</h3>
+  <div class="tips"><ul>
+    <li>Layer the techniques — <strong>facts block + digests + RAG + compaction</strong> compound; no single one suffices.</li>
+    <li>Establish the pinned facts block <strong>before</strong> the first tool call so nothing critical is ever only-in-prose.</li>
+    <li>Digest tool output <strong>immediately</strong>, on the same turn it returns.</li>
+    <li>Retrieve policy/knowledge <strong>per question</strong>; never paste whole documents.</li>
+  </ul></div>
+
+  <h3>Common Pitfalls</h3>
+  <div class="pitfall"><ul>
+    <li>Applying compaction but forgetting the facts block — exact IDs still get blurred.</li>
+    <li>Digesting tool output but re-pasting entire documents for policy lookups.</li>
+    <li>Compacting the most recent turn and losing detail needed to answer the next message.</li>
+  </ul></div>
+
+  <h3>Exam Strategy</h3>
+  <div class="exam"><p>The hands-on topic is tested as <strong>multi-step "optimize this transcript"</strong> or "match each bloat source to the correct fix" items. Score by naming the <em>specific</em> technique per problem (verbose JSON → digest; pasted doc → RAG; lost ID → facts block; long history → compaction) rather than a generic "reduce context."</p></div>
+
+  <div class="recall"><strong>Quick Recall:</strong> Real optimization layers all four mitigations — pin facts (24.5), digest tool output (24.6), retrieve knowledge (24.7), and compact old turns (24.4) — to keep context flat while staying accurate.</div>
+</section>
+
+<!-- ============ CHAPTER SUMMARY TABLE ============ -->
+<section class="topic" id="summary">
+  <h2>Chapter Summary Table</h2>
+  <table>
+    <tbody><tr><th>Subtopic</th><th>Primary Risk</th><th>Mitigation Technique</th></tr>
+    <tr><td><strong>24.1</strong> Context Windows &amp; Token Budgets</td><td>Fixed shared window; input+output can't exceed it; cost/latency scale with tokens</td><td>Budget explicitly; reserve output headroom; measure tokens (not turns)</td></tr>
+    <tr><td><strong>24.2</strong> Overflow &amp; Truncation</td><td>Hard, silent loss — FIFO eviction drops oldest (often key) turns</td><td>Compact/extract <em>before</em> the ceiling; pin critical regions</td></tr>
+    <tr><td><strong>24.3</strong> Attention Dilution / "Lost in the Middle"</td><td>Soft loss — buried facts under-attended; presence ≠ recall</td><td>Reduce &amp; reposition: put key facts/instruction at edges; retrieve relevant chunks</td></tr>
+    <tr><td><strong>24.4</strong> Progressive Summarization</td><td>Lossy compression can drop exact specifics; summary drift</td><td>Structured summary template + keep recent turns raw</td></tr>
+    <tr><td><strong>24.5</strong> Structured Fact Extraction</td><td>Exact IDs/amounts/dates lost to summarization or eviction</td><td>Pinned key:value CASE FACTS block, updated each turn</td></tr>
+    <tr><td><strong>24.6</strong> Tool-Output Management</td><td>Verbose JSON/logs dominate &amp; dilute the window</td><td>Parse to a small digest; store bulk externally, pass a reference</td></tr>
+    <tr><td><strong>24.7</strong> Retrieval-Augmented Context</td><td>Whole knowledge bases can't (and shouldn't) live in-window</td><td>Embed once; retrieve only top-k relevant chunks per query</td></tr>
+    <tr><td><strong>24.8</strong> Hands-On Optimization</td><td>Compounding bloat across a real multi-turn session</td><td>Layer 24.4–24.7: facts block + digests + RAG + compaction</td></tr>
+  </tbody></table>
+</section>
+
+<!-- ============ RAPID REVISION ============ -->
+<section class="topic" id="rapid">
+  <h2>Rapid Revision — 5-Minute Pre-Exam Recap</h2>
+  <div class="recall">
+  <ul>
+    <li><strong>24.1 Budgets:</strong> One fixed window shared by input + output; Claude is stateless → history re-sent every turn. Manage <em>tokens</em>, not turns; reserve output headroom.</li>
+    <li><strong>24.2 Truncation:</strong> Overflow → FIFO eviction silently drops the oldest turns (often the setup facts). Extract/compact <em>before</em> the ceiling; pin what must survive.</li>
+    <li><strong>24.3 Lost in the middle:</strong> Fitting ≠ using. Recall is U-shaped (strong at edges, weak in middle). Keep context lean; place key facts + instruction at start/end.</li>
+    <li><strong>24.4 Summarization:</strong> Condense old turns into a running summary to save tokens — lossy; use a structured template, keep recent turns verbatim.</li>
+    <li><strong>24.5 Fact block:</strong> Pin exact IDs/amounts/dates/decisions as key:value at the top — lossless, high-recall, immune to summarization drift.</li>
+    <li><strong>24.6 Tool output:</strong> Verbose JSON is often the biggest hog — parse to a few needed fields (or an external reference) before it re-enters history.</li>
+    <li><strong>24.7 RAG / external memory:</strong> Store bulk knowledge outside the window; retrieve only top-k relevant chunks per turn. Window = working set, not warehouse.</li>
+    <li><strong>24.8 Hands-on:</strong> Real optimization <em>layers</em> all four — facts block + digests + RAG + compaction — keeping context flat and accurate.</li>
+  </ul>
+  <p style="margin:6px 0 0;"><strong>Exam reflex:</strong> When an agent "forgets" or answers wrong despite having the info — diagnose the <em>context pipeline</em> (truncation, dilution, verbose tool output) and pick the <em>specific</em> mitigation; the trap answer is almost always "just use a bigger context window / smarter model."</p>
+  </div>
+</section>
+
+<footer>
+  Chapter 24 · Managing Conversation Context Across Long Interactions — study notes.
+  Numeric token figures are illustrative examples for exam reasoning, not fixed product limits.
+  Verify current model window sizes against official Anthropic documentation.
+</footer>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCAR — Chapter 40: Model Selection &amp; Tradeoffs</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --page:#f1f5f9;
+    --surface:#ffffff;
+    --surface-alt:#f8fafc;
+    --ink:#0f172a;
+    --ink-soft:#334155;
+    --muted:#64748b;
+    --border:#e2e8f0;
+    --border-strong:#cbd5e1;
+    --primary:#2563eb;
+    --primary-soft:#dbeafe;
+    --accent:#7c3aed;
+    --accent-soft:#ede9fe;
+    --green:#059669;
+    --green-soft:#d1fae5;
+    --red:#dc2626;
+    --red-soft:#fee2e2;
+    --amber:#d97706;
+    --amber-soft:#fef3c7;
+    --tier-fast:#0ea5e9;
+    --tier-bal:#7c3aed;
+    --tier-max:#e11d48;
+    --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --radius:12px;
+    --radius-sm:8px;
+    --shadow:0 1px 3px rgba(15,23,42,.08),0 8px 24px rgba(15,23,42,.05);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--page);color:var(--ink);
+    font-family:var(--font);line-height:1.62;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 80px;}
+
+  /* ---------- Header ---------- */
+  header.hero{
+    background:linear-gradient(135deg,#0f172a 0%,#1e293b 55%,#312e81 100%);
+    color:#fff;padding:44px 20px 40px;margin-bottom:0;
+    border-bottom:4px solid var(--primary);
+  }
+  header.hero .inner{max-width:960px;margin:0 auto;}
+  .eyebrow{
+    display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:#93c5fd;font-weight:700;margin-bottom:10px;
+    border:1px solid rgba(147,197,253,.4);padding:4px 12px;border-radius:100px;
+  }
+  header.hero h1{font-size:34px;line-height:1.18;margin:6px 0 8px;font-weight:800;letter-spacing:-.02em;}
+  header.hero .sub{color:#cbd5e1;font-size:16px;max-width:680px;margin:0;}
+  .exam-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+  .exam-meta span{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    padding:6px 14px;border-radius:8px;font-size:13px;color:#e2e8f0;
+  }
+  .exam-meta b{color:#fff;}
+
+  /* ---------- TOC ---------- */
+  nav.toc{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px 26px;margin:28px 0 8px;box-shadow:var(--shadow);
+  }
+  nav.toc h2{margin:0 0 12px;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border:none;padding:0;}
+  nav.toc ol{margin:0;padding-left:20px;columns:1;}
+  nav.toc li{margin:7px 0;}
+  nav.toc a{color:var(--ink-soft);text-decoration:none;font-weight:500;}
+  nav.toc a:hover{color:var(--primary);text-decoration:underline;}
+  nav.toc a .num{color:var(--primary);font-family:var(--mono);font-weight:700;margin-right:8px;}
+
+  /* ---------- Sections ---------- */
+  section{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:30px 34px;margin:26px 0;box-shadow:var(--shadow);scroll-margin-top:16px;
+  }
+  h2{
+    font-size:24px;font-weight:800;letter-spacing:-.01em;margin:0 0 4px;
+    color:var(--ink);border-bottom:2px solid var(--border);padding-bottom:12px;
+  }
+  h2 .h2num{color:var(--primary);font-family:var(--mono);}
+  .lede{color:var(--muted);margin:10px 0 22px;font-size:15px;}
+  h3{
+    font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink);
+    display:flex;align-items:center;gap:9px;
+  }
+  h3::before{content:"";width:5px;height:18px;background:var(--primary);border-radius:3px;display:inline-block;}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:24px;}
+  li{margin:6px 0;}
+  code{font-family:var(--mono);background:var(--surface-alt);border:1px solid var(--border);padding:1px 6px;border-radius:5px;font-size:.88em;color:#be123c;}
+  strong{color:var(--ink);}
+
+  /* ---------- Tables ---------- */
+  .tbl-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:var(--radius-sm);}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px;}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;}
+  thead th{background:var(--surface-alt);color:var(--ink-soft);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--border-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover td{background:var(--surface-alt);}
+  .cell-fast{color:var(--tier-fast);font-weight:700;}
+  .cell-bal{color:var(--tier-bal);font-weight:700;}
+  .cell-max{color:var(--tier-max);font-weight:700;}
+  .rate{letter-spacing:2px;font-size:15px;}
+
+  /* ---------- Callouts ---------- */
+  .callout{border-radius:var(--radius-sm);padding:16px 18px 16px 20px;margin:18px 0;font-size:14.5px;border:1px solid;}
+  .callout b{display:inline;}
+  .tips{background:var(--amber-soft);border-color:#fcd34d;color:#78350f;}
+  .exam-strategy{background:var(--primary-soft);border-color:#93c5fd;color:#1e3a8a;}
+  .note{background:var(--surface-alt);border-color:var(--border-strong);color:var(--ink-soft);font-size:13.5px;}
+  .callout .lbl{font-weight:800;display:block;margin-bottom:5px;font-size:13px;letter-spacing:.02em;}
+  .callout ul{margin:6px 0 0;padding-left:20px;}
+
+  /* ---------- Illustrative badge ---------- */
+  .illus{display:inline-block;background:var(--amber-soft);color:#78350f;border:1px solid #fcd34d;
+    font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:100px;letter-spacing:.03em;text-transform:uppercase;}
+
+  /* ---------- Chart ---------- */
+  .chart-card{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:center;
+    background:var(--surface-alt);border:1px solid var(--border);border-radius:var(--radius-sm);padding:22px;margin:16px 0;}
+  .legend{list-style:none;padding:0;margin:0;font-size:14px;min-width:180px;}
+  .legend li{display:flex;align-items:center;gap:10px;margin:9px 0;}
+  .swatch{width:14px;height:14px;border-radius:4px;display:inline-block;flex-shrink:0;}
+  .legend small{display:block;color:var(--muted);font-size:12px;line-height:1.3;}
+
+  /* ---------- Bar chart (CSS) ---------- */
+  .barset{margin:18px 0;}
+  .barrow{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:14px;margin:14px 0;}
+  .barrow .dim{font-weight:600;font-size:13.5px;color:var(--ink-soft);}
+  .bars{display:flex;flex-direction:column;gap:6px;}
+  .bar{height:20px;border-radius:5px;display:flex;align-items:center;padding-left:9px;color:#fff;font-size:11px;font-weight:700;min-width:28px;transition:width .3s ease;}
+
+  /* ---------- Flowchart ---------- */
+  .flow{display:flex;flex-direction:column;align-items:center;gap:0;margin:20px 0;}
+  .flow-node{background:var(--surface);border:2px solid var(--primary);color:var(--ink);
+    border-radius:10px;padding:12px 20px;font-weight:700;text-align:center;max-width:460px;box-shadow:var(--shadow);}
+  .flow-q{border-color:var(--accent);background:var(--accent-soft);color:#4c1d95;}
+  .flow-arrow{width:2px;height:22px;background:var(--border-strong);position:relative;}
+  .flow-arrow::after{content:"▼";position:absolute;bottom:-6px;left:-6px;color:var(--border-strong);font-size:12px;}
+  .flow-branch{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;}
+  .flow-leaf{border-radius:10px;padding:12px 16px;text-align:center;font-size:13.5px;font-weight:600;max-width:230px;border:2px solid;}
+  .leaf-fast{border-color:var(--tier-fast);background:#e0f2fe;color:#075985;}
+  .leaf-bal{border-color:var(--tier-bal);background:var(--accent-soft);color:#5b21b6;}
+  .leaf-max{border-color:var(--tier-max);background:#ffe4e6;color:#9f1239;}
+  .flow-leaf .tier{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.75;margin-bottom:3px;}
+
+  /* ---------- Two column ---------- */
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:16px 0;}
+  .col{border-radius:var(--radius-sm);padding:18px 20px;border:1px solid;}
+  .col.small{background:#e0f2fe;border-color:#7dd3fc;}
+  .col.large{background:#ffe4e6;border-color:#fda4af;}
+  .col h4{margin:0 0 12px;font-size:16px;display:flex;align-items:center;gap:8px;}
+  .col.small h4{color:#075985;}
+  .col.large h4{color:#9f1239;}
+  .pc{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin:12px 0 4px;}
+  .pc.pro{color:var(--green);}
+  .pc.con{color:var(--red);}
+  .col ul{padding-left:18px;margin:4px 0;}
+  .col li{font-size:13.5px;}
+  .usecases{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border-strong);}
+  .usecases .lbl2{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;display:block;}
+
+  /* ---------- Checklist ---------- */
+  ol.checklist{counter-reset:step;list-style:none;padding-left:0;margin:16px 0;}
+  ol.checklist li{counter-increment:step;position:relative;padding:12px 14px 12px 52px;margin:9px 0;
+    background:var(--surface-alt);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:14px;}
+  ol.checklist li::before{content:counter(step);position:absolute;left:12px;top:11px;width:28px;height:28px;
+    background:var(--primary);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;}
+  ol.checklist li b{color:var(--ink);}
+
+  /* ---------- Matrix ---------- */
+  .matrix th.crit{background:#1e293b;color:#fff;}
+  .matrix .colhead-fast{background:#e0f2fe;color:#075985;}
+  .matrix .colhead-bal{background:var(--accent-soft);color:#5b21b6;}
+  .matrix .colhead-max{background:#ffe4e6;color:#9f1239;}
+  .matrix td:first-child{font-weight:700;background:var(--surface-alt);color:var(--ink-soft);}
+  .score{display:inline-block;min-width:22px;text-align:center;font-weight:700;font-family:var(--mono);}
+  .s-hi{color:var(--green);}
+  .s-mid{color:var(--amber);}
+  .s-lo{color:var(--red);}
+  .winner{background:var(--green-soft)!important;}
+  .fill-row td{font-style:italic;}
+
+  /* ---------- Scenario box ---------- */
+  .scenario{background:var(--accent-soft);border:1px solid #c4b5fd;border-radius:var(--radius-sm);padding:16px 20px;margin:16px 0;}
+  .scenario .lbl{font-weight:800;color:#5b21b6;font-size:13px;text-transform:uppercase;letter-spacing:.03em;display:block;margin-bottom:6px;}
+
+  /* ---------- Summary ---------- */
+  .summary{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;border:none;}
+  .summary h2{color:#fff;border-bottom-color:rgba(255,255,255,.2);}
+  .summary h2 .h2num{color:#93c5fd;}
+  .summary .takeaways{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .summary .takeaways li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:12px 14px;font-size:14px;}
+  .summary .takeaways b{color:#93c5fd;}
+
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px;}
+
+  @media (max-width:680px){
+    .twocol{grid-template-columns:1fr;}
+    .summary .takeaways{grid-template-columns:1fr;}
+    section{padding:22px 18px;}
+    header.hero h1{font-size:26px;}
+    .barrow{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="inner">
+    <span class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</span>
+    <h1>Chapter 40 · Model Selection &amp; Tradeoffs</h1>
+    <p class="sub">How to choose the right model tier for a given task, balance intelligence against cost and latency, and manage models responsibly across their lifecycle.</p>
+    <div class="exam-meta">
+      <span><b>Domain:</b> Solution Architecture</span>
+      <span><b>Level:</b> Foundations → Professional</span>
+      <span><b>Sub-sections:</b> 40.1 – 40.5</span>
+      <span><b>Format:</b> Self-study + decision templates</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <nav class="toc">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#s1"><span class="num">40.1</span>Claude Model Family: Capabilities, Costs &amp; Latency Profiles</a></li>
+      <li><a href="#s2"><span class="num">40.2</span>Selecting Models Based on Task Complexity and Budget</a></li>
+      <li><a href="#s3"><span class="num">40.3</span>When to Use Smaller Models vs Larger Models</a></li>
+      <li><a href="#s4"><span class="num">40.4</span>Model Versioning and Migration Strategies</a></li>
+      <li><a href="#s5"><span class="num">40.5</span>Hands-On: Model Selection Decision Matrix</a></li>
+      <li><a href="#summary"><span class="num">✦</span>Chapter Summary &amp; Key Takeaways</a></li>
+    </ol>
+  </nav>
+
+  <div class="callout note">
+    <span class="lbl">📌 A note on figures in this chapter</span>
+    Model tiers in the Claude family are commonly organized as <strong>lightweight/fast</strong>, <strong>balanced</strong>, and <strong>most-capable</strong> classes (historically branded <em>Haiku</em>, <em>Sonnet</em>, and <em>Opus</em>). All cost, latency, and capability figures below are <span class="illus">Relative / illustrative</span> — they express <em>direction and magnitude of tradeoffs</em>, not live pricing or benchmark scores. Always confirm exact model IDs, prices, context limits, and deprecation dates against the current official Anthropic documentation before making production decisions.
+  </div>
+
+  <!-- ============ 40.1 ============ -->
+  <section id="s1">
+    <h2><span class="h2num">40.1</span> &nbsp;Claude Model Family: Capabilities, Costs &amp; Latency Profiles</h2>
+    <p class="lede">The core architectural tradeoff: intelligence, cost, and speed pull against each other. Understanding the shape of each tier lets you place a workload where it belongs.</p>
+
+    <h3>The three-tier mental model</h3>
+    <p>Rather than memorizing version strings, reason in <strong>tiers</strong>. Each tier occupies a different point on the intelligence/cost/latency surface. A production system typically routes different tasks to different tiers rather than sending everything to the most capable model.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Model Tier</th>
+            <th>Relative Capability</th>
+            <th>Relative Cost</th>
+            <th>Relative Latency</th>
+            <th>Ideal Use Cases</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cell-fast">Lightweight / Fast<br><small style="color:var(--muted);font-weight:400;">(e.g. Haiku class)</small></td>
+            <td>Good for well-scoped tasks; less depth on ambiguous, multi-step reasoning</td>
+            <td class="rate">💰</td>
+            <td class="rate">⚡⚡⚡ <small style="color:var(--muted)">lowest</small></td>
+            <td>High-volume classification, extraction, routing, moderation, simple Q&amp;A, real-time UX</td>
+          </tr>
+          <tr>
+            <td class="cell-bal">Balanced<br><small style="color:var(--muted);font-weight:400;">(e.g. Sonnet class)</small></td>
+            <td>Strong general reasoning, coding, and instruction-following at moderate cost</td>
+            <td class="rate">💰💰</td>
+            <td class="rate">⚡⚡ <small style="color:var(--muted)">moderate</small></td>
+            <td>Coding assistants, RAG chat, summarization, most agent steps, general-purpose workloads</td>
+          </tr>
+          <tr>
+            <td class="cell-max">Most Capable<br><small style="color:var(--muted);font-weight:400;">(e.g. Opus class)</small></td>
+            <td>Highest reasoning depth; best on ambiguous, long-horizon, high-stakes problems</td>
+            <td class="rate">💰💰💰</td>
+            <td class="rate">⚡ <small style="color:var(--muted)">highest</small></td>
+            <td>Complex multi-step reasoning, hard agentic workflows, research, nuanced analysis, orchestration/planning</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note callout"><span class="lbl">Reading the table</span>More 💰 = more expensive per token. More ⚡ = faster (lower latency). Capability and cost tend to rise together, while speed moves in the opposite direction — that inverse relationship <em>is</em> the tradeoff you are architecting around.</p>
+
+    <h3>Visualizing the tradeoff — Intelligence vs Cost-efficiency vs Speed</h3>
+    <p>The radar plot shows why no single tier "wins." A larger area on one axis usually means a smaller area on another. <span class="illus">Illustrative values</span></p>
+
+    <div class="chart-card">
+      <svg width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Radar chart comparing three model tiers across Intelligence, Speed, and Cost-efficiency">
+        <!-- grid triangles -->
+        <polygon points="200,50 312.6,245 87.4,245" fill="none" stroke="#cbd5e1" stroke-width="1.5"></polygon>
+        <polygon points="200,115 256.3,212.5 143.7,212.5" fill="none" stroke="#e2e8f0" stroke-width="1"></polygon>
+        <!-- axes -->
+        <line x1="200" y1="180" x2="200" y2="50" stroke="#cbd5e1" stroke-width="1"></line>
+        <line x1="200" y1="180" x2="312.6" y2="245" stroke="#cbd5e1" stroke-width="1"></line>
+        <line x1="200" y1="180" x2="87.4" y2="245" stroke="#cbd5e1" stroke-width="1"></line>
+        <!-- Opus / Most capable -->
+        <polygon points="200,52.6 250.67,209.25 149.33,209.25" fill="rgba(225,29,72,.16)" stroke="#e11d48" stroke-width="2"></polygon>
+        <!-- Sonnet / Balanced -->
+        <polygon points="200,76 284.45,228.75 115.55,228.75" fill="rgba(124,58,237,.14)" stroke="#7c3aed" stroke-width="2"></polygon>
+        <!-- Haiku / Fast -->
+        <polygon points="200,108.5 307,241.75 93,241.75" fill="rgba(14,165,233,.14)" stroke="#0ea5e9" stroke-width="2"></polygon>
+        <!-- axis labels -->
+        <text x="200" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Intelligence</text>
+        <text x="322" y="262" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Speed</text>
+        <text x="78" y="262" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Cost-efficiency</text>
+      </svg>
+      <ul class="legend">
+        <li><span class="swatch" style="background:#0ea5e9"></span><div><b>Lightweight / Fast</b><small>Wide on speed &amp; cost-efficiency, narrow on intelligence</small></div></li>
+        <li><span class="swatch" style="background:#7c3aed"></span><div><b>Balanced</b><small>The compromise tier — solid on all three</small></div></li>
+        <li><span class="swatch" style="background:#e11d48"></span><div><b>Most Capable</b><small>Wide on intelligence, narrow on speed &amp; cost-efficiency</small></div></li>
+      </ul>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted)">Note: "Cost-efficiency" is drawn so that <em>outward = cheaper</em>. A tier that reaches far on this axis costs less per token.</p>
+
+    <div class="callout tips">
+      <span class="lbl">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Think in <b>tiers, not names</b> — model IDs change, but the fast / balanced / capable structure is stable and is what exam scenarios test.</li>
+        <li>Cost is driven by <b>tokens × price-per-token</b>. A cheaper tier that needs a longer prompt or more retries can end up costing <em>more</em> than a pricier tier that one-shots the task.</li>
+        <li>Latency has two parts: <b>time-to-first-token</b> (matters for streaming UX) and <b>total generation time</b> (matters for batch throughput). Optimize for the one your product actually feels.</li>
+      </ul>
+    </div>
+    <div class="callout exam-strategy">
+      <span class="lbl">🎯 Exam Strategy</span>
+      Expect questions that hand you a workload profile ("10M short support tickets/day, sub-second response needed") and ask for the right tier. Match on the <b>dominant constraint</b> first: high volume + latency-sensitive → fast tier; ambiguous reasoning + accuracy-critical → capable tier. Distractor answers usually flip the intelligence/cost relationship or quote a fake exact price — eliminate any option stating a precise dollar figure as if it were universal.
+    </div>
+  </section>
+
+  <!-- ============ 40.2 ============ -->
+  <section id="s2">
+    <h2><span class="h2num">40.2</span> &nbsp;Selecting Models Based on Task Complexity and Budget</h2>
+    <p class="lede">A repeatable selection framework beats intuition. Start from task complexity, then apply budget and latency as filters.</p>
+
+    <h3>The decision framework</h3>
+    <p>Work top-down. Anchor on <strong>what the task requires</strong>, then <em>down-shift</em> to a cheaper tier only if you can prove it still meets your quality bar via evaluation.</p>
+
+    <div class="flow">
+      <div class="flow-node flow-q">START: Characterize the task</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-q">Is the task well-defined with a narrow, verifiable output?</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-q">Does it need multi-step reasoning, planning, or tool orchestration?</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-branch">
+        <div class="flow-leaf leaf-fast"><span class="tier">Route to</span>Lightweight / Fast<br><small>Narrow, high-volume, latency-sensitive, easily verified</small></div>
+        <div class="flow-leaf leaf-bal"><span class="tier">Route to</span>Balanced<br><small>General reasoning, coding, RAG, typical agent steps</small></div>
+        <div class="flow-leaf leaf-max"><span class="tier">Route to</span>Most Capable<br><small>Ambiguous, long-horizon, high-stakes, hard planning</small></div>
+      </div>
+    </div>
+
+    <h3>Complexity → tier mapping</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Task complexity signal</th><th>Recommended starting tier</th><th>Budget posture</th></tr></thead>
+        <tbody>
+          <tr><td>Single-label output, deterministic-ish, easy to verify</td><td class="cell-fast">Lightweight / Fast</td><td>Optimize for throughput &amp; cost</td></tr>
+          <tr><td>Open-ended generation, moderate reasoning, coding</td><td class="cell-bal">Balanced</td><td>Balance cost vs quality</td></tr>
+          <tr><td>Chained reasoning, ambiguity, high cost-of-error</td><td class="cell-max">Most Capable</td><td>Accept higher cost; error is expensive</td></tr>
+          <tr><td>Mixed pipeline (some steps easy, some hard)</td><td>Route <b>per step</b> (heterogeneous)</td><td>Cheapest tier that passes eval per step</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Worked example — classification vs multi-step reasoning agent</h3>
+    <div class="scenario">
+      <span class="lbl">Scenario A · Ticket classification</span>
+      <p style="margin:4px 0"><b>Task:</b> Tag 2M incoming support emails/day into 12 categories, &lt;500 ms budget, minor errors tolerable and correctable downstream.</p>
+      <p style="margin:4px 0"><b>Decision:</b> Well-defined + verifiable + high-volume + latency-sensitive → <span class="cell-fast">Lightweight / Fast tier</span>. Validate accuracy on a labeled eval set; the capable tier's extra reasoning adds cost without material benefit here.</p>
+    </div>
+    <div class="scenario">
+      <span class="lbl">Scenario B · Multi-step research agent</span>
+      <p style="margin:4px 0"><b>Task:</b> An agent that reads a contract, plans sub-questions, calls tools, reconciles conflicts, and drafts a risk memo. Errors are costly; volume is low.</p>
+      <p style="margin:4px 0"><b>Decision:</b> Ambiguous + long-horizon + high-stakes → <span class="cell-max">Most Capable tier</span> for the planning/reasoning steps. Consider a <b>hybrid</b>: capable tier plans, fast/balanced tier executes cheap sub-steps (extraction, formatting).</p>
+    </div>
+
+    <div class="callout tips">
+      <span class="lbl">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li><b>Down-shift, don't guess.</b> Start on the tier the task obviously needs, then try the next-cheaper tier behind an eval gate. Keep it only if quality holds.</li>
+        <li>Budget is a <b>filter applied after complexity</b>, not the starting point. Picking the cheapest model first and hoping it's smart enough is the classic anti-pattern.</li>
+        <li>For agents, remember that a <b>weaker model can loop</b> — extra retries and longer trajectories can erase the per-token savings.</li>
+      </ul>
+    </div>
+    <div class="callout exam-strategy">
+      <span class="lbl">🎯 Exam Strategy</span>
+      The most common trap: a scenario leads with a tight budget to bait you into picking the cheapest tier for a task that clearly needs reasoning. <b>Match task complexity first, then optimize cost/latency — never the reverse.</b> If two options remain, prefer the one that proposes <em>evaluating</em> a down-shift over the one that asserts a tier without justification.
+    </div>
+  </section>
+
+  <!-- ============ 40.3 ============ -->
+  <section id="s3">
+    <h2><span class="h2num">40.3</span> &nbsp;When to Use Smaller Models vs Larger Models</h2>
+    <p class="lede">Smaller and larger models are not "worse" and "better" — they are different tools. The skill is knowing which job each one fits.</p>
+
+    <div class="twocol">
+      <div class="col small">
+        <h4>🐤 Smaller / Faster Models</h4>
+        <div class="pc pro">Pros</div>
+        <ul>
+          <li>Lowest cost per token — economical at scale</li>
+          <li>Lowest latency; great for real-time &amp; streaming UX</li>
+          <li>Higher throughput / better rate-limit headroom</li>
+          <li>Ideal for narrow, well-specified tasks</li>
+        </ul>
+        <div class="pc con">Cons</div>
+        <ul>
+          <li>Less robust on ambiguity &amp; long reasoning chains</li>
+          <li>More sensitive to prompt quality; may need few-shot examples</li>
+          <li>Can require retries/guardrails that erode savings</li>
+        </ul>
+        <div class="usecases">
+          <span class="lbl2">Real-world fits</span>
+          <ul>
+            <li>Intent / sentiment classification at volume</li>
+            <li>Structured field extraction from forms</li>
+            <li>Content moderation &amp; routing</li>
+            <li>Autocomplete / inline suggestions</li>
+            <li>Cheap sub-steps inside a larger agent</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col large">
+        <h4>🦅 Larger / More Capable Models</h4>
+        <div class="pc pro">Pros</div>
+        <ul>
+          <li>Deeper reasoning on ambiguous, multi-step problems</li>
+          <li>Stronger zero-/few-shot generalization</li>
+          <li>Better planning &amp; tool orchestration in agents</li>
+          <li>Higher reliability where errors are costly</li>
+        </ul>
+        <div class="pc con">Cons</div>
+        <ul>
+          <li>Highest cost per token</li>
+          <li>Higher latency — weaker fit for real-time UX at volume</li>
+          <li>Overkill (wasteful) on simple, verifiable tasks</li>
+        </ul>
+        <div class="usecases">
+          <span class="lbl2">Real-world fits</span>
+          <ul>
+            <li>Multi-step research / analysis agents</li>
+            <li>Complex code generation &amp; refactoring</li>
+            <li>Nuanced legal / financial / medical reasoning</li>
+            <li>Planning &amp; orchestration ("the brain" of an agent)</li>
+            <li>High-stakes decisions with costly errors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>The hybrid / routing pattern</h3>
+    <p>Mature systems rarely pick one model. They <strong>route heterogeneously</strong>: a capable model handles planning and hard reasoning, while a fast model handles the high-frequency, low-difficulty steps. This captures most of the quality at a fraction of the cost — a frequent "best answer" on the exam.</p>
+
+    <div class="callout tips">
+      <span class="lbl">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Use a <b>cascade</b>: try the small model first, and only escalate to a larger model when a confidence check or validator fails.</li>
+        <li>A larger model can act as an <b>offline teacher</b> — use it to generate high-quality examples or labels that make a smaller model succeed on the same task.</li>
+        <li>Don't conflate "small model" with "bad output." Often the fix is a better prompt or a few examples, not a bigger model.</li>
+      </ul>
+    </div>
+    <div class="callout exam-strategy">
+      <span class="lbl">🎯 Exam Strategy</span>
+      When a question offers "use the largest model for everything" as an option, it is almost always a distractor — it's rarely cost-justified. Favor answers that <b>match tier to task</b> or propose <b>routing/cascading</b>. Watch for the reverse trap too: "use the smallest model for everything" fails on the reasoning-heavy items in the scenario.
+    </div>
+  </section>
+
+  <!-- ============ 40.4 ============ -->
+  <section id="s4">
+    <h2><span class="h2num">40.4</span> &nbsp;Model Versioning and Migration Strategies</h2>
+    <p class="lede">Models are versioned and eventually deprecated. A production architecture must migrate without regressing quality — treat a model swap like any other dependency upgrade.</p>
+
+    <h3>Core concepts</h3>
+    <ul>
+      <li><strong>Deprecation handling:</strong> Providers publish lifecycle/deprecation notices with retirement dates. Pin explicit model versions in code, subscribe to those notices, and plan migrations <em>before</em> the retirement date rather than reacting to a broken call.</li>
+      <li><strong>Backward compatibility testing:</strong> A newer model version can change output style, formatting, or tool-use behavior even when it's "better" on average. Never assume drop-in compatibility — re-run your evaluation suite against the new version.</li>
+      <li><strong>Canary rollouts:</strong> Shift a small percentage of traffic to the new model, monitor quality/latency/cost/error metrics, and ramp gradually. Keep the ability to roll back instantly.</li>
+      <li><strong>Prompt regression testing:</strong> Maintain a versioned set of representative prompts with expected-quality checks (golden set + automated graders). Run it on every model or prompt change to catch regressions before users do.</li>
+    </ul>
+
+    <h3>Step-by-step migration checklist</h3>
+    <ol class="checklist">
+      <li><b>Pin &amp; inventory.</b> Confirm every place the old model ID/version is referenced (code, configs, prompts, agents).</li>
+      <li><b>Read the deprecation &amp; changelog.</b> Note the retirement date, behavioral changes, and any new/renamed parameters.</li>
+      <li><b>Build or refresh a golden eval set.</b> Representative inputs with quality graders (accuracy, format adherence, safety, latency, cost).</li>
+      <li><b>Run baseline vs candidate.</b> Score the current model and the new version side-by-side on the same eval set.</li>
+      <li><b>Regression-test prompts &amp; tool use.</b> Verify output format, structured/JSON schemas, and tool-calling still pass.</li>
+      <li><b>Tune if needed.</b> Adjust prompts, few-shot examples, temperature, or parsing to close any gaps the new version introduced.</li>
+      <li><b>Canary deploy.</b> Route a small % of live traffic to the candidate behind a feature flag; watch dashboards.</li>
+      <li><b>Ramp gradually.</b> Increase traffic in stages, comparing quality/cost/latency at each step, with rollback ready.</li>
+      <li><b>Cut over &amp; monitor.</b> Promote to 100%, keep heightened monitoring, and set alerts on quality/cost drift.</li>
+      <li><b>Decommission &amp; document.</b> Remove the old version, record the migration outcome, and archive the eval results.</li>
+    </ol>
+
+    <div class="callout tips">
+      <span class="lbl">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li><b>Always pin explicit versions</b> in production. "Latest"/alias references can silently change model behavior under you.</li>
+        <li>Version your <b>prompts alongside your code</b> — a prompt tuned for one model version may regress on the next.</li>
+        <li>Keep the old version reachable during canary so rollback is a config flip, not a redeploy.</li>
+        <li>Automate the golden-set eval in CI so every model/prompt change is gated the same way as code.</li>
+      </ul>
+    </div>
+    <div class="callout exam-strategy">
+      <span class="lbl">🎯 Exam Strategy</span>
+      Migration questions reward <b>safety and reversibility</b>. The correct answer almost always includes an <em>eval/regression step before rollout</em> and a <em>gradual canary with rollback</em>. Eliminate options that "immediately switch all production traffic to the newest model" or "assume the new version is a drop-in replacement" — both skip the regression gate.
+    </div>
+  </section>
+
+  <!-- ============ 40.5 ============ -->
+  <section id="s5">
+    <h2><span class="h2num">40.5</span> &nbsp;Hands-On: Model Selection Decision Matrix</h2>
+    <p class="lede">A decision matrix turns a fuzzy "which model?" into a scored, defensible choice. Use the template below, weight the criteria for your context, and total the columns.</p>
+
+    <h3>The template (criteria × model options)</h3>
+    <p>Score each model tier <strong>1 (poor) – 5 (excellent)</strong> against each criterion for <em>your</em> task, multiply by the criterion weight, and sum. Higher total = better fit.</p>
+    <div class="tbl-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th class="crit">Criterion (weight)</th>
+            <th class="colhead-fast">Lightweight / Fast</th>
+            <th class="colhead-bal">Balanced</th>
+            <th class="colhead-max">Most Capable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Task-complexity fit</td><td>__</td><td>__</td><td>__</td></tr>
+          <tr><td>Output quality / accuracy need</td><td>__</td><td>__</td><td>__</td></tr>
+          <tr><td>Latency requirement</td><td>__</td><td>__</td><td>__</td></tr>
+          <tr><td>Cost per request / budget</td><td>__</td><td>__</td><td>__</td></tr>
+          <tr><td>Throughput / volume</td><td>__</td><td>__</td><td>__</td></tr>
+          <tr><td>Cost-of-error / risk tolerance</td><td>__</td><td>__</td><td>__</td></tr>
+          <tr style="border-top:2px solid var(--border-strong)"><td><b>Weighted total</b></td><td><b>__</b></td><td><b>__</b></td><td><b>__</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Worked example — sample business case</h3>
+    <div class="scenario">
+      <span class="lbl">Business case</span>
+      A fintech wants an <b>in-app support assistant</b> that answers account questions over a RAG knowledge base. Volume is high (hundreds of thousands of chats/day), users expect fast streaming replies, answers must be accurate but questions are mostly routine, and a small tail of complex disputes needs deeper reasoning.
+    </div>
+    <p>Weights chosen for this case: latency and cost matter a lot (high volume, real-time), quality matters but most queries are routine. Scores are <span class="illus">illustrative</span>, on a 1–5 scale (weight in parentheses).</p>
+    <div class="tbl-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th class="crit">Criterion (weight)</th>
+            <th class="colhead-fast">Fast</th>
+            <th class="colhead-bal">Balanced</th>
+            <th class="colhead-max">Capable</th>
+          </tr>
+        </thead>
+        <tbody class="fill-row">
+          <tr><td>Task-complexity fit (×2)</td><td><span class="score s-mid">3</span></td><td><span class="score s-hi">5</span></td><td><span class="score s-hi">5</span></td></tr>
+          <tr><td>Output quality / accuracy (×3)</td><td><span class="score s-mid">3</span></td><td><span class="score s-hi">4</span></td><td><span class="score s-hi">5</span></td></tr>
+          <tr><td>Latency requirement (×3)</td><td><span class="score s-hi">5</span></td><td><span class="score s-mid">4</span></td><td><span class="score s-lo">2</span></td></tr>
+          <tr><td>Cost / budget (×3)</td><td><span class="score s-hi">5</span></td><td><span class="score s-mid">3</span></td><td><span class="score s-lo">2</span></td></tr>
+          <tr><td>Throughput / volume (×2)</td><td><span class="score s-hi">5</span></td><td><span class="score s-mid">4</span></td><td><span class="score s-lo">2</span></td></tr>
+          <tr><td>Cost-of-error / risk (×1)</td><td><span class="score s-mid">3</span></td><td><span class="score s-hi">4</span></td><td><span class="score s-hi">5</span></td></tr>
+          <tr style="border-top:2px solid var(--border-strong)">
+            <td><b>Weighted total</b></td>
+            <td class="winner"><b>56</b></td>
+            <td class="winner"><b>60</b></td>
+            <td><b>49</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><b>Interpretation:</b> The <span class="cell-bal">Balanced tier</span> wins overall (60) as the default handler — it clears the quality bar while staying reasonable on cost and latency. The <span class="cell-fast">Fast tier</span> is close (56) and attractive for the routine majority. The <span class="cell-max">Capable tier</span> scores lowest here (49) despite top quality, because volume/cost/latency weigh against it.</p>
+    <p><b>Architect's move — hybrid routing:</b> Serve the routine majority with the <span class="cell-fast">Fast</span> tier for cost/latency, default ambiguous queries to <span class="cell-bal">Balanced</span>, and <em>escalate</em> the complex-dispute tail to the <span class="cell-max">Capable</span> tier via a confidence/complexity check. The matrix informs the routing thresholds rather than forcing a single winner.</p>
+
+    <div class="callout tips">
+      <span class="lbl">💡 Tips &amp; Tricks</span>
+      <ul>
+        <li>Set <b>weights before scoring</b> — deciding weights after you see the scores lets bias creep in.</li>
+        <li>A near-tie (e.g. 56 vs 60) is a strong signal to <b>route/cascade</b> rather than force one model.</li>
+        <li>Re-run the matrix after any major model release — a new version can shift a column enough to change the winner.</li>
+        <li>Keep the matrix in version control next to your eval set — it's living documentation of <em>why</em> a model was chosen.</li>
+      </ul>
+    </div>
+    <div class="callout exam-strategy">
+      <span class="lbl">🎯 Exam Strategy</span>
+      Matrix questions test whether you <b>weight criteria to the scenario</b>. If the prompt stresses volume and real-time UX, the "correct" choice should reflect heavy latency/cost weighting — not the highest raw-quality model. When the totals are close, the best answer typically proposes a <b>hybrid/routing</b> design. Beware options that ignore stated constraints (e.g. picking the capable tier when the scenario screams cost-sensitivity).
+    </div>
+  </section>
+
+  <!-- ============ Summary ============ -->
+  <section id="summary" class="summary">
+    <h2><span class="h2num">✦</span> &nbsp;Chapter Summary &amp; Key Takeaways</h2>
+    <p style="color:#cbd5e1;margin-top:8px">Model selection is an exercise in placing each workload at the right point on the intelligence / cost / latency surface — and revisiting that choice as models evolve.</p>
+    <ul class="takeaways">
+      <li><b>Reason in tiers.</b> Fast, balanced, and most-capable classes are stable even as version names change.</li>
+      <li><b>Complexity first, budget second.</b> Match the task's reasoning needs, then optimize cost/latency — never the reverse.</li>
+      <li><b>Down-shift behind an eval gate.</b> Try the cheaper tier, but keep it only if quality holds.</li>
+      <li><b>Small ≠ worse.</b> Smaller models win on cost, latency, and throughput for narrow, verifiable tasks.</li>
+      <li><b>Hybrid routing wins.</b> Route hard steps to capable models and cheap steps to fast models — usually the best answer.</li>
+      <li><b>Migrate safely.</b> Pin versions, regression-test prompts, canary-roll out, and keep rollback ready.</li>
+      <li><b>Use a decision matrix.</b> Weight criteria to the scenario, score, and let close ties push you toward routing.</li>
+      <li><b>Distrust exact numbers.</b> Treat precise prices/benchmarks as illustrative; verify against current official docs.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Claude Certified Architect — Foundations &amp; Professional · Chapter 40: Model Selection &amp; Tradeoffs · Study material.
+    Figures are relative/illustrative; confirm live model IDs, pricing, and deprecation dates against official Anthropic documentation.
+  </footer>
+
+</div>
+
+
+</body></html>

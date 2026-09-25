@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCA Study Notes — Chapter 1: Introduction to Claude Architecture</title>
+<style>
+  :root {
+    --bg: #f8f9fb;
+    --bg-card: #ffffff;
+    --bg-sidebar: #1e293b;
+    --bg-sidebar-hover: #334155;
+    --bg-code: #f1f5f9;
+    --text: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --text-sidebar: #cbd5e1;
+    --text-sidebar-active: #ffffff;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --accent-dark: #1d4ed8;
+    --border: #e2e8f0;
+    --border-light: #f1f5f9;
+    --success: #059669;
+    --success-bg: #ecfdf5;
+    --warning: #d97706;
+    --warning-bg: #fffbeb;
+    --error: #dc2626;
+    --error-bg: #fef2f2;
+    --info: #2563eb;
+    --info-bg: #eff6ff;
+    --purple: #7c3aed;
+    --purple-bg: #f5f3ff;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    --radius: 8px;
+    --radius-sm: 4px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--bg-sidebar);
+    padding: 24px 0;
+    overflow-y: auto;
+    z-index: 100;
+  }
+  .sidebar-header {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 16px;
+  }
+  .sidebar-header .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .sidebar-header h2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .sidebar-header p {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .sidebar nav a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--text-sidebar);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.15s ease;
+    border-left: 3px solid transparent;
+  }
+  .sidebar nav a:hover {
+    background: var(--bg-sidebar-hover);
+    color: var(--text-sidebar-active);
+    border-left-color: var(--accent);
+  }
+  .sidebar nav .nav-section {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 16px 20px 6px;
+  }
+
+  /* MAIN */
+  .main {
+    margin-left: 260px;
+    padding: 32px 48px 80px;
+    max-width: 920px;
+  }
+
+  /* HEADER */
+  .page-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--border);
+  }
+  .page-header .meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .page-header .meta .tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .page-header .meta .date {
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .page-header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .page-header .subtitle {
+    color: var(--text-secondary);
+    font-size: 16px;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 48px;
+  }
+  .section-anchor {
+    display: block;
+    position: relative;
+    top: -20px;
+    visibility: hidden;
+  }
+  h2.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2.section-title .num {
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 24px 0 10px;
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 16px 0 8px;
+  }
+
+  p { margin-bottom: 12px; }
+  ul, ol { margin: 0 0 14px 24px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    background: var(--bg-code);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    color: var(--accent-dark);
+  }
+  pre {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    overflow-x: auto;
+    margin: 12px 0 16px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* CALLOUTS */
+  .callout {
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .callout .icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .callout .label {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .callout.key-concept {
+    background: var(--info-bg);
+    border-left: 4px solid var(--info);
+  }
+  .callout.common-trap {
+    background: var(--warning-bg);
+    border-left: 4px solid var(--warning);
+  }
+  .callout.exam-tip {
+    background: var(--success-bg);
+    border-left: 4px solid var(--success);
+  }
+  .callout.connections {
+    background: var(--purple-bg);
+    border-left: 4px solid var(--purple);
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 18px;
+    font-size: 14px;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  thead { background: var(--bg-sidebar); }
+  th {
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 14px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  td {
+    padding: 10px 14px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+
+  /* PRIORITY BADGES */
+  .priority {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .priority.high { background: #fee2e2; color: #991b1b; }
+  .priority.medium { background: #fef3c7; color: #92400e; }
+  .priority.low { background: #d1fae5; color: #065f46; }
+
+  /* DIAGRAMS */
+  .diagram-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 16px 0 20px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+  }
+  .diagram-box pre {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .diagram-box .diagram-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+
+  /* VISUAL ARCHITECTURE GRID */
+  .arch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 16px 0 20px;
+  }
+  .arch-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .arch-card .arch-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .arch-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+  .arch-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .arch-card .arch-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+  .tag-api { background: #dbeafe; color: #1e40af; }
+  .tag-sdk { background: #ede9fe; color: #5b21b6; }
+  .tag-cli { background: #fce7f3; color: #9d174d; }
+  .tag-mcp { background: #d1fae5; color: #065f46; }
+
+  /* STRATEGY BOX */
+  .strategy-box {
+    background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .strategy-box h4 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .strategy-box ul { margin: 0 0 0 18px; font-size: 14px; }
+  .strategy-box li { margin-bottom: 5px; }
+
+  /* CHECKLIST */
+  .checklist {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+  }
+  .checklist h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+  }
+  .checklist label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .checklist input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: var(--accent);
+  }
+
+  /* FLOWCHART */
+  .flow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .flow-node {
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    min-width: 110px;
+  }
+  .flow-arrow {
+    font-size: 20px;
+    color: var(--text-muted);
+    padding: 0 4px;
+  }
+
+  /* DECISION MATRIX */
+  .matrix-cell {
+    text-align: center;
+    font-weight: 600;
+  }
+  .matrix-cell.yes { color: var(--success); }
+  .matrix-cell.no { color: var(--error); }
+  .matrix-cell.partial { color: var(--warning); }
+
+  /* FOOTER */
+  .page-footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 2px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .page-footer .badge-complete {
+    display: inline-block;
+    background: var(--success);
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 20px; }
+  }
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; max-width: 100%; }
+    .callout { break-inside: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <span class="badge">CCA-F / CCA-P</span>
+    <h2>Chapter 1:<br>Introduction to Claude Architecture</h2>
+    <p>Study Notes &amp; Exam Prep</p>
+  </div>
+  <nav>
+    <div class="nav-section">Sections</div>
+    <a href="#s1-1">1.1 The Claude Ecosystem</a>
+    <a href="#s1-2">1.2 Role of a Solutions Architect</a>
+    <a href="#s1-3">1.3 Core Technologies</a>
+    <a href="#s1-4">1.4 Production Mindset</a>
+    <a href="#s1-5">1.5 Exam Blueprints</a>
+    <div class="nav-section">Extras</div>
+    <a href="#strategy-master">Master Exam Strategy</a>
+    <a href="#revision">Quick Revision Checklist</a>
+  </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="meta">
+      <span class="tag">Claude Certified Architect</span>
+      <span class="date">Last updated: September 14, 2026</span>
+    </div>
+    <h1>Chapter 1 — Introduction to Claude Architecture</h1>
+    <p class="subtitle">Comprehensive study notes covering the Claude ecosystem, architect responsibilities, core technologies, production tradeoffs, and exam blueprints.</p>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- SECTION 1.1 -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="s1-1"></span>
+    <h2 class="section-title"><span class="num">1</span> The Claude Ecosystem: API, Agent SDK, Claude Code &amp; MCP</h2>
+
+    <p>The Claude platform is no longer a single chatbot — it is a <strong>developer platform</strong> comprising four primary components that together enable everything from direct model calls to fully autonomous multi-agent systems. Understanding each component's purpose and how they interrelate is foundational to every domain in the CCA exam.</p>
+
+    <h3>Component Definitions</h3>
+
+    <div class="arch-grid">
+      <div class="arch-card">
+        <div class="arch-icon">⚡</div>
+        <h4>Claude API</h4>
+        <p>Direct programmatic access to Claude models via the Messages API. Supports text generation, tool use, streaming, vision, prompt caching, and batch processing.</p>
+        <span class="arch-tag tag-api">Foundation Layer</span>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🤖</div>
+        <h4>Agent SDK</h4>
+        <p>Python &amp; TypeScript library that provides the same agent loop powering Claude Code — with tools, context management, hooks, sub-agents, and MCP support — as a programmable library.</p>
+        <span class="arch-tag tag-sdk">Orchestration Layer</span>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🖥️</div>
+        <h4>Claude Code</h4>
+        <p>Anthropic's agentic CLI tool for interactive software development. Reads files, runs commands, edits code, and plans multi-step tasks autonomously in a terminal.</p>
+        <span class="arch-tag tag-cli">Developer Tool</span>
+      </div>
+      <div class="arch-card">
+        <div class="arch-icon">🔌</div>
+        <h4>MCP</h4>
+        <p>Model Context Protocol — an open standard for connecting AI models to external data sources and tools. Think of it as "USB-C for AI": one protocol, any data source.</p>
+        <span class="arch-tag tag-mcp">Integration Protocol</span>
+      </div>
+    </div>
+
+    <h3>Architecture Diagram: How the Components Interrelate</h3>
+
+    <div class="diagram-box">
+      <div class="diagram-title">Claude Ecosystem Architecture</div>
+      <pre>  ┌─────────────────────────────────────────────────────────────────────┐
+  │                      YOUR APPLICATION                              │
+  │                                                                     │
+  │   ┌──────────────────┐        ┌──────────────────────────────┐     │
+  │   │   Claude Code    │        │        Agent SDK             │     │
+  │   │   (Agentic CLI)  │        │  (Python / TypeScript Lib)   │     │
+  │   │                  │        │                              │     │
+  │   │  • Interactive    │        │  • Agent loop               │     │
+  │   │  • Plan mode     │        │  • Hooks &amp; permissions      │     │
+  │   │  • CLAUDE.md     │        │  • Sub-agents               │     │
+  │   │  • Sessions      │        │  • Sessions &amp; plugins       │     │
+  │   └───────┬──────────┘        └──────────┬───────────────────┘     │
+  │           │    ▲ same tools &amp; loop ▲      │                        │
+  │           └──────────┬───────────────────┘                         │
+  │                      │                                             │
+  │              ┌───────┴────────┐                                    │
+  │              │   Claude API    │  ◄── Messages API, Streaming,     │
+  │              │  (Foundation)   │      Tool Use, Vision, Caching    │
+  │              └───────┬────────┘                                    │
+  │                      │                                             │
+  └──────────────────────┼─────────────────────────────────────────────┘
+                         │
+            ┌────────────┼────────────────┐
+            │            │                │
+       ┌────┴────┐  ┌───┴─────┐   ┌──────┴──────┐
+       │  MCP    │  │  MCP    │   │   MCP       │
+       │ Server  │  │ Server  │   │  Server     │
+       │(DB/API) │  │(Files)  │   │(SaaS Tools) │
+       └─────────┘  └─────────┘   └─────────────┘
+</pre>
+    </div>
+
+    <p>The key architectural insight: <strong>Claude Code and the Agent SDK share the exact same agent loop, tools, and context management system.</strong> Claude Code is the interactive CLI frontend; the Agent SDK is the programmable library for embedding that same agent into your own applications. Both sit on top of the Claude API and can connect to external systems via MCP servers.</p>
+
+    <h3>When to Use Each Component</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Use</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Direct model access, custom tool loop</td>
+          <td><strong>Claude API</strong> (+ Client SDK)</td>
+          <td>You control the full loop yourself — maximum flexibility, lowest abstraction</td>
+        </tr>
+        <tr>
+          <td>Building a production agent without implementing the tool loop</td>
+          <td><strong>Agent SDK</strong></td>
+          <td>Gives you tools, hooks, sub-agents, permissions, and sessions out of the box</td>
+        </tr>
+        <tr>
+          <td>Interactive development, one-off tasks in a terminal</td>
+          <td><strong>Claude Code CLI</strong></td>
+          <td>Optimized for daily developer use — reads codebases, runs tests, edits files</td>
+        </tr>
+        <tr>
+          <td>Long-running or async agents without managing infrastructure</td>
+          <td><strong>Managed Agents</strong></td>
+          <td>Hosted REST API — Anthropic runs the agent and sandbox for you</td>
+        </tr>
+        <tr>
+          <td>Connecting Claude to databases, APIs, file systems</td>
+          <td><strong>MCP Servers</strong></td>
+          <td>Write one server, any compliant host uses it — standardized integration</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout key-concept">
+      <span class="icon">💡</span>
+      <div><span class="label">Key Concept:</span> The Agent SDK was renamed from "Claude Code SDK" in July 2026. Exam questions may reference either name. Both refer to the same library — a Python/TypeScript package that exposes the Claude Code agent loop as a programmable API. Do not confuse the <em>Agent SDK</em> (library) with the <em>Client SDK</em> (thin API wrapper where you implement the tool loop yourself).</div>
+    </div>
+
+    <div class="callout common-trap">
+      <span class="icon">⚠️</span>
+      <div><span class="label">Common Trap:</span> MCP is <strong>not</strong> a model or an API — it is a <em>protocol</em>. The exam may present MCP as a direct model access method. MCP standardizes how <em>applications</em> provide context and tools to LLMs — it does not send prompts to Claude directly. An MCP server exposes resources, prompts, and tools; the MCP <em>host</em> (Claude Code, Claude Desktop, or your Agent SDK app) connects to those servers.</div>
+    </div>
+
+    <div class="callout exam-tip">
+      <span class="icon">🎯</span>
+      <div><span class="label">Exam Tip:</span> When a question asks about orchestrating multi-step agent workflows, the answer is <strong>Agent SDK</strong>. When it asks about connecting a model to an external data source via a standardized protocol, the answer is <strong>MCP</strong>. The scope distinction — application-level orchestration vs. integration-level protocol — is a frequent differentiator in answer choices.</div>
+    </div>
+
+    <div class="callout connections">
+      <span class="icon">🔗</span>
+      <div><span class="label">Connections:</span> This section maps to <strong>Domain 2 (Tool Design &amp; MCP Integration)</strong> and <strong>Domain 3 (Claude Code Workflows)</strong>. Component selection is also tested in <strong>Domain 1 (Agentic Architecture)</strong> when choosing between single-agent and multi-agent patterns.</div>
+    </div>
+
+    <div class="strategy-box">
+      <h4>📝 Exam Strategy — Section 1.1</h4>
+      <ul>
+        <li><strong>Question formats:</strong> Scenario-based MCQs asking "which component should the architect choose for [use case]?"</li>
+        <li><strong>Keywords to watch:</strong> "standardized integration" → MCP; "agent loop" → Agent SDK; "interactive development" → Claude Code; "direct model access" → API</li>
+        <li><strong>Elimination strategy:</strong> If the answer mentions "implementing the tool loop yourself," it's the Client SDK, not the Agent SDK</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- SECTION 1.2 -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="s1-2"></span>
+    <h2 class="section-title"><span class="num">2</span> The Role of a Claude Solutions Architect</h2>
+
+    <p>A Claude Solutions Architect operates at the intersection of <strong>AI capability, system design, and production engineering</strong>. Unlike prompt engineers who optimize individual interactions, or ML engineers who train models, the architect makes structural decisions that determine how Claude integrates into enterprise systems at scale — including model selection, tool orchestration, reliability patterns, security posture, and cost management.</p>
+
+    <h3>Core Responsibilities</h3>
+    <ol>
+      <li><strong>System Design:</strong> Defining the end-to-end architecture — where Claude fits in the stack, how it communicates with other services, and what boundaries exist between agent autonomy and human oversight.</li>
+      <li><strong>Model &amp; Component Selection:</strong> Choosing the right Claude model (Opus, Sonnet, Haiku) and tooling layer (API, Agent SDK, Claude Code, Managed Agents) based on latency, cost, capability, and deployment constraints.</li>
+      <li><strong>Tool &amp; MCP Design:</strong> Designing tool schemas with clear, non-overlapping descriptions to prevent model misrouting. Architecting MCP servers that expose resources, prompts, and tools to agent hosts.</li>
+      <li><strong>Reliability &amp; Observability:</strong> Implementing fallback chains, retry logic with exponential backoff, escalation paths to human-in-the-loop (HITL), and structured logging/tracing across agent interactions.</li>
+      <li><strong>Cost Optimization:</strong> Managing token economics through prompt caching, context window optimization, and model tiering strategies (e.g., Haiku for classification, Sonnet for generation, Opus for complex reasoning).</li>
+      <li><strong>Security &amp; Governance:</strong> Enforcing permission boundaries, data access controls, and audit trails — ensuring agents cannot perform unauthorized actions.</li>
+    </ol>
+
+    <h3>Key Skills</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Skill Category</th>
+          <th>Specific Skills</th>
+          <th>Exam Relevance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Technical</strong></td>
+          <td>API integration, agentic loop design, MCP server implementation, prompt engineering, JSON schema validation, context window management</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Strategic</strong></td>
+          <td>Model selection, cost-benefit analysis, build-vs-buy decisions, migration planning, scaling strategy</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Communicative</strong></td>
+          <td>Translating business requirements into technical architecture, stakeholder alignment, documentation, failure postmortems</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+        <tr>
+          <td><strong>Operational</strong></td>
+          <td>Monitoring, alerting, incident response, capacity planning, CI/CD pipeline integration for agents</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Comparison with Adjacent Roles</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Solutions Architect</th>
+          <th>ML / AI Engineer</th>
+          <th>Prompt Engineer</th>
+          <th>DevOps / Platform</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Primary Focus</strong></td>
+          <td>End-to-end system design with Claude at center</td>
+          <td>Model training, fine-tuning, evaluation pipelines</td>
+          <td>Individual prompt optimization for quality</td>
+          <td>Infrastructure, deployment, scaling</td>
+        </tr>
+        <tr>
+          <td><strong>Scope</strong></td>
+          <td>Cross-cutting: model → tools → infra → business</td>
+          <td>Model layer (data → training → serving)</td>
+          <td>Prompt layer (system prompts, few-shot)</td>
+          <td>Infra layer (containers, networks, CI/CD)</td>
+        </tr>
+        <tr>
+          <td><strong>Key Decisions</strong></td>
+          <td>Which model, which orchestration pattern, where agents have autonomy</td>
+          <td>Training data, model architecture, evaluation metrics</td>
+          <td>Prompt structure, context placement, output format</td>
+          <td>Deployment strategy, scaling policy, monitoring stack</td>
+        </tr>
+        <tr>
+          <td><strong>Production Ownership</strong></td>
+          <td>Architecture &amp; reliability of the AI system</td>
+          <td>Model performance &amp; accuracy</td>
+          <td>Prompt effectiveness &amp; consistency</td>
+          <td>Uptime &amp; infrastructure health</td>
+        </tr>
+        <tr>
+          <td><strong>CCA Exam Alignment</strong></td>
+          <td>All 5 domains</td>
+          <td>Domain 3 (Prompt Engineering) partially</td>
+          <td>Domain 3 primarily</td>
+          <td>Domain 5 (Reliability) partially</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout key-concept">
+      <span class="icon">💡</span>
+      <div><span class="label">Key Concept:</span> The architect's distinguishing trait is <strong>breadth of responsibility</strong>. While engineers optimize within their layer, the architect makes <em>cross-layer tradeoffs</em> — for example, accepting slightly lower prompt quality (Prompt Engineer's domain) to gain significantly lower latency (DevOps's domain) by choosing a smaller model. This tradeoff-centric thinking is the exam's primary lens.</div>
+    </div>
+
+    <div class="callout common-trap">
+      <span class="icon">⚠️</span>
+      <div><span class="label">Common Trap:</span> The exam will present scenarios where the "technically optimal" solution is <strong>not</strong> the best architectural decision. A cheaper model with appropriate guardrails often beats an expensive model without them. Architects optimize for the <em>system</em>, not the <em>model</em>.</div>
+    </div>
+
+    <div class="callout exam-tip">
+      <span class="icon">🎯</span>
+      <div><span class="label">Exam Tip:</span> When a question asks "What should the architect recommend?", look for answers that consider <strong>multiple dimensions</strong> (cost + reliability + capability). Single-dimension answers ("use the largest model") are almost always wrong.</div>
+    </div>
+
+    <div class="callout connections">
+      <span class="icon">🔗</span>
+      <div><span class="label">Connections:</span> The architect's judgment framework connects directly to <strong>Section 1.4 (Production Mindset)</strong> and is applied in every scenario question across all five exam domains.</div>
+    </div>
+
+    <div class="strategy-box">
+      <h4>📝 Exam Strategy — Section 1.2</h4>
+      <ul>
+        <li><strong>Question formats:</strong> Scenario-based: "A team is experiencing [problem]. What should the architect recommend?" Multi-select: "Which two actions are the architect's responsibility?"</li>
+        <li><strong>Keywords to watch:</strong> "recommend" and "architect" in the stem signal a system-level answer, not a code-level fix</li>
+        <li><strong>Elimination strategy:</strong> Discard answers that only address one layer (e.g., "rewrite the prompt" without considering the broader system)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- SECTION 1.3 -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="s1-3"></span>
+    <h2 class="section-title"><span class="num">3</span> Core Technologies at a Glance</h2>
+
+    <p>This section provides flashcard-ready definitions of the foundational technologies underpinning Claude systems. Each technology is explained in terms of <strong>what it is</strong>, <strong>why it matters architecturally</strong>, and <strong>how it appears on the exam</strong>.</p>
+
+    <h3>Quick-Reference Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Technology</th>
+          <th>Definition</th>
+          <th>Architectural Purpose</th>
+          <th>Exam Relevance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Transformer Architecture</strong></td>
+          <td>Neural network architecture using self-attention mechanisms to process sequences in parallel</td>
+          <td>Foundation of all Claude models — determines capabilities, context handling, and scaling properties</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+        <tr>
+          <td><strong>Context Window</strong></td>
+          <td>Maximum number of tokens the model can process in a single request (input + output combined)</td>
+          <td>Determines how much information you can provide per call. Claude Sonnet/Opus: 1M tokens; Haiku: 200K</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tokenization</strong></td>
+          <td>Process of converting text into numerical tokens the model processes. Claude uses byte-pair encoding (BPE); ~1 token ≈ 3–4 English characters</td>
+          <td>Drives cost calculations, context window budgeting, and prompt optimization</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tool Use</strong></td>
+          <td>Mechanism allowing Claude to call external functions by emitting structured JSON matching a defined input schema</td>
+          <td>Core to agentic architectures — tools are how agents interact with the world (DB queries, API calls, file I/O)</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Streaming</strong></td>
+          <td>Server-sent events (SSE) delivering model output token-by-token as it's generated</td>
+          <td>Essential for responsive UIs and long-running agent tasks. Enables progressive rendering and early termination</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+        <tr>
+          <td><strong>Prompt Caching</strong></td>
+          <td>Marking static prompt blocks with <code>cache_control</code> tags so subsequent calls reuse cached computations</td>
+          <td>Reduces latency by up to 85% and cost by up to 90% for repeated static context (system prompts, documents)</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Vision</strong></td>
+          <td>Claude's ability to process images within messages — screenshots, diagrams, documents, charts</td>
+          <td>Enables multi-modal architectures: document extraction, UI analysis, visual QA pipelines</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+        <tr>
+          <td><strong>Extended Thinking</strong></td>
+          <td>Feature where Claude generates internal reasoning (thinking blocks) before responding, improving accuracy on complex tasks</td>
+          <td>Critical for complex reasoning pipelines — architect must decide when thinking overhead is worth the quality gain</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+        <tr>
+          <td><strong>Structured Output</strong></td>
+          <td>Techniques for ensuring Claude returns well-formed JSON, XML, or other parseable formats</td>
+          <td>Production systems require deterministic parsing — schema enforcement and retry/validation loops are essential</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Stop Reasons</strong></td>
+          <td>The reason a model response ended: <code>end_turn</code>, <code>tool_use</code>, <code>stop_sequence</code>, <code>max_tokens</code></td>
+          <td>Control flow in agentic loops — <code>tool_use</code> means the agent wants to call a tool; <code>end_turn</code> means it's done</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Deeper Dives: Technologies Most Likely on the Exam</h3>
+
+    <h4>Context Windows &amp; Token Economics</h4>
+    <p>The context window is the single most impactful architectural constraint. While Claude's 1M-token window is large, <strong>every token costs money and adds latency</strong>. The architect must actively manage context by:</p>
+    <ul>
+      <li><strong>Summarizing</strong> long histories instead of sending raw conversation logs</li>
+      <li><strong>Prompt caching</strong> static blocks (system prompts, reference documents) with <code>cache_control: {"type": "ephemeral"}</code></li>
+      <li><strong>Chunking</strong> large documents and retrieving only relevant chunks (RAG pattern)</li>
+      <li><strong>Model tiering</strong> — using Haiku (200K, cheapest) for classification/routing and Opus (1M, most capable) for complex reasoning</li>
+    </ul>
+
+    <h4>Tool Use &amp; the Agentic Loop</h4>
+    <p>Tool use is the mechanism that transforms Claude from a text generator into an <strong>agent</strong>. The cycle works as follows:</p>
+
+    <div class="flow-row">
+      <div class="flow-node" style="background:#2563eb;">Prompt</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node" style="background:#7c3aed;">Claude Reasons</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node" style="background:#d97706;">Tool Call</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node" style="background:#059669;">Observe Result</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node" style="background:#2563eb;">Loop / End</div>
+    </div>
+
+    <p>The agent continues this loop until the <code>stop_reason</code> is <code>end_turn</code> (task complete) or a hard iteration limit is reached. Understanding <code>stop_reason</code> values is <strong>critical</strong> — the exam tests whether you can diagnose broken agentic loops by inspecting stop reasons.</p>
+
+    <h4>Prompt Caching</h4>
+    <p>Prompt caching is an architectural pattern, not just an API feature. In production systems with repeated context (e.g., a customer service bot with the same system prompt + knowledge base for every user), caching delivers massive cost and latency savings:</p>
+    <pre>{
+  "system": [
+    {
+      "type": "text",
+      "text": "You are a customer service agent...[large system prompt]...",
+      "cache_control": {"type": "ephemeral"}
+    }
+  ]
+}</pre>
+    <p>Cache hits reduce input token cost by up to 90% and time-to-first-token by up to 85%. The cache has a 5-minute TTL (time-to-live), refreshed on each hit.</p>
+
+    <div class="callout key-concept">
+      <span class="icon">💡</span>
+      <div><span class="label">Key Concept:</span> <strong>Stop reasons drive agent control flow.</strong> <code>tool_use</code> = agent wants to call a tool (continue the loop). <code>end_turn</code> = agent believes the task is complete. <code>max_tokens</code> = response was truncated (likely a bug — increase <code>max_tokens</code>). <code>stop_sequence</code> = a custom stop string was hit. Memorize these four.</div>
+    </div>
+
+    <div class="callout common-trap">
+      <span class="icon">⚠️</span>
+      <div><span class="label">Common Trap:</span> "Larger context window = better" is <strong>false</strong> as an architectural principle. Sending 900K tokens when 50K suffices wastes money, increases latency, and can degrade quality (the model may lose focus in very long contexts). The architect's job is to send the <em>minimum effective context</em>.</div>
+    </div>
+
+    <div class="callout exam-tip">
+      <span class="icon">🎯</span>
+      <div><span class="label">Exam Tip:</span> Prompt caching questions often present a cost optimization scenario. The correct answer involves marking <strong>static, frequently-reused</strong> prompt blocks with <code>cache_control</code>. Distractors may suggest caching dynamic user input or caching tool results — these are incorrect because they change per request.</div>
+    </div>
+
+    <div class="callout connections">
+      <span class="icon">🔗</span>
+      <div><span class="label">Connections:</span> Token economics → <strong>Domain 5 (Context Management &amp; Reliability)</strong>. Tool use → <strong>Domain 1 (Agentic Architecture)</strong> and <strong>Domain 2 (Tool Design &amp; MCP)</strong>. Structured output → <strong>Domain 3 (Prompt Engineering)</strong>.</div>
+    </div>
+
+    <div class="strategy-box">
+      <h4>📝 Exam Strategy — Section 1.3</h4>
+      <ul>
+        <li><strong>Question formats:</strong> Definition-based MCQs ("Which statement about prompt caching is correct?") and scenario-based ("The system is slow and expensive. What should the architect change?")</li>
+        <li><strong>Keywords to watch:</strong> "reduce cost" → prompt caching or model tiering; "agent is stuck" → check stop_reason; "output is malformed" → structured output / validation loop</li>
+        <li><strong>Time allocation:</strong> These are usually fast questions — 60–90 seconds each. Don't overthink definitions; go with the most precise answer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- SECTION 1.4 -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="s1-4"></span>
+    <h2 class="section-title"><span class="num">4</span> Production Mindset: Tradeoffs, Reliability &amp; Judgment</h2>
+
+    <p>Production AI systems are defined by the tradeoffs they make. The CCA exam does not test whether you can build a demo — it tests whether you can make <strong>correct tradeoff decisions under realistic constraints</strong>. This section establishes the mental frameworks you need.</p>
+
+    <h3>The Architect's Tradeoff Framework</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tradeoff Axis</th>
+          <th>Tension</th>
+          <th>Architect's Decision</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Latency vs. Quality</strong></td>
+          <td>Faster model (Haiku) vs. more capable model (Opus)</td>
+          <td>Route by task complexity — use Haiku for simple classification, Opus for multi-step reasoning</td>
+          <td>Customer support: intent classification (Haiku) → response generation (Sonnet)</td>
+        </tr>
+        <tr>
+          <td><strong>Cost vs. Capability</strong></td>
+          <td>Smaller model saves money but may fail on edge cases</td>
+          <td>Start with the smallest viable model; promote to a larger model only when error rate exceeds threshold</td>
+          <td>Document extraction: Haiku handles 95% of cases; escalate the 5% to Sonnet</td>
+        </tr>
+        <tr>
+          <td><strong>Autonomy vs. Control</strong></td>
+          <td>More agent freedom speeds up tasks but increases risk</td>
+          <td>Define permission boundaries — safe tools run automatically, risky tools require human approval</td>
+          <td>Agent can read files automatically but must ask before deleting or sending emails</td>
+        </tr>
+        <tr>
+          <td><strong>Context Size vs. Focus</strong></td>
+          <td>More context gives the model more information but can dilute attention</td>
+          <td>Send minimum effective context; use RAG to retrieve only relevant chunks</td>
+          <td>Legal contract review: retrieve specific clauses, not the entire 200-page contract</td>
+        </tr>
+        <tr>
+          <td><strong>Simplicity vs. Resilience</strong></td>
+          <td>Simple systems are easier to build; complex systems handle more failure modes</td>
+          <td>Add complexity only when justified by failure data — start simple, observe failures, then add fallbacks</td>
+          <td>Start with one model; add a fallback model chain only after observing specific failure patterns</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reliability Patterns</h3>
+
+    <h4>1. Fallback Chains</h4>
+    <p>If the primary model (e.g., Opus) returns an error or exceeds a latency budget, automatically route to a fallback (e.g., Sonnet). This requires pre-configured model endpoints, health checks, and graceful degradation logic.</p>
+
+    <h4>2. Retry with Exponential Backoff</h4>
+    <p>Transient API errors (429 rate limits, 500 server errors) should trigger retries with increasing delays: 1s → 2s → 4s → 8s, with jitter. Never retry indefinitely — set a max retry count (typically 3–5).</p>
+
+    <h4>3. Validation &amp; Retry Loops (for Structured Output)</h4>
+    <p>When Claude returns malformed JSON, parse the error, feed it back as a correction prompt, and retry. Set a hard limit (e.g., 3 attempts) — if validation still fails, escalate to human review rather than looping forever.</p>
+
+    <h4>4. Human-in-the-Loop (HITL) Escalation</h4>
+    <p>Define deterministic thresholds for escalation: if the agent fails tool validation N times, or confidence drops below a threshold, trigger a human review queue. This is a <strong>safety net</strong>, not an admission of failure.</p>
+
+    <h4>5. Observability &amp; Structured Logging</h4>
+    <p>Every agent interaction should emit structured logs capturing: model used, tokens consumed, tool calls made, stop reasons, latency, and any errors. This data drives incident response, cost analysis, and continuous improvement.</p>
+
+    <h3>Decision Flowchart: Handling Agent Failures</h3>
+
+    <div class="diagram-box">
+      <div class="diagram-title">Production Failure Response Flowchart</div>
+      <pre>           ┌──────────────┐
+           │  Agent Call   │
+           └──────┬───────┘
+                  ▼
+          ┌───────────────┐
+          │  Successful?  │
+          └───┬───────┬───┘
+           Yes│       │No
+              ▼       ▼
+      ┌───────────┐ ┌──────────────────┐
+      │  Return   │ │ Transient Error? │
+      │  Result   │ │ (429/500/timeout)│
+      └───────────┘ └───┬──────────┬───┘
+                     Yes│          │No
+                        ▼          ▼
+               ┌──────────────┐ ┌──────────────────┐
+               │ Retry w/     │ │ Validation Error? │
+               │ Backoff      │ │ (malformed output)│
+               │ (max 3x)     │ └──┬───────────┬───┘
+               └──────┬───────┘ Yes│           │No
+                      │            ▼           ▼
+               Still  │   ┌──────────────┐ ┌──────────────┐
+               fails? │   │ Feed error   │ │ Fallback to  │
+                  ▼   │   │ back, retry  │ │ simpler model│
+          ┌───────────┴┐  │ (max 3x)     │ └──────┬───────┘
+          │ Fallback   │  └──────┬───────┘        │
+          │ Model      │  Still fails?      Still fails?
+          └──────┬─────┘        ▼                 ▼
+                 │       ┌─────────────────────────┐
+                 └──────►│  ESCALATE TO HUMAN      │
+                         │  (HITL Queue)           │
+                         └─────────────────────────┘</pre>
+    </div>
+
+    <h3>Judgment-Based Scenarios (Exam-Style)</h3>
+    <p>The exam presents ambiguous scenarios with no single "textbook" answer. The correct choice is the one that demonstrates <strong>architectural judgment</strong>:</p>
+    <ul>
+      <li><strong>Scenario:</strong> "An agent is generating correct answers but taking 15 seconds per request. Users complain about latency."
+        <br><strong>Best answer:</strong> Analyze where latency originates (model size? too many tool calls? large context?), then address the dominant factor — not "switch to the fastest model" (which may sacrifice quality).</li>
+      <li><strong>Scenario:</strong> "An agent occasionally produces hallucinated tool arguments, causing database errors."
+        <br><strong>Best answer:</strong> Add input validation on the tool side (schema enforcement) plus a retry loop that feeds the validation error back to Claude — not "increase the model size" (hallucination is an alignment issue, not a capability issue).</li>
+      <li><strong>Scenario:</strong> "The system works perfectly in testing but fails in production with unexpected user inputs."
+        <br><strong>Best answer:</strong> Add observability (logging every interaction), establish guardrails (input validation, output checks), and implement graceful degradation — not "write more test prompts."</li>
+    </ul>
+
+    <div class="callout key-concept">
+      <span class="icon">💡</span>
+      <div><span class="label">Key Concept:</span> The production mindset can be summarized in one principle: <strong>"Optimize for the system, not the model."</strong> The best model means nothing if the system around it can't handle failures, manage costs, or scale. Every architectural decision must consider reliability, cost, latency, and safety <em>together</em>.</div>
+    </div>
+
+    <div class="callout common-trap">
+      <span class="icon">⚠️</span>
+      <div><span class="label">Common Trap:</span> "Just use the biggest model" is the #1 distractor answer pattern on the CCA exam. Bigger models are more expensive, slower, and don't solve structural problems (bad tool design, missing validation, no fallbacks). If a question's best answer is "use a bigger model," it almost certainly <em>isn't</em>.</div>
+    </div>
+
+    <div class="callout exam-tip">
+      <span class="icon">🎯</span>
+      <div><span class="label">Exam Tip:</span> When evaluating scenario answers, apply the <strong>"What breaks next?"</strong> test. The best answer doesn't just fix the current problem — it prevents the next one. Answers that add observability, validation, and fallbacks score higher than answers that only change a single parameter.</div>
+    </div>
+
+    <div class="callout connections">
+      <span class="icon">🔗</span>
+      <div><span class="label">Connections:</span> This section's tradeoff framework applies across <strong>every exam domain</strong>. Retry/fallback patterns → <strong>Domain 5 (Context Management &amp; Reliability)</strong>. Autonomy vs. control → <strong>Domain 1 (Agentic Architecture)</strong>. Validation loops → <strong>Domain 3 (Prompt Engineering &amp; Structured Output)</strong>.</div>
+    </div>
+
+    <div class="strategy-box">
+      <h4>📝 Exam Strategy — Section 1.4</h4>
+      <ul>
+        <li><strong>Question formats:</strong> Predominantly scenario-based. Expect 2–3 paragraphs of context followed by "What should the architect recommend?" with 4 answer choices</li>
+        <li><strong>Keywords to watch:</strong> "production" / "at scale" / "reliability" → look for answers with fallbacks and monitoring; "cost" → prompt caching or model tiering; "latency" → model routing or context reduction</li>
+        <li><strong>Elimination strategy:</strong> Immediately eliminate answers that only change one thing without considering side effects. The best answer is almost always the most <em>systematic</em> one.</li>
+        <li><strong>Time allocation:</strong> These scenario questions take longer — budget 2.5–3 minutes each. Read the full scenario before looking at answers.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- SECTION 1.5 -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="s1-5"></span>
+    <h2 class="section-title"><span class="num">5</span> Exam Blueprints at a Glance</h2>
+
+    <p>The CCA-F exam is a <strong>60-question, 120-minute proctored exam</strong> delivered via Pearson VUE. The passing score is <strong>720/1000</strong> (scaled). Questions are scenario-based multiple-choice, with 4 of 6 pre-built scenarios randomly selected per exam sitting. Understanding the domain weightings and question patterns is essential for efficient preparation.</p>
+
+    <h3>Exam Specifications</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Exam Code</strong></td><td>CCAR-F (Architect — Foundations)</td></tr>
+        <tr><td><strong>Format</strong></td><td>60 multiple-choice &amp; scenario-based questions</td></tr>
+        <tr><td><strong>Duration</strong></td><td>120 minutes (2 hours)</td></tr>
+        <tr><td><strong>Passing Score</strong></td><td>720 / 1,000 (scaled)</td></tr>
+        <tr><td><strong>Price</strong></td><td>$125 USD per attempt</td></tr>
+        <tr><td><strong>Delivery</strong></td><td>Pearson VUE (online proctored or test center)</td></tr>
+        <tr><td><strong>Validity</strong></td><td>12 months; free renewal via non-proctored assessment if on time</td></tr>
+        <tr><td><strong>Prerequisites</strong></td><td>6+ months building with Claude APIs, Agent SDK, Claude Code, and MCP</td></tr>
+        <tr><td><strong>Access</strong></td><td>Claude Partner Network (partner-domain email required)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Domain Weightings</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>Weight</th>
+          <th>~Questions</th>
+          <th>Study Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Agentic Architecture &amp; Orchestration</strong></td>
+          <td>27%</td>
+          <td>~16</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>2. Tool Design &amp; MCP Integration</strong></td>
+          <td>18%</td>
+          <td>~11</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>3. Claude Code Configuration &amp; Workflows</strong></td>
+          <td>20%</td>
+          <td>~12</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>4. Prompt Engineering &amp; Structured Output</strong></td>
+          <td>20%</td>
+          <td>~12</td>
+          <td><span class="priority high">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>5. Context Management &amp; Reliability</strong></td>
+          <td>15%</td>
+          <td>~9</td>
+          <td><span class="priority medium">Medium</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>High-Priority Topics per Domain</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>Must-Know Topics</th>
+          <th>Likely Trap Areas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>D1: Agentic</strong></td>
+          <td>Single agentic loop, hub-and-spoke pattern, stop_reason values, iteration limits, sub-agent spawning, parallel vs. sequential execution</td>
+          <td>Infinite tool-use loops, when to delegate vs. when to process in-context</td>
+        </tr>
+        <tr>
+          <td><strong>D2: Tools &amp; MCP</strong></td>
+          <td>MCP host vs. server, resource/prompt/tool primitives, tool description clarity, preventing tool misrouting, input schema validation</td>
+          <td>Overlapping tool descriptions, confusing MCP with API access</td>
+        </tr>
+        <tr>
+          <td><strong>D3: Claude Code</strong></td>
+          <td>CLAUDE.md structure and hierarchy, plan mode vs. direct execution, permission system, CI/CD integration, session management</td>
+          <td>Config hierarchy conflicts, hanging agent in CI (no stdin)</td>
+        </tr>
+        <tr>
+          <td><strong>D4: Prompt Eng.</strong></td>
+          <td>XML tag placement, system vs. user prompt boundaries, JSON schema enforcement, few-shot examples, validator/retry loops</td>
+          <td>Context placement errors, not validating outputs client-side</td>
+        </tr>
+        <tr>
+          <td><strong>D5: Reliability</strong></td>
+          <td>Prompt caching (<code>cache_control</code>), error propagation, HITL escalation thresholds, token economy, session state management</td>
+          <td>Caching dynamic content, no max retry limit, ignoring observability</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Study Priority Matrix</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Topic Area</th>
+          <th>Priority</th>
+          <th>Rationale</th>
+          <th>Suggested Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Agentic loops &amp; stop reasons</td>
+          <td><span class="priority high">High</span></td>
+          <td>Largest domain weight (27%); appears in most scenarios</td>
+          <td>25% of study time</td>
+        </tr>
+        <tr>
+          <td>Tool design &amp; MCP architecture</td>
+          <td><span class="priority high">High</span></td>
+          <td>Common trap questions; requires understanding host vs. server distinction</td>
+          <td>20% of study time</td>
+        </tr>
+        <tr>
+          <td>CLAUDE.md &amp; Claude Code workflows</td>
+          <td><span class="priority high">High</span></td>
+          <td>Practical config questions; easy points if you've used Claude Code</td>
+          <td>15% of study time</td>
+        </tr>
+        <tr>
+          <td>Prompt engineering &amp; structured output</td>
+          <td><span class="priority high">High</span></td>
+          <td>Foundational skill; JSON validation loops are a frequent scenario</td>
+          <td>20% of study time</td>
+        </tr>
+        <tr>
+          <td>Prompt caching &amp; cost optimization</td>
+          <td><span class="priority high">High</span></td>
+          <td>High ROI topic — appears in cost-optimization scenarios across domains</td>
+          <td>10% of study time</td>
+        </tr>
+        <tr>
+          <td>Reliability patterns (retry, fallback, HITL)</td>
+          <td><span class="priority medium">Medium</span></td>
+          <td>Important but often combined with other domain questions</td>
+          <td>5% of study time</td>
+        </tr>
+        <tr>
+          <td>Transformer fundamentals</td>
+          <td><span class="priority low">Low</span></td>
+          <td>Background knowledge; rarely tested directly at the Foundations level</td>
+          <td>5% of study time</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout key-concept">
+      <span class="icon">💡</span>
+      <div><span class="label">Key Concept:</span> The exam uses <strong>4 of 6 randomly selected scenarios</strong> per sitting. Each scenario is a multi-paragraph description of a real-world system, and multiple questions reference the same scenario. This means you must read each scenario carefully — information from the scenario description is required to answer the questions correctly.</div>
+    </div>
+
+    <div class="callout common-trap">
+      <span class="icon">⚠️</span>
+      <div><span class="label">Common Trap:</span> Don't over-index on Domain 5 (15% weight) at the expense of Domains 1–4. Some candidates spend disproportionate time on reliability patterns because they feel familiar — but the bulk of exam points come from agentic architecture, tool design, and prompt engineering.</div>
+    </div>
+
+    <div class="callout exam-tip">
+      <span class="icon">🎯</span>
+      <div><span class="label">Exam Tip:</span> With 60 questions in 120 minutes, you have <strong>2 minutes per question</strong>. Budget your time: spend 60–90 seconds on definition questions, 2.5–3 minutes on multi-paragraph scenarios. If you're stuck after 3 minutes, flag and move on — unanswered questions at the end hurt more than imperfect answers now. There's no penalty for guessing.</div>
+    </div>
+
+    <div class="callout connections">
+      <span class="icon">🔗</span>
+      <div><span class="label">Connections:</span> This blueprint overview connects to <strong>every subsequent chapter</strong>. Use the domain weightings to prioritize your deep-dive study: Chapters covering Domain 1 (Agentic Architecture) deserve the most thorough review.</div>
+    </div>
+
+    <div class="strategy-box">
+      <h4>📝 Exam Strategy — Section 1.5</h4>
+      <ul>
+        <li><strong>Question formats:</strong> Mix of single-select MCQ (~80%) and multi-select ("select TWO") (~20%). Multi-select questions state how many to select.</li>
+        <li><strong>Elimination tip:</strong> For multi-select questions, find the two most <em>complete</em> answers. Distractors are often partially correct but miss a critical element.</li>
+        <li><strong>First pass strategy:</strong> On your first pass, answer all questions you're confident about. Flag uncertain ones. Use remaining time for flagged questions — your subconscious often resolves ambiguity while you work on other problems.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MASTER EXAM STRATEGY -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="strategy-master"></span>
+    <h2 class="section-title"><span class="num">★</span> Master Exam Strategy Summary</h2>
+
+    <h3>Universal Answer Selection Framework</h3>
+    <p>Apply this framework to <strong>every</strong> scenario-based question:</p>
+    <ol>
+      <li><strong>Read the scenario fully</strong> before looking at answer choices. Note the stated constraints (cost, latency, reliability, scale).</li>
+      <li><strong>Identify the primary tradeoff axis</strong> — what's being optimized? Cost? Reliability? Latency? User experience?</li>
+      <li><strong>Eliminate single-dimension answers</strong> — "just use a bigger model," "just rewrite the prompt," "just add more tools" are usually wrong because they ignore side effects.</li>
+      <li><strong>Prefer systematic answers</strong> — the best answer addresses the root cause <em>and</em> adds a safety net (e.g., "add input validation on the tool AND implement a retry loop with HITL escalation").</li>
+      <li><strong>Apply the "What breaks next?" test</strong> — the right answer prevents the next failure, not just the current one.</li>
+    </ol>
+
+    <h3>Keywords → Domain Mapping</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>If You See These Keywords</th>
+          <th>Think This Domain</th>
+          <th>Default Pattern</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"agent loop," "sub-agent," "hub-and-spoke," "parallel execution"</td>
+          <td>D1: Agentic Architecture</td>
+          <td>Check stop_reason, iteration limits, delegation boundaries</td>
+        </tr>
+        <tr>
+          <td>"MCP server," "tool schema," "resource," "misrouting"</td>
+          <td>D2: Tool Design &amp; MCP</td>
+          <td>Ensure non-overlapping tool descriptions, validate input schemas</td>
+        </tr>
+        <tr>
+          <td>"CLAUDE.md," "plan mode," "CI/CD," "permission"</td>
+          <td>D3: Claude Code</td>
+          <td>Check config hierarchy, plan-before-execute for risky ops</td>
+        </tr>
+        <tr>
+          <td>"XML tags," "JSON schema," "structured output," "parsing"</td>
+          <td>D4: Prompt Engineering</td>
+          <td>System prompt for instructions; user message for data; validate + retry</td>
+        </tr>
+        <tr>
+          <td>"prompt caching," "token cost," "latency," "escalation," "retry"</td>
+          <td>D5: Reliability</td>
+          <td>Cache static blocks, exponential backoff, HITL after N failures</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Time Management Template</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Time</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>First Pass</strong></td>
+          <td>0–80 min</td>
+          <td>Answer all 60 questions. Flag any you're unsure about (aim for &lt;15 flagged).</td>
+        </tr>
+        <tr>
+          <td><strong>Review Pass</strong></td>
+          <td>80–110 min</td>
+          <td>Return to flagged questions. Re-read the scenario and apply the tradeoff framework.</td>
+        </tr>
+        <tr>
+          <td><strong>Final Sweep</strong></td>
+          <td>110–120 min</td>
+          <td>Check for unanswered questions. Make a decision on remaining flags — never leave a question blank.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- QUICK REVISION CHECKLIST -->
+  <!-- ============================================== -->
+  <div class="section">
+    <span class="section-anchor" id="revision"></span>
+    <h2 class="section-title"><span class="num">✓</span> Quick Revision Checklist</h2>
+
+    <div class="checklist">
+      <h3>Chapter 1 — Before You Move On</h3>
+      <label><input type="checkbox"> I can name and define all four ecosystem components (API, Agent SDK, Claude Code, MCP) and explain how they relate</label>
+      <label><input type="checkbox"> I understand the difference between the <em>Agent SDK</em> (library) and the <em>Client SDK</em> (thin API wrapper)</label>
+      <label><input type="checkbox"> I know MCP is a <em>protocol</em>, not a model or API, and can distinguish hosts from servers</label>
+      <label><input type="checkbox"> I can explain the architect's role and how it differs from ML Engineer, Prompt Engineer, and DevOps</label>
+      <label><input type="checkbox"> I can define all 10 core technologies in the quick-reference table from memory</label>
+      <label><input type="checkbox"> I know the four <code>stop_reason</code> values and what each means for agent control flow</label>
+      <label><input type="checkbox"> I can explain prompt caching — what to cache, what <em>not</em> to cache, and the performance impact</label>
+      <label><input type="checkbox"> I understand the 5 tradeoff axes and can apply them to novel scenarios</label>
+      <label><input type="checkbox"> I know the production failure flowchart: retry → validation → fallback → HITL escalation</label>
+      <label><input type="checkbox"> I know all 5 domain weightings and can allocate study time proportionally</label>
+      <label><input type="checkbox"> I have a time management plan for the 120-minute, 60-question exam</label>
+      <label><input type="checkbox"> I can identify and eliminate common distractor patterns ("just use a bigger model")</label>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <div class="badge-complete">✓ CHAPTER 1 COMPLETE</div>
+    <p>Claude Certified Architect — Foundations &amp; Professional Study Notes</p>
+    <p>Chapter 1 of the study series • Generated September 14, 2026</p>
+  </footer>
+
+</div><!-- /main -->
+
+
+</body></html>

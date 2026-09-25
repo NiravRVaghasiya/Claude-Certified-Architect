@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 37: End-to-End Architecture Design — Study Notes</title>
+<style>
+  :root{
+    --ink:#1e293b; --muted:#475569; --line:#e2e8f0; --bg:#ffffff;
+    --accent:#2563eb; --accent-soft:#eff6ff;
+    --tip:#0891b2; --tip-bg:#ecfeff;
+    --strat:#7c3aed; --strat-bg:#f5f3ff;
+    --recap:#16a34a; --recap-bg:#f0fdf4;
+    --trap:#dc2626; --trap-bg:#fef2f2;
+    --code:#f1f5f9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:#f8fafc; line-height:1.6;
+    margin:0; padding:0;
+  }
+  .wrap{max-width:900px; margin:0 auto; background:var(--bg);
+    padding:48px 56px; box-shadow:0 1px 3px rgba(0,0,0,.08);}
+  h1{font-size:2rem; line-height:1.2; margin:0 0 6px; color:#0f172a;
+    border-bottom:3px solid var(--accent); padding-bottom:14px;}
+  .subtitle{color:var(--muted); font-size:.95rem; margin:0 0 8px;}
+  .examtag{display:inline-block; background:var(--accent-soft); color:var(--accent);
+    font-size:.75rem; font-weight:600; padding:3px 10px; border-radius:20px;
+    letter-spacing:.3px; margin-bottom:24px;}
+  h2{font-size:1.4rem; margin:44px 0 12px; color:#0f172a;
+    padding-top:12px; border-top:1px solid var(--line);}
+  h3{font-size:1.1rem; margin:26px 0 8px; color:#1e40af;}
+  h4{font-size:.98rem; margin:18px 0 6px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px;}
+  p{margin:8px 0;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  code{background:var(--code); padding:1px 6px; border-radius:4px;
+    font-family:"SF Mono",Consolas,Monaco,monospace; font-size:.88em; color:#be123c;}
+
+  /* TOC */
+  nav.toc{background:#f8fafc; border:1px solid var(--line); border-radius:10px;
+    padding:20px 26px; margin:28px 0;}
+  nav.toc strong{display:block; font-size:.8rem; text-transform:uppercase;
+    letter-spacing:1px; color:var(--muted); margin-bottom:10px;}
+  nav.toc ol{margin:0; padding-left:20px;}
+  nav.toc li{margin:5px 0;}
+
+  /* Tables */
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:.9rem;}
+  th,td{border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top;}
+  th{background:var(--accent-soft); color:#0f172a; font-weight:600;}
+  tr:nth-child(even) td{background:#fbfcfe;}
+
+  /* Callouts */
+  .callout{border-left:5px solid; border-radius:0 8px 8px 0; padding:14px 18px; margin:18px 0;}
+  .callout p{margin:6px 0;}
+  .callout .label{font-weight:700; display:block; margin-bottom:4px;}
+  .tip{background:var(--tip-bg); border-color:var(--tip);}
+  .tip .label{color:var(--tip);}
+  .strat{background:var(--strat-bg); border-color:var(--strat);}
+  .strat .label{color:var(--strat);}
+  .recap{background:var(--recap-bg); border-color:var(--recap);}
+  .recap .label{color:var(--recap);}
+  .recap ul{margin:6px 0; padding-left:20px;}
+  .recap li{margin:3px 0;}
+  .trap{background:var(--trap-bg); border-color:var(--trap);}
+  .trap .label{color:var(--trap);}
+
+  /* Checklist */
+  .checklist{list-style:none; padding:0; margin:12px 0;}
+  .checklist li{padding:6px 6px 6px 34px; position:relative; border-bottom:1px dashed var(--line);}
+  .checklist li:before{content:"☐"; position:absolute; left:8px; top:6px;
+    color:var(--accent); font-size:1.1rem;}
+
+  /* Diagram container */
+  .diagram{background:#fbfcfe; border:1px solid var(--line); border-radius:10px;
+    padding:20px; margin:18px 0; text-align:center; overflow-x:auto;}
+  .diagram figcaption{font-size:.82rem; color:var(--muted); margin-top:10px; font-style:italic;}
+  svg{max-width:100%; height:auto;}
+
+  details{background:#f8fafc; border:1px solid var(--line); border-radius:8px;
+    padding:10px 16px; margin:14px 0;}
+  summary{cursor:pointer; font-weight:600; color:var(--accent);}
+  details[open] summary{margin-bottom:8px;}
+
+  .pillar{border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:16px 0;}
+  .pillar h3{margin-top:0;}
+
+  .back{font-size:.8rem; color:var(--muted);}
+  .back a{color:var(--muted);}
+
+  @media print{
+    body{background:#fff;}
+    .wrap{box-shadow:none; max-width:100%; padding:0;}
+    details{border:none; padding:0;}
+    details summary{display:none;}
+    details[open]{background:#fff;}
+    h2{page-break-after:avoid;}
+    .diagram,table,.callout{page-break-inside:avoid;}
+    a{color:var(--ink); text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="examtag">Claude Certified Architect · Foundations &amp; Professional</span>
+  <h1>Chapter 37: End-to-End Architecture Design</h1>
+  <p class="subtitle">Final-revision study notes · Grounded in Anthropic's "Building Effective Agents" guidance</p>
+
+  <nav class="toc">
+    <strong>Table of Contents</strong>
+    <ol>
+      <li><a href="#s371">37.1 — The Architecture Lifecycle</a></li>
+      <li><a href="#s372">37.2 — Architectural Patterns (Workflow · Agentic · Augmented LLM)</a></li>
+      <li><a href="#s373">37.3 — Selecting the Right Pattern</a></li>
+      <li><a href="#s374">37.4 — Designing for Scalability, Reliability &amp; Maintainability</a></li>
+      <li><a href="#s375">37.5 — Hands-On: Designing an End-to-End Architecture</a></li>
+      <li><a href="#exam-strategy">🎯 Exam Strategy &amp; Question-Pattern Recognition</a></li>
+    </ol>
+  </nav>
+
+  <div class="callout strat">
+    <span class="label">Core mental model for the whole chapter</span>
+    <p>Anthropic's central principle: <strong>find the simplest solution possible, and only increase complexity when needed.</strong> Complexity climbs in this order — <strong>single LLM call → Augmented LLM → Workflow → Agent</strong>. The exam repeatedly tests whether you can pick the <em>least</em> complex pattern that still solves the problem.</p>
+  </div>
+
+  <!-- ============================ 37.1 ============================ -->
+  <section id="s371">
+    <h2>37.1 The Architecture Lifecycle</h2>
+    <p>Every LLM-based system operates as a <strong>continuous cycle</strong>, not a one-shot pipeline. The four stages feed into one another, and the feedback loop is what turns a static prompt into an adaptive system.</p>
+
+    <h3>The Four Stages</h3>
+    <ul>
+      <li><strong>Input</strong> — the request enters the system: a user query, an event, a document, or upstream data. Includes any pre-processing (validation, guardrails, retrieval of context).</li>
+      <li><strong>Processing</strong> — the LLM reasons over the input, optionally augmented by retrieval, tools, and memory. This is where the chosen <em>pattern</em> (workflow / agent) executes.</li>
+      <li><strong>Output</strong> — a structured or natural-language result is produced, validated, and returned to the user or a downstream system.</li>
+      <li><strong>Feedback Loops</strong> — signals (user corrections, tool results, evaluator scores, ground-truth comparisons) flow back to refine the next iteration. In agentic systems this loop is <em>internal and automatic</em>; in workflows it is often an explicit evaluator-optimizer step.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 640 300" role="img" aria-label="Architecture lifecycle cycle diagram">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"></path>
+          </marker>
+          <marker id="arrowg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"></path>
+          </marker>
+        </defs>
+        <!-- boxes -->
+        <rect x="30" y="40" width="130" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="95" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">INPUT</text>
+        <text x="95" y="85" text-anchor="middle" font-size="10" fill="#475569">query · context · guardrails</text>
+
+        <rect x="255" y="40" width="130" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="320" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">PROCESSING</text>
+        <text x="320" y="85" text-anchor="middle" font-size="10" fill="#475569">LLM + tools + retrieval</text>
+
+        <rect x="480" y="40" width="130" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="545" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">OUTPUT</text>
+        <text x="545" y="85" text-anchor="middle" font-size="10" fill="#475569">validated result</text>
+
+        <!-- forward arrows -->
+        <line x1="160" y1="70" x2="250" y2="70" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"></line>
+        <line x1="385" y1="70" x2="475" y2="70" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"></line>
+
+        <!-- feedback loop -->
+        <rect x="255" y="210" width="130" height="52" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"></rect>
+        <text x="320" y="233" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">FEEDBACK LOOP</text>
+        <text x="320" y="250" text-anchor="middle" font-size="9.5" fill="#475569">evaluate · correct · refine</text>
+
+        <path d="M545,100 L545,236 L387,236" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrowg)"></path>
+        <path d="M253,236 L95,236 L95,102" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrowg)"></path>
+      </svg>
+      <figcaption>The lifecycle as a continuous cycle — the green feedback path is what makes the system adaptive rather than one-shot.</figcaption>
+    </figure>
+
+    <h3>Real-world mapping: a support-ticket assistant</h3>
+    <table>
+      <tbody><tr><th>Stage</th><th>In an LLM-based support system</th></tr>
+      <tr><td><strong>Input</strong></td><td>Customer message arrives; system retrieves the customer's order history + relevant KB articles (RAG).</td></tr>
+      <tr><td><strong>Processing</strong></td><td>Claude reasons over the ticket + retrieved context, decides whether to answer directly or call a <code>lookup_refund_status</code> tool.</td></tr>
+      <tr><td><strong>Output</strong></td><td>A drafted reply is produced and checked against a guardrail (no PII leakage, correct tone).</td></tr>
+      <tr><td><strong>Feedback</strong></td><td>Agent rating / thumbs-down + escalation data feed evaluation, improving prompts and retrieval for future tickets.</td></tr>
+    </tbody></table>
+
+    <div class="callout tip">
+      <span class="label">💡 Tip — mnemonic</span>
+      <p>Remember the lifecycle as <strong>"I&nbsp;Prefer Our Feedback"</strong> → <strong>I</strong>nput · <strong>P</strong>rocessing · <strong>O</strong>utput · <strong>F</strong>eedback. If an exam diagram omits the loop back to Input, it's describing a <em>pipeline</em>, not a full lifecycle.</p>
+    </div>
+
+    <div class="callout recap">
+      <span class="label">✅ Quick Recap — 37.1</span>
+      <ul>
+        <li>Lifecycle = Input → Processing → Output → Feedback, running <em>continuously</em>.</li>
+        <li>Feedback loop distinguishes an adaptive system from a static pipeline.</li>
+        <li>Processing is where retrieval, tools, and memory augment the LLM.</li>
+        <li>In agents the loop is internal/automatic; in workflows it's often an explicit evaluator step.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ 37.2 ============================ -->
+  <section id="s372">
+    <h2>37.2 Architectural Patterns</h2>
+    <p>Anthropic draws a sharp architectural line between <strong>workflows</strong> and <strong>agents</strong>, both built on top of the foundational <strong>Augmented LLM</strong>.</p>
+
+    <ul>
+      <li><strong>Augmented LLM</strong> — the basic building block: a single LLM enhanced with <em>retrieval, tools, and memory</em>. No orchestration of multiple steps; the model uses these capabilities within one reasoning turn.</li>
+      <li><strong>Workflows</strong> — systems where LLMs and tools are orchestrated through <em>predefined code paths</em>. The control flow is written by the developer; the LLM fills in steps.</li>
+      <li><strong>Agents</strong> — systems where the LLM <em>dynamically directs its own processes and tool usage</em>, maintaining control over how it accomplishes a task, typically looping until a goal is met.</li>
+    </ul>
+
+    <div class="callout tip">
+      <span class="label">💡 Tip — the defining question</span>
+      <p>Ask: <strong>"Who decides the next step — the developer's code, or the model?"</strong> Predefined code path = <strong>Workflow</strong>. The model decides at runtime = <strong>Agent</strong>. One enhanced call, no looping = <strong>Augmented LLM</strong>.</p>
+    </div>
+
+    <h3>Comparison table</h3>
+    <table>
+      <tbody><tr><th>Pattern</th><th>Description</th><th>Best Use Case</th><th>Pros</th><th>Cons</th></tr>
+      <tr>
+        <td><strong>Workflow</strong></td>
+        <td>Predefined sequence of LLM calls; deterministic control flow written in code (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer).</td>
+        <td>Well-defined, repeatable tasks with known steps (e.g. document summarization pipeline, classify-then-route).</td>
+        <td>Predictable, testable, easy to debug, lower cost/latency variance.</td>
+        <td>Less flexible for novel inputs; developer must anticipate paths.</td>
+      </tr>
+      <tr>
+        <td><strong>Agentic</strong></td>
+        <td>LLM autonomously decides which tools to call and what step comes next, looping on environment feedback until done.</td>
+        <td>Open-ended tasks where steps can't be predicted in advance (e.g. research assistant, coding agent).</td>
+        <td>Highly adaptable; handles novel, multi-step problems.</td>
+        <td>Harder to control; higher cost &amp; latency; needs guardrails, stopping conditions, and testing in a sandbox.</td>
+      </tr>
+      <tr>
+        <td><strong>Augmented LLM</strong></td>
+        <td>Single LLM call enhanced with retrieval, tools, and/or memory — no autonomous multi-step looping.</td>
+        <td>Q&amp;A grounded in external knowledge (e.g. RAG chatbot), single tool-augmented response.</td>
+        <td>Simple, fast, cheap, easy to reason about.</td>
+        <td>Limited multi-step reasoning; can't decompose complex tasks alone.</td>
+      </tr>
+    </tbody></table>
+
+    <h3>Simple architecture diagrams</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 660 210" role="img" aria-label="Three pattern architecture diagrams">
+        <defs>
+          <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#475569"></path></marker>
+        </defs>
+
+        <!-- Augmented LLM -->
+        <text x="105" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Augmented LLM</text>
+        <rect x="55" y="70" width="100" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="105" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">LLM</text>
+        <rect x="20" y="140" width="80" height="30" rx="6" fill="#fff" stroke="#94a3b8"></rect>
+        <text x="60" y="159" text-anchor="middle" font-size="9" fill="#475569">Retrieval</text>
+        <rect x="110" y="140" width="80" height="30" rx="6" fill="#fff" stroke="#94a3b8"></rect>
+        <text x="150" y="159" text-anchor="middle" font-size="9" fill="#475569">Tools · Memory</text>
+        <line x1="80" y1="140" x2="95" y2="118" stroke="#475569" marker-end="url(#a2)"></line>
+        <line x1="140" y1="140" x2="120" y2="118" stroke="#475569" marker-end="url(#a2)"></line>
+
+        <!-- Workflow -->
+        <text x="330" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Workflow (predefined path)</text>
+        <rect x="250" y="80" width="52" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"></rect>
+        <text x="276" y="102" text-anchor="middle" font-size="10" fill="#1e40af">Step 1</text>
+        <rect x="322" y="80" width="52" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"></rect>
+        <text x="348" y="102" text-anchor="middle" font-size="10" fill="#1e40af">Step 2</text>
+        <rect x="394" y="80" width="52" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"></rect>
+        <text x="420" y="102" text-anchor="middle" font-size="10" fill="#1e40af">Step 3</text>
+        <line x1="302" y1="97" x2="320" y2="97" stroke="#475569" stroke-width="1.8" marker-end="url(#a2)"></line>
+        <line x1="374" y1="97" x2="392" y2="97" stroke="#475569" stroke-width="1.8" marker-end="url(#a2)"></line>
+        <text x="348" y="150" text-anchor="middle" font-size="9" fill="#475569" font-style="italic">code controls the sequence</text>
+
+        <!-- Agent -->
+        <text x="580" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Agent (dynamic loop)</text>
+        <rect x="540" y="70" width="80" height="44" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"></rect>
+        <text x="580" y="97" text-anchor="middle" font-size="11" font-weight="700" fill="#6d28d9">LLM</text>
+        <rect x="540" y="140" width="80" height="30" rx="6" fill="#fff" stroke="#94a3b8"></rect>
+        <text x="580" y="159" text-anchor="middle" font-size="9" fill="#475569">Environment</text>
+        <path d="M545,114 C520,128 520,150 538,158" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#a2)"></path>
+        <path d="M615,158 C640,150 640,128 618,114" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#a2)"></path>
+        <text x="580" y="192" text-anchor="middle" font-size="9" fill="#6d28d9" font-style="italic">act → observe → repeat</text>
+      </svg>
+      <figcaption>Augmented LLM (one enhanced call) vs. Workflow (developer-defined steps) vs. Agent (model-driven act–observe loop).</figcaption>
+    </figure>
+
+    <details>
+      <summary>The five canonical workflow sub-patterns (know these by name)</summary>
+      <ul>
+        <li><strong>Prompt chaining</strong> — decompose a task into a fixed sequence of steps, each LLM call feeding the next; optional "gate" checks between steps.</li>
+        <li><strong>Routing</strong> — classify the input, then direct it to a specialized downstream prompt/model.</li>
+        <li><strong>Parallelization</strong> — run subtasks simultaneously. Two flavours: <em>sectioning</em> (split into independent parts) and <em>voting</em> (run the same task multiple times for confidence).</li>
+        <li><strong>Orchestrator-workers</strong> — a central LLM dynamically breaks down a task and delegates to worker LLMs, then synthesizes results.</li>
+        <li><strong>Evaluator-optimizer</strong> — one LLM generates, another evaluates and gives feedback in a loop until quality passes.</li>
+      </ul>
+      <div class="callout trap">
+        <span class="label">⚠️ Common trap</span>
+        <p>Orchestrator-workers <em>looks</em> agentic, but it's still a <strong>workflow</strong> — the orchestration structure is predefined by the developer. It becomes an <em>agent</em> only when the LLM itself decides the overall process at runtime with no fixed path.</p>
+      </div>
+    </details>
+
+    <div class="callout recap">
+      <span class="label">✅ Quick Recap — 37.2</span>
+      <ul>
+        <li>Augmented LLM = foundational building block (retrieval + tools + memory), one call.</li>
+        <li>Workflow = LLMs orchestrated via <em>predefined code paths</em>.</li>
+        <li>Agent = LLM <em>dynamically directs</em> its own process &amp; tool use in a loop.</li>
+        <li>Five workflow sub-patterns: chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ 37.3 ============================ -->
+  <section id="s373">
+    <h2>37.3 Selecting the Right Pattern</h2>
+    <p>Anthropic's rule: <strong>start with the simplest option and only escalate when the task genuinely demands it.</strong> A single well-prompted LLM call solves more than people expect. Agents are the last resort — used when flexibility and model-driven decisions at scale are worth the added cost, latency, and reduced predictability.</p>
+
+    <h3>Decision flowchart</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 430" role="img" aria-label="Pattern selection decision tree">
+        <defs>
+          <marker id="d1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#475569"></path></marker>
+        </defs>
+        <!-- Q1 -->
+        <rect x="200" y="20" width="240" height="46" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"></rect>
+        <text x="320" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">Does one LLM call solve it?</text>
+        <text x="320" y="57" text-anchor="middle" font-size="10" fill="#475569">(maybe + retrieval/a tool)</text>
+
+        <!-- yes -> augmented -->
+        <line x1="200" y1="43" x2="120" y2="43" stroke="#475569" marker-end="url(#d1)"></line>
+        <text x="150" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">YES</text>
+        <rect x="20" y="20" width="130" height="46" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="85" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">Augmented LLM</text>
+        <text x="85" y="56" text-anchor="middle" font-size="9" fill="#475569">(or plain call)</text>
+
+        <!-- no down -->
+        <line x1="320" y1="66" x2="320" y2="110" stroke="#475569" marker-end="url(#d1)"></line>
+        <text x="335" y="90" font-size="10" font-weight="700" fill="#dc2626">NO</text>
+
+        <!-- Q2 -->
+        <rect x="180" y="112" width="280" height="52" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"></rect>
+        <text x="320" y="133" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">Are the steps known &amp; fixed in advance?</text>
+        <text x="320" y="151" text-anchor="middle" font-size="10" fill="#475569">can you draw the flow as code?</text>
+
+        <!-- yes -> workflow -->
+        <line x1="180" y1="138" x2="120" y2="138" stroke="#475569" marker-end="url(#d1)"></line>
+        <text x="150" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">YES</text>
+        <rect x="20" y="115" width="130" height="46" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="85" y="135" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">Workflow</text>
+        <text x="85" y="151" text-anchor="middle" font-size="9" fill="#475569">chain/route/parallel</text>
+
+        <!-- no down -->
+        <line x1="320" y1="164" x2="320" y2="205" stroke="#475569" marker-end="url(#d1)"></line>
+        <text x="335" y="187" font-size="10" font-weight="700" fill="#dc2626">NO</text>
+
+        <!-- Q3 -->
+        <rect x="170" y="207" width="300" height="52" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"></rect>
+        <text x="320" y="228" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6d28d9">Does the task need the model to decide</text>
+        <text x="320" y="246" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6d28d9">steps dynamically, &amp; is the risk acceptable?</text>
+
+        <!-- yes -> agent -->
+        <line x1="320" y1="259" x2="320" y2="300" stroke="#475569" marker-end="url(#d1)"></line>
+        <text x="335" y="282" font-size="10" font-weight="700" fill="#16a34a">YES</text>
+        <rect x="240" y="302" width="160" height="50" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5"></rect>
+        <text x="320" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#6d28d9">Agent</text>
+        <text x="320" y="343" text-anchor="middle" font-size="9" fill="#475569">autonomous loop + guardrails</text>
+
+        <!-- no -> back to workflow -->
+        <line x1="470" y1="233" x2="540" y2="233" stroke="#475569" marker-end="url(#d1)"></line>
+        <text x="505" y="225" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">NO</text>
+        <rect x="520" y="115" width="110" height="130" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"></rect>
+        <text x="575" y="170" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">Reconsider a</text>
+        <text x="575" y="186" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">Workflow /</text>
+        <text x="575" y="202" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">simplify scope</text>
+
+        <text x="320" y="390" text-anchor="middle" font-size="10" fill="#475569" font-style="italic">Golden rule: descend only as far as the task forces you to.</text>
+      </svg>
+      <figcaption>Escalate complexity only when each simpler tier genuinely fails to meet the requirement.</figcaption>
+    </figure>
+
+    <h3>Key evaluation criteria</h3>
+    <table>
+      <tbody><tr><th>Criterion</th><th>Pushes toward simpler (Augmented / Workflow)</th><th>Pushes toward Agentic</th></tr>
+      <tr><td><strong>Autonomy needed</strong></td><td>Steps are predictable &amp; fixed</td><td>Steps can't be enumerated up front</td></tr>
+      <tr><td><strong>Latency</strong></td><td>Tight / real-time budget</td><td>Tolerant of longer, variable runtimes</td></tr>
+      <tr><td><strong>Cost</strong></td><td>High volume, cost-sensitive</td><td>High-value tasks justify more tokens/loops</td></tr>
+      <tr><td><strong>Predictability / control</strong></td><td>Must be auditable &amp; deterministic</td><td>Acceptable to trade control for flexibility</td></tr>
+      <tr><td><strong>Task complexity</strong></td><td>Single-shot or linear</td><td>Open-ended, multi-step, novel</td></tr>
+    </tbody></table>
+
+    <h3>Worked examples</h3>
+    <div class="callout tip">
+      <span class="label">Example 1 — Invoice data extraction (high volume)</span>
+      <p><strong>Scenario:</strong> Extract 6 fields from 50,000 invoices/day into JSON. <strong>Choose:</strong> <em>Augmented LLM</em> (single call with a tool/structured output + retrieval of the template). <strong>Why:</strong> steps are fixed, volume is huge and cost-sensitive, no dynamic decision-making — agentic looping would add cost and latency for zero benefit.</p>
+    </div>
+    <div class="callout tip">
+      <span class="label">Example 2 — Support triage → specialized reply</span>
+      <p><strong>Scenario:</strong> Classify a ticket (billing / technical / refund) then generate a tailored response. <strong>Choose:</strong> <em>Workflow — routing</em>. <strong>Why:</strong> the categories and downstream prompts are known in advance; a predefined routing path is predictable, cheap, and easy to debug. No need for the model to invent steps.</p>
+    </div>
+    <div class="callout tip">
+      <span class="label">Example 3 — Autonomous coding assistant</span>
+      <p><strong>Scenario:</strong> "Fix this failing test suite" — the fix requires exploring the repo, editing files, running tests, and iterating based on results. <strong>Choose:</strong> <em>Agent</em>. <strong>Why:</strong> the sequence of actions genuinely can't be predetermined; the model must observe tool/test output and decide next steps in a loop. Task is high-value, so added cost/latency is acceptable — pair with sandboxing and stopping conditions.</p>
+    </div>
+
+    <div class="callout recap">
+      <span class="label">✅ Quick Recap — 37.3</span>
+      <ul>
+        <li>Start simplest; escalate only when the tier below genuinely fails.</li>
+        <li>Criteria: autonomy, latency, cost, predictability, complexity.</li>
+        <li>Fixed steps → Workflow; unpredictable steps + acceptable risk → Agent.</li>
+        <li>Agents trade control/latency/cost for flexibility — justify the trade.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ 37.4 ============================ -->
+  <section id="s374">
+    <h2>37.4 Designing for Scalability, Reliability &amp; Maintainability</h2>
+    <p>Production LLM architectures are judged on three pillars. Treat them separately, then verify with the checklists.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 660 250" role="img" aria-label="Three pillars of production architecture">
+        <rect x="40" y="200" width="580" height="16" rx="4" fill="#e2e8f0"></rect>
+        <text x="330" y="238" text-anchor="middle" font-size="10" fill="#475569" font-style="italic">A production-ready LLM architecture stands on all three.</text>
+        <rect x="70" y="70" width="140" height="130" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="140" y="96" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Scalability</text>
+        <text x="140" y="122" text-anchor="middle" font-size="9.5" fill="#475569">handle more load</text>
+        <text x="140" y="140" text-anchor="middle" font-size="9" fill="#64748b">right-size · cache</text>
+        <text x="140" y="155" text-anchor="middle" font-size="9" fill="#64748b">parallelize · stream</text>
+        <rect x="260" y="70" width="140" height="130" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"></rect>
+        <text x="330" y="96" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">Reliability</text>
+        <text x="330" y="122" text-anchor="middle" font-size="9.5" fill="#475569">correct + graceful</text>
+        <text x="330" y="140" text-anchor="middle" font-size="9" fill="#64748b">validate · guardrails</text>
+        <text x="330" y="155" text-anchor="middle" font-size="9" fill="#64748b">retries · stop conditions</text>
+        <rect x="450" y="70" width="140" height="130" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"></rect>
+        <text x="520" y="96" text-anchor="middle" font-size="13" font-weight="700" fill="#6d28d9">Maintainability</text>
+        <text x="520" y="122" text-anchor="middle" font-size="9.5" fill="#475569">understand + evolve</text>
+        <text x="520" y="140" text-anchor="middle" font-size="9" fill="#64748b">simplicity · observability</text>
+        <text x="520" y="155" text-anchor="middle" font-size="9" fill="#64748b">evals · clean ACI</text>
+        <path d="M40,70 L330,26 L620,70 Z" fill="#1e293b"></path>
+        <text x="330" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Production-Ready Architecture</text>
+      </svg>
+      <figcaption>The three pillars — a weakness in any one undermines the whole system.</figcaption>
+    </figure>
+
+    <div class="pillar">
+      <h3>Pillar 1 — Scalability</h3>
+      <p><strong>Definition:</strong> the system's ability to handle growing load (requests, users, data) without degrading latency or cost-efficiency.</p>
+      <h4>Key techniques</h4>
+      <ul>
+        <li>Right-size the model per task (route simple steps to smaller/faster models).</li>
+        <li>Caching — prompt caching for stable context; cache retrieval results and repeated tool outputs.</li>
+        <li>Batching &amp; parallelization of independent subtasks (workflow parallelization pattern).</li>
+        <li>Streaming responses to improve perceived latency; asynchronous processing for long tasks.</li>
+        <li>Rate limiting &amp; back-pressure to protect downstream tools/APIs.</li>
+      </ul>
+      <h4>Common pitfalls</h4>
+      <ul>
+        <li>Using an agentic loop where a single call would do — unbounded token/cost growth.</li>
+        <li>No caching → paying to re-process identical context repeatedly.</li>
+        <li>Ignoring tool/API rate limits until they throttle in production.</li>
+      </ul>
+    </div>
+
+    <div class="pillar">
+      <h3>Pillar 2 — Reliability</h3>
+      <p><strong>Definition:</strong> the system produces correct, safe, consistent results and degrades gracefully when components fail.</p>
+      <h4>Key techniques</h4>
+      <ul>
+        <li>Structured outputs + schema validation on every LLM response.</li>
+        <li>Guardrails: input validation, output filtering, PII checks, content safety.</li>
+        <li>Retries with backoff; fallbacks (smaller model, cached answer, human handoff).</li>
+        <li>Stopping conditions &amp; max-iteration limits for agents to prevent runaway loops.</li>
+        <li>Evaluator-optimizer or explicit verification steps for high-stakes outputs.</li>
+        <li>Sandboxed tool execution — test agent actions in a safe environment.</li>
+      </ul>
+      <h4>Common pitfalls</h4>
+      <ul>
+        <li>Trusting free-text output without validation.</li>
+        <li>No stopping condition → an agent loops forever / burns budget.</li>
+        <li>No human-in-the-loop for irreversible or high-risk actions.</li>
+      </ul>
+    </div>
+
+    <div class="pillar">
+      <h3>Pillar 3 — Maintainability</h3>
+      <p><strong>Definition:</strong> the ease with which the system can be understood, debugged, evaluated, and evolved over time.</p>
+      <h4>Key techniques</h4>
+      <ul>
+        <li>Prefer the simplest pattern — simpler systems are easier to debug and maintain.</li>
+        <li>Observability: log every step, tool call, and decision; trace agent trajectories.</li>
+        <li>Evaluation suites / regression tests on representative inputs before shipping changes.</li>
+        <li>Modular, composable components with clear interfaces (documented tools, versioned prompts).</li>
+        <li>Keep the "ACI" (Agent-Computer Interface) — tool definitions &amp; docs — clean and well-documented, just like a good API/human interface.</li>
+      </ul>
+      <h4>Common pitfalls</h4>
+      <ul>
+        <li>Over-engineering with frameworks that hide what's really happening under the hood.</li>
+        <li>Poorly documented / ambiguous tool definitions the model misuses.</li>
+        <li>No evals → can't tell if a prompt change improved or regressed behaviour.</li>
+      </ul>
+    </div>
+
+    <h3>Quick-review checklists</h3>
+    <h4>Scalability</h4>
+    <ul class="checklist">
+      <li>Model right-sized per task; heavy steps not defaulting to the largest model</li>
+      <li>Prompt/result caching in place for stable context</li>
+      <li>Independent subtasks parallelized or batched</li>
+      <li>Streaming / async used for long-running work</li>
+      <li>Downstream rate limits respected with back-pressure</li>
+    </ul>
+    <h4>Reliability</h4>
+    <ul class="checklist">
+      <li>Every LLM output validated against a schema/guardrail</li>
+      <li>Retries, backoff, and fallbacks defined for failures</li>
+      <li>Agents have max-iteration / stopping conditions</li>
+      <li>Human-in-the-loop for irreversible or high-risk actions</li>
+      <li>Tools execute in a sandbox before touching production</li>
+    </ul>
+    <h4>Maintainability</h4>
+    <ul class="checklist">
+      <li>Simplest pattern that meets the requirement was chosen</li>
+      <li>Full logging/tracing of steps, tool calls, and decisions</li>
+      <li>Evaluation suite / regression tests exist and run on changes</li>
+      <li>Components are modular with documented interfaces</li>
+      <li>Tool definitions (ACI) are clear, tested, and unambiguous</li>
+    </ul>
+
+    <div class="callout tip">
+      <span class="label">💡 Tip — mnemonic "SRM = Scale, Recover, Read"</span>
+      <p><strong>S</strong>calability = handle more (scale). <strong>R</strong>eliability = recover from failure. <strong>M</strong>aintainability = a human can read/understand it later. If a question stresses "handles 10× traffic" → Scalability; "keeps working when the API fails" → Reliability; "another engineer can debug it in 6 months" → Maintainability.</p>
+    </div>
+
+    <div class="callout recap">
+      <span class="label">✅ Quick Recap — 37.4</span>
+      <ul>
+        <li>Three pillars: Scalability (load), Reliability (correct + graceful failure), Maintainability (understandable + evolvable).</li>
+        <li>Scale: right-size models, cache, parallelize, stream.</li>
+        <li>Reliability: validate outputs, guardrails, retries/fallbacks, stopping conditions, sandbox.</li>
+        <li>Maintainability: simplicity, observability, evals, clean tool interfaces (ACI).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ 37.5 ============================ -->
+  <section id="s375">
+    <h2>37.5 Hands-On: Designing an End-to-End Architecture</h2>
+    <p><strong>Brief:</strong> Design a <em>Research &amp; Report Assistant</em> — a user asks a business question ("How are our top competitors positioning on pricing?"), and the system returns a cited, structured brief.</p>
+
+    <h3>Step-by-step design (applying 37.1–37.4)</h3>
+    <ol>
+      <li><strong>Frame the lifecycle (37.1).</strong> Input = the research question + scope. Processing = retrieval + multi-step reasoning. Output = a structured brief with citations. Feedback = user rating + fact-check pass that can trigger a re-run.</li>
+      <li><strong>Choose the pattern (37.2 &amp; 37.3).</strong> The number and order of searches can't be predetermined (depends on what's found) → this is genuinely open-ended, so an <em>Agent</em> is justified for the research phase. But the <em>final composition</em> is a fixed step → wrap the agent inside an <strong>orchestrator-style workflow</strong>: an agentic research loop feeding a deterministic "compose + verify" workflow. (Hybrid — simplest thing that works.)</li>
+      <li><strong>Augment the LLM (37.2).</strong> Give it tools: <code>web_search</code>, <code>read_url</code>, a <code>vector_retrieve</code> over internal docs, and <code>memory</code> to accumulate findings.</li>
+      <li><strong>Add reliability (37.4).</strong> Max 8 research iterations (stopping condition); each claim must carry a source (schema validation); an evaluator-optimizer step fact-checks the draft before release; low-confidence → human review.</li>
+      <li><strong>Add scalability (37.4).</strong> Parallelize independent sub-queries; cache fetched pages; use a smaller model for classification/routing and Claude for synthesis.</li>
+      <li><strong>Add maintainability (37.4).</strong> Log every tool call and the agent's trajectory; version the compose prompt; run an eval set of 20 benchmark questions on any change.</li>
+    </ol>
+
+    <h3>Final architecture diagram</h3>
+    <figure class="diagram">
+      <svg viewBox="0 0 680 380" role="img" aria-label="End to end research assistant architecture">
+        <defs>
+          <marker id="e1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"></path></marker>
+          <marker id="e2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7c3aed"></path></marker>
+          <marker id="e3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"></path></marker>
+        </defs>
+
+        <!-- Input -->
+        <rect x="20" y="30" width="120" height="48" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="80" y="50" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">INPUT</text>
+        <text x="80" y="66" text-anchor="middle" font-size="9" fill="#475569">question + scope</text>
+
+        <!-- Guardrail -->
+        <rect x="20" y="100" width="120" height="40" rx="9" fill="#fff" stroke="#94a3b8"></rect>
+        <text x="80" y="118" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">Validate /</text>
+        <text x="80" y="132" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">guardrail</text>
+        <line x1="80" y1="78" x2="80" y2="98" stroke="#2563eb" stroke-width="2" marker-end="url(#e1)"></line>
+
+        <!-- Agentic research loop -->
+        <rect x="215" y="30" width="230" height="150" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5"></rect>
+        <text x="330" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">AGENTIC RESEARCH LOOP</text>
+
+        <rect x="255" y="66" width="150" height="40" rx="8" fill="#fff" stroke="#7c3aed"></rect>
+        <text x="330" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#6d28d9">Claude (plan/act)</text>
+
+        <rect x="235" y="130" width="90" height="34" rx="7" fill="#fff" stroke="#94a3b8"></rect>
+        <text x="280" y="151" text-anchor="middle" font-size="8.5" fill="#475569">web_search·read_url</text>
+        <rect x="335" y="130" width="90" height="34" rx="7" fill="#fff" stroke="#94a3b8"></rect>
+        <text x="380" y="147" text-anchor="middle" font-size="8.5" fill="#475569">retrieve</text>
+        <text x="380" y="158" text-anchor="middle" font-size="8.5" fill="#475569">+ memory</text>
+
+        <path d="M300,106 C270,116 270,126 278,129" fill="none" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#e2)"></path>
+        <path d="M360,129 C368,124 366,114 356,107" fill="none" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#e2)"></path>
+        <text x="330" y="176" text-anchor="middle" font-size="8.5" fill="#6d28d9" font-style="italic">loop ≤ 8 iterations (stopping condition)</text>
+
+        <line x1="140" y1="90" x2="213" y2="90" stroke="#2563eb" stroke-width="2" marker-end="url(#e1)"></line>
+
+        <!-- Compose workflow -->
+        <rect x="500" y="30" width="160" height="150" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"></rect>
+        <text x="580" y="52" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e40af">COMPOSE WORKFLOW</text>
+        <rect x="520" y="64" width="120" height="30" rx="6" fill="#fff" stroke="#2563eb"></rect>
+        <text x="580" y="84" text-anchor="middle" font-size="9.5" fill="#1e40af">Draft brief</text>
+        <rect x="520" y="100" width="120" height="30" rx="6" fill="#fff" stroke="#2563eb"></rect>
+        <text x="580" y="120" text-anchor="middle" font-size="9.5" fill="#1e40af">Evaluator fact-check</text>
+        <rect x="520" y="136" width="120" height="30" rx="6" fill="#fff" stroke="#2563eb"></rect>
+        <text x="580" y="156" text-anchor="middle" font-size="9.5" fill="#1e40af">Schema + citations</text>
+        <line x1="445" y1="100" x2="498" y2="100" stroke="#2563eb" stroke-width="2" marker-end="url(#e1)"></line>
+
+        <!-- Output -->
+        <rect x="500" y="220" width="160" height="48" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+        <text x="580" y="240" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">OUTPUT</text>
+        <text x="580" y="256" text-anchor="middle" font-size="9" fill="#475569">cited structured brief</text>
+        <line x1="580" y1="180" x2="580" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#e1)"></line>
+
+        <!-- HITL / low confidence -->
+        <rect x="330" y="220" width="150" height="48" rx="9" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"></rect>
+        <text x="405" y="240" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">Human review</text>
+        <text x="405" y="255" text-anchor="middle" font-size="8.5" fill="#475569">if low confidence</text>
+        <line x1="520" y1="150" x2="482" y2="235" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#e1)"></line>
+
+        <!-- Feedback loop -->
+        <rect x="140" y="300" width="400" height="42" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"></rect>
+        <text x="340" y="320" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">FEEDBACK LOOP</text>
+        <text x="340" y="335" text-anchor="middle" font-size="9" fill="#475569">user rating + fact-check signals → refine prompts, retrieval, evals</text>
+        <path d="M580,268 L580,321 L542,321" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#e3)"></path>
+        <path d="M138,321 L80,321 L80,142" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#e3)"></path>
+
+        <!-- observability note -->
+        <text x="215" y="360" font-size="8.5" fill="#475569" font-style="italic">All steps logged/traced (observability) · sub-queries parallelized &amp; cached (scalability)</text>
+      </svg>
+      <figcaption>Hybrid end-to-end design: an agentic research loop feeds a deterministic compose-and-verify workflow, wrapped in guardrails, human-in-the-loop, and a feedback loop.</figcaption>
+    </figure>
+
+    <div class="callout tip">
+      <span class="label">💡 Tip — what examiners look for in a design answer</span>
+      <p>Show that you chose the <strong>simplest pattern that works</strong> and <em>justified</em> any agentic component. A strong answer explicitly names the stopping condition, output validation, and feedback loop — these signal production maturity, not just a toy demo.</p>
+    </div>
+
+    <div class="callout recap">
+      <span class="label">✅ Quick Recap — 37.5</span>
+      <ul>
+        <li>Map the lifecycle first, then pick patterns per phase (hybrids are fine).</li>
+        <li>Agentic loop for unpredictable research; deterministic workflow for fixed compose step.</li>
+        <li>Bolt on reliability (stopping condition, validation, HITL) and scalability (parallelize, cache).</li>
+        <li>Always include observability + a feedback loop for maintainability.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ EXAM STRATEGY ============================ -->
+  <section id="exam-strategy">
+    <h2>🎯 Exam Strategy &amp; Question-Pattern Recognition</h2>
+
+    <h3>How questions on this chapter are framed</h3>
+    <ul>
+      <li><strong>Scenario-based (majority)</strong> — a paragraph describes a system's requirements and you pick the correct pattern or spot the design flaw. These reward the "simplest thing that works" instinct.</li>
+      <li><strong>Definition-based</strong> — distinguish Workflow vs. Agent vs. Augmented LLM, or name a workflow sub-pattern from its description.</li>
+      <li><strong>"Best/Most appropriate" choice</strong> — several options are technically possible; the correct one is the least complex that meets <em>all</em> stated constraints.</li>
+    </ul>
+
+    <h3>Time allocation</h3>
+    <ul>
+      <li>Definition/recall questions: ~45–60 seconds each — answer on sight, don't overthink.</li>
+      <li>Scenario questions: ~90 seconds — read the constraints twice, underline latency/cost/autonomy cues.</li>
+      <li>Flag long "design the system" scenarios and return after clearing quick wins; don't sink 5 minutes into one item early.</li>
+    </ul>
+
+    <h3>Keyword → pattern cheat sheet</h3>
+    <table>
+      <tbody><tr><th>Phrase in the question</th><th>Likely answer</th></tr>
+      <tr><td>"the model decides which tool to call next," "without human intervention," "dynamically directs," "loops until the task is complete"</td><td><strong>Agentic</strong></td></tr>
+      <tr><td>"predefined steps," "fixed sequence," "classify then route," "orchestrated through code," "deterministic flow"</td><td><strong>Workflow</strong></td></tr>
+      <tr><td>"single call with retrieval," "grounded in a knowledge base," "RAG," "enhanced with a tool," "no multi-step reasoning"</td><td><strong>Augmented LLM</strong></td></tr>
+      <tr><td>"high volume, cost-sensitive," "tight latency," "must be auditable/predictable"</td><td>Favor <strong>simpler</strong> (Augmented / Workflow)</td></tr>
+      <tr><td>"open-ended," "steps can't be predicted," "novel problems," "high-value task"</td><td>Justifies <strong>Agentic</strong></td></tr>
+      <tr><td>"handle 10× traffic" / "keep working when API fails" / "another engineer can debug later"</td><td>Scalability / Reliability / Maintainability</td></tr>
+      <tr><td>"break into subtasks and delegate to workers," "central LLM synthesizes"</td><td>Workflow — <strong>orchestrator-workers</strong></td></tr>
+      <tr><td>"generate then critique and improve in a loop"</td><td>Workflow — <strong>evaluator-optimizer</strong></td></tr>
+    </tbody></table>
+
+    <div class="callout trap">
+      <span class="label">⚠️ Top traps to avoid</span>
+      <ul>
+        <li><strong>Over-picking "Agent."</strong> The tempting answer is often too complex. If steps are knowable, it's a Workflow.</li>
+        <li><strong>Orchestrator-workers ≠ Agent.</strong> Predefined orchestration = still a Workflow.</li>
+        <li><strong>"Augmented LLM" is a building block, not just RAG.</strong> Retrieval + tools + memory — any of these enhancements counts.</li>
+        <li><strong>Terminology consistency:</strong> Anthropic says "Agentic / Agent," not "Autonomous." Don't let a distractor relabel it.</li>
+        <li><strong>Forgetting stopping conditions.</strong> Any "what's missing from this agent design?" question — the answer is frequently a stopping condition, validation, or human-in-the-loop.</li>
+      </ul>
+    </div>
+
+    <div class="callout strat">
+      <span class="label">🎯 One-line exam reflex</span>
+      <p>When unsure between two patterns, pick the <strong>simpler</strong> one unless the scenario explicitly requires the model to make runtime decisions that code cannot predetermine. That single rule resolves the majority of scenario questions in this chapter.</p>
+    </div>
+  </section>
+
+  <p class="back" style="margin-top:40px;border-top:1px solid var(--line);padding-top:16px;">
+    End of Chapter 37 study notes · <a href="#s371">back to top ↑</a>
+  </p>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 9: Tool Distribution Across Agents — CCA Study Notes</title>
+<!-- PLAN
+==========================================================================
+SECTION-BY-SECTION CONTENT PLAN
+
+9.1 — Distributing Tools Appropriately Across Agents
+  Core Concept: Principle of Least Privilege applied to LLM tool assignment.
+  Misconceptions: "Give every agent every tool for maximum flexibility."
+  Visual: Orchestrator-subagent hierarchy diagram; tool-to-domain mapping table.
+  Exam Patterns: Scenario-based "which agent gets which tool" questions.
+
+9.2 — Configuring allowedTools to Limit Subagent Scope
+  Core Concept: API-level mechanism for whitelisting tools per agent invocation.
+  Misconceptions: allowedTools is a suggestion, not enforcement; confusing
+                  allowedTools with system-prompt instructions.
+  Visual: Configuration flow diagram; allowedTools vs prompt-level guardrails table.
+  Exam Patterns: Config snippet interpretation; "which config achieves X" questions.
+
+9.3 — Tool Overload: Why Too Many Tools Hurts Performance
+  Core Concept: Cognitive load — tool descriptions consume context, degrade selection
+                accuracy, and increase latency/cost.
+  Misconceptions: "More tools = more capable"; tools are free to include.
+  Visual: Performance degradation curve (ASCII); tool-count thresholds table.
+  Exam Patterns: "What happens when…" cause-effect questions; optimization scenarios.
+
+9.4 — Focused Subagents vs Swiss-Army-Knife Agents
+  Core Concept: Specialization improves reliability; generalization adds flexibility
+                at the cost of precision.
+  Misconceptions: Swiss-army agents are always worse; specialization means one tool.
+  Visual: Comparison table; decision tree for choosing architecture pattern.
+  Exam Patterns: Architecture comparison; "given this scenario, which pattern" questions.
+
+9.5 — Hands-On: Designing Agent-Tool Architectures
+  Core Concept: End-to-end design methodology — requirements → decomposition →
+                tool assignment → validation.
+  Misconceptions: Design is one-shot; no iteration needed.
+  Visual: Full architecture diagram; design checklist flowchart.
+  Exam Patterns: Multi-step scenario design; "what's wrong with this architecture."
+
+Chapter Synthesis:
+  - Summary table (concept | rule | exam weight per section)
+  - Concept relationship map (SVG)
+  - Master tips sheet (top 10)
+  - Practice scenario with worked solution
+========================================================================== -->
+<style>
+  :root {
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-tertiary: #334155;
+    --bg-card: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --accent-blue: #3B82F6;
+    --accent-cyan: #06B6D4;
+    --accent-green: #10B981;
+    --accent-amber: #F59E0B;
+    --accent-red: #EF4444;
+    --accent-purple: #8B5CF6;
+    --border-color: #334155;
+    --code-bg: #0D1117;
+    --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    border-bottom: 2px solid var(--accent-blue);
+    padding: 48px 0 36px;
+    text-align: center;
+  }
+  header .badge {
+    display: inline-block;
+    background: rgba(59,130,246,0.15);
+    color: var(--accent-blue);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border: 1px solid rgba(59,130,246,0.3);
+  }
+  header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  header h1 span { color: var(--accent-blue); }
+  header p.subtitle {
+    color: var(--text-secondary);
+    font-size: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* NAV / TOC */
+  nav {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin: 32px auto;
+    max-width: 960px;
+    padding: 24px 32px;
+  }
+  nav h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  nav ol { padding-left: 20px; }
+  nav ol li { margin-bottom: 8px; }
+  nav ol li a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav ol li a:hover { color: var(--accent-blue); text-decoration: underline; }
+  nav ol li .sub { color: var(--text-muted); font-size: 13px; margin-left: 4px; }
+
+  /* SECTIONS */
+  section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin: 28px auto;
+    max-width: 960px;
+    padding: 36px 40px;
+  }
+  section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 6px;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 10px;
+  }
+  section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin: 28px 0 12px;
+  }
+  section h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 20px 0 8px;
+  }
+  p { margin-bottom: 14px; color: var(--text-secondary); }
+  strong { color: var(--text-primary); }
+  ul, ol { margin: 10px 0 16px 24px; color: var(--text-secondary); }
+  li { margin-bottom: 6px; }
+
+  /* CALLOUTS */
+  .tip, .warning, .exam-tip, .note {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-left: 4px solid;
+  }
+  .tip {
+    background: rgba(16,185,129,0.08);
+    border-color: var(--accent-green);
+  }
+  .tip .callout-title { color: var(--accent-green); }
+  .warning {
+    background: rgba(239,68,68,0.08);
+    border-color: var(--accent-red);
+  }
+  .warning .callout-title { color: var(--accent-red); }
+  .exam-tip {
+    background: rgba(59,130,246,0.08);
+    border-color: var(--accent-blue);
+  }
+  .exam-tip .callout-title { color: var(--accent-blue); }
+  .note {
+    background: rgba(245,158,11,0.08);
+    border-color: var(--accent-amber);
+  }
+  .note .callout-title { color: var(--accent-amber); }
+  .callout-title {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+  }
+
+  /* CODE */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 16px 0;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  code {
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    color: #E2E8F0;
+  }
+  :not(pre) > code {
+    background: rgba(59,130,246,0.12);
+    color: var(--accent-cyan);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--accent-blue);
+  }
+  tbody td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  tbody tr:hover { background: rgba(59,130,246,0.04); }
+
+  /* EXAM Q */
+  .exam-question {
+    background: var(--code-bg);
+    border: 1px solid var(--accent-purple);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .exam-question .q-stem {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .exam-question .options { margin: 8px 0 12px 16px; }
+  .exam-question .options div { margin-bottom: 4px; color: var(--text-secondary); }
+  .exam-question .correct {
+    color: var(--accent-green);
+    margin-top: 10px;
+    font-size: 13.5px;
+  }
+  .exam-question .distractor {
+    color: var(--accent-red);
+    font-size: 13.5px;
+    opacity: 0.85;
+  }
+
+  /* DIAGRAM BOX */
+  .diagram-box {
+    background: var(--code-bg);
+    border: 1px dashed var(--accent-purple);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .diagram-box pre {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: inline-block;
+  }
+  .diagram-box .caption {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* SYNTHESIS */
+  .synthesis {
+    background: linear-gradient(135deg, rgba(139,92,246,0.06), rgba(59,130,246,0.06));
+    border: 1px solid var(--accent-purple);
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  /* KEYWORD HIGHLIGHT */
+  mark {
+    background: rgba(245,158,11,0.2);
+    color: var(--accent-amber);
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- HEADER                                                        -->
+<!-- ============================================================ -->
+<header>
+  <div class="container">
+    <div class="badge">Claude Certified Architect — Foundations &amp; Professional</div>
+    <h1>Chapter 9: <span>Tool Distribution Across Agents</span></h1>
+    <p class="subtitle">Comprehensive exam-ready study notes covering tool assignment, scope limitation, performance optimization, agent specialization, and architecture design.</p>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- TABLE OF CONTENTS                                             -->
+<!-- ============================================================ -->
+<div class="container">
+<nav>
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s9-1">9.1 — Distributing Tools Appropriately Across Agents</a> <span class="sub">Least-privilege, domain alignment, assignment strategies</span></li>
+    <li><a href="#s9-2">9.2 — Configuring <code>allowedTools</code> to Limit Subagent Scope</a> <span class="sub">API config, whitelist patterns, enforcement guarantees</span></li>
+    <li><a href="#s9-3">9.3 — Tool Overload: Why Too Many Tools Hurts Performance</a> <span class="sub">Context budget, selection accuracy, latency &amp; cost</span></li>
+    <li><a href="#s9-4">9.4 — Focused Subagents vs Swiss-Army-Knife Agents</a> <span class="sub">Specialization tradeoffs, architectural patterns</span></li>
+    <li><a href="#s9-5">9.5 — Hands-On: Designing Agent-Tool Architectures</a> <span class="sub">Design methodology, end-to-end worked examples</span></li>
+    <li><a href="#synthesis">Chapter Synthesis</a> <span class="sub">Summary table, concept map, master tips, practice scenario</span></li>
+  </ol>
+</nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- 9.1 DISTRIBUTING TOOLS APPROPRIATELY                         -->
+<!-- ============================================================ -->
+<div class="container">
+<section id="s9-1">
+  <h2>9.1 — Distributing Tools Appropriately Across Agents</h2>
+
+  <!-- CONCEPT OVERVIEW -->
+  <h3>Concept Overview</h3>
+  <p><strong>Tool distribution</strong> is the practice of assigning specific tools to specific agents in a multi-agent system so that each agent has access only to the capabilities it needs to fulfil its designated role. It applies the <strong>Principle of Least Privilege (PoLP)</strong> to LLM-based tool use: an agent should never have more tools than its task requires.</p>
+  <p>This matters in production Claude deployments because indiscriminate tool assignment creates <strong>security risks</strong> (a research agent that can delete files), <strong>performance degradation</strong> (the model wastes reasoning on irrelevant tools), and <strong>reliability failures</strong> (the model selects the wrong tool from an overcrowded set).</p>
+
+  <!-- KEY TERMINOLOGY -->
+  <h3>Key Terminology</h3>
+  <ul>
+    <li><strong>Tool</strong> — A structured function definition (name, description, input schema) exposed to Claude via the API's <code>tools</code> parameter.</li>
+    <li><strong>Agent</strong> — A Claude invocation configured with a system prompt, a set of tools, and (optionally) other agents it can delegate to.</li>
+    <li><strong>Orchestrator</strong> — The top-level agent that decomposes a task and routes subtasks to specialized subagents.</li>
+    <li><strong>Subagent</strong> — A downstream agent invoked by the orchestrator to perform a scoped piece of work.</li>
+    <li><strong>Tool Surface Area</strong> — The total set of tools visible to a single agent at invocation time.</li>
+    <li><strong>Domain Alignment</strong> — Matching tool assignments to the semantic domain of the agent's role (e.g., a "database agent" gets query tools, not file-system tools).</li>
+    <li><strong>Principle of Least Privilege (PoLP)</strong> — A security design principle stating that each component should have exactly the permissions it needs — no more.</li>
+  </ul>
+
+  <!-- CORE PRINCIPLES -->
+  <h3>Core Principles / Rules</h3>
+  <ol>
+    <li><strong>Assign tools by role, not by availability.</strong> Start from the agent's responsibility, then determine which tools it needs — never start from the full tool list and ask "which agent might use this?"</li>
+    <li><strong>One domain per agent.</strong> Group tools that belong to the same operational domain (file I/O, database, web, communication) and assign each group to a dedicated agent.</li>
+    <li><strong>Dangerous tools need isolation.</strong> Tools that perform irreversible or high-impact operations (delete, execute code, send messages) should be restricted to agents with explicit authorization flows.</li>
+    <li><strong>The orchestrator delegates, not executes.</strong> The orchestrator should ideally carry zero or minimal tools itself. Its job is task decomposition and routing, not tool execution.</li>
+    <li><strong>Read vs. Write separation.</strong> When feasible, separate read-only tools from write/mutate tools across different agents. This limits the blast radius of misuse.</li>
+    <li><strong>Tool descriptions are part of the distribution.</strong> A well-written tool description helps the model select correctly — poorly described tools cause cross-agent confusion even when distribution is correct.</li>
+    <li><strong>Validate distribution against the task graph.</strong> Every leaf task in the decomposition must have at least one agent with the tools to accomplish it. No tool should be assigned to an agent that never needs it.</li>
+  </ol>
+
+  <!-- VISUALIZATION -->
+  <h3>Visualization: Tool Distribution Architecture</h3>
+  <div class="diagram-box">
+<pre><code>                        ┌─────────────────────────┐
+                        │    ORCHESTRATOR AGENT     │
+                        │   tools: [delegate_task]  │
+                        └────────┬──────┬───────────┘
+                  ┌──────────────┘      └──────────────┐
+                  ▼                                     ▼
+    ┌──────────────────────┐            ┌──────────────────────────┐
+    │   RESEARCH SUBAGENT  │            │     CODE SUBAGENT        │
+    │ ─────────────────── │            │ ──────────────────────── │
+    │ tools:               │            │ tools:                   │
+    │   • web_search       │            │   • code_execute         │
+    │   • read_file        │            │   • write_file           │
+    │   • extract_text     │            │   • run_tests            │
+    └──────────────────────┘            └──────────────────────────┘
+             │                                     │
+             │ READ-ONLY access                    │ WRITE access (scoped)
+             ▼                                     ▼
+    ┌──────────────────┐               ┌──────────────────────┐
+    │  External APIs   │               │  Project Workspace   │
+    │  Knowledge Base  │               │  /src, /tests only   │
+    └──────────────────┘               └──────────────────────┘</code></pre>
+    <div class="caption">Figure 9.1 — Orchestrator delegates to domain-aligned subagents. Each subagent accesses only its required tools and resources.</div>
+  </div>
+
+  <!-- TOOL-TO-DOMAIN MAPPING TABLE -->
+  <h3>Tool-to-Domain Mapping Reference</h3>
+  <table>
+    <thead>
+      <tr><th>Domain</th><th>Example Tools</th><th>Typical Agent Role</th><th>Risk Level</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Information Retrieval</td><td><code>web_search</code>, <code>read_file</code>, <code>query_db</code></td><td>Research Agent</td><td>Low</td></tr>
+      <tr><td>Code Execution</td><td><code>code_execute</code>, <code>run_tests</code>, <code>lint_code</code></td><td>Code Agent</td><td>Medium–High</td></tr>
+      <tr><td>File Mutation</td><td><code>write_file</code>, <code>delete_file</code>, <code>move_file</code></td><td>File Manager Agent</td><td>High</td></tr>
+      <tr><td>Communication</td><td><code>send_email</code>, <code>send_slack</code>, <code>post_message</code></td><td>Communication Agent</td><td>High</td></tr>
+      <tr><td>Data Analysis</td><td><code>run_sql</code>, <code>create_chart</code>, <code>aggregate</code></td><td>Analytics Agent</td><td>Low–Medium</td></tr>
+      <tr><td>Administration</td><td><code>create_user</code>, <code>modify_permissions</code>, <code>deploy</code></td><td>Admin Agent (human-in-loop)</td><td>Critical</td></tr>
+    </tbody>
+  </table>
+
+  <!-- CODE EXAMPLE -->
+  <h3>Code / Configuration Example</h3>
+  <h4>Multi-agent tool assignment (Python pseudocode)</h4>
+<pre><code># Define tools per domain
+research_tools = [
+    {"name": "web_search", "description": "Search the web for information"},
+    {"name": "read_file",  "description": "Read contents of a local file"},
+]
+
+code_tools = [
+    {"name": "code_execute", "description": "Execute Python code in sandbox"},
+    {"name": "write_file",   "description": "Write content to a file"},
+    {"name": "run_tests",    "description": "Run the project test suite"},
+]
+
+# Orchestrator — no execution tools, only routing
+orchestrator_response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    system="You are a task orchestrator. Decompose requests and delegate to subagents.",
+    tools=[delegate_to_subagent_tool],  # ← only delegation capability
+    messages=user_messages,
+)
+
+# Research subagent — read-only tools
+research_response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    system="You are a research specialist. Find and summarize information.",
+    tools=research_tools,               # ← scoped to retrieval
+    messages=research_task_messages,
+)
+
+# Code subagent — write-capable tools (sandboxed)
+code_response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    system="You are a coding specialist. Write and test code.",
+    tools=code_tools,                    # ← scoped to code operations
+    messages=code_task_messages,
+)</code></pre>
+
+  <!-- TIPS -->
+  <div class="tip">
+    <div class="callout-title">💡 Tip — The "Shopping Cart" Mnemonic</div>
+    <p>Think of tool assignment like packing shopping bags: you wouldn't put raw chicken in the same bag as fresh bread. <strong>Group tools by what they affect</strong> (reads vs. writes, internal vs. external, safe vs. dangerous) and assign each group to the agent that specializes in handling that category.</p>
+  </div>
+
+  <!-- ANTI-PATTERNS -->
+  <div class="warning">
+    <div class="callout-title">⚠️ Common Pitfalls / Anti-Patterns</div>
+    <ul>
+      <li><strong>"Give all tools to the orchestrator"</strong> — This creates a monolithic agent that violates PoLP, increases error rates, and makes debugging impossible. The orchestrator should delegate, not execute.</li>
+      <li><strong>"Copy every tool to every subagent just in case"</strong> — Redundant tool assignment inflates context, confuses tool selection, and negates the purpose of decomposition.</li>
+      <li><strong>Ignoring tool risk classification</strong> — Not all tools are equal. A <code>read_file</code> and a <code>delete_file</code> should never be treated as interchangeable assignments.</li>
+      <li><strong>Distributing by tool count instead of domain</strong> — Splitting tools 50/50 between agents without considering domain coherence produces worse results than an unbalanced but logically aligned split.</li>
+    </ul>
+  </div>
+
+  <!-- EXAM STRATEGY -->
+  <h3>Exam Strategy Block</h3>
+  <div class="exam-tip">
+    <div class="callout-title">📝 Exam Strategy — Section 9.1</div>
+    <p><strong>How questions are framed:</strong> Expect scenario-based questions: "Given this multi-agent system, which tool assignment is most appropriate?" or "What is the primary risk of assigning tool X to agent Y?"</p>
+    <p><strong>Keywords to watch:</strong> <mark>least privilege</mark>, <mark>domain alignment</mark>, <mark>blast radius</mark>, <mark>tool surface area</mark>, <mark>delegation</mark>.</p>
+    <p><strong>Elimination strategy:</strong> Any answer that gives write/delete tools to a read-only agent, or that assigns all tools to one agent, is almost certainly wrong.</p>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q1: An orchestrator agent coordinates a research subagent and a code subagent. The research subagent needs to summarize web content. Which tool set is most appropriate for the research subagent?</div>
+    <div class="options">
+      <div>A) <code>web_search</code>, <code>read_file</code>, <code>write_file</code>, <code>code_execute</code></div>
+      <div>B) <code>web_search</code>, <code>read_file</code></div>
+      <div>C) <code>web_search</code>, <code>read_file</code>, <code>delete_file</code></div>
+      <div>D) <code>code_execute</code>, <code>run_tests</code></div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — The research subagent only needs retrieval tools. <code>web_search</code> and <code>read_file</code> fully satisfy its role with minimal surface area.</div>
+    <div class="distractor">❌ Distractor A — Includes write and execute tools that violate PoLP for a read-only research role.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q2: What is the PRIMARY benefit of distributing tools across multiple specialized agents rather than giving all tools to a single agent?</div>
+    <div class="options">
+      <div>A) It reduces the total number of API calls</div>
+      <div>B) It reduces the model's context window usage and improves tool-selection accuracy</div>
+      <div>C) It eliminates the need for tool descriptions</div>
+      <div>D) It allows the use of different Claude model versions per tool</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Smaller tool sets per agent mean fewer tool descriptions in context, leading to more accurate tool selection and better performance.</div>
+    <div class="distractor">❌ Distractor A — Multi-agent systems typically increase total API calls (each subagent is a separate invocation).</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q3: In a tool distribution strategy, which tools should ALWAYS be isolated from general-purpose agents?</div>
+    <div class="options">
+      <div>A) Tools with long descriptions</div>
+      <div>B) Tools that perform irreversible or high-impact operations</div>
+      <div>C) Tools that return large payloads</div>
+      <div>D) Tools that require integer parameters</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Irreversible operations (delete, deploy, send) must be isolated to authorized agents with appropriate guardrails.</div>
+    <div class="distractor">❌ Distractor A — Description length affects context usage but is not the primary isolation criterion.</div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- 9.2 CONFIGURING allowedTools                                  -->
+<!-- ============================================================ -->
+<div class="container">
+<section id="s9-2">
+  <h2>9.2 — Configuring <code>allowedTools</code> to Limit Subagent Scope</h2>
+
+  <!-- CONCEPT OVERVIEW -->
+  <h3>Concept Overview</h3>
+  <p><code>allowedTools</code> is an <strong>API-level mechanism</strong> for explicitly whitelisting which tools an agent is permitted to use during a given invocation. Even if many tools are defined in the <code>tools</code> array, the <code>allowedTools</code> parameter restricts the model to only selecting from the specified subset.</p>
+  <p>This is critical in multi-agent architectures because it provides <strong>hard enforcement</strong> — unlike system prompt instructions ("do not use tool X"), which are probabilistic, <code>allowedTools</code> is enforced by the API and cannot be bypassed by the model's reasoning.</p>
+
+  <!-- KEY TERMINOLOGY -->
+  <h3>Key Terminology</h3>
+  <ul>
+    <li><strong><code>allowedTools</code></strong> — An API parameter that specifies the subset of defined tools the model is permitted to invoke. Acts as a whitelist.</li>
+    <li><strong>Hard enforcement</strong> — The API blocks tool calls not in the allowed list; the model cannot override this via reasoning or prompt injection.</li>
+    <li><strong>Prompt-level guardrail</strong> — A system-prompt instruction attempting to restrict tool use (e.g., "Never call <code>delete_file</code>"). This is soft enforcement — the model may still call the tool.</li>
+    <li><strong>Tool definition scope</strong> — The full set of tools defined in the <code>tools</code> parameter. <code>allowedTools</code> filters this set at invocation time.</li>
+    <li><strong>Dynamic scoping</strong> — Changing <code>allowedTools</code> between turns or between subagent invocations based on task context.</li>
+    <li><strong>Tool type filter</strong> — <code>allowedTools</code> supports type-based entries that match categories of tools (e.g., all computer-use tools, all MCP server tools).</li>
+  </ul>
+
+  <!-- CORE PRINCIPLES -->
+  <h3>Core Principles / Rules</h3>
+  <ol>
+    <li><strong><code>allowedTools</code> is a whitelist, not a blacklist.</strong> You specify what IS allowed. If a tool is not listed, it is inaccessible — period. There is no <code>deniedTools</code> API parameter (though you may use it conceptually in your architecture design).</li>
+    <li><strong>API enforcement &gt; prompt enforcement.</strong> Always use <code>allowedTools</code> for security-critical restrictions. Never rely solely on system prompt instructions to prevent dangerous tool use.</li>
+    <li><strong><code>allowedTools</code> filters, it does not define.</strong> Tools must still be defined in the <code>tools</code> array. <code>allowedTools</code> creates a view over the defined set.</li>
+    <li><strong>Dynamic scoping is a power feature.</strong> You can change <code>allowedTools</code> between conversation turns to implement state-based access control (e.g., allow <code>write_file</code> only after a review step).</li>
+    <li><strong>Supports type-based matching.</strong> Entries in <code>allowedTools</code> can match tool types — useful for allowing all tools from a specific MCP server or all built-in tools of a category without enumerating each one.</li>
+    <li><strong>Empty <code>allowedTools</code> = no tools.</strong> If you pass an empty array, the model cannot use any tools in that turn. This is useful for "think-only" or "summarize-only" turns.</li>
+    <li><strong>Omitting <code>allowedTools</code> = all tools.</strong> If you do not include the parameter at all, all defined tools are available. This is the default behavior.</li>
+  </ol>
+
+  <!-- VISUALIZATION -->
+  <h3>Visualization: allowedTools Filtering Flow</h3>
+  <div class="diagram-box">
+<pre><code>  ┌──────────────────────────────────────────────────────────┐
+  │              TOOL DEFINITIONS (tools array)               │
+  │                                                          │
+  │  web_search  read_file  write_file  delete_file          │
+  │  code_exec   send_email run_sql     deploy_app           │
+  └────────────────────────┬─────────────────────────────────┘
+                           │
+                    ┌──────▼──────┐
+                    │ allowedTools │ ← API-level filter
+                    │  WHITELIST   │
+                    └──────┬──────┘
+                           │
+  ┌────────────────────────▼──────────────────────────────────┐
+  │           AGENT'S EFFECTIVE TOOL SET                      │
+  │                                                          │
+  │  ✅ web_search    ✅ read_file                            │
+  │  ❌ write_file    ❌ delete_file   (blocked)              │
+  │  ❌ code_exec     ❌ send_email    (blocked)              │
+  │  ❌ run_sql       ❌ deploy_app    (blocked)              │
+  └──────────────────────────────────────────────────────────┘</code></pre>
+    <div class="caption">Figure 9.2 — <code>allowedTools: ["web_search", "read_file"]</code> filters the full tool set down to only retrieval operations.</div>
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <h3>Enforcement Comparison: <code>allowedTools</code> vs. Prompt Instructions</h3>
+  <table>
+    <thead>
+      <tr><th>Dimension</th><th><code>allowedTools</code> (API)</th><th>Prompt-Level Instruction</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Enforcement</td><td><strong>Hard</strong> — API blocks disallowed calls</td><td><strong>Soft</strong> — model may override</td></tr>
+      <tr><td>Bypass risk</td><td>None (server-enforced)</td><td>Non-trivial (prompt injection, reasoning drift)</td></tr>
+      <tr><td>Granularity</td><td>Tool-level or type-level</td><td>Arbitrary natural-language conditions</td></tr>
+      <tr><td>Dynamic scoping</td><td>Change per turn via parameter</td><td>Requires prompt rewriting</td></tr>
+      <tr><td>Context cost</td><td>Zero additional tokens</td><td>Adds tokens to system prompt</td></tr>
+      <tr><td>Best for</td><td>Security boundaries, PoLP enforcement</td><td>Guidance on tool preferences, usage patterns</td></tr>
+      <tr><td>Use together?</td><td colspan="2" style="text-align:center;"><strong>Yes — best practice is <code>allowedTools</code> for hard limits + prompt for soft guidance</strong></td></tr>
+    </tbody>
+  </table>
+
+  <!-- CODE EXAMPLES -->
+  <h3>Code / Configuration Examples</h3>
+
+  <h4>Basic <code>allowedTools</code> configuration</h4>
+<pre><code># Research agent — read-only tool access
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    system="You are a research assistant. Find and summarize information.",
+    tools=[
+        web_search_tool,
+        read_file_tool,
+        write_file_tool,     # defined but...
+        delete_file_tool,    # ...will be blocked
+    ],
+    messages=messages,
+    tool_choice={"type": "auto"},
+    # ↓ HARD ENFORCEMENT: only these tools are actually usable
+    allowed_tools=[
+        {"type": "tool", "name": "web_search"},
+        {"type": "tool", "name": "read_file"},
+    ],
+)</code></pre>
+
+  <h4>Type-based filtering (allow all tools from an MCP server)</h4>
+<pre><code># Allow all tools served by a specific MCP server
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    tools=all_defined_tools,
+    messages=messages,
+    allowed_tools=[
+        {"type": "mcp_server", "name": "research_server"},  # all tools from this server
+        {"type": "tool", "name": "summarize"},               # plus one specific tool
+    ],
+)</code></pre>
+
+  <h4>Dynamic scoping between turns</h4>
+<pre><code># Turn 1: Research phase — read-only
+turn1_response = client.messages.create(
+    tools=all_tools,
+    allowed_tools=[{"type": "tool", "name": "web_search"},
+                   {"type": "tool", "name": "read_file"}],
+    messages=messages,
+)
+
+# Turn 2: After human approval — unlock write
+messages.append(turn1_response.content)
+messages.append({"role": "user", "content": "Approved. Please write the report."})
+
+turn2_response = client.messages.create(
+    tools=all_tools,
+    allowed_tools=[{"type": "tool", "name": "read_file"},
+                   {"type": "tool", "name": "write_file"}],   # ← now permitted
+    messages=messages,
+)</code></pre>
+
+  <!-- TIPS -->
+  <div class="tip">
+    <div class="callout-title">💡 Tip — The "Bouncer" Mental Model</div>
+    <p>Think of <code>allowedTools</code> as a nightclub bouncer with a guest list. The <code>tools</code> array is everyone who applied for entry. The <code>allowedTools</code> list is who the bouncer actually lets in. No amount of persuasion (prompt injection) can get past the bouncer — it's server-enforced.</p>
+    <p><strong>Memory aid:</strong> <em>"<code>allowedTools</code> = hard wall, prompt = suggestion."</em></p>
+  </div>
+
+  <!-- ANTI-PATTERNS -->
+  <div class="warning">
+    <div class="callout-title">⚠️ Common Pitfalls / Anti-Patterns</div>
+    <ul>
+      <li><strong>Relying on prompt-only tool restriction for security</strong> — "My system prompt says 'never use delete_file'" is NOT a security control. The model can still call it. Use <code>allowedTools</code>.</li>
+      <li><strong>Defining tools you never intend to allow</strong> — If a tool should never be used by an agent, don't include it in the <code>tools</code> array at all. <code>allowedTools</code> is for dynamic or conditional filtering, not for permanently blocking tools that shouldn't be defined.</li>
+      <li><strong>Forgetting that omitting <code>allowedTools</code> means "all"</strong> — A common bug: the developer forgets to pass <code>allowedTools</code> for a subagent, inadvertently giving it full access.</li>
+      <li><strong>Confusing <code>allowedTools</code> with <code>tool_choice</code></strong> — <code>tool_choice</code> controls whether the model must/can/cannot use tools at all. <code>allowedTools</code> controls which specific tools are available. They are independent parameters.</li>
+    </ul>
+  </div>
+
+  <!-- EXAM STRATEGY -->
+  <h3>Exam Strategy Block</h3>
+  <div class="exam-tip">
+    <div class="callout-title">📝 Exam Strategy — Section 9.2</div>
+    <p><strong>How questions are framed:</strong> Expect "which configuration achieves X?" and "what is the difference between allowedTools and [alternative]?" questions. Config snippet interpretation is common.</p>
+    <p><strong>Keywords to watch:</strong> <mark>allowedTools</mark>, <mark>hard enforcement</mark>, <mark>whitelist</mark>, <mark>API-level</mark>, <mark>server-enforced</mark>.</p>
+    <p><strong>Elimination strategy:</strong> Any answer suggesting that system prompt instructions alone can guarantee a tool will never be called is wrong. Prefer the answer that mentions <code>allowedTools</code>.</p>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q4: A developer wants to ensure a research subagent can NEVER call the <code>delete_file</code> tool, even if a prompt injection attack instructs it to. Which approach provides the strongest guarantee?</div>
+    <div class="options">
+      <div>A) Add "Never use the delete_file tool" to the system prompt</div>
+      <div>B) Set <code>temperature</code> to 0 to prevent unpredictable behavior</div>
+      <div>C) Use <code>allowedTools</code> to whitelist only <code>web_search</code> and <code>read_file</code></div>
+      <div>D) Remove the <code>delete_file</code> description from the tool definition</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>C</strong> — <code>allowedTools</code> is server-enforced and cannot be bypassed by prompt injection. The model physically cannot call tools outside the whitelist.</div>
+    <div class="distractor">❌ Distractor A — System prompt instructions are soft guardrails; a sufficiently crafted injection can override them.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q5: What happens if you pass <code>allowedTools</code> as an empty array <code>[]</code>?</div>
+    <div class="options">
+      <div>A) All defined tools become available (same as omitting the parameter)</div>
+      <div>B) The API returns an error</div>
+      <div>C) The model can use no tools in that turn</div>
+      <div>D) Only the first tool in the <code>tools</code> array is available</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>C</strong> — An empty <code>allowedTools</code> array means zero tools are permitted. The model can only respond with text.</div>
+    <div class="distractor">❌ Distractor A — Omitting the parameter entirely gives access to all tools; passing an empty array gives access to none.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q6: A developer wants to allow a subagent to use all tools from an MCP server named "analytics_server" plus one standalone tool called "summarize". Which <code>allowedTools</code> configuration is correct?</div>
+    <div class="options">
+      <div>A) <code>[{"type": "mcp_server", "name": "analytics_server"}, {"type": "tool", "name": "summarize"}]</code></div>
+      <div>B) <code>[{"type": "tool", "name": "analytics_server"}, {"type": "tool", "name": "summarize"}]</code></div>
+      <div>C) <code>[{"type": "mcp_server", "name": "analytics_server.*"}]</code></div>
+      <div>D) <code>{"allowedServers": ["analytics_server"], "allowedTools": ["summarize"]}</code></div>
+    </div>
+    <div class="correct">✅ Correct: <strong>A</strong> — Type-based entries allow all tools from a named MCP server, and individual tool entries can be mixed in the same array.</div>
+    <div class="distractor">❌ Distractor B — Using <code>"type": "tool"</code> with a server name doesn't match any tool; server-level matching requires <code>"type": "mcp_server"</code>.</div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- 9.3 TOOL OVERLOAD                                             -->
+<!-- ============================================================ -->
+<div class="container">
+<section id="s9-3">
+  <h2>9.3 — Tool Overload: Why Too Many Tools Hurts Performance</h2>
+
+  <!-- CONCEPT OVERVIEW -->
+  <h3>Concept Overview</h3>
+  <p><strong>Tool overload</strong> occurs when an agent is given significantly more tools than it needs for its task. Each tool definition consumes context window tokens (name + description + parameter schema), and the model must reason over all available tools when deciding which one to call. As the tool count grows, <strong>selection accuracy drops</strong>, <strong>latency increases</strong>, and <strong>costs escalate</strong>.</p>
+  <p>This is not merely an efficiency concern — it is a <strong>reliability problem</strong>. Anthropic's research and guidance consistently shows that agents with fewer, well-described tools outperform agents with large, unfocused tool sets on the same tasks.</p>
+
+  <!-- KEY TERMINOLOGY -->
+  <h3>Key Terminology</h3>
+  <ul>
+    <li><strong>Tool overload</strong> — The condition where an agent's tool set is large enough to measurably degrade its performance.</li>
+    <li><strong>Context budget</strong> — The finite context window shared between system prompt, conversation history, tool definitions, and reasoning. Tools compete for this space.</li>
+    <li><strong>Tool token cost</strong> — The token count consumed by a single tool's definition (name + description + JSON schema of parameters). Typically 100–500+ tokens per tool.</li>
+    <li><strong>Selection confusion</strong> — When the model selects the wrong tool because similar or overlapping tools exist in the set.</li>
+    <li><strong>Semantic overlap</strong> — When two or more tools have similar names, descriptions, or capabilities, making it hard for the model to distinguish between them.</li>
+    <li><strong>Tool description tax</strong> — The cumulative context and reasoning cost of including tool definitions the model never uses.</li>
+  </ul>
+
+  <!-- CORE PRINCIPLES -->
+  <h3>Core Principles / Rules</h3>
+  <ol>
+    <li><strong>Every tool has a non-zero cost.</strong> Even unused tools consume context tokens and add cognitive overhead. Tool definitions are not free.</li>
+    <li><strong>Performance degrades non-linearly.</strong> Going from 5 to 10 tools causes less degradation than going from 20 to 25 tools. The marginal cost of each additional tool increases.</li>
+    <li><strong>Anthropic recommends limiting tool count.</strong> For best results, keep each agent's tool set focused and minimal. Ideally under ~20 tools per agent; performance begins to degrade noticeably beyond this range.</li>
+    <li><strong>Semantic overlap is worse than high count.</strong> Ten clearly distinct tools outperform eight tools with two semantically overlapping pairs. Overlap causes selection errors.</li>
+    <li><strong>Tool descriptions are part of the prompt.</strong> Verbose, redundant, or poorly written descriptions compound the overload problem. Descriptions should be concise, distinct, and action-oriented.</li>
+    <li><strong>The fix is decomposition, not truncation.</strong> The solution to tool overload is distributing tools across specialized subagents (see §9.1), not trimming tool descriptions.</li>
+    <li><strong>Measure tool utilization.</strong> Track which tools are actually called. Tools with near-zero utilization should be removed or reassigned.</li>
+  </ol>
+
+  <!-- VISUALIZATION: Performance Curve -->
+  <h3>Visualization: Tool Count vs. Performance</h3>
+  <div class="diagram-box">
+<pre><code>  Tool Selection Accuracy (%)
+  100│ ●●●●
+     │       ●●●
+   90│           ●●
+     │              ●●
+   80│                 ●●
+     │                    ●
+   70│                     ●●
+     │                        ●●
+   60│                           ●●●
+     │                               ●●●●
+   50│                                    ●●●●●●
+     │
+   40│─────────────────────────────────────────────
+     0    5   10   15   20   25   30   35   40
+                    Number of Tools
+
+  ─── Key Observations ───
+  • 1–10 tools:  ~95–100% accuracy (sweet spot ✅)
+  • 10–20 tools: ~85–95%  (acceptable with good descriptions)
+  • 20–30 tools: ~70–85%  (noticeable degradation ⚠️)
+  • 30+ tools:   &lt;70%     (significant degradation ❌)</code></pre>
+    <div class="caption">Figure 9.3 — Illustrative performance degradation curve. Exact thresholds vary by task complexity and description quality.</div>
+  </div>
+
+  <!-- COST TABLE -->
+  <h3>Token Cost Analysis</h3>
+  <table>
+    <thead>
+      <tr><th>Tool Count</th><th>Est. Token Cost (tools only)</th><th>% of 200K Context</th><th>Impact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>5</td><td>~1,000–2,500</td><td>~0.5–1.25%</td><td>Negligible</td></tr>
+      <tr><td>10</td><td>~2,000–5,000</td><td>~1–2.5%</td><td>Minimal</td></tr>
+      <tr><td>20</td><td>~4,000–10,000</td><td>~2–5%</td><td>Noticeable</td></tr>
+      <tr><td>50</td><td>~10,000–25,000</td><td>~5–12.5%</td><td>Significant context loss</td></tr>
+      <tr><td>100+</td><td>~20,000–50,000+</td><td>~10–25%+</td><td>Severe; conversation capacity halved</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SEMANTIC OVERLAP EXAMPLE -->
+  <h3>Visualization: Semantic Overlap Problem</h3>
+  <div class="diagram-box">
+<pre><code>  ❌ BAD: Overlapping tool descriptions → selection confusion
+
+  ┌───────────────────┐    ┌───────────────────┐
+  │   search_web      │    │   web_lookup       │
+  │ "Search the web   │    │ "Look up info      │
+  │  for information" │    │  on the web"       │
+  └─────────┬─────────┘    └────────┬──────────┘
+            │    ← Which one?? →    │
+            └───────────┬───────────┘
+                        ▼
+                  MODEL CONFUSED
+                  (50/50 random selection)
+
+
+  ✅ GOOD: Distinct tool descriptions → clear selection
+
+  ┌───────────────────────┐    ┌───────────────────────┐
+  │   search_web          │    │   query_database      │
+  │ "Search public web    │    │ "Run SQL query on     │
+  │  pages via Google"    │    │  the internal DB"     │
+  └───────────┬───────────┘    └───────────┬───────────┘
+              │                            │
+       Web questions               DB questions
+              │                            │
+              ▼                            ▼
+        CLEAR ROUTING              CLEAR ROUTING</code></pre>
+    <div class="caption">Figure 9.3b — Semantic overlap causes random tool selection. Distinct descriptions enable deterministic routing.</div>
+  </div>
+
+  <!-- CODE EXAMPLE -->
+  <h3>Code / Configuration Example</h3>
+  <h4>Measuring tool token cost</h4>
+<pre><code>import anthropic, json
+
+client = anthropic.Anthropic()
+
+def estimate_tool_tokens(tools: list) -&gt; int:
+    """Estimate token count consumed by tool definitions."""
+    # Tool definitions are serialized as structured content;
+    # a rough proxy is the JSON character count / 4
+    tool_json = json.dumps(tools)
+    return len(tool_json) // 4  # approximate tokens
+
+# Example: 5 well-defined tools
+lean_tools = [search_tool, read_tool, summarize_tool, calc_tool, format_tool]
+print(f"Lean set: ~{estimate_tool_tokens(lean_tools)} tokens")
+# → Lean set: ~800 tokens
+
+# Example: 40 tools (kitchen-sink approach)
+bloated_tools = lean_tools + [tool_6, tool_7, ..., tool_40]
+print(f"Bloated set: ~{estimate_tool_tokens(bloated_tools)} tokens")
+# → Bloated set: ~6,400 tokens  ← 8x more context consumed</code></pre>
+
+  <h4>Refactoring overlapping tools</h4>
+<pre><code># ❌ BEFORE: Two tools with semantic overlap
+tools_before = [
+    {
+        "name": "search_web",
+        "description": "Search the web for information about a topic"
+    },
+    {
+        "name": "web_lookup",
+        "description": "Look up information on the web"
+    }
+]
+
+# ✅ AFTER: Single tool with clear description
+tools_after = [
+    {
+        "name": "web_search",
+        "description": "Search public web pages and return relevant results. "
+                       "Use for current events, factual lookups, and research."
+    }
+]
+# Result: Eliminated overlap, halved token cost, 100% selection accuracy</code></pre>
+
+  <!-- TIPS -->
+  <div class="tip">
+    <div class="callout-title">💡 Tip — The "Toolbox Weight" Rule</div>
+    <p>Imagine carrying a physical toolbox. Every tool you add makes the box heavier and slower to search through. A carpenter doesn't carry a plumber's wrench. Apply the same discipline: <strong>if the agent won't use it in &gt;10% of invocations, remove it.</strong></p>
+    <p><strong>Quick heuristic:</strong> For each tool, ask: "If I remove this tool, can the agent still complete its primary task?" If yes, remove it.</p>
+  </div>
+
+  <!-- ANTI-PATTERNS -->
+  <div class="warning">
+    <div class="callout-title">⚠️ Common Pitfalls / Anti-Patterns</div>
+    <ul>
+      <li><strong>"More tools = more capable"</strong> — The most dangerous misconception. Adding tools beyond what's needed actively degrades the agent's core abilities.</li>
+      <li><strong>Copy-paste tool sets across agents</strong> — Reusing the same 30-tool set for every agent because "it works" ignores the performance tax each agent pays.</li>
+      <li><strong>Verbose tool descriptions</strong> — A 200-word description for a simple tool wastes tokens and drowns out other tools. Keep descriptions under 2–3 concise sentences.</li>
+      <li><strong>Similar tool names</strong> — <code>search_web</code>, <code>web_search</code>, <code>find_on_web</code> in the same set guarantees confusion. One tool, one name, one purpose.</li>
+      <li><strong>Ignoring parameter schemas</strong> — Complex parameter schemas (deeply nested objects, many optional fields) add token cost. Flatten and simplify where possible.</li>
+    </ul>
+  </div>
+
+  <!-- EXAM STRATEGY -->
+  <h3>Exam Strategy Block</h3>
+  <div class="exam-tip">
+    <div class="callout-title">📝 Exam Strategy — Section 9.3</div>
+    <p><strong>How questions are framed:</strong> Cause-and-effect: "What is the likely result of giving an agent 50+ tools?" Optimization scenarios: "How would you improve this agent's tool selection accuracy?"</p>
+    <p><strong>Keywords to watch:</strong> <mark>tool overload</mark>, <mark>context budget</mark>, <mark>selection accuracy</mark>, <mark>semantic overlap</mark>, <mark>token cost</mark>.</p>
+    <p><strong>Elimination strategy:</strong> If an answer claims adding more tools improves performance, it's wrong. If an answer suggests reducing tools or decomposing into subagents, it's likely correct.</p>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q7: An agent with 40 tools is frequently selecting the wrong tool for user requests. What is the MOST effective optimization?</div>
+    <div class="options">
+      <div>A) Increase the model's temperature to explore more tool options</div>
+      <div>B) Split the tools across specialized subagents with 8–10 tools each</div>
+      <div>C) Add more detailed examples to each tool description</div>
+      <div>D) Switch to a larger context window model</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Distributing tools across focused subagents reduces each agent's tool set, directly improving selection accuracy.</div>
+    <div class="distractor">❌ Distractor D — A larger context window doesn't fix selection confusion; the model still has to reason over all 40 tools.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q8: Two tools in an agent's set have similar descriptions: <code>fetch_page</code> ("Fetch a web page") and <code>get_url</code> ("Retrieve content from a URL"). What is the PRIMARY risk?</div>
+    <div class="options">
+      <div>A) The API will reject the configuration as invalid</div>
+      <div>B) The model will randomly choose between them, reducing reliability</div>
+      <div>C) Both tools will be called simultaneously on every request</div>
+      <div>D) The tools will cancel each other out and neither will be called</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Semantic overlap causes the model to semi-randomly select between similar tools, producing inconsistent behavior.</div>
+    <div class="distractor">❌ Distractor A — The API accepts tools with similar descriptions; it doesn't validate semantic uniqueness.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q9: Each tool definition consumes approximately how many tokens of context?</div>
+    <div class="options">
+      <div>A) 0 tokens — tool definitions are handled separately from the context window</div>
+      <div>B) Typically 100–500+ tokens depending on description and schema complexity</div>
+      <div>C) Exactly 1 token per tool regardless of complexity</div>
+      <div>D) Tokens are only consumed when the tool is actually called</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Tool definitions are serialized into the prompt and consume context tokens proportional to their description and parameter schema complexity.</div>
+    <div class="distractor">❌ Distractor A — Tool definitions share the same context window as all other content. They are not handled in a separate space.</div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- 9.4 FOCUSED SUBAGENTS VS SWISS-ARMY-KNIFE                    -->
+<!-- ============================================================ -->
+<div class="container">
+<section id="s9-4">
+  <h2>9.4 — Focused Subagents vs Swiss-Army-Knife Agents</h2>
+
+  <!-- CONCEPT OVERVIEW -->
+  <h3>Concept Overview</h3>
+  <p>This section addresses the fundamental architectural choice: should you build <strong>focused subagents</strong> (each with a narrow set of tools and a clear domain) or <strong>swiss-army-knife agents</strong> (a single or few agents with broad tool access)?</p>
+  <p>Focused subagents follow the Unix philosophy ("do one thing well") and yield higher reliability, easier debugging, and better security isolation. Swiss-army-knife agents offer simpler architectures, fewer coordination costs, and faster prototyping. The right choice depends on the task's <strong>complexity</strong>, <strong>risk profile</strong>, and <strong>production maturity</strong>.</p>
+
+  <!-- KEY TERMINOLOGY -->
+  <h3>Key Terminology</h3>
+  <ul>
+    <li><strong>Focused subagent</strong> — An agent with a narrow, well-defined role and a small, domain-aligned tool set (typically 3–10 tools).</li>
+    <li><strong>Swiss-army-knife agent</strong> — A single agent given a broad set of tools spanning multiple domains.</li>
+    <li><strong>Specialization</strong> — The degree to which an agent's tools and system prompt are optimized for a specific task type.</li>
+    <li><strong>Coordination overhead</strong> — The latency, token cost, and complexity added by orchestrating multiple subagents vs. running one agent.</li>
+    <li><strong>Blast radius</strong> — The scope of damage if an agent misbehaves. Focused agents have small blast radii; swiss-army agents have large ones.</li>
+    <li><strong>Fan-out pattern</strong> — An orchestrator dispatching tasks to multiple focused subagents in parallel.</li>
+    <li><strong>Monolith pattern</strong> — A single agent handling all aspects of a workflow end-to-end.</li>
+  </ul>
+
+  <!-- CORE PRINCIPLES -->
+  <h3>Core Principles / Rules</h3>
+  <ol>
+    <li><strong>Default to focused subagents in production.</strong> Anthropic's multi-agent guidance recommends specialized agents for production systems due to higher reliability and security.</li>
+    <li><strong>Swiss-army agents are acceptable for prototyping.</strong> During development and iteration, a single broad agent can help discover the right tool set before decomposing.</li>
+    <li><strong>The decision depends on task heterogeneity.</strong> If the task requires tools from many domains in a single reasoning chain, a swiss-army agent avoids inter-agent communication overhead. If the task naturally decomposes into independent subtasks, focused agents are superior.</li>
+    <li><strong>Focused agents are easier to test.</strong> Each subagent has a clear contract: given input X and tools Y, produce output Z. This enables unit-testing at the agent level.</li>
+    <li><strong>Focused agents are easier to debug.</strong> When something goes wrong, you know which agent and which tool set caused the issue. With a monolith, fault isolation is difficult.</li>
+    <li><strong>Coordination cost is real but manageable.</strong> Multi-agent systems add orchestration complexity. Use structured handoff protocols and clear interfaces to minimize this cost.</li>
+    <li><strong>Hybrid approaches work.</strong> You can have a mostly-focused architecture with one slightly broader "utility" agent for cross-cutting concerns. Purity is less important than pragmatism.</li>
+  </ol>
+
+  <!-- VISUALIZATION: Comparison Table -->
+  <h3>Comparison Table: Focused vs Swiss-Army-Knife</h3>
+  <table>
+    <thead>
+      <tr><th>Dimension</th><th>Focused Subagents</th><th>Swiss-Army-Knife Agent</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Tool count per agent</td><td>3–10 (narrow)</td><td>20–50+ (broad)</td></tr>
+      <tr><td>Tool selection accuracy</td><td><strong>High</strong> — small set, clear distinctions</td><td><strong>Lower</strong> — many options, potential confusion</td></tr>
+      <tr><td>Security / PoLP</td><td><strong>Strong</strong> — minimal blast radius</td><td><strong>Weak</strong> — full blast radius</td></tr>
+      <tr><td>Debugging</td><td><strong>Easy</strong> — fault isolation per agent</td><td><strong>Hard</strong> — interleaved tool calls</td></tr>
+      <tr><td>Testing</td><td><strong>Unit-testable</strong> — clear contracts</td><td><strong>Integration-only</strong> — hard to isolate</td></tr>
+      <tr><td>Latency</td><td>Higher (multi-hop orchestration)</td><td><strong>Lower</strong> (single agent, no hops)</td></tr>
+      <tr><td>Architecture complexity</td><td>Higher (orchestrator + routing)</td><td><strong>Lower</strong> (one agent, simple setup)</td></tr>
+      <tr><td>Cost per request</td><td>Higher (multiple API calls)</td><td><strong>Lower</strong> (single call, but with tool token cost)</td></tr>
+      <tr><td>Scalability</td><td><strong>High</strong> — add agents without affecting others</td><td>Low — adding tools degrades the whole agent</td></tr>
+      <tr><td>Best for</td><td>Production, high-risk, complex workflows</td><td>Prototyping, simple tasks, low-risk</td></tr>
+    </tbody>
+  </table>
+
+  <!-- VISUALIZATION: Decision Tree -->
+  <h3>Decision Tree: Which Pattern to Use</h3>
+  <div class="diagram-box">
+<pre><code>                    START
+                      │
+                      ▼
+            ┌───────────────────┐
+            │ Is this a prototype│
+            │ or exploration?    │
+            └────────┬──────────┘
+               YES   │   NO
+          ┌──────────┘    └──────────┐
+          ▼                          ▼
+  ┌────────────────┐      ┌───────────────────┐
+  │ Swiss-Army-Knife│      │ Does the task     │
+  │ (iterate fast,  │      │ decompose into    │
+  │  refine later)  │      │ independent parts?│
+  └────────────────┘      └────────┬──────────┘
+                              YES  │   NO
+                       ┌───────────┘   └───────────┐
+                       ▼                           ▼
+            ┌───────────────────┐      ┌───────────────────┐
+            │ Does it involve    │      │ Do you need &gt;20   │
+            │ high-risk tools?   │      │ tools in a single │
+            │ (delete, deploy,   │      │ reasoning chain?  │
+            │  send, execute)    │      └────────┬──────────┘
+            └────────┬──────────┘          YES   │   NO
+               YES   │   NO         ┌───────────┘   └──────────┐
+          ┌──────────┘   └────┐     ▼                          ▼
+          ▼                   ▼ ┌────────────────┐  ┌────────────────┐
+  ┌────────────────┐  ┌────────│Swiss-Army-Knife │  │ FOCUSED        │
+  │ FOCUSED        │  │FOCUSED ││(but plan to     │  │ SUBAGENTS      │
+  │ SUBAGENTS      │  │SUBAGNTS││ decompose)      │  │ (recommended)  │
+  │ (mandatory for │  │(recom- ││                 │  └────────────────┘
+  │  safety)       │  │mended) │└────────────────┘
+  └────────────────┘  └────────┘</code></pre>
+    <div class="caption">Figure 9.4 — Decision tree for choosing between focused subagents and swiss-army-knife pattern.</div>
+  </div>
+
+  <!-- ARCHITECTURE PATTERNS -->
+  <h3>Architecture Patterns</h3>
+
+  <h4>Pattern A: Fan-Out Orchestration (Focused)</h4>
+<pre><code>                    ┌─────────────────┐
+                    │   ORCHESTRATOR   │
+                    │  tools: [route]  │
+                    └───┬─────┬───┬───┘
+               ┌───────┘     │   └───────┐
+               ▼             ▼           ▼
+         ┌──────────┐ ┌──────────┐ ┌──────────┐
+         │ Research  │ │  Code    │ │  Review  │
+         │ Agent    │ │  Agent   │ │  Agent   │
+         │ 3 tools  │ │ 4 tools  │ │ 2 tools  │
+         └──────────┘ └──────────┘ └──────────┘
+
+  ✅ Best for: Complex workflows with independent subtasks
+  ✅ High reliability, easy debugging, strong security</code></pre>
+
+  <h4>Pattern B: Pipeline (Focused)</h4>
+<pre><code>  ┌──────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
+  │  Ingest   │ ──▶ │ Process  │ ──▶ │ Analyze  │ ──▶ │  Output  │
+  │  Agent    │     │  Agent   │     │  Agent   │     │  Agent   │
+  │ 3 tools   │     │ 4 tools  │     │ 3 tools  │     │ 2 tools  │
+  └──────────┘     └──────────┘     └──────────┘     └──────────┘
+
+  ✅ Best for: Sequential processing with clear stage boundaries
+  ✅ Each stage is independently testable and replaceable</code></pre>
+
+  <h4>Pattern C: Monolith (Swiss-Army-Knife)</h4>
+<pre><code>                    ┌─────────────────────────────┐
+                    │       SINGLE AGENT           │
+                    │                              │
+                    │  tools: [web_search,         │
+                    │    read_file, write_file,    │
+                    │    code_exec, run_tests,     │
+                    │    send_email, query_db,     │
+                    │    create_chart, deploy, ...]│
+                    │                              │
+                    │  (20–50+ tools)              │
+                    └─────────────────────────────┘
+
+  ⚠️  Acceptable for: Prototyping, simple tasks, low-risk exploration
+  ❌ Not for: Production, high-risk operations, complex workflows</code></pre>
+
+  <!-- CODE EXAMPLES -->
+  <h3>Code / Configuration Examples</h3>
+  <h4>Focused subagent architecture</h4>
+<pre><code># Define specialized agents with scoped tools
+agents = {
+    "orchestrator": {
+        "system": "Decompose tasks and delegate to specialists.",
+        "tools": [delegate_tool],           # only routing
+        "allowed_tools": [{"type": "tool", "name": "delegate_to_subagent"}],
+    },
+    "researcher": {
+        "system": "Find and summarize information from the web and files.",
+        "tools": [web_search, read_file, extract_text],   # 3 tools
+        "allowed_tools": [
+            {"type": "tool", "name": "web_search"},
+            {"type": "tool", "name": "read_file"},
+            {"type": "tool", "name": "extract_text"},
+        ],
+    },
+    "coder": {
+        "system": "Write, execute, and test code in a sandbox.",
+        "tools": [code_exec, write_file, run_tests, lint],  # 4 tools
+        "allowed_tools": [
+            {"type": "tool", "name": "code_execute"},
+            {"type": "tool", "name": "write_file"},
+            {"type": "tool", "name": "run_tests"},
+            {"type": "tool", "name": "lint_code"},
+        ],
+    },
+    "reviewer": {
+        "system": "Review outputs for quality and correctness.",
+        "tools": [read_file, validate],                      # 2 tools
+        "allowed_tools": [
+            {"type": "tool", "name": "read_file"},
+            {"type": "tool", "name": "validate_output"},
+        ],
+    },
+}
+
+# Each agent is invoked independently with its scoped tool set
+def run_subagent(agent_name: str, task: str, context: list):
+    config = agents[agent_name]
+    return client.messages.create(
+        model="claude-sonnet-4-20250514",
+        system=config["system"],
+        tools=config["tools"],
+        allowed_tools=config["allowed_tools"],
+        messages=context + [{"role": "user", "content": task}],
+    )</code></pre>
+
+  <!-- TIPS -->
+  <div class="tip">
+    <div class="callout-title">💡 Tip — The "Restaurant Kitchen" Analogy</div>
+    <p>A busy restaurant doesn't have one chef do everything. The <strong>sous chef</strong> preps, the <strong>grill cook</strong> grills, the <strong>pastry chef</strong> bakes, and the <strong>head chef</strong> orchestrates. Each station has exactly the equipment it needs. A grill cook doesn't need a stand mixer; a pastry chef doesn't need a grill.</p>
+    <p><strong>Exam shortcut:</strong> When comparing patterns, remember: <em>"Focused = production, Swiss-army = prototype."</em> If the question mentions production, security, or reliability, the answer involves focused subagents.</p>
+  </div>
+
+  <!-- ANTI-PATTERNS -->
+  <div class="warning">
+    <div class="callout-title">⚠️ Common Pitfalls / Anti-Patterns</div>
+    <ul>
+      <li><strong>"Specialization means exactly one tool"</strong> — Focused doesn't mean singular. A research agent with 5 retrieval tools is still focused. Specialization is about domain coherence, not tool count = 1.</li>
+      <li><strong>"Swiss-army is always wrong"</strong> — This is an overcorrection. For simple, low-risk tasks or rapid prototyping, a single-agent approach is perfectly valid.</li>
+      <li><strong>Over-decomposition</strong> — Creating 15 subagents each with 1 tool adds massive coordination overhead. Find the right granularity — typically 3–5 subagents for most workflows.</li>
+      <li><strong>Forgetting the orchestrator's cost</strong> — The orchestrator itself is an API call. If the task is simple enough to handle in one call, adding an orchestrator layer just adds latency and cost with no benefit.</li>
+    </ul>
+  </div>
+
+  <!-- EXAM STRATEGY -->
+  <h3>Exam Strategy Block</h3>
+  <div class="exam-tip">
+    <div class="callout-title">📝 Exam Strategy — Section 9.4</div>
+    <p><strong>How questions are framed:</strong> "Given this scenario, which architecture pattern is most appropriate?" or "What is the trade-off of using focused subagents over a single agent?"</p>
+    <p><strong>Keywords to watch:</strong> <mark>focused</mark>, <mark>specialized</mark>, <mark>swiss-army</mark>, <mark>monolith</mark>, <mark>coordination overhead</mark>, <mark>blast radius</mark>.</p>
+    <p><strong>Elimination strategy:</strong> If the scenario involves production or high-risk tools, eliminate swiss-army options. If the scenario involves quick prototyping, eliminate over-engineered multi-agent options.</p>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q10: A team is building a production system where Claude handles customer support, including reading CRM data, updating tickets, and sending email responses. Which architecture is most appropriate?</div>
+    <div class="options">
+      <div>A) A single agent with all CRM, ticketing, and email tools</div>
+      <div>B) An orchestrator with three focused subagents: CRM reader, ticket updater, and email sender</div>
+      <div>C) One agent for reading and one agent for all writing operations</div>
+      <div>D) No tools — use prompt-only Claude for all operations</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Production system with write operations (update tickets, send email) demands focused subagents for security isolation and reliability.</div>
+    <div class="distractor">❌ Distractor A — Giving send_email and update_ticket to the same agent as CRM read creates a large blast radius in production.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q11: A developer is prototyping a new Claude-based assistant and wants to quickly test which tools are most useful. What is the recommended approach?</div>
+    <div class="options">
+      <div>A) Immediately build a full multi-agent orchestration system</div>
+      <div>B) Start with a single agent with all candidate tools, then decompose after identifying the useful ones</div>
+      <div>C) Deploy to production with a broad tool set and optimize later</div>
+      <div>D) Use no tools and rely entirely on Claude's parametric knowledge</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Prototyping with a broad tool set is acceptable for discovery. Decompose into focused subagents before production deployment.</div>
+    <div class="distractor">❌ Distractor C — Deploying a broad tool set to production without decomposition is a security and reliability risk.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q12: What is the main downside of focused subagent architecture compared to a single-agent approach?</div>
+    <div class="options">
+      <div>A) Lower security due to more attack surfaces</div>
+      <div>B) Higher latency and cost due to multiple API calls and orchestration</div>
+      <div>C) Worse tool selection accuracy</div>
+      <div>D) Inability to handle complex tasks</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Multi-agent systems require more API calls (one per subagent + orchestrator), adding latency and cost. This is the trade-off for better reliability and security.</div>
+    <div class="distractor">❌ Distractor A — Focused subagents improve security by reducing blast radius per agent.</div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- 9.5 HANDS-ON: DESIGNING AGENT-TOOL ARCHITECTURES              -->
+<!-- ============================================================ -->
+<div class="container">
+<section id="s9-5">
+  <h2>9.5 — Hands-On: Designing Agent-Tool Architectures</h2>
+
+  <!-- CONCEPT OVERVIEW -->
+  <h3>Concept Overview</h3>
+  <p>This section provides a <strong>systematic design methodology</strong> for mapping business requirements to agent-tool architectures. The process moves from requirements gathering → task decomposition → tool identification → agent assignment → validation → iteration.</p>
+  <p>Mastering this process is essential because the exam tests not just knowledge of principles (§9.1–9.4) but the <strong>ability to apply them</strong> in realistic scenarios. Design questions typically present a use case and ask candidates to identify the best architecture, spot flaws in a proposed design, or optimize an existing setup.</p>
+
+  <!-- KEY TERMINOLOGY -->
+  <h3>Key Terminology</h3>
+  <ul>
+    <li><strong>Task decomposition</strong> — Breaking a complex objective into independent, assignable subtasks.</li>
+    <li><strong>Tool inventory</strong> — The complete catalog of available tools before distribution.</li>
+    <li><strong>Agent contract</strong> — The specification of an agent's inputs, outputs, tools, and responsibilities.</li>
+    <li><strong>Handoff protocol</strong> — The structured mechanism by which one agent passes work to another (output format, context transfer, error handling).</li>
+    <li><strong>Validation matrix</strong> — A mapping that verifies every required capability is covered by exactly one agent and no tool is assigned without purpose.</li>
+    <li><strong>Architecture review checklist</strong> — A systematic set of questions to verify the design meets security, performance, and reliability requirements.</li>
+  </ul>
+
+  <!-- CORE PRINCIPLES -->
+  <h3>Core Principles / Rules</h3>
+  <ol>
+    <li><strong>Start from requirements, not from tools.</strong> The design process begins with "what does the system need to do?" not "what tools do we have?"</li>
+    <li><strong>Decompose before assigning.</strong> First identify all subtasks, then map tools to tasks, then group tasks into agents. Do not assign tools to agents before understanding the task structure.</li>
+    <li><strong>One agent = one responsibility.</strong> Each agent should have a clear, single responsibility expressible in one sentence ("This agent researches topics using web search").</li>
+    <li><strong>Design handoffs explicitly.</strong> How does the orchestrator pass context to a subagent? What format does the subagent return? What happens on failure? These must be specified.</li>
+    <li><strong>Validate with the matrix.</strong> After design, verify: (a) every task has an agent, (b) every agent has only needed tools, (c) no tool is unassigned, (d) no tool is duplicated without reason.</li>
+    <li><strong>Plan for iteration.</strong> The first design is rarely perfect. Build observability (logging tool calls, tracking accuracy) to inform optimization.</li>
+  </ol>
+
+  <!-- DESIGN METHODOLOGY -->
+  <h3>Design Methodology: 6-Step Process</h3>
+  <div class="diagram-box">
+<pre><code>  ┌─────────────────────────────────────────────────────────────┐
+  │              AGENT-TOOL ARCHITECTURE DESIGN                 │
+  │              6-Step Methodology                             │
+  └─────────────────────────────────────────────────────────────┘
+
+  Step 1          Step 2          Step 3
+  REQUIREMENTS    DECOMPOSE       INVENTORY
+  ───────────     ──────────      ──────────
+  What must       Break into      List all
+  the system      independent     tools needed
+  accomplish?     subtasks        for each task
+       │               │              │
+       ▼               ▼              ▼
+  ┌─────────┐    ┌─────────┐    ┌─────────┐
+  │ Use case │    │ Task    │    │ Tool    │
+  │ stories  │    │ graph   │    │ catalog │
+  └────┬─────┘    └────┬────┘    └────┬────┘
+       │               │              │
+       └───────────────┼──────────────┘
+                       │
+  Step 4          Step 5          Step 6
+  ASSIGN          VALIDATE        ITERATE
+  ───────────     ──────────      ──────────
+  Group tools     Verify with     Monitor,
+  into domain-    validation      measure,
+  aligned agents  matrix          optimize
+       │               │              │
+       ▼               ▼              ▼
+  ┌─────────┐    ┌─────────┐    ┌─────────┐
+  │ Agent   │    │ Coverage │    │ Metrics │
+  │ configs │    │ matrix   │    │ &amp; logs  │
+  └─────────┘    └─────────┘    └─────────┘</code></pre>
+    <div class="caption">Figure 9.5a — The 6-step design methodology for agent-tool architectures.</div>
+  </div>
+
+  <!-- WORKED EXAMPLE -->
+  <h3>Worked Example: Customer Support Automation System</h3>
+
+  <h4>Step 1 — Requirements</h4>
+  <div class="note">
+    <div class="callout-title">📋 Scenario</div>
+    <p>Build an AI customer support system that: (1) reads incoming support tickets, (2) searches a knowledge base for relevant solutions, (3) drafts a response, (4) updates the ticket status, and (5) escalates to a human when confidence is low.</p>
+  </div>
+
+  <h4>Step 2 — Task Decomposition</h4>
+  <table>
+    <thead>
+      <tr><th>Subtask</th><th>Type</th><th>Dependencies</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>T1: Read incoming ticket</td><td>Read</td><td>None</td></tr>
+      <tr><td>T2: Search knowledge base</td><td>Read</td><td>T1 (need ticket content)</td></tr>
+      <tr><td>T3: Draft response</td><td>Generate</td><td>T1, T2</td></tr>
+      <tr><td>T4: Update ticket status</td><td>Write</td><td>T3</td></tr>
+      <tr><td>T5: Escalate to human</td><td>Action</td><td>T3 (conditional)</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Step 3 — Tool Inventory</h4>
+<pre><code>Tools needed:
+  • read_ticket        → T1 (read ticket data from CRM)
+  • search_kb          → T2 (search internal knowledge base)
+  • draft_response     → T3 (generate response text — may be prompt-only)
+  • update_ticket      → T4 (update ticket status/add notes in CRM)
+  • escalate_ticket    → T5 (route ticket to human queue)
+  • send_response      → T4 (send the drafted response to customer)</code></pre>
+
+  <h4>Step 4 — Agent Assignment</h4>
+<pre><code>  ┌───────────────────────────────────────────────────────┐
+  │                  ORCHESTRATOR                         │
+  │  tools: [delegate_to_subagent]                        │
+  │  role: Route tickets through the pipeline             │
+  └──────────┬──────────┬─────────────┬──────────────────┘
+             │          │             │
+             ▼          ▼             ▼
+  ┌──────────────┐ ┌──────────────┐ ┌─────────────────────┐
+  │  INTAKE      │ │  KNOWLEDGE   │ │  ACTION             │
+  │  AGENT       │ │  AGENT       │ │  AGENT              │
+  │              │ │              │ │                     │
+  │ read_ticket  │ │ search_kb    │ │ update_ticket       │
+  │              │ │              │ │ send_response       │
+  │ READ-ONLY    │ │ READ-ONLY    │ │ escalate_ticket     │
+  │ Risk: LOW    │ │ Risk: LOW    │ │ WRITE + ACTION      │
+  └──────────────┘ └──────────────┘ │ Risk: MEDIUM-HIGH   │
+                                    └─────────────────────┘</code></pre>
+
+  <h4>Step 5 — Validation Matrix</h4>
+  <table>
+    <thead>
+      <tr><th>Tool</th><th>Assigned To</th><th>Required By Task</th><th>Risk Level</th><th>Validated?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>read_ticket</code></td><td>Intake Agent</td><td>T1</td><td>Low</td><td>✅</td></tr>
+      <tr><td><code>search_kb</code></td><td>Knowledge Agent</td><td>T2</td><td>Low</td><td>✅</td></tr>
+      <tr><td><code>update_ticket</code></td><td>Action Agent</td><td>T4</td><td>Medium</td><td>✅</td></tr>
+      <tr><td><code>send_response</code></td><td>Action Agent</td><td>T4</td><td>High</td><td>✅</td></tr>
+      <tr><td><code>escalate_ticket</code></td><td>Action Agent</td><td>T5</td><td>Medium</td><td>✅</td></tr>
+      <tr><td><code>delegate_to_subagent</code></td><td>Orchestrator</td><td>Routing</td><td>Low</td><td>✅</td></tr>
+    </tbody>
+  </table>
+  <p>✅ <strong>Validation passed:</strong> Every task has an agent. No tool is unassigned. No tool appears in multiple agents unnecessarily. Read and write operations are separated. High-risk tools (send_response, escalate) are isolated in the Action Agent.</p>
+
+  <h4>Step 6 — Configuration</h4>
+<pre><code>{
+  "agents": {
+    "orchestrator": {
+      "model": "claude-sonnet-4-20250514",
+      "system_prompt": "You are a support ticket router. Read the ticket, gather knowledge, then dispatch the appropriate action.",
+      "allowed_tools": [
+        {"type": "tool", "name": "delegate_to_subagent"}
+      ]
+    },
+    "intake_agent": {
+      "model": "claude-haiku-3",
+      "system_prompt": "Read and parse the incoming support ticket. Extract: issue category, severity, customer ID, description.",
+      "allowed_tools": [
+        {"type": "tool", "name": "read_ticket"}
+      ]
+    },
+    "knowledge_agent": {
+      "model": "claude-sonnet-4-20250514",
+      "system_prompt": "Search the knowledge base for solutions matching the ticket issue. Return top 3 relevant articles with confidence scores.",
+      "allowed_tools": [
+        {"type": "tool", "name": "search_kb"}
+      ]
+    },
+    "action_agent": {
+      "model": "claude-sonnet-4-20250514",
+      "system_prompt": "Draft a response using knowledge base articles. Update the ticket. If confidence &lt; 70%, escalate to human instead of sending.",
+      "allowed_tools": [
+        {"type": "tool", "name": "update_ticket"},
+        {"type": "tool", "name": "send_response"},
+        {"type": "tool", "name": "escalate_ticket"}
+      ]
+    }
+  }
+}</code></pre>
+
+  <!-- ARCHITECTURE REVIEW CHECKLIST -->
+  <h3>Architecture Review Checklist</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Check</th><th>Pass Criteria</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Every required task has an assigned agent</td><td>No uncovered functionality</td></tr>
+      <tr><td>2</td><td>Every agent has ≤ 10–15 tools</td><td>Below overload threshold</td></tr>
+      <tr><td>3</td><td>No unnecessary tool duplication</td><td>Tools appear in exactly one agent (unless justified)</td></tr>
+      <tr><td>4</td><td>Read/write separation where possible</td><td>Read-only agents don't have write tools</td></tr>
+      <tr><td>5</td><td>High-risk tools are isolated</td><td>Delete, deploy, send tools have explicit guardrails</td></tr>
+      <tr><td>6</td><td>Orchestrator has minimal tools</td><td>Only delegation/routing tools</td></tr>
+      <tr><td>7</td><td><code>allowedTools</code> configured for all subagents</td><td>Hard enforcement, not just prompt instructions</td></tr>
+      <tr><td>8</td><td>Handoff protocols are defined</td><td>Clear input/output contracts between agents</td></tr>
+      <tr><td>9</td><td>Error handling exists</td><td>Subagent failures don't crash the system</td></tr>
+      <tr><td>10</td><td>Monitoring/logging enabled</td><td>Tool call logs, accuracy metrics, latency tracking</td></tr>
+    </tbody>
+  </table>
+
+  <!-- TIPS -->
+  <div class="tip">
+    <div class="callout-title">💡 Tip — The "Napkin Test"</div>
+    <p>If you can't sketch the entire architecture on a napkin in under 60 seconds, it's too complex. Production multi-agent systems typically have <strong>3–5 agents</strong>, not 15. If you're designing more, look for agents that can be merged without violating PoLP.</p>
+    <p><strong>Exam shortcut for design questions:</strong> Draw the diagram first (orchestrator at top, subagents below). Then verify: (1) each subagent has a one-sentence role, (2) tools are domain-aligned, (3) read/write are separated, (4) <code>allowedTools</code> is used. If all four hold, the design is correct.</p>
+  </div>
+
+  <!-- ANTI-PATTERNS -->
+  <div class="warning">
+    <div class="callout-title">⚠️ Common Pitfalls / Anti-Patterns</div>
+    <ul>
+      <li><strong>Designing bottom-up (tools first)</strong> — Starting from "here are 30 tools, how do we distribute them?" leads to incoherent agents. Always start from requirements and tasks.</li>
+      <li><strong>No validation step</strong> — Shipping a design without verifying coverage and isolation. The validation matrix takes 5 minutes and prevents hours of debugging.</li>
+      <li><strong>Static design with no iteration plan</strong> — The first architecture is a hypothesis. Without monitoring and feedback loops, you can't improve it.</li>
+      <li><strong>Ignoring handoff contracts</strong> — If subagents don't have clear input/output specs, the orchestrator can't reliably route information. This is the #1 cause of multi-agent system failures.</li>
+      <li><strong>Over-engineering simple tasks</strong> — Not every task needs an orchestrator. If a task only requires 3–5 tools in a single domain, one agent is sufficient.</li>
+    </ul>
+  </div>
+
+  <!-- EXAM STRATEGY -->
+  <h3>Exam Strategy Block</h3>
+  <div class="exam-tip">
+    <div class="callout-title">📝 Exam Strategy — Section 9.5</div>
+    <p><strong>How questions are framed:</strong> Multi-step scenario design: "Given this use case, design the architecture" or "What is wrong with this proposed architecture?" Also: "Which step in the design process addresses X?"</p>
+    <p><strong>Keywords to watch:</strong> <mark>decomposition</mark>, <mark>validation matrix</mark>, <mark>handoff protocol</mark>, <mark>agent contract</mark>, <mark>coverage</mark>.</p>
+    <p><strong>Elimination strategy:</strong> Answers that skip decomposition (jumping from requirements to implementation) are wrong. Answers that validate the architecture before deploying are likely correct.</p>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q13: A developer proposes the following architecture: An orchestrator delegates to a "data agent" with tools [read_db, write_db, delete_db, query_analytics, export_csv]. What is the MOST significant concern?</div>
+    <div class="options">
+      <div>A) The data agent has too many tools (5 is excessive)</div>
+      <div>B) Read, write, and delete operations on the database are combined in one agent</div>
+      <div>C) The orchestrator should also have the read_db tool</div>
+      <div>D) The agent should use prompt instructions instead of allowedTools</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Combining read, write, and delete in one agent violates read/write separation and creates a large blast radius. A misrouted delete could cause irreversible damage.</div>
+    <div class="distractor">❌ Distractor A — Five tools is within the acceptable range; the issue is tool type mixing, not count.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q14: In the 6-step design methodology, what should happen AFTER tool assignment to agents (Step 4)?</div>
+    <div class="options">
+      <div>A) Immediately deploy to production</div>
+      <div>B) Validate with a coverage matrix to verify all tasks are covered and tools are properly isolated</div>
+      <div>C) Remove all tool descriptions to save context tokens</div>
+      <div>D) Switch to a swiss-army-knife pattern for simplicity</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — Step 5 is validation. The coverage matrix verifies that every task has an agent, every tool is needed, and no security boundaries are violated.</div>
+    <div class="distractor">❌ Distractor A — Deploying without validation is the #1 cause of multi-agent system failures in production.</div>
+  </div>
+
+  <div class="exam-question">
+    <div class="q-stem">Q15: An agent architecture for a content management system has 12 subagents, each with exactly 1 tool. What is the likely problem?</div>
+    <div class="options">
+      <div>A) There are not enough agents — more decomposition needed</div>
+      <div>B) Over-decomposition — excessive coordination overhead and latency, agents should be grouped by domain</div>
+      <div>C) Each agent should have exactly 3 tools for balance</div>
+      <div>D) The system needs a larger context window model</div>
+    </div>
+    <div class="correct">✅ Correct: <strong>B</strong> — 12 single-tool agents create massive coordination overhead. Domain-aligned grouping (e.g., 3–4 agents with 3–4 tools each) is more efficient.</div>
+    <div class="distractor">❌ Distractor C — There's no rule requiring exactly 3 tools per agent; the right count depends on domain coherence.</div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER SYNTHESIS                                              -->
+<!-- ============================================================ -->
+<div class="container">
+<section id="synthesis" class="synthesis">
+  <h2>Chapter Synthesis</h2>
+
+  <!-- SUMMARY TABLE -->
+  <h3>Chapter Summary Table</h3>
+  <table>
+    <thead>
+      <tr><th>Section</th><th>Key Concept</th><th>Core Rule</th><th>Exam Weight</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>9.1</strong></td>
+        <td>Tool distribution by domain &amp; PoLP</td>
+        <td>Assign tools by agent role; orchestrator delegates, doesn't execute</td>
+        <td>⬛⬛⬛⬜⬜ Medium</td>
+      </tr>
+      <tr>
+        <td><strong>9.2</strong></td>
+        <td><code>allowedTools</code> API enforcement</td>
+        <td><code>allowedTools</code> is hard enforcement; prompts are soft guidance</td>
+        <td>⬛⬛⬛⬛⬜ High</td>
+      </tr>
+      <tr>
+        <td><strong>9.3</strong></td>
+        <td>Tool overload degrades performance</td>
+        <td>Fewer, well-described tools &gt; many vague tools; decompose to fix</td>
+        <td>⬛⬛⬛⬛⬜ High</td>
+      </tr>
+      <tr>
+        <td><strong>9.4</strong></td>
+        <td>Focused vs. swiss-army trade-offs</td>
+        <td>Focused for production; swiss-army for prototyping</td>
+        <td>⬛⬛⬛⬛⬛ Very High</td>
+      </tr>
+      <tr>
+        <td><strong>9.5</strong></td>
+        <td>Design methodology &amp; validation</td>
+        <td>Requirements → decompose → inventory → assign → validate → iterate</td>
+        <td>⬛⬛⬛⬛⬛ Very High</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CONCEPT RELATIONSHIP MAP -->
+  <h3>Concept Relationship Map</h3>
+  <div class="diagram-box">
+<pre><code>
+  ┌───────────────────────────────────────────────────────────────────┐
+  │                CHAPTER 9: CONCEPT MAP                            │
+  └───────────────────────────────────────────────────────────────────┘
+
+                         ┌──────────────┐
+                         │  9.5 DESIGN  │ ← Applies ALL concepts
+                         │  METHODOLOGY │
+                         └──────┬───────┘
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                  │
+              ▼                 ▼                  ▼
+    ┌─────────────────┐ ┌──────────────┐ ┌─────────────────┐
+    │  9.1 TOOL       │ │  9.4 FOCUSED │ │  9.2 allowedTools│
+    │  DISTRIBUTION   │ │  vs SWISS-   │ │  CONFIGURATION   │
+    │                 │ │  ARMY        │ │                  │
+    │ WHY to distrib. │ │ HOW to org.  │ │ HOW to enforce   │
+    └────────┬────────┘ └──────┬───────┘ └────────┬────────┘
+             │                 │                   │
+             │    ┌────────────┤                   │
+             │    │            │                   │
+             ▼    ▼            ▼                   ▼
+        ┌────────────────────────────────────────────────┐
+        │              9.3 TOOL OVERLOAD                 │
+        │                                                │
+        │  The PROBLEM that 9.1, 9.2, and 9.4 solve     │
+        │  • Too many tools → poor accuracy (→ use 9.1)  │
+        │  • Unscoped access → risk (→ use 9.2)          │
+        │  • Monolith agent → overload (→ use 9.4)       │
+        └────────────────────────────────────────────────┘
+
+  ─── Relationship Key ───
+  9.3 defines the PROBLEM
+  9.1 provides the PRINCIPLE (distribute by domain)
+  9.2 provides the MECHANISM (allowedTools enforcement)
+  9.4 provides the PATTERN (focused vs. swiss-army)
+  9.5 provides the PROCESS (end-to-end design method)
+</code></pre>
+    <div class="caption">Figure S1 — How sections 9.1–9.5 relate. Tool overload (9.3) is the central problem; the other sections provide principles, mechanisms, patterns, and process to solve it.</div>
+  </div>
+
+  <!-- MASTER TIPS SHEET -->
+  <h3>Master Tips Sheet — Top 10 Last-Minute Takeaways</h3>
+  <div class="tip">
+    <div class="callout-title">🏁 Final Review — Memorize These</div>
+    <ol>
+      <li><strong><code>allowedTools</code> = hard wall, system prompt = suggestion.</strong> For security-critical restrictions, always use <code>allowedTools</code>.</li>
+      <li><strong>Fewer tools = better performance.</strong> Every tool has a non-zero context and reasoning cost. Aim for under 15–20 per agent.</li>
+      <li><strong>Focused subagents for production, swiss-army for prototyping.</strong> This is the default recommendation — deviate only with justification.</li>
+      <li><strong>The orchestrator delegates, not executes.</strong> Give the orchestrator routing tools only. Execution tools go to subagents.</li>
+      <li><strong>Separate reads from writes.</strong> Read-only agents should never have write/delete/send tools.</li>
+      <li><strong>Semantic overlap kills accuracy.</strong> Two similar tools in the same agent cause random selection. Deduplicate or differentiate descriptions.</li>
+      <li><strong>Omitting <code>allowedTools</code> = all tools accessible.</strong> An empty array <code>[]</code> = no tools. Know the difference.</li>
+      <li><strong>Validate with the matrix.</strong> After design, verify: every task covered, every tool justified, read/write separated, <code>allowedTools</code> configured.</li>
+      <li><strong>3–5 subagents is the sweet spot.</strong> More than ~7 agents usually indicates over-decomposition. Fewer than 2 often means under-decomposition for complex tasks.</li>
+      <li><strong>Design methodology: Requirements → Decompose → Inventory → Assign → Validate → Iterate.</strong> Never skip the validation step.</li>
+    </ol>
+  </div>
+
+  <!-- PRACTICE SCENARIO -->
+  <h3>Practice Scenario: E-Commerce Order Management System</h3>
+  <div class="note">
+    <div class="callout-title">📋 Scenario</div>
+    <p>Design a Claude-based agent system for an e-commerce company that handles:</p>
+    <ol>
+      <li><strong>Order lookup</strong> — customers ask about their order status</li>
+      <li><strong>Product search</strong> — customers search for products in the catalog</li>
+      <li><strong>Order modification</strong> — customers request changes (address, items, cancel)</li>
+      <li><strong>Refund processing</strong> — customers request refunds for returned items</li>
+      <li><strong>Escalation</strong> — complex cases are routed to human support</li>
+    </ol>
+    <p>Available tools: <code>get_order</code>, <code>search_products</code>, <code>update_order</code>, <code>cancel_order</code>, <code>process_refund</code>, <code>charge_payment</code>, <code>send_email</code>, <code>create_ticket</code>, <code>escalate_to_human</code>, <code>get_customer_profile</code>, <code>update_customer_profile</code>, <code>search_faq</code></p>
+  </div>
+
+  <h4>Worked Solution</h4>
+
+  <p><strong>Step 1 — Requirements analysis:</strong></p>
+  <ul>
+    <li>5 capabilities, 12 tools, mix of read (safe) and write/financial (high-risk) operations.</li>
+    <li>Key risk: <code>process_refund</code>, <code>charge_payment</code>, <code>cancel_order</code> are financial/irreversible.</li>
+    <li>Decision: focused subagent architecture required (production + financial risk).</li>
+  </ul>
+
+  <p><strong>Step 2 — Task decomposition &amp; domain grouping:</strong></p>
+  <table>
+    <thead>
+      <tr><th>Domain</th><th>Tasks</th><th>Tools Needed</th><th>Risk</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Read / Lookup</td><td>Order status, product search, FAQ</td><td><code>get_order</code>, <code>search_products</code>, <code>get_customer_profile</code>, <code>search_faq</code></td><td>Low</td></tr>
+      <tr><td>Order Modification</td><td>Address change, item change, cancellation</td><td><code>update_order</code>, <code>cancel_order</code></td><td>Medium–High</td></tr>
+      <tr><td>Financial</td><td>Refund processing</td><td><code>process_refund</code>, <code>charge_payment</code></td><td>Critical</td></tr>
+      <tr><td>Communication</td><td>Email notifications, escalation</td><td><code>send_email</code>, <code>create_ticket</code>, <code>escalate_to_human</code></td><td>Medium</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Steps 3–4 — Architecture:</strong></p>
+<pre><code>  ┌─────────────────────────────────────────────────────────┐
+  │                   ORCHESTRATOR                          │
+  │  tools: [delegate_to_subagent]                          │
+  │  model: claude-sonnet-4-20250514                        │
+  │  role: Classify customer intent, route to subagent      │
+  └────┬──────────┬──────────────┬──────────────┬──────────┘
+       │          │              │              │
+       ▼          ▼              ▼              ▼
+  ┌──────────┐ ┌────────────┐ ┌────────────┐ ┌────────────────┐
+  │ LOOKUP   │ │ ORDER MOD  │ │ FINANCE    │ │ COMMUNICATION  │
+  │ AGENT    │ │ AGENT      │ │ AGENT      │ │ AGENT          │
+  │          │ │            │ │            │ │                │
+  │get_order │ │update_order│ │process_    │ │send_email      │
+  │search_   │ │cancel_order│ │  refund    │ │create_ticket   │
+  │ products │ │            │ │charge_     │ │escalate_to_    │
+  │get_cust_ │ │ 2 tools    │ │  payment   │ │  human         │
+  │ profile  │ │ WRITE ops  │ │            │ │                │
+  │search_faq│ │ Risk: MED+ │ │ 2 tools    │ │ 3 tools        │
+  │          │ │            │ │ FINANCIAL  │ │ ACTION ops     │
+  │ 4 tools  │ │            │ │ Risk: CRIT │ │ Risk: MEDIUM   │
+  │ READ-ONLY│ │            │ │ HITL req'd │ │                │
+  │ Risk: LOW│ │            │ │            │ │                │
+  └──────────┘ └────────────┘ └────────────┘ └────────────────┘
+                                    ▲
+                                    │
+                            Human-in-the-loop
+                            approval required
+                            for amounts &gt; $100</code></pre>
+
+  <p><strong>Step 5 — Validation:</strong></p>
+  <table>
+    <thead>
+      <tr><th>Check</th><th>Result</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>All 5 capabilities covered?</td><td>✅ Yes — each maps to at least one agent</td></tr>
+      <tr><td>All 12 tools assigned?</td><td>✅ Yes — <code>update_customer_profile</code> not needed → excluded (no requirement for it)</td></tr>
+      <tr><td>Max tools per agent?</td><td>✅ 4 (Lookup Agent) — well under threshold</td></tr>
+      <tr><td>Read/write separated?</td><td>✅ Lookup Agent is read-only; all write ops in separate agents</td></tr>
+      <tr><td>Financial tools isolated?</td><td>✅ <code>process_refund</code> and <code>charge_payment</code> in dedicated Finance Agent with HITL</td></tr>
+      <tr><td><code>allowedTools</code> configured?</td><td>✅ Each subagent uses <code>allowedTools</code> to whitelist its tool set</td></tr>
+      <tr><td>Handoff protocols defined?</td><td>✅ Orchestrator passes structured context; subagents return structured results</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Step 6 — Iteration plan:</strong></p>
+  <ul>
+    <li>Monitor tool selection accuracy per agent; if Lookup Agent confuses <code>search_products</code> and <code>search_faq</code>, differentiate descriptions further.</li>
+    <li>Track escalation rate — if &gt;30%, the Knowledge Agent may need better FAQ coverage.</li>
+    <li>If the Order Mod Agent rarely uses <code>cancel_order</code>, consider moving it to the Finance Agent (since cancellation involves financial reversal).</li>
+  </ul>
+
+  <div class="exam-tip">
+    <div class="callout-title">📝 Practice Scenario — Self-Check</div>
+    <p>After working through this scenario, verify your understanding by answering:</p>
+    <ol>
+      <li>Why is <code>update_customer_profile</code> excluded? <em>(No requirement maps to it.)</em></li>
+      <li>Why is the Finance Agent the only one requiring human-in-the-loop? <em>(Financial operations are irreversible and high-impact.)</em></li>
+      <li>Why doesn't the Orchestrator have <code>get_order</code>? <em>(Orchestrators delegate; the Lookup Agent handles reads.)</em></li>
+      <li>If you merged Lookup and Order Mod agents, what would break? <em>(Read/write separation; the merged agent could accidentally modify orders during a lookup.)</em></li>
+    </ol>
+  </div>
+
+</section>
+</div>
+
+<footer>
+  <div class="container">
+    <p>Chapter 9: Tool Distribution Across Agents — CCA Foundations &amp; Professional Study Notes</p>
+    <p>Generated for exam preparation. Content reflects Anthropic's multi-agent design guidance and Claude API behavior.</p>
+  </div>
+</footer>
+
+
+</body></html>

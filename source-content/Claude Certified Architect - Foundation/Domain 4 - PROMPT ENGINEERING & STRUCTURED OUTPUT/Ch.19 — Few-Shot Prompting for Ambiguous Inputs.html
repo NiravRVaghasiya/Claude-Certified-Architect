@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 19: Few-Shot Prompting for Ambiguous Inputs</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a2233; --muted:#5a6577; --line:#e2e8f0;
+    --accent:#2563eb; --accent-2:#7c3aed;
+    --good:#16a34a; --good-bg:#f0fdf4; --good-line:#bbf7d0;
+    --bad:#dc2626; --bad-bg:#fef2f2; --bad-line:#fecaca;
+    --tip:#0891b2; --tip-bg:#ecfeff; --tip-line:#a5f3fc;
+    --warn:#d97706; --warn-bg:#fffbeb; --warn-line:#fde68a;
+    --exam:#7c3aed; --exam-bg:#faf5ff; --exam-line:#e9d5ff;
+    --qa:#0f766e; --qa-bg:#f0fdfa; --qa-line:#99f6e4;
+    --code-bg:#0f172a; --code-ink:#e2e8f0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.6; margin:0;
+    padding:0 0 80px 0;
+  }
+  .wrap{max-width:980px; margin:0 auto; padding:0 22px;}
+  header.hero{
+    background:linear-gradient(135deg,#2563eb 0%,#7c3aed 100%);
+    color:#fff; padding:46px 22px 40px; margin-bottom:10px;
+  }
+  header.hero .wrap{padding:0 22px;}
+  header.hero .eyebrow{
+    text-transform:uppercase; letter-spacing:.14em; font-size:.72rem;
+    font-weight:700; opacity:.9; margin:0 0 8px;
+  }
+  header.hero h1{font-size:2.05rem; margin:0 0 10px; line-height:1.15;}
+  header.hero p{margin:0; font-size:1.02rem; opacity:.95; max-width:760px;}
+  h2{
+    font-size:1.5rem; margin:52px 0 6px; padding-top:14px;
+    border-top:3px solid var(--line); color:var(--ink);
+  }
+  h2 .num{color:var(--accent); font-weight:800;}
+  h3{font-size:1.12rem; margin:26px 0 8px; color:var(--ink);}
+  h4{font-size:.98rem; margin:16px 0 6px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em;}
+  p{margin:8px 0;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  code{
+    font-family:"SF Mono",SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+    font-size:.86em; background:#f1f5f9; color:#0f172a; padding:1px 5px; border-radius:4px;
+  }
+  pre{
+    background:var(--code-bg); color:var(--code-ink); border-radius:10px;
+    padding:16px 18px; overflow-x:auto; font-size:.82rem; line-height:1.5;
+    margin:12px 0; border:1px solid #1e293b;
+  }
+  pre code{background:none; color:inherit; padding:0; font-size:.82rem;}
+  .lbl-input{color:#7dd3fc;} .lbl-out{color:#86efac;} .lbl-rsn{color:#fcd34d;}
+  table{border-collapse:collapse; width:100%; margin:14px 0; font-size:.92rem;}
+  th,td{border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top;}
+  th{background:#f8fafc; font-weight:700;}
+  tbody tr:nth-child(even){background:#fbfcfe;}
+  .yes{color:var(--good); font-weight:700;}
+  .no{color:var(--bad); font-weight:700;}
+  /* Callout boxes */
+  .box{border-radius:10px; padding:14px 16px 14px 18px; margin:14px 0; border:1px solid; border-left-width:5px;}
+  .box .box-title{font-weight:700; margin:0 0 6px; display:flex; align-items:center; gap:8px; font-size:.95rem;}
+  .box p{margin:5px 0;}
+  .box ul{margin:6px 0 2px; padding-left:22px;}
+  .box li{margin:3px 0;}
+  .tip{background:var(--tip-bg); border-color:var(--tip-line); border-left-color:var(--tip);}
+  .tip .box-title{color:var(--tip);}
+  .warn{background:var(--warn-bg); border-color:var(--warn-line); border-left-color:var(--warn);}
+  .warn .box-title{color:var(--warn);}
+  .exam{background:var(--exam-bg); border-color:var(--exam-line); border-left-color:var(--exam);}
+  .exam .box-title{color:var(--exam);}
+  .qa{background:var(--qa-bg); border-color:var(--qa-line); border-left-color:var(--qa);}
+  .qa .box-title{color:var(--qa);}
+  .concept{background:#f8fafc; border-color:var(--line); border-left-color:var(--accent);}
+  .why{background:#fff; border-color:var(--line); border-left-color:var(--accent-2);}
+  .answer{font-weight:700; color:var(--qa);}
+  .distractor{color:var(--bad);}
+  .correct{color:var(--good);}
+  /* Nav / TOC */
+  nav.toc{
+    background:#f8fafc; border:1px solid var(--line); border-radius:12px;
+    padding:18px 22px; margin:22px 0 6px;
+  }
+  nav.toc h2{border:none; margin:0 0 10px; padding:0; font-size:1.1rem;}
+  nav.toc ol{margin:0; padding-left:20px; columns:2; column-gap:34px;}
+  nav.toc li{margin:5px 0; break-inside:avoid;}
+  /* Decision tree / flow (CSS) */
+  .flow{display:flex; flex-direction:column; gap:0; margin:16px 0;}
+  .flow-node{
+    background:#eff6ff; border:2px solid var(--accent); border-radius:10px;
+    padding:10px 14px; font-size:.9rem; align-self:center; max-width:560px; text-align:center;
+  }
+  .flow-arrow{align-self:center; color:var(--accent); font-size:1.3rem; line-height:1; margin:2px 0;}
+  .branch{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+  .branch .flow-node{align-self:auto;}
+  .node-good{background:var(--good-bg); border-color:var(--good);}
+  .node-bad{background:var(--bad-bg); border-color:var(--bad);}
+  .sub{font-size:.82rem; color:var(--muted);}
+  .pill{display:inline-block; font-size:.72rem; font-weight:700; padding:2px 9px; border-radius:999px; background:#eef2ff; color:var(--accent-2); margin-left:8px; vertical-align:middle;}
+  .backtop{font-size:.8rem; margin-top:8px; display:inline-block;}
+  figure{margin:16px 0;}
+  figcaption{font-size:.82rem; color:var(--muted); text-align:center; margin-top:6px;}
+  svg{max-width:100%; height:auto;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media(max-width:680px){.grid2{grid-template-columns:1fr;} nav.toc ol{columns:1;}}
+  @media print{
+    header.hero{background:#2563eb !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .box,pre,table,th{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    h2{break-before:auto;} section{break-inside:avoid-page;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 19: Few-Shot Prompting for Ambiguous Inputs</h1>
+    <p>An exam-ready study guide on engineering few-shot examples that resolve ambiguity, demonstrate reasoning, enforce output format, and handle real-world edge cases — with worked prompts, visual decision aids, and mock exam questions.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s191">19.1 &nbsp;Targeted Few-Shot Examples for Ambiguous Scenarios</a></li>
+    <li><a href="#s192">19.2 &nbsp;Demonstrating Reasoning: Why One Action Over Alternatives</a></li>
+    <li><a href="#s193">19.3 &nbsp;Format Demonstration with Few-Shot Examples</a></li>
+    <li><a href="#s194">19.4 &nbsp;Distinguishing Acceptable Code Patterns from Genuine Issues</a></li>
+    <li><a href="#s195">19.5 &nbsp;Handling Varied Document Structures</a></li>
+    <li><a href="#s196">19.6 &nbsp;Addressing Empty/Null Extraction</a></li>
+    <li><a href="#s197">19.7 &nbsp;Hands-On: Engineering Few-Shot Prompts</a></li>
+    <li><a href="#summary">Chapter Summary, Mind Map &amp; Checklist</a></li>
+  </ol>
+</nav>
+
+<!-- ============================== 19.1 ============================== -->
+<section id="s191">
+  <h2><span class="num">19.1</span> &nbsp;Creating Targeted Few-Shot Examples for Ambiguous Scenarios <span class="pill">Core</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>An input is <strong>ambiguous</strong> when it can be reasonably interpreted in more than one way (e.g., "book a table" could mean a restaurant reservation or reserving furniture). <strong>Targeted few-shot examples</strong> are demonstrations chosen specifically to cover the confusing edge cases — not the easy, obvious ones — so the model learns <em>your</em> intended resolution for the hard cases. The examples do the disambiguating work that instructions alone struggle to convey.</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>Zero-shot instructions describe the rule in the abstract; ambiguous inputs are exactly where abstract rules break down. Without targeted examples the model defaults to the most statistically common interpretation, which may not match your domain. Targeted examples convert a vague policy ("classify support tickets correctly") into concrete, imitable boundaries for the cases that actually cause errors.</p>
+  </div>
+
+  <h4>Worked Example</h4>
+  <pre><code><span class="lbl-input">Task:</span> Classify each message as ORDER, SUPPORT, or SALES.
+Some messages are ambiguous — use the examples to resolve them.
+
+<span class="lbl-input">Example 1 (ambiguous: sounds like sales but is support)</span>
+Message: "How much more do I pay to upgrade my current plan?"
+Label: SUPPORT
+(Existing customer asking about their account = SUPPORT, not SALES.)
+
+<span class="lbl-input">Example 2 (ambiguous: mentions price but is a new prospect)</span>
+Message: "What does the Pro plan cost for a brand-new team?"
+Label: SALES
+(No existing account referenced; pre-purchase pricing = SALES.)
+
+<span class="lbl-input">Example 3 (ambiguous: order-like but is a complaint)</span>
+Message: "I placed order #4412 yesterday and it still hasn't shipped."
+Label: SUPPORT
+(A problem with an existing order = SUPPORT, not ORDER.)
+
+<span class="lbl-input">Now classify:</span>
+Message: "Can I add three more seats to our account today?"
+Label: ?</code></pre>
+  <p class="sub">Each example was picked because it sits on a boundary. The easy case ("I want to buy your product" → SALES) is omitted — it teaches the model nothing it didn't already know.</p>
+
+  <h4>Visualization — Decision Tree: Should I add a targeted example?</h4>
+  <figure>
+  <div class="flow">
+    <div class="flow-node">Does the input have more than one plausible interpretation?</div>
+    <div class="flow-arrow">▼</div>
+    <div class="branch">
+      <div class="flow-node node-bad">No → a clear instruction is enough<br><span class="sub">zero-shot / single rule</span></div>
+      <div class="flow-node">Yes ▼</div>
+    </div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node">Do current outputs already resolve it correctly?</div>
+    <div class="flow-arrow">▼</div>
+    <div class="branch">
+      <div class="flow-node node-bad">Yes → don't add noise</div>
+      <div class="flow-node node-good">No → add a <strong>targeted example</strong> that shows the exact boundary case + the correct label</div>
+    </div>
+  </div>
+  <figcaption>When to invest in a targeted few-shot example vs. rely on instructions.</figcaption>
+  </figure>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>Mine real failures.</strong> Build your example set from actual mislabeled inputs, not invented ones.</li>
+      <li><strong>Cover the boundary, not the center.</strong> Choose examples near the decision line between two labels.</li>
+      <li><strong>Pair look-alikes.</strong> Show two near-identical inputs that resolve to <em>different</em> labels so the discriminating feature is unmistakable.</li>
+      <li><strong>Keep a short annotation</strong> in parentheses stating <em>why</em> — it reinforces the rule the example encodes.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>Only showing easy cases.</strong> Examples of obvious inputs waste the context and don't reduce ambiguity.</li>
+      <li><strong>Label imbalance.</strong> Ten examples of one class and one of another biases the model toward the majority.</li>
+      <li><strong>Leaky examples.</strong> An example whose wording accidentally telegraphs the answer (e.g., always putting SUPPORT tickets last) teaches position, not meaning.</li>
+      <li><strong>Contradictory examples</strong> — two similar inputs labeled inconsistently — actively degrade accuracy.</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "A classifier works on clear inputs but fails on borderline cases. What is the <em>most effective</em> fix?" or "Which few-shot example set best reduces ambiguity?"</p>
+    <p><strong>Keywords to watch:</strong> <em>borderline, edge case, misclassified, both interpretations valid, works except when.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> Reject options that "add more general instructions" when the problem is specifically edge cases — the exam rewards <em>targeted examples over more prose</em>. Reject options that add many examples of the <em>easy</em> class. Prefer answers that show boundary cases with the correct resolution.</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> A ticket router correctly labels obvious tickets but confuses billing questions from existing customers (should be SUPPORT) with new-customer pricing questions (should be SALES). Which change most directly fixes this?</p>
+    <p>A. Add a longer system instruction defining SALES and SUPPORT.<br>
+       B. Add few-shot examples of clearly-SALES and clearly-SUPPORT tickets.<br>
+       C. Add paired few-shot examples of the two look-alike billing/pricing cases with contrasting labels and short reasons.<br>
+       D. Increase temperature so the model considers more options.</p>
+    <p><span class="answer">Correct: C.</span></p>
+    <p><span class="correct">Why C is right:</span> The failure is specifically on look-alike boundary cases. Paired contrasting examples encode the exact discriminating feature (existing account vs. new prospect), which is the highest-leverage fix.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>A</strong> restates abstract rules the model already fails to apply to edge cases. <strong>B</strong> demonstrates only easy cases and never shows the confusing boundary. <strong>D</strong> raises randomness, which makes ambiguous classification <em>worse</em>, not better.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== 19.2 ============================== -->
+<section id="s192">
+  <h2><span class="num">19.2</span> &nbsp;Demonstrating Reasoning: Why One Action Was Chosen Over Alternatives <span class="pill">Core</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>Beyond showing input → output, you can show input → <strong>reasoning → output</strong>, where the reasoning explicitly names the rejected alternative and states <em>why</em> it was rejected. This teaches the model a comparative decision procedure ("choose X <em>over</em> Y because…"), not just a mapping. It is few-shot chain-of-thought applied to <em>disambiguation between competing choices</em>.</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>Many ambiguous tasks are really "pick the best of several defensible answers." Showing only the final answer hides the trade-off, so the model can't generalize the trade-off to new inputs. Demonstrating the contrast ("Performance, not Bug, because the app still works") makes the decision boundary explicit and auditable — which also makes outputs easier for humans to verify.</p>
+  </div>
+
+  <h4>Worked Example</h4>
+  <div class="box concept" style="border-left-color:var(--accent);">
+  <pre><code><span class="lbl-input">Input:</span> "Categorize this ticket: 'App crashes when I upload large files'"
+
+<span class="lbl-input">Example 1</span>
+Ticket: "Page loads slowly on mobile"
+Category: Performance
+<span class="lbl-rsn">Reasoning:</span> Chose "Performance" over "Bug" because no error/crash
+occurs — the app functions, just slowly. This is a speed issue, not a defect.
+
+<span class="lbl-input">Example 2</span>
+Ticket: "Login button does nothing when clicked"
+Category: Bug
+<span class="lbl-rsn">Reasoning:</span> Chose "Bug" over "Feature Request" because expected
+functionality (login) is broken, not missing.
+
+<span class="lbl-input">Now categorize:</span> "App crashes when I upload large files"
+Category: ?</code></pre>
+  </div>
+  <p class="sub">The model is expected to produce: <code>Category: Bug — chose "Bug" over "Performance" because a crash is a functional failure, not a slowdown.</code></p>
+
+  <h4>Visualization — Reasoning-Augmented vs. Answer-Only Examples</h4>
+  <table>
+    <thead><tr><th>Aspect</th><th>Answer-only example</th><th>Reasoning + contrast example</th></tr></thead>
+    <tbody>
+      <tr><td>What it teaches</td><td>Input → label mapping</td><td>The decision rule <em>and</em> the trade-off</td></tr>
+      <tr><td>Generalizes to new edge cases</td><td class="no">Weakly</td><td class="yes">Strongly</td></tr>
+      <tr><td>Human auditability</td><td class="no">Low — no rationale</td><td class="yes">High — rationale is visible</td></tr>
+      <tr><td>Token cost</td><td class="yes">Lower</td><td>Higher (worth it for hard tasks)</td></tr>
+      <tr><td>Best for</td><td>Simple, unambiguous mapping</td><td>Competing defensible answers</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>Name the loser.</strong> Always state the rejected alternative explicitly ("X over Y"), not just the winner.</li>
+      <li><strong>Keep reasoning short and rule-shaped</strong> — one or two sentences that generalize, not a story about this one input.</li>
+      <li><strong>Put reasoning <em>before</em> the final label</strong> in each example so the model imitates "think, then answer."</li>
+      <li>If you need a clean machine-readable output too, ask for reasoning in a separate field (or a <code>&lt;thinking&gt;</code> block) that you can strip later.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>Post-hoc reasoning after the answer.</strong> If the label comes first, the "reasoning" becomes decoration and doesn't steer the decision.</li>
+      <li><strong>Over-specific rationales</strong> that reference this exact input and don't transfer.</li>
+      <li><strong>Inconsistent reasoning style</strong> across examples — the model imitates the surface pattern, so keep it uniform.</li>
+      <li><strong>Contradiction between the reasoning and the chosen label</strong> — a fatal signal that confuses the model.</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "The model picks a defensible-but-wrong category. How do you improve consistency?" or "Which example format best teaches the model to justify choices?"</p>
+    <p><strong>Keywords:</strong> <em>justify, rationale, chose X over Y, chain-of-thought, competing categories, defensible answer.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> Prefer options where reasoning <em>precedes</em> the answer and names the rejected option. Reject options that only add more categories, or that place reasoning after the label. Beware answers that say "chain-of-thought always increases accuracy" — the exam expects the nuance that it helps for reasoning-heavy/ambiguous tasks, not trivial mappings.</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> You want a model to reliably choose between "Performance" and "Bug" for support tickets and to make its choice auditable. Which few-shot design is best?</p>
+    <p>A. Examples with the label only.<br>
+       B. Examples with the label, then a one-line reason after it.<br>
+       C. Examples with a one-line reason that names the rejected category, then the label.<br>
+       D. A single very long example with a five-paragraph analysis.</p>
+    <p><span class="answer">Correct: C.</span></p>
+    <p><span class="correct">Why C is right:</span> Reasoning-before-answer makes the model deliberate before committing, and naming the rejected category ("Bug over Performance because…") encodes the trade-off it must generalize.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>A</strong> hides the decision rule. <strong>B</strong> puts the rationale after the decision, so it doesn't steer it. <strong>D</strong> is verbose, hard to imitate consistently, and burns tokens without improving the decision boundary.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== 19.3 ============================== -->
+<section id="s193">
+  <h2><span class="num">19.3</span> &nbsp;Format Demonstration with Few-Shot Examples <span class="pill">Core</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>Few-shot examples are the most reliable way to lock in an <strong>exact output format</strong> — JSON shape, key names, ordering, casing, delimiters, and how to render missing values. Instead of describing the schema in prose, you <em>show</em> two or three fully-formed outputs. The model imitates the surface form precisely, which is far more robust than "return valid JSON."</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>Downstream systems (parsers, databases, pipelines) fail on the smallest format drift — an extra prose sentence, a renamed key, a trailing comma. Demonstrated format examples dramatically cut this drift because the model has a concrete template to copy. This is the single highest-ROI use of few-shot for production integrations.</p>
+  </div>
+
+  <h4>Worked Example</h4>
+  <pre><code><span class="lbl-input">Extract fields as JSON exactly like the examples. Output JSON only — no prose.</span>
+
+Text: "Invoice #A-102 from Acme Corp, total $4,500, due 2026-03-01."
+Output:
+{"invoice_id": "A-102", "vendor": "Acme Corp", "total": 4500.00, "due_date": "2026-03-01"}
+
+Text: "Receipt from Bolt Ltd for $89.99 (no invoice number)."
+Output:
+{"invoice_id": null, "vendor": "Bolt Ltd", "total": 89.99, "due_date": null}
+
+Text: "Invoice #Z9 from Nimbus, amount 1200 EUR, payable immediately."
+Output:</code></pre>
+  <p class="sub">Notice the examples fix: key names, <code>null</code> for missing fields, numeric (not string) totals, and ISO dates. The prose instruction alone would leave all of those under-specified.</p>
+
+  <h4>Visualization — Good vs. Bad Format Specification</h4>
+  <table>
+    <thead><tr><th>Approach</th><th>Result</th><th>Reliability</th></tr></thead>
+    <tbody>
+      <tr><td>"Return the data as JSON."</td><td>Keys, types, null-handling all vary run to run; occasional prose preamble.</td><td class="no">❌ Low</td></tr>
+      <tr><td>Prose schema description (list every field + type)</td><td>Better, but edge details (missing values, number vs. string) still drift.</td><td>⚠️ Medium</td></tr>
+      <tr><td>2–3 complete worked output examples (incl. a null case)</td><td>Model copies exact shape, key order, and missing-value convention.</td><td class="yes">✅ High</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>Include an edge-case example in the format demo</strong> — especially one with a missing field — so the null convention is shown, not guessed.</li>
+      <li><strong>Say "output JSON only, no prose"</strong> and back it with examples that contain only JSON.</li>
+      <li>Combine with a <strong>prefilled assistant turn</strong> (start the response with <code>{</code>) to suppress preambles when the API supports it.</li>
+      <li>Keep examples <strong>schema-identical</strong> — same keys in the same order every time.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>Examples that disagree on format</strong> (one uses <code>"total":"4500"</code>, another <code>"total":4500</code>) — the model will mix both.</li>
+      <li><strong>No missing-value example</strong>, so the model invents a value or drops the key when a field is absent.</li>
+      <li><strong>Prose mixed into example outputs</strong> ("Here is the JSON:") which the model faithfully copies into production.</li>
+      <li><strong>Trailing commas or comments</strong> in example JSON that make it invalid and get imitated.</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "Outputs are mostly valid JSON but occasionally include a sentence or rename a key. Best fix?" or "How do you guarantee a strict schema?"</p>
+    <p><strong>Keywords:</strong> <em>schema, strict format, parser fails, valid JSON, key names, missing field.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> Prefer "provide worked example outputs including a null case" and/or "prefill the assistant turn with the opening brace." Reject "ask more firmly for JSON" (prose-only fixes) and reject "lower max tokens" (truncates, doesn't format). Note: schema examples reduce but don't 100% guarantee validity — if an option promises absolute guarantees from prompting alone, be suspicious; true guarantees come from validation/tooling on top.</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> A pipeline breaks because ~5% of responses prepend "Sure, here's the JSON:" and sometimes omit the <code>due_date</code> key entirely. Which combination best fixes this?</p>
+    <p>A. Increase the temperature and retry on parse failure.<br>
+       B. Add 2–3 example outputs (JSON only, one with <code>due_date: null</code>) and prefill the reply with <code>{</code>.<br>
+       C. Add the instruction "Please only output JSON, thank you."<br>
+       D. Switch to returning YAML.</p>
+    <p><span class="answer">Correct: B.</span></p>
+    <p><span class="correct">Why B is right:</span> Worked examples fix key presence and the null convention; prefilling the opening brace removes the prose preamble. Together they attack both failure modes directly.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>A</strong> raises randomness (worse) and only reacts after failure. <strong>C</strong> is another prose plea that the 5% will still ignore. <strong>D</strong> changes the format without addressing why the model drifts.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== 19.4 ============================== -->
+<section id="s194">
+  <h2><span class="num">19.4</span> &nbsp;Distinguishing Acceptable Code Patterns from Genuine Issues <span class="pill">Applied</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>In AI-assisted code review, the same syntactic pattern can be perfectly fine in one context and a serious defect in another. Few-shot examples teach the model to judge <strong>by context and intent</strong>, not by surface pattern — flagging genuine issues while suppressing false positives on idiomatic, intentional code. This keeps review signal high and reduces alert fatigue.</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>A reviewer that flags every <code>except: pass</code> or every <code>eval()</code> becomes noise and gets ignored. A reviewer that never flags them misses real bugs. Context-aware few-shot examples calibrate the model to the middle ground your team actually wants — acceptable-vs-issue judgments that match your engineering standards.</p>
+  </div>
+
+  <h4>Visualization — Same Pattern, Different Verdict</h4>
+  <table>
+    <thead><tr><th>Pattern</th><th>Acceptable?</th><th>Reasoning</th></tr></thead>
+    <tbody>
+      <tr><td><code>except: pass</code> in cleanup / best-effort teardown</td><td class="yes">✅ Yes</td><td>Intentional silent cleanup; failure is non-critical</td></tr>
+      <tr><td><code>except: pass</code> in payment / auth logic</td><td class="no">❌ No</td><td>Hides critical failures; swallows errors that must surface</td></tr>
+      <tr><td><code>assert user.is_admin</code> in a test</td><td class="yes">✅ Yes</td><td>Assertions are the point of tests</td></tr>
+      <tr><td><code>assert user.is_admin</code> as production access control</td><td class="no">❌ No</td><td>Asserts can be stripped with <code>-O</code>; not a security boundary</td></tr>
+      <tr><td><code># TODO</code> in a prototype / spike</td><td class="yes">✅ Yes</td><td>Expected in exploratory code</td></tr>
+      <tr><td><code># TODO: sanitize input</code> before a DB write in prod</td><td class="no">❌ No</td><td>Marks a known, shipped security gap</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Worked Example</h4>
+  <pre><code><span class="lbl-input">Review the code. Flag GENUINE issues only. Acceptable intentional patterns
+should be marked OK with a one-line reason.</span>
+
+Example 1:
+Code:
+  try:
+      tmp_file.close()
+  except Exception:
+      pass          # best-effort cleanup on shutdown
+Verdict: OK
+Reason: Silent except is acceptable here — cleanup failure is non-critical.
+
+Example 2:
+Code:
+  try:
+      charge_customer(card, amount)
+  except Exception:
+      pass
+Verdict: ISSUE (High)
+Reason: Swallowing exceptions in payment logic hides failed charges.
+Fix: Log, alert, and re-raise or handle explicitly.
+
+Now review:
+Code:
+  try:
+      audit_log.write(event)
+  except Exception:
+      pass
+Verdict: ?</code></pre>
+  <p class="sub">Expected: <code>ISSUE (Medium)</code> — silently dropping audit-log writes can violate compliance/traceability, even though it's "just logging."</p>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>Pair the same pattern in two contexts</strong> (one OK, one ISSUE) so the model learns that context decides the verdict.</li>
+      <li><strong>Attach severity levels</strong> (Low/Medium/High) in examples to calibrate proportionate responses.</li>
+      <li><strong>Always require a one-line reason and a fix</strong> for flagged issues — it forces genuine analysis over pattern-matching.</li>
+      <li><strong>Include a "looks scary but is fine" example</strong> to suppress false positives on idiomatic code.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>Only showing "bad" examples</strong> trains a flag-everything reviewer (false-positive storm).</li>
+      <li><strong>Pattern-only examples with no context</strong> — the model can't learn the context-dependence you want.</li>
+      <li><strong>Missing severity calibration</strong>, so trivial and critical issues get the same weight.</li>
+      <li><strong>Treating style preferences as defects</strong>, eroding trust in the reviewer.</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "An AI reviewer flags too many false positives on intentional patterns. How do you fix it?" or "Which examples best teach context-aware code review?"</p>
+    <p><strong>Keywords:</strong> <em>false positive, intentional pattern, context-dependent, alert fatigue, acceptable vs. defect, severity.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> Prefer options that show the <em>same pattern in acceptable and unacceptable contexts</em>. Reject "add more examples of bad code only" (worsens false positives) and "flag all instances of pattern X" (ignores context). Reject fine-tuning/temperature answers when a few-shot example set solves it more cheaply.</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> Developers complain that the AI reviewer flags every <code>except: pass</code>, including intentional cleanup code. What is the best fix?</p>
+    <p>A. Remove <code>except: pass</code> detection entirely.<br>
+       B. Add few-shot examples showing <code>except: pass</code> as OK in cleanup and as an ISSUE in payment/auth, each with a reason.<br>
+       C. Add more examples of dangerous <code>except: pass</code> usage.<br>
+       D. Raise the temperature so the reviewer is less strict.</p>
+    <p><span class="answer">Correct: B.</span></p>
+    <p><span class="correct">Why B is right:</span> Contrasting the same pattern across contexts teaches the model that intent/context — not the pattern itself — determines the verdict, cutting false positives while retaining true catches.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>A</strong> throws away a genuinely useful check. <strong>C</strong> pushes toward flagging <em>more</em>, worsening the false-positive problem. <strong>D</strong> makes behavior random and unreliable, not context-aware.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== 19.5 ============================== -->
+<section id="s195">
+  <h2><span class="num">19.5</span> &nbsp;Handling Varied Document Structures: Citations, Bibliographies &amp; Methodologies <span class="pill">Applied</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>Real documents don't share one layout. Citations appear as APA, MLA, IEEE numeric, or footnotes; bibliographies may be labeled "References," "Works Cited," or unlabeled; methodology sections hide under many headings. Few-shot examples that <strong>span several structural variants</strong> teach the model to extract the same normalized fields regardless of surface format — turning heterogeneous documents into a consistent schema.</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>Extraction pipelines over academic papers, legal filings, or reports must be robust to layout diversity. If your examples only show one citation style, the model overfits to it and fails on the others. Deliberately varied examples build format-invariance, which is exactly what a real corpus demands.</p>
+  </div>
+
+  <h4>Worked Example</h4>
+  <pre><code><span class="lbl-input">Extract each cited work into: {authors, year, title}. Normalize across styles.</span>
+
+Example 1 (APA):
+Text: "Smith, J. (2020). Deep learning for vision. Journal of AI, 12(3)."
+Output: {"authors": ["Smith, J."], "year": 2020, "title": "Deep learning for vision"}
+
+Example 2 (IEEE numeric):
+Text: "[4] R. Lee and K. Osei, 'Robust extraction pipelines,' Proc. ICML, 2021."
+Output: {"authors": ["R. Lee", "K. Osei"], "year": 2021, "title": "Robust extraction pipelines"}
+
+Example 3 (footnote / no year in-line):
+Text: "1. Chen et al., Methodology of Surveys (n.d.)."
+Output: {"authors": ["Chen et al."], "year": null, "title": "Methodology of Surveys"}
+
+Now extract from:
+Text: "Garcia, M., &amp; Patel, S. (2019). Scalable OCR. In Proc. CVPR."
+Output: ?</code></pre>
+
+  <h4>Visualization — Variant Coverage Checklist</h4>
+  <table>
+    <thead><tr><th>Field</th><th>Structural variants to demonstrate</th><th>Normalized target</th></tr></thead>
+    <tbody>
+      <tr><td>Citations</td><td>APA, MLA, IEEE numeric <code>[n]</code>, footnote, inline vs. reference-list</td><td>Uniform <code>{authors, year, title}</code></td></tr>
+      <tr><td>Bibliography</td><td>"References", "Works Cited", "Bibliography", unlabeled block</td><td>List of citation objects</td></tr>
+      <tr><td>Methodology</td><td>"Methods", "Methodology", "Experimental Setup", "Approach", embedded in Results</td><td>Single <code>methodology</code> text field</td></tr>
+      <tr><td>Missing data</td><td>No year ("n.d."), single author, "et al.", anonymous</td><td><code>null</code> / graceful handling</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>One example per structural variant</strong> you expect in the wild — breadth beats depth here.</li>
+      <li><strong>Normalize in the output, vary in the input.</strong> Keep the target schema identical across every example.</li>
+      <li><strong>Show a heading-synonym case</strong> (e.g., "Experimental Setup" → methodology) so the model matches on meaning, not literal headings.</li>
+      <li><strong>Include an "et al." and an "n.d." example</strong> to cover the most common real-world messiness.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>Single-style overfitting</strong> — all examples in APA, then failure on IEEE/footnotes.</li>
+      <li><strong>Literal heading matching</strong> that misses "Approach" or "Experimental Setup" as methodology.</li>
+      <li><strong>Inconsistent author normalization</strong> (sometimes a string, sometimes a list) across examples.</li>
+      <li><strong>Hallucinated years</strong> when the source says "n.d." — must map to <code>null</code>, not a guess (see 19.6).</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "Extraction works on APA papers but fails on IEEE-numbered references. Best approach?" or "How do you make document extraction robust to layout?"</p>
+    <p><strong>Keywords:</strong> <em>varied formats, multiple citation styles, heterogeneous documents, works cited vs. references, robust extraction, normalize.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> Prefer "few-shot examples covering each structural variant with one normalized schema." Reject "add more APA examples" (deepens overfit) and "write a regex per style" (brittle; the exam favors example-driven normalization for varied natural-language layouts). Watch for the normalized-output nuance — the schema must stay constant.</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> A reference-extraction prompt (examples all in APA) returns good results on APA papers but garbage on papers using IEEE numeric citations and footnotes. What is the most effective fix?</p>
+    <p>A. Add several more APA examples for robustness.<br>
+       B. Add one example each for IEEE numeric and footnote styles, all mapping to the same <code>{authors, year, title}</code> schema.<br>
+       C. Instruct "handle all citation formats" without examples.<br>
+       D. Reject non-APA documents.</p>
+    <p><span class="answer">Correct: B.</span></p>
+    <p><span class="correct">Why B is right:</span> Demonstrating each variant with an identical normalized target teaches format-invariant extraction — exactly the failing dimension.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>A</strong> reinforces the single-style overfit. <strong>C</strong> is an abstract instruction with no concrete pattern to imitate for unfamiliar styles. <strong>D</strong> avoids the requirement instead of meeting it.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== 19.6 ============================== -->
+<section id="s196">
+  <h2><span class="num">19.6</span> &nbsp;Addressing Empty/Null Extraction with Few-Shot Examples <span class="pill">Core</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>When a requested field is genuinely absent from the source, the correct output is an explicit <strong>empty/null value</strong> — not a hallucinated or inferred one. Few-shot examples that include "not present" cases teach the model that <em>"I don't see it"</em> is a valid, expected answer, and show the exact token to emit (<code>null</code>, <code>""</code>, <code>[]</code>, or a sentinel like <code>"N/A"</code>).</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>The most dangerous extraction errors are confident fabrications — inventing a phone number, date, or amount that isn't in the document. Demonstrating null cases is the single most effective prompt-side defense against this: it gives the model explicit permission and a template for "absent," so it stops filling gaps with plausible guesses.</p>
+  </div>
+
+  <h4>Worked Example</h4>
+  <pre><code><span class="lbl-input">Extract {name, email, phone}. If a field is not present, use null. Do not guess.</span>
+
+Example 1 (all present):
+Text: "Contact: Dana Ray, dana@acme.io, +1-202-555-0147"
+Output: {"name": "Dana Ray", "email": "dana@acme.io", "phone": "+1-202-555-0147"}
+
+Example 2 (phone missing):
+Text: "Reach Dana Ray at dana@acme.io."
+Output: {"name": "Dana Ray", "email": "dana@acme.io", "phone": null}
+
+Example 3 (nothing extractable):
+Text: "Please see the attached document for details."
+Output: {"name": null, "email": null, "phone": null}
+
+Now extract:
+Text: "Questions? Email support@nimbus.co."
+Output: ?</code></pre>
+  <p class="sub">Expected: <code>{"name": null, "email": "support@nimbus.co", "phone": null}</code> — the model must not invent a person's name from a generic support address.</p>
+
+  <h4>Visualization — Fabricate vs. Null Decision Flow</h4>
+  <figure>
+  <div class="flow">
+    <div class="flow-node">Is the field's value literally present (or unambiguously stated) in the source?</div>
+    <div class="flow-arrow">▼</div>
+    <div class="branch">
+      <div class="flow-node node-good">Yes → extract the value verbatim / lightly normalized</div>
+      <div class="flow-node node-bad">No → emit <code>null</code> (never guess or infer)</div>
+    </div>
+  </div>
+  <figcaption>The null convention shown in examples turns "absent" into a first-class, expected output.</figcaption>
+  </figure>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>Always include at least one all-null example</strong> and one partial-null example.</li>
+      <li><strong>State the convention explicitly</strong> ("use <code>null</code> if absent; do not guess") <em>and</em> demonstrate it — belt and suspenders.</li>
+      <li><strong>Distinguish "absent" from "empty"</strong> if it matters (e.g., <code>null</code> = not mentioned vs. <code>[]</code> = mentioned as none).</li>
+      <li><strong>Pick one sentinel and use it everywhere</strong> — don't mix <code>null</code>, <code>"N/A"</code>, and <code>""</code>.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>No null example</strong>, so the model fills gaps with confident hallucinations.</li>
+      <li><strong>Inferring from context</strong> (guessing a name from an email domain) when the field isn't stated.</li>
+      <li><strong>Inconsistent empty representations</strong> across examples confuse downstream parsers.</li>
+      <li><strong>Punishing "null" implicitly</strong> — if every example has full data, the model learns that a non-null answer is always expected.</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "The extractor invents plausible values for missing fields. How do you stop hallucination?" or "What must the few-shot set include for robust extraction?"</p>
+    <p><strong>Keywords:</strong> <em>missing field, hallucinated value, not present, return null, do not guess, empty result.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> The correct answer almost always includes <em>demonstrating null/absent cases</em>. Reject "instruct not to hallucinate" alone (no demonstration), "lower temperature only" (reduces but doesn't teach the null convention), and "add a required-field validator" (catches errors after the fact rather than preventing the fabrication).</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> An extractor returns a fabricated phone number whenever the document has none. Which single change most directly prevents this?</p>
+    <p>A. Add examples where the phone is missing and the output is <code>"phone": null</code>.<br>
+       B. Add the sentence "do not hallucinate" with no examples.<br>
+       C. Lower the temperature to 0.<br>
+       D. Add a post-hoc validator that rejects malformed phone numbers.</p>
+    <p><span class="answer">Correct: A.</span></p>
+    <p><span class="correct">Why A is right:</span> A demonstrated null case gives the model an explicit, imitable template for "absent," which is the core behavior that's missing.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>B</strong> is an instruction with nothing to imitate for the absent case. <strong>C</strong> reduces variability but a deterministic model can still confidently fabricate. <strong>D</strong> catches some bad values downstream but doesn't stop the model from inventing valid-looking ones.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== 19.7 ============================== -->
+<section id="s197">
+  <h2><span class="num">19.7</span> &nbsp;Hands-On: Engineering Few-Shot Prompts <span class="pill">Lab</span></h2>
+
+  <div class="box concept">
+    <p class="box-title">📘 Concept Summary</p>
+    <p>This section is a repeatable <strong>workflow</strong> for building a few-shot prompt from scratch: define the task and schema, collect real inputs, select boundary examples, add reasoning/format/null demonstrations as needed, then test and iterate. It ties together 19.1–19.6 into one engineering loop.</p>
+  </div>
+
+  <div class="box why">
+    <p class="box-title">💡 Why It Matters</p>
+    <p>Few-shot prompting is an empirical craft, not a one-shot write. Teams that follow a disciplined build-measure-iterate loop reach reliable prompts faster and can explain <em>why</em> each example is present — which is exactly the judgment the certification tests.</p>
+  </div>
+
+  <h4>The 6-Step Engineering Loop</h4>
+  <figure>
+  <div class="flow">
+    <div class="flow-node"><strong>1. Define</strong> — task, labels/schema, and the exact output format</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node"><strong>2. Collect</strong> — gather real inputs, especially failures &amp; edge cases</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node"><strong>3. Select examples</strong> — boundary cases (19.1), balanced across classes</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node"><strong>4. Augment</strong> — add reasoning (19.2), format demos (19.3), null cases (19.6), variant coverage (19.5)</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node"><strong>5. Test</strong> — run a held-out set; log misclassifications</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node"><strong>6. Iterate</strong> — add/swap examples for the new failures; re-test</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node node-good">Ship when held-out accuracy &amp; format-validity plateau</div>
+  </div>
+  <figcaption>Build-measure-iterate loop for few-shot prompt engineering.</figcaption>
+  </figure>
+
+  <h4>Worked Example — A Complete Prompt Assembled from the Loop</h4>
+  <pre><code><span class="lbl-input">SYSTEM:</span> You classify customer messages as ORDER, SUPPORT, or SALES and
+return JSON only. If intent is unclear, choose the best fit and explain briefly.
+Use the reasoning field to name the rejected alternative.
+
+<span class="lbl-input">### Examples</span>
+
+Message: "How much to upgrade my current plan?"
+{"label": "SUPPORT",
+ "reason": "Existing customer account question — SUPPORT over SALES."}
+
+Message: "What does Pro cost for a new team?"
+{"label": "SALES",
+ "reason": "Pre-purchase pricing, no existing account — SALES over SUPPORT."}
+
+Message: "Order #4412 hasn't shipped."
+{"label": "SUPPORT",
+ "reason": "Problem with an existing order — SUPPORT over ORDER."}
+
+Message: "..." (no discernible intent)
+{"label": null,
+ "reason": "No actionable intent present."}
+
+<span class="lbl-input">### Now classify</span>
+Message: "Can I add three seats to our account today?"</code></pre>
+  <p class="sub">This single prompt combines targeted boundary examples (19.1), reason-with-rejected-alternative (19.2), strict JSON format (19.3), and a null case for unclassifiable input (19.6).</p>
+
+  <h4>Visualization — Iteration Log Template</h4>
+  <table>
+    <thead><tr><th>Iteration</th><th>Change made</th><th>Held-out accuracy</th><th>Format-valid %</th></tr></thead>
+    <tbody>
+      <tr><td>v1 (zero-shot)</td><td>Instruction only</td><td>71%</td><td>88%</td></tr>
+      <tr><td>v2</td><td>+3 boundary examples (19.1)</td><td>84%</td><td>90%</td></tr>
+      <tr><td>v3</td><td>+reasoning field (19.2)</td><td>89%</td><td>92%</td></tr>
+      <tr><td>v4</td><td>+JSON format demo &amp; null case (19.3/19.6)</td><td>90%</td><td class="yes">99%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box tip">
+    <p class="box-title">✅ Tips &amp; Tricks</p>
+    <ul>
+      <li><strong>Change one thing per iteration</strong> so you can attribute gains and losses.</li>
+      <li><strong>Keep a held-out test set</strong> the examples never touch — measure on it, not on the examples.</li>
+      <li><strong>Order matters:</strong> put the clearest, most canonical examples first; keep example format identical.</li>
+      <li><strong>Stop adding examples when accuracy plateaus</strong> — more tokens then just cost money and latency.</li>
+      <li><strong>Version and comment your prompts</strong> so each example's purpose is documented.</li>
+    </ul>
+  </div>
+
+  <div class="box warn">
+    <p class="box-title">⚠️ Common Pitfalls</p>
+    <ul>
+      <li><strong>Testing on the same examples you put in the prompt</strong> — inflated, misleading accuracy.</li>
+      <li><strong>Changing many things at once</strong>, so you can't tell what helped.</li>
+      <li><strong>Endless example growth</strong> that bloats context and adds latency for no accuracy gain.</li>
+      <li><strong>Ignoring format-validity</strong> while chasing label accuracy — a valid label in broken JSON still breaks the pipeline.</li>
+    </ul>
+  </div>
+
+  <div class="box exam">
+    <p class="box-title">🎯 Exam Strategy Box</p>
+    <p><strong>How questions are phrased:</strong> "You're iterating on a few-shot prompt. What's the correct methodology?" or "Which step comes next after v2 improves on the training examples but not on new inputs?"</p>
+    <p><strong>Keywords:</strong> <em>held-out set, iterate, one change at a time, plateau, overfitting to examples, evaluation.</em></p>
+    <p><strong>Eliminating wrong answers:</strong> Prefer options that emphasize measuring on <em>held-out</em> data and changing one variable at a time. Reject "keep adding examples until 100%" (overfit/bloat) and "test on the prompt's own examples." Watch for the overfitting trap — improvement on the in-prompt examples is not evidence of generalization.</p>
+  </div>
+
+  <div class="box qa">
+    <p class="box-title">📝 Sample Q&amp;A</p>
+    <p><strong>Q.</strong> After adding examples, your prompt scores 100% on the messages that are <em>in</em> the prompt but only 74% on new messages. What is the best next step?</p>
+    <p>A. Add the failing new messages verbatim as more examples until new-set accuracy hits 100%.<br>
+       B. Evaluate on a separate held-out set, then add a few <em>representative</em> boundary examples for the failure types and re-test.<br>
+       C. Declare success — 100% on the in-prompt examples proves the prompt works.<br>
+       D. Remove all examples and return to zero-shot.</p>
+    <p><span class="answer">Correct: B.</span></p>
+    <p><span class="correct">Why B is right:</span> The gap between in-prompt and new-input accuracy is classic overfitting. Measuring on held-out data and adding representative (not memorized) examples for the failure <em>categories</em> improves generalization.</p>
+    <p><span class="distractor">Why the others are wrong:</span> <strong>A</strong> memorizes the test set and won't generalize. <strong>C</strong> mistakes in-prompt performance for real performance. <strong>D</strong> discards the gains few-shot already delivered.</p>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+<!-- ============================== SUMMARY ============================== -->
+<section id="summary">
+  <h2>📌 Chapter Summary, Mind Map &amp; Final Checklist</h2>
+
+  <h3>Quick Reference Table</h3>
+  <table>
+    <thead><tr><th>§</th><th>Sub-topic</th><th>One-line takeaway</th></tr></thead>
+    <tbody>
+      <tr><td>19.1</td><td>Targeted examples for ambiguity</td><td>Demonstrate the boundary cases, not the obvious ones — pair look-alikes with contrasting labels.</td></tr>
+      <tr><td>19.2</td><td>Demonstrating reasoning</td><td>Show reason-before-answer that names the rejected alternative ("X over Y because…").</td></tr>
+      <tr><td>19.3</td><td>Format demonstration</td><td>Lock output shape with 2–3 complete example outputs, including a missing-field case.</td></tr>
+      <tr><td>19.4</td><td>Acceptable code vs. issues</td><td>Show the same pattern as OK in one context and an ISSUE in another — context decides.</td></tr>
+      <tr><td>19.5</td><td>Varied document structures</td><td>One example per layout variant, all mapping to one normalized schema.</td></tr>
+      <tr><td>19.6</td><td>Empty/null extraction</td><td>Demonstrate null cases so "absent" is a valid answer and the model stops fabricating.</td></tr>
+      <tr><td>19.7</td><td>Hands-on engineering</td><td>Define → collect → select → augment → test on held-out → iterate one change at a time.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Mind Map — How the Sub-Topics Relate</h3>
+  <figure>
+  <svg viewBox="0 0 900 430" role="img" aria-label="Mind map of Chapter 19 sub-topics">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"></path>
+      </marker>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#2563eb"></stop><stop offset="1" stop-color="#7c3aed"></stop>
+      </linearGradient>
+    </defs>
+    <!-- center -->
+    <rect x="360" y="20" width="180" height="52" rx="12" fill="url(#g1)"></rect>
+    <text x="450" y="42" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Ambiguous Input</text>
+    <text x="450" y="60" text-anchor="middle" fill="#e0e7ff" font-size="11">(the core problem)</text>
+
+    <!-- 19.1 -->
+    <rect x="330" y="120" width="240" height="46" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+    <text x="450" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">19.1 Targeted examples</text>
+    <text x="450" y="156" text-anchor="middle" font-size="10.5" fill="#5a6577">pick the boundary cases</text>
+
+    <!-- branch row -->
+    <rect x="40" y="210" width="200" height="60" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"></rect>
+    <text x="140" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">19.2 Reasoning</text>
+    <text x="140" y="249" text-anchor="middle" font-size="10.5" fill="#5a6577">why X over Y</text>
+
+    <rect x="255" y="210" width="180" height="60" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"></rect>
+    <text x="345" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">19.3 Format</text>
+    <text x="345" y="249" text-anchor="middle" font-size="10.5" fill="#5a6577">exact schema</text>
+
+    <rect x="450" y="210" width="200" height="60" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"></rect>
+    <text x="550" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">19.5 Varied structures</text>
+    <text x="550" y="249" text-anchor="middle" font-size="10.5" fill="#5a6577">normalize layouts</text>
+
+    <rect x="665" y="210" width="195" height="60" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"></rect>
+    <text x="762" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">19.4 Code: OK vs. issue</text>
+    <text x="762" y="249" text-anchor="middle" font-size="10.5" fill="#5a6577">context decides</text>
+
+    <!-- edge cases -->
+    <rect x="300" y="315" width="300" height="46" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"></rect>
+    <text x="450" y="335" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2233">19.6 Empty / null — don't fabricate</text>
+    <text x="450" y="351" text-anchor="middle" font-size="10.5" fill="#5a6577">absent is a valid answer</text>
+
+    <!-- hands-on -->
+    <rect x="330" y="385" width="240" height="34" rx="9" fill="#0f172a"></rect>
+    <text x="450" y="407" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">19.7 Engineer &amp; iterate the loop</text>
+
+    <!-- connectors -->
+    <line x1="450" y1="72" x2="450" y2="118" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow)"></line>
+    <line x1="360" y1="150" x2="150" y2="208" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="410" y1="166" x2="360" y2="208" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="490" y1="166" x2="540" y2="208" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="540" y1="150" x2="750" y2="208" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="140" y1="270" x2="380" y2="315" stroke="#16a34a" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="345" y1="270" x2="420" y2="315" stroke="#16a34a" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="550" y1="270" x2="480" y2="315" stroke="#16a34a" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="762" y1="270" x2="520" y2="315" stroke="#16a34a" stroke-width="1.6" marker-end="url(#arrow)"></line>
+    <line x1="450" y1="361" x2="450" y2="383" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"></line>
+  </svg>
+  <figcaption>Ambiguity drives targeted examples (19.1), which are then augmented with reasoning, format, structure, and code-context techniques (19.2–19.5), guarded by null-handling (19.6), and assembled through the engineering loop (19.7).</figcaption>
+  </figure>
+
+  <h3>✅ Final Exam Checklist — Must-Know Before the Exam</h3>
+  <div class="box tip">
+    <ul>
+      <li><strong>Targeted &gt; more instructions:</strong> for edge-case failures, add boundary examples, not more prose.</li>
+      <li><strong>Pair look-alikes</strong> with contrasting labels to encode the discriminating feature.</li>
+      <li><strong>Reasoning goes before the answer</strong> and must name the rejected alternative.</li>
+      <li><strong>Chain-of-thought helps ambiguous/reasoning tasks</strong>, not trivial mappings — know the nuance.</li>
+      <li><strong>Format is taught by complete example outputs</strong>, including a missing-field/null case; prefilling the opening brace suppresses preambles.</li>
+      <li><strong>Context decides code verdicts:</strong> show the same pattern as OK and as ISSUE; add severity levels.</li>
+      <li><strong>Robust extraction = one example per layout variant → one normalized schema.</strong></li>
+      <li><strong>Demonstrate null cases</strong> to stop fabrication; pick one sentinel and use it consistently.</li>
+      <li><strong>Balance classes</strong> and avoid contradictory or leaky examples.</li>
+      <li><strong>Iterate on a held-out set</strong>, one change at a time; stop at the accuracy/format plateau.</li>
+      <li><strong>Overfitting trap:</strong> high accuracy on in-prompt examples ≠ generalization.</li>
+      <li><strong>Frame Claude behavior as general prompting best practice</strong> — no unverifiable proprietary claims.</li>
+    </ul>
+  </div>
+
+  <p class="sub" style="margin-top:24px; text-align:center;">End of Chapter 19 — Few-Shot Prompting for Ambiguous Inputs · Claude Certified Architect study guide.</p>
+  <a class="backtop" href="#top">↑ Back to top</a>
+</section>
+
+</div>
+
+</body></html>

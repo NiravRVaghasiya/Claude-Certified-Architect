@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 15: Plan Mode vs Direct Execution — CCAR Study Notes</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --navy: #0f172a;
+    --navy-light: #1e293b;
+    --navy-mid: #334155;
+    --slate: #64748b;
+    --slate-light: #94a3b8;
+    --sky: #38bdf8;
+    --sky-dark: #0284c7;
+    --sky-bg: #0c4a6e;
+    --violet: #8b5cf6;
+    --violet-bg: #4c1d95;
+    --emerald: #34d399;
+    --emerald-dark: #059669;
+    --emerald-bg: #064e3b;
+    --amber: #fbbf24;
+    --amber-dark: #d97706;
+    --amber-bg: #78350f;
+    --rose: #fb7185;
+    --rose-dark: #e11d48;
+    --rose-bg: #881337;
+    --white: #f8fafc;
+    --bg: #020617;
+    --card-bg: #0f172a;
+    --border: #1e293b;
+    --radius: 10px;
+    --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Cascadia Code', 'Fira Code', 'SF Mono', Consolas, monospace;
+    --font-serif: Georgia, 'Times New Roman', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0;
+  }
+
+  /* === HEADER BANNER === */
+  .chapter-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--violet-bg) 50%, var(--sky-bg) 100%);
+    border-bottom: 3px solid var(--violet);
+    padding: 48px 40px 40px;
+    text-align: center;
+  }
+  .chapter-banner .badge {
+    display: inline-block;
+    background: rgba(139,92,246,0.25);
+    border: 1px solid var(--violet);
+    color: var(--violet);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .chapter-banner h1 {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .chapter-banner .subtitle {
+    font-size: 16px;
+    color: var(--slate-light);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* === LAYOUT === */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* === TABLE OF CONTENTS === */
+  .toc {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 40px;
+  }
+  .toc h2 {
+    font-size: 18px;
+    color: var(--sky);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: toc-counter;
+  }
+  .toc ol li {
+    counter-increment: toc-counter;
+    margin-bottom: 6px;
+  }
+  .toc ol li a {
+    color: var(--slate-light);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.15s;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .toc ol li a::before {
+    content: counter(toc-counter, decimal) ".";
+    color: var(--slate);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    min-width: 22px;
+  }
+  .toc ol li a:hover { color: var(--sky); }
+  .toc .toc-divider {
+    border-top: 1px solid var(--border);
+    margin: 12px 0;
+  }
+
+  /* === SECTION HEADERS === */
+  .section {
+    margin-bottom: 56px;
+    scroll-margin-top: 24px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-number {
+    background: var(--violet);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: var(--white);
+  }
+
+  /* === CONTENT BLOCKS === */
+  .block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .block-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+
+  /* Concept */
+  .block.concept { border-left: 4px solid var(--sky); }
+  .block.concept .block-label { background: rgba(56,189,248,0.15); color: var(--sky); }
+
+  /* Example */
+  .block.example { border-left: 4px solid var(--emerald); }
+  .block.example .block-label { background: rgba(52,211,153,0.15); color: var(--emerald); }
+
+  /* Tip */
+  .block.tip { border-left: 4px solid var(--amber); }
+  .block.tip .block-label { background: rgba(251,191,36,0.15); color: var(--amber); }
+
+  /* Exam Strategy */
+  .block.exam { border-left: 4px solid var(--violet); }
+  .block.exam .block-label { background: rgba(139,92,246,0.15); color: var(--violet); }
+
+  /* Warning */
+  .block.warning { border-left: 4px solid var(--rose); }
+  .block.warning .block-label { background: rgba(251,113,133,0.15); color: var(--rose); }
+
+  /* Principles / Key list */
+  .block.principles { border-left: 4px solid var(--slate); }
+  .block.principles .block-label { background: rgba(100,116,139,0.15); color: var(--slate-light); }
+
+  .block h3 {
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .block p, .block li {
+    color: var(--slate-light);
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .block ul, .block ol {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  .block li { margin-bottom: 6px; }
+  .block li strong { color: var(--white); }
+
+  /* === CODE / ASCII BLOCKS === */
+  pre.ascii, pre.code-block {
+    background: #020617;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--slate-light);
+    overflow-x: auto;
+    margin: 14px 0;
+    white-space: pre;
+  }
+
+  /* === TABLES === */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 14px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  table th {
+    background: var(--navy-light);
+    color: var(--sky);
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--violet);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--slate-light);
+    vertical-align: top;
+  }
+  table tr:hover td { background: rgba(56,189,248,0.04); }
+  table .highlight-plan { color: var(--violet); font-weight: 600; }
+  table .highlight-direct { color: var(--emerald); font-weight: 600; }
+  table .highlight-explore { color: var(--amber); font-weight: 600; }
+
+  /* === INLINE MARKS === */
+  code {
+    background: rgba(56,189,248,0.1);
+    color: var(--sky);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .tag-plan {
+    background: rgba(139,92,246,0.2);
+    color: var(--violet);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+  }
+  .tag-direct {
+    background: rgba(52,211,153,0.2);
+    color: var(--emerald);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+  }
+  .tag-explore {
+    background: rgba(251,191,36,0.2);
+    color: var(--amber);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+  }
+
+  em { color: var(--amber); font-style: normal; }
+
+  /* === QUIZ === */
+  .quiz-q {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .quiz-q .q-num {
+    font-family: var(--font-mono);
+    color: var(--violet);
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .quiz-q .q-text {
+    color: var(--white);
+    font-size: 15px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .quiz-q .options { padding-left: 8px; }
+  .quiz-q .options div {
+    color: var(--slate-light);
+    font-size: 14px;
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .quiz-q .options .correct { color: var(--emerald); font-weight: 600; }
+  .quiz-q .explanation {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 13.5px;
+    color: var(--slate-light);
+    line-height: 1.6;
+  }
+  .quiz-q .explanation strong { color: var(--emerald); }
+
+  /* === CHEAT SHEET === */
+  .cheat-sheet {
+    background: linear-gradient(135deg, var(--navy) 0%, rgba(76,29,149,0.3) 100%);
+    border: 2px solid var(--violet);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+  }
+  .cheat-sheet h2 {
+    color: var(--violet);
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .cheat-sheet li {
+    color: var(--slate-light);
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .cheat-sheet li strong { color: var(--white); }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .chapter-banner { padding: 32px 20px; }
+    .chapter-banner h1 { font-size: 26px; }
+    .container { padding: 20px 16px 60px; }
+    .section-title { font-size: 20px; }
+    pre.ascii { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     CHAPTER BANNER
+     ============================================================ -->
+<div class="chapter-banner">
+  <div class="badge">CCAR-F / CCAR-P — Exam Study Notes</div>
+  <h1>Chapter 15: Plan Mode vs Direct Execution</h1>
+  <p class="subtitle">Mastering execution mode selection in Claude's agentic coding workflows — when to plan, when to act, and when to explore first.</p>
+</div>
+
+<div class="container">
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<nav class="toc" id="toc">
+  <h2><i class="fa-solid fa-list"></i> Table of Contents</h2>
+  <ol>
+    <li><a href="#s15-1">When to Use Plan Mode: Complex, Multi-File, Architectural Tasks</a></li>
+    <li><a href="#s15-2">When to Use Direct Execution: Simple, Well-Scoped Changes</a></li>
+    <li><a href="#s15-3">Safe Codebase Exploration Before Committing to Changes</a></li>
+    <li><a href="#s15-4">The Explore Subagent for Isolating Verbose Discovery</a></li>
+    <li><a href="#s15-5">Combining Plan Mode Investigation with Direct Execution</a></li>
+    <li><a href="#s15-6">Hands-On: Choosing the Right Execution Mode</a></li>
+    <div class="toc-divider"></div>
+    <li><a href="#master-table">Master Comparison Table</a></li>
+    <li><a href="#decision-flow">Decision Flowchart</a></li>
+    <li><a href="#exam-prep">Exam Preparation — Practice Questions</a></li>
+    <li><a href="#cheat-sheet">Quick-Reference Cheat Sheet</a></li>
+  </ol>
+</nav>
+
+
+<!-- ============================================================
+     15.1 — PLAN MODE
+     ============================================================ -->
+<div class="section" id="s15-1">
+  <div class="section-header">
+    <span class="section-number">15.1</span>
+    <span class="section-title">When to Use Plan Mode: Complex, Multi-File, Architectural Tasks</span>
+  </div>
+
+  <!-- Concept -->
+  <div class="block concept">
+    <div class="block-label"><i class="fa-solid fa-book"></i> Concept</div>
+    <p><strong>Plan Mode</strong> (toggled via <code>Shift+Tab</code> in Claude Code) instructs Claude to <em>analyze, reason, and propose a structured plan</em> before executing any file modifications. In Plan Mode, Claude reads the codebase, identifies affected files, maps dependencies, and outputs a step-by-step implementation proposal — but <strong>does not write or edit any files</strong> until the user explicitly approves and switches to execution. This is the "think before you act" paradigm for agentic coding.</p>
+    <p style="margin-top:10px;">Plan Mode is designed for situations where the <em>blast radius</em> of a change is large, the interactions between components are non-obvious, or the developer needs confidence that the AI understands the full scope before committing.</p>
+  </div>
+
+  <!-- Key Principles -->
+  <div class="block principles">
+    <div class="block-label"><i class="fa-solid fa-key"></i> Key Principles</div>
+    <ul>
+      <li><strong>Multi-file awareness:</strong> Plan Mode forces Claude to map out <em>all</em> files that need to change — interfaces, implementations, tests, imports, configs — before touching any single file.</li>
+      <li><strong>Dependency chain analysis:</strong> Claude traces call graphs, import trees, and type hierarchies to identify cascading impacts. A rename in a base class ripples through dozens of consumers.</li>
+      <li><strong>Architectural coherence:</strong> Plans maintain consistency across the change set. Without planning, sequential edits can create intermediate broken states that are hard to diagnose.</li>
+      <li><strong>Human-in-the-loop gate:</strong> The plan is presented to the developer for review. The user can refine, reject, or redirect before any code is written — reducing wasted work and wrong-direction edits.</li>
+      <li><strong>Higher token cost, lower error cost:</strong> Plan Mode consumes more tokens (analysis + plan text + eventual execution) but drastically reduces the risk of producing an inconsistent, half-finished change set.</li>
+      <li><strong>Explicit scope declaration:</strong> The plan enumerates exactly what will change and what won't, making the change auditable before it happens.</li>
+    </ul>
+  </div>
+
+  <!-- Visualization -->
+  <pre class="ascii">  ┌─────────────────────────────────────────────────────────────────────────────┐
+  │                     PLAN MODE EXECUTION LIFECYCLE                          │
+  ├─────────────────────────────────────────────────────────────────────────────┤
+  │                                                                             │
+  │   User Request                                                              │
+  │       │                                                                     │
+  │       ▼                                                                     │
+  │   ┌─────────────────┐    ┌──────────────────┐    ┌───────────────────┐     │
+  │   │  1. UNDERSTAND   │───▶│  2. INVESTIGATE   │───▶│  3. BUILD PLAN    │     │
+  │   │  Parse the task  │    │  Read files,      │    │  Enumerate files, │     │
+  │   │  Identify scope  │    │  trace deps,      │    │  order changes,   │     │
+  │   │                  │    │  map codebase      │    │  describe each    │     │
+  │   └─────────────────┘    └──────────────────┘    └────────┬──────────┘     │
+  │                                                            │                │
+  │                                                            ▼                │
+  │                                                   ┌───────────────────┐     │
+  │                                                   │  4. USER REVIEW   │     │
+  │                           ┌──────────────────┐    │  Approve / Modify │     │
+  │                           │  5. EXECUTE       │◀──│  / Reject          │     │
+  │                           │  Apply changes    │    └───────────────────┘     │
+  │                           │  in planned order │                              │
+  │                           └──────────────────┘                              │
+  │                                                                             │
+  │   Key: No files are modified in steps 1–4. Execution only after approval.  │
+  └─────────────────────────────────────────────────────────────────────────────┘
+  </pre>
+
+  <!-- Real-World Example -->
+  <div class="block example">
+    <div class="block-label"><i class="fa-solid fa-flask"></i> Real-World Example</div>
+    <h3>Scenario: Migrating a REST API from Express to Fastify</h3>
+    <p>A developer asks Claude to migrate a Node.js backend from Express to Fastify. The project has 40+ route handlers, custom middleware, error handlers, and integration tests. In <span class="tag-plan">PLAN</span> mode, Claude:</p>
+    <ol>
+      <li>Reads the Express app entry point, middleware stack, and route files</li>
+      <li>Maps the middleware dependency graph (auth → rate-limit → logging → routes)</li>
+      <li>Identifies Fastify equivalents for each Express pattern (middleware → hooks/plugins, <code>req.body</code> → schema validation)</li>
+      <li>Produces a 12-step plan: install Fastify deps → convert app bootstrap → migrate middleware → convert routes (grouped by domain) → update tests → update Docker config</li>
+      <li>Flags risk: "Express <code>res.locals</code> pattern used in 8 handlers — Fastify uses <code>request.decorators</code>; requires manual verification"</li>
+    </ol>
+    <p>The developer reviews, adjusts step ordering, then approves. Only then does Claude begin writing code — in the planned sequence.</p>
+  </div>
+
+  <!-- Tips & Tricks -->
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Memory aid — "Plan = Map the Minefield":</strong> Think of Plan Mode as sending a reconnaissance drone before deploying troops. You want the full terrain map (dependency graph, interface contracts, test coverage) before any boots hit the ground.</li>
+      <li><strong>Toggle shortcut:</strong> In Claude Code, <code>Shift+Tab</code> toggles between Plan and Act modes. The mode indicator appears in the input bar. If you forget which mode you're in, check the UI label.</li>
+      <li><strong>Plan quality correlates with context quality:</strong> Plans are only as good as the codebase context Claude can access. Ensure <code>CLAUDE.md</code>, architecture docs, and relevant files are accessible.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="block exam">
+    <div class="block-label"><i class="fa-solid fa-crosshairs"></i> Exam Strategy — 15.1</div>
+    <p><strong>Trigger words in questions:</strong> <em>"multi-file"</em>, <em>"refactor"</em>, <em>"architecture"</em>, <em>"cascading changes"</em>, <em>"unknown codebase"</em>, <em>"migration"</em>, <em>"restructure"</em>, <em>"large-scale"</em></p>
+    <p>→ These almost always signal: <strong>choose Plan Mode</strong>.</p>
+    <p style="margin-top:8px;"><strong>Common distractor:</strong> "Plan Mode is always the safest choice." This is <em>false</em> — Plan Mode has higher token cost, latency overhead, and is overkill for trivial changes. The exam tests whether you know when Plan Mode is <em>appropriate</em>, not whether you default to it.</p>
+    <p style="margin-top:8px;"><strong>Key distinction:</strong> Plan Mode = <em>read-only analysis → user approval → execution</em>. Direct Execution = <em>immediate tool use</em>. If a question describes a workflow where files are edited <em>before</em> a plan is shown, that's Direct Execution regardless of what the question claims.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     15.2 — DIRECT EXECUTION
+     ============================================================ -->
+<div class="section" id="s15-2">
+  <div class="section-header">
+    <span class="section-number">15.2</span>
+    <span class="section-title">When to Use Direct Execution: Simple, Well-Scoped Changes</span>
+  </div>
+
+  <!-- Concept -->
+  <div class="block concept">
+    <div class="block-label"><i class="fa-solid fa-book"></i> Concept</div>
+    <p><strong>Direct Execution</strong> (also called "Act Mode") is Claude's default operating mode where it <em>immediately reads, writes, and modifies files</em> in response to a request without producing an intermediate plan. Claude uses tools — <code>Read</code>, <code>Write</code>, <code>Edit</code>, <code>Bash</code> — as soon as it determines the appropriate action. This is optimal for tasks where the scope is clear, the risk is low, and the overhead of a formal plan would slow down an otherwise fast operation.</p>
+    <p style="margin-top:10px;">Direct Execution trusts that the task is well-understood and the changes are either trivially correct, easily reversible (via <code>git</code>), or confined to a small surface area.</p>
+  </div>
+
+  <!-- Key Principles -->
+  <div class="block principles">
+    <div class="block-label"><i class="fa-solid fa-key"></i> Key Principles</div>
+    <ul>
+      <li><strong>Low-ceremony, high-speed:</strong> No planning phase means faster turnaround. Ideal for the "just do it" class of tasks — bug fixes, typo corrections, adding an import, writing a utility function.</li>
+      <li><strong>Single-file or tightly scoped:</strong> Best when the change affects one file, or a small cluster of files with no ambiguous cross-dependencies.</li>
+      <li><strong>Git as safety net:</strong> Direct Execution relies on version control as the undo mechanism. Every edit is recoverable via <code>git diff</code>, <code>git stash</code>, or <code>git checkout</code>.</li>
+      <li><strong>Lower token cost:</strong> No separate planning pass means fewer total tokens consumed. For simple tasks, Plan Mode can spend more tokens on the plan than the actual edit.</li>
+      <li><strong>Iterative correction:</strong> If Claude's first attempt isn't quite right, the developer can give feedback and Claude iterates — still faster than a full plan-approve-execute cycle for simple fixes.</li>
+      <li><strong>Appropriate trust level:</strong> Use Direct Execution when you <em>know the answer space is small</em>. "Add a <code>--verbose</code> flag to the CLI" has a narrow, predictable implementation.</li>
+    </ul>
+  </div>
+
+  <!-- Visualization: When to use Direct Execution -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Signal</th>
+          <th>Direct Execution?</th>
+          <th>Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fix a typo in a docstring</td>
+          <td class="highlight-direct">✅ Yes</td>
+          <td>Single-line, zero-risk, no dependencies</td>
+        </tr>
+        <tr>
+          <td>Add an import statement</td>
+          <td class="highlight-direct">✅ Yes</td>
+          <td>Single-file change, well-defined action</td>
+        </tr>
+        <tr>
+          <td>Write a new unit test for an existing function</td>
+          <td class="highlight-direct">✅ Yes</td>
+          <td>Additive (new file), doesn't modify existing code</td>
+        </tr>
+        <tr>
+          <td>Rename a variable used across 15 files</td>
+          <td class="highlight-plan">❌ Use Plan</td>
+          <td>Multi-file, cascading — needs dependency mapping</td>
+        </tr>
+        <tr>
+          <td>Add a CLI flag with 2-line implementation</td>
+          <td class="highlight-direct">✅ Yes</td>
+          <td>Small scope, predictable outcome</td>
+        </tr>
+        <tr>
+          <td>Restructure module hierarchy</td>
+          <td class="highlight-plan">❌ Use Plan</td>
+          <td>Architectural change, import rewiring needed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Real-World Example -->
+  <div class="block example">
+    <div class="block-label"><i class="fa-solid fa-flask"></i> Real-World Example</div>
+    <h3>Scenario: Adding a Validation Check</h3>
+    <p>A developer says: <em>"Add input validation to the <code>createUser</code> function — check that email is non-empty and matches a basic regex."</em></p>
+    <p>This is a textbook <span class="tag-direct">DIRECT</span> execution task:</p>
+    <ul>
+      <li>One function, one file</li>
+      <li>Clear acceptance criteria (non-empty + regex)</li>
+      <li>No cross-file dependencies — the function's callers don't change</li>
+      <li>Easily tested: run the existing test suite</li>
+    </ul>
+    <p>Claude reads the file, adds the validation logic at the function entry point, and runs the tests. Total time: seconds. A planning phase would add latency with zero safety benefit.</p>
+  </div>
+
+  <!-- Tips -->
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Memory aid — "SWAT":</strong> Direct Execution is for <strong>S</strong>ingle-file, <strong>W</strong>ell-scoped, <strong>A</strong>dditive or <strong>T</strong>rivial tasks. If the task passes the SWAT test, go direct.</li>
+      <li><strong>Watch for scope creep:</strong> A task that <em>starts</em> simple can reveal unexpected complexity mid-execution. If Claude discovers during a Direct Execution pass that 8 more files need changes, it should signal this — and the developer should consider switching to Plan Mode.</li>
+      <li><strong>"Additive" is generally safe:</strong> Creating a <em>new</em> file (test, utility, config) is almost always safe for Direct Execution because it doesn't modify existing behavior.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="block exam">
+    <div class="block-label"><i class="fa-solid fa-crosshairs"></i> Exam Strategy — 15.2</div>
+    <p><strong>Trigger words:</strong> <em>"simple"</em>, <em>"one file"</em>, <em>"quick fix"</em>, <em>"add a test"</em>, <em>"typo"</em>, <em>"straightforward"</em>, <em>"well-defined"</em></p>
+    <p>→ These signal: <strong>choose Direct Execution</strong>.</p>
+    <p style="margin-top:8px;"><strong>Trap question pattern:</strong> "A developer needs to rename a single utility function used in one file. Which mode?" — Answer: <em>Direct Execution</em>. The key is "used in <strong>one</strong> file." If the question said "used across 12 files," it would be Plan Mode. Read the scope carefully.</p>
+    <p style="margin-top:8px;"><strong>Anti-distractor:</strong> The answer "always use Plan Mode for safety" is never correct. The exam rewards nuanced judgment, not risk aversion.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     15.3 — SAFE CODEBASE EXPLORATION
+     ============================================================ -->
+<div class="section" id="s15-3">
+  <div class="section-header">
+    <span class="section-number">15.3</span>
+    <span class="section-title">Safe Codebase Exploration Before Committing to Changes</span>
+  </div>
+
+  <!-- Concept -->
+  <div class="block concept">
+    <div class="block-label"><i class="fa-solid fa-book"></i> Concept</div>
+    <p><strong>Safe codebase exploration</strong> is the practice of performing <em>read-only investigation</em> of a project's structure, conventions, dependencies, and patterns before making any modifications. This is a pre-requisite discipline — not a mode per se, but a behavioral pattern — where Claude (or the developer directing Claude) invests upfront time in understanding the terrain. The principle: <em>never commit to changes in a codebase you don't yet understand</em>.</p>
+    <p style="margin-top:10px;">In Claude Code, exploration uses read-only tools: <code>Read</code> (file contents), <code>Bash</code> (for <code>grep</code>, <code>find</code>, <code>git log</code>), <code>ListFiles</code>, and search commands — none of which modify the filesystem.</p>
+  </div>
+
+  <!-- Key Principles -->
+  <div class="block principles">
+    <div class="block-label"><i class="fa-solid fa-key"></i> Key Principles</div>
+    <ul>
+      <li><strong>Read before write — always:</strong> Even in Direct Execution mode, Claude should read the target file and understand its context before applying edits. Blind writes cause regressions.</li>
+      <li><strong>Project structure first:</strong> Start with high-level exploration: <code>ls</code>, <code>tree</code>, README, package.json/pyproject.toml, architecture docs. Understand the project's shape before diving into individual files.</li>
+      <li><strong>Convention detection:</strong> Identify naming patterns, error-handling conventions, import styles, test structure. Changes should conform to the project's existing patterns, not the AI's defaults.</li>
+      <li><strong>Dependency tracing:</strong> Use <code>grep</code> and import analysis to trace who calls the function/class you're about to change. This determines the true blast radius.</li>
+      <li><strong>CLAUDE.md and config files:</strong> If the project has a <code>CLAUDE.md</code>, <code>.clinerules</code>, or similar configuration, reading it first provides critical context about project conventions, forbidden patterns, and preferred approaches.</li>
+      <li><strong>Exploration is cheap; mistakes are expensive:</strong> Reading 10 files costs tokens but no risk. Editing 1 file blindly can break the build, fail tests, and require debugging — costing far more tokens and time.</li>
+    </ul>
+  </div>
+
+  <!-- Visualization -->
+  <pre class="ascii">  ┌────────────────────────────────────────────────────────────────────┐
+  │              SAFE EXPLORATION CHECKLIST                            │
+  ├────────────────────────────────────────────────────────────────────┤
+  │                                                                    │
+  │  □ Read project README / CLAUDE.md / ARCHITECTURE.md               │
+  │  □ List directory structure (tree / ls -R)                         │
+  │  □ Check package manifest (package.json / pyproject.toml / etc.)   │
+  │  □ Read the target file(s) you'll be modifying                     │
+  │  □ grep for references to the function/class being changed         │
+  │  □ Check test files — are there existing tests for this code?      │
+  │  □ Look at recent git log for the file — any recent changes?       │
+  │  □ Identify coding conventions (naming, error handling, imports)    │
+  │                                                                    │
+  │  ✅ Only after ALL relevant items checked → proceed to edit        │
+  │  ❌ If any item reveals unexpected complexity → switch to Plan     │
+  │                                                                    │
+  └────────────────────────────────────────────────────────────────────┘
+  </pre>
+
+  <!-- Real-World Example -->
+  <div class="block example">
+    <div class="block-label"><i class="fa-solid fa-flask"></i> Real-World Example</div>
+    <h3>Scenario: Fixing a Bug in an Unfamiliar Codebase</h3>
+    <p>A developer joins a new project and asks Claude: <em>"Fix the null pointer exception in <code>processOrder()</code>."</em> Instead of jumping to the fix, Claude explores first:</p>
+    <ol>
+      <li>Reads the file containing <code>processOrder()</code> — finds it calls <code>getCustomer()</code> which can return <code>null</code></li>
+      <li>Greps for all callers of <code>processOrder()</code> — discovers it's called from 3 route handlers and 1 background job</li>
+      <li>Reads the test file — finds <em>no test for the null case</em></li>
+      <li>Checks <code>getCustomer()</code> — confirms it returns <code>null</code> when customer is deleted</li>
+      <li>Now, with full context, applies the fix (null check + appropriate error response) <em>and</em> adds the missing test</li>
+    </ol>
+    <p>Without exploration, Claude might have added a bare null check without understanding <em>why</em> the null occurs — producing a band-aid rather than a correct fix.</p>
+  </div>
+
+  <!-- Tips -->
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Memory aid — "Scout then Strike":</strong> Military operations don't begin without reconnaissance. Coding operations shouldn't either. Scout (explore) before strike (edit).</li>
+      <li><strong>Exploration has a stopping rule:</strong> You don't need to read the entire codebase. Explore until you can confidently answer: "What will change, what won't, and what might break?"</li>
+      <li><strong><code>git log --oneline -10 &lt;file&gt;</code></strong> is an underused exploration tool — it reveals who last modified the file and why, giving valuable contextual clues.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="block exam">
+    <div class="block-label"><i class="fa-solid fa-crosshairs"></i> Exam Strategy — 15.3</div>
+    <p><strong>Trigger words:</strong> <em>"unfamiliar codebase"</em>, <em>"before making changes"</em>, <em>"investigate first"</em>, <em>"understand the structure"</em>, <em>"read-only"</em></p>
+    <p>→ These signal: <strong>exploration phase required before any mode selection</strong>.</p>
+    <p style="margin-top:8px;"><strong>Key exam insight:</strong> Exploration is <em>not</em> a separate "mode" — it's a best practice that can occur within Plan Mode, before Direct Execution, or via a dedicated Explore Subagent (see 15.4). If a question asks "what should Claude do <em>first</em> in an unknown codebase?" — the answer is always <em>explore</em>, never <em>start editing</em>.</p>
+    <p style="margin-top:8px;"><strong>Watch for:</strong> Questions where exploration reveals that a "simple" task is actually complex. The correct answer is to escalate to Plan Mode — not to forge ahead with Direct Execution.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     15.4 — EXPLORE SUBAGENT
+     ============================================================ -->
+<div class="section" id="s15-4">
+  <div class="section-header">
+    <span class="section-number">15.4</span>
+    <span class="section-title">The Explore Subagent for Isolating Verbose Discovery</span>
+  </div>
+
+  <!-- Concept -->
+  <div class="block concept">
+    <div class="block-label"><i class="fa-solid fa-book"></i> Concept</div>
+    <p>The <strong>Explore Subagent</strong> is a child agent spawned by the main Claude session specifically for <em>read-only codebase investigation</em>. It operates with restricted permissions (no file writes, no destructive commands) and is designed to perform verbose, wide-ranging exploration — reading many files, running search commands, analyzing directory structures — <em>without polluting the main conversation's context window</em>. The subagent returns a concise summary of its findings, keeping the parent context lean and focused.</p>
+    <p style="margin-top:10px;">This is particularly valuable for large codebases where exploration might involve reading 30+ files. Doing that in the main session would consume the context window with file contents that are only needed for analysis, not for the final answer.</p>
+  </div>
+
+  <!-- Key Principles -->
+  <div class="block principles">
+    <div class="block-label"><i class="fa-solid fa-key"></i> Key Principles</div>
+    <ul>
+      <li><strong>Context window preservation:</strong> The #1 benefit. The main conversation retains its context budget for the actual task — planning, coding, iterating — without being filled with exploration output.</li>
+      <li><strong>Read-only isolation:</strong> The Explore subagent cannot modify files, ensuring that exploration is truly safe. It can read, search, list, and run non-destructive commands.</li>
+      <li><strong>Summarized output:</strong> The subagent returns a structured summary — key findings, relevant patterns, dependency maps — not raw file dumps. This is curated intelligence, not raw data.</li>
+      <li><strong>Spawned on demand:</strong> Not every task needs an Explore subagent. It's most valuable when the exploration scope is large or when the main context is already partially consumed.</li>
+      <li><strong>Parallelizable:</strong> In advanced workflows, multiple subagents can explore different parts of the codebase simultaneously (e.g., one explores the backend, another the frontend).</li>
+      <li><strong>Explicit boundary:</strong> The subagent completes and returns before the main agent takes action. There's a clean handoff: explore → summarize → return → plan/execute.</li>
+    </ul>
+  </div>
+
+  <!-- Visualization -->
+  <pre class="ascii">  ┌──────────────────────────────────────────────────────────────────────┐
+  │              EXPLORE SUBAGENT ARCHITECTURE                          │
+  ├──────────────────────────────────────────────────────────────────────┤
+  │                                                                      │
+  │  ┌─────────────────────┐                                             │
+  │  │  MAIN AGENT         │                                             │
+  │  │  (context: 80% free)│                                             │
+  │  │                     │──── spawns ────▶ ┌────────────────────────┐ │
+  │  │  • Receives task    │                  │  EXPLORE SUBAGENT      │ │
+  │  │  • Awaits summary   │                  │  (read-only sandbox)   │ │
+  │  │                     │                  │                        │ │
+  │  │                     │◀── returns ───── │  • Reads 30+ files     │ │
+  │  │                     │   summary        │  • Runs grep/find/git  │ │
+  │  │  • Plans/executes   │   (compact)      │  • Maps dependencies   │ │
+  │  │    with full context│                  │  • Detects conventions │ │
+  │  └─────────────────────┘                  │  • Summarizes findings │ │
+  │                                           └────────────────────────┘ │
+  │                                                                      │
+  │  Key: Main agent context stays clean. Verbose output stays in child. │
+  └──────────────────────────────────────────────────────────────────────┘
+  </pre>
+
+  <!-- Real-World Example -->
+  <div class="block example">
+    <div class="block-label"><i class="fa-solid fa-flask"></i> Real-World Example</div>
+    <h3>Scenario: Understanding a Monorepo Before Refactoring</h3>
+    <p>A developer asks: <em>"Refactor the authentication module to support OAuth2 in addition to JWT."</em> The project is a monorepo with 200+ files across <code>api/</code>, <code>web/</code>, <code>shared/</code>, and <code>infra/</code>.</p>
+    <p>The main agent spawns an <span class="tag-explore">EXPLORE</span> subagent with the directive: <em>"Map the authentication module: find all auth-related files, trace the middleware chain, identify where JWT tokens are issued/validated, list all consumers of the auth module, and check for existing OAuth2 references."</em></p>
+    <p>The subagent reads 35 files, runs <code>grep -r "jwt\|auth\|token"</code>, traces imports, and returns:</p>
+    <ul>
+      <li>Auth module files: 6 core files + 3 middleware + 2 utility</li>
+      <li>JWT is issued in <code>auth/token-service.ts</code>, validated in <code>auth/middleware.ts</code></li>
+      <li>14 route handlers depend on the auth middleware</li>
+      <li>No existing OAuth2 code — greenfield addition</li>
+      <li>Test coverage: 72% on auth module</li>
+    </ul>
+    <p>The main agent receives this summary (consuming ~500 tokens of context vs ~15,000 if it had read all files directly) and proceeds to create a Plan.</p>
+  </div>
+
+  <!-- Tips -->
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Memory aid — "Send a Scout, Keep Your Map Clean":</strong> The Explore subagent is the scout. It goes deep into enemy territory (the codebase), gathers intelligence, and reports back concisely — so the general (main agent) can make decisions with a clean operational picture.</li>
+      <li><strong>When to spawn vs. explore in-session:</strong> If you need to read ≤5 files, just do it in the main session. If exploration will touch 10+ files or involve extensive grep/search, spawn a subagent.</li>
+      <li><strong>Subagent directives matter:</strong> Give the Explore subagent a <em>specific</em> investigation mandate, not "look around." A focused question yields a focused answer.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="block exam">
+    <div class="block-label"><i class="fa-solid fa-crosshairs"></i> Exam Strategy — 15.4</div>
+    <p><strong>Trigger words:</strong> <em>"large codebase"</em>, <em>"context window"</em>, <em>"verbose output"</em>, <em>"read-only investigation"</em>, <em>"isolate discovery"</em>, <em>"monorepo"</em></p>
+    <p>→ These signal: <strong>Explore Subagent</strong> is the best-fit answer.</p>
+    <p style="margin-top:8px;"><strong>Key exam distinction:</strong> Explore Subagent ≠ Plan Mode. Plan Mode is the main agent thinking before acting. Explore Subagent is a <em>separate agent</em> doing read-only investigation. They can be used together (explore → plan → execute) but are different mechanisms.</p>
+    <p style="margin-top:8px;"><strong>Trap:</strong> "Why not just use Plan Mode for exploration?" — Plan Mode <em>includes</em> exploration as a step, but if the exploration is verbose (reading many files), it fills the main context window. The subagent specifically solves the <em>context pressure</em> problem.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     15.5 — COMBINING PLAN + DIRECT
+     ============================================================ -->
+<div class="section" id="s15-5">
+  <div class="section-header">
+    <span class="section-number">15.5</span>
+    <span class="section-title">Combining Plan Mode Investigation with Direct Execution</span>
+  </div>
+
+  <!-- Concept -->
+  <div class="block concept">
+    <div class="block-label"><i class="fa-solid fa-book"></i> Concept</div>
+    <p><strong>Combined Mode</strong> is the pragmatic workflow where developers use Plan Mode for the <em>investigation and design phase</em>, then switch to Direct Execution for the <em>implementation phase</em>. This is not a formal "mode" — it's a workflow pattern that leverages both approaches in sequence. The developer toggles between <code>Shift+Tab</code> states: plan the complex architecture first, then execute changes step-by-step with Direct Execution for each well-defined sub-task.</p>
+    <p style="margin-top:10px;">This hybrid approach captures the safety benefits of planning (scope analysis, dependency mapping, change ordering) while maintaining the speed and iterative flexibility of Direct Execution for the actual coding.</p>
+  </div>
+
+  <!-- Key Principles -->
+  <div class="block principles">
+    <div class="block-label"><i class="fa-solid fa-key"></i> Key Principles</div>
+    <ul>
+      <li><strong>Phase separation:</strong> Investigation/planning and execution are distinct phases. Mixing them (editing mid-plan) creates inconsistency. Complete the plan, review it, <em>then</em> execute.</li>
+      <li><strong>Plan decomposes into atomic tasks:</strong> A good plan breaks the work into steps small enough that each step is suitable for Direct Execution. Each step should be self-contained and verifiable.</li>
+      <li><strong>Checkpoint after each step:</strong> After executing each planned step, verify it works (run tests, check compilation) before proceeding. This prevents error cascade across steps.</li>
+      <li><strong>Plan is a living document:</strong> If execution of step 3 reveals that step 5 needs adjustment, update the plan. Plans are guidance, not contracts — they should adapt to reality.</li>
+      <li><strong>Mode switching is low-cost:</strong> Toggling <code>Shift+Tab</code> between Plan and Act is instant. There's no penalty for switching modes mid-task — it's the <em>expected</em> workflow for complex work.</li>
+      <li><strong>Optimal token economics:</strong> Plan Mode tokens are spent once (on analysis). Each Direct Execution step is small and focused, avoiding the token overhead of re-analyzing the entire project for each edit.</li>
+    </ul>
+  </div>
+
+  <!-- Visualization: Combined Workflow -->
+  <pre class="ascii">  ┌───────────────────────────────────────────────────────────────────────────┐
+  │                  COMBINED MODE WORKFLOW                                   │
+  ├───────────────────────────────────────────────────────────────────────────┤
+  │                                                                           │
+  │  Phase 1: PLAN MODE                    Phase 2: DIRECT EXECUTION          │
+  │  ┌───────────────────────┐             ┌───────────────────────────────┐  │
+  │  │ 1. Explore codebase   │             │ Execute Step 1                │  │
+  │  │ 2. Map dependencies   │             │   └─▶ verify (tests/build)   │  │
+  │  │ 3. Design approach    │             │ Execute Step 2                │  │
+  │  │ 4. Produce plan:      │──approve──▶ │   └─▶ verify                 │  │
+  │  │    Step 1: ...        │             │ Execute Step 3                │  │
+  │  │    Step 2: ...        │             │   └─▶ verify                 │  │
+  │  │    Step 3: ...        │             │ ...                           │  │
+  │  │    Step N: ...        │             │ Execute Step N                │  │
+  │  └───────────────────────┘             │   └─▶ final verification     │  │
+  │                                        └───────────────────────────────┘  │
+  │                                                                           │
+  │  ⟲ If any step reveals new complexity → switch back to Plan Mode          │
+  └───────────────────────────────────────────────────────────────────────────┘
+  </pre>
+
+  <!-- Real-World Example -->
+  <div class="block example">
+    <div class="block-label"><i class="fa-solid fa-flask"></i> Real-World Example</div>
+    <h3>Scenario: Adding a Caching Layer to a Web Application</h3>
+    <p>Task: <em>"Add Redis caching to the product catalog API endpoints."</em></p>
+    <p><strong>Phase 1 — Plan Mode:</strong></p>
+    <ol>
+      <li>Claude explores: identifies 4 API endpoints, the data access layer, existing response shapes</li>
+      <li>Produces a plan: (a) Add Redis client config, (b) Create cache utility module, (c) Add cache middleware to product routes, (d) Add cache invalidation on product updates, (e) Update tests, (f) Add Redis to Docker Compose</li>
+      <li>Developer reviews — adjusts TTL strategy, approves</li>
+    </ol>
+    <p><strong>Phase 2 — Direct Execution (per step):</strong></p>
+    <ol>
+      <li>Step (a): Claude creates <code>config/redis.ts</code> → developer runs <code>tsc</code> → passes ✅</li>
+      <li>Step (b): Claude creates <code>utils/cache.ts</code> with get/set/invalidate → passes ✅</li>
+      <li>Step (c): Claude adds caching middleware to routes → runs tests → 1 failure (cache key collision) → Claude fixes → passes ✅</li>
+      <li>Steps (d)–(f): Executed in sequence, each verified</li>
+    </ol>
+    <p>The combined approach took less total time than pure Plan Mode (no waiting for a monolithic execution) and was safer than pure Direct Execution (no risk of forgetting cache invalidation).</p>
+  </div>
+
+  <!-- Tips -->
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>Memory aid — "Architect then Bricklayer":</strong> Plan Mode is the architect drawing blueprints. Direct Execution is the bricklayer following them. You need both roles, but at different times.</li>
+      <li><strong>Feedback loop:</strong> Each executed step provides new information. Use it. If step 3 reveals that the planned approach for step 5 won't work, toggle back to Plan and revise. This adaptability is the superpower of the combined approach.</li>
+      <li><strong>Commit between steps:</strong> Use <code>git commit</code> between planned steps. This gives you atomic rollback points — if step 4 goes wrong, you can revert to the state after step 3 without losing earlier work.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="block exam">
+    <div class="block-label"><i class="fa-solid fa-crosshairs"></i> Exam Strategy — 15.5</div>
+    <p><strong>Trigger words:</strong> <em>"phased approach"</em>, <em>"plan then execute"</em>, <em>"step-by-step implementation"</em>, <em>"iterative with oversight"</em>, <em>"complex task broken into stages"</em></p>
+    <p>→ These signal: <strong>Combined Plan + Direct Execution workflow</strong>.</p>
+    <p style="margin-top:8px;"><strong>Key exam insight:</strong> The exam may present scenarios where <em>neither pure Plan nor pure Direct</em> is the best answer. The combined approach is often the "best practice" answer for medium-to-high complexity tasks. Look for answer options that describe a two-phase workflow.</p>
+    <p style="margin-top:8px;"><strong>Trap:</strong> "Combined mode is slower than Direct Execution." — True for simple tasks (overhead of planning), but <em>false</em> for complex tasks where unplanned Direct Execution leads to rework that costs more time than the planning phase saved.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     15.6 — HANDS-ON: CHOOSING THE RIGHT MODE
+     ============================================================ -->
+<div class="section" id="s15-6">
+  <div class="section-header">
+    <span class="section-number">15.6</span>
+    <span class="section-title">Hands-On: Choosing the Right Execution Mode</span>
+  </div>
+
+  <!-- Concept -->
+  <div class="block concept">
+    <div class="block-label"><i class="fa-solid fa-book"></i> Concept</div>
+    <p>Choosing the right execution mode is a <em>judgment call</em> that depends on multiple interacting factors: task complexity, codebase familiarity, risk tolerance, available context budget, and reversibility. This section synthesizes the heuristics from 15.1–15.5 into an actionable decision framework. The goal is not to memorize rules but to develop the <strong>architectural intuition</strong> to rapidly assess a task and select the optimal approach.</p>
+    <p style="margin-top:10px;">An experienced architect's hallmark is <em>not</em> always choosing Plan Mode for safety — it's choosing the <em>right</em> mode for the situation, accepting appropriate risk when the payoff is speed, and demanding rigor when the cost of errors is high.</p>
+  </div>
+
+  <!-- Key Principles / Decision Factors -->
+  <div class="block principles">
+    <div class="block-label"><i class="fa-solid fa-key"></i> Decision Factors</div>
+    <ul>
+      <li><strong>File count:</strong> 1 file → Direct. 2–4 related files → Direct (with caution) or Plan. 5+ files → Plan.</li>
+      <li><strong>Familiarity:</strong> You know the codebase well → more Direct. New codebase → Explore + Plan.</li>
+      <li><strong>Reversibility:</strong> Git-committed, test-covered code → more Direct (easy rollback). Database migrations, config changes, deployed infra → Plan (hard to undo).</li>
+      <li><strong>Blast radius:</strong> Change affects only caller → Direct. Change affects interface consumed by many → Plan.</li>
+      <li><strong>Context budget:</strong> Context window nearly full → Explore Subagent for investigation. Plenty of context → can explore in-session.</li>
+      <li><strong>Time pressure:</strong> Urgent hotfix for a known bug → Direct. Strategic refactor with no deadline → Plan.</li>
+    </ul>
+  </div>
+
+  <!-- Visualization: Decision Matrix -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Factor</th>
+          <th>→ Direct Execution</th>
+          <th>→ Plan Mode</th>
+          <th>→ Explore Subagent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Files affected</strong></td>
+          <td class="highlight-direct">1–2 files</td>
+          <td class="highlight-plan">3+ files</td>
+          <td class="highlight-explore">N/A (pre-step)</td>
+        </tr>
+        <tr>
+          <td><strong>Codebase familiarity</strong></td>
+          <td class="highlight-direct">High</td>
+          <td class="highlight-plan">Low–Medium</td>
+          <td class="highlight-explore">Very Low</td>
+        </tr>
+        <tr>
+          <td><strong>Task complexity</strong></td>
+          <td class="highlight-direct">Low (well-defined)</td>
+          <td class="highlight-plan">High (architectural)</td>
+          <td class="highlight-explore">Unknown (needs discovery)</td>
+        </tr>
+        <tr>
+          <td><strong>Risk of error</strong></td>
+          <td class="highlight-direct">Low (easily reversible)</td>
+          <td class="highlight-plan">High (cascading effects)</td>
+          <td class="highlight-explore">Unknown</td>
+        </tr>
+        <tr>
+          <td><strong>Context budget</strong></td>
+          <td class="highlight-direct">Any</td>
+          <td class="highlight-plan">Sufficient</td>
+          <td class="highlight-explore">Constrained (offloads to child)</td>
+        </tr>
+        <tr>
+          <td><strong>Token cost</strong></td>
+          <td class="highlight-direct">Lowest</td>
+          <td class="highlight-plan">Highest</td>
+          <td class="highlight-explore">Medium (separate context)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Decision Flowchart Preview -->
+  <div class="block example">
+    <div class="block-label"><i class="fa-solid fa-flask"></i> Hands-On Scenario Walkthrough</div>
+    <h3>Scenario Bank — Test Your Judgment</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:55%">Scenario</th>
+            <th>Best Mode</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Fix the typo in the footer component"</td>
+            <td><span class="tag-direct">DIRECT</span></td>
+            <td>Single file, trivial change, zero risk</td>
+          </tr>
+          <tr>
+            <td>"Add TypeScript strict mode to the project"</td>
+            <td><span class="tag-plan">PLAN</span></td>
+            <td>Multi-file type errors will cascade; need full assessment</td>
+          </tr>
+          <tr>
+            <td>"Write a new unit test file for the parser"</td>
+            <td><span class="tag-direct">DIRECT</span></td>
+            <td>Additive (new file), no existing code modified</td>
+          </tr>
+          <tr>
+            <td>"How is authentication implemented in this monorepo?"</td>
+            <td><span class="tag-explore">EXPLORE</span></td>
+            <td>Pure investigation, verbose, no edits needed</td>
+          </tr>
+          <tr>
+            <td>"Migrate the database from Postgres to MySQL"</td>
+            <td><span class="tag-plan">PLAN</span></td>
+            <td>High-risk, multi-file, irreversible schema changes</td>
+          </tr>
+          <tr>
+            <td>"Rename the <code>userId</code> param to <code>accountId</code> across the API layer"</td>
+            <td><span class="tag-plan">PLAN</span></td>
+            <td>Cross-cutting rename: routes + handlers + tests + types + docs</td>
+          </tr>
+          <tr>
+            <td>"Add a <code>--dry-run</code> flag to the deploy script"</td>
+            <td><span class="tag-direct">DIRECT</span></td>
+            <td>Single file, well-scoped addition</td>
+          </tr>
+          <tr>
+            <td>"I just joined this project — what should I know?"</td>
+            <td><span class="tag-explore">EXPLORE</span></td>
+            <td>Onboarding = read-only exploration, no changes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> Tips &amp; Tricks</div>
+    <ul>
+      <li><strong>The "5-second rule":</strong> If you can describe the complete change in one sentence and it touches ≤2 files → Direct. If you need a paragraph to explain it → Plan.</li>
+      <li><strong>When in doubt, start with exploration:</strong> You can always escalate from exploration to planning to execution. You can't easily de-escalate from a botched Direct Execution.</li>
+      <li><strong>Mode selection is itself a skill:</strong> The exam tests your ability to <em>choose</em>, not just to know the definitions. Practice by mentally mode-selecting for every coding task you encounter in your daily work.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="block exam">
+    <div class="block-label"><i class="fa-solid fa-crosshairs"></i> Exam Strategy — 15.6</div>
+    <p><strong>This subtopic is the synthesis.</strong> Questions from 15.6 will present a scenario and ask you to choose the best mode — testing whether you can apply the heuristics from 15.1–15.5 in concert.</p>
+    <p style="margin-top:8px;"><strong>Strategy:</strong> Read the scenario for these signals: (1) How many files? (2) How familiar is the codebase? (3) What's the blast radius? (4) Is it reversible? Score each factor, then select the mode that matches the majority signal.</p>
+    <p style="margin-top:8px;"><strong>Multi-step answer pattern:</strong> Some questions have answer options like "Explore, then Plan, then Execute." These are often correct for complex scenarios. Don't dismiss multi-step options as "too complicated" — they reflect real professional practice.</p>
+    <p style="margin-top:8px;"><strong>Ultimate trap:</strong> "Which mode is best?" — There is no universally "best" mode. The correct answer is <em>always</em> the one that matches the task's characteristics. Reject any answer that claims one mode is universally superior.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     MASTER COMPARISON TABLE
+     ============================================================ -->
+<div class="section" id="master-table">
+  <div class="section-header">
+    <span class="section-number">★</span>
+    <span class="section-title">Master Comparison Table</span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:22%">Dimension</th>
+          <th style="width:26%"><span class="tag-plan">PLAN MODE</span></th>
+          <th style="width:26%"><span class="tag-direct">DIRECT EXECUTION</span></th>
+          <th style="width:26%"><span class="tag-explore">EXPLORE SUBAGENT</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Purpose</strong></td>
+          <td>Analyze → propose → approve → execute</td>
+          <td>Immediately read + write files</td>
+          <td>Read-only investigation in isolation</td>
+        </tr>
+        <tr>
+          <td><strong>File Modifications</strong></td>
+          <td>Deferred until plan approved</td>
+          <td>Immediate</td>
+          <td>None (read-only)</td>
+        </tr>
+        <tr>
+          <td><strong>Ideal Task Complexity</strong></td>
+          <td>High — multi-file, architectural</td>
+          <td>Low–Medium — well-scoped</td>
+          <td>Any — investigation only</td>
+        </tr>
+        <tr>
+          <td><strong>Typical File Count</strong></td>
+          <td>3+ files</td>
+          <td>1–2 files</td>
+          <td>Reads many, edits none</td>
+        </tr>
+        <tr>
+          <td><strong>Risk Level</strong></td>
+          <td>Low (changes reviewed pre-execution)</td>
+          <td>Medium (relies on git safety net)</td>
+          <td>Zero (no modifications)</td>
+        </tr>
+        <tr>
+          <td><strong>Token / Cost</strong></td>
+          <td>High (analysis + plan + execution)</td>
+          <td>Low (single-pass)</td>
+          <td>Medium (separate context, summarized)</td>
+        </tr>
+        <tr>
+          <td><strong>Latency</strong></td>
+          <td>Higher (planning phase + approval gate)</td>
+          <td>Lowest (immediate action)</td>
+          <td>Medium (subagent round-trip)</td>
+        </tr>
+        <tr>
+          <td><strong>Human Oversight</strong></td>
+          <td>Explicit approval gate</td>
+          <td>Post-hoc review (git diff)</td>
+          <td>Summary review</td>
+        </tr>
+        <tr>
+          <td><strong>Context Window Impact</strong></td>
+          <td>Moderate (plan text in context)</td>
+          <td>Low (minimal overhead)</td>
+          <td>Minimal (output stays in child)</td>
+        </tr>
+        <tr>
+          <td><strong>Reversibility</strong></td>
+          <td>High (can reject plan before execution)</td>
+          <td>Medium (requires git revert)</td>
+          <td>N/A (nothing to reverse)</td>
+        </tr>
+        <tr>
+          <td><strong>Best For</strong></td>
+          <td>Refactors, migrations, new features spanning multiple modules</td>
+          <td>Bug fixes, typos, small features, additive changes</td>
+          <td>Onboarding, large-codebase investigation, monorepo mapping</td>
+        </tr>
+        <tr>
+          <td><strong>Toggle Method</strong></td>
+          <td><code>Shift+Tab</code> (in Claude Code)</td>
+          <td>Default mode / <code>Shift+Tab</code></td>
+          <td>Spawned by main agent on demand</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     DECISION FLOWCHART
+     ============================================================ -->
+<div class="section" id="decision-flow">
+  <div class="section-header">
+    <span class="section-number">★</span>
+    <span class="section-title">Decision Flowchart — Selecting the Right Execution Mode</span>
+  </div>
+
+  <pre class="ascii">                          ┌──────────────────────────┐
+                          │   INCOMING TASK REQUEST   │
+                          └────────────┬─────────────┘
+                                       │
+                                       ▼
+                          ┌──────────────────────────┐
+                          │  Is the codebase          │
+                          │  familiar to you?         │
+                          └───────┬──────────┬───────┘
+                             NO   │          │  YES
+                                  ▼          │
+                    ┌─────────────────────┐  │
+                    │  Is exploration      │  │
+                    │  likely to read      │  │
+                    │  10+ files?          │  │
+                    └──────┬───────┬──────┘  │
+                      YES  │       │  NO     │
+                           ▼       │         │
+               ┌─────────────────┐ │         │
+               │  EXPLORE        │ │         │
+               │  SUBAGENT       │ │         │
+               │  (read-only,    │ │         │
+               │  child agent)   │ │         │
+               └───────┬─────────┘ │         │
+                       │           │         │
+                       ▼           ▼         ▼
+                ┌───────────────────────────────────┐
+                │  How many files will be affected?  │
+                └──────┬──────────────────┬─────────┘
+                  3+ files                │  1–2 files
+                       │                  │
+                       ▼                  ▼
+          ┌─────────────────────┐  ┌──────────────────────┐
+          │  Are there cascading │  │  Is the change        │
+          │  dependencies or     │  │  well-defined and     │
+          │  architectural risk? │  │  easily reversible?   │
+          └──────┬────────┬─────┘  └──────┬─────────┬─────┘
+            YES  │        │  NO      YES  │         │  NO
+                 ▼        │               ▼         │
+     ┌──────────────┐     │     ┌──────────────┐    │
+     │  PLAN MODE   │     │     │   DIRECT     │    │
+     │  (analyze →  │     │     │  EXECUTION   │    │
+     │   approve →  │     │     │  (immediate) │    │
+     │   execute)   │     │     └──────────────┘    │
+     └──────────────┘     │                         │
+                          ▼                         ▼
+              ┌───────────────────────────────────────────┐
+              │          COMBINED APPROACH                 │
+              │  Plan the overall strategy → Execute       │
+              │  each step via Direct Execution            │
+              └───────────────────────────────────────────┘
+  </pre>
+
+  <div class="block tip">
+    <div class="block-label"><i class="fa-solid fa-lightbulb"></i> How to Read This Flowchart</div>
+    <p>Start at the top with any incoming task. Follow the decision nodes. The flowchart naturally routes you to one of four outcomes: <span class="tag-explore">EXPLORE</span> (investigate first), <span class="tag-plan">PLAN</span> (full planning), <span class="tag-direct">DIRECT</span> (immediate execution), or <strong>COMBINED</strong> (plan then direct). In exam scenarios, trace the question's details through this flowchart to reach the correct answer.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     EXAM PREPARATION
+     ============================================================ -->
+<div class="section" id="exam-prep">
+  <div class="section-header">
+    <span class="section-number">★</span>
+    <span class="section-title">Exam Preparation — Practice Questions</span>
+  </div>
+
+  <!-- Q1 -->
+  <div class="quiz-q">
+    <div class="q-num">Q1 — Scenario</div>
+    <div class="q-text">A developer asks Claude Code to refactor a monolithic Express application into separate microservices. The codebase has 120 files across 8 domains. Which execution approach is most appropriate?</div>
+    <div class="options">
+      <div>A) Direct Execution — start splitting files immediately</div>
+      <div>B) Plan Mode — analyze dependencies, propose service boundaries, then execute after approval</div>
+      <div class="correct">C) Explore Subagent to map the codebase, then Plan Mode for the migration strategy, then Direct Execution per step ✅</div>
+      <div>D) Direct Execution with frequent git commits for safety</div>
+    </div>
+    <div class="explanation"><strong>Answer: C.</strong> This is a large, architectural task in a complex codebase. The three-phase approach (Explore → Plan → Execute) is the gold standard for this class of problem. Option B is incomplete — it skips the exploration phase, which is critical for a 120-file monolith where the main agent's context would be overwhelmed. Option D underestimates the architectural complexity — git commits don't prevent wrong-direction work.</div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-q">
+    <div class="q-num">Q2 — Scenario</div>
+    <div class="q-text">A developer asks Claude to add a <code>createdAt</code> timestamp field to the User model in a Django application. The model is used in 3 views and has 2 serializers. Which mode is best?</div>
+    <div class="options">
+      <div>A) Explore Subagent — need to understand the full codebase first</div>
+      <div class="correct">B) Plan Mode — the change cascades through model, migration, views, serializers, and tests ✅</div>
+      <div>C) Direct Execution — it's just adding a field</div>
+      <div>D) Combined approach — plan the model change, direct-execute each step</div>
+    </div>
+    <div class="explanation"><strong>Answer: B.</strong> Although "add a field" sounds simple, in Django it triggers a migration, requires serializer updates, may affect view logic (e.g., filtering/ordering), and needs test updates. That's 5+ files with dependency ordering (migration must be generated after model change). Plan Mode ensures all affected files are identified and changes are ordered correctly. Option C is a trap — it underestimates the cascade. Option D is also reasonable but B is the most accurate single-mode answer for this scope.</div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-q">
+    <div class="q-num">Q3 — Scenario</div>
+    <div class="q-text">A developer asks Claude to rename a single utility function <code>formatDate()</code> that is used only within the file where it's defined. No other file imports it. Which execution mode is most appropriate?</div>
+    <div class="options">
+      <div>A) Plan Mode — to map all dependencies first</div>
+      <div class="correct">B) Direct Execution — task is simple and well-scoped ✅</div>
+      <div>C) Explore Subagent — to isolate verbose output</div>
+      <div>D) Combined Mode — to ensure safety</div>
+    </div>
+    <div class="explanation"><strong>Answer: B.</strong> Renaming a function used only within one file is a textbook Direct Execution task: single file, zero dependencies, trivially reversible. Plan Mode (A) adds unnecessary overhead. The Explore Subagent (C) is for large investigation tasks, not single-file edits. Combined Mode (D) is overkill.</div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-q">
+    <div class="q-num">Q4 — Concept</div>
+    <div class="q-text">What is the primary benefit of using an Explore Subagent instead of exploring directly in the main Claude session?</div>
+    <div class="options">
+      <div>A) The Explore Subagent has write access that the main session lacks</div>
+      <div>B) The Explore Subagent is faster at reading files</div>
+      <div class="correct">C) The Explore Subagent preserves the main session's context window by keeping verbose exploration output in a separate context ✅</div>
+      <div>D) The Explore Subagent can access external APIs that the main session cannot</div>
+    </div>
+    <div class="explanation"><strong>Answer: C.</strong> The Explore Subagent's defining advantage is <em>context window preservation</em>. Verbose exploration (reading 30+ files, running multiple search commands) fills the main context, leaving less room for planning and execution. The subagent absorbs this cost and returns only a concise summary. Option A is the opposite of truth — the subagent has <em>restricted</em> (read-only) access. Options B and D are fabricated benefits.</div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-q">
+    <div class="q-num">Q5 — Best Practice</div>
+    <div class="q-text">During Direct Execution, Claude discovers that a "simple" bug fix actually requires changes to 8 files due to a shared interface. What should happen next?</div>
+    <div class="options">
+      <div>A) Continue with Direct Execution — the changes are already started</div>
+      <div>B) Abort and ask the user to re-state the task more clearly</div>
+      <div class="correct">C) Pause, communicate the discovered complexity to the user, and suggest switching to Plan Mode ✅</div>
+      <div>D) Complete the current file's changes, then use Plan Mode for the remaining 7</div>
+    </div>
+    <div class="explanation"><strong>Answer: C.</strong> Discovering unexpected complexity during Direct Execution is the classic escalation trigger. The correct response is to <em>stop, communicate, and escalate</em> to Plan Mode. Option A is dangerous — continuing without a plan across 8 files risks inconsistency. Option D creates a hybrid mess — some files changed ad-hoc, others planned. Option B is too extreme — the task itself is fine; only the approach needs adjustment.</div>
+  </div>
+
+  <!-- Watch Out For -->
+  <div class="block warning" style="margin-top:28px;">
+    <div class="block-label"><i class="fa-solid fa-triangle-exclamation"></i> Watch Out For — Common Misconceptions</div>
+    <ul>
+      <li><strong>"Plan Mode is always safer than Direct Execution"</strong> — False. Plan Mode is safer for <em>complex</em> tasks, but it has higher token cost and latency. For simple tasks, it adds unnecessary overhead without improving safety.</li>
+      <li><strong>"Direct Execution means no exploration"</strong> — False. Claude should <em>always</em> read the target file before editing, even in Direct Execution. The mode determines whether a <em>formal plan</em> is produced, not whether <em>reading</em> occurs.</li>
+      <li><strong>"Explore Subagent = Plan Mode"</strong> — False. They are different mechanisms. Plan Mode is the main agent analyzing and proposing changes. The Explore Subagent is a <em>separate child agent</em> performing read-only investigation. They can be used together.</li>
+      <li><strong>"You should always use the Combined approach for maximum safety"</strong> — False. The Combined approach is optimal for medium-to-high complexity tasks. For trivial tasks, it's unnecessarily slow.</li>
+      <li><strong>"Plan Mode prevents all errors"</strong> — False. Plans can be wrong. The value is the human review gate, not the plan's infallibility. A bad plan that gets approved still produces bad code.</li>
+      <li><strong>"Explore Subagent has write access"</strong> — False. The Explore Subagent is explicitly <em>read-only</em>. This is a safety feature, not a limitation — it guarantees exploration can't accidentally modify the codebase.</li>
+      <li><strong>"Token cost doesn't matter in mode selection"</strong> — False. In real-world usage, token cost is a practical constraint. Plan Mode on a trivial task wastes budget that could be spent on actual coding.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     QUICK-REFERENCE CHEAT SHEET
+     ============================================================ -->
+<div class="section" id="cheat-sheet">
+  <div class="section-header">
+    <span class="section-number">★</span>
+    <span class="section-title">Quick-Reference Cheat Sheet</span>
+  </div>
+
+  <div class="cheat-sheet">
+    <h2><i class="fa-solid fa-bolt"></i> Chapter 15 — 20-Point Cheat Sheet</h2>
+    <ol>
+      <li><strong>Plan Mode</strong> = analyze → propose → user approves → execute. No files modified until approval.</li>
+      <li><strong>Direct Execution</strong> = immediate read/write. Default mode. Best for simple, well-scoped tasks.</li>
+      <li><strong>Explore Subagent</strong> = read-only child agent for verbose investigation. Preserves main context window.</li>
+      <li><strong>Toggle:</strong> <code>Shift+Tab</code> switches between Plan and Act (Direct) in Claude Code.</li>
+      <li><strong>SWAT rule:</strong> <strong>S</strong>ingle-file, <strong>W</strong>ell-scoped, <strong>A</strong>dditive, <strong>T</strong>rivial → Direct Execution.</li>
+      <li><strong>Multi-file + cascading dependencies</strong> → Plan Mode.</li>
+      <li><strong>Unfamiliar codebase</strong> → Explore first, always. Then decide Plan vs. Direct.</li>
+      <li><strong>10+ files to read during investigation</strong> → use Explore Subagent to avoid context bloat.</li>
+      <li><strong>Combined approach:</strong> Plan the strategy → Execute each step with Direct Execution → Verify between steps.</li>
+      <li><strong>Git is the safety net</strong> for Direct Execution. Commit between steps in Combined workflows.</li>
+      <li><strong>Plans should decompose into atomic, verifiable steps</strong> — each suitable for Direct Execution.</li>
+      <li><strong>Plans are living documents</strong> — update them when execution reveals new information.</li>
+      <li><strong>Exploration has a stopping rule:</strong> stop when you can answer "what will change, what won't, what might break."</li>
+      <li><strong>Additive changes</strong> (new files) are almost always safe for Direct Execution.</li>
+      <li><strong>Token cost order:</strong> Direct (lowest) &lt; Explore Subagent (medium) &lt; Plan Mode (highest).</li>
+      <li><strong>Latency order:</strong> Direct (fastest) &lt; Explore (medium) &lt; Plan (slowest, includes approval gate).</li>
+      <li><strong>Risk mitigation order:</strong> Plan (safest for complex) &gt; Combined &gt; Direct &gt; Explore (N/A, read-only).</li>
+      <li><strong>Escalation trigger:</strong> If Direct Execution reveals unexpected complexity → pause → switch to Plan.</li>
+      <li><strong>No mode is universally "best"</strong> — the correct mode depends on the task's specific characteristics.</li>
+      <li><strong>The exam tests judgment, not defaults.</strong> Read every scenario's signals: file count, blast radius, familiarity, reversibility.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Footer -->
+<div style="text-align:center; padding:40px 0 20px; color:var(--slate); font-size:12px; border-top:1px solid var(--border); margin-top:32px;">
+  CCAR-F / CCAR-P Study Notes — Chapter 15: Plan Mode vs Direct Execution<br>
+  Generated for exam preparation · Not an official Anthropic publication
+</div>
+
+</div><!-- end container -->
+
+
+</body></html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 22: Batch Processing Strategies — Claude Certified Architect Study Guide</title>
+<style>
+  :root{
+    --bg:#0d1117; --surface:#161b22; --surface-2:#1c2330; --border:#2d333b;
+    --text:#e6edf3; --muted:#9198a1; --accent:#ff9900; --accent-2:#58a6ff;
+    --tip:#2ea043; --tip-bg:#0f2417; --exam:#8957e5; --exam-bg:#1d1530;
+    --warn:#d29922; --warn-bg:#241b09; --code:#79c0ff; --mono:'SF Mono',ui-monospace,'Cascadia Code',Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:16px;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:32px 24px 96px;}
+  h1{font-size:2.1rem; line-height:1.2; margin:0 0 6px; letter-spacing:-.02em;}
+  .subtitle{color:var(--muted); font-size:1.05rem; margin:0 0 8px;}
+  .exam-tag{display:inline-block; background:var(--accent); color:#0d1117; font-weight:700;
+    font-size:.72rem; letter-spacing:.06em; padding:4px 10px; border-radius:100px; text-transform:uppercase;}
+  h2{font-size:1.5rem; margin:52px 0 4px; padding-top:14px; border-top:2px solid var(--border); letter-spacing:-.01em;}
+  h2 .num{color:var(--accent); font-family:var(--mono); font-size:1.15rem;}
+  h3{font-size:1.12rem; margin:26px 0 6px; color:var(--accent-2);}
+  h4{font-size:.98rem; margin:18px 0 4px; color:var(--text); text-transform:uppercase; letter-spacing:.05em; font-weight:700;}
+  p{margin:10px 0;}
+  a{color:var(--accent-2); text-decoration:none;} a:hover{text-decoration:underline;}
+  code{font-family:var(--mono); background:var(--surface-2); color:var(--code);
+    padding:1.5px 6px; border-radius:5px; font-size:.88em;}
+  pre{background:#010409; border:1px solid var(--border); border-radius:10px; padding:16px 18px;
+    overflow-x:auto; font-family:var(--mono); font-size:.83rem; line-height:1.55; color:#c9d1d9;}
+  pre code{background:none; padding:0; color:inherit;}
+  ul,ol{margin:10px 0; padding-left:26px;} li{margin:5px 0;}
+  strong{color:#fff;}
+  /* Callout boxes */
+  .tip-box,.exam-box,.warning-box{border-radius:10px; padding:14px 18px; margin:18px 0; border-left:5px solid; font-size:.95rem;}
+  .tip-box{background:var(--tip-bg); border-color:var(--tip);}
+  .exam-box{background:var(--exam-bg); border-color:var(--exam);}
+  .warning-box{background:var(--warn-bg); border-color:var(--warn);}
+  .tip-box strong{color:#5fd57f;} .exam-box strong{color:#b389f0;} .warning-box strong{color:#e3b341;}
+  /* Tables */
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:.9rem; background:var(--surface); border-radius:10px; overflow:hidden;}
+  th{background:var(--surface-2); text-align:left; padding:10px 13px; color:var(--accent); font-weight:600;
+     border-bottom:2px solid var(--border); font-size:.82rem; text-transform:uppercase; letter-spacing:.03em;}
+  td{padding:10px 13px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  tr:hover td{background:var(--surface-2);}
+  td code{font-size:.85em;}
+  .center{text-align:center;} .nowrap{white-space:nowrap;}
+  /* TOC */
+  .toc{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px 24px; margin:28px 0;}
+  .toc h2{border:none; margin:0 0 12px; padding:0; font-size:1.1rem; color:var(--text);}
+  .toc ol{columns:2; column-gap:32px; padding-left:20px; margin:0;}
+  .toc li{margin:6px 0; break-inside:avoid;}
+  .toc a{color:var(--text);} .toc a:hover{color:var(--accent-2);}
+  .toc .k{font-family:var(--mono); color:var(--accent); font-size:.85em;}
+  /* Diagram primitives */
+  .diagram{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:22px; margin:20px 0;}
+  .diagram-cap{color:var(--muted); font-size:.82rem; text-align:center; margin-top:12px; font-style:italic;}
+  .flow{display:flex; align-items:stretch; justify-content:center; gap:0; flex-wrap:wrap;}
+  .node{background:var(--surface-2); border:1.5px solid var(--accent-2); border-radius:10px; padding:12px 16px;
+    min-width:120px; text-align:center; font-size:.85rem;}
+  .node .t{font-weight:700; color:var(--accent-2); display:block; margin-bottom:2px;}
+  .node .d{color:var(--muted); font-size:.78rem;}
+  .arrow{display:flex; align-items:center; color:var(--accent); font-size:1.5rem; padding:0 8px;}
+  .node.err{border-color:var(--warn);} .node.err .t{color:var(--warn);}
+  .node.ok{border-color:var(--tip);} .node.ok .t{color:var(--tip);}
+  .badge{display:inline-block; font-family:var(--mono); font-size:.75rem; padding:2px 8px; border-radius:6px; font-weight:600;}
+  .b-ok{background:#0f2417; color:#5fd57f; border:1px solid #2ea043;}
+  .b-err{background:#241b09; color:#e3b341; border:1px solid #d29922;}
+  .b-neutral{background:var(--surface-2); color:var(--muted); border:1px solid var(--border);}
+  .kbd{font-family:var(--mono); background:var(--surface-2); border:1px solid var(--border); border-radius:5px; padding:1px 6px; font-size:.82em; color:var(--code);}
+  .callout-mini{background:var(--surface-2); border-radius:8px; padding:3px 9px; display:inline-block; font-size:.85rem; margin:2px 0;}
+  hr{border:none; border-top:1px solid var(--border); margin:24px 0;}
+  .qa{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:6px 20px; margin:14px 0;}
+  .qa summary{cursor:pointer; font-weight:600; color:var(--accent-2); padding:12px 0; list-style:none; font-size:.98rem;}
+  .qa summary::before{content:"▶ "; color:var(--accent); font-size:.8em;}
+  .qa[open] summary::before{content:"▼ ";}
+  .qa .ans{border-top:1px solid var(--border); padding:12px 0; margin-top:4px;}
+  .lead{font-size:1.02rem; color:var(--text);}
+  .plain{border-left:3px solid var(--accent-2); padding-left:14px; margin:12px 0; color:var(--text);}
+  .plain .lbl{color:var(--accent-2); font-weight:700; font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; display:block; margin-bottom:2px;}
+  .formula{background:#010409; border:1px solid var(--accent); border-radius:10px; padding:16px 20px; margin:16px 0;
+    font-family:var(--mono); font-size:.92rem; text-align:center; color:var(--accent);}
+  .timeline{position:relative; margin:20px 0; padding-left:0;}
+  .tl-track{display:flex; align-items:center; gap:0;}
+  .tl-seg{flex:1; text-align:center; position:relative;}
+  .tl-bar{height:10px; border-radius:5px; margin:6px 4px;}
+  .footer{color:var(--muted); font-size:.82rem; text-align:center; margin-top:60px; padding-top:20px; border-top:1px solid var(--border);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="exam-tag">Claude Certified Architect — Foundations &amp; Professional</span>
+  <h1>Chapter 22 · Batch Processing Strategies</h1>
+  <p class="subtitle">The Message Batches API: cost mechanics, architectural limits, SLA math, failure handling &amp; end-to-end workflow design.</p>
+
+  <div class="warning-box">
+    ⚠️ <strong>Accuracy note:</strong> Every numeric limit in this guide (50% discount, 24-hour window,
+    29-day retention, 100,000-request / 256&nbsp;MB cap, <code>custom_id</code> pattern) is cross-checked against
+    Anthropic's official <a href="https://platform.claude.com/docs/en/docs/build-with-claude/batch-processing" target="_blank">Batch processing documentation</a>.
+    Per-model dollar prices change frequently and are model-name specific — always verify current pricing before an exam or a design review.
+    Where a claim is version-sensitive, it is flagged inline.
+  </div>
+
+  <!-- ================= TOC ================= -->
+  <nav class="toc">
+    <h2>📑 Table of Contents</h2>
+    <ol>
+      <li><a href="#s1"><span class="k">22.1</span> Cost Savings &amp; Processing Window</a></li>
+      <li><a href="#s2"><span class="k">22.2</span> When Batch Is (and Isn't) Appropriate</a></li>
+      <li><a href="#s3"><span class="k">22.3</span> Batch API Limitations &amp; Tool Calling</a></li>
+      <li><a href="#s4"><span class="k">22.4</span> The <code>custom_id</code> Field</a></li>
+      <li><a href="#s5"><span class="k">22.5</span> Submission Frequency vs. SLA</a></li>
+      <li><a href="#s6"><span class="k">22.6</span> Handling Batch Failures</a></li>
+      <li><a href="#s7"><span class="k">22.7</span> Prompt Refinement on Samples</a></li>
+      <li><a href="#s8"><span class="k">22.8</span> Hands-On: Extraction Workflow</a></li>
+      <li><a href="#summary"><span class="k">★</span> Chapter Summary &amp; Cheat Sheet</a></li>
+      <li><a href="#practice"><span class="k">✎</span> Practice Questions</a></li>
+    </ol>
+  </nav>
+
+  <!-- ================= 22.1 ================= -->
+  <h2 id="s1"><span class="num">22.1</span> &nbsp;The Message Batches API — Cost Savings Mechanics &amp; Processing Window</h2>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  Instead of asking Claude one question at a time and waiting for each answer (synchronous), you hand Anthropic a
+  <em>big bag</em> of requests at once and say "process these whenever you have spare capacity, I'll come back for the results."
+  Because you're giving Anthropic scheduling flexibility, they charge you <strong>half price</strong> — but they only promise to
+  finish within <strong>24 hours</strong>.</p>
+
+  <p><strong>Technically:</strong> The <strong>Message Batches API</strong> is Anthropic's asynchronous bulk-processing endpoint.
+  You submit a list of independent Messages requests; the system creates a <code>message_batch</code> object, processes each request
+  independently, and exposes results at a <code>results_url</code> once processing has ended. It trades <em>immediate latency</em>
+  for <em>cost efficiency and throughput</em>.</p>
+
+  <h3>Key Facts</h3>
+  <table>
+    <tbody><tr><th>Property</th><th>Value</th><th>Note</th></tr>
+    <tr><td>Cost discount</td><td><span class="badge b-ok">50% off</span></td><td>Applies to <strong>both</strong> input and output tokens (and special tokens), across all supported models.</td></tr>
+    <tr><td>Processing window (SLA ceiling)</td><td><strong>Up to 24 hours</strong></td><td>Most batches finish in <strong>&lt; 1 hour</strong>; the 24h figure is the <em>guarantee ceiling</em>, not the expectation.</td></tr>
+    <tr><td>Expiration</td><td>24 hours</td><td>Requests not completed within 24h are marked <code>expired</code> (unbilled).</td></tr>
+    <tr><td>Result retention</td><td><strong>29 days</strong> from <code>created_at</code></td><td>Measured from <em>creation</em>, not from processing end.</td></tr>
+    <tr><td>Batch size cap</td><td><strong>100,000 requests OR 256 MB</strong></td><td>Whichever limit is reached <em>first</em>. Oversized → <code>413 request_too_large</code>.</td></tr>
+    <tr><td>Scope</td><td>Workspace</td><td>Batches &amp; results are isolated to the Workspace that created them.</td></tr>
+    <tr><td>Prompt-caching stacking</td><td>✅ Supported</td><td>Batch discount and prompt-cache savings <strong>stack</strong>. Use the 1-hour cache duration for shared context.</td></tr>
+  </tbody></table>
+
+  <h3>Visualization — Batch Lifecycle Flow</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="node"><span class="t">1 · Create</span><span class="d">POST list of requests<br>status: <code>in_progress</code></span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">2 · Process</span><span class="d">async, independent<br>&lt;1h typical, ≤24h</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">3 · Poll</span><span class="d">retrieve until<br>status: <code>ended</code></span></div>
+      <div class="arrow">→</div>
+      <div class="node ok"><span class="t">4 · Retrieve</span><span class="d">stream <code>.jsonl</code><br>from <code>results_url</code></span></div>
+    </div>
+    <div class="diagram-cap">Fig. 22.1 — Submit → asynchronous processing → poll for <code>ended</code> → stream results (available 29 days).</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> The "50% discount" is unconditional on batch usage — but the <em>real</em> savings multiplier
+    comes from <strong>stacking prompt caching</strong> on shared context (e.g. a long system prompt reused across 50,000 rows).
+    When you see a cost-optimization question mentioning a large shared prefix, the best answer usually combines <em>both</em> levers.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> Watch for the classic trap that confuses the <strong>typical</strong> completion time
+    (&lt; 1 hour) with the <strong>guaranteed</strong> window (24 hours). For any <em>SLA-safety</em> question you must budget
+    against the <strong>24-hour ceiling</strong>, never the optimistic average. Also memorize that the 50% discount hits
+    <strong>both input and output</strong> — a distractor answer will claim "input only."
+  </div>
+
+  <!-- ================= 22.2 ================= -->
+  <h2 id="s2"><span class="num">22.2</span> &nbsp;When Batch Processing Is (and Isn't) Appropriate</h2>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  Batch is for work you can wait on and want cheap. If a human or downstream system is <em>blocking</em> on the answer right now,
+  batch is the wrong tool. If it's a big pile of independent work that can finish "sometime today," batch is ideal.</p>
+
+  <p><strong>Technically:</strong> The decision hinges on three axes — <strong>latency tolerance</strong>, <strong>volume</strong>,
+  and <strong>interaction shape</strong>. Batch wins when latency tolerance is high (minutes–hours), volume is large, and each unit
+  of work is <em>self-contained</em> (no interactive round-trips).</p>
+
+  <h3>Decision Framework — Real-Time vs. Batch</h3>
+  <table>
+    <tbody><tr><th>Dimension</th><th>Messages API (real-time)</th><th>Message Batches API</th></tr>
+    <tr><td>Cost</td><td>Standard (100%)</td><td><span class="badge b-ok">50%</span></td></tr>
+    <tr><td>Latency</td><td>Seconds (interactive)</td><td>&lt;1h typical, up to 24h</td></tr>
+    <tr><td>Best for</td><td>Chatbots, live agents, anything user-facing &amp; blocking</td><td>Evals, bulk extraction, content moderation, dataset labeling, summarization at scale</td></tr>
+    <tr><td>Response mode</td><td>Sync; supports <code>stream: true</code></td><td>Async; <strong>no streaming</strong> (results as a file)</td></tr>
+    <tr><td>Interactive client-side tool loop</td><td>✅ Natural fit</td><td>⚠️ Not within one request (see §22.3)</td></tr>
+    <tr><td>Throughput</td><td>Bounded by rate limits per call</td><td>High — up to 100k requests/batch</td></tr>
+  </tbody></table>
+
+  <h3>Visualization — Decision Tree</h3>
+  <div class="diagram">
+    <div class="flow" style="flex-direction:column; gap:10px; align-items:center;">
+      <div class="node" style="min-width:260px;"><span class="t">Is an immediate response required?</span></div>
+      <div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap; justify-content:center;">
+        <div style="text-align:center;">
+          <div class="callout-mini">YES →</div>
+          <div class="node err" style="margin-top:6px;"><span class="t">Use Messages API</span><span class="d">user-blocking / interactive</span></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="callout-mini">NO ↓</div>
+          <div class="node" style="min-width:220px; margin-top:6px;"><span class="t">High volume &amp; self-contained?</span></div>
+          <div style="display:flex; gap:24px; margin-top:10px; justify-content:center;">
+            <div class="node ok"><span class="t">YES → Batch</span><span class="d">50% cost, async</span></div>
+            <div class="node err"><span class="t">NO → Messages</span><span class="d">low volume / interactive</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-cap">Fig. 22.2 — Latency tolerance is the first gate; volume + independence is the second.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> "Independent" is the keyword. If each item can be answered <em>without</em> the answer to another item,
+    it batches cleanly. Cross-item dependencies (item B's prompt needs item A's output) mean you either sequence multiple batches
+    or fall back to real-time orchestration.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> Scenario questions here give you a workload and ask "batch or real-time?" Scan for
+    <strong>latency verbs</strong> ("live", "immediately", "chat", "user waits") → real-time; and <strong>bulk nouns</strong>
+    ("nightly", "10,000 documents", "backfill", "evaluation set") → batch. A single "the user is waiting" phrase overrides
+    volume — it forces real-time regardless of size.
+  </div>
+
+  <!-- ================= 22.3 ================= -->
+  <h2 id="s3"><span class="num">22.3</span> &nbsp;Batch API Limitations — Tool Calling &amp; Why It Matters Architecturally</h2>
+
+  <div class="warning-box">
+    ⚠️ <strong>Precision flag (read this carefully — commonly mis-stated):</strong> The blunt claim "the Batch API doesn't support
+    tool calling or multi-turn" is <em>outdated and imprecise</em>. Current docs confirm batches <strong>accept</strong> multi-turn
+    conversations, <strong>vision</strong>, <strong>extended thinking</strong>, and <strong>server-side tools</strong> (web search, web fetch,
+    code execution, MCP connectors). The true limitation is structural, described below. Learn the precise version — exams reward it.
+  </div>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  A batch request is <strong>"fire and forget."</strong> You send it once and pick up the answer later. That works great when Claude
+  can finish the whole job on its own. It breaks down when the job needs a <em>back-and-forth</em> where <strong>your code</strong>
+  has to run a tool mid-conversation and hand the result back — because there's no live connection to hand anything back <em>to</em>.</p>
+
+  <h3>The Two Kinds of Tool Use — Know the Difference</h3>
+  <table>
+    <tbody><tr><th>Tool type</th><th>Who executes it?</th><th>Works in a single batch request?</th></tr>
+    <tr><td><strong>Server-side tools</strong><br>(web search, web fetch, code execution, MCP connectors)</td><td>Anthropic, server-side, inside the agentic loop</td><td><span class="badge b-ok">✅ Yes</span> — the batch worker runs the same server-side loop.</td></tr>
+    <tr><td><strong>Client-side (custom) tools</strong><br>(your function that returns a <code>tool_result</code>)</td><td>Your application code, between turns</td><td><span class="badge b-err">⚠️ Not interactively</span> — needs a live round-trip the async batch can't provide.</td></tr>
+  </tbody></table>
+
+  <h3>Why This Matters Architecturally</h3>
+  <p>Because a batch is submitted once and processed asynchronously with <strong>no open connection</strong>:</p>
+  <ul>
+    <li>A <strong>client-side tool loop</strong> (model asks for a tool → your code runs it → you return <code>tool_result</code> → model continues)
+      requires multiple synchronous round-trips. You cannot inject a <code>tool_result</code> into an in-flight batch request.</li>
+    <li>If a server-tool turn doesn't finish, the result returns <code>stop_reason: "pause_turn"</code>. You must <strong>resubmit the paused
+      assistant content</strong> in a <em>fresh</em> request (batch or synchronous) to continue — i.e. multi-turn agentic flows become
+      <strong>multiple sequential submissions</strong>, not one.</li>
+    <li><strong>Unsupported params</strong> return validation errors: <code>stream: true</code> (results are a file, not a stream),
+      <code>speed</code> / Fast mode (tunes sync latency), and <code>max_tokens: 0</code> (cache pre-warming can't survive async delay).</li>
+  </ul>
+
+  <h3>Visualization — Where the Loop Breaks</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="node"><span class="t">Model turn 1</span><span class="d">"call get_weather()"</span></div>
+      <div class="arrow">→</div>
+      <div class="node err"><span class="t">✂ YOUR CODE</span><span class="d">must run tool &amp;<br>return tool_result</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">Model turn 2</span><span class="d">uses tool_result</span></div>
+    </div>
+    <p class="center" style="margin:14px 0 0; color:var(--warn); font-size:.9rem;">
+      ⛔ The middle step needs a live round-trip — an async, one-shot batch request has nowhere to send the <code>tool_result</code> back.
+      <br>Server-side tools avoid this because Anthropic closes the loop internally.
+    </p>
+    <div class="diagram-cap">Fig. 22.3 — Client-side tool loops require an open connection the Batch API doesn't maintain.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> If a design needs an interactive client-side tool loop <em>at scale</em>, the correct pattern is a
+    <strong>hybrid</strong>: run the interactive turns on the real-time Messages API, and batch only the independent, one-shot
+    portions (e.g. batch the final summarization step). Alternatively, decompose an agentic flow into a <strong>pipeline of
+    sequential batches</strong>, correlating stages by <code>custom_id</code>.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> §22.3 questions typically present a scenario needing sequential <em>client-side</em> tool
+    calls inside one batch request and ask for the fix. The correct answer: <strong>this interactive loop is not supported in a
+    single batch → split into a real-time flow (or a multi-batch pipeline).</strong> Beware the trap distractor that says "batches
+    don't support tools at all" — that's false; <strong>server-side tools do work</strong>. The precise limitation is the
+    <em>interactive client-side round-trip</em>, plus <code>pause_turn</code> requiring re-submission.
+  </div>
+
+  <!-- ================= 22.4 ================= -->
+  <h2 id="s4"><span class="num">22.4</span> &nbsp;The <code>custom_id</code> — Purpose, Uniqueness &amp; Correlation Pattern</h2>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  Results come back <strong>out of order</strong>. The <code>custom_id</code> is the name tag you staple to each request so you can
+  match every answer back to the exact thing you asked about. No tag → no reliable way to know which answer belongs to which input.</p>
+
+  <p><strong>Technically:</strong> Each request in a batch carries a client-supplied <code>custom_id</code>. Every result line in the
+  returned <code>.jsonl</code> echoes that same <code>custom_id</code>. Since <strong>results can be returned in any order</strong>
+  (and often are), <code>custom_id</code> is the <em>only</em> reliable correlation key between request and response.</p>
+
+  <h3>Key Facts &amp; Constraints</h3>
+  <table>
+    <tbody><tr><th>Rule</th><th>Detail</th></tr>
+    <tr><td>Uniqueness</td><td>Must be <strong>unique within the batch</strong>. Duplicates cause errors / ambiguous correlation.</td></tr>
+    <tr><td>Length</td><td><strong>1 to 64 characters.</strong></td></tr>
+    <tr><td>Allowed characters</td><td>Alphanumeric, hyphens, underscores only — regex <code>^[a-zA-Z0-9_-]{1,64}$</code>.</td></tr>
+    <tr><td>Ordering guarantee</td><td><strong>None.</strong> Never rely on result order — always match by <code>custom_id</code>.</td></tr>
+    <tr><td>Purpose</td><td>Correlation of result → request; also the key for targeted failure resubmission (see §22.6).</td></tr>
+  </tbody></table>
+
+  <h3>Visualization — Correlation Sequence</h3>
+  <div class="diagram">
+<pre style="border-color:var(--accent-2);">REQUEST (submitted order)          RESULTS (.jsonl, ANY order)
+┌───────────────────────────┐      ┌───────────────────────────┐
+│ custom_id: "doc-42-extract"│─┐   │ custom_id: "doc-99-extract"│  ← returned first!
+│ custom_id: "doc-99-extract"│─┼─╮ │ custom_id: "doc-42-extract"│
+│ custom_id: "doc-07-extract"│─┘ ╰→│ custom_id: "doc-07-extract"│
+└───────────────────────────┘      └───────────────────────────┘
+        │                                      │
+        └──────────  match by custom_id  ───────┘
+                 (NOT by position/index)</pre>
+    <div class="diagram-cap">Fig. 22.4 — The <code>custom_id</code> is the join key; positional matching is unsafe.</div>
+  </div>
+
+  <h3>Recommended Scheme — Encode Meaning</h3>
+  <p>Design <code>custom_id</code> to be <strong>human-readable AND programmatically parseable</strong>, encoding the metadata you'll
+  need to triage a failure without a lookup table:</p>
+  <pre><code>{batch}-{entity}-{recordId}-{stage}
+ e.g.  "b2026w38-invoice-000042-extract"
+        │       │        │       └─ pipeline stage
+        │       │        └────────── source record id
+        │       └─────────────────── entity/type
+        └─────────────────────────── batch identifier</code></pre>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Always design your <code>custom_id</code> scheme to be human-readable AND programmatically parseable
+    (e.g. <code>"batch1-userid-1234"</code>) so failures can be triaged quickly without a lookup table. Keep it within
+    <strong>64 chars</strong> and stick to <code>[a-zA-Z0-9_-]</code> — a stray colon, slash, or space is a validation error.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> Expect a question that quietly assumes results arrive in submission order — the correct
+    move is to reject that assumption and correlate by <code>custom_id</code>. Also memorize the constraints: <strong>1–64 chars,
+    <code>[a-zA-Z0-9_-]</code> only, unique per batch.</strong> A distractor will offer a <code>custom_id</code> containing a
+    period or slash (invalid) or claim results preserve order (false).
+  </div>
+
+  <!-- ================= 22.5 ================= -->
+  <h2 id="s5"><span class="num">22.5</span> &nbsp;Calculating Batch Submission Frequency Based on SLA Constraints</h2>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  If you promise results within X hours of an item arriving, you must submit often enough that even the <em>slowest</em> possible
+  batch still lands inside X. The math is: your SLA has to cover both <strong>how long an item waits before you submit it</strong>
+  <em>plus</em> <strong>how long the batch takes to process</strong>.</p>
+
+  <h3>The Formula</h3>
+  <div class="formula">
+    T<sub>SLA</sub> &nbsp;≥&nbsp; I<sub>submit</sub> &nbsp;+&nbsp; W<sub>process</sub>
+    <br><br>
+    ⟹ &nbsp; I<sub>max</sub> = T<sub>SLA</sub> − W<sub>process</sub> &nbsp;&nbsp;&nbsp; f = 1 / I<sub>submit</sub>
+  </div>
+  <ul>
+    <li><strong>T<sub>SLA</sub></strong> — deadline: max time from item arrival to delivered result.</li>
+    <li><strong>W<sub>process</sub></strong> — batch processing budget. For <strong>SLA safety, use the 24-hour ceiling</strong>
+      (not the &lt;1h typical) unless the SLA explicitly tolerates the tail risk.</li>
+    <li><strong>I<sub>submit</sub></strong> — interval between batch submissions (the max time an item waits to be picked up).</li>
+    <li><strong>I<sub>max</sub></strong> — the <em>largest allowable</em> interval; submit at least this often.</li>
+    <li><strong>f</strong> — submission frequency; batches per day = 24 / I<sub>submit</sub>.</li>
+  </ul>
+
+  <h3>Worked Example</h3>
+  <div class="diagram">
+    <p><strong>Given:</strong> SLA = deliver results within <strong>30 hours</strong> of an item arriving. Volume ≈ 20,000 items/day.
+    Use the worst-case processing budget W = <strong>24h</strong>.</p>
+    <p><strong>Step 1 — Max interval:</strong> &nbsp; I<sub>max</sub> = T<sub>SLA</sub> − W = 30 − 24 = <strong>6 hours</strong>.</p>
+    <p><strong>Step 2 — Frequency:</strong> &nbsp; submit every ≤ 6h → <strong>4 batches/day</strong> (00:00, 06:00, 12:00, 18:00).</p>
+    <p><strong>Step 3 — Size check:</strong> &nbsp; 20,000 / 4 ≈ <strong>5,000 requests/batch</strong> — well under the 100k / 256&nbsp;MB cap. ✅</p>
+    <p><strong>Worst-case trace:</strong> an item arriving at 00:01 waits until the 06:00 submission (≈6h), then processes up to 24h →
+    delivered by ≈30:00. <span class="badge b-ok">Meets the 30h SLA.</span></p>
+
+    <div class="timeline">
+      <div class="tl-track">
+        <div class="tl-seg"><div class="tl-bar" style="background:var(--warn);"></div><small>Wait for next submit<br><strong>≤ 6h</strong></small></div>
+        <div class="tl-seg"><div class="tl-bar" style="background:var(--accent-2);"></div><small>Batch processing<br><strong>≤ 24h</strong></small></div>
+      </div>
+      <p class="center" style="margin:8px 0 0; color:var(--muted); font-size:.85rem;">0h ───────────── 6h ─────────────────────────── 30h (SLA deadline) ✅</p>
+    </div>
+    <div class="diagram-cap">Fig. 22.5 — SLA must absorb submission wait + worst-case processing window.</div>
+  </div>
+
+  <div class="warning-box">
+    ⚠️ <strong>Critical edge case:</strong> If <strong>T<sub>SLA</sub> ≤ 24h</strong>, then I<sub>max</sub> ≤ 0 — the Batch API
+    <em>cannot</em> guarantee the SLA against its own worst case, because a single batch may take the full 24h. Options:
+    (1) use the <strong>real-time Messages API</strong>, (2) renegotiate the SLA above 24h, or (3) explicitly accept tail risk
+    if the SLA permits (most batches finish &lt;1h, but this is not guaranteed).
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> If per-interval volume exceeds the <strong>100,000-request / 256&nbsp;MB</strong> cap, shard into
+    multiple parallel batches for that window — the cap is per batch, not per account. Track shards with a batch-id prefix in
+    the <code>custom_id</code>.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> These are the calculation questions. The near-universal trap is plugging in the
+    <strong>&lt;1h typical</strong> time instead of the <strong>24h worst case</strong> for W — always use 24h for SLA-safety math
+    unless told otherwise. The second trap: an SLA tighter than 24h that the question expects you to flag as
+    <strong>infeasible for batch alone</strong>. Show the subtraction <code>I = T_SLA − W</code> explicitly.
+  </div>
+
+  <!-- ================= 22.6 ================= -->
+  <h2 id="s6"><span class="num">22.6</span> &nbsp;Handling Batch Failures — Resubmission Keyed on <code>custom_id</code></h2>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  When results come back, some items may have failed. You look at <em>why</em> each one failed, and only re-send the ones worth
+  re-sending — reusing their name tags (<code>custom_id</code>) so the retry stays traceable. A failure of one item never breaks the others.</p>
+
+  <p><strong>Technically:</strong> Each result carries a <code>result.type</code>. The <code>request_counts</code> object summarizes
+  how many landed in each state. Your retry logic branches on the type — and <strong>you're not billed</strong> for <code>errored</code>,
+  <code>canceled</code>, or <code>expired</code> requests.</p>
+
+  <h3>The Four Result Types &amp; Correct Response</h3>
+  <table>
+    <tbody><tr><th>Result type</th><th>Meaning</th><th>Billed?</th><th>Correct action</th></tr>
+    <tr><td><span class="badge b-ok">succeeded</span></td><td>Message returned normally.</td><td>Yes</td><td>Persist result, keyed by <code>custom_id</code>.</td></tr>
+    <tr><td><span class="badge b-err">errored</span></td><td>Request failed. Sub-cases below.</td><td>No</td><td><strong>Branch on error type</strong> (see below).</td></tr>
+    <tr><td><span class="badge b-neutral">canceled</span></td><td>User canceled batch before this ran.</td><td>No</td><td>Resubmit in a fresh batch if still needed.</td></tr>
+    <tr><td><span class="badge b-neutral">expired</span></td><td>Hit 24h before being sent to the model.</td><td>No</td><td>Resubmit (consider smaller batches / better timing per §22.5).</td></tr>
+  </tbody></table>
+
+  <h4>Splitting the <code>errored</code> case</h4>
+  <ul>
+    <li><code>invalid_request_error</code> — <strong>the request body is broken.</strong> Blind retry will fail again.
+      <strong>Fix the payload first</strong>, then resubmit.</li>
+    <li><strong>Server / internal errors</strong> — transient. <strong>Safe to retry directly</strong> (ideally with backoff).</li>
+  </ul>
+
+  <h3>Visualization — Failure Triage &amp; Resubmission Loop</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="node ok"><span class="t">succeeded</span><span class="d">store by custom_id</span></div>
+      <div class="arrow">↘</div>
+      <div class="node" style="border-color:var(--accent);"><span class="t">collect result</span><span class="d">read result.type</span></div>
+      <div class="arrow">↙</div>
+      <div class="node err"><span class="t">errored / expired / canceled</span><span class="d">build retry set</span></div>
+    </div>
+    <div class="flow" style="margin-top:16px;">
+      <div class="node err"><span class="t">invalid_request</span><span class="d">fix payload → retry</span></div>
+      <div class="arrow">·</div>
+      <div class="node err"><span class="t">server error</span><span class="d">retry as-is + backoff</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">new batch</span><span class="d">reuse same custom_ids</span></div>
+      <div class="arrow">→</div>
+      <div class="node ok"><span class="t">merge results</span><span class="d">join on custom_id</span></div>
+    </div>
+    <div class="diagram-cap">Fig. 22.6 — Triage by result type; resubmit failures in a new batch, preserving <code>custom_id</code> for idempotent merging.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Reuse the <em>same</em> <code>custom_id</code> on retries and treat your result store as a
+    <strong>keyed upsert</strong> — the successful result overwrites the failed placeholder for that id. This makes the whole
+    pipeline idempotent: re-running a retry batch can never create duplicates or lose the mapping. Track a retry counter as a
+    suffix only if you need audit history (e.g. <code>...-extract-r2</code>).
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> The signature §22.6 trap is treating all failures identically. The exam wants you to
+    <strong>distinguish <code>invalid_request_error</code> (fix, don't blind-retry) from server errors (retry directly)</strong>,
+    and to know that <code>errored</code>/<code>expired</code>/<code>canceled</code> are <strong>not billed</strong>. Also
+    remember: one failed request <strong>does not</strong> affect the others in the batch. The universal correct mechanism for
+    resubmission is <strong>keying on <code>custom_id</code></strong>.
+  </div>
+
+  <!-- ================= 22.7 ================= -->
+  <h2 id="s7"><span class="num">22.7</span> &nbsp;Prompt Refinement on Sample Sets Before Large-Volume Processing</h2>
+
+  <h3>Core Concept</h3>
+  <p class="plain"><span class="lbl">In plain language</span>
+  Don't spend money processing 100,000 items with a prompt you haven't proven works. Test on a small, representative sample first,
+  fix the prompt until it's reliable, <em>then</em> scale up. A 2% error rate is trivial on 50 samples and expensive on 500,000 rows.</p>
+
+  <p><strong>Technically:</strong> Because batches process asynchronously (feedback can be up to 24h away), the tight
+  iterate-fix-iterate loop belongs on the <strong>synchronous Messages API against a curated sample</strong> — not on full-volume
+  batches. Validating request shape synchronously also prevents mass validation errors, since batch param validation is asynchronous
+  and only surfaces after the whole batch ends.</p>
+
+  <h3>Best-Practice Workflow</h3>
+  <div class="diagram">
+    <div class="flow">
+      <div class="node"><span class="t">1 · Sample</span><span class="d">50–200 representative<br>+ edge cases</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">2 · Iterate (sync)</span><span class="d">Messages API<br>fast feedback</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">3 · Measure</span><span class="d">accuracy / schema<br>validity rate</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">4 · Dry-run 1 shape</span><span class="d">verify request<br>shape validates</span></div>
+      <div class="arrow">→</div>
+      <div class="node ok"><span class="t">5 · Scale (batch)</span><span class="d">full volume, 50% cost</span></div>
+    </div>
+    <div class="diagram-cap">Fig. 22.7 — Refine synchronously on a sample; only commit to full-volume batch once quality &amp; shape are proven.</div>
+  </div>
+
+  <h4>Why sample first — the economics</h4>
+  <ul>
+    <li><strong>Feedback latency:</strong> sync = seconds; batch = up to 24h. Iterating on batches wastes days.</li>
+    <li><strong>Cost of a bad prompt at scale:</strong> even at 50% off, a flawed prompt over 500k rows is a large, avoidable spend
+      — and you'd pay again to re-run.</li>
+    <li><strong>Validation timing:</strong> batch param validation is <em>asynchronous</em> and reported only after the batch ends,
+      so a shape bug can silently waste a whole window. A single synchronous dry-run catches it in seconds.</li>
+    <li><strong>Representativeness:</strong> the sample must include known edge cases (empty fields, long inputs, unusual formats),
+      not just easy rows.</li>
+  </ul>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Lock a <strong>quantitative acceptance gate</strong> before scaling — e.g. "≥98% valid JSON schema
+    and ≥95% field-level accuracy on the 150-row sample." Treat the sample like a mini eval set and version your prompt against it,
+    so any future prompt change can be re-scored on the same rows.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> Questions here reward the sequence <strong>sample → refine synchronously → dry-run shape →
+    scale via batch.</strong> The trap answer skips refinement and submits the full batch immediately "to save time." Flag that as
+    wrong: batch's async feedback makes iteration slow, and asynchronous validation means shape errors surface only after the window.
+    The keyword <strong>"dry run a single request with the Messages API"</strong> is a documented best practice — recognize it.
+  </div>
+
+  <!-- ================= 22.8 ================= -->
+  <h2 id="s8"><span class="num">22.8</span> &nbsp;Hands-On: Designing a Batch Extraction Workflow (End-to-End)</h2>
+
+  <h3>Scenario</h3>
+  <p>Extract structured fields (vendor, date, total, line-items) from <strong>40,000 scanned invoices/day</strong> as JSON.
+  SLA: results within <strong>36 hours</strong> of upload. Cost-sensitive. No human is blocked in real time.</p>
+
+  <h3>Step-by-Step Design</h3>
+
+  <h4>① Validate fit (§22.2)</h4>
+  <p>Bulk, self-contained, latency-tolerant (36h &gt; 24h), cost-sensitive → <span class="badge b-ok">Batch is the correct primitive.</span></p>
+
+  <h4>② Refine on a sample (§22.7)</h4>
+  <p>Take 150 representative invoices (include multi-page, low-quality scans, foreign currency). Iterate the extraction prompt on the
+  <strong>synchronous Messages API</strong> until ≥98% valid JSON schema. Dry-run one request shape to confirm it validates.</p>
+
+  <h4>③ Design the <code>custom_id</code> scheme (§22.4)</h4>
+  <pre><code>"inv-{yyyymmdd}-{shard}-{invoiceId}-extract"
+ e.g. "inv-20260923-s01-000042-extract"   (≤64 chars, [a-zA-Z0-9_-] only)</code></pre>
+
+  <h4>④ Compute submission cadence (§22.5)</h4>
+  <div class="formula">I<sub>max</sub> = T<sub>SLA</sub> − W = 36 − 24 = <strong>12 h</strong> &nbsp;⟹&nbsp; submit every 12h → <strong>2 batches/day</strong></div>
+  <p>Per-batch volume ≈ 40,000 / 2 = <strong>20,000 requests</strong> — under the 100k / 256&nbsp;MB cap (verify total size; shard if &gt; 256&nbsp;MB, hence the <code>{shard}</code> field). Enable prompt caching on the shared extraction system prompt to stack savings.</p>
+
+  <h4>⑤ Submit, poll, retrieve</h4>
+  <pre><code># pseudocode
+batch = client.messages.batches.create(requests=[...])   # status: in_progress
+while client.messages.batches.retrieve(batch.id).processing_status != "ended":
+    sleep(60)                                             # poll
+for r in client.messages.batches.results(batch.id):      # stream .jsonl
+    store[r.custom_id] = r.result                         # correlate by custom_id</code></pre>
+
+  <h4>⑥ Triage &amp; resubmit failures (§22.6)</h4>
+  <ul>
+    <li><code>succeeded</code> → upsert JSON into store keyed by <code>custom_id</code>.</li>
+    <li><code>errored / invalid_request_error</code> → fix payload (e.g. oversized image) → retry.</li>
+    <li><code>errored / server</code> → retry as-is with backoff.</li>
+    <li><code>expired</code> → resubmit next window; if chronic, shrink batch size or add a window.</li>
+    <li>Resubmit in a new batch reusing the same <code>custom_id</code>s → idempotent merge.</li>
+  </ul>
+
+  <h4>⑦ Retrieve within retention (§22.1)</h4>
+  <p>Download &amp; persist results well within the <strong>29-day</strong> window (measured from <code>created_at</code>). Persist to your own object storage; don't treat Anthropic's <code>results_url</code> as long-term storage.</p>
+
+  <h3>Visualization — Full Pipeline</h3>
+  <div class="diagram">
+    <div class="flow" style="flex-wrap:wrap;">
+      <div class="node"><span class="t">Ingest</span><span class="d">40k invoices/day</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">Sample+refine</span><span class="d">sync, 150 rows</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">Build batch</span><span class="d">custom_id + cache</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">Submit ×2/day</span><span class="d">12h cadence</span></div>
+      <div class="arrow">→</div>
+      <div class="node"><span class="t">Poll → ended</span><span class="d">retrieve .jsonl</span></div>
+      <div class="arrow">→</div>
+      <div class="node err"><span class="t">Triage</span><span class="d">retry failures</span></div>
+      <div class="arrow">→</div>
+      <div class="node ok"><span class="t">Persist</span><span class="d">&lt;29-day window</span></div>
+    </div>
+    <div class="diagram-cap">Fig. 22.8 — End-to-end: every earlier sub-topic composes into one production pipeline.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Make the store a keyed upsert from day one and stamp each <code>custom_id</code> with the shard + date.
+    You get free idempotency, trivial failure re-runs, and a human-debuggable audit trail — all three exam themes (§22.4, §22.5, §22.6)
+    satisfied by one well-designed id.
+  </div>
+
+  <div class="exam-box">
+    🎯 <strong>Exam Strategy:</strong> Hands-on questions ask you to <strong>sequence the steps correctly</strong> and to justify
+    the cadence with the SLA formula. High-value points: (a) validate batch-fit against latency; (b) refine on sample synchronously;
+    (c) cadence = <code>T_SLA − 24h</code>; (d) correlate/retry by <code>custom_id</code>; (e) retrieve within 29 days. Expect a
+    "what's the first thing you'd do?" variant — the answer is <strong>validate fit / refine on a sample</strong>, never "submit the full batch."
+  </div>
+
+  <!-- ================= SUMMARY ================= -->
+  <h2 id="summary"><span class="num">★</span> &nbsp;Chapter Summary — Cheat Sheet</h2>
+  <table>
+    <tbody><tr><th>Topic</th><th>Key Takeaway</th><th>Common Exam Trap</th></tr>
+    <tr><td><strong>22.1</strong> Cost &amp; window</td><td>50% off <em>both</em> input+output; ≤24h window (usually &lt;1h); results kept 29 days.</td><td>Confusing typical &lt;1h with guaranteed 24h; claiming discount is input-only.</td></tr>
+    <tr><td><strong>22.2</strong> When to use</td><td>Batch = high-volume, self-contained, latency-tolerant. Real-time = interactive/blocking.</td><td>"User is waiting" forces real-time regardless of volume.</td></tr>
+    <tr><td><strong>22.3</strong> Limitations</td><td>Server tools work; <em>interactive client-side</em> tool loops don't fit one batch; <code>pause_turn</code> needs resubmit.</td><td>Saying "no tools at all" (false) instead of the precise interactive-loop limit.</td></tr>
+    <tr><td><strong>22.4</strong> <code>custom_id</code></td><td>Unique, 1–64 chars, <code>[a-zA-Z0-9_-]</code>. Correlate results by it — order is not guaranteed.</td><td>Assuming result order matches submission order; illegal chars in id.</td></tr>
+    <tr><td><strong>22.5</strong> SLA cadence</td><td><code>I = T_SLA − 24h</code>; submit at ≤ that interval. SLA ≤ 24h ⇒ batch alone can't guarantee it.</td><td>Using &lt;1h instead of 24h for W; missing the infeasible-SLA flag.</td></tr>
+    <tr><td><strong>22.6</strong> Failures</td><td>Branch on result type; <code>invalid_request</code>=fix, server=retry; unbilled failures; resubmit by <code>custom_id</code>.</td><td>Blind-retrying <code>invalid_request_error</code>; thinking failures are billed.</td></tr>
+    <tr><td><strong>22.7</strong> Refine on sample</td><td>Iterate prompt synchronously on a sample + dry-run shape, then scale to batch.</td><td>Submitting full volume before validating the prompt/shape.</td></tr>
+    <tr><td><strong>22.8</strong> Workflow</td><td>Fit → sample-refine → custom_id → cadence → submit/poll → triage → persist (&lt;29d).</td><td>Starting with "submit the full batch"; wrong step order.</td></tr>
+  </tbody></table>
+
+  <div class="warning-box">
+    ⚠️ <strong>Numbers to memorize cold:</strong>
+    <span class="callout-mini"><strong>50%</strong> discount</span>
+    <span class="callout-mini"><strong>24h</strong> window/expiry</span>
+    <span class="callout-mini"><strong>29 days</strong> retention</span>
+    <span class="callout-mini"><strong>100,000</strong> requests / <strong>256 MB</strong></span>
+    <span class="callout-mini"><code>custom_id</code>: <strong>1–64</strong> chars</span>
+    <span class="callout-mini">4 result types: succeeded / errored / canceled / expired</span>
+  </div>
+
+  <!-- ================= PRACTICE ================= -->
+  <h2 id="practice"><span class="num">✎</span> &nbsp;Practice Questions (Self-Check)</h2>
+  <p class="lead">Focused on the trickiest concepts — §22.3, §22.5, §22.6. Click to reveal answers.</p>
+
+  <details class="qa">
+    <summary>Q1 (§22.3). A design requires Claude to call your internal <code>lookup_customer()</code> function, use its result, then produce a summary — for 60,000 accounts. An engineer proposes doing it all in one Message Batch. What's wrong, and what do you recommend?</summary>
+    <div class="ans">
+      <p><strong>Answer:</strong> <code>lookup_customer()</code> is a <em>client-side</em> tool: the model requests it, <strong>your code</strong>
+      must execute it and return a <code>tool_result</code>, then the model continues. That interactive round-trip needs a live
+      connection, which an asynchronous, one-shot batch request does not maintain — so the loop cannot complete inside a single batch request.</p>
+      <p><strong>Recommendation:</strong> <em>Either</em> run the interactive tool turns on the <strong>synchronous Messages API</strong>,
+      <em>or</em> decompose into a <strong>multi-batch pipeline</strong>: Batch A resolves lookups (or pre-fetch the data yourself and
+      inline it), then Batch B does the one-shot summarization on the enriched inputs, correlating stages by <code>custom_id</code>.</p>
+      <p><strong>Trap avoided:</strong> Don't answer "batches don't support tools" — <em>server-side</em> tools (web search, code execution, etc.)
+      <strong>do</strong> work in batches. The limit is specifically the interactive <em>client-side</em> loop.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q2 (§22.5). Your SLA is "results within 20 hours of arrival." Can you meet it with the Batch API alone? Show the math.</summary>
+    <div class="ans">
+      <p><strong>Answer:</strong> <code>I_max = T_SLA − W = 20 − 24 = −4 hours.</code> A negative interval is impossible.</p>
+      <p>Because a single batch can take the full <strong>24h</strong> worst case, the Batch API <strong>cannot guarantee</strong> a 20h SLA.
+      Options: (1) use the real-time <strong>Messages API</strong>; (2) renegotiate the SLA to &gt; 24h; or (3) explicitly accept tail risk
+      if the SLA permits — most batches finish in &lt;1h, but that is not contractually guaranteed.</p>
+      <p><strong>Trap avoided:</strong> Plugging in the &lt;1h <em>typical</em> time (giving a false "yes, submit ~every 19h"). SLA-safety math uses the 24h ceiling.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q3 (§22.6). A batch of 10,000 returns: 9,600 <code>succeeded</code>, 300 <code>errored</code> (200 <code>invalid_request_error</code>, 100 server errors), 100 <code>expired</code>. How do you handle each, and what are you billed for?</summary>
+    <div class="ans">
+      <p><strong>Billing:</strong> You pay only for the <strong>9,600 succeeded</strong>. <code>errored</code>, <code>expired</code>
+      (and <code>canceled</code>) are <strong>not billed</strong>.</p>
+      <p><strong>Handling:</strong></p>
+      <ul>
+        <li><strong>200 <code>invalid_request_error</code></strong> — payload is broken; <strong>fix the request body</strong> (e.g. malformed content, oversized image) <em>before</em> resubmitting. Blind retry would just fail again.</li>
+        <li><strong>100 server errors</strong> — transient; <strong>retry directly</strong> (with backoff).</li>
+        <li><strong>100 <code>expired</code></strong> — resubmit in the next window; if expiration is recurring, reduce batch size or improve submission timing (§22.5).</li>
+      </ul>
+      <p>Build the retry set from the failed <code>custom_id</code>s, resubmit as a <strong>new batch reusing the same ids</strong>, and
+      upsert into your keyed store so the merge is idempotent. Remember: one failed request never affects the others.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q4 (§22.4 / §22.6). Why is correlating results by array index instead of <code>custom_id</code> a bug, even if your submission code is correct?</summary>
+    <div class="ans">
+      <p><strong>Answer:</strong> Batch results are returned in <strong>no guaranteed order</strong> — the <code>.jsonl</code> can (and
+      routinely does) come back shuffled relative to submission. Positional/index matching therefore assigns answers to the wrong inputs.
+      The <code>custom_id</code> echoed on each result line is the <strong>only</strong> reliable join key. This also underpins failure
+      handling: retries reuse the same <code>custom_id</code>, so a keyed upsert stays correct across multiple batches.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q5 (§22.5 sizing). You must process 350,000 items in a single 6-hour submission window. What constraint do you hit, and how do you handle it?</summary>
+    <div class="ans">
+      <p><strong>Answer:</strong> A single batch is capped at <strong>100,000 requests OR 256 MB</strong>, whichever first. 350,000 &gt; 100,000,
+      so you <strong>shard into ≥ 4 parallel batches</strong> for that window (e.g. 4 × 87,500), also checking each shard stays under 256 MB.
+      The cap is <em>per batch</em>, not per account, so parallel shards are fine. Encode the shard in the <code>custom_id</code>
+      (e.g. <code>...-s01-...</code>) so results across shards remain individually traceable and mergeable.</p>
+    </div>
+  </details>
+
+  <div class="footer">
+    Chapter 22 · Batch Processing Strategies — study guide. Facts verified against Anthropic's official
+    <a href="https://platform.claude.com/docs/en/docs/build-with-claude/batch-processing" target="_blank">Batch processing documentation</a>.
+    Per-model prices and beta headers change frequently — reconfirm current values before your exam. Self-contained: no external CSS/JS dependencies.
+  </div>
+
+</div>
+
+
+</body></html>

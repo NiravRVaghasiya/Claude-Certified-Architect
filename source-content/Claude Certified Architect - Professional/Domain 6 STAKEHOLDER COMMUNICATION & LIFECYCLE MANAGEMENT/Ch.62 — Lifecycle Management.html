@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 62: Lifecycle Management — Discovery to Production | Claude Certified Architect Study Guide</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-alt: #f0f3f8;
+    --text: #1a2233;
+    --text-soft: #48566e;
+    --text-muted: #7c8aa3;
+    --border: #dce1ea;
+    --border-soft: #eaeef4;
+    --primary: #4338ca;
+    --primary-soft: #eef2ff;
+    --accent: #0e7490;
+    --success: #15803d;
+    --success-bg: #ecfdf3;
+    --warn: #b45309;
+    --warn-bg: #fef6e7;
+    --danger: #b91c1c;
+    --danger-bg: #fef2f2;
+    --info: #1d4ed8;
+    --info-bg: #eff6ff;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    --radius: 12px;
+    --radius-sm: 7px;
+    --shadow: 0 1px 3px rgba(20,30,50,.06), 0 6px 20px rgba(20,30,50,.05);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.62;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px 96px; }
+
+  /* ---- Header ---- */
+  header.hero {
+    background: linear-gradient(135deg, #4338ca 0%, #0e7490 100%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    box-shadow: var(--shadow);
+    margin-bottom: 32px;
+  }
+  header.hero .kicker {
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: .82;
+    margin-bottom: 10px;
+  }
+  header.hero h1 { margin: 0 0 10px; font-size: 30px; line-height: 1.22; font-weight: 750; }
+  header.hero p { margin: 0; opacity: .92; font-size: 15px; max-width: 640px; }
+
+  /* ---- Table of contents ---- */
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+  }
+  nav.toc h2 { margin: 0 0 14px; font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); border: none; padding: 0; }
+  nav.toc ol { margin: 0; padding-left: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+  nav.toc a { color: var(--text-soft); text-decoration: none; font-size: 14.5px; display: flex; gap: 10px; padding: 6px 8px; border-radius: var(--radius-sm); transition: all .15s ease; }
+  nav.toc a:hover { background: var(--primary-soft); color: var(--primary); }
+  nav.toc a .num { font-family: var(--font-mono); font-weight: 700; color: var(--primary); flex-shrink: 0; }
+  nav.toc .extra a .num { color: var(--accent); }
+
+  /* ---- Sections ---- */
+  section.chapter-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 34px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+    scroll-margin-top: 20px;
+  }
+  h2 { font-size: 23px; font-weight: 720; margin: 0 0 6px; padding-bottom: 14px; border-bottom: 2px solid var(--border-soft); color: var(--text); }
+  h2 .sec-num { color: var(--primary); font-family: var(--font-mono); }
+  h3 { font-size: 15px; font-weight: 700; margin: 26px 0 10px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; display: flex; align-items: center; gap: 8px; }
+  h3 .ico { font-size: 16px; }
+  p { margin: 0 0 12px; color: var(--text-soft); }
+  strong { color: var(--text); }
+
+  /* ---- Tables ---- */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 6px 0 8px; }
+  th { text-align: left; background: var(--surface-alt); color: var(--text); font-weight: 700; padding: 10px 13px; border: 1px solid var(--border); font-size: 12.5px; text-transform: uppercase; letter-spacing: .03em; }
+  td { padding: 10px 13px; color: var(--text-soft); border: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: #fafbfd; }
+  td code, p code, li code { font-family: var(--font-mono); background: var(--surface-alt); padding: 1px 6px; border-radius: 5px; font-size: 12.5px; color: var(--primary); }
+  .term { font-weight: 700; color: var(--text); white-space: nowrap; }
+
+  /* ---- Callout boxes ---- */
+  .callout { border-radius: var(--radius-sm); padding: 14px 18px; margin: 16px 0; font-size: 14.5px; border-left: 4px solid; }
+  .callout p:last-child { margin-bottom: 0; }
+  .exam-tip { background: var(--info-bg); border-color: var(--info); color: #1e3a8a; }
+  .exam-tip strong { color: var(--info); }
+  .example { background: var(--surface-alt); border-color: var(--accent); }
+  .example strong { color: var(--accent); }
+  .tips { background: var(--success-bg); border-color: var(--success); }
+  .tips strong { color: var(--success); }
+  .trap { background: var(--danger-bg); border-color: var(--danger); }
+  .trap strong { color: var(--danger); }
+  .tips ul, .trap ul { margin: 8px 0 0; padding-left: 20px; }
+  .tips li, .trap li { margin-bottom: 6px; color: var(--text-soft); }
+
+  /* ---- Diagrams ---- */
+  .diagram { background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; margin: 16px 0; text-align: center; overflow-x: auto; }
+  .diagram .caption { font-size: 12.5px; color: var(--text-muted); margin-top: 10px; font-style: italic; }
+  .mermaid { display: flex; justify-content: center; }
+
+  /* CSS checklist diagram */
+  .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 14px 0; }
+  .check-card { background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+  .check-card .ch-title { font-weight: 700; color: var(--primary); font-size: 13.5px; margin-bottom: 4px; }
+  .check-card .ch-body { font-size: 13px; color: var(--text-soft); }
+
+  /* Practice questions */
+  .qa { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 14px; overflow: hidden; }
+  .qa .q { padding: 14px 18px; font-weight: 600; color: var(--text); background: var(--surface-alt); }
+  .qa .q .qtag { font-family: var(--font-mono); color: var(--primary); font-weight: 700; margin-right: 8px; }
+  .qa details { padding: 0; }
+  .qa summary { cursor: pointer; padding: 11px 18px; color: var(--primary); font-weight: 600; font-size: 14px; list-style: none; user-select: none; transition: background .15s; }
+  .qa summary:hover { background: var(--primary-soft); }
+  .qa summary::-webkit-details-marker { display: none; }
+  .qa summary::before { content: "▸ "; }
+  .qa details[open] summary::before { content: "▾ "; }
+  .qa .answer { padding: 4px 18px 16px; font-size: 14px; color: var(--text-soft); border-top: 1px dashed var(--border); }
+  .qa .answer .correct { color: var(--success); font-weight: 700; }
+
+  footer.foot { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 100px; background: var(--primary-soft); color: var(--primary); letter-spacing: .03em; }
+  a.top-link { display:block; text-align:right; font-size:12px; color:var(--text-muted); text-decoration:none; margin-top:8px; }
+  a.top-link:hover { color: var(--primary); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Claude Certified Architect · Foundations &amp; Professional</div>
+    <h1>Chapter 62 — Lifecycle Management: Discovery to Production</h1>
+    <p>An exam-ready study guide covering the AI/ML solution lifecycle end to end: iterative stages, prototyping strategy, production readiness, monitoring &amp; drift, versioning &amp; rollback, and a worked project plan.</p>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1"><span class="num">62.1</span> Lifecycle Stages (Iterative Flow)</a></li>
+      <li><a href="#s2"><span class="num">62.2</span> Prototyping vs. POC</a></li>
+      <li><a href="#s3"><span class="num">62.3</span> Definition of "Done"</a></li>
+      <li><a href="#s4"><span class="num">62.4</span> Monitoring, Feedback &amp; Drift</a></li>
+      <li><a href="#s5"><span class="num">62.5</span> Versioning, Migration &amp; Rollback</a></li>
+      <li><a href="#s6"><span class="num">62.6</span> Project Plan Template + Case Study</a></li>
+      <li class="extra"><a href="#summary"><span class="num">★</span> Chapter Summary Table</a></li>
+      <li class="extra"><a href="#practice"><span class="num">★</span> Practice Question Bank</a></li>
+      <li class="extra"><a href="#traps"><span class="num">★</span> Common Exam Traps</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 62.1 ============ -->
+  <section class="chapter-section" id="s1">
+    <h2><span class="sec-num">62.1</span> &nbsp;Lifecycle Stages — Discovery → Design → Build → Deploy → Monitor → Iterate</h2>
+
+    <h3><span class="ico">📌</span> Concept Overview</h3>
+    <p>An AI/ML solution moves through six repeating stages. Crucially, this is a <strong>loop, not a straight line</strong>: signals collected during <em>Monitor</em> feed the <em>Iterate</em> stage, which re-opens <em>Discovery/Design</em> for the next release. Treating the lifecycle as a one-way waterfall is the classic beginner mistake — real systems continuously re-enter earlier stages as data, requirements, and model behavior evolve.</p>
+
+    <h3><span class="ico">📖</span> Key Terminology</h3>
+    <table>
+      <tbody><tr><th>Term</th><th>Definition</th></tr>
+      <tr><td class="term">Discovery</td><td>Gathering stakeholder requirements, defining the business problem, success metrics, and feasibility — <em>before</em> building anything.</td></tr>
+      <tr><td class="term">Design</td><td>Choosing the approach: data sources, model/architecture (e.g., prompt + RAG vs. fine-tune), evaluation strategy, and system integration.</td></tr>
+      <tr><td class="term">Build</td><td>Implementation and validation: data pipelines, prompts/model, and internal testing including user acceptance testing (UAT).</td></tr>
+      <tr><td class="term">Deploy</td><td>Releasing to production infrastructure with rollout controls (canary, blue-green) and go-live sign-off.</td></tr>
+      <tr><td class="term">Monitor</td><td>Observing live performance, quality, cost, and drift; capturing user feedback.</td></tr>
+      <tr><td class="term">Iterate</td><td>Prioritizing improvements from monitoring signals and looping back into Discovery/Design for the next version.</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">🔁</span> Visualization — Iterative Lifecycle</h3>
+    <div class="diagram">
+      <div class="mermaid">
+flowchart LR
+    A([1 · Discovery]) --&gt; B([2 · Design])
+    B --&gt; C([3 · Build])
+    C --&gt; D([4 · Deploy])
+    D --&gt; E([5 · Monitor])
+    E --&gt; F([6 · Iterate])
+    F -. feedback loop .-&gt; A
+    E -. hotfix / drift .-&gt; C
+    classDef stage fill:#eef2ff,stroke:#4338ca,stroke-width:2px,color:#1a2233;
+    class A,B,C,D,E,F stage;
+      </div>
+      <div class="caption">The lifecycle is cyclical — <em>Iterate</em> re-enters <em>Discovery</em>, and drift/incidents can loop straight back to <em>Build</em>.</div>
+    </div>
+
+    <div class="callout example"><strong>🌐 Real-World Example:</strong> A support-triage assistant launches (Deploy) and Monitor shows accuracy dropping as new product lines appear in tickets. Instead of scrapping it, the team Iterates: back to Discovery to capture the new categories, Design updated retrieval, Build, and re-deploy — one full turn of the loop.</div>
+
+    <div class="callout tips"><strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li><strong>Mnemonic:</strong> "<em>D</em>iscover <em>D</em>esign <em>B</em>uild, then <em>D</em>eploy <em>M</em>onitor &amp; <em>I</em>terate" → <strong>DDB-DMI</strong>.</li>
+        <li>Requirements = <strong>Discovery</strong>; architecture choices = <strong>Design</strong>. Don't confuse them.</li>
+        <li>UAT lives at the <strong>Build→Deploy</strong> boundary, not in Discovery.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-tip"><strong>🎯 Exam Strategy:</strong> Questions present a scenario and ask which stage it describes. Watch keywords: "stakeholder requirements / success metrics" → <strong>Discovery</strong>; "selecting RAG vs fine-tune" → <strong>Design</strong>; "UAT / integration testing" → <strong>Build</strong>; "canary rollout" → <strong>Deploy</strong>; "drift alert / feedback" → <strong>Monitor</strong>. If an option says the lifecycle is "linear/one-time," it's a distractor.</div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ 62.2 ============ -->
+  <section class="chapter-section" id="s2">
+    <h2><span class="sec-num">62.2</span> &nbsp;Prototyping vs. Proof of Concept (POC)</h2>
+
+    <h3><span class="ico">📌</span> Concept Overview</h3>
+    <p>Both de-risk a project early, but they answer <strong>different questions</strong>. A <strong>POC</strong> asks "<em>Is this technically possible at all?</em>" — it validates the single riskiest technical assumption on a narrow slice. A <strong>Prototype</strong> asks "<em>What should this feel like and how should it work?</em>" — it explores UX, workflow, and stakeholder fit, often with more breadth but less technical rigor. Choosing the wrong one wastes time: a polished prototype proves nothing if the core model approach can't work.</p>
+
+    <h3><span class="ico">📖</span> Key Terminology</h3>
+    <table>
+      <tbody><tr><th>Term</th><th>Definition</th></tr>
+      <tr><td class="term">POC</td><td>Proof of Concept — a minimal experiment validating that a specific technical approach is feasible. Narrow, throwaway, feasibility-focused.</td></tr>
+      <tr><td class="term">Prototype</td><td>An interactive mock/early build exploring user experience, workflow, and requirements. Broader, may evolve toward the product.</td></tr>
+      <tr><td class="term">Pilot / MVP</td><td>A limited but production-grade release to real users — the step <em>after</em> POC/prototype, not a substitute.</td></tr>
+      <tr><td class="term">Risk mitigation</td><td>Deliberately testing the highest-uncertainty assumption first to fail cheaply.</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">🔀</span> Visualization — Decision Framework</h3>
+    <div class="diagram">
+      <div class="mermaid">
+flowchart TD
+    Q{What is the biggest unknown?}
+    Q --&gt;|Can the model / tech do it?| P[Build a POC<br>narrow · technical · throwaway]
+    Q --&gt;|How should users interact with it?| R[Build a Prototype<br>UX · workflow · stakeholder feedback]
+    P --&gt; V{Feasible?}
+    R --&gt; V
+    V --&gt;|Yes| M[Proceed to MVP / Pilot]
+    V --&gt;|No| K[Kill or pivot early — cheap failure]
+    classDef d fill:#eef2ff,stroke:#4338ca,color:#1a2233;
+    classDef g fill:#ecfdf3,stroke:#15803d,color:#1a2233;
+    classDef r fill:#fef2f2,stroke:#b91c1c,color:#1a2233;
+    class P,R d; class M g; class K r;
+      </div>
+      <div class="caption">Pick the artifact that attacks the biggest unknown first.</div>
+    </div>
+
+    <h3><span class="ico">✅</span> Risk-Mitigation Checklist</h3>
+    <div class="checklist-grid">
+      <div class="check-card"><div class="ch-title">Riskiest assumption named</div><div class="ch-body">The one thing that, if false, kills the project.</div></div>
+      <div class="check-card"><div class="ch-title">Time-boxed</div><div class="ch-body">Fixed budget (e.g., 1–2 weeks) so failure is cheap.</div></div>
+      <div class="check-card"><div class="ch-title">Clear success criteria</div><div class="ch-body">A measurable go/no-go threshold set beforehand.</div></div>
+      <div class="check-card"><div class="ch-title">Representative data</div><div class="ch-body">Real (or realistic) samples, not cherry-picked demos.</div></div>
+      <div class="check-card"><div class="ch-title">Disposable by design</div><div class="ch-body">No pressure to ship POC code to production.</div></div>
+    </div>
+
+    <div class="callout example"><strong>🌐 Real-World Example:</strong> Before committing to an AI contract-review tool, the team runs a <strong>POC</strong>: can Claude extract clause obligations from 50 real contracts at ≥90% precision? That's the make-or-break unknown. Separately, a clickable <strong>prototype</strong> tests whether reviewers prefer inline highlights or a side panel — a UX question that only matters if the POC succeeds.</div>
+
+    <div class="callout tips"><strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li><strong>POC = "Proof of Can-it".</strong> Prototype = "Proto-<em>type</em> of the experience."</li>
+        <li>A POC that looks ugly but works is a success; a prototype that looks great but hides an infeasible core is a trap.</li>
+        <li>Always set the go/no-go metric <em>before</em> starting to avoid moving goalposts.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-tip"><strong>🎯 Exam Strategy:</strong> Watch for "validate technical feasibility / riskiest assumption" → <strong>POC</strong>; "gather user feedback / explore workflow / UX" → <strong>Prototype</strong>. Distractors swap these. Answers implying a prototype/POC should be hardened directly into production ignore the "throwaway" principle and are usually wrong.</div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ 62.3 ============ -->
+  <section class="chapter-section" id="s3">
+    <h2><span class="sec-num">62.3</span> &nbsp;Definition of "Done" — Production Readiness</h2>
+
+    <h3><span class="ico">📌</span> Concept Overview</h3>
+    <p>"Working in a demo" is not "done." A solution is <strong>production-ready</strong> only when it meets agreed <strong>SLAs</strong>, has complete <strong>documentation</strong>, ships with <strong>operational safeguards</strong> (monitoring, rollback, security review), and includes the <strong>handoff artifacts</strong> the operating team needs to run it. A shared, explicit Definition of Done (DoD) prevents "90% done forever" and unsafe launches.</p>
+
+    <h3><span class="ico">📖</span> Key Terminology</h3>
+    <table>
+      <tbody><tr><th>Term</th><th>Definition</th></tr>
+      <tr><td class="term">SLA</td><td>Service-Level Agreement — the committed target (e.g., 99.9% uptime, p95 latency &lt; 2 s) the solution must meet.</td></tr>
+      <tr><td class="term">SLO / SLI</td><td>Objective (internal target) and Indicator (the measured metric) that underpin an SLA.</td></tr>
+      <tr><td class="term">Handoff artifacts</td><td>Runbooks, architecture docs, eval reports, on-call/escalation contacts — what ops needs to own the system.</td></tr>
+      <tr><td class="term">Runbook</td><td>Step-by-step guide for operating and recovering the system during incidents.</td></tr>
+      <tr><td class="term">DoD</td><td>Definition of Done — the agreed, checkable criteria that mark a deliverable complete.</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">🧾</span> Visualization — Production-Readiness Checklist</h3>
+    <div class="diagram">
+      <div class="mermaid">
+flowchart LR
+    subgraph Quality
+    A[Eval passes<br>accuracy &amp; safety thresholds]
+    end
+    subgraph Operations
+    B[SLAs / SLOs<br>defined &amp; met]
+    C[Monitoring &amp;<br>alerting live]
+    D[Rollback plan<br>tested]
+    end
+    subgraph Governance
+    E[Security &amp;<br>privacy review]
+    F[Docs &amp; runbook<br>+ handoff]
+    end
+    A --&gt; G((PROD READY))
+    B --&gt; G
+    C --&gt; G
+    D --&gt; G
+    E --&gt; G
+    F --&gt; G
+    classDef c fill:#eef2ff,stroke:#4338ca,color:#1a2233;
+    classDef go fill:#ecfdf3,stroke:#15803d,color:#1a2233,stroke-width:2px;
+    class A,B,C,D,E,F c; class G go;
+      </div>
+      <div class="caption">All six gates must be green before "Done." One red gate blocks go-live.</div>
+    </div>
+
+    <div class="callout example"><strong>🌐 Real-World Example:</strong> An AI email-summarizer "works," but the team blocks launch because there's no rollback path and no p95 latency SLO. They add a canary + rollback, define "p95 &lt; 3 s, groundedness ≥ 95%," write a runbook, and pass a PII review. <em>Now</em> it's Done.</div>
+
+    <div class="callout tips"><strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li>Memory aid: <strong>"Q-O-G"</strong> — <em>Q</em>uality, <em>O</em>perations, <em>G</em>overnance gates.</li>
+        <li>DoD must be agreed <em>before</em> Build, not negotiated at launch.</li>
+        <li>Documentation &amp; a tested rollback are part of "Done" — not optional extras.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-tip"><strong>🎯 Exam Strategy:</strong> If a scenario says a model "hits target accuracy" but lacks monitoring, rollback, or docs, the correct answer is <strong>"not production-ready."</strong> Keywords: SLA, runbook, handoff, security review. Beware options that equate "passing offline eval" with "done."</div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ 62.4 ============ -->
+  <section class="chapter-section" id="s4">
+    <h2><span class="sec-num">62.4</span> &nbsp;Monitoring, Feedback Loops &amp; Drift Detection</h2>
+
+    <h3><span class="ico">📌</span> Concept Overview</h3>
+    <p>Once live, you monitor three layers: <strong>operational health</strong> (latency, error rate, cost/throughput), <strong>output quality</strong> (accuracy, precision/recall, or for LLMs groundedness, hallucination rate, refusal rate), and <strong>drift</strong> (the world changing under the model). <strong>Feedback loops</strong> — explicit thumbs-up/down and implicit signals like edits or abandonment — feed the Iterate stage and can be used to build evaluation sets.</p>
+
+    <h3><span class="ico">📖</span> Key Terminology</h3>
+    <table>
+      <tbody><tr><th>Term</th><th>Definition</th></tr>
+      <tr><td class="term">Data drift</td><td>The distribution of <em>inputs</em> shifts from what the model saw in development (e.g., new slang, new topics).</td></tr>
+      <tr><td class="term">Concept drift</td><td>The <em>relationship</em> between inputs and correct outputs changes (the "right answer" itself moves).</td></tr>
+      <tr><td class="term">Feedback loop</td><td>Capturing user/system signals and routing them back to improve the model or prompts.</td></tr>
+      <tr><td class="term">Ground truth lag</td><td>Delay before you learn the true outcome, complicating live quality measurement.</td></tr>
+      <tr><td class="term">Guardrail metric</td><td>A safety/quality threshold that triggers an alert when breached.</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">📊</span> Visualization — Monitoring &amp; Feedback Loop</h3>
+    <div class="diagram">
+      <div class="mermaid">
+flowchart LR
+    U[Live traffic] --&gt; S[AI System]
+    S --&gt; O[Outputs]
+    O --&gt; M{Monitoring}
+    M --&gt; OP[Operational:<br>latency · errors · cost]
+    M --&gt; QL[Quality:<br>accuracy · groundedness]
+    M --&gt; DR[Drift:<br>data &amp; concept]
+    DR --&gt;|threshold breach| AL[[Alert]]
+    O --&gt; FB[User feedback<br>explicit + implicit]
+    FB --&gt; DS[(Eval / retrain set)]
+    AL --&gt; IT[Iterate]
+    DS --&gt; IT
+    classDef n fill:#eef2ff,stroke:#4338ca,color:#1a2233;
+    classDef a fill:#fef6e7,stroke:#b45309,color:#1a2233;
+    class U,S,O,OP,QL,DR,FB,DS,IT n; class AL a;
+      </div>
+      <div class="caption">Monitoring detects drift and feeds alerts + feedback data into the Iterate stage.</div>
+    </div>
+
+    <div class="callout example"><strong>🌐 Real-World Example:</strong> A demand-forecasting model degrades after a market shift — same inputs now map to different outcomes (<strong>concept drift</strong>). A dashboard tracking rolling prediction error crosses its guardrail, fires an alert, and the flagged cases become a fresh eval set for retraining.</div>
+
+    <div class="callout tips"><strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li><strong>Data drift = inputs change; Concept drift = the answer changes.</strong> If unsure, ask "did the questions change, or did the correct answers change?"</li>
+        <li>Always monitor <em>cost</em> for LLM apps — token spend is an ops metric.</li>
+        <li>Implicit feedback (user edits/abandonment) is often richer than sparse thumbs-up/down.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-tip"><strong>🎯 Exam Strategy:</strong> Distinguishing <strong>data vs. concept drift</strong> is a favorite question. "Input distribution shifted" → data drift. "Label/target relationship changed" → concept drift. Keywords: "performance degraded over time," "distribution shift," "feedback loop." A response that says "no monitoring needed after a good launch" is always wrong.</div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ 62.5 ============ -->
+  <section class="chapter-section" id="s5">
+    <h2><span class="sec-num">62.5</span> &nbsp;Versioning, Migration Playbook &amp; Rollback</h2>
+
+    <h3><span class="ico">📌</span> Concept Overview</h3>
+    <p>Every deployable asset — model, prompt, dataset, config — should be <strong>versioned</strong> so you can reproduce, compare, and revert. Migrating to a new version uses <strong>progressive rollout</strong> strategies (shadow → canary → blue-green) that limit blast radius, and every migration must have a <strong>tested rollback</strong> so a bad release can be reverted in minutes, not hours.</p>
+
+    <h3><span class="ico">📖</span> Key Terminology</h3>
+    <table>
+      <tbody><tr><th>Term</th><th>Definition</th></tr>
+      <tr><td class="term">Model registry</td><td>Central catalog of versioned models with lineage, metrics, and stage (staging/prod/archived).</td></tr>
+      <tr><td class="term">Semantic versioning</td><td><code>MAJOR.MINOR.PATCH</code> — signals breaking vs. compatible changes.</td></tr>
+      <tr><td class="term">Shadow deploy</td><td>New version runs on live traffic in parallel, results logged but not served — zero user risk.</td></tr>
+      <tr><td class="term">Canary</td><td>Route a small % of traffic to the new version; expand only if metrics hold.</td></tr>
+      <tr><td class="term">Blue-green</td><td>Two identical environments; switch traffic all-at-once and revert instantly by switching back.</td></tr>
+      <tr><td class="term">Rollback</td><td>Reverting to the last known-good version when a release regresses.</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">🚦</span> Visualization — Migration &amp; Rollback Playbook</h3>
+    <div class="diagram">
+      <div class="mermaid">
+flowchart LR
+    V1[v1 in prod<br>known-good] --&gt; SH[Shadow<br>v2 mirrors traffic]
+    SH --&gt; CN[Canary<br>5% → 25% → 50%]
+    CN --&gt; OK{Metrics OK?}
+    OK --&gt;|Yes| BG[Blue-Green switch<br>100% to v2]
+    OK --&gt;|No| RB[[Rollback to v1]]
+    BG --&gt; DONE([v2 promoted])
+    RB --&gt; V1
+    classDef n fill:#eef2ff,stroke:#4338ca,color:#1a2233;
+    classDef ok fill:#ecfdf3,stroke:#15803d,color:#1a2233;
+    classDef bad fill:#fef2f2,stroke:#b91c1c,color:#1a2233;
+    class V1,SH,CN,BG n; class DONE ok; class RB bad;
+      </div>
+      <div class="caption">Progressive exposure limits blast radius; a tested rollback is the safety net at every step.</div>
+    </div>
+
+    <div class="callout example"><strong>🌐 Real-World Example:</strong> Upgrading a chatbot from prompt <code>v2.3.0</code> to <code>v3.0.0</code> (a MAJOR, breaking change), the team shadow-tests for a day, then canaries 5%. Groundedness dips, so they auto-rollback to <code>v2.3.0</code> — users never notice — then fix and retry. The registry keeps both versions reproducible.</div>
+
+    <div class="callout tips"><strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li><strong>Shadow = no risk, Canary = small risk, Blue-green = instant switch/revert.</strong></li>
+        <li>Bump <strong>MAJOR</strong> for breaking changes, <strong>MINOR</strong> for compatible features, <strong>PATCH</strong> for fixes.</li>
+        <li>An untested rollback is not a rollback plan — rehearse it.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-tip"><strong>🎯 Exam Strategy:</strong> Match the strategy to intent: "test on real traffic with no user impact" → <strong>shadow</strong>; "gradually expose a small %" → <strong>canary</strong>; "instant cut-over / instant revert" → <strong>blue-green</strong>. Keywords: registry, lineage, canary, rollback. If a scenario deploys a breaking change to 100% at once with no rollback, that's the wrong practice.</div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ 62.6 ============ -->
+  <section class="chapter-section" id="s6">
+    <h2><span class="sec-num">62.6</span> &nbsp;Hands-On Project Plan Template + Worked Case Study</h2>
+
+    <h3><span class="ico">📌</span> Concept Overview</h3>
+    <p>A reusable project plan maps each lifecycle stage to concrete <strong>objectives, deliverables, and exit gates</strong>. Below is the template, followed by an end-to-end mini case study — an <strong>AI Invoice-Extraction Assistant</strong> — showing how one project passes through all six stages.</p>
+
+    <h3><span class="ico">📋</span> Project Plan Template</h3>
+    <table>
+      <tbody><tr><th>Stage</th><th>Objective</th><th>Key Deliverable</th><th>Exit Gate</th></tr>
+      <tr><td class="term">Discovery</td><td>Define problem &amp; success metric</td><td>Requirements doc, KPI targets</td><td>Signed-off success criteria</td></tr>
+      <tr><td class="term">Design</td><td>Choose approach &amp; eval plan</td><td>Architecture + eval design</td><td>Feasibility (POC) confirmed</td></tr>
+      <tr><td class="term">Build</td><td>Implement &amp; validate</td><td>Working system + eval report</td><td>Passes eval + UAT</td></tr>
+      <tr><td class="term">Deploy</td><td>Release safely</td><td>Canary rollout + runbook</td><td>SLAs met, rollback tested</td></tr>
+      <tr><td class="term">Monitor</td><td>Track health &amp; drift</td><td>Dashboards + alerts</td><td>Guardrails green</td></tr>
+      <tr><td class="term">Iterate</td><td>Improve from signals</td><td>Prioritized backlog</td><td>Next version scoped</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">🧪</span> Worked Example — AI Invoice-Extraction Assistant</h3>
+    <table>
+      <tbody><tr><th>Stage</th><th>What happened</th></tr>
+      <tr><td class="term">Discovery</td><td>Finance spends 15 min/invoice on manual entry. Goal: cut to &lt; 2 min at ≥ 95% field accuracy. KPI + budget signed off.</td></tr>
+      <tr><td class="term">Design</td><td>Chose Claude + document RAG over fine-tuning (faster, cheaper). Eval set = 200 labeled invoices; metric = per-field precision. <strong>POC</strong> on 50 invoices hit 96% → feasible.</td></tr>
+      <tr><td class="term">Build</td><td>Built extraction pipeline + validation UI. Eval: 95.4% precision; UAT with 3 clerks passed with tweaks to date parsing.</td></tr>
+      <tr><td class="term">Deploy</td><td>Canary at 10% of invoices, p95 latency 2.8 s &lt; 3 s SLA. Runbook + rollback to manual queue tested. Promoted to 100%.</td></tr>
+      <tr><td class="term">Monitor</td><td>Dashboard tracks accuracy, latency, cost/invoice. Alert when field accuracy &lt; 93%. Clerk corrections logged as feedback.</td></tr>
+      <tr><td class="term">Iterate</td><td>New vendor formats cause <strong>data drift</strong> → accuracy dips. Corrections become new eval cases; back to Design for a retrieval update (v1.1).</td></tr>
+    </tbody></table>
+
+    <h3><span class="ico">🔄</span> Visualization — Case Study Through the Loop</h3>
+    <div class="diagram">
+      <div class="mermaid">
+flowchart LR
+    D1([Discovery<br>15 to 2 min goal]) --&gt; D2([Design<br>RAG + POC 96%])
+    D2 --&gt; B([Build<br>95.4% + UAT])
+    B --&gt; DP([Deploy<br>canary 10% to 100%])
+    DP --&gt; MO([Monitor<br>acc / latency / cost])
+    MO --&gt; IT([Iterate<br>vendor drift to v1.1])
+    IT -. next loop .-&gt; D1
+    classDef s fill:#eef2ff,stroke:#4338ca,stroke-width:2px,color:#1a2233;
+    class D1,D2,B,DP,MO,IT s;
+      </div>
+      <div class="caption">The Invoice-Extraction Assistant traversing all six stages — one complete lifecycle loop, re-entering Discovery on drift.</div>
+    </div>
+
+    <div class="callout tips"><strong>💡 Tips &amp; Tricks</strong>
+      <ul>
+        <li>Every stage needs an explicit <strong>exit gate</strong> — "we think it's fine" is not a gate.</li>
+        <li>The case study is one full loop; the drift in Iterate proves the lifecycle is cyclical.</li>
+        <li>Reuse this table as a planning skeleton for any AI project answer.</li>
+      </ul>
+    </div>
+
+    <div class="callout exam-tip"><strong>🎯 Exam Strategy:</strong> Scenario questions may drop you mid-project and ask "what's the next step / which gate is missing?" Map the narrative onto this template. A common right answer: "define the success metric first" (Discovery) or "confirm feasibility with a POC before Build" (Design gate).</div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section class="chapter-section" id="summary">
+    <h2>★ &nbsp;Chapter Summary Table — Top 3 Exam-Testable Facts per Subsection</h2>
+    <table>
+      <tbody><tr><th>Subsection</th><th>Fact 1</th><th>Fact 2</th><th>Fact 3</th></tr>
+      <tr>
+        <td class="term">62.1 Lifecycle</td>
+        <td>6 stages: Discovery→Design→Build→Deploy→Monitor→Iterate</td>
+        <td>It's a <strong>loop</strong>, not linear — Iterate re-enters Discovery</td>
+        <td>Match scenario keywords to the correct stage</td>
+      </tr>
+      <tr>
+        <td class="term">62.2 Proto vs POC</td>
+        <td>POC = technical feasibility (riskiest assumption)</td>
+        <td>Prototype = UX/workflow exploration</td>
+        <td>Both are time-boxed &amp; typically throwaway</td>
+      </tr>
+      <tr>
+        <td class="term">62.3 Definition of Done</td>
+        <td>Passing eval ≠ done; need SLAs + docs + rollback</td>
+        <td>Gates: Quality, Operations, Governance</td>
+        <td>Handoff artifacts (runbook, contacts) required</td>
+      </tr>
+      <tr>
+        <td class="term">62.4 Monitoring/Drift</td>
+        <td>Data drift = inputs shift; Concept drift = answer shifts</td>
+        <td>Monitor ops + quality + drift; track cost too</td>
+        <td>Feedback loops feed the Iterate stage</td>
+      </tr>
+      <tr>
+        <td class="term">62.5 Versioning/Rollback</td>
+        <td>Shadow → Canary → Blue-green limits blast radius</td>
+        <td>Version everything; use a model registry + semver</td>
+        <td>Always keep a <strong>tested</strong> rollback</td>
+      </tr>
+      <tr>
+        <td class="term">62.6 Project Plan</td>
+        <td>Each stage has objective, deliverable, exit gate</td>
+        <td>Confirm feasibility (POC) before full Build</td>
+        <td>One case study = one full lifecycle loop</td>
+      </tr>
+    </tbody></table>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ PRACTICE ============ -->
+  <section class="chapter-section" id="practice">
+    <h2>★ &nbsp;Practice Question Bank <span class="badge">8 Questions</span></h2>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q1</span>A team gathers stakeholder requirements and defines success metrics before any building. Which lifecycle stage is this?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: Discovery.</span> Requirements gathering and success-metric definition occur in Discovery — before architecture (Design) or implementation (Build). "Success metrics / stakeholder requirements" are Discovery keywords.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q2</span>You must validate whether Claude can extract legal clauses at ≥90% precision before committing. Prototype or POC?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: POC.</span> The unknown is <em>technical feasibility</em> of the core approach — the classic POC trigger. A prototype would explore UX, which is premature until feasibility is proven.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q3</span>A model passes offline evaluation at target accuracy but has no monitoring, rollback, or runbook. Is it production-ready?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: No.</span> The Definition of Done requires Operations (monitoring, tested rollback) and Governance (docs/runbook, security review) gates — not just Quality. Passing eval alone is insufficient.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q4</span>A live model's accuracy drops because the <em>relationship</em> between inputs and correct outputs has changed. What is this called?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: Concept drift.</span> When the input→correct-output mapping changes, it's concept drift. If only the input distribution shifted (same correct answers), that would be data drift.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q5</span>You want to test a new model version on real production traffic with zero user impact. Which deployment strategy?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: Shadow deployment.</span> The new version processes live traffic in parallel; outputs are logged but not served, so users are unaffected. Canary exposes a small % of real users; blue-green cuts over fully.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q6</span>A prompt change fixes wording but adds no new capability and breaks nothing. Under semantic versioning, which number bumps?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: PATCH.</span> <code>MAJOR.MINOR.PATCH</code>: PATCH for backward-compatible fixes, MINOR for compatible new features, MAJOR for breaking changes.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q7</span>After launch, users frequently edit the AI's output before accepting it. How should this be used?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: As implicit feedback feeding the Iterate stage.</span> Edits are rich implicit signals; captured as feedback they become evaluation/retraining data that drives the next iteration — closing the monitoring→iterate loop.</div></details>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="qtag">Q8</span>A canary release shows quality metrics below the guardrail threshold. What is the correct immediate action?</div>
+      <details><summary>Show answer &amp; explanation</summary><div class="answer"><span class="correct">Answer: Roll back to the last known-good version.</span> A breached guardrail during canary means the new version regressed; revert immediately (limiting blast radius), then diagnose and retry. Never expand a failing canary to 100%.</div></details>
+    </div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <!-- ============ TRAPS ============ -->
+  <section class="chapter-section" id="traps">
+    <h2>★ &nbsp;Common Exam Traps</h2>
+    <div class="callout trap"><strong>⚠️ Frequently Confused Concepts</strong>
+      <ul>
+        <li><strong>Linear vs. iterative lifecycle:</strong> Any answer treating the lifecycle as one-way/waterfall is a distractor — it's a loop.</li>
+        <li><strong>POC vs. Prototype:</strong> POC = <em>technical feasibility</em>; Prototype = <em>UX/workflow</em>. Exam options deliberately swap these.</li>
+        <li><strong>"Passes eval" vs. "Done":</strong> Offline accuracy alone is <em>not</em> production-ready — monitoring, rollback, docs, and security review are required.</li>
+        <li><strong>Data drift vs. Concept drift:</strong> Inputs changing (data) vs. the correct answer changing (concept). Read the stem carefully.</li>
+        <li><strong>Discovery vs. Design:</strong> Requirements &amp; metrics = Discovery; choosing RAG/fine-tune/architecture = Design.</li>
+        <li><strong>Shadow vs. Canary:</strong> Shadow serves nothing to users (zero risk); canary serves a small real % (small risk).</li>
+        <li><strong>Rollback that was never tested:</strong> Having a plan on paper ≠ a working rollback. The exam rewards <em>tested</em> rollbacks.</li>
+        <li><strong>UAT placement:</strong> User acceptance testing sits at the Build→Deploy boundary, not in Discovery.</li>
+      </ul>
+    </div>
+    <a class="top-link" href="#top">↑ Top</a>
+  </section>
+
+  <footer class="foot">
+    Chapter 62 · Lifecycle Management — Discovery to Production &nbsp;|&nbsp; Claude Certified Architect — Foundations &amp; Professional &nbsp;|&nbsp; Exam-prep study guide
+  </footer>
+
+</div>
+
+<script>
+  // Initialize Mermaid after the DOM is fully written (scripts run last).
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#eef2ff',
+        primaryBorderColor: '#4338ca',
+        primaryTextColor: '#1a2233',
+        lineColor: '#7c8aa3',
+        fontfamily: '-apple-system, Segoe UI, Roboto, sans-serif',
+        fontSize: '14px'
+      },
+      flowchart: { curve: 'basis', useMaxWidth: true }
+    });
+  }
+</script>
+
+
+</body></html>

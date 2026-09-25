@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 58 — Structured Discovery &amp; Requirement Gathering | Claude Certified Architect</title>
+<style>
+  :root{
+    --bg:#f7f8fa;
+    --surface:#ffffff;
+    --surface-alt:#f0f3f8;
+    --ink:#1a2233;
+    --ink-soft:#42506b;
+    --ink-muted:#6b7891;
+    --line:#e2e7f0;
+    --line-strong:#c9d2e0;
+    --primary:#4338ca;
+    --primary-soft:#eef0ff;
+    --accent:#0d9488;
+    --accent-soft:#e6fffb;
+    --warn:#b45309;
+    --warn-soft:#fff5e6;
+    --danger:#b91c1c;
+    --danger-soft:#fdeaea;
+    --ok:#15803d;
+    --ok-soft:#eafaef;
+    --radius:12px;
+    --radius-sm:7px;
+    --shadow:0 1px 3px rgba(20,30,60,.07),0 6px 18px rgba(20,30,60,.05);
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",ui-monospace,Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font);line-height:1.6;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:32px 22px 96px;}
+
+  /* ---------- Header ---------- */
+  header.masthead{
+    background:linear-gradient(135deg,#4338ca 0%,#0d9488 100%);
+    color:#fff;border-radius:var(--radius);padding:34px 32px;
+    box-shadow:var(--shadow);margin-bottom:26px;
+  }
+  header.masthead .eyebrow{
+    text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;
+    font-weight:600;opacity:.9;margin:0 0 8px;
+  }
+  header.masthead h1{margin:0 0 10px;font-size:30px;line-height:1.2;font-weight:700;}
+  header.masthead p{margin:0;opacity:.95;font-size:15px;max-width:70ch;}
+  .badges{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;}
+  .badge{
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+    padding:5px 12px;border-radius:100px;font-size:12.5px;font-weight:500;
+  }
+
+  /* ---------- TOC ---------- */
+  nav.toc{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px 26px;margin-bottom:30px;box-shadow:var(--shadow);
+  }
+  nav.toc h2{margin:0 0 14px;font-size:16px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-muted);}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px;}
+  @media(max-width:640px){nav.toc ol{columns:1;}}
+  nav.toc li{margin:7px 0;break-inside:avoid;}
+  nav.toc a{color:var(--primary);text-decoration:none;font-weight:500;font-size:14.5px;}
+  nav.toc a:hover{text-decoration:underline;}
+  nav.toc .sub{padding-left:14px;font-size:13.5px;}
+  nav.toc .sub a{color:var(--ink-soft);font-weight:400;}
+
+  /* ---------- Sections ---------- */
+  section{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:30px 30px 34px;margin-bottom:26px;box-shadow:var(--shadow);
+    scroll-margin-top:16px;
+  }
+  section > h2{
+    margin:0 0 6px;font-size:23px;font-weight:700;color:var(--ink);
+    padding-bottom:12px;border-bottom:3px solid var(--primary-soft);
+  }
+  section > h2 .num{color:var(--primary);font-family:var(--mono);font-size:20px;margin-right:8px;}
+  .lede{color:var(--ink-soft);font-size:15px;margin:14px 0 22px;}
+
+  h3.block{
+    font-size:15px;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--primary);margin:26px 0 10px;font-weight:700;
+    display:flex;align-items:center;gap:9px;
+  }
+  h3.block .ic{font-size:17px;}
+  h4{font-size:16px;margin:18px 0 8px;color:var(--ink);}
+
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:22px;}
+  li{margin:6px 0;}
+  strong{color:var(--ink);}
+  code{
+    font-family:var(--mono);background:var(--surface-alt);
+    padding:1.5px 6px;border-radius:5px;font-size:13.5px;color:#3730a3;
+  }
+
+  /* ---------- Definition lists ---------- */
+  dl.terms{
+    display:grid;grid-template-columns:auto 1fr;gap:0;margin:12px 0;
+    border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;
+  }
+  dl.terms dt{
+    background:var(--surface-alt);font-weight:600;padding:11px 16px;
+    border-bottom:1px solid var(--line);color:var(--ink);font-size:14.5px;
+  }
+  dl.terms dd{
+    margin:0;padding:11px 16px;border-bottom:1px solid var(--line);
+    color:var(--ink-soft);font-size:14.5px;
+  }
+  dl.terms dt:last-of-type,dl.terms dd:last-of-type{border-bottom:none;}
+  @media(max-width:600px){
+    dl.terms{grid-template-columns:1fr;}
+    dl.terms dt{border-bottom:none;padding-bottom:2px;}
+  }
+
+  /* ---------- Tables ---------- */
+  .tbl-scroll{overflow-x:auto;margin:14px 0;border-radius:var(--radius-sm);border:1px solid var(--line);}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface);}
+  thead th{
+    background:var(--primary);color:#fff;text-align:left;padding:11px 14px;
+    font-weight:600;font-size:13.5px;white-space:nowrap;
+  }
+  tbody td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--surface-alt);}
+  tbody tr:last-child td{border-bottom:none;}
+  table.rev thead th{background:var(--accent);}
+
+  /* ---------- Callouts ---------- */
+  .callout{border-radius:var(--radius-sm);padding:14px 18px;margin:14px 0;font-size:14.5px;border-left:5px solid;}
+  .tip-box{background:var(--accent-soft);border-color:var(--accent);color:#0f5c56;}
+  .pitfall-box{background:var(--danger-soft);border-color:var(--danger);color:#7f1d1d;}
+  .warn-box{background:var(--warn-soft);border-color:var(--warn);color:#7c4a06;}
+  .exam-box{background:var(--primary-soft);border-color:var(--primary);color:#312e81;}
+  .callout ul{margin:6px 0;}
+  .callout strong{color:inherit;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr;}}
+
+  /* ---------- Case study ---------- */
+  .case{
+    background:var(--surface-alt);border:1px dashed var(--line-strong);
+    border-radius:var(--radius-sm);padding:16px 20px;margin:14px 0;
+  }
+  .case .case-tag{
+    display:inline-block;background:var(--primary);color:#fff;font-size:11.5px;
+    font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+    padding:3px 10px;border-radius:100px;margin-bottom:8px;
+  }
+
+  /* ---------- Flowchart ---------- */
+  .flowchart{
+    display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin:16px 0;
+    font-size:13.5px;
+  }
+  .flow-step{
+    background:var(--primary-soft);border:1px solid var(--line-strong);
+    color:var(--primary);font-weight:600;padding:12px 14px;border-radius:var(--radius-sm);
+    display:flex;align-items:center;text-align:center;min-height:52px;flex:1 1 0;min-width:110px;
+  }
+  .flow-arrow{display:flex;align-items:center;color:var(--ink-muted);font-size:22px;padding:0 6px;font-weight:700;}
+  @media(max-width:640px){
+    .flowchart{flex-direction:column;}
+    .flow-arrow{transform:rotate(90deg);padding:4px 0;}
+    .flow-step{width:100%;}
+  }
+
+  /* ---------- SVG figure ---------- */
+  figure{margin:16px 0;text-align:center;}
+  figure svg{max-width:100%;height:auto;}
+  figcaption{font-size:13px;color:var(--ink-muted);margin-top:8px;font-style:italic;}
+
+  /* ---------- Quiz ---------- */
+  details.quiz{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+    margin:12px 0;padding:0;overflow:hidden;
+  }
+  details.quiz summary{
+    padding:14px 18px;cursor:pointer;font-weight:600;color:var(--ink);
+    list-style:none;display:flex;gap:10px;align-items:flex-start;background:var(--surface-alt);
+  }
+  details.quiz summary::-webkit-details-marker{display:none;}
+  details.quiz summary::before{
+    content:"Q";background:var(--primary);color:#fff;font-family:var(--mono);
+    width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;
+    justify-content:center;font-size:13px;flex-shrink:0;
+  }
+  details.quiz[open] summary{border-bottom:1px solid var(--line);}
+  details.quiz .answer{padding:14px 18px;font-size:14.5px;color:var(--ink-soft);}
+  details.quiz .answer strong{color:var(--ok);}
+
+  /* ---------- Key takeaways ---------- */
+  .takeaways{list-style:none;padding:0;margin:14px 0;}
+  .takeaways li{
+    background:var(--surface-alt);border-left:4px solid var(--accent);
+    padding:11px 16px;margin:9px 0;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+    font-size:14.5px;
+  }
+  .takeaways li::before{content:"✔ ";color:var(--accent);font-weight:700;}
+
+  hr.soft{border:none;border-top:1px solid var(--line);margin:24px 0;}
+
+  footer.foot{text-align:center;color:var(--ink-muted);font-size:13px;margin-top:34px;}
+
+  .top-link{display:block;text-align:right;font-size:12.5px;margin-top:14px;}
+  .top-link a{color:var(--ink-muted);text-decoration:none;}
+  .top-link a:hover{color:var(--primary);}
+
+  /* ---------- Print ---------- */
+  @media print{
+    body{background:#fff;font-size:11.5pt;}
+    .wrap{max-width:none;padding:0;}
+    header.masthead{background:#4338ca !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    section,nav.toc{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+    thead th,.flow-step,details.quiz summary::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    details.quiz{break-inside:avoid;}
+    details.quiz[open] .answer,details.quiz .answer{display:block !important;}
+    details.quiz:not([open]) .answer{display:block !important;}
+    .top-link{display:none;}
+    a{color:#000;text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead" id="top">
+  <p class="eyebrow">Claude Certified Architect — Foundations &amp; Professional</p>
+  <h1>Chapter 58 · Structured Discovery &amp; Requirement Gathering</h1>
+  <p>Exam-ready revision notes covering how AI/ML architects run discovery sessions, translate business language into technical requirements, surface constraints, author requirements documents, and execute a live discovery workflow.</p>
+  <div class="badges">
+    <span class="badge">5 Sub-topics · 58.1–58.5</span>
+    <span class="badge">Diagrams &amp; Tables</span>
+    <span class="badge">Self-check Quiz</span>
+    <span class="badge">Exam Strategy Playbook</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Table of contents">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s581">58.1 · Conducting Discovery Sessions</a></li>
+    <li><a href="#s582">58.2 · Business → Technical Requirements</a></li>
+    <li><a href="#s583">58.3 · Identifying Constraints</a></li>
+    <li><a href="#s584">58.4 · Writing Requirements Documents</a></li>
+    <li><a href="#s585">58.5 · Hands-On: Running a Session</a></li>
+    <li class="sub"><a href="#summary">Chapter Summary &amp; Key Takeaways</a></li>
+    <li class="sub"><a href="#revision">Quick Revision Table</a></li>
+    <li class="sub"><a href="#quiz">Self-check Quiz</a></li>
+    <li class="sub"><a href="#playbook">Exam Strategy Playbook</a></li>
+  </ol>
+</nav>
+
+<!-- ============================= 58.1 ============================= -->
+<section id="s581">
+  <h2><span class="num">58.1</span>Conducting Discovery Sessions with Business Stakeholders</h2>
+  <p class="lede">Discovery is the structured, facilitated process of eliciting the real business problem, its context, and its success criteria <em>before</em> any solution is designed. For AI projects, disciplined discovery is the primary defence against building a technically impressive model that solves the wrong problem.</p>
+
+  <h3 class="block"><span class="ic">🧭</span>Concept Overview</h3>
+  <p>A <strong>discovery session</strong> is a facilitated conversation (workshop, interview, or observation) whose goal is to understand the business context — <em>who</em> is affected, <em>what</em> outcome they need, <em>why</em> it matters, and <em>how</em> success will be measured. In AI engagements, discovery must also surface where a probabilistic system is acceptable, what "good enough" accuracy looks like, and how humans stay in the loop. The architect acts as a facilitator and translator, not a note-taker: guiding the conversation, drawing out tacit knowledge, and continuously validating understanding.</p>
+
+  <h3 class="block"><span class="ic">📖</span>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Stakeholder</dt><dd>Any person or group who affects, or is affected by, the AI system — sponsors, end users, subject-matter experts (SMEs), data owners, compliance, and those impacted by the model's decisions.</dd>
+    <dt>Stakeholder Mapping</dt><dd>Classifying stakeholders by <strong>influence</strong> and <strong>interest</strong> to decide how to engage each (typically a power/interest grid).</dd>
+    <dt>Elicitation</dt><dd>The active drawing-out of needs, rules, and tacit knowledge — distinct from stakeholders simply "telling you the requirements."</dd>
+    <dt>Active Listening</dt><dd>Listening to understand, using paraphrasing, clarifying questions, and reflection to confirm meaning rather than assuming it.</dd>
+    <dt>Facilitation</dt><dd>Neutrally steering a group conversation so every voice is heard, scope stays on track, and decisions are captured.</dd>
+    <dt>RACI</dt><dd>A responsibility matrix labelling each person <strong>R</strong>esponsible, <strong>A</strong>ccountable, <strong>C</strong>onsulted, or <strong>I</strong>nformed for a task or decision.</dd>
+  </dl>
+
+  <h3 class="block"><span class="ic">🔍</span>Detailed Breakdown</h3>
+  <ol>
+    <li><strong>Identify &amp; map stakeholders.</strong> List everyone touched by the workflow, then place them on a <em>power/interest grid</em>: high-power/high-interest players are <em>managed closely</em>; high-power/low-interest are <em>kept satisfied</em>; low-power/high-interest are <em>kept informed</em>; low-power/low-interest are <em>monitored</em>. Confirm who is the <em>Accountable</em> sponsor.</li>
+    <li><strong>Plan the session.</strong> Set a clear objective, timebox each topic, circulate an agenda in advance, and choose the format: <em>1:1 interviews</em> (deep, candid), <em>workshops</em> (cross-functional alignment), or <em>observation/job-shadowing</em> (reveals tacit "how work really happens").</li>
+    <li><strong>Open &amp; frame.</strong> State purpose, ground rules, and scope. Explicitly separate <em>problem exploration</em> from <em>solutioning</em> — no jumping to "let's use an LLM" before the problem is understood.</li>
+    <li><strong>Facilitate elicitation.</strong> Use <em>open questions</em> ("Walk me through how you handle a difficult case today"), <em>probing</em> ("What happens when that fails?"), and the <strong>5 Whys</strong> to reach root cause. Draw out edge cases and current pain metrics.</li>
+    <li><strong>Practise active listening.</strong> Paraphrase back ("So if I understand, the goal is to cut triage time from 4 hours to under 30 minutes — is that right?"). This <em>read-back</em> catches misunderstanding immediately.</li>
+    <li><strong>Capture &amp; validate.</strong> Record decisions, assumptions, open questions, and owners. Close by summarising and confirming next steps.</li>
+  </ol>
+
+  <h3 class="block"><span class="ic">📊</span>Visualization</h3>
+  <p><strong>Discovery session end-to-end flow:</strong></p>
+  <div class="flowchart">
+    <div class="flow-step">Stakeholder Identification</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Session Planning</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Facilitation &amp; Elicitation</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Requirement Capture</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Validation (Read-back)</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Documentation</div>
+  </div>
+
+  <p><strong>Power / Interest stakeholder grid:</strong></p>
+  <figure>
+    <svg viewBox="0 0 460 300" role="img" aria-label="Power versus Interest stakeholder grid">
+      <rect x="60" y="20" width="360" height="240" fill="#f0f3f8" stroke="#c9d2e0"></rect>
+      <line x1="240" y1="20" x2="240" y2="260" stroke="#c9d2e0" stroke-dasharray="4 4"></line>
+      <line x1="60" y1="140" x2="420" y2="140" stroke="#c9d2e0" stroke-dasharray="4 4"></line>
+      <!-- quadrant labels -->
+      <text x="150" y="70" text-anchor="middle" font-size="12" fill="#42506b">Keep Satisfied</text>
+      <text x="150" y="86" text-anchor="middle" font-size="10" fill="#6b7891">(high power, low interest)</text>
+      <text x="330" y="70" text-anchor="middle" font-size="12" fill="#4338ca" font-weight="bold">Manage Closely</text>
+      <text x="330" y="86" text-anchor="middle" font-size="10" fill="#6b7891">(sponsor, key SMEs)</text>
+      <text x="150" y="200" text-anchor="middle" font-size="12" fill="#42506b">Monitor</text>
+      <text x="150" y="216" text-anchor="middle" font-size="10" fill="#6b7891">(minimal effort)</text>
+      <text x="330" y="200" text-anchor="middle" font-size="12" fill="#42506b">Keep Informed</text>
+      <text x="330" y="216" text-anchor="middle" font-size="10" fill="#6b7891">(end users, impacted staff)</text>
+      <!-- axes -->
+      <text x="240" y="285" text-anchor="middle" font-size="12" fill="#1a2233" font-weight="bold">Interest →</text>
+      <text x="30" y="140" text-anchor="middle" font-size="12" fill="#1a2233" font-weight="bold" transform="rotate(-90 30 140)">Power →</text>
+    </svg>
+    <figcaption>Fig. 58.1 — Prioritise engagement effort by each stakeholder's power and interest.</figcaption>
+  </figure>
+
+  <h3 class="block"><span class="ic">🏢</span>Real-World Example / Mini Case Study</h3>
+  <div class="case">
+    <span class="case-tag">Case Study</span>
+    <p><strong>Insurance claims triage assistant.</strong> An insurer wants to "use AI to speed up claims." During discovery the architect maps stakeholders — the <em>Claims Ops Director</em> (accountable sponsor), <em>senior adjusters</em> (SMEs), <em>frontline agents</em> (end users), and <em>Compliance</em>. In a workshop, agents job-shadowed reveal the real bottleneck isn't decision-making but <em>gathering scattered documents</em>. Using the 5 Whys, the team learns the true goal is <em>reducing average handling time</em>, not <em>auto-approving claims</em> — which would have created a compliance nightmare. Discovery re-scopes the project from "auto-decision engine" to "document summarisation + retrieval assistant with a human approver," a far safer and higher-value target.</p>
+  </div>
+
+  <h3 class="block"><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="callout tip-box">
+    <strong>💡 Facilitation tips</strong>
+    <ul>
+      <li>Always <em>restate</em> business goals in your own words before documenting — the read-back is your cheapest defect-detector.</li>
+      <li>Interview SMEs individually first, then run a group workshop — private sessions surface concerns people won't raise in front of leadership.</li>
+      <li>Separate <em>problem</em> from <em>solution</em>: park every premature "we should build X" in a visible parking lot.</li>
+      <li>Ask for a concrete <em>example transaction</em> end-to-end — specifics expose edge cases that abstractions hide.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">⚠️</span>Common Pitfalls</h3>
+  <div class="callout pitfall-box">
+    <ul>
+      <li><strong>Solutioning too early</strong> — anchoring on "use an LLM" before the problem is understood.</li>
+      <li><strong>Talking only to the sponsor</strong> — missing the end users and SMEs who hold tacit knowledge.</li>
+      <li><strong>Leading questions</strong> ("You'd want it automated, right?") that plant answers instead of eliciting them.</li>
+      <li><strong>No validation loop</strong> — leaving the room without confirming shared understanding.</li>
+      <li><strong>Ignoring the impacted (non-user) parties</strong> whose jobs or customers the model affects.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="callout exam-box">
+    <p>Expect <strong>scenario questions</strong> that describe a poorly-run kickoff and ask what the architect should do <em>next</em>. Watch keywords: <em>"jumped straight to a model"</em> (→ pitfall: premature solutioning), <em>"only the VP was consulted"</em> (→ incomplete stakeholder mapping), <em>"confirm understanding"</em> (→ active listening / read-back). Best-answer logic: <strong>understand the problem and validate it before designing a solution.</strong> When two answers seem right, prefer the one that <em>engages more stakeholders</em> or <em>validates understanding</em> over the one that starts building.</p>
+  </div>
+  <div class="top-link"><a href="#top">↑ Back to top</a></div>
+</section>
+
+<!-- ============================= 58.2 ============================= -->
+<section id="s582">
+  <h2><span class="num">58.2</span>Translating Business Language into Technical Requirements</h2>
+  <p class="lede">Business stakeholders speak in outcomes ("reduce churn," "answer customers faster"). Architects must convert those into precise, testable technical requirements without losing intent or introducing ambiguity — and keep every requirement traceable back to its business driver.</p>
+
+  <h3 class="block"><span class="ic">🧭</span>Concept Overview</h3>
+  <p>Translation is a <strong>bidirectional mapping</strong>: each business need becomes one or more technical requirements, and each technical requirement can be traced back to the business goal that justifies it. The architect decomposes a vague objective into <em>capabilities</em>, then into <em>functional</em> and <em>non-functional</em> requirements, attaching measurable acceptance criteria. In AI projects this includes specifying the <em>task type</em> (classification, extraction, generation, ranking), the <em>quality bar</em> (accuracy/precision/recall or human-eval rubric), and the <em>failure behaviour</em>.</p>
+
+  <h3 class="block"><span class="ic">📖</span>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Functional Requirement (FR)</dt><dd>What the system must <em>do</em> — a behaviour or capability (e.g. "classify each email into one of five intents").</dd>
+    <dt>Non-Functional Requirement (NFR)</dt><dd>A quality attribute or constraint — <em>how well</em> it must perform (latency, accuracy, availability, security, cost).</dd>
+    <dt>Acceptance Criteria</dt><dd>Objective, testable conditions that determine when a requirement is satisfied.</dd>
+    <dt>Requirement Traceability</dt><dd>An explicit link from each requirement to its business driver and to the test that verifies it.</dd>
+    <dt>Traceability Matrix (RTM)</dt><dd>A table mapping business need → requirement → design element → test case.</dd>
+    <dt>Ambiguity</dt><dd>Language open to multiple interpretations ("fast," "accurate," "user-friendly") — the enemy of a testable requirement.</dd>
+  </dl>
+
+  <h3 class="block"><span class="ic">🔍</span>Detailed Breakdown</h3>
+  <ol>
+    <li><strong>Decompose the goal.</strong> Break "improve support" into capabilities: <em>auto-categorise tickets</em>, <em>draft replies</em>, <em>surface knowledge-base articles</em>.</li>
+    <li><strong>Classify each capability</strong> into functional (behaviour) vs non-functional (quality) requirements.</li>
+    <li><strong>Quantify vague terms.</strong> Replace "fast" with "P95 response &lt; 2 s"; replace "accurate" with "≥ 90% top-1 intent accuracy on the held-out set."</li>
+    <li><strong>Specify AI-specific attributes</strong> — task type, quality metric &amp; threshold, acceptable error modes, human-in-the-loop points, data freshness, and explainability needs.</li>
+    <li><strong>Attach acceptance criteria</strong> to every requirement so it is testable.</li>
+    <li><strong>Record traceability</strong> in an RTM so every requirement can be justified and later verified.</li>
+  </ol>
+
+  <h3 class="block"><span class="ic">📊</span>Visualization</h3>
+  <p><strong>Business-to-technical mapping (with disambiguation):</strong></p>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Business Statement</th><th>Ambiguity</th><th>Technical Requirement (testable)</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>"Answer customers faster"</td><td>How fast?</td><td>P95 assistant response &lt; 2 s under 50 req/s</td><td>NFR</td></tr>
+        <tr><td>"Route tickets correctly"</td><td>How correct?</td><td>≥ 92% top-1 category accuracy on labelled test set</td><td>NFR</td></tr>
+        <tr><td>"Summarise the case file"</td><td>Which fields?</td><td>Generate ≤150-word summary incl. policy #, claim date, amount</td><td>FR</td></tr>
+        <tr><td>"Keep a human in control"</td><td>Where?</td><td>All auto-drafts require agent approval before send</td><td>FR</td></tr>
+        <tr><td>"Don't leak personal data"</td><td>What data?</td><td>Redact PII (name, ID, card) before logging or prompt storage</td><td>NFR</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="block"><span class="ic">🏢</span>Real-World Example / Mini Case Study</h3>
+  <div class="case">
+    <span class="case-tag">Case Study</span>
+    <p><strong>Retail chatbot.</strong> Business asks for "a smart bot that understands customers." The architect decomposes this into FRs (<em>detect intent, retrieve order status, escalate to human on low confidence</em>) and NFRs (<em>P95 &lt; 1.5 s, ≥ 88% intent accuracy, English + Polish, no order data in logs</em>). Each is entered in an RTM linked to the business driver "reduce contact-centre volume by 20%." Later, when a developer proposes caching responses for speed, the RTM immediately flags that this could violate the "real-time order status" FR — traceability caught a conflict before it shipped.</p>
+  </div>
+
+  <h3 class="block"><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="callout tip-box">
+    <strong>💡 Translation tips</strong>
+    <ul>
+      <li>Every requirement needs a <em>number or a testable condition</em> — if you can't test it, it isn't a requirement yet.</li>
+      <li>Write NFRs as <code>metric + threshold + condition</code> (e.g. "accuracy ≥ 90% on production-representative data").</li>
+      <li>Maintain a shared glossary so "ticket," "case," and "claim" mean the same thing to everyone.</li>
+      <li>Keep the RTM alive — it's your fastest tool to assess the impact of any scope change.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">⚠️</span>Common Pitfalls</h3>
+  <div class="callout pitfall-box">
+    <ul>
+      <li><strong>Leaving vague adjectives</strong> ("fast," "robust," "intelligent") unquantified.</li>
+      <li><strong>Confusing FRs with NFRs</strong> — "must be accurate" is a quality attribute (NFR), not a behaviour.</li>
+      <li><strong>Gold-plating</strong> — inventing technical requirements no stakeholder asked for.</li>
+      <li><strong>No traceability</strong> — orphan requirements that can't be justified or tested.</li>
+      <li><strong>Setting an accuracy target with no defined evaluation set</strong> — a metric without a test is meaningless.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="callout exam-box">
+    <p>Common question style: <em>"Which of these is a well-formed requirement?"</em> — the correct answer is <strong>specific, measurable, and testable</strong>; distractors contain vague words. Also expect <strong>FR-vs-NFR classification</strong> items: remember FR = <em>what it does</em>, NFR = <em>how well / under what constraint</em>. If asked what to do about a vague business ask, the best answer is usually <em>quantify it and confirm the acceptance criteria with stakeholders</em>, not "start building."</p>
+  </div>
+  <div class="top-link"><a href="#top">↑ Back to top</a></div>
+</section>
+
+<!-- ============================= 58.3 ============================= -->
+<section id="s583">
+  <h2><span class="num">58.3</span>Identifying Constraints: Budget, Timeline, Compliance &amp; Data Availability</h2>
+  <p class="lede">Constraints are the boundaries within which a solution must fit. Surfacing them early turns invisible risk into explicit, manageable decisions — and in AI projects, <strong>data availability</strong> and <strong>compliance</strong> are frequently the binding constraints, not compute.</p>
+
+  <h3 class="block"><span class="ic">🧭</span>Concept Overview</h3>
+  <p>A <strong>constraint</strong> is any limitation on the solution space — money, time, regulation, data, technology, or organisation. Discovery must categorise constraints, assess their impact and likelihood, and analyse the <strong>trade-offs</strong> between them (the classic "scope–time–cost" triangle, plus quality). For AI specifically, the decisive question is often "<em>do we have enough representative, permitted, labelled data?</em>" — a data constraint can invalidate an entire approach regardless of budget.</p>
+
+  <h3 class="block"><span class="ic">📖</span>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Constraint</dt><dd>A fixed limit the solution must respect (e.g. "€200k cap," "GDPR," "launch by Q3").</dd>
+    <dt>Assumption</dt><dd>Something believed true but not yet verified — an unvalidated assumption is a latent risk.</dd>
+    <dt>Risk Flagging</dt><dd>Explicitly logging a threat with its likelihood, impact, owner, and mitigation.</dd>
+    <dt>Trade-off Analysis</dt><dd>Choosing deliberately between competing constraints (e.g. accept lower scope to hit the deadline).</dd>
+    <dt>Data Availability</dt><dd>Whether sufficient, representative, high-quality, legally-usable data exists for the AI task.</dd>
+    <dt>Compliance Constraint</dt><dd>A legal/regulatory rule the system must obey — GDPR, HIPAA, EU AI Act, data residency, auditability.</dd>
+  </dl>
+
+  <h3 class="block"><span class="ic">🔍</span>Detailed Breakdown</h3>
+  <ul>
+    <li><strong>Budget</strong> — build vs API cost, inference cost per request at scale, human-review labour, ongoing monitoring/retraining.</li>
+    <li><strong>Timeline</strong> — hard external deadlines (regulatory, contractual, seasonal) vs soft internal ones; dependency lead times.</li>
+    <li><strong>Compliance &amp; ethics</strong> — data-protection law, residency, right-to-explanation, bias/fairness obligations, audit logging.</li>
+    <li><strong>Data availability &amp; quality</strong> — volume, representativeness, labelling, freshness, licensing/consent to use, PII exposure.</li>
+    <li><strong>Technology / organisation</strong> — existing stack, security posture, team skills, integration limits.</li>
+  </ul>
+  <p><strong>Process:</strong> (1) enumerate constraints per category → (2) rate impact × likelihood → (3) flag the binding constraints → (4) perform trade-off analysis → (5) document as explicit assumptions/risks with owners.</p>
+
+  <h3 class="block"><span class="ic">📊</span>Visualization</h3>
+  <p><strong>Constraint types, examples &amp; mitigation:</strong></p>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Constraint Type</th><th>Example (AI context)</th><th>Mitigation Strategy</th></tr></thead>
+      <tbody>
+        <tr><td>Budget</td><td>Limited compute / per-call LLM spend</td><td>Phased rollout, cost caps, smaller model, caching, batching</td></tr>
+        <tr><td>Timeline</td><td>Must launch before regulatory deadline</td><td>Reduce scope to an MVP, parallelise, buy vs build</td></tr>
+        <tr><td>Compliance</td><td>GDPR / HIPAA / EU AI Act</td><td>Data minimisation, anonymisation, audit logs, DPIA, human oversight</td></tr>
+        <tr><td>Data Availability</td><td>Too few labelled examples for a class</td><td>Data collection plan, synthetic/augmented data, few-shot / retrieval instead of fine-tuning</td></tr>
+        <tr><td>Technology</td><td>Must run in existing VPC, no external calls</td><td>Self-hosted / private model, on-prem inference</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Risk prioritisation (impact × likelihood):</strong></p>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>Insufficient labelled data</td><td>High</td><td>High</td><td>🔴 Critical — validate first</td></tr>
+        <tr><td>PII in training corpus</td><td>Medium</td><td>High</td><td>🟠 High — mitigate before build</td></tr>
+        <tr><td>API cost overrun at scale</td><td>Medium</td><td>Medium</td><td>🟡 Monitor with cost caps</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="block"><span class="ic">🏢</span>Real-World Example / Mini Case Study</h3>
+  <div class="case">
+    <span class="case-tag">Case Study</span>
+    <p><strong>Healthcare document classifier.</strong> A hospital wants to auto-tag patient records. Budget and timeline look fine — but discovery reveals two binding constraints: records contain <em>PHI</em> governed by HIPAA (compliance), and only 300 labelled examples exist for rare categories (data availability). Trade-off analysis leads the team to (a) process data inside the hospital's private environment with full audit logging, and (b) use a <em>retrieval-augmented, few-shot</em> approach rather than fine-tuning, since the data volume can't support training. The binding constraints — not compute — dictated the architecture.</p>
+  </div>
+
+  <h3 class="block"><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="callout tip-box">
+    <strong>💡 Constraint tips</strong>
+    <ul>
+      <li>Ask <em>"what's fixed and what's flexible?"</em> for each of scope, time, cost, and quality — you can't fix all four.</li>
+      <li>Validate <strong>data availability</strong> and <strong>compliance</strong> earliest — they most often kill or reshape AI projects.</li>
+      <li>Turn every assumption into a written line item with an owner and a date to verify it.</li>
+      <li>Quantify constraints: "€150k," "by 30 June," "≤ 500 ms" — a constraint without a number is just a worry.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">⚠️</span>Common Pitfalls</h3>
+  <div class="callout pitfall-box">
+    <ul>
+      <li><strong>Treating compute as the main constraint</strong> while ignoring data and legal limits.</li>
+      <li><strong>Leaving assumptions unstated</strong> until they fail late in the project.</li>
+      <li><strong>Discovering compliance requirements after building</strong> — the most expensive rework of all.</li>
+      <li><strong>Promising all of scope, time, cost, and quality</strong> without acknowledging trade-offs.</li>
+      <li><strong>Assuming data is usable</strong> without checking consent, licensing, or representativeness.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="callout exam-box">
+    <p>Scenario items will bury the binding constraint in the text — read for keywords: <em>"HIPAA / GDPR / regulated"</em> (compliance), <em>"only a few hundred examples"</em> (data availability), <em>"must launch by"</em> (timeline), <em>"fixed budget of"</em> (budget). The best answer usually <strong>validates the constraint before committing to an approach</strong> and chooses the technique that <em>fits the constraint</em> (e.g. few-shot/RAG when data is scarce; private hosting when data can't leave). Beware answers that solve a non-binding constraint.</p>
+  </div>
+  <div class="top-link"><a href="#top">↑ Back to top</a></div>
+</section>
+
+<!-- ============================= 58.4 ============================= -->
+<section id="s584">
+  <h2><span class="num">58.4</span>Writing Effective Requirements Documents for AI Projects</h2>
+  <p class="lede">A requirements document is the durable, shared contract of what will be built and how success is judged. Good ones are structured, measurable (SMART), and version-controlled so change is traceable.</p>
+
+  <h3 class="block"><span class="ic">🧭</span>Concept Overview</h3>
+  <p>The <strong>requirements document</strong> (often an SRS-style artifact or a Business/Solution Requirements Document) consolidates functional and non-functional requirements, scope, constraints, assumptions, success metrics, and acceptance criteria. It removes ambiguity, aligns stakeholders, and provides the baseline against which delivery is tested. For AI it must additionally cover <em>data requirements, model quality metrics &amp; thresholds, evaluation strategy, human oversight, and responsible-AI/ethical constraints</em>.</p>
+
+  <h3 class="block"><span class="ic">📖</span>Key Terminology</h3>
+  <dl class="terms">
+    <dt>SRS</dt><dd>Software Requirements Specification — a structured document of functional + non-functional requirements.</dd>
+    <dt>SMART Criteria</dt><dd><strong>S</strong>pecific, <strong>M</strong>easurable, <strong>A</strong>chievable, <strong>R</strong>elevant, <strong>T</strong>ime-bound — the test for a well-written requirement/objective.</dd>
+    <dt>Scope Statement</dt><dd>Explicit in-scope and <em>out-of-scope</em> boundaries — the latter prevents scope creep.</dd>
+    <dt>Versioning</dt><dd>Tracking document revisions (v1.0, v1.1…) with a change log, date, author, and rationale.</dd>
+    <dt>Baseline</dt><dd>An approved, frozen version used as the reference point for measuring change.</dd>
+    <dt>Success Metric / KPI</dt><dd>The measurable business outcome the project must move (e.g. "-20% handling time").</dd>
+  </dl>
+
+  <h3 class="block"><span class="ic">🔍</span>Detailed Breakdown — recommended structure</h3>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Section</th><th>Contents</th></tr></thead>
+      <tbody>
+        <tr><td>1. Overview &amp; Purpose</td><td>Business problem, objectives, success metrics/KPIs.</td></tr>
+        <tr><td>2. Stakeholders &amp; Glossary</td><td>Roles (RACI), shared terminology to remove ambiguity.</td></tr>
+        <tr><td>3. Scope</td><td>In-scope, explicitly out-of-scope, assumptions.</td></tr>
+        <tr><td>4. Functional Requirements</td><td>Numbered behaviours, each with acceptance criteria.</td></tr>
+        <tr><td>5. Non-Functional Requirements</td><td>Latency, accuracy, availability, security, cost, scalability.</td></tr>
+        <tr><td>6. Data Requirements</td><td>Sources, volume, labelling, quality, privacy, retention.</td></tr>
+        <tr><td>7. AI Quality &amp; Evaluation</td><td>Metrics + thresholds, eval set, human review, monitoring.</td></tr>
+        <tr><td>8. Constraints &amp; Compliance</td><td>Budget, timeline, regulatory, responsible-AI obligations.</td></tr>
+        <tr><td>9. Traceability Matrix</td><td>Requirement → business driver → test case.</td></tr>
+        <tr><td>10. Version History</td><td>Change log with dates, authors, rationale.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="block"><span class="ic">📊</span>Visualization</h3>
+  <p><strong>SMART requirement — before vs after:</strong></p>
+  <div class="grid2">
+    <div class="callout pitfall-box"><strong>❌ Weak</strong><br>"The model should be accurate and respond quickly for most users."</div>
+    <div class="callout tip-box"><strong>✅ SMART</strong><br>"The intent classifier shall achieve ≥ 92% top-1 accuracy on the 5,000-record held-out set (Specific/Measurable) and return a response with P95 &lt; 1.5 s at 50 req/s, verified in staging by 30 June (Time-bound)."</div>
+  </div>
+  <p><strong>Requirement lifecycle &amp; versioning:</strong></p>
+  <div class="flowchart">
+    <div class="flow-step">Draft v0.x</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Review &amp; Validate</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Baseline v1.0</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Change Request</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">Re-baseline v1.1</div>
+  </div>
+
+  <h3 class="block"><span class="ic">🏢</span>Real-World Example / Mini Case Study</h3>
+  <div class="case">
+    <span class="case-tag">Case Study</span>
+    <p><strong>Loan-application assistant.</strong> The team writes an SRS where FR-04 states: "The system <em>shall</em> generate an applicant summary; all outputs <em>shall</em> be reviewed by a loan officer before a decision (human-in-the-loop)." NFR-07 sets "≥ 95% extraction accuracy on income fields, evaluated on the labelled audit set." Compliance section cites the EU AI Act obligation for human oversight of high-risk decisions. When Legal later requests an explainability log, the change is captured as v1.2 with rationale — and the traceability matrix instantly shows which tests must be updated. The document's structure and versioning kept a regulated project auditable.</p>
+  </div>
+
+  <h3 class="block"><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="callout tip-box">
+    <strong>💡 Documentation tips</strong>
+    <ul>
+      <li>Use <em>"shall"</em> for mandatory requirements and <em>"should"</em> for desirable ones — consistently.</li>
+      <li>Give every requirement a unique ID (FR-01, NFR-03) so it's referenceable in tests and change logs.</li>
+      <li>Always include an explicit <em>out-of-scope</em> list — it prevents scope creep as effectively as the in-scope list.</li>
+      <li>Pair each requirement with its acceptance test in the same row of the RTM.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">⚠️</span>Common Pitfalls</h3>
+  <div class="callout pitfall-box">
+    <ul>
+      <li><strong>Unmeasurable requirements</strong> that fail the SMART test.</li>
+      <li><strong>No versioning / change log</strong> — nobody knows which version was approved.</li>
+      <li><strong>Missing out-of-scope section</strong>, inviting scope creep.</li>
+      <li><strong>Omitting data &amp; evaluation requirements</strong> — unique and critical to AI projects.</li>
+      <li><strong>Mixing requirements with design</strong> — the doc states <em>what</em>, not the implementation <em>how</em>.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="callout exam-box">
+    <p>Look for the <strong>SMART</strong> acronym and "which requirement is well-written?" items — pick the specific, measurable, time-bound option. Questions on <em>versioning/baseline</em> test whether you know an approved baseline is the reference for change control. AI-flavoured items add <em>data</em> and <em>evaluation</em> sections — a document missing these is the "incomplete" answer. Remember: requirements say <strong>what</strong>, not <strong>how</strong>.</p>
+  </div>
+  <div class="top-link"><a href="#top">↑ Back to top</a></div>
+</section>
+
+<!-- ============================= 58.5 ============================= -->
+<section id="s585">
+  <h2><span class="num">58.5</span>Hands-On: Running a Discovery Session</h2>
+  <p class="lede">A practical, step-by-step walkthrough of a discovery session for an AI project — from preparation to a documented output artifact — that ties together everything in 58.1–58.4.</p>
+
+  <h3 class="block"><span class="ic">🧭</span>Concept Overview</h3>
+  <p>This is the applied capstone: given a fuzzy business ask, the architect prepares, facilitates, elicits, captures constraints, and produces a <strong>discovery summary artifact</strong> that seeds the requirements document. The exercise below uses a running scenario — <em>"We want AI to help our support team."</em></p>
+
+  <h3 class="block"><span class="ic">📖</span>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Discovery Summary</dt><dd>The output artifact: problem statement, goals/KPIs, stakeholders, constraints, assumptions, open questions, next steps.</dd>
+    <dt>Problem Statement</dt><dd>One or two sentences capturing the real problem, its impact, and the desired outcome.</dd>
+    <dt>Parking Lot</dt><dd>A visible list where premature solutions and off-topic items are stored to revisit later.</dd>
+    <dt>Open Question / Action Item</dt><dd>An unresolved point with an owner and a due date, carried out of the session.</dd>
+  </dl>
+
+  <h3 class="block"><span class="ic">🔍</span>Detailed Breakdown — the step-by-step run</h3>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Step</th><th>What the architect does</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Prepare</td><td>Map stakeholders (power/interest), draft objective &amp; agenda, send pre-reads, book the right participants.</td></tr>
+        <tr><td>2</td><td>Open &amp; frame</td><td>State purpose, ground rules, timebox; agree that problem exploration precedes solutioning.</td></tr>
+        <tr><td>3</td><td>Explore the problem</td><td>Open questions + 5 Whys to reach the root problem and quantify today's pain.</td></tr>
+        <tr><td>4</td><td>Define success</td><td>Agree measurable KPIs and what "good enough" means for an AI system.</td></tr>
+        <tr><td>5</td><td>Surface constraints</td><td>Probe budget, timeline, compliance, and data availability; log assumptions/risks.</td></tr>
+        <tr><td>6</td><td>Validate (read-back)</td><td>Paraphrase the problem, goals, and constraints; correct misunderstandings live.</td></tr>
+        <tr><td>7</td><td>Capture output</td><td>Fill the discovery summary; assign open questions and next steps with owners.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="block"><span class="ic">❓</span>Sample Questions to Ask Stakeholders</h3>
+  <div class="grid2">
+    <div class="callout exam-box"><strong>Problem &amp; goal</strong>
+      <ul>
+        <li>"Walk me through how this task is done today, end to end."</li>
+        <li>"What does success look like in six months? How would we measure it?"</li>
+        <li>"What happens today when it goes wrong?" <em>(5 Whys)</em></li>
+      </ul>
+    </div>
+    <div class="callout exam-box"><strong>Constraints &amp; data</strong>
+      <ul>
+        <li>"What data do we already have, and are we permitted to use it?"</li>
+        <li>"Are there regulatory or privacy rules that apply here?"</li>
+        <li>"What's fixed — the budget, the deadline, or the scope?"</li>
+        <li>"Where must a human stay in the loop?"</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="block"><span class="ic">📊</span>Visualization — Sample Output Artifact (Discovery Summary)</h3>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Field</th><th>Captured content (support-team scenario)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Problem statement</strong></td><td>Agents spend ~40% of handling time locating knowledge-base answers, driving long resolution times and low CSAT.</td></tr>
+        <tr><td><strong>Business goal / KPI</strong></td><td>Cut average handling time by 25% and raise first-contact resolution to 70% within two quarters.</td></tr>
+        <tr><td><strong>Proposed capability</strong></td><td>AI assistant that retrieves &amp; summarises relevant KB articles and drafts replies for agent approval.</td></tr>
+        <tr><td><strong>Key stakeholders</strong></td><td>Support Director (A), team leads (R), agents (users), IT/Security &amp; Compliance (C).</td></tr>
+        <tr><td><strong>Constraints</strong></td><td>Budget €120k; launch in 4 months; GDPR (EU customer data); no customer PII in external logs.</td></tr>
+        <tr><td><strong>Assumptions</strong></td><td>KB is current; historical chats are usable for eval; agents will adopt an assistive tool.</td></tr>
+        <tr><td><strong>Open questions</strong></td><td>Is the KB export permitted? — Owner: Compliance, due Fri. Eval set availability? — Owner: Data Lead.</td></tr>
+        <tr><td><strong>Next steps</strong></td><td>Draft SRS; run data-availability check; schedule follow-up validation workshop.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="block"><span class="ic">🏢</span>Real-World Example / Mini Case Study</h3>
+  <div class="case">
+    <span class="case-tag">Case Study</span>
+    <p><strong>From fuzzy ask to scoped project.</strong> Running the seven steps on "help our support team," the architect uses the 5 Whys to discover the pain is <em>search time</em>, not <em>reply quality</em>. Success is quantified (−25% handling time). A constraint probe reveals GDPR applies and the KB export needs Compliance sign-off (logged as an open question, not a blocker). The read-back corrects a leader's assumption that the tool would "answer customers directly" — it will <em>assist agents</em>, keeping a human in the loop. The completed discovery summary becomes the first input to the SRS the next day.</p>
+  </div>
+
+  <h3 class="block"><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="callout tip-box">
+    <strong>💡 Session-running tips</strong>
+    <ul>
+      <li>Keep a visible <em>parking lot</em> and <em>open-questions</em> list on screen — it stops derailment and captures follow-ups.</li>
+      <li>Timebox ruthlessly; if the problem isn't clear, don't let the group jump to design.</li>
+      <li>End every session with a spoken read-back and named owners for each next step.</li>
+      <li>Turn the discovery summary into the requirements doc within 24 hours, while context is fresh.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">⚠️</span>Common Pitfalls</h3>
+  <div class="callout pitfall-box">
+    <ul>
+      <li><strong>No prepared agenda or objective</strong> — the session drifts.</li>
+      <li><strong>Letting solutioning hijack problem exploration.</strong></li>
+      <li><strong>Not writing the summary</strong> — verbal agreement evaporates by the next meeting.</li>
+      <li><strong>Leaving open questions without owners or dates.</strong></li>
+      <li><strong>Treating an open question as a hard blocker</strong> and stalling the whole project.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="callout exam-box">
+    <p>Hands-on items are usually <strong>ordering</strong> ("what is the correct sequence of steps?") or <strong>best-next-action</strong> in a session gone wrong. Anchor on the canonical order: <em>prepare → frame → explore problem → define success → surface constraints → validate → document</em>. If the scenario shows the team designing before the problem or success is defined, the right answer pulls them back to <em>understand and validate first</em>. Look for the artifact keyword <em>"discovery summary"</em> as the expected output.</p>
+  </div>
+  <div class="top-link"><a href="#top">↑ Back to top</a></div>
+</section>
+
+<!-- ============================= SUMMARY ============================= -->
+<section id="summary">
+  <h2>Chapter Summary &amp; Key Takeaways</h2>
+  <ul class="takeaways">
+    <li><strong>Understand before you build.</strong> Discovery exists to find the <em>real</em> problem; premature solutioning is the cardinal sin.</li>
+    <li><strong>Map every stakeholder</strong> by power &amp; interest — talk to end users and SMEs, not just the sponsor.</li>
+    <li><strong>Active listening &amp; read-back</strong> is the cheapest, most powerful defect-detector in requirements work.</li>
+    <li><strong>Translate business language into testable requirements</strong> — replace every vague adjective with a metric and threshold.</li>
+    <li><strong>Distinguish FRs (what it does) from NFRs (how well/under what constraint)</strong>, and keep traceability to business drivers.</li>
+    <li><strong>Surface constraints early</strong> — for AI, <em>data availability</em> and <em>compliance</em> are usually the binding ones, not compute.</li>
+    <li><strong>Write SMART, versioned requirements documents</strong> that include AI-specific data and evaluation sections.</li>
+    <li><strong>The discovery summary</strong> is the bridge artifact from a fuzzy ask to a scoped, documented AI project.</li>
+  </ul>
+
+  <h3 class="block" id="revision"><span class="ic">🗂️</span>Quick Revision Table</h3>
+  <div class="tbl-scroll">
+    <table class="rev">
+      <thead><tr><th>Sub-topic</th><th>Core idea</th><th>Watch-for keyword</th><th>Top pitfall</th></tr></thead>
+      <tbody>
+        <tr><td><strong>58.1</strong> Discovery sessions</td><td>Facilitate, map stakeholders, elicit &amp; validate the problem</td><td>"jumped to a model", "confirm understanding"</td><td>Premature solutioning</td></tr>
+        <tr><td><strong>58.2</strong> Business→technical</td><td>Turn goals into testable FR/NFR with traceability</td><td>"which is well-formed", "FR vs NFR"</td><td>Vague, unmeasurable terms</td></tr>
+        <tr><td><strong>58.3</strong> Constraints</td><td>Categorise; data &amp; compliance often binding; trade-offs</td><td>"GDPR/HIPAA", "few examples", "deadline"</td><td>Ignoring data/legal limits</td></tr>
+        <tr><td><strong>58.4</strong> Requirements docs</td><td>Structured, SMART, versioned; add data &amp; eval sections</td><td>"SMART", "baseline", "out-of-scope"</td><td>Unmeasurable / unversioned</td></tr>
+        <tr><td><strong>58.5</strong> Hands-on session</td><td>Prepare→frame→explore→success→constraints→validate→document</td><td>"correct sequence", "discovery summary"</td><td>No agenda / no written summary</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================= QUIZ ============================= -->
+<section id="quiz">
+  <h2>Self-check Quiz</h2>
+  <p class="lede">Attempt each question before expanding the answer.</p>
+
+  <details class="quiz"><summary>During a kickoff, a stakeholder says "just build us an LLM chatbot." What should the architect do first?</summary>
+    <div class="answer"><strong>Explore and validate the underlying problem first.</strong> Park the proposed solution and use open questions / 5 Whys to understand the real need and success criteria before committing to any technology. Premature solutioning is the key pitfall.</div>
+  </details>
+
+  <details class="quiz"><summary>Classify: "The assistant must return a response with P95 latency under 2 seconds." FR or NFR?</summary>
+    <div class="answer"><strong>Non-functional requirement (NFR).</strong> It describes a quality attribute (performance) — <em>how well</em> the system behaves — not a distinct behaviour. Contrast with an FR such as "the assistant shall classify each ticket into a category."</div>
+  </details>
+
+  <details class="quiz"><summary>Rewrite "the model should be accurate" as a SMART requirement.</summary>
+    <div class="answer"><strong>e.g.</strong> "The classifier shall achieve ≥ 92% top-1 accuracy on the 5,000-record held-out test set, verified in staging before the 30 June release." It is Specific, Measurable, Achievable, Relevant, and Time-bound — and names the evaluation set.</div>
+  </details>
+
+  <details class="quiz"><summary>A scenario mentions "only 200 labelled records" for a category. Which constraint dominates, and how should the approach adapt?</summary>
+    <div class="answer"><strong>Data availability</strong> is the binding constraint. Prefer <em>few-shot prompting or retrieval-augmented generation</em> over fine-tuning, and add a data-collection/labelling plan — more compute or budget won't fix insufficient data.</div>
+  </details>
+
+  <details class="quiz"><summary>Why include an explicit "out-of-scope" section in a requirements document?</summary>
+    <div class="answer"><strong>To prevent scope creep.</strong> Stating what will <em>not</em> be built is as important as stating what will — it sets clear boundaries and a shared baseline for change control.</div>
+  </details>
+
+  <details class="quiz"><summary>What is a requirements traceability matrix (RTM) used for?</summary>
+    <div class="answer">It links each <strong>requirement → business driver → design element → test case</strong>, so every requirement is justified and verifiable, and the impact of any change can be assessed quickly.</div>
+  </details>
+
+  <details class="quiz"><summary>Put the discovery-session steps in the correct order.</summary>
+    <div class="answer"><strong>Prepare → Open &amp; frame → Explore the problem → Define success → Surface constraints → Validate (read-back) → Capture output (discovery summary).</strong> Problem understanding and success definition always precede constraints and documentation.</div>
+  </details>
+
+  <details class="quiz"><summary>In a power/interest grid, how do you engage a high-power, high-interest stakeholder?</summary>
+    <div class="answer"><strong>Manage closely</strong> — engage frequently and collaboratively (e.g. the accountable sponsor and key SMEs). High-power/low-interest → keep satisfied; low-power/high-interest → keep informed; low-power/low-interest → monitor.</div>
+  </details>
+
+  <details class="quiz"><summary>Compliance requirements are discovered only after the model is built. Why is this a serious pitfall?</summary>
+    <div class="answer">It causes the <strong>most expensive rework</strong> — architecture, data handling, and logging may all need to change to satisfy GDPR/HIPAA/EU-AI-Act obligations. Compliance must be surfaced during discovery, not after build.</div>
+  </details>
+
+  <details class="quiz"><summary>What single technique best confirms you understood a stakeholder correctly?</summary>
+    <div class="answer"><strong>Active-listening read-back:</strong> paraphrase the goal/requirement in your own words and ask the stakeholder to confirm or correct it — catching misunderstanding on the spot.</div>
+  </details>
+</section>
+
+<!-- ============================= PLAYBOOK ============================= -->
+<section id="playbook">
+  <h2>Exam Strategy Playbook</h2>
+
+  <h3 class="block"><span class="ic">🧩</span>How questions are typically framed</h3>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Format</th><th>What it looks like</th><th>How to attack it</th></tr></thead>
+      <tbody>
+        <tr><td>Scenario / situational MCQ</td><td>A described engagement gone slightly wrong; "what should the architect do next?"</td><td>Find the phase (discovery vs design) and the pitfall; choose the option that <em>understands/validates before building</em>.</td></tr>
+        <tr><td>Classification MCQ</td><td>"Is this an FR or NFR?" / "Which is a well-formed requirement?"</td><td>FR = behaviour; NFR = quality/constraint. Pick the specific, measurable, testable option.</td></tr>
+        <tr><td>Ordering / sequence</td><td>"Put the discovery steps in order."</td><td>Recall: prepare→frame→explore→success→constraints→validate→document.</td></tr>
+        <tr><td>Best-fit technique</td><td>Constraint scenario (scarce data, regulated data)</td><td>Match technique to binding constraint (few-shot/RAG for data scarcity; private hosting for compliance).</td></tr>
+        <tr><td>Short-answer / definition</td><td>Define RTM, SMART, stakeholder mapping.</td><td>Give the crisp definition + one concrete example.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="block"><span class="ic">⏱️</span>Time management</h3>
+  <div class="callout tip-box">
+    <ul>
+      <li>Budget ~60–90 seconds per scenario MCQ; definitions and classifications should take &lt; 30 s.</li>
+      <li>Read the <em>last sentence</em> (the actual question) first, then scan the scenario for the keyword that answers it.</li>
+      <li>Flag and skip a long scenario you're unsure of; return after banking the quick wins.</li>
+      <li>Eliminate the two obviously-wrong options first — most items reduce to a choice between two.</li>
+    </ul>
+  </div>
+
+  <h3 class="block"><span class="ic">🪤</span>Common trap patterns &amp; how to avoid them</h3>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Trap</th><th>Why it's tempting</th><th>How to avoid it</th></tr></thead>
+      <tbody>
+        <tr><td>"Start building the model"</td><td>Sounds proactive and technical</td><td>In discovery-phase scenarios, the right move is understand/validate first — not build.</td></tr>
+        <tr><td>Answer solves a non-binding constraint</td><td>It's a real, plausible action</td><td>Identify the <em>binding</em> constraint (often data/compliance) and solve that.</td></tr>
+        <tr><td>Vague requirement dressed up in jargon</td><td>Looks sophisticated</td><td>If it has no metric/threshold/test, it's not well-formed — reject it.</td></tr>
+        <tr><td>Engage only the sponsor</td><td>Sponsor has authority</td><td>Prefer answers that engage end users &amp; SMEs too — tacit knowledge lives there.</td></tr>
+        <tr><td>Treat an open question as a blocker</td><td>Feels cautious</td><td>Log it with an owner/date and proceed; don't stall the whole project.</td></tr>
+        <tr><td>Confuse FR with NFR</td><td>Both are "requirements"</td><td>Ask: is it a <em>behaviour</em> (FR) or a <em>quality/limit</em> (NFR)?</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn-box">
+    <strong>⭐ Golden rule for this chapter:</strong> when two options look correct, choose the one that <em>understands and validates the problem, engages the right stakeholders, and respects the binding constraint</em> — over the one that jumps to a solution.
+  </div>
+  <div class="top-link"><a href="#top">↑ Back to top</a></div>
+</section>
+
+<footer class="foot">
+  Chapter 58 · Structured Discovery &amp; Requirement Gathering — revision notes · Claude Certified Architect (Foundations &amp; Professional). Self-contained HTML · print-friendly.
+</footer>
+
+</div>
+
+
+</body></html>

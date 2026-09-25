@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Comprehensive exam notes for Claude Certified Architect — Chapter 45">
+<title>Chapter 45: Accuracy-Latency Tradeoffs &amp; Integration Patterns | Claude Certified Architect Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#5B8AF0;
+  --accent:#F0A05B;
+  --bg:#0B0F17;
+  --bg-elev:#121826;
+  --bg-elev2:#182031;
+  --text:#E6ECF5;
+  --text-dim:#9AA7BD;
+  --border:#243049;
+  --tip:#1A3A5C;
+  --warning:#3A2F00;
+  --exam:#0A3A1A;
+  --critical:#3A0A0A;
+  --trap:#3A1A3A;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --code:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:72px;}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+/* ---------- Sticky Nav ---------- */
+nav.sticky{
+  position:sticky;top:0;z-index:100;
+  background:rgba(11,15,23,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+nav.sticky .nav-inner{
+  max-width:1080px;margin:0 auto;padding:10px 24px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;
+}
+nav.sticky .brand{
+  font-weight:800;color:var(--primary);font-size:15px;margin-right:8px;
+  white-space:nowrap;
+}
+nav.sticky a{
+  color:var(--text-dim);text-decoration:none;font-size:13px;font-weight:500;
+  padding:4px 8px;border-radius:6px;transition:all .15s ease;white-space:nowrap;
+}
+nav.sticky a:hover{color:var(--text);background:var(--bg-elev2);}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:linear-gradient(135deg,#101a30 0%,#1a1230 60%,#0B0F17 100%);
+  border-bottom:1px solid var(--border);
+  padding:56px 0 44px;
+}
+.hero .eyebrow{
+  color:var(--accent);font-weight:700;letter-spacing:2px;font-size:13px;
+  text-transform:uppercase;margin-bottom:10px;
+}
+.hero h1{
+  font-size:40px;line-height:1.15;margin:0 0 14px;font-weight:800;
+  background:linear-gradient(90deg,#5B8AF0,#F0A05B);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero p.lede{font-size:18px;color:var(--text-dim);max-width:760px;margin:0;}
+.hero .chapter-tag{
+  display:inline-block;margin-top:18px;background:var(--bg-elev2);
+  border:1px solid var(--border);padding:6px 14px;border-radius:20px;
+  font-family:var(--code);font-size:13px;color:var(--primary);
+}
+
+/* ---------- Sections ---------- */
+section{padding:44px 0;border-bottom:1px solid var(--border);}
+h2{
+  font-size:28px;font-weight:800;margin:0 0 6px;color:var(--text);
+  scroll-margin-top:80px;
+}
+h2 .num{color:var(--primary);font-family:var(--code);font-size:22px;margin-right:10px;}
+h3{font-size:20px;font-weight:700;margin:32px 0 10px;color:var(--accent);}
+h4{font-size:16px;font-weight:700;margin:22px 0 8px;color:var(--text);text-transform:uppercase;letter-spacing:.5px;font-size:14px;}
+p{margin:12px 0;}
+ul,ol{margin:12px 0;padding-left:24px;}
+li{margin:6px 0;}
+strong{color:#fff;}
+a.inline{color:var(--primary);}
+
+/* ---------- Definition block ---------- */
+.def{
+  background:var(--bg-elev);border-left:4px solid var(--primary);
+  border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;
+}
+.def .def-label{
+  font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--primary);margin-bottom:6px;
+}
+
+/* ---------- Callouts ---------- */
+.callout{
+  border-radius:10px;padding:14px 18px;margin:18px 0;font-size:15px;
+  border:1px solid rgba(255,255,255,0.06);position:relative;
+}
+.callout .callout-icon{margin-right:8px;}
+.callout strong{color:#fff;}
+.callout-tip{background:var(--tip);border-left:4px solid #4A9EE0;}
+.callout-warning{background:var(--warning);border-left:4px solid #E0B84A;}
+.callout-exam{background:var(--exam);border-left:4px solid #46C46A;}
+.callout-critical{background:var(--critical);border-left:4px solid #E05B5B;}
+.callout-trap{background:var(--trap);border-left:4px solid #C46AD4;}
+
+/* ---------- Tables ---------- */
+.table-scroll{overflow-x:auto;margin:20px 0;}
+table{
+  border-collapse:collapse;width:100%;font-size:14px;
+  background:var(--bg-elev);border-radius:10px;overflow:hidden;
+}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;}
+thead th{
+  background:var(--bg-elev2);color:var(--primary);font-weight:700;
+  text-transform:uppercase;letter-spacing:.5px;font-size:12px;
+}
+tbody tr:hover{background:var(--bg-elev2);}
+td code{font-size:13px;}
+.tag-hi{color:#E05B5B;font-weight:600;}
+.tag-med{color:#E0B84A;font-weight:600;}
+.tag-lo{color:#46C46A;font-weight:600;}
+
+/* ---------- ASCII / Code ---------- */
+pre{
+  background:#080B12;border:1px solid var(--border);border-radius:10px;
+  padding:16px 18px;overflow-x:auto;font-family:var(--code);font-size:13px;
+  line-height:1.5;color:#C7D2E5;margin:18px 0;
+}
+pre.ascii-diagram{color:#9FD0FF;}
+code{
+  font-family:var(--code);background:var(--bg-elev2);padding:2px 6px;
+  border-radius:5px;font-size:13.5px;color:var(--accent);
+}
+pre code{background:none;padding:0;color:inherit;}
+
+/* ---------- Quick Recall ---------- */
+.recall{
+  background:var(--bg-elev);border:1px dashed var(--primary);
+  border-radius:10px;padding:14px 20px;margin:22px 0 6px;
+}
+.recall .recall-label{font-weight:700;color:var(--primary);margin-bottom:6px;}
+.recall ul{margin:6px 0 0;}
+.recall li{margin:4px 0;}
+
+/* ---------- Legend ---------- */
+.legend-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;margin:18px 0;
+}
+.legend-item{
+  border-radius:8px;padding:10px 14px;font-size:13px;border:1px solid rgba(255,255,255,0.06);
+}
+
+/* ---------- Objectives ---------- */
+.obj-box{
+  background:var(--bg-elev);border:1px solid var(--border);border-radius:12px;
+  padding:22px 26px;margin:24px 0;
+}
+.obj-box h3{margin-top:0;color:var(--primary);}
+.obj-box ol{columns:2;column-gap:40px;}
+@media(max-width:640px){.obj-box ol{columns:1;} .hero h1{font-size:30px;}}
+
+/* ---------- Practice questions ---------- */
+details.pq{
+  background:var(--bg-elev);border:1px solid var(--border);border-radius:10px;
+  padding:4px 18px;margin:14px 0;
+}
+details.pq summary{
+  cursor:pointer;font-weight:600;padding:12px 0;list-style:none;
+  color:var(--text);outline:none;
+}
+details.pq summary::-webkit-details-marker{display:none;}
+details.pq summary::before{content:"▶ ";color:var(--accent);font-size:12px;}
+details.pq[open] summary::before{content:"▼ ";}
+details.pq .answer{
+  border-top:1px solid var(--border);padding:12px 0 16px;color:var(--text-dim);
+}
+details.pq .answer .correct{color:#46C46A;font-weight:700;}
+.q-meta{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;}
+
+/* ---------- Glossary ---------- */
+.glossary dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;}
+.glossary dt{font-weight:700;color:var(--accent);font-family:var(--code);font-size:14px;}
+.glossary dd{margin:0;color:var(--text-dim);}
+@media(max-width:640px){.glossary dl{grid-template-columns:1fr;}.glossary dd{margin-bottom:12px;}}
+
+/* ---------- Summary ---------- */
+.summary-list{counter-reset:take;list-style:none;padding:0;}
+.summary-list li{
+  counter-increment:take;background:var(--bg-elev);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px 14px 56px;margin:10px 0;position:relative;
+}
+.summary-list li::before{
+  content:counter(take);position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:30px;height:30px;border-radius:50%;background:var(--primary);color:#08101f;
+  font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+
+/* ---------- Footer ---------- */
+footer{padding:40px 0 60px;color:var(--text-dim);font-size:14px;text-align:center;}
+footer .divider{color:var(--border);}
+
+/* ---------- Print ---------- */
+@media print{
+  nav.sticky{display:none;}
+  body{background:#fff;color:#111;font-size:12px;}
+  .hero{background:#eee;}
+  .hero h1{-webkit-text-fill-color:#111;color:#111;}
+  section{border-color:#ccc;page-break-inside:avoid;}
+  .callout,.def,.recall,pre,table{border-color:#ccc;background:#f7f7f7;color:#111;}
+  details.pq{border-color:#ccc;background:#f7f7f7;}
+  details.pq[open] .answer{display:block;}
+  a{color:#111;text-decoration:underline;}
+  pre{color:#111;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ STICKY NAV ============ -->
+<nav class="sticky">
+  <div class="nav-inner">
+    <span class="brand">CH 45 · CCA Notes</span>
+    <a href="#s1">45.1 Tradeoffs</a>
+    <a href="#s2">45.2 Justify w/ Data</a>
+    <a href="#s3">45.3 Protocols</a>
+    <a href="#s4">45.4 Selection</a>
+    <a href="#s5">45.5 Discovery</a>
+    <a href="#s6">45.6 Hands-On</a>
+    <a href="#glossary">Glossary</a>
+    <a href="#summary">Top 10</a>
+    <a href="#practice">Practice</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</div>
+    <h1>Chapter 45<br>Accuracy-Latency Tradeoffs &amp; Integration Patterns</h1>
+    <p class="lede">Design decisions where speed and correctness pull in opposite directions — and the connection mechanisms (MCP, direct API/CLI, agent-to-agent) that carry your Claude integration into production.</p>
+    <span class="chapter-tag">// exam_domain: system_design · integration · optimization</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ LEARNING OBJECTIVES ============ -->
+<div class="obj-box" id="objectives">
+  <h3>🎯 Learning Objectives</h3>
+  <p style="color:var(--text-dim);margin-top:0;">By the end of this chapter you will be able to:</p>
+  <ol>
+    <li>Reason about the accuracy-latency tradeoff in LLM inference and identify which levers move which axis.</li>
+    <li>Justify a Claude configuration decision using benchmark data and the right metrics (TTFT, tokens/sec, cost/request).</li>
+    <li>Distinguish MCP, direct API/CLI, and agent-to-agent connection protocols by architecture and use-case fit.</li>
+    <li>Select the appropriate integration mechanism for a given set of requirements and constraints.</li>
+    <li>Compare progressive discovery against monolithic context strategies and choose per workload.</li>
+    <li>Design and document an end-to-end Claude integration architecture and defend the tradeoffs.</li>
+  </ol>
+</div>
+
+<!-- ============ VISUAL LEGEND ============ -->
+<section id="legend" style="border-top:1px solid var(--border);">
+  <h2><span class="num">§</span>Visual Legend — Callout Color Coding</h2>
+  <p>Callout boxes throughout this chapter follow a fixed color code. Learn to scan for them.</p>
+  <div class="legend-grid">
+    <div class="legend-item callout-tip"><strong>💡 TIP</strong><br>Practical guidance &amp; best practice.</div>
+    <div class="legend-item callout-warning"><strong>⚠️ WARNING</strong><br>Pitfalls &amp; risky configurations.</div>
+    <div class="legend-item callout-exam"><strong>🎯 EXAM STRATEGY</strong><br>How the exam frames it &amp; how to answer.</div>
+    <div class="legend-item callout-critical"><strong>🔴 CRITICAL CONCEPT</strong><br>Must-know foundational idea.</div>
+    <div class="legend-item callout-trap"><strong>⚠️ EXAM TRAP</strong><br>Deliberately confusing answer patterns.</div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION 45.1 -->
+<!-- ============================================================= -->
+<section id="s1">
+  <h2><span class="num">45.1</span>Evaluating Accuracy-Latency Tradeoffs</h2>
+
+  <div class="def">
+    <div class="def-label">Definition</div>
+    <strong>Accuracy-latency tradeoff</strong> is the tension in LLM inference between how correct/complete a response is and how fast it is produced. Configuration choices that raise expected accuracy (larger model, more context, more reasoning tokens, self-consistency) generally increase latency and cost; choices that reduce latency (smaller model, tighter token budgets, streaming, caching) can reduce headroom for accuracy on hard tasks.
+  </div>
+
+  <p>There is no single "best" configuration — only the best configuration <em>for a stated requirement</em>. The architect's job is to place the workload on the frontier deliberately rather than by accident.</p>
+
+  <h3>Variables that affect latency</h3>
+  <p>LLM inference latency has two mechanical phases: <strong>prefill</strong> (processing the input prompt, which sets Time-To-First-Token) and <strong>decode</strong> (autoregressive token-by-token generation, which dominates total latency because tokens are produced sequentially).</p>
+  <ul>
+    <li><strong>Model size / class</strong> — larger models (Opus-class) run more compute per token than mid (Sonnet-class) or small (Haiku-class) models, raising both TTFT and per-token time.</li>
+    <li><strong>Output token budget (<code>max_tokens</code> &amp; actual output length)</strong> — the single biggest controllable driver of total latency, because decode is sequential. Long outputs cost proportionally more wall-clock time.</li>
+    <li><strong>Input / context length</strong> — longer prompts increase prefill work and TTFT. Prompt caching mitigates repeated prefixes.</li>
+    <li><strong>Streaming vs batch</strong> — streaming (SSE) does not reduce total latency but dramatically improves <em>perceived</em> latency by emitting tokens as they are decoded. The Batch API trades higher throughput and lower cost for much higher, asynchronous latency.</li>
+    <li><strong>Extended thinking / reasoning tokens</strong> — allocating a thinking budget adds decode work before the final answer, raising latency in exchange for accuracy on hard reasoning tasks.</li>
+    <li><strong>Temperature &amp; top-p</strong> — sampling parameters have negligible direct effect on latency; their role is on the accuracy axis.</li>
+  </ul>
+
+  <div class="callout callout-critical"><span class="callout-icon">🔴</span><strong>CRITICAL CONCEPT:</strong> Output length, not input length, usually dominates end-to-end latency. Decode is sequential and per-token; prefill is parallel. When a scenario complains about "slow responses," first suspect large <code>max_tokens</code> or verbose outputs before blaming model size.</div>
+
+  <h3>Variables that affect accuracy</h3>
+  <ul>
+    <li><strong>Model class</strong> — larger models generally handle harder reasoning, longer context, and more nuanced instructions better.</li>
+    <li><strong>Context length &amp; relevance</strong> — supplying the right grounding context (RAG, documents) raises accuracy; irrelevant or excessive context can dilute attention and hurt it.</li>
+    <li><strong>Few-shot examples</strong> — well-chosen examples improve format adherence and task accuracy, at the cost of extra input tokens (latency/cost).</li>
+    <li><strong>Prompt clarity &amp; structure</strong> — explicit instructions, role framing, and output schemas reduce ambiguity-driven errors — cheap accuracy with no latency penalty.</li>
+    <li><strong>Temperature / top-p</strong> — lower temperature reduces variance and improves consistency on deterministic tasks (extraction, classification); higher temperature aids creative breadth but can reduce factual reliability.</li>
+    <li><strong>Extended thinking &amp; self-consistency</strong> — giving the model room to reason (or sampling multiple answers and voting) raises accuracy on complex problems, with a direct latency/cost cost.</li>
+  </ul>
+
+  <div class="callout callout-tip"><span class="callout-icon">💡</span><strong>TIP:</strong> Lower temperature values (0.0–0.3) reduce output variance and improve factual consistency — ideal for classification and extraction tasks where accuracy outweighs creativity. Reserve higher temperatures for ideation and drafting.</div>
+
+  <h3>Tradeoff Matrix</h3>
+  <p>Qualitative direction of each lever. "↑" = increases, "↓" = decreases, "~" = negligible/indirect.</p>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Variable</th><th>Effect on Accuracy</th><th>Effect on Latency</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Larger model class</td><td class="tag-lo">↑ potential</td><td class="tag-hi">↑ higher</td><td>Diminishing returns on easy tasks.</td></tr>
+      <tr><td>Higher <code>max_tokens</code> / long output</td><td>~ (unless truncated)</td><td class="tag-hi">↑↑ largest driver</td><td>Cap to expected output length.</td></tr>
+      <tr><td>More input context / RAG</td><td class="tag-lo">↑ if relevant</td><td class="tag-med">↑ prefill/TTFT</td><td>Irrelevant context can hurt accuracy.</td></tr>
+      <tr><td>More few-shot examples</td><td class="tag-lo">↑ format/accuracy</td><td class="tag-med">↑ input tokens</td><td>2–5 strong examples usually enough.</td></tr>
+      <tr><td>Clearer prompt / schema</td><td class="tag-lo">↑</td><td class="tag-lo">~ / ↓ (less rework)</td><td>Best accuracy-per-token lever.</td></tr>
+      <tr><td>Lower temperature</td><td class="tag-lo">↑ on deterministic tasks</td><td>~</td><td>Raise only for creative tasks.</td></tr>
+      <tr><td>Extended thinking budget</td><td class="tag-lo">↑ on hard reasoning</td><td class="tag-hi">↑ extra decode</td><td>Skip for simple lookups.</td></tr>
+      <tr><td>Streaming (SSE)</td><td>~</td><td class="tag-lo">↓ perceived only</td><td>No change to total time.</td></tr>
+      <tr><td>Prompt caching</td><td>~</td><td class="tag-lo">↓ TTFT on cache hit</td><td>Great for stable long prefixes.</td></tr>
+      <tr><td>Batch API</td><td>~</td><td class="tag-hi">↑ (async) but cheaper</td><td>Non-interactive workloads only.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>ASCII Diagram — Accuracy-Latency Frontier</h3>
+  <pre class="ascii-diagram">ACCURACY-LATENCY FRONTIER
+Accuracy
+  ▲
+  │                              ● Opus + thinking + self-consistency
+  │                        ●  Sonnet + rich context / few-shot
+  │                  ●  Sonnet default
+  │            ●  Haiku + tight prompt
+  │      ●  Haiku, minimal context
+  │   (under-serving:                (over-serving:
+  │    fast but wrong)                slow, marginal gain)
+  └───────────────────────────────────────────────▶ Latency (&amp; cost)
+
+  ▓ Efficient frontier = the curve of "best accuracy achievable
+    at each latency budget." Pick the point that meets your SLA,
+    not the highest accuracy regardless of cost.</pre>
+
+  <div class="callout callout-warning"><span class="callout-icon">⚠️</span><strong>WARNING:</strong> Operating <em>above</em> the frontier is impossible; operating far <em>below</em> it (e.g. Opus for a trivial classification) wastes latency and cost for no accuracy gain. Most real systems are mis-tuned toward over-serving.</div>
+
+  <h3>Real-world scenario: latency-first vs accuracy-first</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Optimize for LATENCY when…</th><th>Optimize for ACCURACY when…</th></tr></thead>
+    <tbody>
+      <tr><td>User-facing, interactive chat/autocomplete</td><td>High-stakes decisions (medical, legal, financial)</td></tr>
+      <tr><td>High request volume, cost-sensitive</td><td>One-shot outputs that can't be corrected downstream</td></tr>
+      <tr><td>Task is easy / well-bounded (routing, tagging)</td><td>Complex multi-step reasoning or synthesis</td></tr>
+      <tr><td>Failure is cheap / easily retried</td><td>Failure is expensive or safety-relevant</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout callout-exam"><span class="callout-icon">🎯</span><strong>EXAM STRATEGY:</strong> When a question asks you to "optimize for real-time user-facing response," default to latency-first configuration (streaming enabled, shorter <code>max_tokens</code>, Haiku-class model, prompt caching). Accuracy-optimization signals appear as: "critical decision," "high-stakes output," "medical/legal domain," "must be correct." Match the keyword to the axis before reading the options.</div>
+
+  <div class="recall">
+    <div class="recall-label">📝 Quick Recall</div>
+    <ul>
+      <li>Latency = prefill (TTFT) + decode; decode is sequential and usually dominates.</li>
+      <li>Output token budget is the biggest controllable latency lever.</li>
+      <li>Prompt clarity is the best accuracy-per-token lever — nearly free.</li>
+      <li>Streaming improves perceived, not actual, latency.</li>
+      <li>Pick the frontier point that meets the SLA; don't over-serve.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION 45.2 -->
+<!-- ============================================================= -->
+<section id="s2">
+  <h2><span class="num">45.2</span>Justifying Configuration Decisions with Data</h2>
+
+  <div class="def">
+    <div class="def-label">Definition</div>
+    A <strong>data-driven configuration decision</strong> replaces intuition ("Opus feels smarter") with measured evidence: run candidate configurations against a representative evaluation set, collect latency, quality, and cost metrics, and choose the configuration that meets the requirement at the lowest cost/latency.
+  </div>
+
+  <h3>Methodology for benchmarking Claude configurations</h3>
+  <ol>
+    <li><strong>Define the task &amp; success criteria</strong> — what does "correct" mean? Exact match, rubric score, human preference, downstream task success?</li>
+    <li><strong>Build a representative eval set</strong> — real inputs that reflect production distribution, including hard/edge cases. Freeze it so comparisons are apples-to-apples.</li>
+    <li><strong>Enumerate candidate configs</strong> — vary one dimension at a time (model class, temperature, few-shot count, thinking budget) to attribute effects.</li>
+    <li><strong>Run under realistic conditions</strong> — same region, comparable concurrency, warm caches vs cold measured separately.</li>
+    <li><strong>Collect the full metric set</strong> (below) per request, not just averages — capture the distribution.</li>
+    <li><strong>Analyze &amp; decide</strong> — compare on the axis your requirement cares about, subject to constraints on the others.</li>
+  </ol>
+
+  <h3>Key metrics to collect</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Metric</th><th>What it measures</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td><code>TTFT</code> (Time To First Token)</td><td>Latency until the first output token arrives</td><td>Drives perceived responsiveness in streaming UIs</td></tr>
+      <tr><td>Total latency (end-to-end)</td><td>Request start → last token</td><td>SLA / timeout budgeting</td></tr>
+      <tr><td>Output rate (tokens/sec)</td><td>Decode throughput</td><td>Predicts total time for long outputs</td></tr>
+      <tr><td>Accuracy / quality score</td><td>Task-specific correctness (exact-match, rubric, pass rate)</td><td>The whole point — the accuracy axis</td></tr>
+      <tr><td>Cost / request</td><td>Input + output tokens × price (± caching, batch)</td><td>Unit economics at scale</td></tr>
+      <tr><td>Percentiles (p50/p95/p99)</td><td>Tail latency, not just mean</td><td>Tails determine real user experience &amp; SLAs</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout callout-critical"><span class="callout-icon">🔴</span><strong>CRITICAL CONCEPT:</strong> Report <strong>percentiles, not just averages.</strong> A config with great mean latency but a bad p95/p99 fails users at scale. Tail latency is where SLAs break.</div>
+
+  <h3>Designing an A/B test for prompt configurations</h3>
+  <ul>
+    <li><strong>Isolate one variable</strong> per arm (e.g. prompt A vs prompt B) so the effect is attributable.</li>
+    <li><strong>Randomize assignment</strong> of inputs across arms to avoid distribution skew.</li>
+    <li><strong>Hold everything else fixed</strong> — same model, region, time window, temperature.</li>
+    <li><strong>Pre-register the metric &amp; decision rule</strong> before looking at results, to avoid cherry-picking.</li>
+    <li><strong>Run enough samples</strong> to detect the effect size you care about.</li>
+  </ul>
+
+  <pre><code># Pseudocode: one-variable-at-a-time eval harness
+for config in candidate_configs:          # vary model / temp / few-shot
+    for item in frozen_eval_set:          # representative inputs
+        r = call_claude(item.input, **config)
+        record(config, latency=r.latency, ttft=r.ttft,
+               tokens=r.usage, score=grade(r.output, item.gold),
+               cost=price(r.usage, config.model))
+report_percentiles_and_mean(per_config=True)</code></pre>
+
+  <h3>Statistical significance considerations</h3>
+  <div class="callout callout-warning"><span class="callout-icon">⚠️</span><strong>WARNING:</strong> LLM outputs are variable (sampling, non-determinism). A 2-point accuracy difference on 20 examples is noise. Use a large enough eval set, report confidence intervals, and treat small differences as ties. For latency, use percentiles over many runs — a single run's latency is meaningless.</div>
+  <ul>
+    <li>Beware <strong>overlapping confidence intervals</strong> — if they overlap, you cannot claim one config is "better."</li>
+    <li>Control <strong>temperature</strong> during accuracy evals (lower = more stable, more reproducible measurements).</li>
+    <li>Separate <strong>cold vs warm cache</strong> latency; mixing them corrupts the comparison.</li>
+    <li>Watch for <strong>eval set contamination / overfitting</strong> — tuning prompts to a tiny fixed set can inflate scores that don't generalize.</li>
+  </ul>
+
+  <h3>Configuration Decision Matrix</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Scenario</th><th>Recommended Config</th><th>Data-Backed Justification</th></tr></thead>
+    <tbody>
+      <tr><td>Real-time support chat</td><td>Haiku/Sonnet-class, streaming on, modest <code>max_tokens</code>, temp ≈ 0.3, prompt caching</td><td>p95 TTFT within interactive SLA; quality score within tolerance of larger model at a fraction of cost/latency.</td></tr>
+      <tr><td>Legal clause extraction</td><td>Sonnet/Opus-class, temp 0.0, structured output schema, few-shot</td><td>Exact-match accuracy materially higher; latency acceptable for non-interactive batch.</td></tr>
+      <tr><td>High-volume ticket tagging</td><td>Haiku-class, Batch API, temp 0.0</td><td>Batch lowers cost/request substantially; accuracy parity on an easy task; latency irrelevant (async).</td></tr>
+      <tr><td>Complex multi-step research</td><td>Opus/Sonnet-class + extended thinking</td><td>Thinking budget lifts pass rate on hard reasoning; latency justified by output value.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout callout-exam"><span class="callout-icon">🎯</span><strong>EXAM STRATEGY:</strong> Data-driven justification questions reward the answer that (1) names a <em>specific metric tied to the stated requirement</em>, and (2) acknowledges the tradeoff on the other axis. "Choose Opus because it's more accurate" is weak. "Benchmarks show Sonnet meets the p95 latency SLA with accuracy within 1% of Opus at 5× lower cost, so Sonnet is justified" is the pattern examiners want. Look for options that cite the <em>right</em> metric (TTFT for interactive, cost/request at scale, percentiles for SLA).</div>
+
+  <div class="callout callout-tip"><span class="callout-icon">💡</span><strong>TIP:</strong> Common mistakes when citing data — quoting averages instead of percentiles; comparing configs measured under different conditions; drawing conclusions from too few samples; ignoring cost while optimizing accuracy; and confusing perceived (streaming) latency with total latency.</div>
+
+  <div class="recall">
+    <div class="recall-label">📝 Quick Recall</div>
+    <ul>
+      <li>Freeze a representative eval set; vary one dimension at a time.</li>
+      <li>Collect TTFT, total latency, tokens/sec, quality score, cost/request — with percentiles.</li>
+      <li>Pre-register metric &amp; decision rule; report confidence intervals.</li>
+      <li>Overlapping CIs = tie; don't over-claim from noise.</li>
+      <li>Justify with the metric that matches the requirement + name the tradeoff.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION 45.3 -->
+<!-- ============================================================= -->
+<section id="s3">
+  <h2><span class="num">45.3</span>Connection Protocols: MCP vs API/CLI vs Agent-to-Agent</h2>
+
+  <h3>Model Context Protocol (MCP)</h3>
+  <div class="def">
+    <div class="def-label">Definition</div>
+    <strong>MCP (Model Context Protocol)</strong> is an open, standardized protocol from Anthropic that connects LLM applications to external tools, data, and prompts through a uniform client-server interface. It lets a model "plug in" to context sources the way USB standardizes device connections — write a server once, reuse it across any MCP-compatible host.
+  </div>
+  <p><strong>Architecture:</strong> a <em>host</em> application (e.g. Claude Desktop, an IDE, a custom agent) runs one or more <em>MCP clients</em>, each maintaining a connection to an <em>MCP server</em>. Servers expose three primitives:</p>
+  <ul>
+    <li><strong>Tools</strong> — model-invokable functions (actions with side effects).</li>
+    <li><strong>Resources</strong> — readable data/context (files, records) the host can load.</li>
+    <li><strong>Prompts</strong> — reusable prompt templates surfaced to the user/model.</li>
+  </ul>
+  <p><strong>Transport layers:</strong> MCP messages use <strong>JSON-RPC 2.0</strong> over a transport. The two standard transports are <strong>stdio</strong> (local subprocess — low latency, ideal for local servers) and <strong>streamable HTTP</strong> (remote servers, supports server-sent events for streaming). <strong>Use cases:</strong> standardized tool/resource abstraction, reusable connectors, decoupling integrations from any single app.</p>
+
+  <pre class="ascii-diagram">MCP ARCHITECTURE
+┌──────────────────────────┐         ┌─────────────────────┐
+│  HOST (Claude Desktop /   │  JSON-  │   MCP SERVER A      │
+│  IDE / custom agent)      │  RPC    │  (tools/resources)  │
+│  ┌────────────────────┐  │◀──────▶│   e.g. filesystem   │
+│  │ MCP Client 1 ──────┼──┼─stdio──▶└─────────────────────┘
+│  │ MCP Client 2 ──────┼──┼─HTTP──▶┌─────────────────────┐
+│  └────────────────────┘  │  +SSE  │   MCP SERVER B      │
+│         │  Claude model  │        │  (github / db API)  │
+└─────────┴────────────────┘        └─────────────────────┘
+   one client ↔ one server; host aggregates many servers</pre>
+
+  <h3>Direct API / CLI Integration</h3>
+  <div class="def">
+    <div class="def-label">Definition</div>
+    <strong>Direct API/CLI integration</strong> calls Claude straight through the Messages API over HTTPS (REST), via official SDKs (Python/TypeScript), or through command-line tooling. It is the lowest-overhead path: your code owns the request/response loop, tool definitions, and orchestration.
+  </div>
+  <ul>
+    <li><strong>REST calls</strong> — POST to the Messages endpoint with model, messages, and parameters; JSON response.</li>
+    <li><strong>SDK usage</strong> — typed clients that wrap auth, retries, streaming, and tool-use loops.</li>
+    <li><strong>CLI tooling</strong> — command-line access (e.g. Claude Code) for scripting and developer workflows.</li>
+    <li><strong>Streaming</strong> — server-sent events emit tokens incrementally for responsive UIs.</li>
+    <li><strong>Tool use</strong> — you declare tools inline in the request; the model returns tool-use blocks you execute and feed back.</li>
+  </ul>
+
+  <pre class="ascii-diagram">DIRECT API / CLI
+┌──────────┐   HTTPS (REST / SSE)   ┌───────────────┐
+│ Your App │ ─────────────────────▶ │  Claude API   │
+│  / CLI   │ ◀───────────────────── │ (Messages)    │
+└────┬─────┘   response / stream    └───────────────┘
+     │ you own: tool exec, retries, orchestration
+     ▼
+ ┌─────────────┐
+ │ your tools  │  ← called directly by your code
+ └─────────────┘</pre>
+
+  <h3>Agent-to-Agent Patterns</h3>
+  <div class="def">
+    <div class="def-label">Definition</div>
+    <strong>Agent-to-agent</strong> architectures coordinate multiple LLM agents to solve a task. A common pattern is <strong>orchestrator–subagent (worker)</strong>: a lead agent decomposes a problem, delegates subtasks to specialized subagents that work in parallel with isolated context, then synthesizes their results.
+  </div>
+  <ul>
+    <li><strong>Orchestrator–subagent</strong> — lead plans &amp; delegates; workers execute focused subtasks with their own context windows, reducing context pollution.</li>
+    <li><strong>Message passing</strong> — agents exchange structured task specs and results; the orchestrator owns final synthesis.</li>
+    <li><strong>Trust boundaries</strong> — subagents should receive least-privilege tool access; validate/​sanitize inter-agent messages; the orchestrator is the authority that composes outputs.</li>
+  </ul>
+
+  <pre class="ascii-diagram">AGENT-TO-AGENT (ORCHESTRATOR–SUBAGENT)
+                 ┌──────────────────┐
+                 │   ORCHESTRATOR   │  plans, delegates,
+                 │   (lead agent)   │  synthesizes
+                 └───┬────┬─────┬───┘
+            task ▼    ▼     ▼   ▲ results
+        ┌────────┐ ┌────────┐ ┌────────┐
+        │ Sub A  │ │ Sub B  │ │ Sub C  │  parallel, isolated
+        │ (tool) │ │ (tool) │ │ (tool) │  context each
+        └────────┘ └────────┘ └────────┘
+   multi-hop → higher latency, higher capability</pre>
+
+  <h3>Comparison Table — MCP vs API/CLI vs Agent-to-Agent</h3>
+  <div class="table-scroll">
+  <table class="comparison-table">
+    <thead><tr><th>Dimension</th><th>MCP</th><th>Direct API/CLI</th><th>Agent-to-Agent</th></tr></thead>
+    <tbody>
+      <tr><td>Latency profile</td><td class="tag-med">Medium (protocol + tool hop)</td><td class="tag-lo">Low (direct HTTP)</td><td class="tag-hi">High (multi-hop, multi-model)</td></tr>
+      <tr><td>Setup complexity</td><td class="tag-med">Medium (server + client)</td><td class="tag-lo">Low</td><td class="tag-hi">High (orchestration, state)</td></tr>
+      <tr><td>Security surface</td><td>Server boundary; per-server perms</td><td>Your app owns auth &amp; tool exec</td><td>Trust boundaries between agents; least-privilege critical</td></tr>
+      <tr><td>Scalability</td><td>High reuse across hosts</td><td>Good; you manage scaling</td><td>Powerful but coordination cost grows</td></tr>
+      <tr><td>Reusability</td><td class="tag-lo">High — write server once</td><td class="tag-med">Medium — per-integration code</td><td class="tag-med">Pattern-level reuse</td></tr>
+      <tr><td>Best for</td><td>Standardized tool/resource abstraction &amp; reusable connectors</td><td>Simple, direct, latency-sensitive integrations</td><td>Complex, decomposable, parallelizable workflows</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Decision flowchart — which protocol?</h3>
+  <pre class="ascii-diagram">PROTOCOL SELECTION
+Need external tools/data?
+   │ no ──────────────▶ Direct API/CLI (plain generation)
+   │ yes
+   ▼
+Reusable across multiple apps / want a standard connector?
+   │ yes ─────────────▶ MCP (write server once, reuse)
+   │ no
+   ▼
+Single app, few tools, latency-critical?
+   │ yes ─────────────▶ Direct API/CLI (inline tool use)
+   │ no
+   ▼
+Task decomposes into parallel specialized subtasks?
+   │ yes ─────────────▶ Agent-to-Agent (orchestrator–subagents)
+   │ no  ─────────────▶ Direct API/CLI</pre>
+
+  <div class="callout callout-exam"><span class="callout-icon">🎯</span><strong>EXAM STRATEGY:</strong> Protocol-selection questions hinge on keywords. "Reusable / standardized / connect many tools / multiple clients" → <strong>MCP</strong>. "Simple / lowest latency / direct / one integration" → <strong>Direct API/CLI</strong>. "Decompose / parallel subtasks / specialized agents / research at scale" → <strong>Agent-to-Agent</strong>. Common distractor: choosing agent-to-agent for a simple single-tool task (over-engineering) — eliminate it when the task isn't decomposable.</div>
+
+  <div class="callout callout-warning"><span class="callout-icon">⚠️</span><strong>WARNING:</strong> MCP standardizes <em>how</em> tools are connected; it does not itself make a call faster or smarter. Don't confuse "use MCP" with "improve accuracy" — MCP is an integration/abstraction choice, not an accuracy lever.</div>
+
+  <div class="recall">
+    <div class="recall-label">📝 Quick Recall</div>
+    <ul>
+      <li>MCP = open JSON-RPC client-server standard exposing tools, resources, prompts; transports = stdio &amp; streamable HTTP.</li>
+      <li>Direct API/CLI = lowest overhead; your code owns the loop; best for simple, latency-sensitive integrations.</li>
+      <li>Agent-to-agent = orchestrator delegates to isolated subagents; highest capability, highest latency; mind trust boundaries.</li>
+      <li>Match keywords to protocol; don't over-engineer with multi-agent for simple tasks.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION 45.4 -->
+<!-- ============================================================= -->
+<section id="s4">
+  <h2><span class="num">45.4</span>Selecting the Appropriate Integration Mechanism</h2>
+
+  <div class="def">
+    <div class="def-label">Definition</div>
+    <strong>Integration mechanism selection</strong> is the structured process of mapping requirements (latency, accuracy, context complexity, security, team capability) onto the connection protocol and configuration that best satisfies them within constraints.
+  </div>
+
+  <h3>Selection framework (decision-tree logic)</h3>
+  <ol>
+    <li><strong>Latency requirement?</strong> Hard real-time → prefer direct API/CLI + streaming; async-tolerant → MCP or agent-to-agent acceptable.</li>
+    <li><strong>Accuracy requirement?</strong> High-stakes → larger model, thinking, structured output; routine → smaller model.</li>
+    <li><strong>Context complexity?</strong> Many heterogeneous sources / reusable tools → MCP; single tool → inline API tool use.</li>
+    <li><strong>Decomposability?</strong> Parallel specialized subtasks → agent-to-agent; linear task → single agent.</li>
+    <li><strong>Security posture?</strong> Strict least-privilege / auditable tool boundaries → MCP server boundary or explicit trust boundaries.</li>
+    <li><strong>Team expertise / time?</strong> Small team / fast delivery → simplest mechanism that meets requirements (usually direct API).</li>
+  </ol>
+
+  <h3>Criteria matrix</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Criterion</th><th>Direct API/CLI</th><th>MCP</th><th>Agent-to-Agent</th></tr></thead>
+    <tbody>
+      <tr><td>Latency requirement</td><td class="tag-lo">Best (low)</td><td class="tag-med">Medium</td><td class="tag-hi">Worst (multi-hop)</td></tr>
+      <tr><td>Accuracy on complex tasks</td><td>Depends on config</td><td>Depends on config</td><td class="tag-lo">Best (specialization)</td></tr>
+      <tr><td>Context complexity / many sources</td><td class="tag-hi">Weak</td><td class="tag-lo">Strong (reusable servers)</td><td class="tag-med">Strong (isolated contexts)</td></tr>
+      <tr><td>Security / least privilege</td><td>App-managed</td><td class="tag-lo">Per-server boundaries</td><td>Explicit trust boundaries</td></tr>
+      <tr><td>Team expertise needed</td><td class="tag-lo">Lowest</td><td class="tag-med">Medium</td><td class="tag-hi">Highest</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Use-case → mechanism mapping</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Use case</th><th>Mechanism</th><th>Justification</th></tr></thead>
+    <tbody>
+      <tr><td>Autocomplete / inline suggestions</td><td>Direct API + streaming</td><td>Lowest latency, single tool at most.</td></tr>
+      <tr><td>IDE / desktop assistant with many local tools</td><td>MCP</td><td>Reusable connectors, standardized tool surface, stdio for local speed.</td></tr>
+      <tr><td>Deep research across many sources</td><td>Agent-to-agent</td><td>Parallel subagents with isolated context; capability outweighs latency.</td></tr>
+      <tr><td>Enterprise connector reused by many apps</td><td>MCP</td><td>Write server once, reuse across hosts; central permissioning.</td></tr>
+      <tr><td>Simple classification microservice</td><td>Direct API</td><td>Minimal overhead; multi-agent would be over-engineering.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Anti-patterns &amp; failure modes</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Anti-pattern</th><th>Failure mode</th></tr></thead>
+    <tbody>
+      <tr><td>Agent-to-agent for a simple single-tool task</td><td>Needless latency, cost, and coordination bugs; brittle.</td></tr>
+      <tr><td>Direct inline tool code duplicated across many apps</td><td>Maintenance sprawl; MCP would have centralized it.</td></tr>
+      <tr><td>MCP for one trivial, latency-critical call</td><td>Protocol overhead with no reuse benefit.</td></tr>
+      <tr><td>Giving subagents broad tool permissions</td><td>Expanded attack surface; violates least privilege.</td></tr>
+      <tr><td>Streaming assumed to cut total latency</td><td>SLA missed — total time unchanged.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Decision tree (nested view)</h3>
+  <ul>
+    <li><strong>Is the task latency-critical &amp; simple?</strong>
+      <ul><li>Yes → <strong>Direct API/CLI</strong> (streaming, small model).</li>
+      <li>No → continue.</li></ul>
+    </li>
+    <li><strong>Do you need reusable tools/data across apps or many heterogeneous sources?</strong>
+      <ul><li>Yes → <strong>MCP</strong>.</li>
+      <li>No → continue.</li></ul>
+    </li>
+    <li><strong>Does the task decompose into parallel specialized subtasks?</strong>
+      <ul><li>Yes → <strong>Agent-to-Agent</strong>.</li>
+      <li>No → <strong>Direct API/CLI</strong>.</li></ul>
+    </li>
+  </ul>
+
+  <div class="callout callout-tip"><span class="callout-icon">💡</span><strong>TIP — elimination strategy for MCQs:</strong> First delete over-engineered options (multi-agent for trivial tasks). Then delete options that violate a stated hard constraint (e.g. "must be real-time" kills agent-to-agent). Of what remains, pick the simplest mechanism that satisfies every stated requirement.</div>
+
+  <div class="callout callout-trap"><span class="callout-icon">⚠️</span><strong>EXAM TRAP:</strong> Two mechanisms can look equally valid — e.g. "connect Claude to a database." Both direct API tool use and MCP work. The tiebreaker is in the qualifiers: if the question says "reused by multiple teams/apps" or "standardized," pick <strong>MCP</strong>; if it says "single service, lowest latency, simplest," pick <strong>direct API</strong>. Read the modifiers, not just the verb.</div>
+
+  <div class="callout callout-exam"><span class="callout-icon">🎯</span><strong>EXAM STRATEGY:</strong> Mechanism-selection answers reward "simplest that meets all requirements." When two options satisfy the functional need, the constraint keywords (reuse, latency, security, team size) break the tie. The most powerful mechanism is rarely the correct answer for a simple scenario.</div>
+
+  <div class="recall">
+    <div class="recall-label">📝 Quick Recall</div>
+    <ul>
+      <li>Filter by: latency, accuracy, context complexity, security, team expertise.</li>
+      <li>Simplest mechanism that meets all requirements wins.</li>
+      <li>Reuse/standardization → MCP; low latency + simple → direct API; decomposable → agent-to-agent.</li>
+      <li>Eliminate over-engineered and constraint-violating options first.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION 45.5 -->
+<!-- ============================================================= -->
+<section id="s5">
+  <h2><span class="num">45.5</span>Progressive Discovery vs Monolithic Context Strategy</h2>
+
+  <div class="def">
+    <div class="def-label">Definition — Progressive Discovery</div>
+    <strong>Progressive discovery</strong> builds context iteratively: the model starts with a minimal prompt and pulls in more context on demand through dynamic tool calls, lazy-loading only what each step needs. Context grows as the task reveals what's relevant.
+  </div>
+  <div class="def">
+    <div class="def-label">Definition — Monolithic Context</div>
+    <strong>Monolithic context</strong> pre-loads everything the model might need up front — full documents, complete instructions, all data — into a single large prompt, then answers in one (or few) shots with a static system prompt.
+  </div>
+
+  <h3>When each strategy is optimal</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Factor</th><th>Progressive Discovery</th><th>Monolithic Context</th></tr></thead>
+    <tbody>
+      <tr><td>Latency profile</td><td>Higher per-task (multiple round-trips) but each call is small</td><td>Single large call; big prefill/TTFT, no round-trips</td></tr>
+      <tr><td>Accuracy profile</td><td>Focused context per step → less distraction on large corpora</td><td>Strong when the full context fits &amp; is all relevant</td></tr>
+      <tr><td>Token cost</td><td>Pays only for context actually needed</td><td>Pays for all pre-loaded tokens every call</td></tr>
+      <tr><td>Best when</td><td>Large/unknown corpus, tools available, unclear which context is needed</td><td>Small, bounded, fully-relevant context; simplicity prized</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout callout-critical"><span class="callout-icon">🔴</span><strong>CRITICAL CONCEPT:</strong> Stuffing a huge monolithic context is not free accuracy. Beyond relevance, irrelevant tokens can dilute attention and increase cost and TTFT. Progressive discovery trades extra round-trips for smaller, sharper context — often better on large corpora.</div>
+
+  <h3>Hybrid approach</h3>
+  <p>Real systems blend both: pre-load stable, always-relevant context (system prompt, core policies, cached prefix) monolithically, and discover volatile or large context progressively via tools/RAG. Prompt caching makes the stable prefix cheap on repeat calls, while progressive tool calls fetch only what each request needs.</p>
+
+  <div class="callout callout-tip"><span class="callout-icon">💡</span><strong>TIP:</strong> Use prompt caching for the monolithic, unchanging portion (system prompt, long shared context) to cut TTFT, and reserve progressive tool calls for per-request, high-variance context. This captures the accuracy of focused context with the latency of a warm cache.</div>
+
+  <h3>ASCII diagram — the two flows</h3>
+  <pre class="ascii-diagram">PROGRESSIVE DISCOVERY FLOW
+┌─────────┐    ┌──────────────┐    ┌─────────────┐
+│  Query  │───▶│ Initial Call │───▶│ Tool Call 1 │
+└─────────┘    └──────────────┘    └──────┬──────┘
+                                          │ result
+                                   ┌──────▼──────┐
+                                   │ Tool Call 2 │
+                                   └──────┬──────┘
+                                          │ result
+                                   ┌──────▼──────┐
+                                   │Final Answer │
+                                   └─────────────┘
+
+MONOLITHIC CONTEXT FLOW
+┌─────────┐   ┌───────────────────────────┐   ┌─────────────┐
+│  Query  │──▶│ Single call: full context │──▶│Final Answer │
+│         │   │ (all docs + instructions) │   │             │
+└─────────┘   └───────────────────────────┘   └─────────────┘
+   one round-trip, large prefill</pre>
+
+  <h3>Performance comparison</h3>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Dimension</th><th>Progressive Discovery</th><th>Monolithic Context</th></tr></thead>
+    <tbody>
+      <tr><td>Tokens used</td><td class="tag-lo">Lower (only what's needed)</td><td class="tag-hi">Higher (all pre-loaded)</td></tr>
+      <tr><td>End-to-end latency</td><td class="tag-med">Higher (sequential round-trips)</td><td class="tag-lo">Lower (one call, if it fits)</td></tr>
+      <tr><td>Accuracy on large corpora</td><td class="tag-lo">Higher (focused context)</td><td class="tag-med">Risk of dilution</td></tr>
+      <tr><td>Cost</td><td class="tag-lo">Lower on average</td><td class="tag-hi">Higher (pays for unused context)</td></tr>
+      <tr><td>Implementation complexity</td><td class="tag-med">Higher (tool loop, state)</td><td class="tag-lo">Lower (single prompt)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout callout-exam"><span class="callout-icon">🎯</span><strong>EXAM STRATEGY:</strong> Scenario keywords decide it. "Large knowledge base / don't know which docs are relevant / cost-sensitive / tools available" → <strong>progressive discovery</strong>. "Small fixed context / need lowest latency / simple one-shot / all context always relevant" → <strong>monolithic</strong>. If the scenario mentions a stable shared prefix reused across many requests → mention <strong>prompt caching + hybrid</strong>.</div>
+
+  <div class="callout callout-warning"><span class="callout-icon">⚠️</span><strong>WARNING:</strong> Progressive discovery adds round-trips — each is sequential latency. For hard real-time single-shot needs it can miss the SLA. Don't reach for it when the context is small and fully known; monolithic is simpler and faster there.</div>
+
+  <div class="recall">
+    <div class="recall-label">📝 Quick Recall</div>
+    <ul>
+      <li>Progressive = lazy, iterative, tool-driven context; lower tokens/cost, higher latency, sharper on big corpora.</li>
+      <li>Monolithic = pre-load everything, one shot; lower latency, higher tokens, dilution risk.</li>
+      <li>Hybrid + prompt caching: monolithic stable prefix + progressive volatile context.</li>
+      <li>Big/unknown corpus → progressive; small/fixed/real-time → monolithic.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION 45.6 -->
+<!-- ============================================================= -->
+<section id="s6">
+  <h2><span class="num">45.6</span>Hands-On: Designing an Integration Architecture</h2>
+
+  <h3>Step-by-step methodology</h3>
+  <ol>
+    <li><strong>Capture requirements</strong> — functional (what it must do), non-functional (latency SLA, accuracy bar, throughput, cost ceiling, security/compliance).</li>
+    <li><strong>Identify constraints</strong> — data residency, existing systems, team skills, budget, deadlines.</li>
+    <li><strong>Choose model class</strong> per task against the accuracy-latency frontier (route easy tasks to small models, hard to large).</li>
+    <li><strong>Choose connection protocol(s)</strong> — MCP for reusable tools/data, direct API for latency-critical paths, agent-to-agent where decomposition helps.</li>
+    <li><strong>Choose context strategy</strong> — monolithic, progressive, or hybrid + prompt caching.</li>
+    <li><strong>Design the data/tool layer</strong> — RAG, tool definitions, permissions, trust boundaries.</li>
+    <li><strong>Add safety &amp; fallback</strong> — timeouts, retries, guardrails, human escalation.</li>
+    <li><strong>Benchmark &amp; justify</strong> — measure the chosen config (per §45.2) and document the tradeoffs.</li>
+  </ol>
+
+  <h3>Template — Architecture Design Document</h3>
+  <pre><code>ARCHITECTURE DESIGN DOCUMENT
+1. Requirements
+   - Functional:            ...
+   - Non-functional (SLA):  latency p95 &lt; ___, accuracy &gt;= ___, cost &lt;= ___
+2. Constraints
+   - Security / compliance / data residency: ...
+   - Team expertise / timeline / budget:     ...
+3. Selected Mechanisms
+   - Model class(es):        ... (per task)
+   - Connection protocol(s): MCP / API / agent-to-agent  (why)
+   - Context strategy:       monolithic / progressive / hybrid (why)
+4. Tradeoff Justification
+   - Chosen point on frontier + metric evidence (TTFT, cost, accuracy)
+   - What was traded away and why it's acceptable
+5. Safety &amp; Ops
+   - Timeouts, retries, guardrails, escalation, monitoring</code></pre>
+
+  <h3>Worked example — real-time customer support agent</h3>
+  <p><strong>Requirements:</strong> interactive latency (streaming, low TTFT), grounded answers from a knowledge base (RAG), ability to take actions via tools (order lookup, refunds) through a reusable connector, and escalation to a human for high-risk or low-confidence cases.</p>
+  <p><strong>Design decisions:</strong></p>
+  <ul>
+    <li><strong>Model:</strong> Sonnet-class default for quality within interactive latency; route trivial intents (greetings, FAQ tags) to a Haiku-class model.</li>
+    <li><strong>Protocol:</strong> MCP server for order/refund tools (reused by web, mobile, and internal apps; centralized permissions) + direct streaming API for the conversational path.</li>
+    <li><strong>Context strategy:</strong> hybrid — monolithic cached system prompt + policies (prompt caching for low TTFT) + progressive RAG retrieval per user question.</li>
+    <li><strong>Safety:</strong> confidence/low-certainty and high-risk (refund &gt; threshold, legal, complaint) → escalate to human; timeouts + retries; refund tool gated behind least-privilege permission.</li>
+  </ul>
+
+  <pre class="ascii-diagram">CUSTOMER SUPPORT AGENT — ARCHITECTURE
+┌──────────┐  stream (SSE)  ┌─────────────────────────┐
+│  User /  │◀──────────────▶│  Claude (Sonnet)         │
+│  Web UI  │                │  cached system prompt +  │
+└──────────┘                │  policies (monolithic)   │
+                            └───┬─────────────┬────────┘
+              progressive RAG ▼               ▼ tool use (MCP)
+                   ┌────────────────┐   ┌──────────────────┐
+                   │  Vector store  │   │  MCP Server       │
+                   │  (knowledge)   │   │  order / refund   │
+                   └────────────────┘   │  (least-priv)     │
+                                        └────────┬─────────┘
+   low confidence / high-risk ─────────▶ ┌───────▼────────┐
+                                         │ Human Escalate │
+                                         └────────────────┘</pre>
+
+  <h3>Pre-deployment architecture review checklist</h3>
+  <ul>
+    <li>☐ Latency SLA validated at p95/p99 under realistic load (not just mean).</li>
+    <li>☐ Accuracy measured on a frozen, representative eval set with CIs.</li>
+    <li>☐ Model routing verified (easy → small, hard → large).</li>
+    <li>☐ Prompt caching configured for the stable prefix; cache-hit TTFT measured.</li>
+    <li>☐ Tool permissions least-privilege; trust boundaries documented.</li>
+    <li>☐ Timeouts, retries, and graceful degradation in place.</li>
+    <li>☐ Human escalation path for low-confidence / high-risk cases.</li>
+    <li>☐ Cost/request modeled at projected volume (incl. batch/caching savings).</li>
+    <li>☐ Observability: log TTFT, total latency, tokens, cost, quality signals.</li>
+    <li>☐ Fallback behavior if a tool/MCP server is unavailable.</li>
+  </ul>
+
+  <div class="callout callout-exam"><span class="callout-icon">🎯</span><strong>EXAM STRATEGY:</strong> For architecture-design scenario questions, structure your answer as <em>requirements → constraints → chosen mechanisms → tradeoff justification</em>. Always name the axis you optimized (latency vs accuracy), the protocol and why, the context strategy and why, and one safety/fallback measure. Answers that only pick a model without justifying protocol, context, and tradeoffs score lower.</div>
+
+  <div class="callout callout-tip"><span class="callout-icon">💡</span><strong>TIP — common question formats &amp; templates:</strong><br>
+  • <em>"Design an architecture for X"</em> → use the 4-part template (requirements → constraints → mechanisms → justification).<br>
+  • <em>"What's wrong with this architecture?"</em> → scan for anti-patterns (over-engineering, wrong axis, no fallback, broad permissions).<br>
+  • <em>"Which change most improves latency/accuracy/cost?"</em> → map the change to the axis via §45.1's matrix.</div>
+
+  <div class="recall">
+    <div class="recall-label">📝 Quick Recall</div>
+    <ul>
+      <li>Design order: requirements → constraints → model → protocol → context strategy → safety → benchmark/justify.</li>
+      <li>Support-agent reference design: Sonnet + routing, MCP tools, hybrid context + caching, human escalation.</li>
+      <li>Review at p95/p99, with frozen evals, least-privilege tools, and fallbacks.</li>
+      <li>Answer scenarios with the 4-part template and always justify the tradeoff.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- GLOSSARY -->
+<!-- ============================================================= -->
+<section id="glossary" class="glossary">
+  <h2><span class="num">§</span>Glossary — Chapter 45 Key Terms</h2>
+  <dl>
+    <dt>Accuracy-Latency Tradeoff</dt><dd>The tension between response correctness/completeness and response speed; configuration choices move both axes.</dd>
+    <dt>Prefill</dt><dd>The phase where the model processes the input prompt; sets Time-To-First-Token. Parallelizable.</dd>
+    <dt>Decode</dt><dd>Autoregressive, token-by-token generation of the output; sequential and usually the dominant latency component.</dd>
+    <dt>TTFT</dt><dd>Time To First Token — latency until the first output token is emitted; key for perceived responsiveness.</dd>
+    <dt>Tokens/sec</dt><dd>Decode throughput; predicts total time for a given output length.</dd>
+    <dt>Streaming (SSE)</dt><dd>Server-Sent Events delivering tokens incrementally; improves perceived, not total, latency.</dd>
+    <dt>Batch API</dt><dd>Asynchronous, high-throughput, lower-cost processing for non-interactive workloads; higher latency.</dd>
+    <dt>Prompt Caching</dt><dd>Reusing a cached prompt prefix to reduce prefill work and TTFT on repeated stable context.</dd>
+    <dt>Extended Thinking</dt><dd>Allocating reasoning tokens before the final answer to raise accuracy on hard tasks, at a latency cost.</dd>
+    <dt>Temperature / Top-p</dt><dd>Sampling parameters controlling output randomness; affect accuracy/consistency, not latency directly.</dd>
+    <dt>MCP</dt><dd>Model Context Protocol — open JSON-RPC client-server standard connecting models to tools, resources, and prompts.</dd>
+    <dt>MCP Host / Client / Server</dt><dd>Host runs clients; each client connects to a server that exposes tools/resources/prompts.</dd>
+    <dt>stdio / Streamable HTTP</dt><dd>The two standard MCP transports — local subprocess and remote HTTP (with SSE) respectively.</dd>
+    <dt>Tools / Resources / Prompts</dt><dd>MCP primitives: invokable functions, readable context, and reusable prompt templates.</dd>
+    <dt>Direct API/CLI</dt><dd>Calling Claude straight through the Messages API/SDK/CLI; lowest overhead, app owns orchestration.</dd>
+    <dt>Agent-to-Agent</dt><dd>Multiple coordinating agents; common orchestrator–subagent pattern with delegation and synthesis.</dd>
+    <dt>Orchestrator–Subagent</dt><dd>Lead agent decomposes and delegates subtasks to specialized workers with isolated context.</dd>
+    <dt>Trust Boundary</dt><dd>The security perimeter between agents/components; enforce least-privilege tool access.</dd>
+    <dt>Progressive Discovery</dt><dd>Iterative, lazy context building via dynamic tool calls; sharper context, more round-trips.</dd>
+    <dt>Monolithic Context</dt><dd>Pre-loading all context into a single large prompt for one-shot answering.</dd>
+    <dt>Efficient Frontier</dt><dd>The curve of maximum accuracy achievable at each latency/cost budget.</dd>
+  </dl>
+</section>
+
+<!-- ============================================================= -->
+<!-- SUMMARY TOP 10 -->
+<!-- ============================================================= -->
+<section id="summary">
+  <h2><span class="num">§</span>Chapter Summary — Top 10 Exam Takeaways</h2>
+  <ol class="summary-list">
+    <li>There is no universally best config — place each workload deliberately on the accuracy-latency frontier for its stated requirement.</li>
+    <li>Output token length is the biggest controllable latency driver; decode is sequential, prefill is parallel.</li>
+    <li>Prompt clarity is the best accuracy-per-token lever; streaming improves perceived (not total) latency.</li>
+    <li>Justify configs with the metric matching the requirement (TTFT for interactive, cost/request at scale) and report percentiles, not just means.</li>
+    <li>Overlapping confidence intervals = a tie; don't over-claim tiny accuracy differences from small eval sets.</li>
+    <li>MCP = open JSON-RPC client-server standard (tools/resources/prompts) over stdio or streamable HTTP — an abstraction choice, not an accuracy lever.</li>
+    <li>Direct API/CLI = lowest overhead, best for simple, latency-critical integrations; agent-to-agent = highest capability &amp; latency for decomposable tasks.</li>
+    <li>Pick the simplest mechanism that meets all requirements; eliminate over-engineered and constraint-violating options first.</li>
+    <li>Progressive discovery suits large/unknown corpora (lower tokens, sharper context); monolithic suits small, fixed, latency-critical context — hybrid + caching often wins.</li>
+    <li>Design architectures as requirements → constraints → mechanisms → tradeoff justification, with least-privilege tools, fallbacks, and human escalation.</li>
+  </ol>
+</section>
+
+<!-- ============================================================= -->
+<!-- PRACTICE QUESTIONS -->
+<!-- ============================================================= -->
+<section id="practice">
+  <h2><span class="num">§</span>Practice Questions</h2>
+  <p style="color:var(--text-dim);">Click each question to reveal the explained answer.</p>
+
+  <details class="pq">
+    <summary>Q1. A user-facing chat feature reports "slow responses." Which change most reliably reduces total latency?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.1</p>
+      <p>A. Increase temperature &nbsp; B. Reduce <code>max_tokens</code> / output length &nbsp; C. Add more few-shot examples &nbsp; D. Switch to the Batch API</p>
+      <p class="correct">Correct: B.</p>
+      <p>Decode is sequential and per-token, so output length is the dominant controllable latency driver. Temperature (A) barely affects latency; more few-shot (C) adds input tokens; Batch API (D) increases latency and is for non-interactive workloads.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q2. An architect claims "Opus is more accurate, so we should use it." Which critique is strongest?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.2</p>
+      <p>A. Opus is never more accurate &nbsp; B. The claim lacks a measured metric tied to the requirement and ignores the latency/cost tradeoff &nbsp; C. Accuracy can't be measured &nbsp; D. Temperature should be raised instead</p>
+      <p class="correct">Correct: B.</p>
+      <p>Data-driven justification names a specific metric on a representative eval set and acknowledges the tradeoff. Blanket "more accurate" with no evidence or cost/latency consideration is exactly the weak pattern the exam flags.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q3. You need a database connector that will be reused by web, mobile, and internal tools, with centralized permissions. Which mechanism?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.3 / §45.4</p>
+      <p>A. Direct API inline tool use &nbsp; B. MCP &nbsp; C. Agent-to-agent &nbsp; D. Batch API</p>
+      <p class="correct">Correct: B (MCP).</p>
+      <p>"Reused by multiple apps" + "centralized permissions" + "standardized connector" are MCP keywords — write the server once, reuse across hosts. Inline API tool use (A) would duplicate code per app.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q4. ⚠️ Trap: "Connect Claude to your CRM database." Both direct API tool use and MCP appear valid. What breaks the tie?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: Scenario · §45.4</p>
+      <p class="correct">Answer: The qualifying modifiers.</p>
+      <p>If the scenario says "reused by many teams / standardized / auditable permissions" → MCP. If it says "single service, lowest latency, simplest to ship" → direct API. Read the modifiers around the verb, not just "connect to a database." Choosing the more powerful option by default is the trap.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q5. A research assistant must analyze hundreds of documents in parallel with specialized subtasks. Which pattern fits best?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.3</p>
+      <p>A. Monolithic single call &nbsp; B. Direct API single agent &nbsp; C. Agent-to-agent (orchestrator–subagents) &nbsp; D. Batch API only</p>
+      <p class="correct">Correct: C.</p>
+      <p>"Parallel," "specialized subtasks," and "many documents" signal orchestrator–subagent decomposition with isolated contexts. Capability outweighs the higher latency here.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q6. Your system re-sends the same 8k-token policy prompt on every request. Which change most reduces TTFT without hurting accuracy?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.1 / §45.5</p>
+      <p>A. Lower temperature &nbsp; B. Enable prompt caching for the stable prefix &nbsp; C. Increase <code>max_tokens</code> &nbsp; D. Switch to agent-to-agent</p>
+      <p class="correct">Correct: B.</p>
+      <p>A stable, repeated prefix is the ideal prompt-caching target — cache hits cut prefill work and TTFT with no accuracy change. The other options don't address the repeated-prefix cost.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q7. You have a very large, unfamiliar knowledge base and don't know which documents are relevant per query, and cost matters. Context strategy?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: Scenario · §45.5</p>
+      <p class="correct">Answer: Progressive discovery (with RAG).</p>
+      <p>Lazy, iterative retrieval loads only the context each step needs — lower tokens/cost and sharper context on a large corpus. Monolithic pre-loading would be costly and risk attention dilution.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q8. Which statement about streaming is correct?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.1</p>
+      <p>A. Streaming reduces total latency &nbsp; B. Streaming improves perceived latency but not total time &nbsp; C. Streaming increases accuracy &nbsp; D. Streaming replaces the need for caching</p>
+      <p class="correct">Correct: B.</p>
+      <p>Tokens are still decoded sequentially; the total wall-clock time is unchanged. Streaming just surfaces tokens as they're produced, improving responsiveness. A common exam distractor claims it cuts total latency.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q9. For a high-volume, non-interactive ticket-classification job where cost matters most, which combination is best?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.2</p>
+      <p>A. Opus + streaming &nbsp; B. Haiku-class + Batch API + temperature 0.0 &nbsp; C. Agent-to-agent + Opus &nbsp; D. Sonnet + extended thinking</p>
+      <p class="correct">Correct: B.</p>
+      <p>Classification is easy, so a small model preserves accuracy; the Batch API cuts cost for async work; temperature 0.0 maximizes consistency. The others over-serve an easy task and raise cost/latency needlessly.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q10. During architecture review, latency looks fine on average but users still complain. What did the review most likely miss?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: Scenario · §45.2 / §45.6</p>
+      <p class="correct">Answer: Tail latency (p95/p99).</p>
+      <p>A good mean can hide a bad tail. Real user experience and SLAs are governed by high percentiles, so the review should validate p95/p99 under realistic load, not just the average.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q11. Which is an anti-pattern in integration mechanism selection?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: MCQ · §45.4</p>
+      <p>A. Direct API for a simple latency-critical call &nbsp; B. MCP for a reusable multi-app connector &nbsp; C. Agent-to-agent for a single trivial tool call &nbsp; D. Hybrid context + caching for a repeated prefix</p>
+      <p class="correct">Correct: C.</p>
+      <p>Using a multi-agent orchestration for one trivial tool call adds latency, cost, and coordination complexity with no benefit — the classic over-engineering anti-pattern. The others are appropriate matches.</p>
+    </div>
+  </details>
+
+  <details class="pq">
+    <summary>Q12. A medical-summary feature must be highly accurate and can tolerate a few seconds of latency. Best configuration direction?</summary>
+    <div class="answer">
+      <p class="q-meta">Type: Scenario · §45.1</p>
+      <p class="correct">Answer: Accuracy-first.</p>
+      <p>"Medical" + "highly accurate" + latency-tolerant signal accuracy optimization: larger model class, temperature ≈ 0.0, structured output, possibly extended thinking, with quality validated on a representative eval set. Latency is a secondary constraint here.</p>
+    </div>
+  </details>
+</section>
+
+</div><!-- /wrap -->
+
+<!-- ============================================================= -->
+<!-- FOOTER -->
+<!-- ============================================================= -->
+<footer>
+  <div class="wrap">
+    <p><strong>Chapter 45 · Accuracy-Latency Tradeoffs &amp; Integration Patterns</strong></p>
+    <p>Claude Certified Architect — Foundations &amp; Professional · Study Notes <span class="divider">|</span> Self-contained HTML · dark-professional theme</p>
+    <p style="font-size:12px;">Latency figures are described qualitatively; verify current model/API specifics against Anthropic's official documentation before exam day.</p>
+  </div>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 6 — Task Decomposition Strategies for Complex Workflows</title>
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     THEME SYSTEM
+     ═══════════════════════════════════════════════════════════════ */
+  :root {
+    --c-bg:           #f8f9fb;
+    --c-surface:      #ffffff;
+    --c-surface-alt:  #f0f2f5;
+    --c-border:       #e2e5ea;
+    --c-border-light: #eef0f3;
+    --c-text:         #1a1d23;
+    --c-text-sec:     #4a5568;
+    --c-text-muted:   #8492a6;
+    --c-primary:      #2563eb;
+    --c-primary-bg:   #eff6ff;
+    --c-primary-text: #1e40af;
+    --c-accent-1:     #7c3aed;
+    --c-accent-1-bg:  #f5f3ff;
+    --c-accent-2:     #0891b2;
+    --c-accent-2-bg:  #ecfeff;
+    --c-accent-3:     #059669;
+    --c-accent-3-bg:  #ecfdf5;
+    --c-accent-4:     #d97706;
+    --c-accent-4-bg:  #fffbeb;
+    --c-accent-5:     #dc2626;
+    --c-accent-5-bg:  #fef2f2;
+    --c-success:      #16a34a;
+    --c-success-bg:   #f0fdf4;
+    --c-warning:      #d97706;
+    --c-warning-bg:   #fffbeb;
+    --c-error:        #dc2626;
+    --c-error-bg:     #fef2f2;
+    --c-info:         #2563eb;
+    --c-info-bg:      #eff6ff;
+    --c-code-bg:      #f1f5f9;
+    --c-shadow:       rgba(0,0,0,0.06);
+    --font-sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono:      'JetBrains Mono', 'SF Mono', Consolas, 'Liberation Mono', monospace;
+    --radius-sm:      6px;
+    --radius-md:      10px;
+    --radius-lg:      16px;
+  }
+
+  [data-theme="dark"] {
+    --c-bg:           #0f1117;
+    --c-surface:      #1a1d27;
+    --c-surface-alt:  #22252f;
+    --c-border:       #2d313d;
+    --c-border-light: #252830;
+    --c-text:         #e8eaed;
+    --c-text-sec:     #a0aec0;
+    --c-text-muted:   #6b7a90;
+    --c-primary:      #60a5fa;
+    --c-primary-bg:   #1e293b;
+    --c-primary-text: #93bbfc;
+    --c-accent-1:     #a78bfa;
+    --c-accent-1-bg:  #1e1b2e;
+    --c-accent-2:     #22d3ee;
+    --c-accent-2-bg:  #132a2e;
+    --c-accent-3:     #34d399;
+    --c-accent-3-bg:  #0f2a20;
+    --c-accent-4:     #fbbf24;
+    --c-accent-4-bg:  #2a2210;
+    --c-accent-5:     #f87171;
+    --c-accent-5-bg:  #2a1515;
+    --c-success:      #4ade80;
+    --c-success-bg:   #0f2a1a;
+    --c-warning:      #fbbf24;
+    --c-warning-bg:   #2a2210;
+    --c-error:        #f87171;
+    --c-error-bg:     #2a1515;
+    --c-info:         #60a5fa;
+    --c-info-bg:      #1e293b;
+    --c-code-bg:      #1e2130;
+    --c-shadow:       rgba(0,0,0,0.3);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     BASE RESET & TYPOGRAPHY
+     ═══════════════════════════════════════════════════════════════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--c-bg);
+    color: var(--c-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     LAYOUT
+     ═══════════════════════════════════════════════════════════════ */
+  .wrapper { max-width: 920px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════════════════════════════ */
+  .header {
+    text-align: center;
+    padding: 48px 24px 40px;
+    border-bottom: 1px solid var(--c-border);
+    margin-bottom: 40px;
+  }
+  .header .exam-badge {
+    display: inline-block;
+    background: var(--c-primary-bg);
+    color: var(--c-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .header .chapter-label {
+    font-size: 1.1rem;
+    color: var(--c-text-muted);
+    font-weight: 500;
+  }
+
+  /* Meta bar */
+  .meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--c-surface-alt);
+    border: 1px solid var(--c-border-light);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: var(--c-text-sec);
+    font-weight: 500;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     OVERVIEW CARD
+     ═══════════════════════════════════════════════════════════════ */
+  .overview-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border-light);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px var(--c-shadow);
+  }
+  .overview-card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--c-text);
+  }
+  .overview-card p {
+    color: var(--c-text-sec);
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+  .overview-card ol {
+    padding-left: 20px;
+    color: var(--c-text-sec);
+    font-size: 0.93rem;
+  }
+  .overview-card ol li { margin-bottom: 6px; }
+  .overview-card ol li::marker { color: var(--c-primary); font-weight: 700; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════════════════════════ */
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--c-bg);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--c-border-light);
+  }
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface);
+    color: var(--c-text-sec);
+  }
+  .nav-link:hover {
+    border-color: var(--c-primary);
+    color: var(--c-primary);
+    background: var(--c-primary-bg);
+  }
+  .nav-link .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 200;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 100px;
+    padding: 8px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px var(--c-shadow);
+    transition: all 0.15s ease;
+  }
+  .theme-toggle:hover { transform: scale(1.08); }
+
+  /* ═══════════════════════════════════════════════════════════════
+     SECTION CONTAINERS
+     ═══════════════════════════════════════════════════════════════ */
+  .section {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border-light);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px var(--c-shadow);
+    scroll-margin-top: 70px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--c-border-light);
+  }
+  .section-badge {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    color: #fff;
+  }
+  .section-header h2 {
+    font-size: 1.35rem;
+    font-weight: 750;
+    line-height: 1.25;
+  }
+
+  /* Section colors */
+  .sec-1 .section-badge { background: var(--c-primary); }
+  .sec-1 .section-header h2 { color: var(--c-primary); }
+  .sec-2 .section-badge { background: var(--c-accent-1); }
+  .sec-2 .section-header h2 { color: var(--c-accent-1); }
+  .sec-3 .section-badge { background: var(--c-accent-2); }
+  .sec-3 .section-header h2 { color: var(--c-accent-2); }
+  .sec-4 .section-badge { background: var(--c-accent-3); }
+  .sec-4 .section-header h2 { color: var(--c-accent-3); }
+  .sec-5 .section-badge { background: var(--c-accent-4); }
+  .sec-5 .section-header h2 { color: var(--c-accent-4); }
+
+  /* ═══════════════════════════════════════════════════════════════
+     CONTENT BLOCKS
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* Block label */
+  .block-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+  .block-label.concept { background: var(--c-info-bg); color: var(--c-primary); }
+  .block-label.glossary { background: var(--c-accent-1-bg); color: var(--c-accent-1); }
+  .block-label.viz { background: var(--c-accent-2-bg); color: var(--c-accent-2); }
+  .block-label.tips { background: var(--c-accent-3-bg); color: var(--c-accent-3); }
+  .block-label.exam { background: var(--c-accent-4-bg); color: var(--c-accent-4); }
+  .block-label.check { background: var(--c-success-bg); color: var(--c-success); }
+
+  .content-block { margin-bottom: 28px; }
+  .content-block p { color: var(--c-text-sec); font-size: 0.95rem; margin-bottom: 12px; }
+  .content-block p strong { color: var(--c-text); }
+
+  /* Glossary table */
+  .glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-top: 8px;
+  }
+  .glossary-table th {
+    text-align: left;
+    color: var(--c-text-muted);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--c-border);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .glossary-table td {
+    padding: 10px 12px;
+    color: var(--c-text-sec);
+    border-bottom: 1px solid var(--c-border-light);
+    vertical-align: top;
+  }
+  .glossary-table td:first-child {
+    color: var(--c-text);
+    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .glossary-table tr:hover td { background: var(--c-surface-alt); }
+
+  /* Visualization box */
+  .viz-box {
+    background: var(--c-code-bg);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    overflow-x: auto;
+    margin-top: 8px;
+  }
+  .viz-box pre {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--c-text);
+    white-space: pre;
+    margin: 0;
+  }
+  .viz-caption {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  /* Tips list */
+  .tips-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tips-list li {
+    position: relative;
+    padding: 12px 16px 12px 40px;
+    background: var(--c-accent-3-bg);
+    border-left: 3px solid var(--c-accent-3);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--c-text-sec);
+  }
+  .tips-list li::before {
+    content: '💡';
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+
+  /* Exam strategy box */
+  .exam-box {
+    background: var(--c-accent-4-bg);
+    border: 1px solid var(--c-accent-4);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-top: 8px;
+  }
+  .exam-box .exam-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  .exam-box .exam-label {
+    font-weight: 700;
+    color: var(--c-accent-4);
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+  .exam-box .exam-value { color: var(--c-text-sec); }
+
+  /* Quick-check details/summary */
+  details {
+    border: 1px solid var(--c-border-light);
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  details summary {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--c-text);
+    background: var(--c-surface-alt);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before {
+    content: '▶';
+    font-size: 10px;
+    color: var(--c-text-muted);
+    transition: transform 0.2s ease;
+  }
+  details[open] summary::before { transform: rotate(90deg); }
+  details .answer {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: var(--c-text-sec);
+    border-top: 1px solid var(--c-border-light);
+    background: var(--c-surface);
+  }
+
+  /* Code inline */
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--c-code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--c-primary-text);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════ */
+  .footer-section {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border-light);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px var(--c-shadow);
+  }
+  .footer-section h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  .summary-table th {
+    text-align: left;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--c-text-muted);
+    border-bottom: 2px solid var(--c-border);
+  }
+  .summary-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--c-border-light);
+    color: var(--c-text-sec);
+  }
+  .summary-table td:first-child { font-weight: 600; color: var(--c-text); }
+  .summary-table tr:hover td { background: var(--c-surface-alt); }
+
+  /* Cross-reference diagram */
+  .xref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .xref-node {
+    text-align: center;
+    padding: 14px 12px;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 2px solid;
+  }
+
+  .mnemonic-box {
+    background: linear-gradient(135deg, var(--c-primary-bg), var(--c-accent-1-bg));
+    border: 2px dashed var(--c-primary);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .mnemonic-box .mnemonic-word {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    background: linear-gradient(135deg, var(--c-primary), var(--c-accent-1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .mnemonic-box .mnemonic-breakdown {
+    font-size: 0.9rem;
+    color: var(--c-text-sec);
+    line-height: 1.8;
+  }
+  .mnemonic-box .mnemonic-letter {
+    font-weight: 800;
+    color: var(--c-primary);
+    -webkit-text-fill-color: initial;
+  }
+
+  /* Flowchart styles */
+  .flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 0;
+  }
+  .flow-box {
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 200px;
+  }
+  .flow-arrow {
+    color: var(--c-text-muted);
+    font-size: 1.2rem;
+  }
+  .flow-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Worked example */
+  .step-card {
+    background: var(--c-surface-alt);
+    border-left: 4px solid var(--c-accent-4);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .step-card .step-num {
+    font-weight: 800;
+    font-size: 0.8rem;
+    color: var(--c-accent-4);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .step-card .step-title {
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  .step-card p {
+    color: var(--c-text-sec);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     PRINT STYLES
+     ═══════════════════════════════════════════════════════════════ */
+  @media print {
+    .theme-toggle, .nav-bar { display: none !important; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .wrapper { max-width: 100%; padding: 0; }
+    .section, .overview-card, .footer-section {
+      break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #ccc;
+    }
+    details { open: true; }
+    details[open] .answer { display: block !important; }
+    a { color: #000; text-decoration: none; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════════════════════════════ */
+  @media (max-width: 640px) {
+    .wrapper { padding: 16px 12px 60px; }
+    .section { padding: 24px 18px; }
+    .header { padding: 32px 16px 28px; }
+    .exam-box .exam-row { flex-direction: column; gap: 2px; }
+    .exam-box .exam-label { min-width: auto; }
+    .nav-bar { gap: 6px; }
+    .nav-link { font-size: 12px; padding: 5px 10px; }
+    .flow-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" id="themeToggle" title="Toggle dark/light theme">🌙</button>
+
+<div class="wrapper">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════════════════════════════ -->
+<header class="header">
+  <div class="exam-badge">Claude Certified Architect — Foundations &amp; Professional</div>
+  <div class="chapter-label">Chapter 6</div>
+  <h1>Task Decomposition Strategies<br>for Complex Workflows</h1>
+  <div class="meta-bar">
+    <span class="meta-pill">⏱ Estimated Study Time: 75–90 min</span>
+    <span class="meta-pill">📈 Difficulty: Intermediate–Advanced</span>
+    <span class="meta-pill">⚖️ Exam Weight: ~15%</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     OVERVIEW & OBJECTIVES
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="overview-card">
+  <h2>📋 Chapter Overview</h2>
+  <p>
+    This chapter covers the architect's core competency: <strong>knowing when and how to break complex tasks into manageable units of work</strong> that Claude can execute reliably. Task decomposition is the bridge between a vague user intent and a structured agentic pipeline. You will learn to assess complexity, choose the right decomposition strategy (top-down or bottom-up), design iterative refinement loops that improve subagent outputs, and balance breadth against depth when decomposing research-oriented workflows. The chapter concludes with a fully worked hands-on example that ties all concepts together.
+  </p>
+  <p>
+    Mastering these strategies is essential because Claude's effectiveness scales directly with how well tasks are scoped. An overly broad prompt produces shallow results; an overly narrow one creates coordination overhead. The architect's job is to find the decomposition that maximizes output quality while minimizing token cost and latency.
+  </p>
+  <h2 style="margin-top: 20px;">🎯 Learning Objectives</h2>
+  <ol>
+    <li>Apply structured complexity assessment to determine whether a task requires decomposition</li>
+    <li>Distinguish between top-down and bottom-up decomposition and select the correct strategy for a given scenario</li>
+    <li>Design iterative refinement loops with explicit convergence criteria for subagent outputs</li>
+    <li>Evaluate breadth vs. depth tradeoffs when decomposing research and analysis tasks</li>
+    <li>Decompose a complex, real-world research query into a fully specified execution plan with subagent assignments</li>
+    <li>Identify common exam traps related to over-decomposition, premature optimization, and misapplied strategies</li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAV BAR
+     ═══════════════════════════════════════════════════════════════ -->
+<nav class="nav-bar" id="navBar">
+  <a href="#s6-1" class="nav-link"><span class="dot" style="background:var(--c-primary)"></span>6.1 Complexity</a>
+  <a href="#s6-2" class="nav-link"><span class="dot" style="background:var(--c-accent-1)"></span>6.2 Top-Down vs Bottom-Up</a>
+  <a href="#s6-3" class="nav-link"><span class="dot" style="background:var(--c-accent-2)"></span>6.3 Iterative Refinement</a>
+  <a href="#s6-4" class="nav-link"><span class="dot" style="background:var(--c-accent-3)"></span>6.4 Breadth vs Depth</a>
+  <a href="#s6-5" class="nav-link"><span class="dot" style="background:var(--c-accent-4)"></span>6.5 Hands-On</a>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 6.1
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section sec-1" id="s6-1">
+  <div class="section-header">
+    <div class="section-badge">6.1</div>
+    <h2>Complexity Assessment: When to Decompose</h2>
+  </div>
+
+  <!-- Core Concept -->
+  <div class="content-block">
+    <div class="block-label concept">📘 Core Concept</div>
+    <p>
+      Not every task needs decomposition. An architect's first skill is <strong>recognizing the inflection point</strong> where a single Claude call becomes insufficient and a multi-step workflow becomes necessary. Decomposing too early adds unnecessary coordination overhead—extra prompts, latency, token cost, and potential for propagation errors between steps. Decomposing too late produces outputs that are shallow, incoherent, or incomplete because a single context window cannot hold all the required reasoning.
+    </p>
+    <p>
+      Complexity assessment is a structured evaluation of <strong>four dimensions</strong>: cognitive breadth (how many distinct knowledge domains does the task span?), depth of reasoning (how many sequential inference steps are required?), output length and structure (will the output exceed what a single response can produce with quality?), and dependency structure (are there subtasks whose inputs depend on the outputs of other subtasks?).
+    </p>
+    <p>
+      When evaluating a task, an architect should apply the <strong>"single-prompt test"</strong>: mentally draft the prompt you would send to Claude for this task. If the prompt requires more than two distinct instruction blocks (e.g., "first do X, then analyze Y, then format as Z, then validate against W"), the task likely benefits from decomposition. Another reliable heuristic is the <strong>context budget check</strong>: estimate how much of the context window the instructions, reference data, and expected output would consume. If the total approaches 60–70% of the model's context window, decomposition becomes necessary to ensure quality—Claude's output quality degrades when operating near context limits because it must allocate attention across too many competing objectives.
+    </p>
+    <p>
+      The key output of complexity assessment is a <strong>decomposition decision</strong>: either "proceed with a single call" (with optional output format constraints) or "decompose into N subtasks with specified dependencies." This decision should be documented in the system architecture and revisited as task requirements evolve.
+    </p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="content-block">
+    <div class="block-label glossary">🔑 Key Terms</div>
+    <table class="glossary-table">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td>Cognitive Breadth</td><td>The number of distinct knowledge domains or skill areas a task requires. Higher breadth increases the risk of shallow treatment in a single pass.</td></tr>
+        <tr><td>Reasoning Depth</td><td>The number of sequential, dependent inference steps needed to reach a conclusion. Deep reasoning chains are fragile in single calls.</td></tr>
+        <tr><td>Context Budget</td><td>The proportion of the model's context window consumed by the prompt, reference material, and expected output combined.</td></tr>
+        <tr><td>Single-Prompt Test</td><td>A heuristic: if the ideal prompt would require more than two distinct instruction blocks, decomposition is likely warranted.</td></tr>
+        <tr><td>Decomposition Decision</td><td>The documented architectural choice to proceed with a single call or to split into N subtasks with specified dependencies.</td></tr>
+        <tr><td>Coordination Overhead</td><td>The additional latency, token cost, and error propagation risk introduced by splitting a task into multiple steps.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Visualization -->
+  <div class="content-block">
+    <div class="block-label viz">📊 Complexity Assessment Decision Tree</div>
+    <div class="viz-box">
+<pre>                    ┌──────────────────────────┐
+                    │    INCOMING TASK REQUEST  │
+                    └────────────┬─────────────┘
+                                 ▼
+                    ┌──────────────────────────┐
+                    │ Spans ≥ 3 knowledge      │──── YES ──→ ⚠️ DECOMPOSE
+                    │ domains?                 │
+                    └────────────┬─────────────┘
+                                 │ NO
+                                 ▼
+                    ┌──────────────────────────┐
+                    │ Requires ≥ 4 sequential  │──── YES ──→ ⚠️ DECOMPOSE
+                    │ reasoning steps?         │
+                    └────────────┬─────────────┘
+                                 │ NO
+                                 ▼
+                    ┌──────────────────────────┐
+                    │ Context budget &gt; 60%     │──── YES ──→ ⚠️ DECOMPOSE
+                    │ of window?               │
+                    └────────────┬─────────────┘
+                                 │ NO
+                                 ▼
+                    ┌──────────────────────────┐
+                    │ Has subtask dependencies  │──── YES ──→ ⚠️ DECOMPOSE
+                    │ (output A → input B)?    │
+                    └────────────┬─────────────┘
+                                 │ NO
+                                 ▼
+                    ┌──────────────────────────┐
+                    │  ✅  SINGLE CALL IS OK    │
+                    └──────────────────────────┘
+</pre>
+    </div>
+    <div class="viz-caption">Figure 6.1 — Four-gate decision tree for complexity assessment. Any YES gate triggers decomposition.</div>
+  </div>
+
+  <!-- Tips -->
+  <div class="content-block">
+    <div class="block-label tips">💡 Tips &amp; Tricks</div>
+    <ul class="tips-list">
+      <li><strong>The 60% Rule:</strong> When context usage exceeds 60% of the window (instructions + data + expected output), Claude's quality drops measurably. This is a hard trigger for decomposition, not a guideline—treat it as a constraint.</li>
+      <li><strong>Watch for hidden domains:</strong> A seemingly simple "write a market analysis" task actually spans data interpretation, competitive intelligence, financial modeling, and business writing—four domains. List the required skills explicitly before making your decomposition decision.</li>
+      <li><strong>Cost the coordination overhead:</strong> Before decomposing, estimate the extra token cost and latency. If the overhead exceeds 30% of a single-call cost but quality improvement is marginal, stay single-call and add output constraints instead.</li>
+      <li><strong>Document the decision, not just the result:</strong> In production architectures, record <em>why</em> you chose to decompose (or not). When requirements change, this record tells you whether the original decision still holds.</li>
+      <li><strong>Prototype before architecting:</strong> Run the task as a single prompt first. If the output is 80%+ acceptable, optimize the prompt rather than decomposing. Decomposition is a structural change; prompt refinement is a tuning change.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="content-block">
+    <div class="block-label exam">🎯 Exam Strategy</div>
+    <div class="exam-box">
+      <div class="exam-row">
+        <span class="exam-label">Question Type:</span>
+        <span class="exam-value">Scenario-based MCQ and "choose the BEST action" questions</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Likely Stem:</span>
+        <span class="exam-value">"An architect receives a request to build X. Which factor MOST strongly indicates that task decomposition is required?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Common Trap:</span>
+        <span class="exam-value">Confusing "task is complex" with "task requires decomposition." Complexity alone is insufficient—the exam tests whether you can identify which <em>specific dimension</em> (breadth, depth, context budget, dependencies) triggers the decision.</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Answer Framework:</span>
+        <span class="exam-value"><strong>GATE check:</strong> Identify which of the four gates applies → state the threshold → conclude with the decomposition decision. Answer choices that skip the gate check and jump to a strategy are distractors.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick-Check Questions -->
+  <div class="content-block">
+    <div class="block-label check">✅ Quick-Check Questions</div>
+    <details>
+      <summary>Q1: A task requires Claude to analyze financial data, write a narrative summary, and produce a formatted HTML report. Does this require decomposition?</summary>
+      <div class="answer"><strong>Not necessarily.</strong> While the task has three sub-objectives, they form a single output pipeline (analyze → narrate → format) with low cognitive breadth overlap. Apply the context budget check: if all reference data, instructions, and expected output fit within 60% of the context window, a well-structured single prompt with clear section instructions can handle this. Decompose only if the financial data alone consumes a large portion of the context, or if the formatting step requires specialized tooling (like code execution).</div>
+    </details>
+    <details>
+      <summary>Q2: What distinguishes "reasoning depth" from "cognitive breadth" in complexity assessment?</summary>
+      <div class="answer"><strong>Reasoning depth</strong> measures the length of the inference chain (Step A's conclusion feeds Step B's premise, which feeds Step C). <strong>Cognitive breadth</strong> measures the number of parallel knowledge domains required (e.g., law + medicine + statistics). A task can be deep but narrow (multi-step mathematical proof) or broad but shallow (summarize documents from five departments). Each dimension independently triggers decomposition at its own threshold.</div>
+    </details>
+    <details>
+      <summary>Q3: Why is 60% of the context window used as the threshold rather than, say, 90%?</summary>
+      <div class="answer">Claude's output quality degrades well before the hard context limit because the model must allocate attention across instructions, reference data, in-progress reasoning, and the output itself. At 60%, there is still sufficient "headroom" for the model to maintain coherent reasoning and generate structured output. Beyond 60%, the model increasingly drops details, shortens reasoning chains, and produces less accurate summaries. The 60% figure is an empirically derived guideline for maintaining high-quality output, not a theoretical limit.</div>
+    </details>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 6.2
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section sec-2" id="s6-2">
+  <div class="section-header">
+    <div class="section-badge">6.2</div>
+    <h2>Top-Down vs Bottom-Up Decomposition</h2>
+  </div>
+
+  <!-- Core Concept -->
+  <div class="content-block">
+    <div class="block-label concept">📘 Core Concept</div>
+    <p>
+      Once you have decided to decompose, the next question is <strong>direction of decomposition</strong>. Two fundamental strategies exist, each suited to different scenarios. <strong>Top-down decomposition</strong> starts from the high-level goal and recursively breaks it into smaller subgoals until each subgoal is simple enough for a single Claude call. <strong>Bottom-up decomposition</strong> starts from known atomic capabilities—things Claude can do well in a single call—and composes them into a larger workflow that achieves the overall objective.
+    </p>
+    <p>
+      Top-down decomposition is the natural choice when the <strong>goal is well-defined</strong> but the path to achieving it is unclear. For example, "produce a competitive analysis report for Company X" has a clear deliverable, but the architect must decide how to structure the research, analysis, and formatting steps. The architect starts with the final output and works backward: what sections does the report need? What data feeds each section? What analysis produces that data? Each question yields a subtask.
+    </p>
+    <p>
+      Bottom-up decomposition excels when the <strong>capabilities are well-understood</strong> but the goal is emergent or loosely specified. For example, "build a workflow that helps users understand their codebase" is vague, but the architect knows Claude can summarize files, extract function signatures, generate dependency graphs, and answer questions about code. The architect composes these known capabilities into a pipeline that achieves the broad objective. Bottom-up is also the preferred strategy when integrating Claude into existing tool chains where each tool's input/output contract is fixed.
+    </p>
+    <p>
+      In practice, most production architectures use a <strong>hybrid approach</strong>: top-down for the overall structure (defining the workflow stages), then bottom-up within each stage (selecting and composing specific Claude capabilities to fulfill that stage). The exam tests your ability to identify which strategy is primary for a given scenario and to recognize when hybrid is the correct answer.
+    </p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="content-block">
+    <div class="block-label glossary">🔑 Key Terms</div>
+    <table class="glossary-table">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td>Top-Down</td><td>Decomposition starting from the goal, recursively splitting into subgoals until each is atomic. Best when the deliverable is clearly defined.</td></tr>
+        <tr><td>Bottom-Up</td><td>Decomposition starting from known atomic capabilities, composing them into progressively larger functional units. Best when capabilities are fixed.</td></tr>
+        <tr><td>Hybrid</td><td>Using top-down for the macro workflow structure and bottom-up for the micro capability selection within each stage.</td></tr>
+        <tr><td>Atomic Task</td><td>A task simple enough to be completed in a single Claude call with high reliability and no further splitting needed.</td></tr>
+        <tr><td>Recursive Splitting</td><td>The process of taking a non-atomic task and dividing it into two or more subtasks, repeating until all subtasks are atomic.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Visualization -->
+  <div class="content-block">
+    <div class="block-label viz">📊 Side-by-Side Comparison</div>
+    <div class="viz-box">
+<pre>  TOP-DOWN DECOMPOSITION                    BOTTOM-UP DECOMPOSITION
+  ══════════════════════                    ═══════════════════════
+
+    ┌─────────────────┐                     ┌──────┐  ┌──────┐  ┌──────┐
+    │  COMPLEX GOAL   │                     │Task A│  │Task B│  │Task C│
+    └────────┬────────┘                     └──┬───┘  └──┬───┘  └──┬───┘
+             │                                 │         │         │
+     ┌───────┴───────┐                      ┌──┴─────────┴──┐     │
+     │               │                      │   Module X    │     │
+  ┌──┴──┐        ┌───┴──┐                   └───────┬───────┘     │
+  │Sub 1│        │Sub 2 │                           │             │
+  └──┬──┘        └──┬───┘                    ┌──────┴─────────────┴──┐
+     │              │                        │     Module Y          │
+  ┌──┴──┐   ┌──────┼──────┐                 └──────────┬────────────┘
+  │Leaf │   │      │      │                            │
+  │  A  │  ┌┴──┐ ┌┴──┐ ┌─┴─┐                ┌────────┴────────┐
+  └─────┘  │L.B│ │L.C│ │L.D│                │ INTEGRATED GOAL │
+           └───┘ └───┘ └───┘                └─────────────────┘
+
+  Direction: Goal → Subtasks → Leaves       Direction: Atoms → Modules → Goal
+  When: Goal is clear, path is unclear      When: Capabilities are known, goal is loose
+  Risk: Over-decomposition                  Risk: Missing coverage
+</pre>
+    </div>
+    <div class="viz-caption">Figure 6.2 — Top-down works from the goal downward; bottom-up composes from capabilities upward.</div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="content-block" style="margin-top: 20px;">
+    <table class="glossary-table">
+      <thead><tr><th>Dimension</th><th>Top-Down</th><th>Bottom-Up</th></tr></thead>
+      <tbody>
+        <tr><td>Starting Point</td><td>Well-defined goal or deliverable</td><td>Known capabilities / tool APIs</td></tr>
+        <tr><td>Best For</td><td>Report generation, structured research, compliance workflows</td><td>Tool integration, capability composition, API orchestration</td></tr>
+        <tr><td>Primary Risk</td><td>Over-decomposition (too many tiny subtasks)</td><td>Coverage gaps (assembled pipeline misses requirements)</td></tr>
+        <tr><td>Dependency Handling</td><td>Naturally captures sequential dependencies</td><td>Must explicitly design inter-module contracts</td></tr>
+        <tr><td>Cost Profile</td><td>Higher upfront design cost, lower runtime surprises</td><td>Lower upfront cost, higher risk of rework</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tips -->
+  <div class="content-block">
+    <div class="block-label tips">💡 Tips &amp; Tricks</div>
+    <ul class="tips-list">
+      <li><strong>Default to top-down for exam scenarios:</strong> When the question gives you a specific deliverable (report, analysis, plan), top-down is almost always the primary strategy. The exam uses "vague goal + known tools" as the signal for bottom-up.</li>
+      <li><strong>The "leaf test" for top-down:</strong> Stop recursing when a subtask can be described in one sentence and executed reliably with a single prompt. If you need a paragraph to describe a leaf task, it is not atomic yet.</li>
+      <li><strong>Bottom-up guardrail:</strong> After composing a bottom-up pipeline, run a "coverage check" by comparing the pipeline outputs against the stated goal's requirements. Each requirement should map to at least one module. Missing mappings reveal gaps.</li>
+      <li><strong>Hybrid is usually the real answer:</strong> When the exam offers both top-down and bottom-up as answer choices alongside hybrid, and the scenario involves both a clear goal and existing tooling, choose hybrid. The exam rewards nuanced over absolute answers.</li>
+      <li><strong>Watch for the over-decomposition trap:</strong> If your decomposition results in subtasks that are individually trivial (e.g., "extract the title from a document"), you have gone too far. Merge trivial adjacent subtasks into a single call.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="content-block">
+    <div class="block-label exam">🎯 Exam Strategy</div>
+    <div class="exam-box">
+      <div class="exam-row">
+        <span class="exam-label">Question Type:</span>
+        <span class="exam-value">Scenario-based MCQ, "which approach is MOST appropriate?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Likely Stem:</span>
+        <span class="exam-value">"An architect is designing a pipeline for X. The team already has [tools/capabilities]. Which decomposition approach is MOST appropriate?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Common Trap:</span>
+        <span class="exam-value">Selecting bottom-up when the scenario specifies a clear deliverable but mentions existing tools. The mention of tools does not override a defined goal—top-down (or hybrid) is still primary. Bottom-up is only primary when the goal is emergent.</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Answer Framework:</span>
+        <span class="exam-value"><strong>IDENTIFY</strong> whether the goal or the capabilities are the "known" entity → <strong>MATCH</strong> top-down (known goal), bottom-up (known capabilities), or hybrid (both known) → <strong>JUSTIFY</strong> by citing the tradeoff (risk of over-decomposition vs. coverage gap).</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick-Check -->
+  <div class="content-block">
+    <div class="block-label check">✅ Quick-Check Questions</div>
+    <details>
+      <summary>Q1: A company has a suite of Claude-powered tools (summarizer, classifier, extractor) and wants to "improve customer support quality." Which decomposition approach is primary?</summary>
+      <div class="answer"><strong>Bottom-up.</strong> The goal ("improve support quality") is loosely defined and emergent, but the capabilities (summarizer, classifier, extractor) are well-understood. The architect should compose these existing tools into a workflow—for example: classify incoming ticket → extract key entities → summarize prior interactions → draft response. Each module is a known capability being wired together.</div>
+    </details>
+    <details>
+      <summary>Q2: An architect must produce a 50-page regulatory compliance report. The deliverable's sections, formatting, and data sources are all specified. Which approach?</summary>
+      <div class="answer"><strong>Top-down.</strong> The goal is crystal clear: a 50-page report with specified sections. The architect starts with the report outline and decomposes each section into data-gathering, analysis, and formatting subtasks. There is no ambiguity about what needs to be produced—only about how to produce it. Bottom-up would be incorrect because the "what" is defined; it is the "how" that needs structuring.</div>
+    </details>
+    <details>
+      <summary>Q3: When should an architect merge subtasks during top-down decomposition?</summary>
+      <div class="answer">Merge subtasks when two or more adjacent leaves are <strong>trivially simple</strong> (each can be described in a single short sentence), <strong>share the same context</strong> (they need the same input data), and <strong>produce tightly coupled outputs</strong> (the output of one is immediately consumed by the next with no branching). Merging reduces coordination overhead without sacrificing quality. The "leaf test" applies: if the merged task is still describable in one sentence and executable in one call, the merge is valid.</div>
+    </details>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 6.3
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section sec-3" id="s6-3">
+  <div class="section-header">
+    <div class="section-badge">6.3</div>
+    <h2>Iterative Refinement Loops for Subagent Outputs</h2>
+  </div>
+
+  <!-- Core Concept -->
+  <div class="content-block">
+    <div class="block-label concept">📘 Core Concept</div>
+    <p>
+      Decomposition alone does not guarantee quality. Each subagent (a Claude call assigned to a subtask) produces an output that may be <strong>incomplete, imprecise, or misaligned</strong> with the downstream requirements. Iterative refinement loops address this by introducing a <strong>generate → evaluate → refine</strong> cycle where a subagent's output is assessed against explicit criteria, and the subagent is re-invoked with targeted feedback until the output meets a quality threshold. This pattern is sometimes called "self-critique" or "verifier-refinement" in the literature.
+    </p>
+    <p>
+      A refinement loop has four essential components. First, the <strong>generator</strong>: the subagent that produces the initial output. Second, the <strong>evaluator</strong>: a separate Claude call (or the same call with a different prompt) that scores the output against predefined criteria. The evaluator may be a structured rubric prompt that returns a score and a list of specific deficiencies. Third, the <strong>feedback injector</strong>: the mechanism that takes the evaluator's assessment and injects it into the generator's next prompt as context. Fourth, the <strong>convergence criterion</strong>: the condition that terminates the loop—typically a score threshold, a maximum iteration count, or a "no new feedback" condition.
+    </p>
+    <p>
+      The critical design decision is <strong>what the evaluator checks</strong>. Vague evaluation ("is this output good?") produces vague feedback and slow convergence. Effective evaluators use <strong>dimensional scoring</strong>: accuracy, completeness, formatting compliance, tone alignment, and logical coherence are scored independently on a numeric scale. This gives the generator actionable feedback ("accuracy: 8/10, completeness: 5/10 — missing sections on pricing and timeline") rather than subjective impressions.
+    </p>
+    <p>
+      A common architectural mistake is using <strong>unlimited refinement loops</strong>. Without a hard iteration cap, a loop can cycle indefinitely—especially when the evaluator and generator disagree on interpretation. Best practice is to set a maximum of <strong>2–3 refinement iterations</strong>. If the output hasn't converged by then, the issue is likely in the task specification or decomposition, not in the generation quality. Escalate to a human reviewer or restructure the subtask.
+    </p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="content-block">
+    <div class="block-label glossary">🔑 Key Terms</div>
+    <table class="glossary-table">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td>Refinement Loop</td><td>A generate → evaluate → refine cycle that iteratively improves a subagent's output until it meets quality criteria.</td></tr>
+        <tr><td>Generator</td><td>The subagent that produces and revises the output in each iteration of the loop.</td></tr>
+        <tr><td>Evaluator</td><td>A separate Claude call (or structured prompt) that assesses output quality against predefined dimensional criteria.</td></tr>
+        <tr><td>Convergence Criterion</td><td>The condition that stops the loop: a score threshold, a max iteration count, or a "no new deficiencies" condition.</td></tr>
+        <tr><td>Dimensional Scoring</td><td>Evaluating output across multiple independent quality dimensions (accuracy, completeness, format, tone) with numeric scores.</td></tr>
+        <tr><td>Feedback Injection</td><td>Inserting the evaluator's structured critique into the generator's next prompt to guide targeted improvements.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Visualization -->
+  <div class="content-block">
+    <div class="block-label viz">📊 Refinement Loop Architecture</div>
+    <div class="viz-box">
+<pre>   ┌─────────────────────────────────────────────────────────────────────┐
+   │                      ITERATIVE REFINEMENT LOOP                     │
+   │                                                                     │
+   │                          ┌──────────┐                               │
+   │    Task Spec ──────────→ │GENERATOR │──→ Output v1                  │
+   │                          └──────────┘       │                       │
+   │                               ▲             ▼                       │
+   │                               │      ┌─────────────┐               │
+   │                     Feedback  │      │  EVALUATOR   │               │
+   │                     + Output  │      │  ┌─────────┐ │               │
+   │                     v(n-1)    │      │  │Accuracy  │ │               │
+   │                               │      │  │Complete  │ │               │
+   │                               │      │  │Format   │ │               │
+   │                               │      │  │Tone     │ │               │
+   │                               │      │  └─────────┘ │               │
+   │                               │      └──────┬──────┘               │
+   │                               │             │                       │
+   │                               │         ┌───▼───┐                   │
+   │                               │         │ SCORE │                   │
+   │                               │         │ ≥ 8 ? │                   │
+   │                               │         └───┬───┘                   │
+   │                               │        NO   │  YES                  │
+   │                               │  ┌──────────┤                       │
+   │                               │  │          ▼                       │
+   │                          ┌────┴──┴─┐  ┌─────────┐                  │
+   │                          │FEEDBACK │  │ ✅ DONE  │                  │
+   │                          │INJECTOR │  │  Output  │                  │
+   │                          └─────────┘  └─────────┘                  │
+   │                                                                     │
+   │    Max iterations: 3    Convergence: all dimensions ≥ 8/10         │
+   └─────────────────────────────────────────────────────────────────────┘
+</pre>
+    </div>
+    <div class="viz-caption">Figure 6.3 — The four-component refinement loop with dimensional scoring and hard iteration cap.</div>
+  </div>
+
+  <!-- Tips -->
+  <div class="content-block">
+    <div class="block-label tips">💡 Tips &amp; Tricks</div>
+    <ul class="tips-list">
+      <li><strong>Separate evaluator from generator:</strong> Using the same prompt to both generate and evaluate creates confirmation bias—Claude will rate its own output more generously. A separate evaluator call with a dedicated rubric produces more honest scoring and faster convergence.</li>
+      <li><strong>Make feedback structural, not editorial:</strong> "Section 3 is missing a pricing comparison table" is actionable feedback. "Section 3 could be better" is not. Structure your evaluator's output as a list of <code>{dimension, score, specific_deficiency}</code> objects.</li>
+      <li><strong>Cap at 3 iterations:</strong> Research and practice show that LLM refinement loops produce diminishing returns after 2–3 rounds. If quality hasn't converged, the issue is upstream: the task spec is ambiguous, the decomposition is wrong, or the reference data is insufficient.</li>
+      <li><strong>Cost check: multiply by N:</strong> Each refinement iteration roughly doubles the token cost for that subtask (generator + evaluator calls). A 3-iteration loop costs ~6x a single call. Budget accordingly and only apply refinement to high-stakes outputs.</li>
+      <li><strong>Use "delta feedback" in later iterations:</strong> In iteration 2+, only include the <em>new</em> deficiencies found, not the full evaluation. This focuses the generator on unresolved issues and prevents regression on already-fixed items.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="content-block">
+    <div class="block-label exam">🎯 Exam Strategy</div>
+    <div class="exam-box">
+      <div class="exam-row">
+        <span class="exam-label">Question Type:</span>
+        <span class="exam-value">Component identification, ordering, and "what's missing from this loop?" diagnostic questions</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Likely Stem:</span>
+        <span class="exam-value">"A refinement loop is producing diminishing quality improvements after each iteration. Which component is MOST likely misconfigured?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Common Trap:</span>
+        <span class="exam-value">Confusing iterative refinement (section 6.3) with iterative <em>decomposition</em> (breaking tasks further). Refinement improves a fixed subtask's output; decomposition changes the task structure. The exam will offer "decompose further" as a distractor when the correct answer is "improve the evaluator."</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Answer Framework:</span>
+        <span class="exam-value"><strong>IDENTIFY</strong> the failing component (generator, evaluator, feedback injector, convergence criterion) → <strong>DIAGNOSE</strong> the symptom (e.g., vague feedback = evaluator issue; looping forever = convergence issue) → <strong>PRESCRIBE</strong> a targeted fix.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick-Check -->
+  <div class="content-block">
+    <div class="block-label check">✅ Quick-Check Questions</div>
+    <details>
+      <summary>Q1: A refinement loop runs for 5 iterations without converging. What is the MOST likely root cause?</summary>
+      <div class="answer">The most likely root cause is that the <strong>evaluator's criteria are too vague or conflicting</strong>, causing it to generate feedback that the generator cannot act on effectively. Alternatively, the convergence criterion may be set unrealistically high (e.g., requiring 10/10 on all dimensions). The fix is to audit the evaluator's rubric for actionability and adjust the score thresholds. A secondary cause is that the task itself may be under-specified—no amount of refinement can fix a bad decomposition. The hard cap (3 iterations) should have prevented running 5 iterations; its absence signals a missing architectural safeguard.</div>
+    </details>
+    <details>
+      <summary>Q2: Why should the evaluator be a separate Claude call rather than part of the generator's prompt?</summary>
+      <div class="answer"><strong>Separation eliminates confirmation bias.</strong> When Claude generates and evaluates in the same call, it has cognitive incentive to rate its own output favorably—it has already committed to a reasoning path. A separate call with a dedicated evaluation rubric approaches the output as a fresh assessor, producing more objective scores. Additionally, separate calls allow the evaluator to use a different system prompt optimized for critique rather than generation, and they enable independent tuning of each component.</div>
+    </details>
+    <details>
+      <summary>Q3: What is "delta feedback" and when is it used?</summary>
+      <div class="answer"><strong>Delta feedback</strong> means including only the <em>new</em> or <em>unresolved</em> deficiencies in the feedback injection, rather than the full evaluation from all prior iterations. It is used from iteration 2 onward. The purpose is twofold: (1) it focuses the generator's attention on remaining issues rather than re-processing already-fixed items, and (2) it reduces token usage in the feedback portion of the prompt. Without delta feedback, the generator may regress on fixed issues while addressing new ones, creating an oscillation pattern that prevents convergence.</div>
+    </details>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 6.4
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section sec-4" id="s6-4">
+  <div class="section-header">
+    <div class="section-badge">6.4</div>
+    <h2>Balancing Breadth and Depth in Research Decomposition</h2>
+  </div>
+
+  <!-- Core Concept -->
+  <div class="content-block">
+    <div class="block-label concept">📘 Core Concept</div>
+    <p>
+      Research-oriented tasks present a unique decomposition challenge: <strong>how much of the problem space should each subagent cover, and how deeply should it investigate?</strong> This is the breadth-versus-depth tradeoff. Allocating too many subagents to broad coverage produces a report that mentions everything but explains nothing. Allocating too few, deeply focused subagents produces a report with blind spots—critical topics are never investigated because no subagent was assigned to them.
+    </p>
+    <p>
+      The architect's tool for managing this tradeoff is the <strong>research decomposition matrix</strong>. This is a two-dimensional grid where one axis lists the <strong>topics or dimensions</strong> that must be covered (breadth), and the other axis defines the <strong>investigation depth levels</strong> for each topic—from surface-level scanning (identify that the topic exists and note key facts) to deep analysis (multi-source synthesis, quantitative evaluation, and expert-level assessment). Each cell in the matrix is assigned a depth level, and this assignment determines the subagent's scope.
+    </p>
+    <p>
+      A common pattern is the <strong>"T-shaped" research strategy</strong>: assign broad, shallow coverage (Level 1: surface scan) to all topics, then assign deep investigation (Level 3: full analysis) to only 2–3 high-priority topics identified by the stakeholder or the task specification. This ensures no important topic is missed entirely while concentrating analytical effort where it matters most. The "T" shape comes from the visual: a wide horizontal bar (broad coverage) with a narrow vertical drop (deep focus on select topics).
+    </p>
+    <p>
+      Resource allocation directly follows from the matrix. Each depth level has a known <strong>token budget profile</strong>: Level 1 (surface scan) may require 500–1,000 tokens of output and minimal reference data; Level 2 (moderate analysis) requires 1,500–3,000 tokens and may need retrieval-augmented context; Level 3 (deep analysis) requires 3,000–6,000+ tokens with extensive source material and potentially multiple calls with chain-of-thought prompting. The architect maps these profiles to the matrix to estimate total cost and latency, then adjusts the distribution if the budget is constrained. This is a core architectural skill: <strong>making explicit tradeoffs between coverage quality and resource consumption</strong>.
+    </p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="content-block">
+    <div class="block-label glossary">🔑 Key Terms</div>
+    <table class="glossary-table">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td>Research Matrix</td><td>A topic × depth-level grid used to plan research decomposition and allocate subagent resources systematically.</td></tr>
+        <tr><td>T-Shaped Strategy</td><td>Broad shallow coverage across all topics with deep analysis on 2–3 priority topics. The default research decomposition pattern.</td></tr>
+        <tr><td>Depth Levels</td><td>L1: surface scan (key facts); L2: moderate analysis (multi-source synthesis); L3: deep analysis (quantitative evaluation, expert assessment).</td></tr>
+        <tr><td>Token Budget Profile</td><td>The estimated token consumption (input + output) for a subtask at each depth level, used for cost and latency planning.</td></tr>
+        <tr><td>Coverage Gap</td><td>A topic that appears in the requirements but has no assigned subagent in the decomposition—a critical architectural defect.</td></tr>
+        <tr><td>Diminishing Returns</td><td>The point at which additional depth on a topic produces marginal information gain relative to its token cost. Signals to stop deepening.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Visualization -->
+  <div class="content-block">
+    <div class="block-label viz">📊 Research Decomposition Matrix</div>
+    <div class="viz-box">
+<pre>  RESEARCH DECOMPOSITION MATRIX — "T-Shaped" Strategy
+  ════════════════════════════════════════════════════
+
+  Topic / Depth       │ L1: Surface  │ L2: Moderate │ L3: Deep Analysis
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+  Market Size         │     ──       │      ──      │     ████  ← Priority
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+  Competitor A        │     ██       │              │
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+  Competitor B        │     ██       │              │
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+  Regulatory Env      │     ──       │      ──      │     ████  ← Priority
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+  Technology Trends   │     ██       │              │
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+  Customer Segments   │     ──       │     ████     │
+  ────────────────────┼──────────────┼──────────────┼──────────────────
+
+  ██ = Assigned depth        ── = Pass-through (covered at a lower level)
+  ████ = Full allocation     Blank = Not assigned at this depth
+
+  Token Budget Estimate:
+  ┌──────────┬──────────┬──────────┬──────────┐
+  │  Level   │  Output  │  Context │  Cost $  │
+  ├──────────┼──────────┼──────────┼──────────┤
+  │  L1      │  ~800 tk │  ~500 tk │  $0.003  │
+  │  L2      │ ~2500 tk │ ~2000 tk │  $0.012  │
+  │  L3      │ ~5000 tk │ ~4000 tk │  $0.030  │
+  └──────────┴──────────┴──────────┴──────────┘
+</pre>
+    </div>
+    <div class="viz-caption">Figure 6.4 — T-shaped research matrix showing two priority deep-dives and four surface-level topics.</div>
+  </div>
+
+  <!-- Tips -->
+  <div class="content-block">
+    <div class="block-label tips">💡 Tips &amp; Tricks</div>
+    <ul class="tips-list">
+      <li><strong>Start with the matrix, not the prompts:</strong> Building the research decomposition matrix before writing any prompts forces you to make breadth/depth tradeoffs explicitly. Architects who skip this step tend to create lopsided decompositions—deeply researching the first topic they think of and rushing through the rest.</li>
+      <li><strong>Use L1 results to decide L3 targets:</strong> A two-phase approach works well: run all topics at L1 first, then use the results to decide which topics warrant L3. This is an "adaptive T" strategy that avoids over-investing in topics that turn out to be less important than initially assumed.</li>
+      <li><strong>Budget for synthesis:</strong> The matrix allocates resources to individual topics, but the final deliverable also needs a <strong>synthesis step</strong> that integrates findings across topics. Budget 15–20% of total tokens for this cross-cutting synthesis subagent.</li>
+      <li><strong>Flag coverage gaps visually:</strong> After filling the matrix, any row with no checkmarks at any depth level is a coverage gap. These are easy to miss when working from a flat task list but immediately visible in a matrix format. Review for gaps before executing.</li>
+      <li><strong>Parallelize within depth levels:</strong> All L1 scans can run in parallel (no dependencies). L3 deep dives may also parallelize if they cover independent topics. Only the synthesis step requires all prior outputs, making it the serialization bottleneck.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="content-block">
+    <div class="block-label exam">🎯 Exam Strategy</div>
+    <div class="exam-box">
+      <div class="exam-row">
+        <span class="exam-label">Question Type:</span>
+        <span class="exam-value">Resource allocation scenarios, "which configuration optimizes the tradeoff?" analysis</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Likely Stem:</span>
+        <span class="exam-value">"A research task must cover 8 topics within a fixed token budget. The stakeholder marks 2 topics as critical. Which allocation strategy BEST balances coverage and depth?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Common Trap:</span>
+        <span class="exam-value">Choosing "deep analysis on all topics" when the budget is constrained. The exam penalizes answers that ignore resource constraints. Also, confusing the T-shaped strategy with simple prioritization—T-shaped <em>always</em> includes broad L1 coverage, not just deep dives on the priorities.</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Answer Framework:</span>
+        <span class="exam-value"><strong>LIST</strong> the topics → <strong>MAP</strong> each to a depth level based on priority and budget → <strong>VERIFY</strong> no coverage gaps → <strong>ALLOCATE</strong> remaining budget to synthesis. The answer that does all four steps is correct.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick-Check -->
+  <div class="content-block">
+    <div class="block-label check">✅ Quick-Check Questions</div>
+    <details>
+      <summary>Q1: What is the risk of assigning ALL topics to Level 3 (deep analysis)?</summary>
+      <div class="answer">Three risks: (1) <strong>Budget overrun</strong>—L3 costs ~10x more tokens than L1 per topic; with 8 topics at L3, you may exceed the total budget. (2) <strong>Latency</strong>—even with parallelization, L3 tasks take significantly longer, and the synthesis step must wait for all of them. (3) <strong>Diminishing returns</strong>—many topics simply don't have enough substance to justify deep analysis; you'll spend tokens producing padded content. The T-shaped strategy avoids all three by reserving L3 for genuinely complex priority topics.</div>
+    </details>
+    <details>
+      <summary>Q2: How does the "adaptive T" strategy differ from a standard T-shaped strategy?</summary>
+      <div class="answer">In a <strong>standard T</strong>, the priority topics for L3 are chosen upfront—before any research is done—based on stakeholder input or task specification. In an <strong>adaptive T</strong>, all topics first receive L1 (surface scan) treatment. The L1 results are then evaluated to determine which topics have the most complexity, controversy, or data richness, and <em>those</em> are assigned to L3 in a second phase. This is more expensive (two-phase execution) but more accurate because depth allocation is based on evidence rather than assumption.</div>
+    </details>
+    <details>
+      <summary>Q3: Why should an architect budget 15–20% of tokens for a synthesis step?</summary>
+      <div class="answer">Individual topic subagents produce findings in isolation—they don't see each other's outputs. The synthesis step is a dedicated subagent that receives all topic outputs and integrates them into a coherent deliverable: identifying cross-cutting themes, resolving contradictions, creating a unified narrative, and ensuring the final output addresses the original research question holistically. Without this step, the deliverable reads as a collection of independent summaries rather than a cohesive analysis. 15–20% is the typical allocation because synthesis requires reading all prior outputs (context) and generating a substantive integrative section (output).</div>
+    </details>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 6.5
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section sec-5" id="s6-5">
+  <div class="section-header">
+    <div class="section-badge">6.5</div>
+    <h2>Hands-On: Decomposing a Complex Research Query</h2>
+  </div>
+
+  <!-- Core Concept -->
+  <div class="content-block">
+    <div class="block-label concept">📘 Core Concept</div>
+    <p>
+      This section integrates all prior concepts into a <strong>fully worked example</strong>. You will see the complete process: starting with a complex, real-world research request; running it through complexity assessment; choosing a decomposition strategy; building the research matrix; designing refinement loops for critical outputs; and producing a final execution plan with subagent specifications.
+    </p>
+    <p>
+      The worked example matters for the exam because Section 6.5 questions are typically <strong>multi-step scenario questions</strong> where you must apply concepts from sections 6.1–6.4 in sequence. You cannot answer these questions by knowing only one section—they test integrated understanding. The example below follows the exact reasoning pattern the exam expects.
+    </p>
+    <p>
+      Our example query: <em>"Analyze the competitive landscape of large language model API providers (OpenAI, Anthropic, Google, Meta, Mistral) across pricing, performance benchmarks, developer experience, enterprise features, and regulatory compliance posture. Produce a recommendation for a mid-size SaaS company choosing a primary LLM provider."</em> This is representative of exam scenario complexity—it has breadth (5 providers × 5 dimensions = 25 cells), requires depth on key dimensions, and demands a synthesized recommendation.
+    </p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="content-block">
+    <div class="block-label glossary">🔑 Key Terms</div>
+    <table class="glossary-table">
+      <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+      <tbody>
+        <tr><td>Execution Plan</td><td>The complete specification of all subagents, their inputs, outputs, dependencies, and the orchestration sequence.</td></tr>
+        <tr><td>Subagent Spec</td><td>A document defining a single subagent's role: system prompt, input data, expected output schema, quality criteria, and iteration budget.</td></tr>
+        <tr><td>Orchestrator</td><td>The top-level agent or script that dispatches subtasks, collects outputs, manages dependencies, and triggers the synthesis step.</td></tr>
+        <tr><td>Dependency Graph</td><td>A directed acyclic graph (DAG) showing which subtasks must complete before others can begin.</td></tr>
+        <tr><td>Provider Matrix</td><td>A providers × dimensions grid used to systematically ensure coverage in competitive analysis decompositions.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Worked Example -->
+  <div class="content-block">
+    <div class="block-label concept">📘 Worked Example — Step-by-Step Decomposition</div>
+
+    <div class="step-card">
+      <div class="step-num">Step 1 — Complexity Assessment (Section 6.1)</div>
+      <div class="step-title">Apply the four-gate decision tree</div>
+      <p>
+        <strong>Gate 1 — Cognitive Breadth:</strong> The task spans pricing analysis, performance benchmarking, UX evaluation, enterprise feature comparison, and legal/regulatory analysis. That's <strong>5 distinct domains</strong>. ≥ 3 → DECOMPOSE. (Already triggered.)<br>
+        <strong>Gate 2 — Reasoning Depth:</strong> The recommendation requires analyzing each provider across each dimension, synthesizing across all 25 cells, and weighing tradeoffs. That is <strong>≥ 4 sequential reasoning steps</strong>. → DECOMPOSE.<br>
+        <strong>Gate 3 — Context Budget:</strong> 5 providers × 5 dimensions, each requiring sourced data = massive reference context. Easily <strong>&gt; 60%</strong> of even a 200K context window if done properly. → DECOMPOSE.<br>
+        <strong>Gate 4 — Dependencies:</strong> The recommendation depends on all 25 analysis cells being complete. → DECOMPOSE.<br>
+        <strong>Decision: Decompose.</strong> All four gates triggered.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 2 — Choose Decomposition Strategy (Section 6.2)</div>
+      <div class="step-title">Top-down, because the deliverable is clearly defined</div>
+      <p>
+        The deliverable is a competitive analysis report with a recommendation. This is a <strong>well-defined goal</strong> → <strong>top-down decomposition</strong> is the primary strategy. We will also use bottom-up within the data-gathering phase to compose known retrieval capabilities (web search, document analysis, structured extraction).
+      </p>
+      <p>
+        <strong>Top-level decomposition:</strong><br>
+        Stage 1: Data Gathering (per-provider, per-dimension) → parallel<br>
+        Stage 2: Analysis &amp; Scoring (per-dimension comparison) → depends on Stage 1<br>
+        Stage 3: Synthesis &amp; Recommendation → depends on Stage 2
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 3 — Build the Research Matrix (Section 6.4)</div>
+      <div class="step-title">Apply T-shaped strategy with stakeholder priorities</div>
+      <p>
+        The mid-size SaaS company cares most about <strong>pricing</strong> (budget-constrained) and <strong>developer experience</strong> (small team, needs fast integration). These get <strong>L3</strong> depth. The remaining three dimensions get <strong>L1–L2</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Visualization — The full matrix -->
+  <div class="content-block">
+    <div class="block-label viz">📊 Complete Research Matrix</div>
+    <div class="viz-box">
+<pre>  PROVIDER × DIMENSION MATRIX    (T-shaped: Pricing &amp; DevEx = L3)
+  ═══════════════════════════════════════════════════════════════
+
+                   │ Pricing │ Perf.    │ DevEx    │ Enterpr. │ Regul.
+  ─────────────────┼─────────┼──────────┼──────────┼──────────┼────────
+  OpenAI           │  L3 ████│  L2  ██  │  L3 ████ │  L1  █   │  L1  █
+  Anthropic        │  L3 ████│  L2  ██  │  L3 ████ │  L1  █   │  L1  █
+  Google           │  L3 ████│  L2  ██  │  L3 ████ │  L1  █   │  L1  █
+  Meta             │  L3 ████│  L2  ██  │  L3 ████ │  L1  █   │  L1  █
+  Mistral          │  L3 ████│  L2  ██  │  L3 ████ │  L1  █   │  L1  █
+  ─────────────────┼─────────┼──────────┼──────────┼──────────┼────────
+  Cross-cut synth  │         20% of total budget reserved          │
+
+  Subagent Count:  5 × L3 data  = 10 subagents (pricing × 5, devex × 5)
+                   5 × L2 perf  =  5 subagents
+                   10 × L1 rest = 10 subagents (enterprise × 5, regulatory × 5)
+                   5 comparison  =  5 subagents (one per dimension)
+                   1 synthesis   =  1 subagent
+                   ─────────────
+                   Total: ~31 subagent calls (before refinement)
+</pre>
+    </div>
+    <div class="viz-caption">Figure 6.5a — Full provider × dimension matrix with depth assignments and subagent count.</div>
+  </div>
+
+  <div class="content-block">
+    <div class="step-card">
+      <div class="step-num">Step 4 — Design Refinement Loops (Section 6.3)</div>
+      <div class="step-title">Apply refinement to the two critical outputs</div>
+      <p>
+        Two outputs are high-stakes: the <strong>pricing analysis</strong> (errors here directly affect the recommendation) and the <strong>final recommendation</strong> (this is the deliverable the stakeholder reads first). Each gets a refinement loop:
+      </p>
+      <p>
+        <strong>Pricing Analysis Loop:</strong> Generator produces per-provider cost comparison → Evaluator scores on accuracy (are the numbers current?), completeness (are all pricing tiers covered?), and comparability (is the comparison using the same units?). Convergence: all scores ≥ 8/10, max 2 iterations.
+      </p>
+      <p>
+        <strong>Recommendation Loop:</strong> Generator synthesizes all analyses into a recommendation → Evaluator scores on evidence linkage (does each claim trace to an analysis?), balance (are all 5 dimensions weighted?), and actionability (can the SaaS company act on this?). Convergence: all scores ≥ 8/10, max 3 iterations.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">Step 5 — Build the Execution Plan</div>
+      <div class="step-title">Define the dependency DAG and orchestration sequence</div>
+      <p>
+        The final execution plan specifies three phases. <strong>Phase 1</strong> (parallel): all 25 data-gathering subagents run simultaneously—no dependencies between them. <strong>Phase 2</strong> (5× parallel): each dimension's comparison subagent runs once all 5 providers' data for that dimension are complete. <strong>Phase 3</strong> (serial): the synthesis subagent runs once all 5 comparison outputs are ready, then enters its refinement loop. Total latency = max(Phase 1 latency) + max(Phase 2 latency) + Phase 3 latency × (1 + refinement iterations).
+      </p>
+    </div>
+  </div>
+
+  <!-- DAG Visualization -->
+  <div class="content-block">
+    <div class="block-label viz">📊 Execution Dependency Graph</div>
+    <div class="viz-box">
+<pre>  PHASE 1 — Data Gathering (Parallel)           PHASE 2 — Analysis      PHASE 3
+  ══════════════════════════════════             ═══════════════         ═══════
+
+  [OpenAI-Pricing    ]─┐                             ┌──→ [Pricing   ]──┐
+  [Anthropic-Pricing ]─┤                             │    [Compare   ]  │
+  [Google-Pricing    ]─┼── all 5 done ──────────────→┤                  │
+  [Meta-Pricing      ]─┤                             │    + Refine ×2  │
+  [Mistral-Pricing   ]─┘                             └─────────────────┤
+                                                                        │
+  [OpenAI-Perf       ]─┐                             ┌──→ [Perf      ] │
+  [Anthropic-Perf    ]─┤                             │    [Compare   ] │
+  [Google-Perf       ]─┼── all 5 done ──────────────→┤                 │
+  [Meta-Perf         ]─┤                             └─────────────────┤
+  [Mistral-Perf      ]─┘                                               │
+                                                                        ├─→ [SYNTHESIS]
+  [OpenAI-DevEx      ]─┐                             ┌──→ [DevEx     ] │   + Refine ×3
+  [Anthropic-DevEx   ]─┤                             │    [Compare   ] │     │
+  [Google-DevEx      ]─┼── all 5 done ──────────────→┤                 │     ▼
+  [Meta-DevEx        ]─┤                             └─────────────────┤   [FINAL
+  [Mistral-DevEx     ]─┘                                               │   REPORT]
+                                                                        │
+  [5× Enterprise L1  ]── all done ──→ [Enterpr. Compare] ─────────────┤
+  [5× Regulatory L1  ]── all done ──→ [Regul.   Compare] ─────────────┘
+</pre>
+    </div>
+    <div class="viz-caption">Figure 6.5b — Three-phase dependency DAG. Phases 1 and 2 run in parallel within phase; Phase 3 is serial.</div>
+  </div>
+
+  <!-- Tips -->
+  <div class="content-block">
+    <div class="block-label tips">💡 Tips &amp; Tricks</div>
+    <ul class="tips-list">
+      <li><strong>On the exam, draw the DAG mentally:</strong> Scenario questions in 6.5 test whether you can identify which phases parallelize and which serialize. The critical path (longest path through the DAG) determines total latency—that's usually what the question asks about.</li>
+      <li><strong>Watch the subagent count:</strong> If your decomposition produces &gt; 40 subagent calls, question whether you've over-decomposed. The worked example has ~31 calls before refinement and ~37 after—this is at the upper end of practical for a single orchestration run.</li>
+      <li><strong>Don't forget the synthesis budget:</strong> A common exam mistake is accounting for all data-gathering and comparison costs but forgetting the synthesis step. The synthesis subagent consumes the outputs of all prior steps as input—its context can be very large.</li>
+      <li><strong>Adapt the worked example pattern:</strong> The exam won't use the same query, but the <em>structure</em> is always the same: assess → choose strategy → build matrix → add refinement → plan DAG. Memorize this five-step sequence.</li>
+    </ul>
+  </div>
+
+  <!-- Exam Strategy -->
+  <div class="content-block">
+    <div class="block-label exam">🎯 Exam Strategy</div>
+    <div class="exam-box">
+      <div class="exam-row">
+        <span class="exam-label">Question Type:</span>
+        <span class="exam-value">Multi-step scenario requiring you to apply concepts from 6.1–6.4 in sequence. May ask "what is the NEXT step?" or "which phase has the highest latency?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Likely Stem:</span>
+        <span class="exam-value">"Given the following research query and constraints, an architect has completed Steps 1–3. What should Step 4 address?"</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Common Trap:</span>
+        <span class="exam-value">Jumping to execution details (prompt writing, API parameters) before completing the architectural plan. The exam rewards structured planning over implementation speed. Another trap: selecting "add more subagents" when the correct answer is "add a refinement loop to existing subagents."</span>
+      </div>
+      <div class="exam-row">
+        <span class="exam-label">Answer Framework:</span>
+        <span class="exam-value">Follow the <strong>five-step sequence</strong>: (1) Assess complexity → (2) Choose strategy → (3) Build matrix → (4) Add refinement → (5) Plan DAG. If the question asks "what's next?" after step N, the answer is step N+1. If it asks "what's wrong?" about a plan, check which step was skipped.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick-Check -->
+  <div class="content-block">
+    <div class="block-label check">✅ Quick-Check Questions</div>
+    <details>
+      <summary>Q1: In the worked example, what is the critical path that determines total latency?</summary>
+      <div class="answer">The critical path is: <strong>longest Phase 1 data-gathering task → longest Phase 2 comparison task (with refinement) → Phase 3 synthesis (with refinement)</strong>. Specifically: one of the L3 data-gathering tasks (pricing or DevEx, since they produce the most output) → Pricing Comparison + 2 refinement iterations → Synthesis + 3 refinement iterations. This is the longest sequential chain. Parallelization helps within phases but cannot shorten this critical path. Latency optimization would focus on reducing Phase 3 refinement iterations (the largest serial bottleneck).</div>
+    </details>
+    <details>
+      <summary>Q2: If the token budget is cut by 40%, which adjustment to the matrix is MOST appropriate?</summary>
+      <div class="answer">The most appropriate adjustment is to <strong>downgrade L2 tasks (Performance benchmarks) to L1 and reduce L3 refinement iterations from 2 to 1</strong>. This preserves the T-shaped structure (pricing and DevEx remain L3 as stakeholder priorities) while cutting the moderate-depth and refinement costs. Downgrading priority topics from L3 to L2 would be worse because it directly reduces quality on the dimensions the stakeholder cares about most. Cutting topics entirely (removing a provider) would create coverage gaps and a less useful deliverable.</div>
+    </details>
+    <details>
+      <summary>Q3: An architect skips building the research matrix and goes directly from "decompose" to writing prompts. What problems are likely to emerge?</summary>
+      <div class="answer">Three problems: (1) <strong>Uneven coverage</strong>—without a matrix, the architect likely over-invests in whichever topic they write first and under-invests in later topics as they realize the budget is running low. (2) <strong>Hidden coverage gaps</strong>—without a systematic grid, entire dimensions may be accidentally omitted (e.g., regulatory compliance is easy to forget). (3) <strong>No basis for tradeoff decisions</strong>—when the budget constrains, the architect has no structured framework for deciding what to cut; decisions become ad hoc. The matrix is the architect's planning artifact—skipping it is like writing code without a design.</div>
+    </details>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER — SUMMARY & CROSS-REFERENCES
+     ═══════════════════════════════════════════════════════════════ -->
+
+<div class="footer-section">
+  <h2>📋 Chapter Summary Table</h2>
+  <table class="summary-table">
+    <thead>
+      <tr><th>Section</th><th>Key Concept</th><th>Exam Weight</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>6.1 Complexity Assessment</td><td>Four-gate decision tree (breadth, depth, context budget, dependencies) for decomposition decisions</td><td>~20%</td></tr>
+      <tr><td>6.2 Top-Down vs Bottom-Up</td><td>Goal-defined → top-down; Capability-defined → bottom-up; Both → hybrid</td><td>~20%</td></tr>
+      <tr><td>6.3 Iterative Refinement</td><td>Generate → Evaluate → Refine loop with dimensional scoring and 3-iteration cap</td><td>~20%</td></tr>
+      <tr><td>6.4 Breadth vs Depth</td><td>Research matrix with T-shaped strategy; token budget profiles for L1/L2/L3</td><td>~15%</td></tr>
+      <tr><td>6.5 Hands-On</td><td>Five-step integration: Assess → Strategy → Matrix → Refine → DAG</td><td>~25%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer-section">
+  <h2>🔗 Cross-Reference Map</h2>
+  <p style="color:var(--c-text-sec); font-size:0.9rem; margin-bottom: 16px;">How the five sections build on and connect to each other:</p>
+  <div class="viz-box">
+<pre>  ┌───────────────┐         ┌───────────────────┐        ┌──────────────────┐
+  │  6.1 ASSESS   │────────→│  6.2 STRATEGY     │───────→│  6.4 MATRIX      │
+  │  (Gate check) │         │  (Top/Bottom/Hyb) │        │  (Breadth/Depth) │
+  └───────┬───────┘         └───────────────────┘        └────────┬─────────┘
+          │                                                        │
+          │  "Do we decompose?"    "How do we structure it?"       │
+          │                                                        │
+          │                 ┌───────────────────┐                  │
+          │                 │  6.3 REFINEMENT   │                  │
+          │                 │  (Quality loops)  │                  │
+          │                 └─────────┬─────────┘                  │
+          │                           │                            │
+          │    "How do we ensure quality per subtask?"             │
+          │                           │                            │
+          │         ┌─────────────────┴────────────────┐           │
+          └────────→│         6.5 HANDS-ON             │←──────────┘
+                    │   (Integrates all four above)    │
+                    └──────────────────────────────────┘
+
+  KEY RELATIONSHIPS:
+  • 6.1 → 6.2: Assessment determines WHETHER to decompose; strategy determines HOW
+  • 6.2 → 6.4: Strategy sets the structure; matrix allocates resources within it
+  • 6.3 ↔ 6.4: Refinement loops apply to high-priority cells in the matrix
+  • 6.5 ← ALL: The hands-on section applies all four in sequence
+</pre>
+  </div>
+</div>
+
+<div class="footer-section">
+  <h2>🧠 Chapter Mnemonic</h2>
+  <div class="mnemonic-box">
+    <div class="mnemonic-word">A – S – M – R – D</div>
+    <div class="mnemonic-breakdown">
+      <span class="mnemonic-letter">A</span>ssess complexity (6.1 — Four gates)<br>
+      <span class="mnemonic-letter">S</span>trategy selection (6.2 — Top-down / Bottom-up / Hybrid)<br>
+      <span class="mnemonic-letter">M</span>atrix construction (6.4 — Breadth vs. Depth allocation)<br>
+      <span class="mnemonic-letter">R</span>efinement loops (6.3 — Generate → Evaluate → Refine)<br>
+      <span class="mnemonic-letter">D</span>ependency DAG (6.5 — Execution plan &amp; orchestration)<br><br>
+      <em style="font-size:0.85rem; color:var(--c-text-muted);">"Architects <strong>S</strong>ystematically <strong>M</strong>ap <strong>R</strong>esearch <strong>D</strong>ecompositions"</em>
+    </div>
+  </div>
+</div>
+
+<div class="footer-section" style="text-align:center; padding: 20px; color:var(--c-text-muted); font-size:0.82rem;">
+  Claude Certified Architect — Foundations &amp; Professional &nbsp;|&nbsp; Chapter 6 Study Guide &nbsp;|&nbsp; Generated September 2026
+</div>
+
+</div><!-- /.wrapper -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCRIPTS (placed last per streaming guidelines)
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+  // Theme toggle
+  const toggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  let dark = false;
+  toggle.addEventListener('click', () => {
+    dark = !dark;
+    html.setAttribute('data-theme', dark ? 'dark' : '');
+    toggle.textContent = dark ? '☀️' : '🌙';
+  });
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+
+</body></html>

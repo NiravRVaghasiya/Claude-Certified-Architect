@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 12: CLAUDE.md Configuration Hierarchy — CCA Study Guide</title>
+<style>
+/* ============================================================
+   BASE RESET & TYPOGRAPHY
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:             #0d1117;
+  --bg-surface:     #161b22;
+  --bg-surface-2:   #1c2129;
+  --bg-sidebar:     #010409;
+  --text:           #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted:     #656d76;
+  --border:         #30363d;
+  --border-light:   #21262d;
+  --accent-blue:    #58a6ff;
+  --accent-teal:    #3fb9a7;
+  --accent-amber:   #d29922;
+  --accent-red:     #f85149;
+  --accent-green:   #3fb950;
+  --accent-purple:  #bc8cff;
+  --accent-orange:  #f0883e;
+  --font-sans:      'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:      'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --radius:         8px;
+  --radius-sm:      4px;
+}
+
+html { scroll-behavior: smooth; font-size: 15px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  display: flex;
+  min-height: 100vh;
+}
+
+a { color: var(--accent-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============================================================
+   SIDEBAR NAVIGATION
+   ============================================================ */
+#sidebar {
+  position: fixed; top: 0; left: 0;
+  width: 280px; height: 100vh;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 24px 16px;
+  z-index: 100;
+}
+#sidebar h2 {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--text-muted); margin-bottom: 12px; padding-left: 8px;
+}
+#sidebar .brand {
+  font-size: 1rem; font-weight: 700; color: var(--accent-blue);
+  margin-bottom: 4px; padding-left: 8px; display: block;
+}
+#sidebar .brand-sub {
+  font-size: .75rem; color: var(--text-muted);
+  margin-bottom: 20px; padding-left: 8px; display: block;
+}
+#sidebar nav a {
+  display: block; padding: 6px 8px; border-radius: var(--radius-sm);
+  color: var(--text-secondary); font-size: .82rem; transition: all .15s;
+}
+#sidebar nav a:hover { background: var(--bg-surface); color: var(--text); text-decoration: none; }
+#sidebar nav a.sub { padding-left: 24px; font-size: .78rem; }
+#sidebar .nav-sep { height: 1px; background: var(--border-light); margin: 10px 0; }
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+#content {
+  margin-left: 280px;
+  max-width: 920px;
+  padding: 40px 48px 80px;
+  width: calc(100% - 280px);
+}
+h1 { font-size: 2rem; margin-bottom: .3em; line-height: 1.2; }
+h1 .sub { display: block; font-size: .9rem; font-weight: 400; color: var(--text-muted); margin-top: 4px; }
+h2 { font-size: 1.55rem; margin: 2.2em 0 .6em; padding-bottom: .35em; border-bottom: 1px solid var(--border-light); }
+h3 { font-size: 1.15rem; margin: 1.6em 0 .5em; color: var(--accent-blue); }
+h4 { font-size: .95rem; margin: 1.2em 0 .4em; color: var(--accent-teal); text-transform: uppercase; letter-spacing: .04em; }
+p { margin-bottom: .85em; }
+ul, ol { margin: .5em 0 1em 1.4em; }
+li { margin-bottom: .35em; }
+strong { color: #fff; }
+
+hr { border: none; border-top: 1px solid var(--border-light); margin: 2em 0; }
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+table {
+  width: 100%; border-collapse: collapse; margin: 1em 0 1.5em;
+  font-size: .88rem;
+}
+th {
+  text-align: left; padding: 10px 14px;
+  background: var(--bg-surface-2); color: var(--text-muted);
+  border-bottom: 2px solid var(--border); font-weight: 600;
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
+}
+td { padding: 10px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+tbody tr:nth-child(even) td { background: rgba(255,255,255,.015); }
+tbody tr:hover td { background: rgba(88,166,255,.06); }
+td code, th code { background: var(--bg-surface-2); padding: 2px 5px; border-radius: 3px; font-size: .82em; }
+
+/* ============================================================
+   CODE BLOCKS
+   ============================================================ */
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 1em 0 1.4em;
+  font-size: .84rem;
+  line-height: 1.55;
+}
+code {
+  font-family: var(--font-mono);
+  font-size: .88em;
+}
+pre code { font-size: inherit; }
+:not(pre) > code {
+  background: var(--bg-surface-2);
+  padding: 2px 6px; border-radius: 3px;
+  color: var(--accent-teal);
+}
+.code-comment { color: var(--text-muted); font-style: italic; }
+.code-keyword { color: var(--accent-purple); }
+.code-string  { color: var(--accent-green); }
+.code-directive { color: var(--accent-orange); font-weight: 600; }
+.code-heading { color: var(--accent-blue); font-weight: 700; }
+
+/* ============================================================
+   CALLOUT BOXES
+   ============================================================ */
+.callout {
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 1.2em 0;
+  border-left: 4px solid;
+  font-size: .9rem;
+}
+.callout-title {
+  font-weight: 700; margin-bottom: 6px; font-size: .88rem;
+  display: flex; align-items: center; gap: 6px;
+}
+.callout-tip      { background: rgba(58,166,255,.08); border-color: var(--accent-teal); }
+.callout-tip .callout-title { color: var(--accent-teal); }
+.callout-exam     { background: rgba(210,153,34,.08); border-color: var(--accent-amber); }
+.callout-exam .callout-title { color: var(--accent-amber); }
+.callout-warning  { background: rgba(248,81,73,.07); border-color: var(--accent-red); }
+.callout-warning .callout-title { color: var(--accent-red); }
+.callout-best     { background: rgba(63,185,80,.07); border-color: var(--accent-green); }
+.callout-best .callout-title { color: var(--accent-green); }
+.callout-xref     { background: rgba(188,140,255,.07); border-color: var(--accent-purple); }
+.callout-xref .callout-title { color: var(--accent-purple); }
+
+/* ============================================================
+   DIAGRAMS (ASCII / CSS BOX)
+   ============================================================ */
+.diagram {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 1.2em 0 1.6em;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--text-secondary);
+}
+.diagram .highlight { color: var(--accent-blue); font-weight: 700; }
+.diagram .hl-green  { color: var(--accent-green); }
+.diagram .hl-amber  { color: var(--accent-amber); }
+.diagram .hl-purple { color: var(--accent-purple); }
+.diagram .hl-red    { color: var(--accent-red); }
+.diagram .hl-teal   { color: var(--accent-teal); }
+
+/* ============================================================
+   PRACTICE QUESTIONS
+   ============================================================ */
+.question-block {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 1.2em 0;
+}
+.question-block h4 { margin-top: 0; color: var(--text); text-transform: none; letter-spacing: 0; }
+.question-block .options { margin: .8em 0; padding-left: 0; list-style: none; }
+.question-block .options li { padding: 4px 0; }
+.question-block .options li code { font-size: .85em; }
+details { margin-top: .8em; }
+details summary {
+  cursor: pointer; color: var(--accent-blue); font-weight: 600;
+  font-size: .88rem;
+}
+details summary:hover { text-decoration: underline; }
+details > div { margin-top: .6em; padding: 12px 16px; background: var(--bg-surface-2); border-radius: var(--radius-sm); font-size: .88rem; }
+.correct { color: var(--accent-green); font-weight: 700; }
+.trap { color: var(--accent-amber); }
+
+/* ============================================================
+   CHECKLIST
+   ============================================================ */
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+  font-size: .88rem;
+}
+.checklist li::before {
+  content: '☐';
+  position: absolute; left: 0; top: 6px;
+  font-size: 1rem; color: var(--text-muted);
+}
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+.badge {
+  display: inline-block; padding: 2px 8px; border-radius: 100px;
+  font-size: .72rem; font-weight: 600; letter-spacing: .03em;
+  vertical-align: middle;
+}
+.badge-blue   { background: rgba(58,166,255,.15); color: var(--accent-blue); }
+.badge-amber  { background: rgba(210,153,34,.15);  color: var(--accent-amber); }
+.badge-green  { background: rgba(63,185,80,.15);   color: var(--accent-green); }
+.badge-red    { background: rgba(248,81,73,.15);    color: var(--accent-red); }
+.badge-purple { background: rgba(188,140,255,.15);  color: var(--accent-purple); }
+
+.flex-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.flex-row > * { flex: 1; min-width: 260px; }
+
+.mt-0 { margin-top: 0; }
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+  #sidebar { display: none; }
+  #content { margin-left: 0; max-width: 100%; padding: 20px; }
+  body { background: #fff; color: #1a1a1a; }
+  .callout { border-left-width: 3px; break-inside: avoid; }
+  pre { background: #f6f8fa; border-color: #d0d7de; }
+  table { font-size: .8rem; }
+  h2 { break-after: avoid; }
+  .question-block { break-inside: avoid; }
+  details { display: block; }
+  details > div { display: block; }
+  a { color: #0969da; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  #sidebar { display: none; }
+  #content { margin-left: 0; padding: 24px; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SIDEBAR NAVIGATION
+     ═══════════════════════════════════════════════════════════ -->
+<aside id="sidebar">
+  <span class="brand">CCA-F / CCA-P</span>
+  <span class="brand-sub">Claude Certified Architect — Study Guide</span>
+  <h2>Chapter 12</h2>
+  <nav>
+    <a href="#top">Overview</a>
+    <div class="nav-sep"></div>
+    <a href="#s12-1">12.1 — What Is CLAUDE.md?</a>
+    <a href="#s12-1-terms" class="sub">Key Terms</a>
+    <a href="#s12-1-exam" class="sub">Exam Strategy</a>
+    <div class="nav-sep"></div>
+    <a href="#s12-2">12.2 — The Four-Scope Hierarchy</a>
+    <a href="#s12-2-table" class="sub">Scope Table</a>
+    <a href="#s12-2-diagram" class="sub">Hierarchy Diagram</a>
+    <a href="#s12-2-exam" class="sub">Exam Strategy</a>
+    <div class="nav-sep"></div>
+    <a href="#s12-3">12.3 — File Discovery &amp; Loading</a>
+    <a href="#s12-3-walkup" class="sub">Walk-Up Algorithm</a>
+    <a href="#s12-3-lazy" class="sub">Subdirectory Lazy Loading</a>
+    <a href="#s12-3-exam" class="sub">Exam Strategy</a>
+    <div class="nav-sep"></div>
+    <a href="#s12-4">12.4 — @imports &amp; Modular Rules</a>
+    <a href="#s12-4-import" class="sub">@import Syntax</a>
+    <a href="#s12-4-rules" class="sub">.claude/rules/</a>
+    <a href="#s12-4-paths" class="sub">Path-Scoped Rules</a>
+    <a href="#s12-4-exam" class="sub">Exam Strategy</a>
+    <div class="nav-sep"></div>
+    <a href="#s12-5">12.5 — Auto Memory &amp; Best Practices</a>
+    <a href="#s12-5-memory" class="sub">Auto Memory System</a>
+    <a href="#s12-5-bp" class="sub">Best Practices</a>
+    <a href="#s12-5-exam" class="sub">Exam Strategy</a>
+    <div class="nav-sep"></div>
+    <a href="#connections">How It All Connects</a>
+    <a href="#checklist">Exam Readiness Checklist</a>
+    <a href="#practice">Practice Questions</a>
+    <a href="#pq-12-1" class="sub">12.1 Questions</a>
+    <a href="#pq-12-2" class="sub">12.2 Questions</a>
+    <a href="#pq-12-3" class="sub">12.3 Questions</a>
+    <a href="#pq-12-4" class="sub">12.4 Questions</a>
+    <a href="#pq-12-5" class="sub">12.5 Questions</a>
+  </nav>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════════════════════════ -->
+<main id="content">
+
+<!-- ─────────── TITLE ─────────── -->
+<h1 id="top">
+  Chapter 12: CLAUDE.md Configuration Hierarchy
+  <span class="sub">Claude Certified Architect — Foundations &amp; Professional</span>
+</h1>
+<p>
+  This chapter covers how Claude Code uses <code>CLAUDE.md</code> files to carry persistent context
+  across sessions. You will learn the four-scope hierarchy, file discovery mechanics, modular configuration with
+  <code>@import</code> directives and the <code>.claude/rules/</code> directory, and the complementary auto-memory
+  system. Mastering this chapter is essential for exam scenarios involving configuration precedence, monorepo setups,
+  and debugging "Claude ignores my instructions" situations.
+</p>
+
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ Critical Misconception Alert</div>
+  <code>CLAUDE.md</code> files are <strong>concatenated, not overridden</strong>. There is no "cascade" where a
+  more specific file replaces a broader one. All files are loaded additively into the context window. The phrase
+  "most specific wins" is the <strong>single most expensive assumption</strong> you can carry into this exam domain.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 12.1 — WHAT IS CLAUDE.md?
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="s12-1">12.1 — What Is CLAUDE.md?</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  <code>CLAUDE.md</code> is a plain-text Markdown file that Claude Code reads at the <strong>start of every session</strong>.
+  It provides persistent instructions — coding standards, build commands, project architecture, naming conventions —
+  so that you don't have to re-explain context every time. Claude Code loads its contents as a
+  <strong>user message after the system prompt</strong>. It is <em>advisory context</em>, not enforced configuration;
+  Claude tries to follow the instructions, but compliance is not guaranteed, especially for vague or conflicting rules.
+</p>
+
+<h3 id="s12-1-terms">Key Terms</h3>
+<table>
+  <thead>
+    <tr><th>Term</th><th>Definition</th><th>Example / Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>CLAUDE.md</code></td>
+      <td>A markdown configuration file read by Claude Code to give persistent context to the session.</td>
+      <td>Placed at project root, user home, managed policy path, or subdirectories.</td>
+    </tr>
+    <tr>
+      <td>Advisory Context</td>
+      <td>Instructions Claude reads and <em>tries</em> to follow — not a hard enforcement layer.</td>
+      <td>Adherence is estimated at ~80%. For guaranteed behavior, use <strong>hooks</strong>.</td>
+    </tr>
+    <tr>
+      <td>Session Context Window</td>
+      <td>The finite token budget for a Claude Code conversation, consumed by CLAUDE.md content.</td>
+      <td>Longer files = more tokens consumed = less room for conversation.</td>
+    </tr>
+    <tr>
+      <td>Hooks</td>
+      <td>Shell commands executed at fixed lifecycle events (e.g., PreToolUse, PostCommit) — deterministic, not advisory.</td>
+      <td>Use when a rule <em>must</em> fire every time (linting, formatting, blocking writes).</td>
+    </tr>
+    <tr>
+      <td><code>/init</code></td>
+      <td>Slash command that auto-generates a starter CLAUDE.md by analyzing the codebase.</td>
+      <td>If a file already exists, <code>/init</code> suggests improvements instead of overwriting.</td>
+    </tr>
+    <tr>
+      <td><code>/memory</code></td>
+      <td>Slash command that lists every CLAUDE.md, CLAUDE.local.md, and rules file in context.</td>
+      <td>First debugging step for "Claude ignores my rule" problems.</td>
+    </tr>
+    <tr>
+      <td><code>/context</code></td>
+      <td>Slash command that shows exactly which memory files loaded into the current session.</td>
+      <td>Verifies files are actually visible to Claude.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Visual Aid — CLAUDE.md vs. Hooks Decision Model</h3>
+<div class="diagram">                  ┌─────────────────────────────────┐
+                  │   "Does this rule MUST fire      │
+                  │    every single time?"            │
+                  └──────────────┬────────────────────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    ▼                         ▼
+             <span class="hl-green">YES → Use a Hook</span>          <span class="highlight">NO → Use CLAUDE.md</span>
+         (deterministic shell         (advisory context;
+          command; ~100%               ~80% adherence;
+          enforcement)                 Claude tries)
+
+  <span class="hl-amber">Examples:</span>
+  Hook: "Run eslint --fix after every edit"
+  Hook: "Block writes to /prod/ directory"
+  CLAUDE.md: "Prefer 2-space indentation"
+  CLAUDE.md: "Use TypeScript strict mode"</div>
+
+<h3>Annotated Code Example</h3>
+<pre><code><span class="code-comment">&lt;!-- CLAUDE.md — Project Root --&gt;</span>
+
+<span class="code-heading"># Project: invoice-api</span>
+
+<span class="code-heading">## Build &amp; Test</span>
+- Run <span class="code-string">`pnpm build`</span> to compile        <span class="code-comment">&lt;!-- Command Claude can't guess --&gt;</span>
+- Run <span class="code-string">`pnpm test:unit`</span> before committing  <span class="code-comment">&lt;!-- Specific enough to verify --&gt;</span>
+- <span class="code-keyword">IMPORTANT</span>: prefer single test files, not the full suite
+
+<span class="code-heading">## Code Style</span>
+- Use ES modules (import/export), not CommonJS
+- 2-space indentation                  <span class="code-comment">&lt;!-- Differs from default --&gt;</span>
+- Destructure imports when possible
+
+<span class="code-heading">## Architecture</span>
+- API handlers: <span class="code-string">`src/api/handlers/`</span>
+- Shared types: <span class="code-string">`src/types/`</span>
+- Never use <span class="code-string">`any`</span> type              <span class="code-comment">&lt;!-- Concrete, verifiable --&gt;</span></code></pre>
+
+<h3>Deep Dive — Edge Cases &amp; Gotchas</h3>
+<ul>
+  <li><strong>Not part of the system prompt:</strong> CLAUDE.md content is loaded as a <em>user message</em> after the system prompt. It is not injected into the system prompt. This distinction matters for override semantics.</li>
+  <li><strong>Size limit:</strong> A single CLAUDE.md file can be up to <strong>4 MiB</strong>. Files larger than 4 MiB are silently skipped — no error, no warning.</li>
+  <li><strong>Recommended size:</strong> Target <strong>under 200 lines</strong> per file. Longer files degrade adherence because important rules drown in noise.</li>
+  <li><strong>HTML comments are stripped:</strong> Block-level <code>&lt;!-- ... --&gt;</code> comments are removed before injection into context — they cost zero tokens. Use them for maintainer notes.</li>
+  <li><strong>Survives /compact:</strong> The project-root CLAUDE.md is re-read from disk after <code>/compact</code>. Subdirectory files and path-scoped rules reload on demand.</li>
+  <li><strong>Pruning test:</strong> For each line, ask: <em>"Would removing this cause Claude to make mistakes?"</em> If no — delete it.</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul class="mt-0">
+    <li>Use <code>IMPORTANT</code> or <code>YOU MUST</code> emphasis for 2–3 critical rules. If you bold everything, you've bolded nothing.</li>
+    <li>Use <code>/init</code> to bootstrap, then prune ruthlessly with the pruning test.</li>
+    <li>Don't include information Claude can derive from reading the code — file trees, dependency lists, architecture overviews are noise.</li>
+    <li>A rule that tells Claude to do what it already does by default wastes tokens.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exam" id="s12-1-exam">
+  <div class="callout-title">🎯 Exam Strategy — Section 12.1</div>
+  <ul class="mt-0">
+    <li><strong>Typical question angle:</strong> "Is CLAUDE.md enforced or advisory?" — Answer: advisory context, ~80% adherence.</li>
+    <li><strong>Trap:</strong> Options that describe CLAUDE.md as "system prompt configuration" — it loads as a <em>user message</em>, not system prompt.</li>
+    <li><strong>Trap:</strong> "CLAUDE.md files over 200 lines are rejected" — they're not rejected; the 200-line target is a recommendation. The hard limit is 4 MiB.</li>
+    <li><strong>Key differentiator:</strong> CLAUDE.md (advisory) vs. Hooks (deterministic) vs. Managed Settings (enforced by client).</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 12.2 — THE FOUR-SCOPE HIERARCHY
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="s12-2">12.2 — The Four-Scope Hierarchy</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  CLAUDE.md files exist at <strong>four distinct scopes</strong>, loaded from broadest to most specific.
+  All scopes are <strong>concatenated into context additively</strong> — nothing overrides anything else.
+  Instructions closer to where you launched Claude are read last. The mental model is a stack of context,
+  not a cascade of overrides.
+</p>
+
+<h3 id="s12-2-table">Scope Table — The Definitive Reference</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Scope</th>
+      <th>Location</th>
+      <th>Purpose</th>
+      <th>Shared With</th>
+      <th>Can Be Excluded?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="badge badge-red">1. MANAGED POLICY</span></td>
+      <td>
+        macOS: <code>/Library/Application Support/ClaudeCode/CLAUDE.md</code><br>
+        Linux/WSL: <code>/etc/claude-code/CLAUDE.md</code><br>
+        Windows: <code>C:\Program Files\ClaudeCode\CLAUDE.md</code>
+      </td>
+      <td>Org-wide rules deployed by IT/DevOps</td>
+      <td>All users on machine</td>
+      <td><strong>NO</strong> — cannot be excluded by <code>claudeMdExcludes</code></td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-purple">2. USER</span></td>
+      <td><code>~/.claude/CLAUDE.md</code></td>
+      <td>Personal preferences across all projects</td>
+      <td>Just you (all projects)</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-blue">3. PROJECT</span></td>
+      <td><code>./CLAUDE.md</code> or <code>./.claude/CLAUDE.md</code></td>
+      <td>Team-shared project instructions (committed to source control)</td>
+      <td>Team via VCS</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-green">4. LOCAL</span></td>
+      <td><code>./CLAUDE.local.md</code></td>
+      <td>Personal project-specific preferences (gitignored)</td>
+      <td>Just you (this project)</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ Gotcha — "Most Specific Wins" Is Wrong</div>
+  Scopes are <strong>additive/concatenated</strong>, not cascading overrides. If the managed policy says
+  "use tabs" and your project CLAUDE.md says "use spaces," both instructions appear in context and Claude
+  may pick either one arbitrarily. The only "precedence" is <strong>read order</strong>: later context
+  may have slightly higher salience, but this is an emergent behavior of the LLM, not a deterministic rule engine.
+</div>
+
+<h3 id="s12-2-diagram">Visual Aid — Four-Scope Load Order</h3>
+<div class="diagram"><span class="hl-red">  ┌─────────────────────────────────────────────┐</span>
+<span class="hl-red">  │  1. MANAGED POLICY                          │  ← Loaded FIRST (broadest)</span>
+<span class="hl-red">  │     /Library/.../ClaudeCode/CLAUDE.md        │     Cannot be excluded</span>
+<span class="hl-red">  │     OR managed-settings.json → claudeMd key  │</span>
+<span class="hl-red">  └──────────────────────┬──────────────────────┘</span>
+                         │ concatenated ↓
+<span class="hl-purple">  ┌──────────────────────┴──────────────────────┐</span>
+<span class="hl-purple">  │  2. USER INSTRUCTIONS                       │</span>
+<span class="hl-purple">  │     ~/.claude/CLAUDE.md                      │</span>
+<span class="hl-purple">  │     ~/.claude/rules/*.md (no paths: field)   │</span>
+<span class="hl-purple">  └──────────────────────┬──────────────────────┘</span>
+                         │ concatenated ↓
+<span class="highlight">  ┌──────────────────────┴──────────────────────┐</span>
+<span class="highlight">  │  3. PROJECT INSTRUCTIONS                    │</span>
+<span class="highlight">  │     ./CLAUDE.md  OR  ./.claude/CLAUDE.md    │  ← Committed to git</span>
+<span class="highlight">  │     ./.claude/rules/*.md                    │</span>
+<span class="highlight">  └──────────────────────┬──────────────────────┘</span>
+                         │ concatenated ↓
+<span class="hl-green">  ┌──────────────────────┴──────────────────────┐</span>
+<span class="hl-green">  │  4. LOCAL INSTRUCTIONS                      │  ← Loaded LAST (most specific)</span>
+<span class="hl-green">  │     ./CLAUDE.local.md                       │     Gitignored; personal</span>
+<span class="hl-green">  └─────────────────────────────────────────────┘</span>
+
+  <span class="hl-amber">ALL FOUR ARE CONCATENATED INTO ONE CONTEXT BLOCK</span>
+  <span class="hl-amber">Nothing is overridden — everything is additive.</span></div>
+
+<h3>Deep Dive — Edge Cases &amp; Gotchas</h3>
+<ul>
+  <li><strong>Two project-level locations:</strong> <code>./CLAUDE.md</code> and <code>./.claude/CLAUDE.md</code> are both valid. If both exist, both are loaded.</li>
+  <li><strong>Managed policy has two delivery mechanisms:</strong> A standalone <code>CLAUDE.md</code> file at the OS-specific path, <em>or</em> the <code>claudeMd</code> key inside <code>managed-settings.json</code>. Both have the same precedence.</li>
+  <li><strong>The <code>claudeMd</code> key only works in managed/policy settings.</strong> Setting it in user, project, or local settings has no effect — this is an exam trap.</li>
+  <li><strong><code>CLAUDE.local.md</code> is worktree-specific:</strong> In git worktrees, a gitignored local file only exists in the worktree where you created it. To share personal instructions across worktrees, use an <code>@import</code> pointing to your home directory.</li>
+  <li><strong>Settings vs. CLAUDE.md separation:</strong> Managed <em>settings</em> (<code>permissions.deny</code>, <code>sandbox.enabled</code>) are enforced by the client. Managed <em>CLAUDE.md</em> is still advisory context. Don't confuse the two.</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul class="mt-0">
+    <li>Start with the <strong>project file</strong> committed to git — it's the highest-leverage scope.</li>
+    <li>Use the <strong>user file</strong> only for genuinely personal preferences (commit style, verbosity) that have no business in a shared repo.</li>
+    <li>Use <code>CLAUDE.local.md</code> for sandbox URLs, personal test data, custom MCP servers — anything you'd .gitignore.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exam" id="s12-2-exam">
+  <div class="callout-title">🎯 Exam Strategy — Section 12.2</div>
+  <ul class="mt-0">
+    <li><strong>Favorite trap:</strong> "Which scope takes precedence?" — The answer is <em>none</em>; they're concatenated. If forced to pick, "read last" = slightly higher salience, but this is not deterministic.</li>
+    <li><strong>Watch for:</strong> Questions that claim the <code>claudeMd</code> key in <code>settings.json</code> works at all scopes — it only works in <strong>managed/policy</strong> settings.</li>
+    <li><strong>Watch for:</strong> Options that say managed policy can be excluded — it cannot.</li>
+    <li><strong>Recall anchor:</strong> <strong>M-U-P-L</strong> = Managed → User → Project → Local (load order, broadest to most specific).</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 12.3 — FILE DISCOVERY & LOADING
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="s12-3">12.3 — File Discovery &amp; Loading Mechanics</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  Claude Code doesn't just read the CLAUDE.md in your current directory — it walks the entire directory tree
+  <strong>from the filesystem root down to your CWD</strong>, loading every <code>CLAUDE.md</code> and
+  <code>CLAUDE.local.md</code> it finds along the way. Subdirectory files below CWD are loaded
+  <strong>lazily</strong> (on demand) when Claude reads files in those directories. This walk-up + lazy-load
+  model is the core discovery mechanism.
+</p>
+
+<h3 id="s12-3-walkup">The Walk-Up Algorithm</h3>
+
+<h4>How it works at launch</h4>
+<ol>
+  <li>Claude Code starts at the <strong>filesystem root</strong> and walks <strong>down</strong> to your CWD.</li>
+  <li>At <strong>each directory level</strong>, it loads <code>CLAUDE.md</code>, then <code>CLAUDE.local.md</code> (if present).</li>
+  <li>Content is ordered: <strong>root-most first → CWD last</strong>. Within each directory, local is appended after project.</li>
+  <li>Managed policy and user-level files load before the directory walk.</li>
+</ol>
+
+<h3>Visual Aid — Walk-Up Discovery Example</h3>
+<div class="diagram">  <span class="hl-amber">Scenario:</span> You run `claude` in <span class="highlight">/home/dev/monorepo/packages/api/</span>
+
+  Discovery order (launch):
+
+  <span class="hl-red">1.</span> Managed policy:      /etc/claude-code/CLAUDE.md
+  <span class="hl-purple">2.</span> User:                ~/.claude/CLAUDE.md
+  <span class="hl-teal">3.</span> Walk-up root level:  /CLAUDE.md                        (if exists)
+  <span class="hl-teal">4.</span> Walk-up:             /home/CLAUDE.md                    (if exists)
+  <span class="hl-teal">5.</span> Walk-up:             /home/dev/CLAUDE.md                (if exists)
+  <span class="hl-teal">6.</span> Walk-up:             /home/dev/monorepo/CLAUDE.md       ✓ exists
+  <span class="hl-teal">7.</span> Walk-up:             /home/dev/monorepo/CLAUDE.local.md (if exists)
+  <span class="hl-teal">8.</span> Walk-up:             .../monorepo/packages/CLAUDE.md    (if exists)
+  <span class="highlight">9.</span> CWD:                 .../packages/api/CLAUDE.md         ✓ exists
+  <span class="hl-green">10.</span> CWD local:           .../packages/api/CLAUDE.local.md   ✓ exists
+
+  <span class="hl-amber">Result:</span> All discovered files are CONCATENATED into context.
+          Monorepo root → packages → api → api.local</div>
+
+<h3 id="s12-3-lazy">Subdirectory Lazy Loading</h3>
+<table>
+  <thead>
+    <tr><th>Behavior</th><th>When It Happens</th><th>Key Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Walk-up (eager)</td>
+      <td>Session launch</td>
+      <td>CWD and every directory <em>above</em> CWD — loaded immediately</td>
+    </tr>
+    <tr>
+      <td>Subdirectory (lazy)</td>
+      <td>When Claude reads files in that subdirectory</td>
+      <td>Directories <em>below</em> CWD — loaded on demand only</td>
+    </tr>
+    <tr>
+      <td>After <code>/compact</code></td>
+      <td>Context compaction event</td>
+      <td>Project-root CLAUDE.md is re-read from disk. Subdirectory files reload only when Claude touches matching files again.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Deep Dive — Edge Cases &amp; Gotchas</h3>
+<ul>
+  <li><strong><code>claudeMdExcludes</code>:</strong> Glob patterns in <code>.claude/settings.local.json</code> that skip specific CLAUDE.md files. Patterns match against <em>absolute file paths</em>. Arrays merge across settings layers. <strong>Managed policy files cannot be excluded.</strong></li>
+  <li><strong><code>--add-dir</code> flag:</strong> Gives Claude access to additional directories. CLAUDE.md files from these dirs are <strong>NOT</strong> loaded by default. Set <code>CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1</code> to include them.</li>
+  <li><strong>Monorepo pitfall:</strong> In large monorepos, ancestor CLAUDE.md files from other teams get picked up by the walk-up. Use <code>claudeMdExcludes</code> to skip irrelevant ones.</li>
+  <li><strong>Conversation-only instructions vanish:</strong> Instructions given only in chat (not written to CLAUDE.md) disappear after <code>/compact</code>. Add them to the file to persist.</li>
+</ul>
+
+<div class="callout callout-best">
+  <div class="callout-title">✅ Best Practice — Verify What Loaded</div>
+  Run <code>/context</code> at the start of any debugging session. It lists every memory file Claude can see.
+  If your CLAUDE.md isn't listed, Claude literally cannot see it. This explains most "ignored rule" complaints.
+</div>
+
+<div class="callout callout-exam" id="s12-3-exam">
+  <div class="callout-title">🎯 Exam Strategy — Section 12.3</div>
+  <ul class="mt-0">
+    <li><strong>Common question:</strong> "In which order are files loaded when CWD is X?" — Walk from root down, listing every CLAUDE.md + CLAUDE.local.md pair.</li>
+    <li><strong>Trap:</strong> "Subdirectory CLAUDE.md files load at session start" — they do NOT; they load lazily.</li>
+    <li><strong>Trap:</strong> "After /compact, all CLAUDE.md files reload" — only the project-root file re-reads from disk. Subdirectory files require Claude to touch files there again.</li>
+    <li><strong>Recall anchor:</strong> Walk-up = eager. Walk-down = lazy.</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 12.4 — @IMPORTS & MODULAR RULES
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="s12-4">12.4 — @imports &amp; Modular Rules</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  As projects grow, CLAUDE.md files can be split into modular fragments using two mechanisms:
+  <strong>@import directives</strong> (inline file inclusion) and the <strong><code>.claude/rules/</code> directory</strong>
+  (topic-specific rule files). Both help with organization, but neither reduces token usage — imported content
+  and unconditional rules still load into the context window at launch. Path-scoped rules are the exception:
+  they load on demand when Claude touches matching files.
+</p>
+
+<h3 id="s12-4-import">@import Syntax</h3>
+
+<h4>Key Rules</h4>
+<table>
+  <thead>
+    <tr><th>Rule</th><th>Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Syntax</td>
+      <td><code>@path/to/file</code> — bare, outside code fences or backtick spans</td>
+    </tr>
+    <tr>
+      <td>Path resolution</td>
+      <td>Relative paths resolve <strong>relative to the file containing the import</strong>, not the CWD</td>
+    </tr>
+    <tr>
+      <td>Absolute paths</td>
+      <td>Allowed — e.g. <code>@/home/user/shared-rules.md</code></td>
+    </tr>
+    <tr>
+      <td>Recursive imports</td>
+      <td>Imported files can import other files, up to a <strong>maximum depth of 4 hops</strong></td>
+    </tr>
+    <tr>
+      <td>Escaping</td>
+      <td>Wrap in backticks to prevent import: <code>`@README`</code> stays literal. Fenced code blocks also suppress imports.</td>
+    </tr>
+    <tr>
+      <td>External imports</td>
+      <td>An import resolving outside CWD triggers an <strong>approval dialog</strong> on first encounter.</td>
+    </tr>
+    <tr>
+      <td>Token impact</td>
+      <td>Imported files <strong>still load into context at launch</strong> — imports help organization, not token savings.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Annotated Code Example — @import</h3>
+<pre><code><span class="code-comment">&lt;!-- CLAUDE.md — Project Root --&gt;</span>
+
+<span class="code-heading"># invoice-api</span>
+
+See <span class="code-directive">@README.md</span> for project overview.          <span class="code-comment">&lt;!-- Imports README content --&gt;</span>
+Check <span class="code-directive">@package.json</span> for available scripts.    <span class="code-comment">&lt;!-- Imports package.json --&gt;</span>
+
+<span class="code-heading">## Shared Standards</span>
+<span class="code-directive">@docs/coding-standards.md</span>                     <span class="code-comment">&lt;!-- Relative to this file --&gt;</span>
+<span class="code-directive">@docs/security-rules.md</span>                       <span class="code-comment">&lt;!-- Max 4 hops of recursion --&gt;</span>
+
+<span class="code-heading">## Cross-Reference (not imported)</span>
+See <span class="code-string">`@AGENTS.md`</span> for other tools' config.       <span class="code-comment">&lt;!-- Backticks = literal --&gt;</span>
+
+<span class="code-heading">## Bridge AGENTS.md</span>
+<span class="code-directive">@AGENTS.md</span>                                    <span class="code-comment">&lt;!-- Imports AGENTS.md --&gt;</span></code></pre>
+
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ Gotcha — @import ≠ Token Savings</div>
+  Splitting CLAUDE.md into <code>@import</code>ed fragments is <strong>organizational</strong>, not a token optimization.
+  All imported content loads at launch. To genuinely reduce context consumption, use
+  <strong>path-scoped rules</strong> that load on demand.
+</div>
+
+<h3 id="s12-4-rules">The .claude/rules/ Directory</h3>
+
+<h3>Visual Aid — Directory Structure</h3>
+<pre><code>your-project/
+├── .claude/
+│   ├── CLAUDE.md            <span class="code-comment"># Main project instructions</span>
+│   ├── settings.json        <span class="code-comment"># Project settings</span>
+│   └── rules/
+│       ├── code-style.md    <span class="code-comment"># Always loaded (no paths: field)</span>
+│       ├── testing.md       <span class="code-comment"># Always loaded</span>
+│       ├── security.md      <span class="code-comment"># Always loaded</span>
+│       ├── api-rules.md     <span class="code-comment"># Path-scoped → loaded on demand</span>
+│       └── frontend/
+│           └── react.md     <span class="code-comment"># Path-scoped → loaded on demand</span>
+├── CLAUDE.md                <span class="code-comment"># Alternative project-root location</span>
+└── CLAUDE.local.md          <span class="code-comment"># Personal, gitignored</span></code></pre>
+
+<h4>Rules behavior</h4>
+<ul>
+  <li>Rules <strong>without</strong> a <code>paths</code> frontmatter field load <strong>unconditionally</strong> at launch, same priority as <code>.claude/CLAUDE.md</code>.</li>
+  <li>Rules <strong>with</strong> a <code>paths</code> field load <strong>on demand</strong> when Claude reads files matching the glob patterns.</li>
+  <li>Rules are discovered <strong>recursively</strong> in subdirectories of <code>.claude/rules/</code>.</li>
+  <li>Symlinks are supported — circular symlinks are detected gracefully.</li>
+  <li>User-level rules in <code>~/.claude/rules/</code> apply to every project on your machine, loaded before project rules.</li>
+</ul>
+
+<h3 id="s12-4-paths">Path-Scoped Rules — The Key to Token Efficiency</h3>
+<pre><code><span class="code-comment"># .claude/rules/api-rules.md</span>
+<span class="code-keyword">---</span>
+<span class="code-keyword">paths:</span>
+  - <span class="code-string">"src/api/**/*.ts"</span>
+  - <span class="code-string">"src/api/**/*.tsx"</span>
+<span class="code-keyword">---</span>
+
+<span class="code-heading"># API Development Rules</span>
+
+- All API endpoints must include input validation
+- Use the standard error response format
+- Include OpenAPI documentation comments
+- <span class="code-keyword">IMPORTANT</span>: Never expose internal error messages to clients</code></pre>
+
+<h4>Glob pattern reference</h4>
+<table>
+  <thead>
+    <tr><th>Pattern</th><th>Matches</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>**/*.ts</code></td><td>All TypeScript files in any directory</td></tr>
+    <tr><td><code>src/**/*</code></td><td>All files under src/</td></tr>
+    <tr><td><code>*.md</code></td><td>Markdown files in the project root only</td></tr>
+    <tr><td><code>src/components/*.tsx</code></td><td>React components in a specific directory</td></tr>
+    <tr><td><code>src/**/*.{ts,tsx}</code></td><td>Brace expansion — matches both .ts and .tsx</td></tr>
+  </tbody>
+</table>
+
+<div class="callout callout-best">
+  <div class="callout-title">✅ Best Practice — When to Use Each Mechanism</div>
+  <table class="mt-0" style="margin-bottom:0">
+    <thead><tr><th>Mechanism</th><th>Use When</th><th>Token Impact</th></tr></thead>
+    <tbody>
+      <tr><td><code>CLAUDE.md</code> (single file)</td><td>Small projects, &lt;200 lines</td><td>Always loaded</td></tr>
+      <tr><td><code>@import</code></td><td>Organization; shared fragments across files</td><td>Always loaded</td></tr>
+      <tr><td><code>.claude/rules/</code> (no paths)</td><td>Topic modularity; file &gt;200 lines</td><td>Always loaded</td></tr>
+      <tr><td><code>.claude/rules/</code> (with paths)</td><td><strong>Genuine token savings</strong>; rules for specific parts of codebase</td><td>On demand only</td></tr>
+      <tr><td>Skills (<code>.claude/skills/</code>)</td><td>Task-specific workflows, not needed every session</td><td>On demand (invoked)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Deep Dive — Edge Cases &amp; Gotchas</h3>
+<ul>
+  <li><strong>Brace expansion limit:</strong> A rule's entire <code>paths</code> list shares a budget of <strong>1,000 expanded patterns</strong> and <strong>4 MiB</strong>. Exceeding this causes the pattern to be used unexpanded (literal braces match nothing).</li>
+  <li><strong>Bracket syntax:</strong> <code>[</code> starts a bracket expression. A pattern like <code>photos [2024/**</code> is invalid and matches nothing. Escape as <code>photos \[2024/**</code>.</li>
+  <li><strong>Symlinked rules outside CWD</strong> behave like external imports — they require approval and only non-path-scoped rules load.</li>
+  <li><strong>Path-scoped rules trigger on file reads</strong>, not on every tool use. Claude must actually read a file matching the glob.</li>
+</ul>
+
+<div class="callout callout-exam" id="s12-4-exam">
+  <div class="callout-title">🎯 Exam Strategy — Section 12.4</div>
+  <ul class="mt-0">
+    <li><strong>Favorite trap:</strong> "@import reduces token usage" — it does NOT. Content is expanded at launch.</li>
+    <li><strong>Trick question:</strong> "What is the maximum import depth?" — <strong>4 hops</strong>.</li>
+    <li><strong>Key distinction:</strong> Rules without <code>paths:</code> = always loaded. Rules with <code>paths:</code> = on demand = token savings.</li>
+    <li><strong>Path resolution:</strong> Imports resolve relative to <em>the file containing the import</em>, not CWD. This is tested frequently.</li>
+    <li><strong>Watch for:</strong> Code in backticks is NOT imported — <code>`@README`</code> is literal text.</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 12.5 — AUTO MEMORY & BEST PRACTICES
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="s12-5">12.5 — Auto Memory, Debugging &amp; Best Practices</h2>
+
+<h3>Concept Summary</h3>
+<p>
+  Claude Code has <strong>two complementary memory systems</strong>: CLAUDE.md files (written by you) and
+  <strong>auto memory</strong> (written by Claude). Auto memory lets Claude accumulate knowledge across sessions
+  without manual effort. It stores four kinds of notes: user preferences, feedback/corrections, project context,
+  and reference information. Understanding the interaction between these two systems — and knowing when to use
+  hooks instead of either — is the capstone of this chapter.
+</p>
+
+<h3 id="s12-5-memory">Auto Memory System</h3>
+
+<h4>Comparison: CLAUDE.md vs. Auto Memory</h4>
+<table>
+  <thead>
+    <tr><th>Dimension</th><th>CLAUDE.md</th><th>Auto Memory</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Who writes it</strong></td><td>You (the developer)</td><td>Claude (automatically)</td></tr>
+    <tr><td><strong>Content</strong></td><td>Instructions and rules</td><td>Learnings, corrections, patterns</td></tr>
+    <tr><td><strong>Scope</strong></td><td>Project, user, or org</td><td>Per repository (shared across worktrees)</td></tr>
+    <tr><td><strong>Loaded into</strong></td><td>Every session (full file, up to 4 MiB)</td><td>Every session (first 200 lines or 25 KB of MEMORY.md)</td></tr>
+    <tr><td><strong>Storage</strong></td><td>In the project directory or user home</td><td><code>~/.claude/projects/&lt;project&gt;/memory/</code></td></tr>
+    <tr><td><strong>Shareable</strong></td><td>Yes — commit to git</td><td>No — machine-local only</td></tr>
+    <tr><td><strong>Topic files</strong></td><td>N/A</td><td>Loaded on demand (not at startup)</td></tr>
+  </tbody>
+</table>
+
+<h4>Auto Memory Directory Structure</h4>
+<pre><code>~/.claude/projects/&lt;project&gt;/memory/
+├── MEMORY.md              <span class="code-comment"># Index — first 200 lines loaded each session</span>
+├── user_role.md           <span class="code-comment"># Topic file — loaded on demand</span>
+├── feedback_testing.md    <span class="code-comment"># Topic file — loaded on demand</span>
+└── project_deadlines.md   <span class="code-comment"># Topic file — loaded on demand</span></code></pre>
+
+<h4>Memory Types (Frontmatter <code>type</code> field)</h4>
+<table>
+  <thead><tr><th>Type</th><th>What Claude Records</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td><code>user</code></td><td>Your role, expertise, working preferences</td><td>"Senior backend engineer, prefers verbose tests"</td></tr>
+    <tr><td><code>feedback</code></td><td>Corrections you give, approaches you confirm</td><td>"Always use pnpm, not npm"</td></tr>
+    <tr><td><code>project</code></td><td>Ongoing work, deadlines, decisions</td><td>"API migration deadline: March 15"</td></tr>
+    <tr><td><code>reference</code></td><td>Where to find information outside the project</td><td>"Issue tracker: Linear board 'backend'"</td></tr>
+  </tbody>
+</table>
+
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ Gotcha — MEMORY.md Size Limits</div>
+  <ul class="mt-0">
+    <li>Only the <strong>first 200 lines or 25 KB</strong> (whichever is reached first) of <code>MEMORY.md</code> is loaded at session start.</li>
+    <li>Content beyond the threshold is <strong>silently dropped</strong>.</li>
+    <li>This limit applies <strong>only to MEMORY.md</strong>. CLAUDE.md files can be up to 4 MiB.</li>
+    <li>Topic files (e.g., <code>user_role.md</code>) are NOT loaded at startup — Claude reads them on demand.</li>
+  </ul>
+</div>
+
+<h3 id="s12-5-bp">Best Practices &amp; Debugging</h3>
+
+<h4>The Pruning Test</h4>
+<div class="callout callout-best">
+  <div class="callout-title">✅ The Single Most Valuable Habit</div>
+  For each line in your CLAUDE.md, ask: <strong>"Would removing this cause Claude to make mistakes?"</strong><br>
+  If the answer is no — <strong>delete the line</strong>. Run this test every time the file grows.
+</div>
+
+<h4>Writing Effective Instructions</h4>
+<table>
+  <thead><tr><th>❌ Instead of (vague)</th><th>✅ Write (specific, verifiable)</th></tr></thead>
+  <tbody>
+    <tr><td>"Format code properly"</td><td>"Use 2-space indentation"</td></tr>
+    <tr><td>"Test your changes"</td><td>"Run <code>npm test</code> before committing"</td></tr>
+    <tr><td>"Keep files organized"</td><td>"API handlers live in <code>src/api/handlers/</code>"</td></tr>
+    <tr><td>"Write clean code"</td><td>(Delete — self-evident noise)</td></tr>
+    <tr><td>"Be careful with security"</td><td>"Never log request bodies that may contain PII"</td></tr>
+  </tbody>
+</table>
+
+<h4>The Three-Tier Enforcement Model</h4>
+<div class="diagram"><span class="hl-green">  ┌──────────────────────────────────────────────────────┐</span>
+<span class="hl-green">  │  TIER 1: MANAGED SETTINGS                           │</span>
+<span class="hl-green">  │  ✓ Enforced by the client, deterministic             │</span>
+<span class="hl-green">  │  → permissions.deny, sandbox.enabled, env vars       │</span>
+<span class="hl-green">  └────────────────────────┬─────────────────────────────┘</span>
+                           │
+<span class="hl-amber">  ┌────────────────────────┴─────────────────────────────┐</span>
+<span class="hl-amber">  │  TIER 2: HOOKS                                      │</span>
+<span class="hl-amber">  │  ✓ Shell commands at lifecycle events, deterministic  │</span>
+<span class="hl-amber">  │  → PreToolUse, PostCommit — run regardless of Claude │</span>
+<span class="hl-amber">  └────────────────────────┬─────────────────────────────┘</span>
+                           │
+<span class="highlight">  ┌────────────────────────┴─────────────────────────────┐</span>
+<span class="highlight">  │  TIER 3: CLAUDE.md / AUTO MEMORY                    │</span>
+<span class="highlight">  │  ~ Advisory context, Claude tries (~80% adherence)   │</span>
+<span class="highlight">  │  → Coding standards, conventions, preferences        │</span>
+<span class="highlight">  └──────────────────────────────────────────────────────┘</span></div>
+
+<h4>Debugging "Claude Ignores My Rule"</h4>
+<ol>
+  <li><strong>Run <code>/context</code></strong> — verify the file is listed under Memory files.</li>
+  <li><strong>Run <code>/memory</code></strong> — browse all memory files and open for editing.</li>
+  <li><strong>Check conflicting instructions</strong> — if two files disagree, Claude picks arbitrarily.</li>
+  <li><strong>Make instructions more specific</strong> — vague rules are unreliable.</li>
+  <li><strong>Check if the rule should be a hook</strong> — if it must fire every time, prose isn't enough.</li>
+  <li><strong>Check after <code>/compact</code></strong> — nested/subdirectory files may not have reloaded yet.</li>
+</ol>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 Tips &amp; Tricks</div>
+  <ul class="mt-0">
+    <li>Use the <code>InstructionsLoaded</code> hook to log exactly which instruction files are loaded, when, and why.</li>
+    <li>"Remember X" told to Claude saves to <strong>auto memory</strong>. "Add X to CLAUDE.md" edits the <strong>CLAUDE.md file</strong>. Know the difference.</li>
+    <li>Auto memory is machine-local and never committed to git. Worktrees of the same repo share one memory directory.</li>
+    <li>The <code>/init</code> trim check (v2.1.206+) proposes pruning for checked-in CLAUDE.md files automatically.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exam" id="s12-5-exam">
+  <div class="callout-title">🎯 Exam Strategy — Section 12.5</div>
+  <ul class="mt-0">
+    <li><strong>Key distinction tested:</strong> CLAUDE.md (written by you, instructions) vs. auto memory (written by Claude, learnings). The exam loves switching these.</li>
+    <li><strong>Trap:</strong> "Auto memory is shared via git" — it is NOT. It's machine-local.</li>
+    <li><strong>Trap:</strong> "MEMORY.md loads completely" — only first 200 lines / 25 KB.</li>
+    <li><strong>Favorite scenario:</strong> "A rule must always execute. Where do you put it?" — Answer: a <strong>hook</strong>, not CLAUDE.md.</li>
+    <li><strong>Recall anchors:</strong> 200 lines (MEMORY.md limit), 4 MiB (CLAUDE.md max), 4 hops (import depth), ~80% (adherence estimate).</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOW IT ALL CONNECTS
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="connections">How It All Connects — Cross-Section Synthesis</h2>
+
+<h3>Logical Progression: 12.1 → 12.2 → 12.3 → 12.4 → 12.5</h3>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Concept</th><th>Builds On</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>12.1</strong></td>
+      <td><em>What</em> CLAUDE.md is — advisory context, not enforced config</td>
+      <td>Foundation; establishes the core mental model</td>
+    </tr>
+    <tr>
+      <td><strong>12.2</strong></td>
+      <td><em>Where</em> CLAUDE.md lives — four scopes, additive concatenation</td>
+      <td>12.1's single-file concept expands to multiple co-existing files</td>
+    </tr>
+    <tr>
+      <td><strong>12.3</strong></td>
+      <td><em>How</em> files are found — walk-up algorithm, lazy subdirectory loading</td>
+      <td>12.2's four scopes need a discovery mechanism to actually load</td>
+    </tr>
+    <tr>
+      <td><strong>12.4</strong></td>
+      <td><em>Scaling</em> — @imports, modular rules, path-scoped efficiency</td>
+      <td>12.3's loading model explains <em>when</em> path-scoped rules trigger</td>
+    </tr>
+    <tr>
+      <td><strong>12.5</strong></td>
+      <td><em>Complementary systems</em> — auto memory, debugging, best practices</td>
+      <td>Unifies everything: when to use CLAUDE.md vs. memory vs. hooks</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Master Hierarchy Diagram</h3>
+<div class="diagram">  <span class="hl-amber">═══════════════════════════════════════════════════════════════</span>
+  <span class="hl-amber">             COMPLETE CLAUDE CODE MEMORY ARCHITECTURE</span>
+  <span class="hl-amber">═══════════════════════════════════════════════════════════════</span>
+
+  <span class="hl-red">TIER 1 — ENFORCED (Managed Settings)</span>
+  ┌─────────────────────────────────────────────────────────┐
+  │  managed-settings.json                                  │
+  │  → permissions.deny, sandbox.enabled, env, claudeMd key │
+  │  Enforced by client — cannot be overridden              │
+  └──────────────────────────┬──────────────────────────────┘
+                             │
+  <span class="hl-amber">TIER 2 — DETERMINISTIC (Hooks)</span>
+  ┌──────────────────────────┴──────────────────────────────┐
+  │  .claude/hooks/ or settings.json hooks config           │
+  │  → PreToolUse, PostToolUse, PostCommit, etc.            │
+  │  Shell commands at lifecycle events — always execute     │
+  └──────────────────────────┬──────────────────────────────┘
+                             │
+  <span class="highlight">TIER 3 — ADVISORY CONTEXT (CLAUDE.md + Auto Memory)</span>
+  ┌──────────────────────────┴──────────────────────────────┐
+  │                                                         │
+  │  <span class="hl-red">A. Managed CLAUDE.md</span>   (cannot exclude)              │
+  │     │                                                   │
+  │  <span class="hl-purple">B. User CLAUDE.md</span>     ~/.claude/CLAUDE.md            │
+  │     │  + ~/.claude/rules/*.md                           │
+  │     │                                                   │
+  │  <span class="highlight">C. Walk-up CLAUDE.md</span>  (root → CWD, each directory)  │
+  │     │  + @imports expanded inline (max 4 hops)          │
+  │     │  + CLAUDE.local.md appended at each level         │
+  │     │                                                   │
+  │  <span class="hl-green">D. Project rules</span>      .claude/rules/*.md             │
+  │     │  Unconditional = always loaded                    │
+  │     │  Path-scoped   = loaded on demand                 │
+  │     │                                                   │
+  │  <span class="hl-teal">E. Subdirectory CLAUDE.md</span>  (lazy, below CWD)         │
+  │     │  Loaded when Claude reads files there             │
+  │     │                                                   │
+  │  <span class="hl-purple">F. Auto Memory</span>                                       │
+  │     MEMORY.md index (200 lines / 25 KB cap)             │
+  │     + topic files on demand                             │
+  │                                                         │
+  └─────────────────────────────────────────────────────────┘
+
+  <span class="hl-amber">ALL advisory items are CONCATENATED (additive, no overrides).</span>
+  <span class="hl-amber">Numbers in A–F represent approximate load order, not priority.</span></div>
+
+<div class="callout callout-xref">
+  <div class="callout-title">🔗 Cross-Reference — Related Exam Domains</div>
+  <ul class="mt-0">
+    <li><strong>Chapter 10 (Hooks):</strong> Deterministic lifecycle commands — the enforcement layer CLAUDE.md cannot provide.</li>
+    <li><strong>Chapter 11 (Skills &amp; Subagents):</strong> On-demand workflows that complement CLAUDE.md's always-on context.</li>
+    <li><strong>Chapter 13 (Managed Settings):</strong> Enterprise deployment patterns — permissions, sandbox, managed claudeMd key.</li>
+    <li><strong>Chapter 9 (MCP Servers):</strong> Tool integrations configured via <code>.mcp.json</code>, separate from CLAUDE.md content.</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     EXAM READINESS CHECKLIST
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="checklist">Exam Readiness Checklist</h2>
+<p>Every concept, configuration pattern, and skill you must know cold. Print this page and check off each item during review.</p>
+
+<h3>12.1 — Fundamentals</h3>
+<ul class="checklist">
+  <li>CLAUDE.md is advisory context, not enforced configuration</li>
+  <li>Content loads as a user message after the system prompt</li>
+  <li>Adherence is approximately 80% — hooks provide 100%</li>
+  <li>Hard file size limit: 4 MiB (files &gt;4 MiB are silently skipped)</li>
+  <li>Recommended size: under 200 lines per file</li>
+  <li>HTML comments (<code>&lt;!-- --&gt;</code>) are stripped before injection (zero tokens)</li>
+  <li><code>/init</code> generates a starter CLAUDE.md; <code>/init</code> on existing file suggests improvements</li>
+  <li><code>/memory</code> lists all memory files; <code>/context</code> shows what's loaded in the current session</li>
+  <li>After <code>/compact</code>, the project-root CLAUDE.md is re-read from disk</li>
+  <li>The pruning test: "Would removing this cause Claude to make mistakes?"</li>
+</ul>
+
+<h3>12.2 — Four-Scope Hierarchy</h3>
+<ul class="checklist">
+  <li>Load order: Managed Policy → User → Project → Local (M-U-P-L mnemonic)</li>
+  <li>All scopes are concatenated (additive), NOT overridden</li>
+  <li>Managed Policy locations: macOS, Linux/WSL, Windows paths</li>
+  <li>Managed Policy CANNOT be excluded by <code>claudeMdExcludes</code></li>
+  <li>User: <code>~/.claude/CLAUDE.md</code> — personal preferences across all projects</li>
+  <li>Project: <code>./CLAUDE.md</code> or <code>./.claude/CLAUDE.md</code> — committed to git</li>
+  <li>Local: <code>./CLAUDE.local.md</code> — gitignored, personal project notes</li>
+  <li>The <code>claudeMd</code> key in settings only works at managed/policy level</li>
+  <li>CLAUDE.local.md is worktree-specific; use @import for cross-worktree sharing</li>
+  <li>Settings (enforced by client) ≠ CLAUDE.md (advisory to Claude)</li>
+</ul>
+
+<h3>12.3 — File Discovery &amp; Loading</h3>
+<ul class="checklist">
+  <li>Walk-up: loads from filesystem root down to CWD at session launch</li>
+  <li>At each directory level: CLAUDE.md first, then CLAUDE.local.md</li>
+  <li>Subdirectory files below CWD: lazy-loaded when Claude reads files there</li>
+  <li><code>claudeMdExcludes</code>: glob patterns matched against absolute paths</li>
+  <li><code>claudeMdExcludes</code> arrays merge across settings layers</li>
+  <li><code>--add-dir</code> does NOT load CLAUDE.md from additional dirs by default</li>
+  <li>Set <code>CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1</code> to include them</li>
+  <li>After <code>/compact</code>: root CLAUDE.md re-reads; subdirectory files reload on next file touch</li>
+  <li>Conversation-only instructions disappear after <code>/compact</code></li>
+</ul>
+
+<h3>12.4 — @imports &amp; Modular Rules</h3>
+<ul class="checklist">
+  <li><code>@path/to/file</code> syntax imports content inline</li>
+  <li>Paths resolve relative to the importing file, not CWD</li>
+  <li>Maximum recursive import depth: 4 hops</li>
+  <li>Backticks (<code>`@path`</code>) and code fences suppress imports</li>
+  <li>External imports (outside CWD) trigger an approval dialog</li>
+  <li>Imports do NOT reduce token usage — content loads at launch</li>
+  <li><code>.claude/rules/</code> files are discovered recursively</li>
+  <li>Rules without <code>paths:</code> = always loaded (unconditional)</li>
+  <li>Rules with <code>paths:</code> = loaded on demand (genuine token savings)</li>
+  <li>Brace expansion budget: 1,000 expanded patterns / 4 MiB per rule</li>
+  <li>Symlinked rules outside CWD behave like external imports (approval required)</li>
+  <li>User-level rules (<code>~/.claude/rules/</code>) load before project rules</li>
+</ul>
+
+<h3>12.5 — Auto Memory &amp; Best Practices</h3>
+<ul class="checklist">
+  <li>CLAUDE.md = written by you (instructions); auto memory = written by Claude (learnings)</li>
+  <li>Auto memory is on by default; toggle via <code>/memory</code> or <code>autoMemoryEnabled</code> setting</li>
+  <li>Storage: <code>~/.claude/projects/&lt;project&gt;/memory/</code></li>
+  <li>MEMORY.md index: first 200 lines or 25 KB loaded each session</li>
+  <li>Topic files are loaded on demand, not at session start</li>
+  <li>Auto memory is machine-local — not shareable via git</li>
+  <li>Four memory types: user, feedback, project, reference</li>
+  <li>Claude skips info it can derive from the codebase or CLAUDE.md already says</li>
+  <li>Three-tier enforcement: Managed Settings → Hooks → CLAUDE.md/Memory</li>
+  <li>Debugging flow: <code>/context</code> → <code>/memory</code> → check conflicts → increase specificity → consider hooks</li>
+  <li>Write instructions specific enough to verify: concrete &gt; vague</li>
+  <li><code>IMPORTANT</code> emphasis on 2–3 critical rules maximum</li>
+</ul>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRACTICE QUESTIONS
+     ═══════════════════════════════════════════════════════════ -->
+<h2 id="practice">Practice Questions — 25 Multiple-Choice</h2>
+<p>5 questions per section. Click <strong>"Show Answer"</strong> to reveal the correct answer, detailed rationale, and trap analysis.</p>
+
+<!-- ─── SECTION 12.1 QUESTIONS ─── -->
+<h3 id="pq-12-1">Section 12.1 — What Is CLAUDE.md? (Q1–Q5)</h3>
+
+<div class="question-block">
+  <h4>Q1. How does Claude Code deliver CLAUDE.md content to the model?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> As part of the system prompt, with highest priority</li>
+    <li><strong>B.</strong> As a user message injected after the system prompt</li>
+    <li><strong>C.</strong> As a tool call result at the start of each turn</li>
+    <li><strong>D.</strong> As a RAG retrieval document appended to the first query</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>CLAUDE.md content is delivered as a <strong>user message after the system prompt</strong>. It is not part of the system prompt itself, and it is not retrieved via RAG or tool calls.</p>
+      <p><span class="trap">🪤 Trap in A:</span> "System prompt" is the most common misconception. Many developers assume CLAUDE.md is injected into the system prompt, but Anthropic's documentation explicitly states it's a user message.</p>
+      <p><span class="trap">🪤 Trap in D:</span> RAG retrieval sounds plausible for context injection, but CLAUDE.md is loaded eagerly at session start, not retrieved on demand.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q2. What is the maximum file size for a single CLAUDE.md file?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> 200 lines</li>
+    <li><strong>B.</strong> 25 KB</li>
+    <li><strong>C.</strong> 4 MiB</li>
+    <li><strong>D.</strong> No limit; the entire file is always loaded</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>A single CLAUDE.md file can be up to <strong>4 MiB</strong>. Files larger than 4 MiB are silently skipped.</p>
+      <p><span class="trap">🪤 Trap in A:</span> 200 lines is the <em>recommended</em> target for optimal adherence, not a hard limit. Many test-takers confuse the recommendation with the actual constraint.</p>
+      <p><span class="trap">🪤 Trap in B:</span> 25 KB is the limit for <em>MEMORY.md</em> (auto memory index), not CLAUDE.md. The exam frequently swaps these numbers.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q3. A developer needs to ensure that <code>eslint --fix</code> runs after every file edit, without exception. Where should this rule be configured?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> In <code>CLAUDE.md</code> with the <code>IMPORTANT</code> keyword</li>
+    <li><strong>B.</strong> In a <code>.claude/rules/linting.md</code> file</li>
+    <li><strong>C.</strong> In a lifecycle hook (e.g., PostToolUse)</li>
+    <li><strong>D.</strong> In the managed policy CLAUDE.md</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>The key phrase is <em>"without exception."</em> CLAUDE.md is advisory (~80% adherence). Only <strong>hooks</strong> provide deterministic, 100% enforcement because they execute as shell commands at fixed lifecycle events regardless of what Claude decides.</p>
+      <p><span class="trap">🪤 Trap in A:</span> <code>IMPORTANT</code> increases salience but doesn't guarantee execution. It's still advisory.</p>
+      <p><span class="trap">🪤 Trap in D:</span> Managed policy CLAUDE.md has the broadest scope but is still advisory context — it guides Claude, it doesn't enforce shell commands.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q4. What happens to block-level HTML comments in a CLAUDE.md file?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> They are passed to Claude as-is, consuming context tokens</li>
+    <li><strong>B.</strong> They are stripped before injection, consuming zero tokens</li>
+    <li><strong>C.</strong> They cause a parsing error and the file is skipped</li>
+    <li><strong>D.</strong> They are converted to markdown blockquotes</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Block-level HTML comments (<code>&lt;!-- ... --&gt;</code>) are <strong>stripped before injection</strong> into Claude's context. They cost zero tokens. Use them for maintainer notes. Comments inside code blocks are preserved.</p>
+      <p><span class="trap">🪤 Trap in A:</span> A reasonable assumption, but the documentation explicitly states they're stripped. This is a practical trick worth knowing for the exam and real usage.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q5. After running <code>/compact</code>, which statement is TRUE about CLAUDE.md files?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> All CLAUDE.md files across all directories are re-read from disk</li>
+    <li><strong>B.</strong> The project-root CLAUDE.md is re-read; subdirectory files reload when Claude reads files there</li>
+    <li><strong>C.</strong> All CLAUDE.md files are cleared and must be manually reloaded</li>
+    <li><strong>D.</strong> Only auto memory survives; CLAUDE.md content is permanently lost</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>After <code>/compact</code>, the <strong>project-root CLAUDE.md is re-read from disk</strong> and re-injected. Nested subdirectory files and path-scoped rules reload when Claude next reads files in those directories.</p>
+      <p><span class="trap">🪤 Trap in A:</span> Only the root file eagerly reloads. Subdirectory files require a file touch in their directory.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ─── SECTION 12.2 QUESTIONS ─── -->
+<h3 id="pq-12-2">Section 12.2 — The Four-Scope Hierarchy (Q6–Q10)</h3>
+
+<div class="question-block">
+  <h4>Q6. In what order are CLAUDE.md scopes loaded into context?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Local → Project → User → Managed (most specific first)</li>
+    <li><strong>B.</strong> Managed → User → Project → Local (broadest first)</li>
+    <li><strong>C.</strong> User → Managed → Project → Local</li>
+    <li><strong>D.</strong> Project → Local → User → Managed</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Load order is <strong>broadest to most specific</strong>: Managed → User → Project → Local. Use the mnemonic <strong>M-U-P-L</strong>. Instructions closer to where you launched Claude are read last.</p>
+      <p><span class="trap">🪤 Trap in A:</span> Reverses the order. This is the most common distractor because students assume "most specific first" from CSS cascade mental models.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q7. A managed policy CLAUDE.md says "use tabs for indentation." A project CLAUDE.md says "use 2-space indentation." What happens?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> The project instruction overrides the managed policy</li>
+    <li><strong>B.</strong> The managed policy overrides the project instruction</li>
+    <li><strong>C.</strong> Both instructions appear in context; Claude may pick either arbitrarily</li>
+    <li><strong>D.</strong> Claude Code throws a conflict error and loads neither</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>CLAUDE.md files are <strong>concatenated, not overridden</strong>. Both instructions appear in context. When instructions conflict, Claude may pick one arbitrarily. There is no deterministic override mechanism.</p>
+      <p><span class="trap">🪤 Trap in A &amp; B:</span> Both assume a cascade/override model that doesn't exist. This is the exam's favorite trap for this section.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q8. Which of the following scopes can be excluded using <code>claudeMdExcludes</code>?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> All four scopes (Managed, User, Project, Local)</li>
+    <li><strong>B.</strong> User, Project, and Local — but NOT Managed Policy</li>
+    <li><strong>C.</strong> Only Project and Local</li>
+    <li><strong>D.</strong> Only files using <code>@import</code> directives</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p><code>claudeMdExcludes</code> can skip User, Project, and Local files. <strong>Managed Policy files cannot be excluded.</strong> This ensures organization-wide instructions always apply.</p>
+      <p><span class="trap">🪤 Trap in A:</span> The managed policy exception is a key detail. If all could be excluded, IT couldn't enforce company standards.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q9. Where does the <code>claudeMd</code> key in settings have effect?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> In user settings (<code>~/.claude/settings.json</code>)</li>
+    <li><strong>B.</strong> In project settings (<code>.claude/settings.json</code>)</li>
+    <li><strong>C.</strong> Only in managed/policy settings (<code>managed-settings.json</code>)</li>
+    <li><strong>D.</strong> In all settings files at every scope</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>The <code>claudeMd</code> key <strong>only works in managed/policy settings</strong>. Setting it in user, project, or local settings has <strong>no effect</strong>. This is a deliberate design choice to prevent scope confusion.</p>
+      <p><span class="trap">🪤 Trap in D:</span> Sounds like the most flexible answer, but the docs explicitly restrict it to managed settings only.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q10. A developer works in multiple git worktrees of the same repo. Their <code>CLAUDE.local.md</code> is gitignored. What problem will they encounter?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> The file is shared across all worktrees automatically</li>
+    <li><strong>B.</strong> The file only exists in the worktree where it was created</li>
+    <li><strong>C.</strong> Git worktrees are not supported by Claude Code</li>
+    <li><strong>D.</strong> The file is rejected by Claude Code in worktree environments</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>A gitignored <code>CLAUDE.local.md</code> <strong>only exists in the worktree where you created it</strong>. To share personal instructions across worktrees, use an <code>@import</code> pointing to a file in your home directory.</p>
+      <p><span class="trap">🪤 Trap in A:</span> Gitignored files are not tracked or shared. Each worktree has its own working directory.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ─── SECTION 12.3 QUESTIONS ─── -->
+<h3 id="pq-12-3">Section 12.3 — File Discovery &amp; Loading (Q11–Q15)</h3>
+
+<div class="question-block">
+  <h4>Q11. You run Claude Code in <code>/home/dev/project/packages/api/</code>. Both <code>/home/dev/project/CLAUDE.md</code> and <code>/home/dev/project/packages/api/CLAUDE.md</code> exist. Which appears FIRST in context?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> <code>/home/dev/project/packages/api/CLAUDE.md</code> (CWD is first)</li>
+    <li><strong>B.</strong> <code>/home/dev/project/CLAUDE.md</code> (root-most is first)</li>
+    <li><strong>C.</strong> They load simultaneously in undefined order</li>
+    <li><strong>D.</strong> Only the CWD file loads; ancestor files are ignored</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Content is ordered <strong>from the filesystem root down to CWD</strong>. The root-most file appears in context first. The CWD file is read last. "Instructions closer to where you launched Claude are read last."</p>
+      <p><span class="trap">🪤 Trap in D:</span> Claude Code does NOT only load the CWD file. The entire walk-up chain is loaded.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q12. When do subdirectory CLAUDE.md files (below CWD) get loaded?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> At session launch, along with all other CLAUDE.md files</li>
+    <li><strong>B.</strong> When Claude reads files in those subdirectories (lazy/on-demand)</li>
+    <li><strong>C.</strong> After the first <code>/compact</code> command</li>
+    <li><strong>D.</strong> Only when explicitly referenced by an <code>@import</code></li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Subdirectory CLAUDE.md files are included <strong>when Claude reads files in those subdirectories</strong> — they are lazy-loaded, not eager. This is a key distinction from the walk-up algorithm, which is eager.</p>
+      <p><span class="trap">🪤 Trap in A:</span> The exam's most tested misconception for this section. Walk-up = eager. Walk-down = lazy.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q13. What is the correct syntax for <code>claudeMdExcludes</code> patterns?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Regex patterns matched against filenames only</li>
+    <li><strong>B.</strong> Glob patterns matched against absolute file paths</li>
+    <li><strong>C.</strong> Simple string prefixes matched against relative paths</li>
+    <li><strong>D.</strong> JSON Path expressions matched against the settings hierarchy</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p><code>claudeMdExcludes</code> uses <strong>glob patterns matched against absolute file paths</strong>. Example: <code>"**/monorepo/CLAUDE.md"</code>.</p>
+      <p><span class="trap">🪤 Trap in A:</span> Regex and glob are different. Claude Code uses glob syntax (same as <code>paths:</code> in rules), not regular expressions.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q14. You use the <code>--add-dir ../shared-config</code> flag. By default, will CLAUDE.md files from that directory be loaded?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Yes, all CLAUDE.md files from additional directories are loaded automatically</li>
+    <li><strong>B.</strong> No — you must set <code>CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1</code></li>
+    <li><strong>C.</strong> Only if the additional directory is within the same git repository</li>
+    <li><strong>D.</strong> Only the <code>.claude/rules/</code> files load, not the CLAUDE.md</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p><code>--add-dir</code> gives Claude file access but <strong>does NOT load CLAUDE.md files by default</strong>. Set the environment variable <code>CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1</code> to include them.</p>
+      <p><span class="trap">🪤 Trap in A:</span> The intuitive assumption, but wrong. This is a common real-world debugging scenario where rules "don't work" for additional directories.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q15. At each directory level during the walk-up, in what order are files loaded?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> <code>CLAUDE.local.md</code> first, then <code>CLAUDE.md</code></li>
+    <li><strong>B.</strong> <code>CLAUDE.md</code> first, then <code>CLAUDE.local.md</code></li>
+    <li><strong>C.</strong> Alphabetical order of all markdown files</li>
+    <li><strong>D.</strong> Random order determined by the filesystem</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Within each directory, <strong><code>CLAUDE.md</code> is loaded first</strong>, then <code>CLAUDE.local.md</code> is appended after it. This means your personal local notes are the last thing Claude reads at that level.</p>
+      <p><span class="trap">🪤 Trap in A:</span> Reversal of the actual order. The local file is appended <em>after</em> the project file, not before.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ─── SECTION 12.4 QUESTIONS ─── -->
+<h3 id="pq-12-4">Section 12.4 — @imports &amp; Modular Rules (Q16–Q20)</h3>
+
+<div class="question-block">
+  <h4>Q16. How are relative paths in <code>@import</code> directives resolved?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Relative to the current working directory (CWD)</li>
+    <li><strong>B.</strong> Relative to the project root (where <code>.git</code> lives)</li>
+    <li><strong>C.</strong> Relative to the file containing the <code>@import</code> directive</li>
+    <li><strong>D.</strong> Relative to the user's home directory</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>Relative paths resolve <strong>relative to the file containing the import</strong>, not the CWD or project root. This is consistent with how most import/include systems work (CSS, TypeScript, etc.).</p>
+      <p><span class="trap">🪤 Trap in A:</span> CWD-relative resolution is the most common wrong assumption. If a CLAUDE.md in <code>packages/api/</code> imports <code>@shared/rules.md</code>, it resolves to <code>packages/api/shared/rules.md</code>, not <code>./shared/rules.md</code> from CWD.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q17. What is the maximum depth for recursive <code>@import</code> chains?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> 2 levels</li>
+    <li><strong>B.</strong> 4 hops</li>
+    <li><strong>C.</strong> 8 levels</li>
+    <li><strong>D.</strong> Unlimited (with cycle detection)</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Imported files can recursively import other files up to a <strong>maximum depth of 4 hops</strong>. Beyond that, imports are not expanded.</p>
+      <p><span class="trap">🪤 Trap in D:</span> While cycle detection exists, there <em>is</em> a hard limit of 4 hops. Unlimited recursion is not allowed even without cycles.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q18. Which of the following PREVENTS <code>@README</code> from being interpreted as an import?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Placing it inside a markdown heading: <code># See @README</code></li>
+    <li><strong>B.</strong> Wrapping it in backticks: <code>`@README`</code></li>
+    <li><strong>C.</strong> Adding a space after the @: <code>@ README</code></li>
+    <li><strong>D.</strong> Prefixing with a backslash: <code>\@README</code></li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>Import parsing <strong>skips code spans (backticks) and fenced code blocks</strong>. Writing <code>`@README`</code> keeps the text literal. Headings, spaces, and backslashes do not suppress the import behavior.</p>
+      <p><span class="trap">🪤 Trap in D:</span> Backslash escaping works in many contexts (regex, shell) but is NOT the CLAUDE.md import escaping mechanism. The correct approach is backticks.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q19. A team wants to reduce context window consumption. Which approach genuinely saves tokens?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Splitting CLAUDE.md into 5 smaller files with <code>@import</code></li>
+    <li><strong>B.</strong> Moving rules into <code>.claude/rules/</code> without <code>paths:</code> frontmatter</li>
+    <li><strong>C.</strong> Using path-scoped rules with <code>paths:</code> YAML frontmatter</li>
+    <li><strong>D.</strong> Adding HTML comments around rarely-used sections</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p><strong>Path-scoped rules</strong> load on demand when Claude touches matching files — they genuinely reduce context consumption. All other options still load content at session launch.</p>
+      <p><span class="trap">🪤 Trap in A:</span> @imports help organization but don't save tokens — imported files load at launch.</p>
+      <p><span class="trap">🪤 Trap in D:</span> HTML comments are stripped (zero tokens), but this only saves the comment text — the actual instruction content still loads.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q20. A <code>.claude/rules/api.md</code> file has <code>paths: ["src/api/**/*.ts"]</code> in its frontmatter. When does this rule load?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> At session launch, like all other rules</li>
+    <li><strong>B.</strong> When any TypeScript file in the project is read</li>
+    <li><strong>C.</strong> When Claude reads a file matching <code>src/api/**/*.ts</code></li>
+    <li><strong>D.</strong> Only when the user explicitly runs <code>/rules api</code></li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>Path-scoped rules <strong>trigger when Claude reads files matching the specified pattern</strong>. Only files under <code>src/api/</code> with a <code>.ts</code> extension will trigger this rule.</p>
+      <p><span class="trap">🪤 Trap in B:</span> The glob pattern is specific: <code>src/api/**/*.ts</code>, not <code>**/*.ts</code>. A TypeScript file outside <code>src/api/</code> would NOT trigger this rule.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ─── SECTION 12.5 QUESTIONS ─── -->
+<h3 id="pq-12-5">Section 12.5 — Auto Memory &amp; Best Practices (Q21–Q25)</h3>
+
+<div class="question-block">
+  <h4>Q21. How much of <code>MEMORY.md</code> is loaded at session start?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> The entire file, regardless of size</li>
+    <li><strong>B.</strong> The first 200 lines or 25 KB, whichever is reached first</li>
+    <li><strong>C.</strong> The first 4 MiB</li>
+    <li><strong>D.</strong> Only the YAML frontmatter headers</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p><strong>First 200 lines or 25 KB</strong> — whichever comes first. Content beyond the threshold is silently dropped. This limit applies only to MEMORY.md, not to CLAUDE.md files (which have a 4 MiB limit).</p>
+      <p><span class="trap">🪤 Trap in C:</span> 4 MiB is the CLAUDE.md file limit, not the MEMORY.md limit. The exam frequently cross-references these numbers.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q22. A developer tells Claude "always use pnpm, not npm." Where does Claude save this?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> In the project's <code>CLAUDE.md</code></li>
+    <li><strong>B.</strong> In auto memory (<code>~/.claude/projects/&lt;project&gt;/memory/</code>)</li>
+    <li><strong>C.</strong> In <code>.claude/rules/</code></li>
+    <li><strong>D.</strong> In the system prompt for all future sessions</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p>When you tell Claude to "remember" something, it saves to <strong>auto memory</strong> (<code>~/.claude/projects/&lt;project&gt;/memory/</code>). To add instructions to CLAUDE.md instead, explicitly ask "add this to CLAUDE.md."</p>
+      <p><span class="trap">🪤 Trap in A:</span> Claude doesn't modify CLAUDE.md unless you specifically ask it to. "Remember" triggers auto memory, not CLAUDE.md edits.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q23. Which statement about auto memory is FALSE?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Auto memory is machine-local and never shared via git</li>
+    <li><strong>B.</strong> All worktrees of the same repo share one auto memory directory</li>
+    <li><strong>C.</strong> Topic files (e.g., <code>user_role.md</code>) are loaded at session start</li>
+    <li><strong>D.</strong> Claude skips information it can derive from the codebase</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C (FALSE statement)</span></p>
+      <p>Topic files are <strong>NOT loaded at session start</strong>. Only <code>MEMORY.md</code> (the index) is loaded at launch. Topic files are read <strong>on demand</strong> when Claude needs the information. All other statements are true.</p>
+      <p><span class="trap">🪤 Trap:</span> This is a "which is FALSE" question — read carefully. Students often pick the first true-sounding statement.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q24. A security team needs to block all Claude Code users from running <code>rm -rf</code> in any project. What should they use?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> A managed policy <code>CLAUDE.md</code> stating "Never run <code>rm -rf</code>"</li>
+    <li><strong>B.</strong> Managed settings: <code>permissions.deny</code></li>
+    <li><strong>C.</strong> A user-level <code>~/.claude/CLAUDE.md</code> with the restriction</li>
+    <li><strong>D.</strong> A path-scoped rule in <code>.claude/rules/security.md</code></li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: B</span></p>
+      <p><strong>Managed settings</strong> with <code>permissions.deny</code> provide <strong>hard enforcement by the client</strong>. CLAUDE.md at any scope is advisory — Claude might still run the command. Settings rules are enforced regardless of what Claude decides.</p>
+      <p><span class="trap">🪤 Trap in A:</span> Managed CLAUDE.md is advisory, not enforced. For security-critical blocking, settings are required.</p>
+    </div>
+  </details>
+</div>
+
+<div class="question-block">
+  <h4>Q25. A developer's CLAUDE.md rule is being "ignored" by Claude. What is the FIRST debugging step?</h4>
+  <ul class="options">
+    <li><strong>A.</strong> Delete and recreate the CLAUDE.md file</li>
+    <li><strong>B.</strong> Add <code>IMPORTANT</code> emphasis to the rule</li>
+    <li><strong>C.</strong> Run <code>/context</code> to verify the file is listed under Memory files</li>
+    <li><strong>D.</strong> Convert the rule to a managed policy</li>
+  </ul>
+  <details>
+    <summary>Show Answer</summary>
+    <div>
+      <p><span class="correct">✅ Correct: C</span></p>
+      <p>The <strong>first debugging step</strong> is always to verify the file is actually loaded. Run <code>/context</code> and check the list under Memory files. If the file isn't there, Claude literally can't see it — and that alone explains most "ignored" rules.</p>
+      <p><span class="trap">🪤 Trap in B:</span> Adding emphasis helps with salience but doesn't fix the root cause if the file isn't loaded in the first place.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════ -->
+<hr>
+<p style="color: var(--text-muted); font-size: .82rem; text-align: center; margin-top: 2em;">
+  Chapter 12 Study Guide — Claude Certified Architect: Foundations &amp; Professional<br>
+  Based on official Anthropic documentation (docs.anthropic.com) as of September 2026.<br>
+  ⚠️ Verify against the latest official documentation before exam day.
+</p>
+
+</main>
+
+
+</body></html>

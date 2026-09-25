@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 52 — Optimizing Token Usage, Latency &amp; Cost</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --ink:#1e2530; --muted:#5b6675;
+    --accent:#7b4dff; --accent2:#0aa3a3; --line:#e3e7ee;
+    --good:#0a8f5b; --bad:#c0392b; --warn:#b8860b;
+    --code-bg:#f2f4f8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:32px 22px 80px;}
+  header.title{
+    background:linear-gradient(135deg,#7b4dff 0%,#0aa3a3 100%);
+    color:#fff; border-radius:16px; padding:34px 32px; margin-bottom:26px;
+    box-shadow:0 8px 26px rgba(80,60,180,.18);
+  }
+  header.title .kicker{font-size:13px; letter-spacing:.14em; text-transform:uppercase; opacity:.9; margin:0 0 8px;}
+  header.title h1{margin:0 0 8px; font-size:29px; line-height:1.25;}
+  header.title p{margin:0; opacity:.95; font-size:15px;}
+  .framing{
+    background:#fff8e6; border:1px solid #f0dfa8; border-left:5px solid var(--warn);
+    border-radius:10px; padding:14px 18px; margin:0 0 26px; font-size:14.5px; color:#5c4a10;
+  }
+  .framing strong{color:#7a5c00;}
+  nav.toc{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:20px 24px; margin-bottom:30px; box-shadow:0 2px 10px rgba(30,40,60,.04);
+  }
+  nav.toc h2{margin:0 0 12px; font-size:16px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em;}
+  nav.toc ol{margin:0; padding-left:20px;}
+  nav.toc li{margin:6px 0;}
+  nav.toc a{color:var(--accent); text-decoration:none; font-weight:600;}
+  nav.toc a:hover{text-decoration:underline;}
+  section.sub{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:26px 30px; margin-bottom:26px; box-shadow:0 2px 12px rgba(30,40,60,.05);
+    scroll-margin-top:16px;
+  }
+  section.sub h2{
+    margin:0 0 4px; font-size:23px; color:var(--ink);
+    border-bottom:3px solid var(--accent); padding-bottom:10px; display:inline-block;
+  }
+  h3{
+    margin:24px 0 8px; font-size:15px; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--accent2); display:flex; align-items:center; gap:8px;
+  }
+  h3 .ic{font-size:16px;}
+  p{margin:8px 0;}
+  ul{margin:8px 0; padding-left:22px;}
+  li{margin:6px 0;}
+  li b{color:var(--ink);}
+  table{
+    width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px;
+    background:#fff; border-radius:10px; overflow:hidden;
+  }
+  th,td{border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top;}
+  th{background:#eef0f7; color:var(--ink); font-weight:700; font-size:13.5px; letter-spacing:.02em;}
+  tr:nth-child(even) td{background:#fafbfd;}
+  .up{color:var(--bad); font-weight:700;}
+  .down{color:var(--good); font-weight:700;}
+  .flat{color:var(--muted); font-weight:700;}
+  pre{
+    background:var(--code-bg); border:1px solid var(--line); border-radius:10px;
+    padding:14px 16px; overflow-x:auto; margin:12px 0; font-size:13.5px; line-height:1.5;
+  }
+  code{font-family:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;}
+  p code, li code, td code{
+    background:var(--code-bg); padding:1px 6px; border-radius:5px; font-size:13.5px; color:#7a3ea8;
+  }
+  .flow{
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:14px 0;
+    font-size:14px;
+  }
+  .flow .node{
+    background:#eef0f7; border:1px solid var(--line); border-radius:8px;
+    padding:8px 12px; font-weight:600;
+  }
+  .flow .node.hot{background:#e7f7f0; border-color:#a8ddc4;}
+  .flow .arrow{color:var(--muted); font-weight:700;}
+  .tips{background:#eef7f0; border:1px solid #bfe3cf; border-radius:10px; padding:4px 18px; margin:12px 0;}
+  .exam{background:#f1eeff; border:1px solid #d3c8ff; border-left:5px solid var(--accent); border-radius:10px; padding:6px 18px; margin:12px 0;}
+  .exam blockquote{margin:8px 0; color:#4a3d80; font-style:italic;}
+  .trap{color:var(--bad); font-weight:600;}
+  .summary-wrap{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 30px; box-shadow:0 2px 12px rgba(30,40,60,.05);}
+  .summary-wrap h2{margin-top:0; border-bottom:3px solid var(--accent2); padding-bottom:10px; display:inline-block;}
+  footer{margin-top:30px; text-align:center; color:var(--muted); font-size:13px;}
+  .badge{display:inline-block; background:var(--accent2); color:#fff; font-size:11px; font-weight:700; padding:2px 9px; border-radius:20px; letter-spacing:.05em; vertical-align:middle; margin-left:8px;}
+  a.top{float:right; font-size:12px; color:var(--muted); text-decoration:none; font-weight:600; text-transform:none; letter-spacing:0;}
+  a.top:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="title" id="top">
+  <p class="kicker">Claude Certified Architect — Foundations &amp; Professional</p>
+  <h1>Chapter 52 · Optimizing Token Usage, Latency &amp; Cost</h1>
+  <p>Production LLM cost engineering: trimming, caching, batching, streaming, model selection, cost math, monitoring, and an end-to-end optimization case study.</p>
+</header>
+
+<div class="framing">
+  <strong>Framing note.</strong> "Claude Certified Architect — Foundations &amp; Professional" is used here as an
+  <em>educational framework</em>, not a verified public certification. All techniques below are real, industry-standard
+  LLM optimization practices that apply to the Anthropic Claude API and to LLM systems generally. No exam pass-scores,
+  question counts, or product benchmarks are fabricated; numeric figures are either drawn from Anthropic's published
+  documentation (and cited as such) or clearly labelled as <em>illustrative examples</em>.
+</div>
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s1">52.1 — Token Optimization Strategies</a></li>
+    <li><a href="#s2">52.2 — Latency Optimization</a></li>
+    <li><a href="#s3">52.3 — Cost-Performance Tradeoff Analysis at Scale</a></li>
+    <li><a href="#s4">52.4 — Monitoring &amp; Alerting on Cost Metrics</a></li>
+    <li><a href="#s5">52.5 — Hands-On: Optimizing a High-Volume Production System</a></li>
+    <li><a href="#summary">Chapter Summary Table</a></li>
+  </ol>
+</nav>
+
+<!-- ================= 52.1 ================= -->
+<section class="sub" id="s1">
+  <a class="top" href="#top">↑ top</a>
+  <h2>52.1 · Token Optimization Strategies</h2>
+
+  <h3><span class="ic">🧭</span>Concept Overview</h3>
+  <p>Token usage is the primary cost driver for LLM APIs — you pay per input and output token. Token optimization means
+  sending fewer, smarter tokens (<b>trimming</b>), reusing already-processed tokens (<b>caching</b>), and amortizing
+  overhead across many requests (<b>batching</b>). The goal is to cut spend without degrading answer quality.</p>
+
+  <h3><span class="ic">🔧</span>Key Techniques</h3>
+  <ul>
+    <li><b>Prompt / context pruning (trimming)</b> — remove redundant instructions, boilerplate, and stale conversation
+      turns. <i>Why/when:</i> long system prompts and unbounded chat history inflate every call; prune when context grows
+      faster than it adds value.</li>
+    <li><b>Retrieval trimming (top-k + reranking)</b> — inject only the most relevant retrieved chunks rather than dumping
+      whole documents. <i>Why/when:</i> RAG pipelines where naive context stuffing balloons input tokens.</li>
+    <li><b>Prompt caching</b> — cache a stable prompt <i>prefix</i> (system prompt, tool definitions, long documents) so
+      repeated calls skip re-processing it. On the Claude API, cache <i>reads</i> cost ~10% of base input price; cache
+      <i>writes</i> cost 1.25× base input for the 5-minute TTL (2× for the 1-hour TTL). <i>Why/when:</i> the single
+      highest-leverage optimization when a large, unchanging prefix is reused across many calls.</li>
+    <li><b>Semantic caching</b> — cache full <i>responses</i> keyed by embedding similarity of the request, returning a
+      stored answer when a new query is "close enough." <i>Why/when:</i> high-repetition workloads (FAQs, support) where
+      near-duplicate questions recur; requires a similarity threshold and staleness policy.</li>
+    <li><b>Request batching (Message Batches API)</b> — submit many independent requests together for asynchronous
+      processing at a 50% discount on input <i>and</i> output tokens. <i>Why/when:</i> bulk offline jobs where no user is
+      waiting in real time.</li>
+    <li><b>Output trimming</b> — constrain <code>max_tokens</code> and prompt for concise formats (JSON, short lists) so
+      the model doesn't generate more than needed. <i>Why/when:</i> output tokens are typically the most expensive per
+      token; useful when responses tend to over-explain.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Technique Comparison</h3>
+  <table>
+    <tbody><tr><th>Technique</th><th>Best For</th><th>Latency Impact</th><th>Cost Impact</th></tr>
+    <tr><td>Prompt Caching</td><td>Large reused system prompt / docs</td><td class="down">↓↓ (skips prefill on hits)</td><td class="down">↓↓↓ (reads ≈10% of input)</td></tr>
+    <tr><td>Semantic Caching</td><td>Repeated near-duplicate queries</td><td class="down">↓↓↓ (no model call on hit)</td><td class="down">↓↓↓ (avoids the call entirely)</td></tr>
+    <tr><td>Context / Prompt Trimming</td><td>Bloated prompts &amp; long history</td><td class="down">↓ (fewer tokens to prefill)</td><td class="down">↓↓</td></tr>
+    <tr><td>Request Batching</td><td>Bulk async, no live user</td><td class="up">↑ (async, minutes–hours)</td><td class="down">↓↓ (50% off)</td></tr>
+    <tr><td>Output Trimming (max_tokens)</td><td>Verbose responses</td><td class="down">↓ (less to generate)</td><td class="down">↓</td></tr>
+  </tbody></table>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tips">
+    <ul>
+      <li>Place cacheable content <b>at the start</b> of the prompt (stable prefix first, variable user input last) —
+        caching keys on the prefix, so any early change invalidates the cache.</li>
+      <li>Keep the cache <b>warm</b>: the 5-minute TTL refreshes on each read, so steady traffic avoids re-paying the write premium.</li>
+      <li>Combine batching <b>with</b> prompt caching for the largest offline savings — they stack.</li>
+      <li>Semantic caching needs a guardrail: too loose a similarity threshold returns wrong answers; log hit/miss rates and spot-check.</li>
+      <li>Measure before trimming — profile which calls carry the biggest token payloads instead of trimming blindly.</li>
+    </ul>
+  </div>
+
+  <h3><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="exam">
+    <blockquote>"Questions on token trimming often present a scenario with a long system prompt reused across calls — the
+    correct answer is usually <b>'implement prompt caching,'</b> not <b>'reduce max_tokens.'</b> Watch for distractors that
+    optimize the wrong variable (cost vs. latency)."</blockquote>
+    <p><span class="trap">Common trap:</span> confusing <b>prompt caching</b> (reuses a repeated <i>input</i> prefix) with
+    <b>semantic caching</b> (reuses a repeated <i>output</i> answer). Match the technique to what actually repeats — the
+    prefix or the whole query.</p>
+  </div>
+</section>
+
+<!-- ================= 52.2 ================= -->
+<section class="sub" id="s2">
+  <a class="top" href="#top">↑ top</a>
+  <h2>52.2 · Latency Optimization</h2>
+
+  <h3><span class="ic">🧭</span>Concept Overview</h3>
+  <p>Latency is <i>perceived speed</i>. Two levers matter: <b>time-to-first-token</b> (TTFT, how fast output starts) and
+  <b>total completion time</b>. You reduce both by streaming output as it's generated, doing independent work in parallel,
+  and choosing a model whose speed matches the task's difficulty.</p>
+
+  <h3><span class="ic">🔧</span>Key Techniques</h3>
+  <ul>
+    <li><b>Streaming responses</b> (<code>stream=true</code> / SSE) — tokens are sent as they're produced. <i>Why/when:</i>
+      user-facing chat and long outputs; it slashes <i>perceived</i> latency even though total generation time is unchanged.</li>
+    <li><b>Parallel tool / request calls</b> — fire independent API calls or tool invocations concurrently instead of
+      sequentially. <i>Why/when:</i> agentic flows with multiple independent lookups; wall-clock time drops toward the
+      slowest single call rather than the sum.</li>
+    <li><b>Model selection by tier</b> — route to a smaller, faster model when the task allows. In the Claude family,
+      Haiku-class models are the fastest and cheapest, Sonnet-class balances speed and capability, and Opus-class is the
+      most capable but slowest and most expensive. <i>Why/when:</i> reserve the heaviest model for genuinely hard steps.</li>
+    <li><b>Prompt caching (latency side-effect)</b> — cache hits skip the prefill of the cached prefix, lowering TTFT for
+      prompts with large stable context. <i>Why/when:</i> large reused system prompts / documents.</li>
+    <li><b>Cap output length</b> — generation time scales with output tokens, so a tight <code>max_tokens</code> bounds
+      worst-case latency. <i>Why/when:</i> when responses can otherwise run long.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Model-Tier Tradeoff (illustrative, directional only)</h3>
+  <table>
+    <tbody><tr><th>Model Tier</th><th>Relative Speed</th><th>Relative Cost</th><th>Typical Use</th></tr>
+    <tr><td>Haiku-class (small)</td><td class="down">Fastest</td><td class="down">Lowest</td><td>Classification, routing, extraction, high-volume simple calls</td></tr>
+    <tr><td>Sonnet-class (mid)</td><td class="flat">Balanced</td><td class="flat">Moderate</td><td>General reasoning, most production workloads</td></tr>
+    <tr><td>Opus-class (large)</td><td class="up">Slowest</td><td class="up">Highest</td><td>Hardest reasoning, complex multi-step tasks</td></tr>
+  </tbody></table>
+  <p style="font-size:13px;color:var(--muted)">Ordering (speed/cost/capability) reflects Anthropic's published tier positioning;
+  the "relative" labels are directional, not measured benchmarks.</p>
+
+  <h3><span class="ic">🔀</span>Visualization — Sequential vs Parallel Tool Calls</h3>
+  <p><b>Sequential (slow):</b></p>
+  <div class="flow">
+    <span class="node">Call A (2s)</span><span class="arrow">→</span>
+    <span class="node">Call B (2s)</span><span class="arrow">→</span>
+    <span class="node">Call C (2s)</span><span class="arrow">=</span>
+    <span class="node hot">~6s total</span>
+  </div>
+  <p><b>Parallel (fast):</b></p>
+  <div class="flow">
+    <span class="node">Call A (2s)</span><span class="arrow">∥</span>
+    <span class="node">Call B (2s)</span><span class="arrow">∥</span>
+    <span class="node">Call C (2s)</span><span class="arrow">=</span>
+    <span class="node hot">~2s total</span>
+  </div>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tips">
+    <ul>
+      <li>Always stream in interactive UIs — it's the cheapest perceived-latency win and requires no model change.</li>
+      <li>Only parallelize <b>independent</b> calls; if Call B needs Call A's output, they must stay sequential.</li>
+      <li>Use a <b>router</b>: a cheap model (or rules) classifies difficulty, then dispatches to the right tier.</li>
+      <li>Distinguish TTFT from total latency when setting SLOs — streaming fixes the first, not the second.</li>
+      <li>Beware over-parallelizing into rate limits; concurrency should respect your account's request/token limits.</li>
+    </ul>
+  </div>
+
+  <h3><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="exam">
+    <blockquote>"Latency questions usually describe a symptom — 'users wait too long before seeing any output' vs 'the
+    full answer takes too long.' The first points to <b>streaming</b>; the second points to <b>a smaller model or shorter
+    output</b>. Read the symptom, not just the fix."</blockquote>
+    <p><span class="trap">Common trap:</span> picking "upgrade to the largest model" to fix latency — larger models are
+    generally <i>slower</i>. Also watch distractors that parallelize dependent calls, which is incorrect.</p>
+  </div>
+</section>
+
+<!-- ================= 52.3 ================= -->
+<section class="sub" id="s3">
+  <a class="top" href="#top">↑ top</a>
+  <h2>52.3 · Cost-Performance Tradeoff Analysis at Scale</h2>
+
+  <h3><span class="ic">🧭</span>Concept Overview</h3>
+  <p>At scale, small per-call inefficiencies multiply into large bills. Cost-performance analysis means quantifying spend
+  with explicit per-token math, then deciding where accuracy is worth the money and where a cheaper/faster path is "good
+  enough." The core idea: optimize the <b>blended cost per successful task</b>, not the price of a single token.</p>
+
+  <h3><span class="ic">🔧</span>Key Techniques</h3>
+  <ul>
+    <li><b>Per-token cost math</b> — model total cost as
+      <code>cost = (input_tokens × in_price) + (output_tokens × out_price)</code>, priced per million tokens (MTok).
+      Output tokens are usually priced higher than input. <i>Why/when:</i> foundational for any budgeting or forecast.</li>
+    <li><b>Cost per successful task</b> — divide total spend by <i>successful</i> outcomes, including retries and failures.
+      <i>Why/when:</i> a "cheap" model that needs 3 retries can cost more than one right answer from a stronger model.</li>
+    <li><b>Throughput vs accuracy tradeoff</b> — smaller/faster models raise throughput and cut cost but may lower accuracy;
+      quantify the accuracy loss against the savings. <i>Why/when:</i> high-volume pipelines where a small accuracy dip is
+      tolerable (or not).</li>
+    <li><b>Model routing / cascades</b> — try a cheap model first; escalate to a stronger model only when confidence is low.
+      <i>Why/when:</i> mixed-difficulty traffic where most requests are easy.</li>
+    <li><b>Apply 52.1–52.2 levers to the math</b> — factor in caching (reads ≈10% of input) and batching (50% off) when
+      projecting scaled cost curves. <i>Why/when:</i> forecasting spend as volume grows.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Worked Cost Example (illustrative prices)</h3>
+  <p>Assume an <em>illustrative</em> model priced at <b>$3 / MTok input</b> and <b>$15 / MTok output</b>. A request with
+  2,000 input + 500 output tokens:</p>
+  <pre><code>input_cost  = 2000  / 1e6 * $3   = $0.0060
+output_cost = 500   / 1e6 * $15  = $0.0075
+per_call    = $0.0135
+
+At 1,000,000 calls/month:
+  baseline                         = $13,500 / mo
+
+With prompt caching on a 1,800-token reused prefix
+(cached reads ≈ 10% of input price on hits):
+  cached input ≈ 1800 * $0.30/MTok + 200 * $3/MTok
+              ≈ $0.00054 + $0.00060 = $0.00114
+  output unchanged                  = $0.0075
+  per_call ≈ $0.0086  →  ≈ $8,600 / mo   (~36% saved)
+
+Move eligible offline traffic to the Batch API (50% off):
+  those calls cost half of their synchronous price</code></pre>
+  <p style="font-size:13px;color:var(--muted)">Prices above are placeholders to demonstrate the method — always plug in the
+  current published rates for your chosen model. The 10% cache-read and 50% batch figures come from Anthropic's documentation.</p>
+
+  <h3><span class="ic">📈</span>Visualization — Scaling Cost Curve (directional)</h3>
+  <table>
+    <tbody><tr><th>Monthly Volume</th><th>Naive (no optimization)</th><th>Optimized (cache + route + batch)</th></tr>
+    <tr><td>10K calls</td><td>Low — optimization optional</td><td>Marginal savings; complexity may not pay off yet</td></tr>
+    <tr><td>1M calls</td><td>Linear growth; bill is now material</td><td>Cache + routing yield large absolute savings</td></tr>
+    <tr><td>50M calls</td><td>Cost dominates infra budget</td><td>Batching + tiering essential; savings compound</td></tr>
+  </tbody></table>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tips">
+    <ul>
+      <li>Always separate <b>input</b> and <b>output</b> pricing in models — they differ, and output usually dominates.</li>
+      <li>Track <b>cost per successful task</b>, not cost per call — retries hide in the gap.</li>
+      <li>Run an A/B on a cheaper model with an accuracy eval before switching; savings mean nothing if quality craters.</li>
+      <li>Cascades win when the <i>easy</i> fraction of traffic is large — measure that fraction first.</li>
+      <li>Re-derive the curve at each order of magnitude; what's negligible at 10K is budget-defining at 50M.</li>
+    </ul>
+  </div>
+
+  <h3><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="exam">
+    <blockquote>"Cost questions at scale reward the answer that lowers <b>total blended cost per outcome</b>, not the one with
+    the lowest sticker price per token. Expect a scenario where a cheap model's retry rate makes it more expensive overall."</blockquote>
+    <p><span class="trap">Common trap:</span> choosing the cheapest per-token model while ignoring accuracy/retry cost, or
+    forgetting that <b>output</b> tokens are priced higher than input when doing the math.</p>
+  </div>
+</section>
+
+<!-- ================= 52.4 ================= -->
+<section class="sub" id="s4">
+  <a class="top" href="#top">↑ top</a>
+  <h2>52.4 · Monitoring &amp; Alerting on Cost Metrics</h2>
+
+  <h3><span class="ic">🧭</span>Concept Overview</h3>
+  <p>You can't optimize what you don't measure. Cost monitoring instruments every call with token and spend telemetry,
+  aggregates it by dimension (model, feature, customer, environment), and fires alerts when spend or usage crosses a
+  threshold — so a runaway loop or prompt regression is caught in hours, not on the monthly invoice.</p>
+
+  <h3><span class="ic">🔧</span>Key Techniques</h3>
+  <ul>
+    <li><b>Track core metrics</b> — input tokens, output tokens, cache read/write tokens, requests, cost, latency (TTFT &amp;
+      total), and error/retry rate. <i>Why/when:</i> these are the raw signals behind every cost anomaly.</li>
+    <li><b>Attribute cost by dimension</b> — tag usage by model, feature/endpoint, tenant, and environment.
+      <i>Why/when:</i> to answer "which feature or customer is driving the bill?" and to spot regressions.</li>
+    <li><b>Threshold &amp; anomaly alerts</b> — alert on absolute budget burn (e.g., daily spend cap), rate-of-change spikes,
+      and cache-hit-rate drops. <i>Why/when:</i> to catch runaway agents, retry storms, or a change that broke caching.</li>
+    <li><b>Dashboards</b> — the Anthropic Console provides a Usage &amp; Cost view; teams also pipe API usage/response
+      metadata into their own observability stack (e.g., Grafana, Datadog, CloudWatch) for custom dashboards.
+      <i>Why/when:</i> for shared visibility and historical trend analysis.</li>
+    <li><b>Cache-hit-rate monitoring</b> — track the ratio of cache-read to cache-write tokens. <i>Why/when:</i> a falling
+      hit rate silently erodes your caching savings and signals a prefix that keeps changing.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Metrics, Why, and Example Alert</h3>
+  <table>
+    <tbody><tr><th>Metric</th><th>Why It Matters</th><th>Example Alert Condition</th></tr>
+    <tr><td>Daily spend ($)</td><td>Direct budget control</td><td>&gt; 120% of 7-day rolling average</td></tr>
+    <tr><td>Output tokens / request</td><td>Output is the costliest token class</td><td>Sustained rise vs baseline</td></tr>
+    <tr><td>Cache hit rate</td><td>Protects caching savings</td><td>Drops below target (e.g., &lt; 60%)</td></tr>
+    <tr><td>Retry / error rate</td><td>Retries multiply cost silently</td><td>&gt; 2% or sudden spike</td></tr>
+    <tr><td>Cost per successful task</td><td>True unit economics</td><td>Trends upward week-over-week</td></tr>
+    <tr><td>p95 latency (TTFT &amp; total)</td><td>User experience / SLO</td><td>Breaches SLO threshold</td></tr>
+  </tbody></table>
+  <p style="font-size:13px;color:var(--muted)">Alert thresholds shown are illustrative starting points — tune them to your
+  own baselines and budget.</p>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tips">
+    <ul>
+      <li>Log token counts from each API response's <code>usage</code> field (input, output, and cache tokens) rather than estimating.</li>
+      <li>Alert on <b>rate of change</b>, not just absolute totals — a 5× spike matters even below the monthly cap.</li>
+      <li>Set a hard <b>budget guardrail</b> (kill switch or throttle) for runaway-loop protection in agentic systems.</li>
+      <li>Break spend down by feature/tenant so you can attribute — and bill back — accurately.</li>
+      <li>Watch cache-hit-rate as a leading indicator: it drops <i>before</i> the bill spikes.</li>
+    </ul>
+  </div>
+
+  <h3><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="exam">
+    <blockquote>"Monitoring questions typically ask which metric or alert would have <b>caught a specific failure</b> — e.g., a
+    prompt change that quietly disabled caching. Map the symptom to the leading indicator (here, a falling cache-hit rate)."</blockquote>
+    <p><span class="trap">Common trap:</span> relying only on the end-of-month total (too late) instead of real-time
+    rate-of-change alerts, or monitoring request count while ignoring the far more expensive output-token volume.</p>
+  </div>
+</section>
+
+<!-- ================= 52.5 ================= -->
+<section class="sub" id="s5">
+  <a class="top" href="#top">↑ top</a>
+  <h2>52.5 · Hands-On: Optimizing a High-Volume Production System <span class="badge">CASE STUDY</span></h2>
+
+  <h3><span class="ic">🧭</span>Concept Overview</h3>
+  <p>This worked scenario applies 52.1–52.4 end-to-end. We take a support-automation system that is too slow and too
+  expensive and optimize it in ordered passes, measuring after each. All numbers are <em>illustrative</em> to demonstrate
+  method — not measured benchmarks.</p>
+
+  <h3><span class="ic">📋</span>The Scenario (baseline)</h3>
+  <ul>
+    <li><b>Workload:</b> ~1,000,000 support requests / month, plus a nightly bulk job that summarizes 200,000 tickets.</li>
+    <li><b>Prompt:</b> a 1,800-token system prompt (policies + tool defs) reused on every call; ~300 tokens of variable user input.</li>
+    <li><b>Model:</b> a single large (Opus-class) model for everything.</li>
+    <li><b>Symptoms:</b> high bill, users wait several seconds before any text appears, nightly job strains rate limits.</li>
+  </ul>
+
+  <h3><span class="ic">🔧</span>Optimization Passes</h3>
+  <ul>
+    <li><b>Pass 1 — Trim (52.1):</b> prune the system prompt of redundant boilerplate and cap <code>max_tokens</code> so
+      answers stay concise. Fewer input <i>and</i> output tokens on every call.</li>
+    <li><b>Pass 2 — Cache the prefix (52.1):</b> mark the stable 1,800-token prefix for prompt caching. Steady traffic keeps
+      the cache warm (5-min TTL refreshes on read), so most calls pay ~10% of input price for that prefix instead of full price.</li>
+    <li><b>Pass 3 — Route by difficulty (52.2 / 52.3):</b> classify each ticket; send simple/routing cases to a Haiku-class
+      model and escalate only hard cases to Sonnet/Opus-class. Most traffic now runs on the cheap, fast tier.</li>
+    <li><b>Pass 4 — Stream + parallelize (52.2):</b> stream responses in the agent UI to cut perceived latency, and run
+      independent tool lookups concurrently to cut total time.</li>
+    <li><b>Pass 5 — Batch the nightly job (52.1):</b> move the 200K-ticket summarization to the Message Batches API for a
+      50% discount; results return within 24 h, which is fine for an offline job, and it sidesteps live rate limits.</li>
+    <li><b>Pass 6 — Monitor &amp; alert (52.4):</b> instrument token/cost/latency/cache-hit metrics, dashboard them, and set
+      alerts on daily spend, cache-hit-rate drop, and retry spikes so future regressions surface fast.</li>
+  </ul>
+
+  <h3><span class="ic">📊</span>Visualization — Before / After (illustrative)</h3>
+  <table>
+    <tbody><tr><th>Dimension</th><th>Before</th><th>After</th><th>Lever Applied</th></tr>
+    <tr><td>Input token spend / call</td><td>Full price on 2,100 tokens</td><td class="down">~10% price on cached 1,800-token prefix</td><td>Prompt caching + trimming</td></tr>
+    <tr><td>Model mix</td><td>100% large model</td><td class="down">Majority small tier, escalate hard cases</td><td>Routing / cascade</td></tr>
+    <tr><td>Perceived latency</td><td>Several seconds to first token</td><td class="down">Immediate streamed output</td><td>Streaming</td></tr>
+    <tr><td>Nightly bulk job</td><td>Synchronous, full price, rate-limited</td><td class="down">Async batch, 50% off, no live limits</td><td>Message Batches API</td></tr>
+    <tr><td>Cost visibility</td><td>Monthly invoice surprise</td><td class="down">Real-time dashboards + alerts</td><td>Monitoring &amp; alerting</td></tr>
+  </tbody></table>
+
+  <h3><span class="ic">🧪</span>Minimal Illustrative Snippets</h3>
+  <pre><code># Prompt caching: stable prefix first, marked cacheable (Claude Messages API)
+system = [
+  {
+    "type": "text",
+    "text": LONG_STABLE_POLICY_AND_TOOLS,   # 1,800-token reused prefix
+    "cache_control": {"type": "ephemeral"}   # 5-min TTL, refreshes on read
+  }
+]
+# variable user turn goes in messages=[...], AFTER the cached prefix
+
+# Batch the offline summarization job (50% discount, async)
+# POST /v1/messages/batches  with up to 100,000 requests (or 256 MB) per batch
+batch = client.messages.batches.create(requests=[...])   # poll for results
+
+# Stream the interactive path to cut time-to-first-token
+with client.messages.stream(model="claude-haiku-class", ...) as stream:
+    for text in stream.text_stream:
+        emit(text)</code></pre>
+  <p style="font-size:13px;color:var(--muted)">Snippets are simplified for illustration; use current model IDs and SDK
+  signatures from Anthropic's docs. Batch limits (100,000 requests / 256 MB; results within 24 h, retained 29 days) are
+  from Anthropic's published documentation.</p>
+
+  <h3><span class="ic">💡</span>Tips &amp; Tricks</h3>
+  <div class="tips">
+    <ul>
+      <li>Optimize in <b>ordered passes and measure after each</b> — don't change five things at once and lose attribution.</li>
+      <li>Sequence matters: trim first (smaller everything), then cache, then route, then batch offline work.</li>
+      <li>Keep an accuracy eval running while you route down-tier, so cost savings never silently degrade quality.</li>
+      <li>Batch only genuinely offline work; anything a user waits on stays synchronous + streamed.</li>
+      <li>Land monitoring <b>before</b> declaring victory — it's what keeps the win from regressing.</li>
+    </ul>
+  </div>
+
+  <h3><span class="ic">🎯</span>Exam Strategy</h3>
+  <div class="exam">
+    <blockquote>"Case-study questions give a multi-symptom system and ask for the <b>first</b> or <b>most impactful</b> step.
+    Map each symptom to its lever (reused prefix → caching; slow first token → streaming; offline bulk → batching) and pick
+    the one that targets the stated bottleneck."</blockquote>
+    <p><span class="trap">Common trap:</span> applying an offline technique (batching) to a live user-facing path, or
+    reaching for the largest model to 'fix' a latency/cost problem it actually worsens.</p>
+  </div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="summary-wrap" id="summary">
+  <a class="top" href="#top">↑ top</a>
+  <h2>Chapter Summary Table</h2>
+  <table>
+    <tbody><tr><th>Subsection</th><th>Core Concept</th><th>Primary Technique</th><th>Common Exam Trap</th></tr>
+    <tr>
+      <td><b>52.1</b> Token Optimization</td>
+      <td>Send fewer, reuse processed, amortize tokens</td>
+      <td>Prompt caching (+ trimming, semantic caching, batching)</td>
+      <td>Confusing prompt caching (input prefix) with semantic caching (output); reducing max_tokens when caching is the fix</td>
+    </tr>
+    <tr>
+      <td><b>52.2</b> Latency Optimization</td>
+      <td>Cut perceived &amp; total time</td>
+      <td>Streaming, parallel calls, right-sized model tier</td>
+      <td>"Upgrade to biggest model" to fix latency; parallelizing dependent calls</td>
+    </tr>
+    <tr>
+      <td><b>52.3</b> Cost-Performance at Scale</td>
+      <td>Blended cost per successful task</td>
+      <td>Per-token math + routing/cascades</td>
+      <td>Cheapest per-token model ignoring retries/accuracy; forgetting output &gt; input pricing</td>
+    </tr>
+    <tr>
+      <td><b>52.4</b> Monitoring &amp; Alerting</td>
+      <td>Measure to optimize; catch regressions early</td>
+      <td>Token/cost telemetry + rate-of-change &amp; cache-hit alerts</td>
+      <td>Relying on end-of-month totals; tracking request count over output-token volume</td>
+    </tr>
+    <tr>
+      <td><b>52.5</b> Hands-On Case Study</td>
+      <td>Apply 52.1–52.4 end-to-end, in order</td>
+      <td>Trim → cache → route → stream/parallelize → batch → monitor</td>
+      <td>Batching a live path; changing everything at once; big model as a cure-all</td>
+    </tr>
+  </tbody></table>
+</section>
+
+<footer>
+  Chapter 52 · Optimizing Token Usage, Latency &amp; Cost — educational study guide.
+  Techniques are industry-standard; Anthropic-specific figures (cache read ≈10% of input, cache write 1.25×/2×, batch 50% off, 100K/256 MB limits) are from Anthropic's published documentation. Illustrative numbers are labelled as such.
+</footer>
+
+</div>
+
+
+</body></html>

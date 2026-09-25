@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 25 — Escalation &amp; Ambiguity Resolution Patterns | Claude Certified Architect</title>
+<style>
+  :root{
+    --bg:#f6f8fb;
+    --surface:#ffffff;
+    --ink:#152238;
+    --ink-soft:#3d4a5c;
+    --muted:#6b7789;
+    --line:#e4e9f0;
+    --line-strong:#cfd8e3;
+    --primary:#4f2ec9;
+    --primary-soft:#efeafd;
+    --accent:#0b7285;
+    --good:#0f8a5f;
+    --good-bg:#e6f6ee;
+    --bad:#c0392b;
+    --bad-bg:#fceae8;
+    --warn:#b7791f;
+    --warn-bg:#fdf3e2;
+    --info:#1b5fbf;
+    --info-bg:#e8f0fd;
+    --shadow:0 1px 3px rgba(21,34,56,.08),0 6px 20px rgba(21,34,56,.05);
+    --radius:14px;
+    --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'SF Mono',ui-monospace,Consolas,'Courier New',monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font);line-height:1.62;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:32px 22px 90px;}
+
+  /* Header */
+  header.hero{
+    background:linear-gradient(135deg,#4f2ec9 0%,#7b3ff2 55%,#9d5cf5 100%);
+    color:#fff;border-radius:20px;padding:38px 36px;margin-bottom:26px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  header.hero::after{
+    content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+    background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);border-radius:50%;
+  }
+  .kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.9;font-weight:600;}
+  header.hero h1{font-size:30px;line-height:1.2;margin:10px 0 8px;font-weight:750;letter-spacing:-.01em;}
+  header.hero p{margin:0;font-size:15.5px;opacity:.94;max-width:640px;}
+  .exam-tag{display:inline-block;margin-top:16px;background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.32);padding:5px 13px;border-radius:100px;font-size:12.5px;font-weight:600;}
+
+  /* TOC */
+  nav.toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 26px;margin-bottom:30px;box-shadow:var(--shadow);}
+  nav.toc h2{margin:0 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+  nav.toc ol{margin:0;padding-left:0;list-style:none;counter-reset:toc;}
+  nav.toc li{counter-increment:toc;margin:0;border-bottom:1px dashed var(--line);}
+  nav.toc li:last-child{border-bottom:none;}
+  nav.toc a{display:flex;align-items:baseline;gap:12px;text-decoration:none;color:var(--ink-soft);
+    padding:9px 4px;transition:color .15s,background .15s;border-radius:6px;}
+  nav.toc a:hover{color:var(--primary);background:var(--primary-soft);}
+  nav.toc a .num{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--primary);min-width:44px;}
+  nav.toc a .t{font-weight:500;font-size:15px;}
+
+  /* Sections */
+  section{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 32px;margin-bottom:26px;box-shadow:var(--shadow);scroll-margin-top:18px;}
+  section > h2{font-size:23px;margin:0 0 4px;letter-spacing:-.01em;display:flex;align-items:center;gap:12px;}
+  .sec-num{font-family:var(--mono);background:var(--primary);color:#fff;font-size:15px;font-weight:700;
+    padding:4px 11px;border-radius:8px;letter-spacing:.02em;}
+  .sec-sub{color:var(--muted);font-size:14px;margin:2px 0 20px;font-weight:500;}
+  section h3{font-size:16px;margin:26px 0 8px;color:var(--ink);letter-spacing:.01em;
+    display:flex;align-items:center;gap:8px;}
+  section h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block;}
+  p{margin:0 0 12px;color:var(--ink-soft);}
+  ul,ol{margin:0 0 14px;padding-left:22px;color:var(--ink-soft);}
+  li{margin:5px 0;}
+  strong{color:var(--ink);}
+  code{font-family:var(--mono);background:#f0f2f7;padding:1.5px 6px;border-radius:5px;font-size:13.5px;color:#4f2ec9;}
+  .overview{background:linear-gradient(180deg,var(--primary-soft),#f8f5ff);border-left:4px solid var(--primary);
+    padding:14px 18px;border-radius:0 10px 10px 0;margin:0 0 8px;color:var(--ink-soft);font-size:15px;}
+
+  /* Tables */
+  .tbl-wrap{overflow-x:auto;margin:14px 0 6px;border:1px solid var(--line);border-radius:10px;}
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th{background:#f3f0fb;text-align:left;color:var(--ink);font-weight:650;padding:11px 14px;
+    border-bottom:2px solid var(--line-strong);font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  tbody tr:hover td{background:#faf9fe;}
+  td .ok{color:var(--good);font-weight:600;}
+  td .no{color:var(--bad);font-weight:600;}
+
+  /* Callout boxes */
+  .box{border-radius:12px;padding:15px 18px 15px 16px;margin:16px 0;font-size:14.5px;line-height:1.55;border:1px solid;}
+  .tip-box{background:var(--good-bg);border-color:#bfe7d1;color:#0c5e42;}
+  .exam-strategy{background:var(--info-bg);border-color:#c3d9f7;color:#123f86;}
+  .warn-box{background:var(--warn-bg);border-color:#f0ddb3;color:#7a5310;}
+  .box b{color:inherit;}
+  .box .lbl{display:inline-flex;align-items:center;gap:7px;font-weight:700;}
+
+  /* Right vs Wrong scenario cards */
+  .rvw{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+  @media(max-width:640px){.rvw{grid-template-columns:1fr;}}
+  .rvw .card{border-radius:12px;padding:15px 17px;font-size:14px;line-height:1.5;border:1px solid;}
+  .rvw .wrong{background:var(--bad-bg);border-color:#f2c9c3;}
+  .rvw .right{background:var(--good-bg);border-color:#bfe7d1;}
+  .rvw .hd{font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:7px;
+    display:flex;align-items:center;gap:7px;}
+  .rvw .wrong .hd{color:var(--bad);}
+  .rvw .right .hd{color:var(--good);}
+  .rvw .card p{margin:0 0 6px;color:var(--ink-soft);}
+  .rvw .card .say{font-style:italic;color:var(--ink);background:rgba(255,255,255,.65);
+    border-radius:8px;padding:8px 10px;display:block;margin:6px 0;font-size:13.5px;}
+
+  /* SVG diagram frame */
+  .diagram{background:#fbfcfe;border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0;text-align:center;}
+  .diagram svg{max-width:100%;height:auto;}
+  .diagram .cap{color:var(--muted);font-size:12.5px;margin-top:8px;letter-spacing:.02em;}
+
+  /* Chain of thought */
+  .cot{background:#0f1b2d;color:#e7edf6;border-radius:14px;padding:22px 24px;margin:18px 0;
+    font-size:14.5px;line-height:1.6;box-shadow:var(--shadow);}
+  .cot .cot-hd{font-weight:700;color:#a99bf5;letter-spacing:.03em;text-transform:uppercase;font-size:12.5px;
+    margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .cot ol{counter-reset:step;list-style:none;padding-left:0;margin:0;color:#cdd7e5;}
+  .cot ol li{counter-increment:step;position:relative;padding:10px 0 10px 46px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .cot ol li:last-child{border-bottom:none;}
+  .cot ol li::before{content:counter(step);position:absolute;left:0;top:9px;width:30px;height:30px;
+    background:#4f2ec9;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-family:var(--mono);font-size:14px;}
+  .cot ol li b{color:#fff;}
+  .cot .think{color:#8fd4c4;font-style:italic;display:block;margin-top:3px;font-size:13.5px;}
+
+  /* Key principles list */
+  .principles li::marker{color:var(--primary);font-weight:700;}
+
+  /* Summary quick ref */
+  .qr td .tk{color:var(--ink);}
+  .checklist{list-style:none;padding-left:0;margin:14px 0;}
+  .checklist li{position:relative;padding:9px 12px 9px 40px;background:#fbfcfe;border:1px solid var(--line);
+    border-radius:10px;margin:8px 0;color:var(--ink-soft);font-size:14.5px;}
+  .checklist li::before{content:"⚠";position:absolute;left:12px;top:9px;color:var(--warn);font-size:16px;}
+  .checklist li b{color:var(--ink);}
+
+  .backtop{display:inline-block;margin-top:10px;font-size:12.5px;color:var(--muted);text-decoration:none;}
+  .backtop:hover{color:var(--primary);}
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:20px;}
+  .disclaimer{background:#fbfcfe;border:1px dashed var(--line-strong);border-radius:12px;
+    padding:14px 18px;font-size:13px;color:var(--muted);margin-bottom:26px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero" id="top">
+    <div class="kicker">Claude Certified Architect — Foundations &amp; Professional</div>
+    <h1>Chapter 25 · Escalation &amp; Ambiguity Resolution Patterns</h1>
+    <p>Exam-ready study notes on when and how a conversational agent should hand off to a human, resolve on its own, or ask for clarification — grounded in defensible best-practice design patterns.</p>
+    <span class="exam-tag">7 subtopics · flowcharts · exam strategy · quick-reference</span>
+  </header>
+
+  <div class="disclaimer">
+    <strong>Scope note.</strong> These notes describe <em>design patterns</em> for building escalation and ambiguity handling into AI-agent systems. Any references to model behaviour describe how you should <em>architect prompts and control flow</em> — they are not claims about undocumented model internals.
+  </div>
+
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s251"><span class="num">25.1</span><span class="t">Appropriate Escalation Triggers: Human Requests, Policy Gaps &amp; Stalling</span></a></li>
+      <li><a href="#s252"><span class="num">25.2</span><span class="t">Immediate Escalation vs. Offering to Resolve</span></a></li>
+      <li><a href="#s253"><span class="num">25.3</span><span class="t">Why Sentiment-Based Escalation &amp; Self-Reported Confidence Are Unreliable</span></a></li>
+      <li><a href="#s254"><span class="num">25.4</span><span class="t">Multiple Customer Matches: Clarification Over Heuristic Selection</span></a></li>
+      <li><a href="#s255"><span class="num">25.5</span><span class="t">Few-Shot Examples for Escalation Criteria in System Prompts</span></a></li>
+      <li><a href="#s256"><span class="num">25.6</span><span class="t">Handling Ambiguous Policy Gaps</span></a></li>
+      <li><a href="#s257"><span class="num">25.7</span><span class="t">Hands-On: Designing an Escalation Decision Framework</span></a></li>
+      <li><a href="#summary"><span class="num">★</span><span class="t">Summary &amp; Quick-Reference</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 25.1 ============ -->
+  <section id="s251">
+    <h2><span class="sec-num">25.1</span> Appropriate Escalation Triggers</h2>
+    <div class="sec-sub">Human Requests · Policy Gaps · Stalling</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> An <em>escalation trigger</em> is a condition that means the agent should stop trying to resolve autonomously and route the conversation to a human. Well-designed agents escalate on <strong>objective, observable signals</strong> — not on vibes. The three canonical trigger families are explicit human requests, policy/knowledge gaps, and stalling (unresolved loops).
+    </div>
+
+    <h3><span class="dot"></span>Key principles</h3>
+    <ul class="principles">
+      <li><strong>Explicit human request is non-negotiable.</strong> If a user asks for a person, escalate — do not "sell" the bot's abilities first.</li>
+      <li><strong>Policy gap = absence of authority.</strong> If no documented rule covers the case, the agent lacks the authority to decide; escalate with full context.</li>
+      <li><strong>Stalling is a measurable pattern:</strong> the same unresolved intent repeats, the same tool fails repeatedly, or N turns pass with no progress. Detect it with counters, not intuition.</li>
+      <li><strong>Escalate <em>with context</em>, never with a cold hand-off.</strong> Package the summary, what was tried, and the customer's goal so the human starts warm.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Trigger reference table</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Trigger Type</th><th>Example Signal</th><th>Correct Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Explicit human request</strong></td><td>"I want to speak to a person / a manager / a human"</td><td><span class="ok">Escalate immediately</span></td></tr>
+          <tr><td><strong>Policy / knowledge gap</strong></td><td>No documented rule for this refund edge case</td><td><span class="ok">Escalate with context</span> (don't invent a policy)</td></tr>
+          <tr><td><strong>Stalling / loop</strong></td><td>User repeats the same unresolved question 3×; tool errors twice</td><td><span class="ok">Escalate proactively</span> before frustration grows</td></tr>
+          <tr><td><strong>Authority boundary</strong></td><td>Request exceeds the agent's allowed action set (e.g. issue a $5,000 credit)</td><td><span class="ok">Escalate</span> — outside mandate</td></tr>
+          <tr><td><strong>Safety / legal / harm</strong></td><td>Threats of self-harm, legal dispute, regulated advice</td><td><span class="ok">Escalate immediately</span> per policy</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="dot"></span>Scenario — policy gap</h3>
+    <div class="rvw">
+      <div class="card wrong">
+        <div class="hd">✗ Wrong approach</div>
+        <p>Customer asks for a refund on a gift card, which policy does not address.</p>
+        <span class="say">"Sure, I've gone ahead and refunded your gift card."</span>
+        <p>The agent <strong>invented authority</strong> it doesn't have and created a rule on the spot.</p>
+      </div>
+      <div class="card right">
+        <div class="hd">✓ Right approach</div>
+        <p>Same request, no policy match.</p>
+        <span class="say">"Gift-card refunds aren't covered by our standard policy, so I'm connecting you with a specialist who can review this. Here's what I've noted…"</span>
+        <p>The agent named the <strong>gap</strong> and escalated with context.</p>
+      </div>
+    </div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;Remember the mnemonic <strong>"H-P-S"</strong> — <b>H</b>uman request, <b>P</b>olicy gap, <b>S</b>talling. If a scenario matches any of the three, escalation is on the table.</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;Trigger questions often bury an explicit human request inside a longer complaint ("…and honestly I'd rather just talk to someone"). The presence of that phrase makes <b>immediate escalation</b> the correct answer regardless of how solvable the surrounding issue looks.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 25.2 ============ -->
+  <section id="s252">
+    <h2><span class="sec-num">25.2</span> Immediate Escalation vs. Offering to Resolve</h2>
+    <div class="sec-sub">Knowing when to hand off first vs. attempt a fix first</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> Not every trigger deserves the same response. Some conditions demand an <strong>immediate</strong> hand-off; others should first prompt the agent to <strong>offer to resolve</strong> the issue, escalating only if the attempt fails or the user declines. Choosing wrongly either frustrates users (needless bot loops) or wastes human capacity (premature hand-offs).
+    </div>
+
+    <h3><span class="dot"></span>Key principles</h3>
+    <ul class="principles">
+      <li><strong>Immediate escalation</strong> is for: explicit human requests, safety/legal/harm, and hard authority boundaries. No resolution attempt should delay these.</li>
+      <li><strong>Offer-to-resolve</strong> is for: solvable in-scope issues where the agent has both a matching policy and the required tools/authority.</li>
+      <li>When offering to resolve, <strong>set an exit</strong>: "If this doesn't fix it, I'll connect you to a specialist." Never trap the user in the bot.</li>
+      <li>An offer to resolve is <strong>not</strong> a way to talk a user out of a human they explicitly asked for.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Decision flowchart</h3>
+    <div class="diagram">
+      <svg viewBox="0 0 720 330" role="img" aria-label="Immediate escalation versus offer to resolve decision flow">
+        <defs>
+          <marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6b7789"></path></marker>
+        </defs>
+        <!-- start -->
+        <rect x="270" y="12" width="180" height="42" rx="10" fill="#4f2ec9"></rect>
+        <text x="360" y="38" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="sans-serif">Incoming request</text>
+        <line x1="360" y1="54" x2="360" y2="76" stroke="#6b7789" stroke-width="2" marker-end="url(#ar1)"></line>
+        <!-- decision 1 -->
+        <polygon points="360,80 470,120 360,160 250,120" fill="#fdf3e2" stroke="#b7791f" stroke-width="1.5"></polygon>
+        <text x="360" y="115" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">Explicit human req,</text>
+        <text x="360" y="130" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">safety, or authority limit?</text>
+        <!-- yes to immediate -->
+        <line x1="470" y1="120" x2="560" y2="120" stroke="#6b7789" stroke-width="2" marker-end="url(#ar1)"></line>
+        <text x="512" y="112" text-anchor="middle" fill="#0f8a5f" font-size="11" font-weight="700" font-family="sans-serif">YES</text>
+        <rect x="560" y="98" width="150" height="44" rx="10" fill="#e6f6ee" stroke="#0f8a5f" stroke-width="1.5"></rect>
+        <text x="635" y="118" text-anchor="middle" fill="#0c5e42" font-size="12" font-weight="700" font-family="sans-serif">Escalate</text>
+        <text x="635" y="133" text-anchor="middle" fill="#0c5e42" font-size="12" font-weight="700" font-family="sans-serif">immediately</text>
+        <!-- no down -->
+        <line x1="360" y1="160" x2="360" y2="184" stroke="#6b7789" stroke-width="2" marker-end="url(#ar1)"></line>
+        <text x="378" y="177" fill="#c0392b" font-size="11" font-weight="700" font-family="sans-serif">NO</text>
+        <!-- decision 2 -->
+        <polygon points="360,188 470,228 360,268 250,228" fill="#e8f0fd" stroke="#1b5fbf" stroke-width="1.5"></polygon>
+        <text x="360" y="223" text-anchor="middle" fill="#123f86" font-size="11.5" font-weight="700" font-family="sans-serif">In-scope policy +</text>
+        <text x="360" y="238" text-anchor="middle" fill="#123f86" font-size="11.5" font-weight="700" font-family="sans-serif">tools available?</text>
+        <!-- yes to resolve -->
+        <line x1="250" y1="228" x2="150" y2="228" stroke="#6b7789" stroke-width="2" marker-end="url(#ar1)"></line>
+        <text x="200" y="220" text-anchor="middle" fill="#0f8a5f" font-size="11" font-weight="700" font-family="sans-serif">YES</text>
+        <rect x="10" y="206" width="135" height="44" rx="10" fill="#efeafd" stroke="#4f2ec9" stroke-width="1.5"></rect>
+        <text x="77" y="226" text-anchor="middle" fill="#4f2ec9" font-size="12" font-weight="700" font-family="sans-serif">Offer to resolve</text>
+        <text x="77" y="241" text-anchor="middle" fill="#4f2ec9" font-size="10.5" font-family="sans-serif">(with exit path)</text>
+        <!-- no to escalate -->
+        <line x1="360" y1="268" x2="360" y2="292" stroke="#6b7789" stroke-width="2" marker-end="url(#ar1)"></line>
+        <text x="378" y="285" fill="#c0392b" font-size="11" font-weight="700" font-family="sans-serif">NO</text>
+        <rect x="285" y="296" width="150" height="30" rx="9" fill="#e6f6ee" stroke="#0f8a5f" stroke-width="1.5"></rect>
+        <text x="360" y="316" text-anchor="middle" fill="#0c5e42" font-size="12" font-weight="700" font-family="sans-serif">Escalate with context</text>
+      </svg>
+      <div class="cap">Fig. 25.2 — Route immediate triggers straight to a human; only in-scope, tool-backed issues qualify for an offer-to-resolve.</div>
+    </div>
+
+    <h3><span class="dot"></span>Scenario — password reset vs. account takeover</h3>
+    <div class="rvw">
+      <div class="card wrong">
+        <div class="hd">✗ Wrong approach</div>
+        <p>User reports their account was <strong>taken over</strong> and money moved.</p>
+        <span class="say">"No problem! Let's try resetting your password together, step by step…"</span>
+        <p>Treats a <strong>security incident</strong> as a routine self-service fix — should be immediate escalation.</p>
+      </div>
+      <div class="card right">
+        <div class="hd">✓ Right approach</div>
+        <p>User just forgot their password (routine, in-scope).</p>
+        <span class="say">"I can help you reset it right now. If anything looks off afterward, I'll connect you to our security team."</span>
+        <p>Resolves the in-scope task and pre-declares an <strong>exit path</strong>.</p>
+      </div>
+    </div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;Ask: <strong>"Do I have both the <em>policy</em> and the <em>power</em>?"</strong> Missing either one flips the answer from "offer to resolve" to "escalate".</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;Watch for answer options that "offer to resolve" a <b>safety or explicit-human-request</b> case — they are distractors. The correct choice escalates immediately and does not attempt a fix first.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 25.3 ============ -->
+  <section id="s253">
+    <h2><span class="sec-num">25.3</span> Why Sentiment &amp; Self-Reported Confidence Are Unreliable</h2>
+    <div class="sec-sub">Escalate on objective signals, not on tone or a confidence number</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> Two tempting-but-flawed escalation designs are (1) escalating when the <em>user sounds</em> angry (sentiment) and (2) escalating when the <em>model reports</em> low confidence. Both correlate poorly with whether escalation is actually warranted. Sentiment measures <strong>mood, not correctness</strong>; self-reported confidence is <strong>miscalibrated</strong> — a model can be fluently, confidently wrong.
+    </div>
+
+    <h3><span class="dot"></span>Key principles</h3>
+    <ul class="principles">
+      <li><strong>Sentiment ≠ correctness.</strong> A polite user can have an unsolvable problem; an angry user can have a trivially solvable one.</li>
+      <li><strong>Self-reported confidence is not calibrated probability.</strong> "I'm 95% sure" is generated text, not a measured likelihood — high fluency ≠ high accuracy.</li>
+      <li>Both signals are <strong>gameable and noisy</strong>: users learn "just say you're angry to reach a human," and confidence phrasing drifts with prompt wording.</li>
+      <li>Prefer <strong>objective, verifiable signals</strong>: policy match found (yes/no), tool call succeeded (yes/no), record uniquely resolved (yes/no), turn/attempt counters, authority-in-scope (yes/no).</li>
+    </ul>
+
+    <h3><span class="dot"></span>Signal reliability comparison</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Signal</th><th>What it actually measures</th><th>Use for escalation?</th></tr></thead>
+        <tbody>
+          <tr><td>User sentiment / tone</td><td>Emotional state — not solvability</td><td><span class="no">✗ Not as a primary trigger</span></td></tr>
+          <tr><td>Model self-reported confidence</td><td>Phrasing of certainty — not accuracy</td><td><span class="no">✗ Unreliable</span></td></tr>
+          <tr><td>Policy match found?</td><td>Whether a rule covers the case</td><td><span class="ok">✓ Objective</span></td></tr>
+          <tr><td>Tool/lookup result</td><td>Success, failure, or ambiguity of an action</td><td><span class="ok">✓ Objective</span></td></tr>
+          <tr><td>Repeat / attempt counters</td><td>Measured stalling</td><td><span class="ok">✓ Objective</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="dot"></span>Scenario — the confident wrong answer</h3>
+    <div class="rvw">
+      <div class="card wrong">
+        <div class="hd">✗ Wrong approach</div>
+        <p>Design: "Escalate only when the model says its confidence &lt; 0.7."</p>
+        <span class="say">Model states "I'm confident: your warranty covers this" — but no warranty record exists.</span>
+        <p>High stated confidence <strong>suppresses</strong> escalation on a case with no factual basis.</p>
+      </div>
+      <div class="card right">
+        <div class="hd">✓ Right approach</div>
+        <p>Design: escalate when the warranty lookup returns <strong>no record</strong>, regardless of tone or stated confidence.</p>
+        <span class="say">"I can't find a warranty on this account, so I'm routing you to a specialist to confirm."</span>
+        <p>An <strong>objective, verifiable</strong> signal drives the decision.</p>
+      </div>
+    </div>
+
+    <div class="box warn-box"><span class="lbl">⚠ Common misconception</span> &nbsp;"Add a sentiment classifier and escalate angry users" feels customer-centric but produces both false positives (angry-but-solvable) and false negatives (calm-but-stuck). Use sentiment at most as a <b>secondary</b> nudge, never the core trigger.</div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;Mantra: <strong>"Fluent ≠ correct, calm ≠ solved."</strong> Anchor triggers to facts you can verify, not feelings or self-assessment.</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;If an option escalates because "the model reports low confidence" or "the user seems frustrated," treat it with suspicion. The credited answer almost always ties escalation to a <b>verifiable</b> condition (missing record, failed tool, no policy match).</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 25.4 ============ -->
+  <section id="s254">
+    <h2><span class="sec-num">25.4</span> Multiple Customer Matches: Clarification Over Heuristics</h2>
+    <div class="sec-sub">When a lookup is ambiguous, ask — don't guess</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> When an identity or record lookup returns <strong>more than one match</strong> (e.g. two customers named "J. Smith"), the agent must <strong>ask a disambiguating question</strong> rather than silently pick one using a heuristic like "most recent," "first result," or "highest spend." Guessing risks acting on the wrong person's data — a correctness and privacy failure.
+    </div>
+
+    <h3><span class="dot"></span>Key principles</h3>
+    <ul class="principles">
+      <li><strong>Ambiguous match = clarify.</strong> Two or more candidates means the agent does not yet know <em>who</em> it is helping.</li>
+      <li><strong>Heuristic selection is a silent guess.</strong> "Pick the most recent order" can attach one person's actions to another's account.</li>
+      <li>Ask for a <strong>discriminating attribute</strong> the real customer can supply but a wrong match cannot easily (order number, ZIP, email on file) — mindful of verification/privacy rules.</li>
+      <li>Never <strong>reveal</strong> details of the other candidates while disambiguating (no "Is this the John Smith at 12 Elm St. or 40 Oak Ave.?").</li>
+      <li>If clarification still can't uniquely resolve the record, <strong>escalate</strong> — do not proceed on a guess.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Disambiguation flow</h3>
+    <div class="diagram">
+      <svg viewBox="0 0 720 250" role="img" aria-label="Multiple match disambiguation flow">
+        <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6b7789"></path></marker></defs>
+        <rect x="20" y="100" width="150" height="46" rx="10" fill="#4f2ec9"></rect>
+        <text x="95" y="120" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700" font-family="sans-serif">Lookup returns</text>
+        <text x="95" y="136" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700" font-family="sans-serif">candidate set</text>
+        <line x1="170" y1="123" x2="220" y2="123" stroke="#6b7789" stroke-width="2" marker-end="url(#ar2)"></line>
+        <polygon points="300,83 380,123 300,163 220,123" fill="#fdf3e2" stroke="#b7791f" stroke-width="1.5"></polygon>
+        <text x="300" y="120" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">Exactly one</text>
+        <text x="300" y="135" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">match?</text>
+        <!-- yes proceed -->
+        <line x1="300" y1="83" x2="300" y2="40" stroke="#6b7789" stroke-width="2" marker-end="url(#ar2)"></line>
+        <text x="315" y="66" fill="#0f8a5f" font-size="11" font-weight="700" font-family="sans-serif">YES (1)</text>
+        <rect x="225" y="8" width="150" height="30" rx="9" fill="#e6f6ee" stroke="#0f8a5f" stroke-width="1.5"></rect>
+        <text x="300" y="28" text-anchor="middle" fill="#0c5e42" font-size="12" font-weight="700" font-family="sans-serif">Proceed with record</text>
+        <!-- no ask -->
+        <line x1="380" y1="123" x2="430" y2="123" stroke="#6b7789" stroke-width="2" marker-end="url(#ar2)"></line>
+        <text x="405" y="115" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700" font-family="sans-serif">&gt;1 or 0</text>
+        <rect x="430" y="100" width="160" height="46" rx="10" fill="#efeafd" stroke="#4f2ec9" stroke-width="1.5"></rect>
+        <text x="510" y="120" text-anchor="middle" fill="#4f2ec9" font-size="12" font-weight="700" font-family="sans-serif">Ask discriminating</text>
+        <text x="510" y="135" text-anchor="middle" fill="#4f2ec9" font-size="12" font-weight="700" font-family="sans-serif">question</text>
+        <line x1="510" y1="146" x2="510" y2="188" stroke="#6b7789" stroke-width="2" marker-end="url(#ar2)"></line>
+        <polygon points="510,192 585,222 510,252 435,222" fill="#e8f0fd" stroke="#1b5fbf" stroke-width="1.5"></polygon>
+        <text x="510" y="219" text-anchor="middle" fill="#123f86" font-size="11" font-weight="700" font-family="sans-serif">Now unique?</text>
+        <text x="510" y="234" text-anchor="middle" fill="#123f86" font-size="10.5" font-family="sans-serif">verified</text>
+        <line x1="585" y1="222" x2="650" y2="222" stroke="#6b7789" stroke-width="2" marker-end="url(#ar2)"></line>
+        <text x="620" y="214" text-anchor="middle" fill="#0f8a5f" font-size="10.5" font-weight="700" font-family="sans-serif">YES</text>
+        <rect x="628" y="150" width="80" height="30" rx="9" fill="#e6f6ee" stroke="#0f8a5f" stroke-width="1.5"></rect>
+        <text x="668" y="170" text-anchor="middle" fill="#0c5e42" font-size="11.5" font-weight="700" font-family="sans-serif">Proceed</text>
+        <line x1="435" y1="222" x2="360" y2="222" stroke="#6b7789" stroke-width="2" marker-end="url(#ar2)"></line>
+        <text x="398" y="214" text-anchor="middle" fill="#c0392b" font-size="10.5" font-weight="700" font-family="sans-serif">NO</text>
+        <rect x="230" y="207" width="130" height="30" rx="9" fill="#fceae8" stroke="#c0392b" stroke-width="1.5"></rect>
+        <text x="295" y="227" text-anchor="middle" fill="#c0392b" font-size="11.5" font-weight="700" font-family="sans-serif">Escalate</text>
+      </svg>
+      <div class="cap">Fig. 25.4 — Unique match → proceed; ambiguous or zero → clarify; still unresolved → escalate. Never auto-select.</div>
+    </div>
+
+    <h3><span class="dot"></span>Scenario — two matching accounts</h3>
+    <div class="rvw">
+      <div class="card wrong">
+        <div class="hd">✗ Wrong approach</div>
+        <p>Two customers match "Maria Garcia." The agent picks the one with the <strong>most recent order</strong>.</p>
+        <span class="say">"I've cancelled your latest order, Maria."</span>
+        <p>May have cancelled the <strong>wrong person's</strong> order — a data-integrity and privacy breach.</p>
+      </div>
+      <div class="card right">
+        <div class="hd">✓ Right approach</div>
+        <p>Two matches found.</p>
+        <span class="say">"I see more than one account under that name. Can you share the order number or the email on file so I reach the right one?"</span>
+        <p>Uses a <strong>discriminating attribute</strong>; reveals nothing about the other account.</p>
+      </div>
+    </div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;Rule of thumb: <strong>"N ≠ 1 → ask."</strong> Zero matches and two-plus matches both mean <em>you do not know who this is</em> — the response is a question, not an action.</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;Distractor answers here sound "efficient" — "select the most recent," "choose the highest-value customer," "pick the first result." Efficiency is a trap; the credited answer <b>clarifies</b> (or escalates), and it avoids leaking other candidates' details.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 25.5 ============ -->
+  <section id="s255">
+    <h2><span class="sec-num">25.5</span> Few-Shot Examples for Escalation Criteria</h2>
+    <div class="sec-sub">Encoding escalation rules in the system prompt</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> Abstract rules ("escalate when appropriate") are under-specified. <strong>Few-shot examples</strong> in the system prompt make escalation criteria concrete by showing paired inputs and the desired escalate/resolve decision — including <em>near-miss</em> cases that sit close to the boundary. This turns fuzzy policy into learnable, testable behaviour.
+    </div>
+
+    <h3><span class="dot"></span>Key principles</h3>
+    <ul class="principles">
+      <li><strong>Show, don't just tell.</strong> Pair each example with the correct decision and a one-line rationale.</li>
+      <li><strong>Cover both classes.</strong> Include examples that <em>should</em> escalate and ones that <em>should not</em>, so the boundary is visible from both sides.</li>
+      <li><strong>Prioritise boundary cases.</strong> Near-miss examples (looks solvable but isn't; sounds urgent but is in-scope) teach more than obvious ones.</li>
+      <li><strong>State the action format.</strong> Show exactly how to escalate (e.g. emit an <code>escalate</code> tool call / handoff token with a context summary).</li>
+      <li><strong>Keep examples current and non-conflicting.</strong> Contradictory examples produce inconsistent behaviour; review them when policy changes.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Example few-shot block (illustrative)</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>User message</th><th>Decision</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>"Can you reset my password?"</td><td><span class="ok">Resolve</span></td><td>In-scope, tool available</td></tr>
+          <tr><td>"Just let me talk to a human."</td><td><span class="no">Escalate</span></td><td>Explicit human request</td></tr>
+          <tr><td>"Refund my gift card — it's not in your FAQ but I want it."</td><td><span class="no">Escalate</span></td><td>Policy gap; no authority</td></tr>
+          <tr><td>"I've asked 3× why my order is late and still nothing."</td><td><span class="no">Escalate</span></td><td>Stalling / loop detected</td></tr>
+          <tr><td>"I'm furious, but can you just track my parcel?"</td><td><span class="ok">Resolve</span></td><td>Angry <em>but</em> in-scope — sentiment ≠ trigger</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="dot"></span>Scenario — vague rule vs. exemplar-driven rule</h3>
+    <div class="rvw">
+      <div class="card wrong">
+        <div class="hd">✗ Wrong approach</div>
+        <p>System prompt says only: <em>"Escalate difficult cases to a human."</em></p>
+        <p>"Difficult" is undefined, so behaviour is inconsistent — the same input escalates one time and not the next.</p>
+      </div>
+      <div class="card right">
+        <div class="hd">✓ Right approach</div>
+        <p>Prompt lists 5–8 labelled examples spanning escalate / resolve, including boundary cases and the exact handoff format.</p>
+        <p>The boundary is <strong>demonstrated</strong>, so decisions are consistent and auditable.</p>
+      </div>
+    </div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;A good few-shot set is <strong>balanced and boundary-focused</strong>: include the tempting "angry-but-solvable" and "confident-but-no-record" cases so the model learns what does <em>not</em> trigger escalation, too.</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;When asked how to make escalation "more reliable/consistent," prefer answers that add <b>concrete labelled examples (including negatives)</b> to the prompt over answers that add more abstract instructions or a longer policy paragraph.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 25.6 ============ -->
+  <section id="s256">
+    <h2><span class="sec-num">25.6</span> Handling Ambiguous Policy Gaps</h2>
+    <div class="sec-sub">When the rulebook is silent — acknowledge, don't fabricate</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> A <em>policy gap</em> is a case the documentation neither permits nor forbids. The failure mode is <strong>confabulation</strong> — inventing a plausible-sounding rule to appear helpful. The correct pattern is to <strong>recognise the gap, avoid stating an invented policy as fact, and escalate with context</strong> (or, where allowed, offer a clearly-labelled best-effort next step while flagging uncertainty).
+    </div>
+
+    <h3><span class="dot"></span>Key principles</h3>
+    <ul class="principles">
+      <li><strong>Absence of a rule is information.</strong> "No policy covers this" is a valid, reportable finding — not something to paper over.</li>
+      <li><strong>Never present an invented rule as official.</strong> Fabricated policy erodes trust and can create liability.</li>
+      <li><strong>Escalate with the gap documented:</strong> what was asked, what policy was searched, and why no rule applied.</li>
+      <li><strong>Separate "no rule" from "rule says no."</strong> A gap (unknown) is different from an explicit denial (known) — communicate which one it is.</li>
+      <li>Feed recurring gaps back to <strong>policy owners</strong> so the knowledge base improves over time.</li>
+    </ul>
+
+    <h3><span class="dot"></span>Gap vs. explicit denial</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Situation</th><th>What the agent knows</th><th>Correct response</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Explicit denial</strong></td><td>Policy clearly says "not allowed"</td><td>State the policy and the reason; offer alternatives if any</td></tr>
+          <tr><td><strong>Policy gap</strong></td><td>No rule addresses this case</td><td><span class="ok">Acknowledge the gap + escalate with context</span></td></tr>
+          <tr><td><strong>Confabulation</strong> (anti-pattern)</td><td>No rule — but agent invents one</td><td><span class="no">✗ Never do this</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="dot"></span>Scenario — undocumented edge case</h3>
+    <div class="rvw">
+      <div class="card wrong">
+        <div class="hd">✗ Wrong approach</div>
+        <p>No policy on transferring a subscription between accounts.</p>
+        <span class="say">"Our policy allows one free transfer per year, so you're all set."</span>
+        <p>That rule <strong>does not exist</strong> — a confident fabrication.</p>
+      </div>
+      <div class="card right">
+        <div class="hd">✓ Right approach</div>
+        <p>Same undocumented case.</p>
+        <span class="say">"I don't have a documented policy on transferring a subscription between accounts, so I won't guess. I'm escalating this with the details so a specialist can give you an accurate answer."</span>
+        <p>Names the gap, refuses to invent, escalates with context.</p>
+      </div>
+    </div>
+
+    <div class="box warn-box"><span class="lbl">⚠ Watch out</span> &nbsp;The most dangerous gap answers are <b>fluent and specific</b> ("one free transfer per year"). Specificity is not evidence of a real policy — verify against the knowledge base before asserting.</div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;Say the quiet part: <strong>"I don't have a documented policy for this."</strong> Naming the gap out loud is the behaviour the exam rewards — it is honest, auditable, and escalatable.</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;For policy-gap items, eliminate any option where the agent <b>states a specific rule that wasn't given in the prompt</b>. The credited answer acknowledges uncertainty and routes to a human rather than manufacturing a policy.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 25.7 ============ -->
+  <section id="s257">
+    <h2><span class="sec-num">25.7</span> Hands-On: Designing an Escalation Decision Framework</h2>
+    <div class="sec-sub">Putting 25.1–25.6 together into one coherent control flow</div>
+
+    <div class="overview">
+      <strong>Overview.</strong> A production escalation framework is an ordered evaluation of <strong>objective checks</strong> that outputs one of three actions: <strong>Resolve</strong>, <strong>Clarify</strong>, or <strong>Escalate</strong>. Order matters — immediate triggers are checked first so they can short-circuit everything else. This section walks the design end-to-end and shows the reasoning that produces it.
+    </div>
+
+    <h3><span class="dot"></span>Design goals</h3>
+    <ul class="principles">
+      <li>Deterministic and <strong>auditable</strong> — every decision traces to a named check.</li>
+      <li>Anchored to <strong>verifiable signals</strong> (25.3), not sentiment or self-confidence.</li>
+      <li>Handles <strong>ambiguity</strong> by clarifying (25.4) and <strong>gaps</strong> by escalating (25.6).</li>
+      <li>Escalations always carry a <strong>context package</strong>.</li>
+    </ul>
+
+    <div class="cot">
+      <div class="cot-hd">🧠 Chain-of-Thought — designing the framework step by step</div>
+      <ol>
+        <li><b>Trigger identification (short-circuit first).</b> Check the highest-priority immediate triggers up front: explicit human request, safety/legal/harm, authority boundary. If any fire → <b>Escalate immediately</b>.
+          <span class="think">Reasoning: these must never be delayed by a resolution attempt, so they gate everything else.</span></li>
+        <li><b>Reject unreliable signals.</b> Explicitly decide <em>not</em> to branch on sentiment or model-stated confidence. Note them for logging only.
+          <span class="think">Reasoning: fluent ≠ correct, calm ≠ solved (25.3). Basing control flow on them adds noise and is gameable.</span></li>
+        <li><b>Identity / record resolution.</b> Run the lookup. If matches ≠ 1 → emit a <b>Clarify</b> question with a discriminating attribute; if still not unique after clarifying → <b>Escalate</b>.
+          <span class="think">Reasoning: acting on the wrong record is a correctness + privacy failure (25.4). "N ≠ 1 → ask."</span></li>
+        <li><b>Policy match check.</b> Search the knowledge base. If <em>no</em> rule covers the case → name the gap and <b>Escalate with context</b>; never fabricate a rule.
+          <span class="think">Reasoning: absence of authority means the agent can't decide (25.1, 25.6). Confabulation is the cardinal sin.</span></li>
+        <li><b>Capability &amp; authority check.</b> Confirm the required tool exists and the action is within the agent's mandate. If either is missing → <b>Escalate</b>; if both present → <b>Offer to resolve</b>.
+          <span class="think">Reasoning: "policy AND power" test (25.2). Missing either flips resolve → escalate.</span></li>
+        <li><b>Stalling / loop guard (runs continuously).</b> Track repeat-intent and tool-failure counters. On threshold (e.g. same unresolved intent 3× or 2 tool errors) → <b>Escalate proactively</b>.
+          <span class="think">Reasoning: stalling is measurable; catch frustration before it compounds (25.1).</span></li>
+        <li><b>Fallback to human + context package.</b> For any Escalate branch, assemble: conversation summary, verified identity (if any), what was attempted, the specific gap/trigger, and the customer's goal — then hand off warm.
+          <span class="think">Reasoning: a cold hand-off wastes the human's time and re-traumatises the user; context makes escalation valuable, not just a dead end.</span></li>
+      </ol>
+    </div>
+
+    <h3><span class="dot"></span>Master decision flow</h3>
+    <div class="diagram">
+      <svg viewBox="0 0 720 470" role="img" aria-label="Master escalation decision framework flowchart">
+        <defs><marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6b7789"></path></marker></defs>
+        <!-- start -->
+        <rect x="270" y="8" width="180" height="38" rx="10" fill="#4f2ec9"></rect>
+        <text x="360" y="32" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700" font-family="sans-serif">Incoming turn</text>
+        <!-- immediate trigger -->
+        <line x1="360" y1="46" x2="360" y2="66" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <polygon points="360,68 490,102 360,136 230,102" fill="#fdf3e2" stroke="#b7791f" stroke-width="1.5"></polygon>
+        <text x="360" y="98" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">Human req / safety /</text>
+        <text x="360" y="113" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">authority limit?</text>
+        <line x1="490" y1="102" x2="590" y2="102" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="540" y="94" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700" font-family="sans-serif">YES</text>
+        <rect x="590" y="82" width="120" height="40" rx="10" fill="#fceae8" stroke="#c0392b" stroke-width="1.5"></rect>
+        <text x="650" y="100" text-anchor="middle" fill="#c0392b" font-size="11.5" font-weight="700" font-family="sans-serif">ESCALATE</text>
+        <text x="650" y="114" text-anchor="middle" fill="#c0392b" font-size="10" font-family="sans-serif">(immediate)</text>
+        <!-- identity -->
+        <line x1="360" y1="136" x2="360" y2="156" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="378" y="150" fill="#0f8a5f" font-size="10.5" font-weight="700" font-family="sans-serif">NO</text>
+        <polygon points="360,158 490,192 360,226 230,192" fill="#e8f0fd" stroke="#1b5fbf" stroke-width="1.5"></polygon>
+        <text x="360" y="188" text-anchor="middle" fill="#123f86" font-size="11.5" font-weight="700" font-family="sans-serif">Record resolves</text>
+        <text x="360" y="203" text-anchor="middle" fill="#123f86" font-size="11.5" font-weight="700" font-family="sans-serif">to exactly one?</text>
+        <line x1="490" y1="192" x2="590" y2="192" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="540" y="184" text-anchor="middle" fill="#b7791f" font-size="11" font-weight="700" font-family="sans-serif">NO (N≠1)</text>
+        <rect x="590" y="172" width="120" height="40" rx="10" fill="#efeafd" stroke="#4f2ec9" stroke-width="1.5"></rect>
+        <text x="650" y="190" text-anchor="middle" fill="#4f2ec9" font-size="11.5" font-weight="700" font-family="sans-serif">CLARIFY</text>
+        <text x="650" y="204" text-anchor="middle" fill="#4f2ec9" font-size="10" font-family="sans-serif">then re-check</text>
+        <!-- policy -->
+        <line x1="360" y1="226" x2="360" y2="246" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="378" y="240" fill="#0f8a5f" font-size="10.5" font-weight="700" font-family="sans-serif">YES</text>
+        <polygon points="360,248 490,282 360,316 230,282" fill="#fdf3e2" stroke="#b7791f" stroke-width="1.5"></polygon>
+        <text x="360" y="278" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">Policy covers</text>
+        <text x="360" y="293" text-anchor="middle" fill="#7a5310" font-size="11.5" font-weight="700" font-family="sans-serif">the case?</text>
+        <line x1="490" y1="282" x2="590" y2="282" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="540" y="274" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700" font-family="sans-serif">NO (gap)</text>
+        <rect x="590" y="262" width="120" height="40" rx="10" fill="#fceae8" stroke="#c0392b" stroke-width="1.5"></rect>
+        <text x="650" y="280" text-anchor="middle" fill="#c0392b" font-size="11.5" font-weight="700" font-family="sans-serif">ESCALATE</text>
+        <text x="650" y="294" text-anchor="middle" fill="#c0392b" font-size="10" font-family="sans-serif">(w/ context)</text>
+        <!-- capability -->
+        <line x1="360" y1="316" x2="360" y2="336" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="378" y="330" fill="#0f8a5f" font-size="10.5" font-weight="700" font-family="sans-serif">YES</text>
+        <polygon points="360,338 490,372 360,406 230,372" fill="#e8f0fd" stroke="#1b5fbf" stroke-width="1.5"></polygon>
+        <text x="360" y="368" text-anchor="middle" fill="#123f86" font-size="11.5" font-weight="700" font-family="sans-serif">Tool + authority</text>
+        <text x="360" y="383" text-anchor="middle" fill="#123f86" font-size="11.5" font-weight="700" font-family="sans-serif">in scope?</text>
+        <line x1="490" y1="372" x2="590" y2="372" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="540" y="364" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700" font-family="sans-serif">NO</text>
+        <rect x="590" y="352" width="120" height="40" rx="10" fill="#fceae8" stroke="#c0392b" stroke-width="1.5"></rect>
+        <text x="650" y="376" text-anchor="middle" fill="#c0392b" font-size="11.5" font-weight="700" font-family="sans-serif">ESCALATE</text>
+        <!-- resolve -->
+        <line x1="360" y1="406" x2="360" y2="426" stroke="#6b7789" stroke-width="2" marker-end="url(#ar3)"></line>
+        <text x="378" y="420" fill="#0f8a5f" font-size="10.5" font-weight="700" font-family="sans-serif">YES</text>
+        <rect x="270" y="428" width="180" height="38" rx="10" fill="#e6f6ee" stroke="#0f8a5f" stroke-width="1.5"></rect>
+        <text x="360" y="452" text-anchor="middle" fill="#0c5e42" font-size="13" font-weight="700" font-family="sans-serif">RESOLVE (with exit path)</text>
+        <!-- stall note -->
+        <rect x="18" y="360" width="185" height="70" rx="10" fill="#fbfcfe" stroke="#cfd8e3" stroke-width="1.2" stroke-dasharray="4 3"></rect>
+        <text x="110" y="382" text-anchor="middle" fill="#6b7789" font-size="10.5" font-weight="700" font-family="sans-serif">Stall guard (always on)</text>
+        <text x="110" y="400" text-anchor="middle" fill="#6b7789" font-size="10" font-family="sans-serif">repeat-intent ≥3 or</text>
+        <text x="110" y="414" text-anchor="middle" fill="#6b7789" font-size="10" font-family="sans-serif">tool-fail ≥2 → escalate</text>
+      </svg>
+      <div class="cap">Fig. 25.7 — Ordered checks output Resolve / Clarify / Escalate. Immediate triggers short-circuit; a stall guard runs across all turns.</div>
+    </div>
+
+    <h3><span class="dot"></span>Reference pseudo-logic</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Order</th><th>Check</th><th>If it fails →</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Immediate trigger (human/safety/authority)</td><td><span class="no">Escalate now</span></td></tr>
+          <tr><td>2</td><td>Ignore sentiment &amp; self-confidence (log only)</td><td>— (no branch)</td></tr>
+          <tr><td>3</td><td>Record resolves to exactly one</td><td><span class="ok">Clarify</span>; still ambiguous → <span class="no">Escalate</span></td></tr>
+          <tr><td>4</td><td>Policy covers the case</td><td><span class="no">Escalate with context</span> (never fabricate)</td></tr>
+          <tr><td>5</td><td>Tool present &amp; action in authority</td><td><span class="no">Escalate</span></td></tr>
+          <tr><td>6</td><td>Stall counters below threshold</td><td><span class="no">Escalate proactively</span></td></tr>
+          <tr><td>7</td><td>All checks pass</td><td><span class="ok">Resolve</span> (with exit path)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box tip-box"><span class="lbl">💡 Tip</span> &nbsp;Memorise the output triad <strong>R-C-E — Resolve, Clarify, Escalate</strong> — and the ordering rule: <strong>immediate triggers first, resolve last.</strong> Everything in this chapter maps onto one of those three outputs.</div>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Exam Strategy</span> &nbsp;Framework questions test <b>ordering</b> and <b>signal choice</b>. If an option checks capability <em>before</em> honouring an explicit human request, or drives the flow on confidence/sentiment, it's wrong. The credited design short-circuits on immediate triggers and branches on verifiable checks.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+    <h2><span class="sec-num">★</span> Summary &amp; Quick-Reference</h2>
+    <div class="sec-sub">One-line takeaways and the exam-trap checklist</div>
+
+    <h3><span class="dot"></span>Quick-reference: all 7 subtopics</h3>
+    <div class="tbl-wrap">
+      <table class="qr">
+        <thead><tr><th>#</th><th>Subtopic</th><th>One-line takeaway</th></tr></thead>
+        <tbody>
+          <tr><td>25.1</td><td class="tk">Escalation triggers</td><td>Escalate on <strong>H-P-S</strong>: Human request, Policy gap, Stalling (plus safety &amp; authority limits).</td></tr>
+          <tr><td>25.2</td><td class="tk">Immediate vs. offer-to-resolve</td><td>Immediate for human/safety/authority; offer-to-resolve only with <strong>policy AND power</strong>, always with an exit.</td></tr>
+          <tr><td>25.3</td><td class="tk">Sentiment &amp; confidence unreliable</td><td><strong>Fluent ≠ correct, calm ≠ solved</strong> — branch on verifiable signals, not tone or self-reported confidence.</td></tr>
+          <tr><td>25.4</td><td class="tk">Multiple matches</td><td><strong>N ≠ 1 → ask.</strong> Clarify with a discriminating attribute; never auto-select or leak other candidates.</td></tr>
+          <tr><td>25.5</td><td class="tk">Few-shot escalation criteria</td><td>Encode the boundary with <strong>labelled positive &amp; negative examples</strong>, not vague instructions.</td></tr>
+          <tr><td>25.6</td><td class="tk">Ambiguous policy gaps</td><td><strong>Name the gap, don't fabricate</strong> — escalate with context; distinguish "no rule" from "rule says no".</td></tr>
+          <tr><td>25.7</td><td class="tk">Decision framework</td><td>Ordered checks → <strong>Resolve / Clarify / Escalate</strong>; immediate triggers first, resolve last, always hand off warm.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="dot"></span>Common traps in exam questions</h3>
+    <ul class="checklist">
+      <li><b>The "confident bot" trap.</b> The AI sounds certain but has no policy/record match — the credited answer clarifies or escalates, not "proceed because it's confident."</li>
+      <li><b>The sentiment trap.</b> Escalating just because the user "seems frustrated," or resolving because they're polite — tone is not the trigger.</li>
+      <li><b>The efficiency trap.</b> "Pick the most recent / highest-value / first match" on multiple candidates — auto-selection is wrong; clarify instead.</li>
+      <li><b>The fabricated-policy trap.</b> A fluent, specific rule that was never given in the prompt — specificity ≠ real policy; don't assert it.</li>
+      <li><b>The talk-them-out-of-it trap.</b> Offering to resolve <em>after</em> an explicit human request — honour the request immediately.</li>
+      <li><b>The ordering trap.</b> Checking capability or "difficulty" before honouring immediate triggers — immediate triggers must short-circuit first.</li>
+      <li><b>The cold hand-off trap.</b> Escalating with no summary/context — always package what was tried and the customer's goal.</li>
+      <li><b>The privacy-leak trap.</b> Disambiguating by reading out other candidates' addresses/details — ask for an attribute the real customer supplies instead.</li>
+    </ul>
+
+    <div class="box exam-strategy"><span class="lbl">🎯 Final exam mindset</span> &nbsp;When two options both "help the customer," pick the one grounded in a <b>verifiable signal</b> and <b>honest about uncertainty</b>. Escalation and clarification are features, not failures — the exam consistently rewards asking over assuming, and routing over fabricating.</div>
+    <a class="backtop" href="#top">↑ Back to top</a>
+  </section>
+
+  <footer>Chapter 25 · Escalation &amp; Ambiguity Resolution Patterns — study notes. Content describes best-practice agent design patterns, not undocumented model internals.</footer>
+
+</div>
+
+
+</body></html>

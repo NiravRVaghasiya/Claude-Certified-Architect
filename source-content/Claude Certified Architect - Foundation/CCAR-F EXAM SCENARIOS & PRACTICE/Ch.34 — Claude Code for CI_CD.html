@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 34 · Claude Code for CI/CD — Exam-Ready Study Notes</title>
+<style>
+  :root {
+    --bg: #f6f8fb;
+    --surface: #ffffff;
+    --surface-alt: #f0f4f9;
+    --text: #14213d;
+    --text-soft: #445069;
+    --text-muted: #7a869a;
+    --border: #dbe2ec;
+    --border-strong: #c2cddd;
+    --primary: #2563eb;
+    --primary-soft: #dbe8ff;
+    --accent: #7c3aed;
+    --code-bg: #0f172a;
+    --code-text: #e2e8f0;
+    --tip-bg: #e8f7f0;   --tip-bd: #34a26f;  --tip-tx: #12633f;
+    --pit-bg: #fdeceb;   --pit-bd: #dc4b3f;  --pit-tx: #8f231b;
+    --strat-bg: #eef1fd; --strat-bd: #4f46e5; --strat-tx: #2f2a9e;
+    --note-bg: #fef7e6;  --note-bd: #d99a1c;  --note-tx: #7a5406;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", "Cascadia Code", Consolas, "Liberation Mono", Menlo, monospace;
+    --radius: 12px;
+    --radius-sm: 7px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.62;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 26px 90px; }
+
+  /* ---- Masthead ---- */
+  header.masthead {
+    background: linear-gradient(135deg, #1e2a4a 0%, #2563eb 60%, #7c3aed 130%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 34px 34px 30px;
+    box-shadow: 0 10px 30px rgba(37,99,235,0.18);
+  }
+  .masthead .kicker {
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    opacity: 0.82; font-weight: 600; margin-bottom: 10px;
+  }
+  .masthead h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.2; font-weight: 700; }
+  .masthead p.sub { margin: 0; font-size: 15px; opacity: 0.9; max-width: 640px; }
+  .masthead .exam-chip {
+    display: inline-block; margin-top: 16px; background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.28); border-radius: 100px;
+    padding: 5px 14px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em;
+  }
+
+  /* ---- TOC ---- */
+  nav.toc {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px 26px; margin: 26px 0 8px;
+    box-shadow: 0 2px 8px rgba(20,33,61,0.04);
+  }
+  nav.toc h2 { margin: 0 0 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+  nav.toc ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  nav.toc a {
+    display: flex; align-items: baseline; gap: 12px; text-decoration: none;
+    color: var(--text); font-weight: 500; padding: 9px 13px; border-radius: var(--radius-sm);
+    border: 1px solid var(--border); transition: all 0.15s ease; background: var(--surface-alt);
+  }
+  nav.toc a:hover { border-color: var(--primary); background: var(--primary-soft); transform: translateX(3px); }
+  nav.toc a .num { font-family: var(--mono); font-weight: 700; color: var(--primary); font-size: 14px; }
+  nav.toc a .desc { color: var(--text-muted); font-weight: 400; font-size: 13px; margin-left: auto; }
+
+  /* ---- Sections ---- */
+  section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 32px; margin-top: 26px; box-shadow: 0 2px 8px rgba(20,33,61,0.04); }
+  section > h2 { margin: 0 0 6px; font-size: 23px; scroll-margin-top: 20px; }
+  section > .sec-tag { display:inline-block; font-family: var(--mono); font-size:12px; font-weight:700; color:#fff; background: var(--accent); border-radius: 6px; padding: 2px 9px; margin-bottom: 10px; }
+  h3 { margin: 30px 0 10px; font-size: 18px; color: var(--text); border-bottom: 2px solid var(--surface-alt); padding-bottom: 6px; }
+  h4 { margin: 20px 0 8px; font-size: 15px; color: var(--text-soft); }
+  p { margin: 10px 0; color: var(--text-soft); }
+  ul, ol.body-list { margin: 10px 0; padding-left: 22px; color: var(--text-soft); }
+  li { margin: 6px 0; }
+  strong { color: var(--text); }
+  code:not(pre code) { font-family: var(--mono); font-size: 0.86em; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: #b3230f; }
+
+  /* ---- Code blocks ---- */
+  pre {
+    background: var(--code-bg); color: var(--code-text); border-radius: var(--radius-sm);
+    padding: 16px 18px; overflow-x: auto; font-family: var(--mono); font-size: 13px;
+    line-height: 1.55; margin: 14px 0; border: 1px solid #1e293b;
+  }
+  pre .cmt { color: #7c8aa3; }
+  pre .key { color: #7dd3fc; }
+  pre .str { color: #a5e6a5; }
+  pre .flag { color: #fcd34d; }
+  .code-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 16px 0 -6px; font-weight: 600; }
+
+  /* ---- Callouts ---- */
+  .callout { border-radius: var(--radius-sm); padding: 14px 16px 14px 46px; margin: 16px 0; position: relative; font-size: 14.5px; border: 1px solid; line-height: 1.55; }
+  .callout::before { position: absolute; left: 14px; top: 13px; font-size: 18px; }
+  .callout strong { display: inline; }
+  .tip   { background: var(--tip-bg);   border-color: var(--tip-bd);   color: var(--tip-tx); }
+  .tip::before { content: "💡"; }
+  .pitfall { background: var(--pit-bg); border-color: var(--pit-bd); color: var(--pit-tx); }
+  .pitfall::before { content: "⚠️"; }
+  .strategy { background: var(--strat-bg); border-color: var(--strat-bd); color: var(--strat-tx); }
+  .strategy::before { content: "🎯"; }
+  .note { background: var(--note-bg); border-color: var(--note-bd); color: var(--note-tx); }
+  .note::before { content: "📌"; }
+  .callout p { color: inherit; margin: 6px 0 0; }
+  .callout p:first-child { margin-top: 0; }
+
+  /* ---- Tables ---- */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th { text-align: left; background: var(--surface-alt); color: var(--text); font-weight: 600; padding: 10px 12px; border-bottom: 2px solid var(--border-strong); font-size: 13px; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-soft); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: #f9fbfe; }
+  .sev-high { color: #b3230f; font-weight: 700; }
+  .sev-med  { color: #b56b00; font-weight: 700; }
+  .sev-low  { color: #12633f; font-weight: 700; }
+
+  /* ---- Diagram frames ---- */
+  .diagram { background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; margin: 16px 0; overflow-x: auto; }
+  .diagram-cap { font-size: 12.5px; color: var(--text-muted); text-align: center; margin-top: 8px; font-style: italic; }
+  svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+
+  /* ---- Q&A ---- */
+  .qcard { border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius-sm); padding: 16px 18px; margin: 16px 0; background: var(--surface); }
+  .qcard .qid { font-family: var(--mono); font-weight: 700; color: var(--primary); }
+  .qcard .qtype { float: right; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; background: var(--text-muted); border-radius: 100px; padding: 2px 10px; }
+  .qcard .qtype.mc { background: #2563eb; }
+  .qcard .qtype.scn { background: #7c3aed; }
+  .opts { list-style: none; padding: 0; margin: 12px 0 0; }
+  .opts li { padding: 7px 12px; margin: 6px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface-alt); font-size: 14px; }
+  .opts li .lt { font-family: var(--mono); font-weight: 700; color: var(--accent); margin-right: 8px; }
+
+  .walk { background: #f4f8ff; border: 1px dashed var(--primary); border-radius: var(--radius-sm); padding: 16px 18px; margin: 16px 0; }
+  .walk h4 { margin-top: 0; color: var(--primary); }
+  .walk ol { padding-left: 20px; }
+
+  details.answer { margin: 12px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface-alt); }
+  details.answer summary { cursor: pointer; padding: 10px 14px; font-weight: 600; color: var(--text); font-size: 14px; }
+  details.answer[open] summary { border-bottom: 1px solid var(--border); }
+  details.answer .akey { padding: 4px 16px 14px; }
+
+  .ans-row { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .ans-row:last-child { border-bottom: none; }
+  .ans-row .ans-q { font-family: var(--mono); font-weight: 700; color: var(--primary); min-width: 34px; }
+  .ans-row .ans-a { font-family: var(--mono); font-weight: 700; color: #12633f; min-width: 24px; }
+
+  .back-top { display: inline-block; margin-top: 18px; font-size: 12.5px; color: var(--primary); text-decoration: none; font-weight: 600; }
+  .back-top:hover { text-decoration: underline; }
+
+  footer.foot { text-align: center; color: var(--text-muted); font-size: 12.5px; margin-top: 34px; line-height: 1.6; }
+
+  /* ---- Print ---- */
+  @media print {
+    body { background: #fff; font-size: 11.5pt; }
+    .wrap { max-width: 100%; padding: 0; }
+    header.masthead { background: #1e2a4a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none; border-radius: 0; }
+    nav.toc, section, .qcard, .callout, .diagram, table, pre { break-inside: avoid; box-shadow: none; }
+    section { border: 1px solid #ccc; page-break-inside: avoid; }
+    nav.toc a:hover { transform: none; }
+    details.answer { border: 1px solid #ccc; }
+    details.answer summary { display: none; }
+    details.answer .akey { display: block !important; }
+    .back-top { display: none; }
+    pre, .callout, th, .qcard .qtype { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: var(--text); text-decoration: none; }
+    h2, h3 { page-break-after: avoid; }
+  }
+  @media (max-width: 640px) {
+    .masthead h1 { font-size: 23px; }
+    section { padding: 22px 18px; }
+    nav.toc a .desc { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">Claude Certified Architect · Foundations &amp; Professional</div>
+    <h1>Chapter 34 — Scenario 5: Claude Code for CI/CD</h1>
+    <p class="sub">Exam-ready study notes covering pipeline design, automated reviews &amp; test generation, structured output in CI contexts, and practice walkthroughs. Grounded in Claude Code's real headless / non-interactive capabilities.</p>
+    <span class="exam-chip">📖 4 subsections · 6 practice questions · print &amp; PDF friendly</span>
+  </header>
+
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s341"><span class="num">34.1</span> <span>Scenario Overview &amp; Pipeline Design</span> <span class="desc">flowchart + architecture decisions</span></a></li>
+      <li><a href="#s342"><span class="num">34.2</span> <span>Automated Reviews, Test Generation &amp; PR Feedback</span> <span class="desc">sequence diagram</span></a></li>
+      <li><a href="#s343"><span class="num">34.3</span> <span>Structured Output in CI Contexts</span> <span class="desc">JSON schemas + fallbacks</span></a></li>
+      <li><a href="#s344"><span class="num">34.4</span> <span>Practice Questions &amp; Walkthroughs</span> <span class="desc">6 Qs + answer key</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- =================== 34.1 =================== -->
+  <section id="s341">
+    <span class="sec-tag">34.1</span>
+    <h2>Scenario Overview &amp; Pipeline Design</h2>
+
+    <p>In this scenario, Claude Code runs as an <strong>automated agent inside a CI/CD pipeline</strong> rather than in an interactive terminal. The goal is to insert AI-assisted code review, test generation, and quality gates into the software delivery flow — automatically, on every pull request (PR) or commit — without a human invoking Claude by hand.</p>
+
+    <h4>What makes CI/CD usage different from interactive Claude Code</h4>
+    <p>Interactive Claude Code is a conversational REPL in your terminal. For pipelines you use <strong>headless (non-interactive) mode</strong>: you pass a single prompt with the <code>-p</code> / <code>--print</code> flag, Claude does its work and exits, and the pipeline reads the result. This makes it scriptable and deterministic enough to gate merges.</p>
+
+    <div class="code-label">Headless invocation — the CI building block</div>
+    <pre><span class="cmt"># Non-interactive: run one prompt, print result, exit</span>
+claude <span class="flag">-p</span> <span class="str">"Review the staged diff for security issues"</span> \
+  <span class="flag">--output-format</span> json \
+  <span class="flag">--allowedTools</span> <span class="str">"Read,Grep,Bash(git diff:*)"</span> \
+  <span class="flag">--max-turns</span> 8</pre>
+
+    <div class="callout tip"><strong>Tip:</strong> Memorise the three flags that make Claude Code CI-safe: <code>-p</code> (headless), <code>--output-format json</code> (parseable result), and <code>--max-turns</code> (bounds cost &amp; runtime). If a question describes "running Claude in a pipeline," these three are almost always the correct primitives.</div>
+
+    <h3>Sample pipeline — where Claude Code integrates</h3>
+    <p>Claude Code can be attached at several stages. The diagram below shows a common layout: a fast local check at commit time, a deeper review triggered by the PR, and a merge gate that reads Claude's structured verdict.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 860 340" role="img" aria-label="CI/CD pipeline flowchart showing where Claude Code integrates">
+        <defs>
+          <marker id="arw" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"></path>
+          </marker>
+          <marker id="arwG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#34a26f"></path>
+          </marker>
+          <marker id="arwR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#dc4b3f"></path>
+          </marker>
+        </defs>
+
+        <!-- Stage 1: commit -->
+        <rect x="10" y="30" width="150" height="66" rx="10" fill="#ffffff" stroke="#c2cddd" stroke-width="1.5"></rect>
+        <text x="85" y="55" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#14213d">Developer commit</text>
+        <text x="85" y="74" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#7a869a">pre-commit hook</text>
+        <text x="85" y="88" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#7c3aed">claude -p (fast lint)</text>
+
+        <!-- Stage 2: PR trigger -->
+        <rect x="200" y="30" width="150" height="66" rx="10" fill="#ffffff" stroke="#c2cddd" stroke-width="1.5"></rect>
+        <text x="275" y="55" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#14213d">PR opened /</text>
+        <text x="275" y="71" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#14213d">updated</text>
+        <text x="275" y="88" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#7a869a">CI workflow trigger</text>
+
+        <!-- Stage 3: Claude review (accent) -->
+        <rect x="390" y="22" width="160" height="82" rx="10" fill="#eef1fd" stroke="#4f46e5" stroke-width="2"></rect>
+        <text x="470" y="46" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#2f2a9e">Claude Code</text>
+        <text x="470" y="63" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#2f2a9e">review agent</text>
+        <text x="470" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4f46e5">review · gen tests</text>
+        <text x="470" y="94" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#4f46e5">--output-format json</text>
+
+        <!-- Stage 4: gate decision -->
+        <polygon points="620,63 675,30 730,63 675,96" fill="#fef7e6" stroke="#d99a1c" stroke-width="2"></polygon>
+        <text x="675" y="60" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#7a5406">Merge</text>
+        <text x="675" y="75" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="700" fill="#7a5406">gate</text>
+
+        <!-- Merge / block outcomes -->
+        <rect x="770" y="16" width="80" height="42" rx="8" fill="#e8f7f0" stroke="#34a26f" stroke-width="1.5"></rect>
+        <text x="810" y="34" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#12633f">Merge ✓</text>
+        <text x="810" y="49" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#12633f">no blockers</text>
+
+        <rect x="770" y="70" width="80" height="42" rx="8" fill="#fdeceb" stroke="#dc4b3f" stroke-width="1.5"></rect>
+        <text x="810" y="88" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#8f231b">Block ✗</text>
+        <text x="810" y="103" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8f231b">high severity</text>
+
+        <!-- arrows -->
+        <line x1="160" y1="63" x2="196" y2="63" stroke="#2563eb" stroke-width="2" marker-end="url(#arw)"></line>
+        <line x1="350" y1="63" x2="386" y2="63" stroke="#2563eb" stroke-width="2" marker-end="url(#arw)"></line>
+        <line x1="550" y1="63" x2="616" y2="63" stroke="#2563eb" stroke-width="2" marker-end="url(#arw)"></line>
+        <line x1="730" y1="52" x2="766" y2="40" stroke="#34a26f" stroke-width="2" marker-end="url(#arwG)"></line>
+        <line x1="730" y1="74" x2="766" y2="86" stroke="#dc4b3f" stroke-width="2" marker-end="url(#arwR)"></line>
+
+        <!-- PR comment feedback loop -->
+        <path d="M470,104 C470,170 275,170 275,104" fill="none" stroke="#7a869a" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arw)"></path>
+        <text x="372" y="162" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a869a">posts inline PR comments (feedback loop)</text>
+
+        <!-- bottom rail: env + auth -->
+        <rect x="10" y="220" width="840" height="96" rx="10" fill="#f0f4f9" stroke="#dbe2ec" stroke-width="1.5"></rect>
+        <text x="430" y="243" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#14213d">Runtime concerns (apply at every stage)</text>
+        <text x="150" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#445069">🔑 Auth via env</text>
+        <text x="150" y="284" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#7a869a">ANTHROPIC_API_KEY</text>
+        <text x="150" y="300" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a869a">(or Bedrock / Vertex)</text>
+        <text x="360" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#445069">⏱️ Rate limits</text>
+        <text x="360" y="284" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a869a">retry w/ backoff</text>
+        <text x="360" y="300" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a869a">batch / debounce PR events</text>
+        <text x="560" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#445069">🛡️ Tool allow-list</text>
+        <text x="560" y="284" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#7a869a">--allowedTools</text>
+        <text x="560" y="300" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a869a">least privilege</text>
+        <text x="740" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#445069">💰 Cost bound</text>
+        <text x="740" y="284" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#7a869a">--max-turns</text>
+        <text x="740" y="300" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#7a869a">timeout per job</text>
+      </svg>
+      <div class="diagram-cap">Fig 34.1 — Claude Code integration points: pre-commit hook → PR trigger → review agent → merge gate, with a PR-comment feedback loop and shared runtime concerns.</div>
+    </div>
+
+    <h3>Key architectural decisions</h3>
+    <table>
+      <thead><tr><th style="width:24%">Decision</th><th style="width:38%">Options</th><th>Guidance</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Integration surface</strong></td>
+          <td>CLI (<code>claude -p</code>) vs. GitHub App (<code>@claude</code> mentions / Claude Code GitHub Action)</td>
+          <td>Use the <strong>CLI in headless mode</strong> for custom pipelines and non-GitHub CI. Use the <strong>GitHub Action / app</strong> when you want <code>@claude</code> mentions and native PR comments with less scripting.</td>
+        </tr>
+        <tr>
+          <td><strong>API vs. subscription auth</strong></td>
+          <td>Anthropic API key · Amazon Bedrock · Google Vertex AI</td>
+          <td>CI runners authenticate via environment variables (e.g. <code>ANTHROPIC_API_KEY</code>) stored as pipeline <strong>secrets</strong>, never committed. Bedrock/Vertex are used for cloud-governed deployments.</td>
+        </tr>
+        <tr>
+          <td><strong>Sync vs. async</strong></td>
+          <td>Blocking (gate waits for verdict) vs. non-blocking (comment posted later)</td>
+          <td><strong>Sync/blocking</strong> when Claude's result is a hard merge gate. <strong>Async</strong> when review is advisory — post comments without stalling the pipeline. Long jobs risk CI timeouts, so bound turns/time.</td>
+        </tr>
+        <tr>
+          <td><strong>Rate limiting &amp; concurrency</strong></td>
+          <td>Per-PR debounce, queueing, retry with backoff</td>
+          <td>A burst of commits can trigger many runs. <strong>Debounce</strong> to the latest commit, cap concurrency, and <strong>retry API 429s with exponential backoff</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Tool permissions</strong></td>
+          <td><code>--allowedTools</code> / <code>--disallowedTools</code>, permission mode</td>
+          <td>Grant <strong>least privilege</strong>. A review job usually needs read/search only; avoid unrestricted <code>Bash</code> or write tools in an automated gate.</td>
+        </tr>
+        <tr>
+          <td><strong>Context scope</strong></td>
+          <td>Full repo vs. changed files / diff only</td>
+          <td>Scope to the <strong>diff / changed files</strong> for speed and cost. Add a <code>CLAUDE.md</code> for repo conventions Claude should honour.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout pitfall"><strong>Common pitfall:</strong> Committing the API key into the workflow file or echoing it in logs. Always inject credentials from the CI provider's <em>secret store</em> as environment variables, and never <code>print</code> them. A leaked key is the single most common CI security failure.</div>
+
+    <div class="callout strategy"><strong>Exam strategy:</strong> When a scenario says "automated," "every pull request," "no human in the loop," or "merge gate," the intended answer is <strong>headless mode</strong> (<code>-p</code>) with a bounded, least-privilege configuration — not the interactive REPL. Watch for distractor answers that suggest a developer runs Claude manually.</div>
+
+    <a class="back-top" href="#s341">↑ Section top</a>
+  </section>
+
+  <!-- =================== 34.2 =================== -->
+  <section id="s342">
+    <span class="sec-tag">34.2</span>
+    <h2>Automated Reviews, Test Generation &amp; PR Feedback</h2>
+
+    <h3>How Claude Code performs code reviews</h3>
+    <p>Given a diff (or the changed files), Claude Code reasons over the code the way a senior reviewer would, then emits findings. In a CI job you steer it with a focused prompt and, ideally, ask for structured output so the pipeline can act on it. Typical review dimensions:</p>
+    <ul>
+      <li><strong>Style &amp; conventions</strong> — naming, formatting, adherence to a <code>CLAUDE.md</code> or style guide, dead code.</li>
+      <li><strong>Security</strong> — hardcoded secrets, injection risks, unsafe deserialization, missing input validation, insecure defaults.</li>
+      <li><strong>Logic &amp; correctness</strong> — off-by-one errors, unhandled edge cases, null/None handling, race conditions, incorrect error propagation.</li>
+      <li><strong>Maintainability</strong> — complexity, duplication, missing docs/tests, unclear intent.</li>
+    </ul>
+
+    <div class="code-label">Focused review prompt for CI</div>
+    <pre>claude <span class="flag">-p</span> <span class="str">"Review only the changed lines in the PR diff.
+Report security, logic, and style issues. For each issue give
+severity (high|medium|low), file, line, and a concrete fix.
+Return JSON matching the review schema. Do not modify files."</span> \
+  <span class="flag">--allowedTools</span> <span class="str">"Read,Grep,Bash(git diff:*)"</span> \
+  <span class="flag">--output-format</span> json</pre>
+
+    <div class="callout note"><strong>Note (accuracy):</strong> Claude Code is a general-purpose coding agent, not a fixed rule-based linter. Its "checks" come from reasoning guided by your prompt and repo context — so review quality depends heavily on how specific your instructions and provided context are. Treat it as complementary to deterministic linters/SAST tools, not a replacement for them.</div>
+
+    <h3>Test generation workflows</h3>
+    <p>Claude Code can scaffold and write tests for changed code. Common patterns:</p>
+    <ol class="body-list">
+      <li><strong>Unit-test scaffolding</strong> — generate test files/skeletons for new functions using the repo's existing framework (pytest, Jest, JUnit, etc.), matching established patterns it finds in the codebase.</li>
+      <li><strong>Edge-case identification</strong> — enumerate boundary conditions (empty input, nulls, max/min, unicode, concurrency) and produce tests that exercise them.</li>
+      <li><strong>Coverage gap filling</strong> — given a coverage report, target untested branches.</li>
+      <li><strong>Regression tests</strong> — when a bug is described, write a failing test that reproduces it, then (in a fix workflow) implement the fix.</li>
+    </ol>
+
+    <div class="callout tip"><strong>Tip:</strong> For deterministic CI test generation, tell Claude the <em>exact</em> framework, file naming convention, and where tests live (e.g. "use pytest, place in <code>tests/</code>, name <code>test_&lt;module&gt;.py</code>"). Vague prompts produce inconsistent scaffolding that fails to run.</div>
+
+    <h3>Review / feedback loop — sequence diagram</h3>
+    <div class="diagram">
+      <svg viewBox="0 0 820 380" role="img" aria-label="Sequence diagram of the PR review feedback loop">
+        <!-- lifelines -->
+        <g font-family="sans-serif" font-size="12" font-weight="700" fill="#14213d">
+          <rect x="20" y="14" width="120" height="34" rx="7" fill="#dbe8ff" stroke="#2563eb"></rect>
+          <text x="80" y="35" text-anchor="middle">Developer</text>
+          <rect x="200" y="14" width="120" height="34" rx="7" fill="#dbe8ff" stroke="#2563eb"></rect>
+          <text x="260" y="35" text-anchor="middle">Git host / PR</text>
+          <rect x="380" y="14" width="120" height="34" rx="7" fill="#f0f4f9" stroke="#7a869a"></rect>
+          <text x="440" y="35" text-anchor="middle">CI runner</text>
+          <rect x="560" y="14" width="120" height="34" rx="7" fill="#eef1fd" stroke="#4f46e5"></rect>
+          <text x="620" y="35" text-anchor="middle">Claude Code</text>
+          <rect x="700" y="14" width="105" height="34" rx="7" fill="#fef7e6" stroke="#d99a1c"></rect>
+          <text x="752" y="35" text-anchor="middle">Merge gate</text>
+        </g>
+        <!-- lifelines dashed -->
+        <g stroke="#c2cddd" stroke-width="1.5" stroke-dasharray="4,4">
+          <line x1="80" y1="48" x2="80" y2="360"></line>
+          <line x1="260" y1="48" x2="260" y2="360"></line>
+          <line x1="440" y1="48" x2="440" y2="360"></line>
+          <line x1="620" y1="48" x2="620" y2="360"></line>
+          <line x1="752" y1="48" x2="752" y2="360"></line>
+        </g>
+        <defs>
+          <marker id="sq" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2f2a9e"></path></marker>
+        </defs>
+        <g font-family="sans-serif" font-size="10.5" fill="#445069" stroke="#4f46e5" stroke-width="1.6">
+          <!-- 1 push -->
+          <line x1="80" y1="78" x2="256" y2="78" marker-end="url(#sq)"></line>
+          <text x="90" y="72" stroke="none" fill="#445069">1. push / open PR</text>
+          <!-- 2 trigger -->
+          <line x1="260" y1="112" x2="436" y2="112" marker-end="url(#sq)"></line>
+          <text x="270" y="106" stroke="none" fill="#445069">2. trigger CI job</text>
+          <!-- 3 invoke -->
+          <line x1="440" y1="146" x2="616" y2="146" marker-end="url(#sq)"></line>
+          <text x="450" y="140" stroke="none" fill="#445069">3. claude -p (diff + prompt)</text>
+          <!-- self review -->
+          <path d="M620,170 h46 v22 h-46" fill="none"></path>
+          <text x="628" y="185" stroke="none" fill="#2f2a9e" font-style="italic">analyze &amp; gen tests</text>
+          <!-- 4 json result -->
+          <line x1="620" y1="214" x2="444" y2="214" marker-end="url(#sq)"></line>
+          <text x="452" y="208" stroke="none" fill="#445069">4. JSON review result</text>
+          <!-- 5 post comments -->
+          <line x1="440" y1="248" x2="264" y2="248" marker-end="url(#sq)"></line>
+          <text x="270" y="242" stroke="none" fill="#445069">5. post inline PR comments</text>
+          <!-- 6 gate decision -->
+          <line x1="440" y1="282" x2="748" y2="282" marker-end="url(#sq)"></line>
+          <text x="470" y="276" stroke="none" fill="#445069">6. pass/fail based on max severity</text>
+          <!-- 7 notify dev -->
+          <line x1="260" y1="316" x2="84" y2="316" marker-end="url(#sq)"></line>
+          <text x="90" y="310" stroke="none" fill="#445069">7. status + comments → developer</text>
+          <!-- loop note -->
+          <text x="90" y="348" stroke="none" fill="#7a869a" font-style="italic">↺ developer pushes fixes → loop repeats until gate passes</text>
+        </g>
+      </svg>
+      <div class="diagram-cap">Fig 34.2 — Review feedback loop: push → CI trigger → headless Claude review → JSON result → PR comments + gate decision → developer iterates.</div>
+    </div>
+
+    <h3>Example PR feedback formats</h3>
+    <h4>A. Human-readable inline comment (posted on the PR)</h4>
+    <pre><span class="cmt">## 🔎 Claude Code review — 2 issues found</span>
+
+<span class="cmt">### 🔴 HIGH · auth.py:88 — Hardcoded API key</span>
+A credential is committed in source. Move it to an environment
+variable and load via os.environ.
+
+<span class="cmt">### 🟡 MEDIUM · handlers.py:142 — Unhandled empty list</span>
+`records[0]` will raise IndexError when the query returns no rows.
+Guard with `if not records: return default`.
+
+<span class="cmt">✅ Style &amp; formatting: no blocking issues.</span></pre>
+
+    <h4>B. Machine-readable summary (consumed by the gate — see 34.3)</h4>
+    <pre>{ <span class="key">"status"</span>: <span class="str">"changes_requested"</span>, <span class="key">"issue_count"</span>: <span class="str">2</span>, <span class="key">"max_severity"</span>: <span class="str">"high"</span> }</pre>
+
+    <div class="callout pitfall"><strong>Common pitfall:</strong> Posting a giant free-text review and <em>also</em> expecting the gate to parse it. Separate concerns — emit <strong>structured data for the machine gate</strong> and a <strong>readable comment for humans</strong>. Trying to regex severity out of prose is fragile and a frequent exam distractor.</div>
+
+    <div class="callout strategy"><strong>Exam strategy:</strong> If a question contrasts "review comment for the developer" vs. "signal for the pipeline to block/allow," map them to two outputs: prose comment (human) and structured JSON (machine). The gate decision should key off a field like <code>max_severity</code> or <code>status</code>, never off prose.</div>
+
+    <a class="back-top" href="#s342">↑ Section top</a>
+  </section>
+
+  <!-- =================== 34.3 =================== -->
+  <section id="s343">
+    <span class="sec-tag">34.3</span>
+    <h2>Structured Output in CI Contexts</h2>
+
+    <h3>Why structured output matters</h3>
+    <p>CI pipelines are programs, not people. A downstream step — a merge gate, a linter aggregator, a dashboard, a ticket creator — needs to <strong>parse</strong> the result and <strong>act</strong> on it deterministically. Free-form prose is ambiguous and brittle to parse; structured JSON/YAML is:</p>
+    <ul>
+      <li><strong>Parseable</strong> — a step can <code>jq '.review_summary.max_severity'</code> and branch on it.</li>
+      <li><strong>Actionable</strong> — fields map directly to actions (block, comment, open ticket).</li>
+      <li><strong>Stable</strong> — a fixed schema lets you validate and diff results across runs.</li>
+      <li><strong>Composable</strong> — output of one stage feeds cleanly into the next.</li>
+    </ul>
+
+    <div class="callout note"><strong>Two distinct meanings of "structured output" — don't conflate them:</strong>
+      <p><strong>1. CLI transport format:</strong> <code>--output-format json</code> (or <code>stream-json</code>) wraps Claude's run in a JSON envelope with metadata (result text, session id, cost, duration, error flag). This is <em>guaranteed</em> valid JSON by the CLI.</p>
+      <p><strong>2. The content schema you ask Claude to produce</strong> (e.g. the review issues array). This lives <em>inside</em> the result and is produced by the model following your prompt — so it is <em>not</em> guaranteed to be perfectly schema-valid every time. That gap is exactly why validation + fallbacks (below) matter.</p>
+    </div>
+
+    <h3>Example schemas for structured review output</h3>
+    <div class="code-label">Full review result (the example schema)</div>
+    <pre>{
+  <span class="key">"pr_id"</span>: <span class="str">"1234"</span>,
+  <span class="key">"review_summary"</span>: {
+    <span class="key">"status"</span>: <span class="str">"changes_requested"</span>,     <span class="cmt">// approved | changes_requested | commented</span>
+    <span class="key">"max_severity"</span>: <span class="str">"high"</span>,
+    <span class="key">"issue_count"</span>: <span class="str">2</span>,
+    <span class="key">"issues"</span>: [
+      {
+        <span class="key">"severity"</span>: <span class="str">"high"</span>,             <span class="cmt">// high | medium | low</span>
+        <span class="key">"category"</span>: <span class="str">"security"</span>,
+        <span class="key">"file"</span>: <span class="str">"auth.py"</span>,
+        <span class="key">"line"</span>: <span class="str">88</span>,
+        <span class="key">"issue"</span>: <span class="str">"Hardcoded API key detected"</span>,
+        <span class="key">"suggested_fix"</span>: <span class="str">"Move to environment variable"</span>
+      },
+      {
+        <span class="key">"severity"</span>: <span class="str">"medium"</span>,
+        <span class="key">"category"</span>: <span class="str">"logic"</span>,
+        <span class="key">"file"</span>: <span class="str">"handlers.py"</span>,
+        <span class="key">"line"</span>: <span class="str">142</span>,
+        <span class="key">"issue"</span>: <span class="str">"records[0] on possibly empty result → IndexError"</span>,
+        <span class="key">"suggested_fix"</span>: <span class="str">"Guard: if not records: return default"</span>
+      }
+    ]
+  }
+}</pre>
+
+    <div class="code-label">Minimal single-finding schema (matches the syllabus example)</div>
+    <pre>{ <span class="key">"severity"</span>: <span class="str">"high"</span>, <span class="key">"file"</span>: <span class="str">"app.py"</span>, <span class="key">"line"</span>: <span class="str">42</span>, <span class="key">"issue"</span>: <span class="str">"SQL built via string concat — injection risk"</span> }</pre>
+
+    <div class="code-label">Consuming the result in a gate (bash + jq)</div>
+    <pre><span class="cmt"># CLI guarantees the envelope is JSON; extract the model's result text</span>
+result=$(claude <span class="flag">-p</span> <span class="str">"$PROMPT"</span> <span class="flag">--output-format</span> json)
+sev=$(echo <span class="str">"$result"</span> | jq <span class="flag">-r</span> <span class="str">'.result | fromjson | .review_summary.max_severity'</span>)
+
+<span class="key">if</span> [ <span class="str">"$sev"</span> = <span class="str">"high"</span> ]; <span class="key">then</span>
+  echo <span class="str">"Blocking merge: high-severity issue"</span>; exit 1
+<span class="key">fi</span></pre>
+
+    <div class="callout tip"><strong>Tip:</strong> Prefer an <strong>enum + numeric</strong> field the gate keys off (<code>max_severity</code>, <code>issue_count</code>) rather than making the gate walk the whole issues array. One scalar decision field keeps the gate logic trivial and testable.</div>
+
+    <h3>Error handling &amp; fallback strategies</h3>
+    <p>Because the <em>content</em> schema is model-produced, a robust CI step must plan for malformed or missing structure. Layered strategy:</p>
+    <table>
+      <thead><tr><th style="width:26%">Failure mode</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Invalid / non-parseable JSON</strong></td><td><strong>Validate</strong> against a JSON Schema after each run. On parse failure, <strong>retry</strong> the prompt once with an explicit "return only valid JSON matching this schema" instruction.</td></tr>
+        <tr><td><strong>JSON wrapped in prose / markdown fences</strong></td><td>Strip <code>```json</code> fences and extract the JSON object before parsing. Better: instruct "output only JSON, no prose." Prefer the CLI's <code>--output-format json</code> envelope so at least the transport is clean.</td></tr>
+        <tr><td><strong>Missing required fields</strong></td><td>Schema validation flags it; apply <strong>defaults</strong> (e.g. treat missing <code>severity</code> as <code>"medium"</code>) or fail the step explicitly rather than merging blind.</td></tr>
+        <tr><td><strong>API error / rate limit (429)</strong></td><td><strong>Retry with exponential backoff</strong>; cap attempts; surface a clear CI error if exhausted.</td></tr>
+        <tr><td><strong>Timeout / runaway agent</strong></td><td>Bound with <code>--max-turns</code> and a job-level timeout; on exceed, fail safe.</td></tr>
+        <tr><td><strong>Ambiguous / advisory result</strong></td><td>Decide the <strong>fail-open vs. fail-closed</strong> policy up front. Security gates should usually <strong>fail closed</strong> (block on uncertainty); advisory style checks may fail open.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="code-label">Validate-then-fallback (Python pseudocode)</div>
+    <pre><span class="key">import</span> json, jsonschema
+
+<span class="key">def</span> parse_review(raw, schema, retry_fn):
+    <span class="key">try</span>:
+        data = json.loads(strip_fences(raw))
+        jsonschema.validate(data, schema)
+        <span class="key">return</span> data                      <span class="cmt"># ✓ happy path</span>
+    <span class="key">except</span> (json.JSONDecodeError, jsonschema.ValidationError):
+        raw2 = retry_fn(strict=<span class="key">True</span>)         <span class="cmt"># retry once, stricter prompt</span>
+        <span class="key">try</span>:
+            data = json.loads(strip_fences(raw2))
+            jsonschema.validate(data, schema)
+            <span class="key">return</span> data
+        <span class="key">except</span> Exception:
+            <span class="cmt"># fail CLOSED for a security gate</span>
+            <span class="key">return</span> {<span class="str">"status"</span>: <span class="str">"error"</span>, <span class="str">"max_severity"</span>: <span class="str">"high"</span>,
+                    <span class="str">"issues"</span>: [], <span class="str">"_note"</span>: <span class="str">"unparseable review; blocking"</span>}</pre>
+
+    <div class="callout pitfall"><strong>Common pitfall:</strong> Assuming the model's JSON is always valid and calling <code>json.loads</code> with no guard. A single malformed run then crashes the pipeline or, worse, silently merges bad code. <strong>Always validate; always define the fallback.</strong></div>
+
+    <div class="callout strategy"><strong>Exam strategy:</strong> Keywords like <em>"parseable," "machine-readable," "downstream step," "automatically consume," "schema,"</em> or <em>"gate on"</em> signal that <strong>structured JSON with a defined schema</strong> is the intended answer — not markdown or plain text. And whenever an option mentions <em>validating</em> or <em>a fallback</em>, it is usually the more correct, production-minded choice.</div>
+
+    <a class="back-top" href="#s343">↑ Section top</a>
+  </section>
+
+  <!-- =================== 34.4 =================== -->
+  <section id="s344">
+    <span class="sec-tag">34.4</span>
+    <h2>Practice Questions &amp; Walkthroughs</h2>
+
+    <h4>Question-type quick reference</h4>
+    <table>
+      <thead><tr><th style="width:22%">Type</th><th>What it tests</th><th>How to approach</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Multiple choice (MC)</strong></td><td>Recall of a specific flag, format, or best practice</td><td>Eliminate obviously wrong options; match keywords in the stem to the concept.</td></tr>
+        <tr><td><strong>Scenario-based (SCN)</strong></td><td>Applying the pipeline design to a described situation</td><td>Identify the constraint (automation? gating? parsing? security?) → pick the option that satisfies it with least privilege.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Q1 -->
+    <div class="qcard">
+      <span class="qtype mc">Multiple choice</span>
+      <p><span class="qid">Q1.</span> Which Claude Code invocation is most appropriate for running inside a non-interactive CI job?</p>
+      <ul class="opts">
+        <li><span class="lt">A</span> Launch the interactive REPL and type the prompt</li>
+        <li><span class="lt">B</span> <code>claude -p "..." --output-format json --max-turns 8</code></li>
+        <li><span class="lt">C</span> Open Claude in the IDE extension and click "Review"</li>
+        <li><span class="lt">D</span> <code>claude --interactive --watch</code></li>
+      </ul>
+    </div>
+
+    <!-- Q2 -->
+    <div class="qcard">
+      <span class="qtype scn">Scenario</span>
+      <p><span class="qid">Q2.</span> A CI pipeline requires Claude Code to output review results that a downstream merge gate can parse automatically to decide pass/fail. Which output format should be enforced?</p>
+      <ul class="opts">
+        <li><span class="lt">A</span> Free-form markdown</li>
+        <li><span class="lt">B</span> Structured JSON with a defined schema</li>
+        <li><span class="lt">C</span> Plain-text summary</li>
+        <li><span class="lt">D</span> An HTML report</li>
+      </ul>
+    </div>
+
+    <!-- Q3 -->
+    <div class="qcard">
+      <span class="qtype mc">Multiple choice</span>
+      <p><span class="qid">Q3.</span> Which practice most directly reduces the risk of leaking credentials when Claude Code runs in a CI runner?</p>
+      <ul class="opts">
+        <li><span class="lt">A</span> Hardcode the key in the workflow YAML for reproducibility</li>
+        <li><span class="lt">B</span> Store the key as a CI secret and inject it via <code>ANTHROPIC_API_KEY</code></li>
+        <li><span class="lt">C</span> Print the key at job start to confirm it loaded</li>
+        <li><span class="lt">D</span> Commit the key to a private branch only</li>
+      </ul>
+    </div>
+
+    <!-- Q4 -->
+    <div class="qcard">
+      <span class="qtype scn">Scenario</span>
+      <p><span class="qid">Q4.</span> Occasionally Claude's review returns JSON wrapped in markdown fences or with a missing <code>severity</code> field, crashing the gate. What is the most robust fix?</p>
+      <ul class="opts">
+        <li><span class="lt">A</span> Assume the output is always valid and skip parsing checks</li>
+        <li><span class="lt">B</span> Switch the whole pipeline to plain text to avoid JSON</li>
+        <li><span class="lt">C</span> Strip fences, validate against a JSON schema, retry once, and define a fail-closed fallback</li>
+        <li><span class="lt">D</span> Merge automatically whenever parsing fails to keep CI green</li>
+      </ul>
+    </div>
+
+    <!-- Q5 -->
+    <div class="qcard">
+      <span class="qtype mc">Multiple choice</span>
+      <p><span class="qid">Q5.</span> For an automated review gate, why restrict Claude Code with <code>--allowedTools "Read,Grep"</code> instead of allowing all tools?</p>
+      <ul class="opts">
+        <li><span class="lt">A</span> It makes reviews slower on purpose</li>
+        <li><span class="lt">B</span> Least-privilege: a review job only needs to read/search, not modify files or run arbitrary commands</li>
+        <li><span class="lt">C</span> It increases the token budget available</li>
+        <li><span class="lt">D</span> It disables JSON output</li>
+      </ul>
+    </div>
+
+    <!-- Q6 -->
+    <div class="qcard">
+      <span class="qtype scn">Scenario</span>
+      <p><span class="qid">Q6.</span> A repository receives a rapid burst of commits on one PR, triggering many concurrent Claude review runs and hitting API rate limits. Which combination best addresses this?</p>
+      <ul class="opts">
+        <li><span class="lt">A</span> Remove the review step entirely</li>
+        <li><span class="lt">B</span> Debounce to the latest commit, cap concurrency, and retry 429s with exponential backoff</li>
+        <li><span class="lt">C</span> Increase <code>--max-turns</code> so each run does more work</li>
+        <li><span class="lt">D</span> Run the review only after merge</li>
+      </ul>
+    </div>
+
+    <h3>Step-by-step walkthroughs (2 most complex questions)</h3>
+
+    <div class="walk">
+      <h4>Walkthrough — Q4 (structured-output resilience)</h4>
+      <ol>
+        <li><strong>Identify the real problem:</strong> the failure is <em>intermittent, malformed content JSON</em> — fences and missing fields. So the issue is content-schema reliability, not the transport format.</li>
+        <li><strong>Eliminate fail-unsafe options:</strong> <span class="lt">A</span> (assume valid) ignores the observed failures; <span class="lt">D</span> (merge on parse failure) is fail-open on a quality/security gate — dangerous. Both out.</li>
+        <li><strong>Eliminate over-corrections:</strong> <span class="lt">B</span> (drop JSON entirely) throws away machine-readability — the whole reason the gate exists. Regexing severity from prose is <em>more</em> fragile. Out.</li>
+        <li><strong>Confirm the layered answer:</strong> <span class="lt">C</span> handles each failure mode in order — strip fences (formatting), validate (structure), retry once (transient model error), fail closed (safety). This mirrors the 34.3 validate-then-fallback pattern.</li>
+        <li><strong>Answer: C.</strong> Keyword tells: "validate," "retry," "fallback," "fail-closed" are all production-minded signals the exam rewards.</li>
+      </ol>
+    </div>
+
+    <div class="walk">
+      <h4>Walkthrough — Q6 (rate limiting &amp; concurrency)</h4>
+      <ol>
+        <li><strong>Extract the constraint:</strong> too many concurrent runs from one PR → hitting <em>rate limits</em>. The goal is to keep protective reviews while controlling request volume.</li>
+        <li><strong>Reject options that remove protection:</strong> <span class="lt">A</span> (remove the step) and <span class="lt">D</span> (review only after merge) both defeat the purpose of a <em>pre-merge</em> gate. Out.</li>
+        <li><strong>Reject the misdirection:</strong> <span class="lt">C</span> raises <code>--max-turns</code>, which increases work/cost <em>per run</em> — the opposite of relieving rate pressure. Out.</li>
+        <li><strong>Validate the multi-part fix:</strong> <span class="lt">B</span> attacks all three levers — <em>debounce</em> (only review the latest commit, not every intermediate push), <em>cap concurrency</em> (limit simultaneous runs), and <em>backoff on 429</em> (graceful retry). These map directly to the 34.1 "rate limiting &amp; concurrency" decision row.</li>
+        <li><strong>Answer: B.</strong> Exam tell: when one option bundles several sound mitigations and the others each break something, the bundle is usually correct.</li>
+      </ol>
+    </div>
+
+    <h3>Answer key &amp; rationale</h3>
+    <details class="answer" open="">
+      <summary>▶ Reveal answer key (all 6 questions)</summary>
+      <div class="akey">
+        <div class="ans-row"><span class="ans-q">Q1</span><span class="ans-a">B</span><span>Headless <code>-p</code> + JSON output + bounded turns is the CI-safe primitive. A, C, D are all interactive/human-driven — wrong for an automated job.</span></div>
+        <div class="ans-row"><span class="ans-q">Q2</span><span class="ans-a">B</span><span>Structured JSON with a defined schema is machine-parseable so the gate can branch deterministically. Markdown/plain-text/HTML are for humans, not reliable parsing.</span></div>
+        <div class="ans-row"><span class="ans-q">Q3</span><span class="ans-a">B</span><span>Secrets belong in the CI secret store, injected as env vars. Hardcoding (A, D) or printing (C) the key leaks it.</span></div>
+        <div class="ans-row"><span class="ans-q">Q4</span><span class="ans-a">C</span><span>Strip fences → validate against schema → retry once → fail-closed fallback. A ignores failures; B abandons structure; D fails open on a safety gate.</span></div>
+        <div class="ans-row"><span class="ans-q">Q5</span><span class="ans-a">B</span><span>Least privilege: a review only needs read/search access, limiting blast radius. The other options misstate what the flag does.</span></div>
+        <div class="ans-row"><span class="ans-q">Q6</span><span class="ans-a">B</span><span>Debounce + concurrency cap + exponential backoff on 429 directly relieve rate pressure while keeping the pre-merge review. A/D remove protection; C makes it worse.</span></div>
+      </div>
+    </details>
+
+    <h4>Common pitfalls recap (last-minute review)</h4>
+    <table>
+      <thead><tr><th style="width:34%">Pitfall</th><th>Correct instinct</th></tr></thead>
+      <tbody>
+        <tr><td>Using the interactive REPL in a pipeline</td><td>Use headless <code>-p</code> mode</td></tr>
+        <tr><td>Parsing severity out of prose</td><td>Emit structured JSON; gate on an enum/scalar field</td></tr>
+        <tr><td>Trusting model JSON blindly</td><td>Validate against a schema + define fallback</td></tr>
+        <tr><td>Hardcoding / echoing API keys</td><td>CI secret store → env var, never logged</td></tr>
+        <tr><td>Granting all tools to a review job</td><td>Least privilege via <code>--allowedTools</code></td></tr>
+        <tr><td>Unbounded runs / cost</td><td>Bound with <code>--max-turns</code> + job timeout</td></tr>
+        <tr><td>Fail-open on a security gate</td><td>Fail closed when uncertain</td></tr>
+      </tbody>
+    </table>
+
+    <a class="back-top" href="#s344">↑ Section top</a>
+  </section>
+
+  <footer class="foot">
+    Chapter 34 · Scenario 5 — Claude Code for CI/CD &nbsp;·&nbsp; Claude Certified Architect Foundations &amp; Professional study notes<br>
+    Self-contained HTML · print or export to PDF via your browser (Ctrl/Cmd + P). Verify current flags against the official Claude Code CLI docs, as tooling evolves.
+  </footer>
+
+</div>
+
+
+</body></html>

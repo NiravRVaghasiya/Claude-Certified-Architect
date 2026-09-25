@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4 — Agent SDK Configuration &amp; Lifecycle Hooks</title>
+<style>
+  /* ══════════════════════════════════════════════════════════
+     ROOT TOKENS  (hardcoded for portability; mirrors app theme)
+     ══════════════════════════════════════════════════════════ */
+  :root {
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f4f5f7;
+    --color-text: #172b4d;
+    --color-text-secondary: #44546f;
+    --color-text-muted: #8993a4;
+    --color-border-light: #ebecf0;
+    --color-border: #dfe1e6;
+    --color-surface: #ffffff;
+    --color-primary: #0052CC;
+    --color-primary-light: #e6effc;
+    --color-success: #36b37e;
+    --color-success-bg: #e3fcef;
+    --color-error: #de350b;
+    --color-error-bg: #ffebe6;
+    --color-warning: #ff991f;
+    --color-warning-bg: #fffae6;
+    --color-info: #0065ff;
+    --color-info-bg: #e6f0ff;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Section-badge palette */
+    --badge-concept: #0052CC;
+    --badge-concept-bg: #e6effc;
+    --badge-pitfall: #de350b;
+    --badge-pitfall-bg: #ffebe6;
+    --badge-tip: #00875a;
+    --badge-tip-bg: #e3fcef;
+    --badge-exam: #b8860b;
+    --badge-exam-bg: #fff8e1;
+    --badge-code: #6554c0;
+    --badge-code-bg: #ede7f6;
+    --badge-visual: #00838f;
+    --badge-visual-bg: #e0f7fa;
+    --badge-terms: #455a64;
+    --badge-terms-bg: #eceff1;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     RESET & BASE
+     ══════════════════════════════════════════════════════════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+    padding: 0 24px 64px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { max-width: 100%; padding: 12px; font-size: 11px; }
+    .chapter-header { padding: 20px 0; }
+    details { open: true; }
+    details[open] summary { display: none; }
+    .no-print { display: none !important; }
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     CHAPTER HEADER
+     ══════════════════════════════════════════════════════════ */
+  .chapter-header {
+    padding: 40px 0 20px;
+    border-bottom: 3px solid var(--color-primary);
+    margin-bottom: 32px;
+  }
+  .chapter-header .overline {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+  }
+  .chapter-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .chapter-header .subtitle {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    max-width: 720px;
+  }
+
+  /* ── Learning Objectives ── */
+  .objectives {
+    background: var(--color-primary-light);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 16px 20px;
+    margin: 24px 0 32px;
+  }
+  .objectives h3 { font-size: 14px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; }
+  .objectives ul { padding-left: 20px; font-size: 13px; color: var(--color-text-secondary); }
+  .objectives li { margin-bottom: 4px; }
+
+  /* ── Progress Bar ── */
+  .progress-bar-container {
+    display: flex;
+    gap: 4px;
+    margin: 20px 0 0;
+  }
+  .progress-segment {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-border-light);
+    position: relative;
+    cursor: pointer;
+  }
+  .progress-segment.active { background: var(--color-primary); }
+  .progress-segment .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-text);
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    z-index: 10;
+  }
+  .progress-segment:hover .tooltip { display: block; }
+
+  /* ══════════════════════════════════════════════════════════
+     SECTION STRUCTURE
+     ══════════════════════════════════════════════════════════ */
+  .section {
+    margin-bottom: 48px;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .section-header {
+    padding: 16px 20px;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border-light);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .section-number {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .section-body { padding: 24px; }
+
+  /* ── Exam Hotspot Indicator ── */
+  .hotspot {
+    margin-left: auto;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+  }
+  .hotspot.high { background: var(--color-error-bg); color: var(--color-error); }
+  .hotspot.medium { background: var(--color-warning-bg); color: #b36b00; }
+  .hotspot.low { background: var(--color-bg-secondary); color: var(--color-text-muted); }
+
+  /* ══════════════════════════════════════════════════════════
+     BLOCK BADGES (concept, pitfall, tip, exam, code, visual)
+     ══════════════════════════════════════════════════════════ */
+  .block {
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid;
+  }
+  .block-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .block.concept   { background: var(--badge-concept-bg); border-color: var(--badge-concept); }
+  .block.concept .block-label { color: var(--badge-concept); }
+  .block.terms     { background: var(--badge-terms-bg); border-color: var(--badge-terms); }
+  .block.terms .block-label { color: var(--badge-terms); }
+  .block.code-block{ background: var(--badge-code-bg); border-color: var(--badge-code); }
+  .block.code-block .block-label { color: var(--badge-code); }
+  .block.visual    { background: var(--badge-visual-bg); border-color: var(--badge-visual); }
+  .block.visual .block-label { color: var(--badge-visual); }
+  .block.pitfall   { background: var(--badge-pitfall-bg); border-color: var(--badge-pitfall); }
+  .block.pitfall .block-label { color: var(--badge-pitfall); }
+  .block.tip       { background: var(--badge-tip-bg); border-color: var(--badge-tip); }
+  .block.tip .block-label { color: var(--badge-tip); }
+  .block.exam      { background: var(--badge-exam-bg); border-color: var(--badge-exam); }
+  .block.exam .block-label { color: var(--badge-exam); }
+
+  .block p, .block li { font-size: 14px; color: var(--color-text-secondary); line-height: 1.6; }
+  .block ul, .block ol { padding-left: 20px; margin-top: 8px; }
+  .block li { margin-bottom: 4px; }
+  .block strong { color: var(--color-text); }
+
+  /* ══════════════════════════════════════════════════════════
+     CODE BLOCKS
+     ══════════════════════════════════════════════════════════ */
+  pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.55;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin: 12px 0;
+  }
+  pre .comment  { color: #6c7086; font-style: italic; }
+  pre .keyword  { color: #cba6f7; }
+  pre .string   { color: #a6e3a1; }
+  pre .function { color: #89b4fa; }
+  pre .type     { color: #f9e2af; }
+  pre .param    { color: #fab387; }
+  pre .number   { color: #f38ba8; }
+  pre .decorator{ color: #f5c2e7; }
+  pre .operator { color: #94e2d5; }
+  code.inline {
+    background: var(--color-bg-secondary);
+    color: var(--badge-code);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     ASCII / DIAGRAM BLOCKS
+     ══════════════════════════════════════════════════════════ */
+  .diagram {
+    background: #fafbfc;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    overflow-x: auto;
+    margin: 12px 0;
+  }
+  .diagram pre {
+    background: transparent;
+    color: var(--color-text);
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .diagram-caption {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     TABLES
+     ══════════════════════════════════════════════════════════ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+  th {
+    text-align: left;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--color-border);
+    background: var(--color-bg-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td {
+    padding: 10px 12px;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-border-light);
+    vertical-align: top;
+  }
+  tr:hover td { background: #f8f9fa; }
+  td code {
+    background: var(--color-bg-secondary);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 1px 5px;
+    border-radius: var(--radius-sm);
+    color: var(--badge-code);
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     SELF-TEST / DETAILS
+     ══════════════════════════════════════════════════════════ */
+  details {
+    margin: 12px 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  summary {
+    padding: 12px 16px;
+    background: var(--color-bg-secondary);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--color-text);
+  }
+  summary:hover { background: #ecedf0; }
+  details .answer {
+    padding: 16px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    border-top: 1px solid var(--color-border-light);
+  }
+  details .answer strong { color: var(--color-text); }
+  .correct-tag {
+    display: inline-block;
+    background: var(--color-success-bg);
+    color: var(--color-success);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    margin-right: 6px;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     MIND MAP (CSS-only tree)
+     ══════════════════════════════════════════════════════════ */
+  .mindmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 24px 0;
+  }
+  .mindmap-root {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+  }
+  .mindmap-connector {
+    width: 2px;
+    height: 20px;
+    background: var(--color-border);
+  }
+  .mindmap-branches {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mindmap-branch {
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-size: 12px;
+    text-align: center;
+    min-width: 120px;
+    background: var(--color-bg-secondary);
+  }
+  .mindmap-branch .branch-num {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 11px;
+  }
+  .mindmap-branch .branch-title {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2px;
+  }
+  .mindmap-branch .branch-sub {
+    color: var(--color-text-muted);
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  .dep-arrow {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 4px 0;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     LIFECYCLE DIAGRAM (CSS-rendered)
+     ══════════════════════════════════════════════════════════ */
+  .lifecycle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 24px 0;
+  }
+  .lifecycle-node {
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 200px;
+    position: relative;
+  }
+  .lifecycle-node.agent  { background: var(--badge-concept-bg); color: var(--badge-concept); border: 1px solid var(--badge-concept); }
+  .lifecycle-node.hook   { background: var(--badge-exam-bg); color: var(--badge-exam); border: 1px solid var(--badge-exam); }
+  .lifecycle-node.tool   { background: var(--badge-code-bg); color: var(--badge-code); border: 1px solid var(--badge-code); }
+  .lifecycle-node.result { background: var(--badge-tip-bg); color: var(--badge-tip); border: 1px solid var(--badge-tip); }
+  .lifecycle-arrow {
+    width: 2px;
+    height: 24px;
+    background: var(--color-border);
+    position: relative;
+  }
+  .lifecycle-arrow::after {
+    content: '▼';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--color-border);
+  }
+  .lifecycle-label {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    font-style: italic;
+    padding: 2px 0;
+    text-align: center;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     RESPONSIVE
+     ══════════════════════════════════════════════════════════ */
+  @media (max-width: 700px) {
+    body { padding: 0 12px 40px; }
+    .chapter-header h1 { font-size: 22px; }
+    .section-header { flex-wrap: wrap; }
+    .mindmap-branches { flex-direction: column; align-items: center; }
+  }
+
+  /* utility */
+  .mt-8 { margin-top: 8px; }
+  .mt-16 { margin-top: 16px; }
+  .mt-24 { margin-top: 24px; }
+  .mb-16 { margin-bottom: 16px; }
+  .text-center { text-align: center; }
+  hr.divider { border: none; border-top: 1px solid var(--color-border-light); margin: 32px 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     1. CHAPTER HEADER + LEARNING OBJECTIVES
+     ═══════════════════════════════════════════════════════════ -->
+<header class="chapter-header">
+  <div class="overline">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Chapter 4: Agent SDK Configuration &amp; Lifecycle Hooks</h1>
+  <p class="subtitle">
+    Master tool scoping, multi-agent orchestration, and the hook system that lets you
+    intercept, validate, redact, and log every tool invocation in the Agent SDK pipeline.
+  </p>
+
+  <!-- Section progress bar -->
+  <nav class="progress-bar-container" aria-label="Chapter sections">
+    <a href="#s41" class="progress-segment active"><span class="tooltip">4.1 allowedTools</span></a>
+    <a href="#s42" class="progress-segment active"><span class="tooltip">4.2 Agent-Level Config</span></a>
+    <a href="#s43" class="progress-segment active"><span class="tooltip">4.3 Task Tool</span></a>
+    <a href="#s44" class="progress-segment active"><span class="tooltip">4.4 PostToolUse Hook</span></a>
+    <a href="#s45" class="progress-segment active"><span class="tooltip">4.5 PII &amp; Approvals</span></a>
+    <a href="#s46" class="progress-segment active"><span class="tooltip">4.6 Logging &amp; Guardrails</span></a>
+    <a href="#s47" class="progress-segment active"><span class="tooltip">4.7 Hands-On</span></a>
+  </nav>
+</header>
+
+<!-- Learning Objectives -->
+<div class="objectives">
+  <h3>🎯 Learning Objectives — After this chapter you will be able to:</h3>
+  <ul>
+    <li>Restrict and scope tool access for agents and subagents using <code class="inline">allowed_tools</code></li>
+    <li>Configure tool availability at the Agent class level vs. at spawn time</li>
+    <li>Spawn subagents via the <strong>Task</strong> tool with explicit capability boundaries</li>
+    <li>Implement <code class="inline">on_tool_start</code> and <code class="inline">on_tool_end</code> hooks for tool call interception</li>
+    <li>Build approval gates, PII redaction pipelines, and structured logging via lifecycle hooks</li>
+    <li>Apply the principle of least privilege across multi-agent architectures</li>
+    <li>Diagnose common misconfiguration patterns in exam scenarios</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.1 — allowedTools Configuration
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s41">
+  <div class="section-header">
+    <span class="section-number">4.1</span>
+    <span class="section-title">The <code class="inline">allowed_tools</code> Configuration: Restricting Subagent Capabilities</span>
+    <span class="hotspot high">🔥 HIGH exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <!-- Core Concept -->
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        <strong><code class="inline">allowed_tools</code></strong> is the primary mechanism for <strong>capability scoping</strong> in the Claude Agent SDK.
+        It specifies an explicit allowlist of tool names that an agent (or a spawned subagent) is permitted to invoke.
+        When set, it overrides the default behavior where an agent inherits all tools registered in its parent's runner context.
+        Think of it as a <em>firewall rule</em>: anything not on the list is silently blocked — the agent never even sees
+        the tool in its available tool list, so it cannot attempt to call it.
+      </p>
+      <p class="mt-8">
+        This is the foundational building block for <strong>least-privilege multi-agent design</strong>. By restricting each
+        subagent to only the tools it needs, you limit blast radius if the agent behaves unexpectedly, reduce token waste
+        from unnecessary tool descriptions, and enforce security boundaries between trust zones.
+      </p>
+    </div>
+
+    <!-- Key Terms -->
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong><code class="inline">allowed_tools</code></strong> — A list of tool name strings passed at agent construction or subagent spawn time. Only these tools are visible to the agent.</li>
+        <li><strong>Tool Visibility</strong> — An agent can only see (and therefore call) tools in its allowed set. Unallowed tools are excluded from the system prompt's tool list entirely.</li>
+        <li><strong>Scope Isolation</strong> — The principle that a subagent's tool access is <em>decoupled</em> from its parent's access. No implicit inheritance.</li>
+        <li><strong>Least Privilege</strong> — Grant the minimum tool access required for the agent's task. Core security principle tested heavily on the exam.</li>
+        <li><strong>Allowlist Model</strong> — A positive security model: specify what IS allowed, rather than what is blocked. Safer than a blocklist approach.</li>
+      </ul>
+    </div>
+
+    <!-- Code Example -->
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example</div>
+      <p>Define an agent with a restricted tool set — only <code class="inline">web_search</code> and <code class="inline">read_file</code> are available:</p>
+<pre><span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> <span class="type">Agent</span>, <span class="type">Runner</span>, <span class="function">function_tool</span>
+
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">web_search</span>(<span class="param">query</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Search the web and return results."""</span>
+    <span class="keyword">return</span> search_engine.query(query)
+
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">read_file</span>(<span class="param">path</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Read a local file."""</span>
+    <span class="keyword">return</span> open(path).read()
+
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">execute_code</span>(<span class="param">code</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Execute arbitrary code (dangerous)."""</span>
+    <span class="keyword">return</span> exec_sandbox(code)
+
+<span class="comment"># ─── Restricted agent: can search and read, but CANNOT execute code ───</span>
+researcher <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"researcher"</span>,
+    instructions<span class="operator">=</span><span class="string">"You are a research assistant. Find and summarize information."</span>,
+    tools<span class="operator">=</span>[web_search, read_file, execute_code],   <span class="comment"># All tools registered…</span>
+    allowed_tools<span class="operator">=</span>[<span class="string">"web_search"</span>, <span class="string">"read_file"</span>],   <span class="comment"># …but only these two are visible</span>
+)
+
+<span class="comment"># execute_code is NEVER visible to 'researcher', even though it's in tools[].</span>
+<span class="comment"># The agent's system prompt will only describe web_search and read_file.</span>
+</pre>
+    </div>
+
+    <!-- Visualization -->
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — Scope Isolation Model</div>
+      <div class="diagram">
+<pre>  ┌──────────────────────────────────────────────────────┐
+  │             RUNNER CONTEXT (all tools)                │
+  │                                                      │
+  │   ┌──────────┐  ┌──────────┐  ┌──────────────────┐  │
+  │   │web_search│  │read_file │  │  execute_code    │  │
+  │   └──────────┘  └──────────┘  └──────────────────┘  │
+  │        ▲              ▲               ✕ BLOCKED      │
+  │        │              │                              │
+  │   ┌────┴──────────────┴───┐                          │
+  │   │  allowed_tools FILTER │ ◄── ["web_search",      │
+  │   │   (allowlist gate)    │      "read_file"]        │
+  │   └────────────┬──────────┘                          │
+  │                │                                     │
+  │   ┌────────────▼──────────┐                          │
+  │   │    RESEARCHER AGENT   │                          │
+  │   │                       │                          │
+  │   │  Sees: web_search ✓   │                          │
+  │   │        read_file  ✓   │                          │
+  │   │   execute_code?  ✕    │ ◄── Not in allowed list  │
+  │   │   (invisible)         │                          │
+  │   └───────────────────────┘                          │
+  └──────────────────────────────────────────────────────┘
+</pre>
+        <div class="diagram-caption">Fig 4.1 — The allowed_tools filter sits between the Runner context and the agent, blocking unlisted tools entirely</div>
+      </div>
+    </div>
+
+    <!-- Common Pitfalls -->
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Assuming Inheritance:</strong> The most common exam mistake. Subagents do <em>not</em> automatically inherit the parent's tools. If you spawn a subagent without specifying <code class="inline">allowed_tools</code>, the subagent gets its own <code class="inline">tools</code> list — not the parent's <code class="inline">allowed_tools</code>. Each agent's scope is configured independently.</li>
+        <li><strong>Confusing <code class="inline">tools</code> vs. <code class="inline">allowed_tools</code>:</strong> <code class="inline">tools</code> registers tool functions with the agent. <code class="inline">allowed_tools</code> filters which of those registered tools are actually visible. If a tool name is in <code class="inline">allowed_tools</code> but not in <code class="inline">tools</code>, it is simply ignored — no error, no tool available.</li>
+        <li><strong>Using Blocklists Instead:</strong> There is no <code class="inline">denied_tools</code> parameter. The SDK uses an allowlist model only. Exam distractors often offer blocklist-based answers.</li>
+      </ol>
+    </div>
+
+    <!-- Tips & Tricks -->
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Mnemonic — "ATF" (Allowlist at Task-level Filtering):</strong> Remember that <code class="inline">allowed_tools</code> acts like a bouncer at the door — it checks the list, and only lets listed tools through.</li>
+        <li><strong>Pattern:</strong> When you see "restrict", "limit", "scope", or "least privilege" in an exam question, immediately think <code class="inline">allowed_tools</code>.</li>
+        <li><strong>Omitting <code class="inline">allowed_tools</code>:</strong> If you don't specify it, all tools in the <code class="inline">tools</code> list are visible. This is the "wide-open" default — the exam tests whether you know that explicitly setting an allowlist is required for restriction.</li>
+      </ul>
+    </div>
+
+    <!-- Exam Strategy -->
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.1 allowedTools</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> Understanding scope isolation between parent agents and subagents, and the allowlist-vs-blocklist model.</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>An orchestrator agent has tools: [file_read, web_search, execute_code].
+A spawned subagent should ONLY have access to web_search.
+Which configuration achieves this?
+
+A) Set denied_tools=["file_read", "execute_code"] on the subagent
+B) Set allowed_tools=["web_search"] on the subagent
+C) Remove execute_code from the runner context
+D) Add "only use web_search" to the subagent's system prompt
+</pre>
+      <p class="mt-8"><strong>CORRECT: B</strong></p>
+      <p>
+        <strong>Rationale:</strong> <code class="inline">allowed_tools</code> is the SDK mechanism for restricting tool visibility.
+        Option A is wrong because <code class="inline">denied_tools</code> does not exist.
+        Option C would remove the tool for <em>all</em> agents.
+        Option D is unreliable — prompt-based restrictions are advisory, not enforced.
+      </p>
+      <p class="mt-8"><strong>PATTERN TO REMEMBER:</strong> <em>"Explicit allowlist at spawn time = least privilege by design"</em></p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.2 — Configuring Tool Access at the Agent Level
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s42">
+  <div class="section-header">
+    <span class="section-number">4.2</span>
+    <span class="section-title">Configuring Tool Access at the Agent Level</span>
+    <span class="hotspot medium">🔥 MEDIUM exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        Beyond <code class="inline">allowed_tools</code>, the Agent SDK provides several levers for configuring what tools an agent can use and <em>how</em>.
+        The <strong><code class="inline">tools</code></strong> parameter on the <code class="inline">Agent</code> class accepts a list of tool objects (functions
+        decorated with <code class="inline">@function_tool</code>, built-in SDK tools, or custom <code class="inline">Tool</code> subclasses).
+        This list defines the <em>universe</em> of capabilities available — <code class="inline">allowed_tools</code> then optionally narrows it.
+      </p>
+      <p class="mt-8">
+        Key insight: tool configuration is <strong>declarative and static at agent construction time</strong>. Once an Agent is
+        instantiated, its tool set is fixed. To change it, you create a new Agent instance. This immutability is intentional —
+        it makes the security model auditable and predictable.
+      </p>
+    </div>
+
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong><code class="inline">tools</code> parameter</strong> — List of tool objects passed to <code class="inline">Agent()</code>. Defines the full tool universe for that agent.</li>
+        <li><strong><code class="inline">@function_tool</code> decorator</strong> — Converts a Python function into a tool the agent can call. Automatically extracts the function signature for the tool schema.</li>
+        <li><strong><code class="inline">Tool</code> base class</strong> — For advanced tools that need custom serialization, async execution, or stateful behavior. Subclass <code class="inline">Tool</code> and implement <code class="inline">run()</code>.</li>
+        <li><strong>Tool Schema</strong> — JSON Schema auto-generated from the function's type hints and docstring. This is what Claude sees in its system prompt.</li>
+        <li><strong>Immutable Configuration</strong> — Once constructed, an Agent's tool set cannot be modified at runtime.</li>
+      </ul>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example</div>
+      <p>Three patterns for registering tools — decorator, class-based, and combined with <code class="inline">allowed_tools</code>:</p>
+<pre><span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> <span class="type">Agent</span>, <span class="type">Tool</span>, <span class="function">function_tool</span>
+<span class="keyword">from</span> <span class="type">typing</span> <span class="keyword">import</span> <span class="type">Any</span>
+
+<span class="comment"># ─── Pattern 1: Decorator-based (simplest, most common) ───</span>
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">get_weather</span>(<span class="param">city</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Get current weather for a city. Returns temperature and conditions."""</span>
+    <span class="keyword">return</span> weather_api.get(city)
+
+<span class="comment"># ─── Pattern 2: Class-based (for advanced / stateful tools) ───</span>
+<span class="keyword">class</span> <span class="type">DatabaseQuery</span>(<span class="type">Tool</span>):
+    <span class="string">"""Execute a read-only SQL query against the analytics database."""</span>
+    name <span class="operator">=</span> <span class="string">"database_query"</span>
+    description <span class="operator">=</span> <span class="string">"Run a SQL SELECT query."</span>
+
+    <span class="keyword">async def</span> <span class="function">run</span>(<span class="param">self</span>, <span class="param">query</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+        <span class="comment"># Validate: only SELECT allowed (security guardrail)</span>
+        <span class="keyword">if not</span> query.strip().upper().startswith(<span class="string">"SELECT"</span>):
+            <span class="keyword">raise</span> <span class="type">ValueError</span>(<span class="string">"Only SELECT queries are permitted"</span>)
+        <span class="keyword">return</span> <span class="keyword">await</span> db.execute(query)
+
+<span class="comment"># ─── Pattern 3: Combined registration with allowed_tools filter ───</span>
+analyst <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"data_analyst"</span>,
+    instructions<span class="operator">=</span><span class="string">"Analyze data and report findings."</span>,
+    tools<span class="operator">=</span>[get_weather, <span class="type">DatabaseQuery</span>()],    <span class="comment"># Both tools registered</span>
+    allowed_tools<span class="operator">=</span>[<span class="string">"database_query"</span>],          <span class="comment"># Only DB queries allowed</span>
+)
+<span class="comment"># Result: analyst sees ONLY database_query. get_weather is registered but hidden.</span>
+</pre>
+    </div>
+
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — Tool Configuration Hierarchy</div>
+      <div class="diagram">
+<pre>                    ┌────────────────────────┐
+                    │   Agent Construction   │
+                    └───────────┬────────────┘
+                                │
+                    ┌───────────▼────────────┐
+                    │   tools = [A, B, C, D] │  ◄── Full universe
+                    │   (registered tools)   │      of capabilities
+                    └───────────┬────────────┘
+                                │
+                    ┌───────────▼────────────┐
+                    │  allowed_tools filter   │  ◄── Optional narrowing
+                    │  = ["A", "C"]          │      (allowlist gate)
+                    └───────────┬────────────┘
+                                │
+                    ┌───────────▼────────────┐
+                    │  Agent's Visible Tools  │
+                    │  → A ✓  B ✕  C ✓  D ✕  │  ◄── What Claude sees
+                    └────────────────────────┘      in the system prompt
+
+  ─────────────────────────────────────────────────────────
+  KEY RULE: tools = what CAN exist │ allowed_tools = what DOES exist
+  If allowed_tools is omitted → all tools in tools[] are visible.
+</pre>
+        <div class="diagram-caption">Fig 4.2 — Two-stage tool configuration: registration (tools) then filtering (allowed_tools)</div>
+      </div>
+    </div>
+
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Mutating after construction:</strong> Attempting <code class="inline">agent.tools.append(new_tool)</code> after instantiation. The SDK treats tool configuration as immutable. Create a new Agent instance instead.</li>
+        <li><strong>Mismatched names:</strong> <code class="inline">allowed_tools</code> uses <strong>string names</strong>, not function references. If your function is named <code class="inline">get_weather</code> but you write <code class="inline">allowed_tools=["weather"]</code>, the tool is silently excluded.</li>
+        <li><strong>Schema from docstrings:</strong> The tool's description in Claude's system prompt comes from the function's <strong>docstring</strong>, not the function name. A vague docstring = a poorly-used tool. Exam questions may test whether you know where the description is sourced from.</li>
+      </ol>
+    </div>
+
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Naming convention:</strong> Use <code class="inline">snake_case</code> for tool function names — the decorator extracts the function name as the tool's identifier. Keep names descriptive and unique across the agent's tool set.</li>
+        <li><strong>Type hints drive the schema:</strong> <code class="inline">@function_tool</code> reads your Python type hints to generate the JSON Schema. Use <code class="inline">str</code>, <code class="inline">int</code>, <code class="inline">float</code>, <code class="inline">bool</code>, <code class="inline">list[str]</code>, <code class="inline">Optional[str]</code> for clean schemas.</li>
+        <li><strong>Exam signal:</strong> When the question mentions "immutable", "fixed at creation", or "agent construction" — it's testing Agent-level config, not runtime modification.</li>
+      </ul>
+    </div>
+
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.2 Agent-Level Tool Config</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> The difference between tool <em>registration</em> (tools=[]) and tool <em>filtering</em> (allowed_tools=[]), plus immutability of agent configuration.</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>A developer registers tools [A, B, C] on an Agent and sets
+allowed_tools=["A", "D"]. Which tools can the agent use?
+
+A) A, B, C (allowed_tools is ignored if a name doesn't match)
+B) A only (D is not in tools, so it's ignored; B, C are filtered out)
+C) A and D (allowed_tools always takes precedence)
+D) Error: D is not a registered tool
+</pre>
+      <p class="mt-8"><strong>CORRECT: B</strong></p>
+      <p>
+        <strong>Rationale:</strong> <code class="inline">allowed_tools</code> is an intersection filter. "D" is in allowed_tools but not registered in tools[], so it's silently ignored (no error). Only "A" passes both gates.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.3 — The Task Tool for Subagent Spawning
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s43">
+  <div class="section-header">
+    <span class="section-number">4.3</span>
+    <span class="section-title">The <code class="inline">Task</code> Tool for Subagent Spawning</span>
+    <span class="hotspot high">🔥 HIGH exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        The <strong>Task tool</strong> (also referred to as the agent handoff mechanism) is the SDK's built-in way for one agent to
+        <strong>delegate work to another agent</strong> — spawning it as a subagent within the same Runner execution. The orchestrator
+        agent calls the Task tool just like any other tool, passing the input and receiving the subagent's final output as the tool result.
+      </p>
+      <p class="mt-8">
+        Critically, each Task tool wraps a specific <em>target agent</em> with its own configuration. When the orchestrator
+        lists the Task in its <code class="inline">tools</code>, the Runner knows how to spawn the child agent, enforce its
+        <code class="inline">allowed_tools</code>, and return results. The subagent runs in an isolated turn cycle — it does not share
+        conversation history with the parent unless explicitly passed context.
+      </p>
+    </div>
+
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong>Task tool</strong> — A built-in tool type that wraps a target Agent, enabling one agent to invoke another as part of its tool-calling flow.</li>
+        <li><strong>Orchestrator Agent</strong> — The parent agent that decides when and how to delegate work to subagents via Task tools.</li>
+        <li><strong>Subagent</strong> — A child agent spawned by a Task tool. It runs with its own instructions, model, and tool scope.</li>
+        <li><strong>Handoff</strong> — The act of transferring execution from the orchestrator to the subagent. The subagent runs to completion, then returns results to the orchestrator.</li>
+        <li><strong>Turn Isolation</strong> — Subagent conversation history is separate from the orchestrator's. The orchestrator only sees the subagent's final output.</li>
+      </ul>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example</div>
+      <p>Orchestrator with two specialized subagents — each with different tool scopes:</p>
+<pre><span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> <span class="type">Agent</span>, <span class="type">Runner</span>, <span class="function">function_tool</span>
+
+<span class="comment"># ─── Define specialized tools ───</span>
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">web_search</span>(<span class="param">query</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Search the web."""</span>
+    <span class="keyword">return</span> search(query)
+
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">write_file</span>(<span class="param">path</span>: <span class="type">str</span>, <span class="param">content</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Write content to a file."""</span>
+    open(path, <span class="string">"w"</span>).write(content)
+    <span class="keyword">return</span> <span class="string">f"Written to {path}"</span>
+
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">send_email</span>(<span class="param">to</span>: <span class="type">str</span>, <span class="param">body</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Send an email."""</span>
+    <span class="keyword">return</span> email_client.send(to, body)
+
+<span class="comment"># ─── Define subagents with scoped tools ───</span>
+research_agent <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"research_agent"</span>,
+    instructions<span class="operator">=</span><span class="string">"Research the given topic and return a summary."</span>,
+    tools<span class="operator">=</span>[web_search],                      <span class="comment"># Can ONLY search</span>
+)
+
+writer_agent <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"writer_agent"</span>,
+    instructions<span class="operator">=</span><span class="string">"Write a report based on the provided research."</span>,
+    tools<span class="operator">=</span>[write_file],                       <span class="comment"># Can ONLY write files</span>
+)
+
+<span class="comment"># ─── Orchestrator delegates via agent references in its tools list ───</span>
+orchestrator <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"orchestrator"</span>,
+    instructions<span class="operator">=</span><span class="string">"""You coordinate research reports.
+    1. Delegate research to research_agent.
+    2. Pass findings to writer_agent for the final report.
+    Do NOT search or write files yourself."""</span>,
+    tools<span class="operator">=</span>[
+        research_agent.as_tool(              <span class="comment"># Exposes research_agent as a callable tool</span>
+            tool_name<span class="operator">=</span><span class="string">"delegate_research"</span>,
+            tool_description<span class="operator">=</span><span class="string">"Delegate a research task to the research specialist."</span>,
+        ),
+        writer_agent.as_tool(
+            tool_name<span class="operator">=</span><span class="string">"delegate_writing"</span>,
+            tool_description<span class="operator">=</span><span class="string">"Delegate report writing to the writing specialist."</span>,
+        ),
+        send_email,                          <span class="comment"># Orchestrator can email directly</span>
+    ],
+)
+
+<span class="comment"># ─── Run the orchestrator ───</span>
+result <span class="operator">=</span> <span class="keyword">await</span> <span class="type">Runner</span>.run(orchestrator, input<span class="operator">=</span><span class="string">"Research AI trends and write a report."</span>)
+</pre>
+    </div>
+
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — Multi-Agent Task Delegation</div>
+      <div class="diagram">
+<pre>                         ┌─────────────────────────┐
+                         │     ORCHESTRATOR         │
+                         │  tools: [delegate_       │
+                         │   research,              │
+                         │   delegate_writing,      │
+                         │   send_email]            │
+                         └────┬──────────┬──────────┘
+                              │          │
+              ┌───────────────┘          └──────────────┐
+              │  Step 1: delegate                       │  Step 2: delegate
+              │  research("AI trends")                  │  writing(research_data)
+              ▼                                         ▼
+  ┌──────────────────────┐              ┌─────────────────────────┐
+  │   RESEARCH AGENT     │              │     WRITER AGENT        │
+  │   tools: [web_search]│              │   tools: [write_file]   │
+  │                      │              │                         │
+  │   ✓ web_search       │              │   ✓ write_file          │
+  │   ✕ write_file       │ ◄── scoped   │   ✕ web_search          │ ◄── scoped
+  │   ✕ send_email       │              │   ✕ send_email          │
+  └──────────┬───────────┘              └────────────┬────────────┘
+             │                                       │
+             │  returns summary                      │  returns file path
+             └───────────────┐     ┌─────────────────┘
+                             ▼     ▼
+                    ┌────────────────────┐
+                    │  Orchestrator gets │
+                    │  results → calls   │
+                    │  send_email        │
+                    └────────────────────┘
+</pre>
+        <div class="diagram-caption">Fig 4.3 — Each subagent has independently scoped tools. The orchestrator coordinates but does not share its email capability.</div>
+      </div>
+    </div>
+
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Thinking subagents share conversation:</strong> By default, a subagent does NOT see the orchestrator's prior conversation. It receives only the input passed to the Task tool. If you need context, you must include it in the tool input explicitly.</li>
+        <li><strong>Over-permissioning the orchestrator:</strong> If the orchestrator has <code class="inline">send_email</code> and delegates to subagents, the <em>subagents</em> cannot send email unless you also give them that tool. Tool access does not cascade.</li>
+        <li><strong>Ignoring the <code class="inline">as_tool()</code> pattern:</strong> To use an agent as a tool in another agent, you must explicitly convert it using <code class="inline">.as_tool()</code> (or equivalent handoff mechanism). Simply passing the agent object in the <code class="inline">tools</code> list is incorrect.</li>
+      </ol>
+    </div>
+
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Mnemonic — "Spawn + Scope":</strong> Every spawn = new scope. Parent scope ≠ child scope.</li>
+        <li><strong>Design Pattern:</strong> Orchestrators should generally have <strong>no direct data tools</strong> — only Task/handoff tools and communication tools (email, Slack). This forces all data access through specialized subagents with proper guardrails.</li>
+        <li><strong>Exam trick:</strong> Questions may describe a chain: Agent A → Agent B → Agent C. Each agent's tools are independent. Don't assume cascading.</li>
+      </ul>
+    </div>
+
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.3 Task Tool</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> Multi-agent delegation mechanics, scope boundaries, and the orchestrator pattern.</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>An orchestrator agent delegates to a "researcher" subagent.
+The orchestrator has tools: [send_email, delegate_research].
+The researcher subagent has tools: [web_search].
+
+Can the researcher subagent send an email?
+
+A) Yes — it inherits send_email from the orchestrator
+B) Yes — tools cascade through delegation chains
+C) No — the researcher only has access to web_search
+D) No — but it can request the orchestrator to send one
+</pre>
+      <p class="mt-8"><strong>CORRECT: C</strong></p>
+      <p>
+        <strong>Rationale:</strong> Tool access is defined per-agent and does not cascade. The researcher's tools list contains
+        only <code class="inline">web_search</code>. Option D describes a possible architectural pattern but is not how the SDK
+        works by default — the subagent runs to completion and returns results; it cannot "request" the parent to act.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.4 — Agent SDK Hooks: PostToolUse
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s44">
+  <div class="section-header">
+    <span class="section-number">4.4</span>
+    <span class="section-title">Agent SDK Hooks: <code class="inline">on_tool_end</code> for Tool Call Interception</span>
+    <span class="hotspot high">🔥 HIGH exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        <strong>Lifecycle hooks</strong> are callback methods that the Agent SDK invokes at specific points during an agent's execution
+        cycle. They give you interception points — moments where your code runs <em>between</em> the agent's decision to use a tool
+        and the actual execution, or <em>after</em> the tool returns its result. The two primary tool-related hooks are:
+      </p>
+      <ul class="mt-8">
+        <li><strong><code class="inline">on_tool_start</code></strong> — fires <em>before</em> a tool executes (Pre-Tool hook)</li>
+        <li><strong><code class="inline">on_tool_end</code></strong> — fires <em>after</em> a tool returns its result (Post-Tool hook)</li>
+      </ul>
+      <p class="mt-8">
+        The <code class="inline">on_tool_end</code> hook (Post-Tool) is especially powerful because it receives both the tool call
+        arguments <em>and</em> the result. This lets you log, transform, redact, or validate tool outputs before they're returned
+        to the agent. The hook can modify the result, raise an exception to signal failure, or silently record metrics.
+      </p>
+    </div>
+
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong>Lifecycle Hook</strong> — A user-defined callback attached to an agent that fires at a specific phase of the execution loop.</li>
+        <li><strong><code class="inline">RunHooks</code></strong> — The base class for defining hooks that apply to the entire Runner execution (across all agents in a run).</li>
+        <li><strong><code class="inline">AgentHooks</code></strong> — The base class for defining hooks scoped to a specific agent instance.</li>
+        <li><strong><code class="inline">on_tool_start(context, agent, tool_call)</code></strong> — Pre-execution hook. Called with the tool name and arguments <em>before</em> the tool runs.</li>
+        <li><strong><code class="inline">on_tool_end(context, agent, tool_call, tool_result)</code></strong> — Post-execution hook. Called with the tool name, arguments, <em>and result</em> after the tool completes.</li>
+        <li><strong><code class="inline">RunContext</code></strong> — An object passed to all hooks carrying the run's metadata, state, and configuration.</li>
+      </ul>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example</div>
+      <p>Implementing a post-tool hook that logs every tool result:</p>
+<pre><span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> <span class="type">Agent</span>, <span class="type">AgentHooks</span>, <span class="type">RunContext</span>, <span class="type">ToolCallInfo</span>, <span class="type">ToolResult</span>
+<span class="keyword">import</span> <span class="type">logging</span>
+
+logger <span class="operator">=</span> logging.getLogger(<span class="string">"agent_tools"</span>)
+
+<span class="keyword">class</span> <span class="type">LoggingHooks</span>(<span class="type">AgentHooks</span>):
+    <span class="string">"""Hooks that log every tool call and result."""</span>
+
+    <span class="keyword">async def</span> <span class="function">on_tool_start</span>(
+        <span class="param">self</span>,
+        <span class="param">context</span>: <span class="type">RunContext</span>,
+        <span class="param">agent</span>: <span class="type">Agent</span>,
+        <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># Fires BEFORE the tool executes</span>
+        logger.info(
+            <span class="string">f"[PRE]  Agent '{agent.name}' calling '{tool_call.name}' "</span>
+            <span class="string">f"with args: {tool_call.arguments}"</span>
+        )
+
+    <span class="keyword">async def</span> <span class="function">on_tool_end</span>(
+        <span class="param">self</span>,
+        <span class="param">context</span>: <span class="type">RunContext</span>,
+        <span class="param">agent</span>: <span class="type">Agent</span>,
+        <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>,
+        <span class="param">tool_result</span>: <span class="type">ToolResult</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># Fires AFTER the tool returns</span>
+        logger.info(
+            <span class="string">f"[POST] Agent '{agent.name}' tool '{tool_call.name}' "</span>
+            <span class="string">f"returned: {tool_result.output[:200]}"</span>  <span class="comment"># Truncate for log safety</span>
+        )
+
+<span class="comment"># ─── Attach hooks to an agent ───</span>
+agent <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"monitored_agent"</span>,
+    instructions<span class="operator">=</span><span class="string">"You are a helpful assistant."</span>,
+    tools<span class="operator">=</span>[web_search, read_file],
+    hooks<span class="operator">=</span><span class="type">LoggingHooks</span>(),                    <span class="comment"># ◄── Attach hooks here</span>
+)
+</pre>
+    </div>
+
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — Hook Execution Timeline</div>
+      <div class="diagram">
+<pre>  Time ──────────────────────────────────────────────────────────────▸
+
+  Agent Loop        ┌──────┐
+  Iteration N  ─────│Claude│─────────────────────────────────────────
+                    │Thinks│
+                    └──┬───┘
+                       │
+                       │ decides to call "web_search"
+                       ▼
+               ┌───────────────┐
+               │ on_tool_start │  ◄── YOUR CODE runs here
+               │  (pre-hook)   │      • Log the call
+               │               │      • Validate arguments
+               └───────┬───────┘      • Block if unauthorized
+                       │
+                       │ (if not blocked)
+                       ▼
+               ┌───────────────┐
+               │  Tool Runs    │  ◄── web_search executes
+               │  web_search() │
+               └───────┬───────┘
+                       │
+                       │ tool returns result
+                       ▼
+               ┌───────────────┐
+               │  on_tool_end  │  ◄── YOUR CODE runs here
+               │ (post-hook)   │      • Log the result
+               │               │      • Redact PII
+               └───────┬───────┘      • Collect metrics
+                       │
+                       │ (possibly modified) result
+                       ▼
+               ┌───────────────┐
+               │ Claude sees   │  ◄── Continues reasoning
+               │ tool result   │      with (cleaned) output
+               └───────────────┘
+</pre>
+        <div class="diagram-caption">Fig 4.4 — Hook execution sits on either side of the actual tool invocation, forming a "sandwich" pattern</div>
+      </div>
+    </div>
+
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Confusing <code class="inline">RunHooks</code> vs. <code class="inline">AgentHooks</code>:</strong> <code class="inline">AgentHooks</code> are scoped to a single agent. <code class="inline">RunHooks</code> apply to the entire run (all agents). Exam questions test whether you know which to use for per-agent vs. global interception.</li>
+        <li><strong>Blocking in <code class="inline">on_tool_end</code>:</strong> By the time <code class="inline">on_tool_end</code> fires, the tool has already executed. You can modify or log the result, but you cannot <em>prevent</em> the execution. To block, use <code class="inline">on_tool_start</code>.</li>
+        <li><strong>Forgetting <code class="inline">async</code>:</strong> Hook methods are async. Forgetting the <code class="inline">async</code> keyword causes the SDK to skip the hook silently in some implementations — a subtle bug that's hard to debug.</li>
+      </ol>
+    </div>
+
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Mnemonic — "Start blocks, End logs":</strong> <code class="inline">on_tool_start</code> = gate/approval (can prevent execution). <code class="inline">on_tool_end</code> = observe/transform (execution already happened).</li>
+        <li><strong>Hook ordering:</strong> If both <code class="inline">RunHooks</code> and <code class="inline">AgentHooks</code> define the same method, <code class="inline">RunHooks</code> fires first (global before local).</li>
+        <li><strong>Exam pattern:</strong> "Where should you add logging?" → <code class="inline">on_tool_end</code> (you want to see results). "Where should you add approval?" → <code class="inline">on_tool_start</code> (before execution).</li>
+      </ul>
+    </div>
+
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.4 Hooks</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> Hook execution order, the difference between pre- and post-hooks, and scope (RunHooks vs. AgentHooks).</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>A developer wants to redact PII from tool results BEFORE the agent
+sees them. Which hook method should they implement?
+
+A) on_tool_start — redact the arguments before execution
+B) on_tool_end — modify the tool_result before it's returned to the agent
+C) on_agent_start — filter the agent's system prompt
+D) on_run_complete — clean up results after the full run
+</pre>
+      <p class="mt-8"><strong>CORRECT: B</strong></p>
+      <p>
+        <strong>Rationale:</strong> PII exists in the <em>result</em> (output data), not the arguments (input). <code class="inline">on_tool_end</code>
+        intercepts after tool execution but before the result reaches the agent, which is the correct interception point.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.5 — Intercepting Sensitive Operations
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s45">
+  <div class="section-header">
+    <span class="section-number">4.5</span>
+    <span class="section-title">Intercepting Sensitive Operations (PII Redaction, Approval Gates)</span>
+    <span class="hotspot high">🔥 HIGH exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        Hooks enable two critical enterprise patterns: <strong>PII redaction</strong> (sanitizing sensitive data from tool outputs
+        before the agent processes them) and <strong>approval gates</strong> (requiring human or system approval before certain
+        high-risk tools execute). These patterns transform the Agent SDK from a development tool into an enterprise-grade
+        framework with compliance and governance built into the execution pipeline.
+      </p>
+      <p class="mt-8">
+        <strong>PII Redaction</strong> uses <code class="inline">on_tool_end</code> — the tool's raw output is scanned for patterns
+        (emails, SSNs, phone numbers) and replaced with placeholders before the agent sees the data.
+        <strong>Approval Gates</strong> use <code class="inline">on_tool_start</code> — before a sensitive tool (e.g., database write,
+        email send) executes, the hook pauses execution and requests approval from a human or automated system.
+      </p>
+    </div>
+
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong>PII Redaction</strong> — Replacing personally identifiable information (names, emails, SSNs) with anonymized tokens (e.g., <code class="inline">[REDACTED_EMAIL]</code>) in tool outputs.</li>
+        <li><strong>Approval Gate</strong> — A checkpoint in <code class="inline">on_tool_start</code> that blocks tool execution until an external authority (human or system) approves the action.</li>
+        <li><strong>Human-in-the-Loop (HITL)</strong> — Architecture pattern where a human must approve agent actions before execution. Implemented via approval gate hooks.</li>
+        <li><strong>Guardrail</strong> — Any mechanism that constrains agent behavior within acceptable bounds. Hooks are the SDK's primary guardrail enforcement point.</li>
+        <li><strong>Sensitive Tool</strong> — A tool whose execution has irreversible or high-impact side effects (send email, delete record, transfer funds).</li>
+      </ul>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example — PII Redaction Hook</div>
+<pre><span class="keyword">import</span> <span class="type">re</span>
+<span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> <span class="type">AgentHooks</span>, <span class="type">RunContext</span>, <span class="type">Agent</span>, <span class="type">ToolCallInfo</span>, <span class="type">ToolResult</span>
+
+<span class="comment"># ─── PII patterns ───</span>
+PII_PATTERNS <span class="operator">=</span> {
+    <span class="string">"email"</span>:  (<span class="keyword">re</span>.compile(<span class="string">r"[\w.+-]+@[\w-]+\.[\w.-]+"</span>), <span class="string">"[REDACTED_EMAIL]"</span>),
+    <span class="string">"ssn"</span>:    (<span class="keyword">re</span>.compile(<span class="string">r"\b\d{3}-\d{2}-\d{4}\b"</span>), <span class="string">"[REDACTED_SSN]"</span>),
+    <span class="string">"phone"</span>:  (<span class="keyword">re</span>.compile(<span class="string">r"\b\d{3}[-.]?\d{3}[-.]?\d{4}\b"</span>), <span class="string">"[REDACTED_PHONE]"</span>),
+}
+
+<span class="keyword">class</span> <span class="type">PIIRedactionHooks</span>(<span class="type">AgentHooks</span>):
+    <span class="string">"""Scrub PII from all tool results before the agent sees them."""</span>
+
+    <span class="keyword">async def</span> <span class="function">on_tool_end</span>(
+        <span class="param">self</span>,
+        <span class="param">context</span>: <span class="type">RunContext</span>,
+        <span class="param">agent</span>: <span class="type">Agent</span>,
+        <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>,
+        <span class="param">tool_result</span>: <span class="type">ToolResult</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># Redact all PII patterns from the tool output</span>
+        cleaned <span class="operator">=</span> tool_result.output
+        <span class="keyword">for</span> pii_type, (pattern, replacement) <span class="keyword">in</span> PII_PATTERNS.items():
+            matches <span class="operator">=</span> pattern.findall(cleaned)
+            <span class="keyword">if</span> matches:
+                logger.warning(<span class="string">f"Redacted {len(matches)} {pii_type} instance(s)"</span>)
+                cleaned <span class="operator">=</span> pattern.sub(replacement, cleaned)
+        tool_result.output <span class="operator">=</span> cleaned      <span class="comment"># ◄── Mutate result in-place</span>
+</pre>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example — Approval Gate Hook</div>
+<pre><span class="keyword">class</span> <span class="type">ApprovalGateHooks</span>(<span class="type">AgentHooks</span>):
+    <span class="string">"""Block sensitive tools until human approval is received."""</span>
+
+    SENSITIVE_TOOLS <span class="operator">=</span> {<span class="string">"send_email"</span>, <span class="string">"delete_record"</span>, <span class="string">"transfer_funds"</span>}
+
+    <span class="keyword">async def</span> <span class="function">on_tool_start</span>(
+        <span class="param">self</span>,
+        <span class="param">context</span>: <span class="type">RunContext</span>,
+        <span class="param">agent</span>: <span class="type">Agent</span>,
+        <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="keyword">if</span> tool_call.name <span class="keyword">in</span> self.SENSITIVE_TOOLS:
+            <span class="comment"># Request human approval (blocks until approved)</span>
+            approved <span class="operator">=</span> <span class="keyword">await</span> request_human_approval(
+                action<span class="operator">=</span>tool_call.name,
+                args<span class="operator">=</span>tool_call.arguments,
+                agent<span class="operator">=</span>agent.name,
+            )
+            <span class="keyword">if not</span> approved:
+                <span class="keyword">raise</span> <span class="type">ToolExecutionError</span>(
+                    <span class="string">f"Tool '{tool_call.name}' blocked: approval denied"</span>
+                )
+                <span class="comment"># ▲ Raising an exception prevents tool execution</span>
+                <span class="comment">#   and returns an error to the agent</span>
+</pre>
+    </div>
+
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — PII Redaction vs. Approval Gate Placement</div>
+      <div class="diagram">
+<pre>  ┌─────────────────────────────────────────────────────────────────┐
+  │                     HOOK PLACEMENT MAP                          │
+  │                                                                 │
+  │   Agent Decides          Tool               Agent Receives      │
+  │   to Call Tool         Executes              Tool Result        │
+  │        │                  │                      │              │
+  │        ▼                  ▼                      ▼              │
+  │   ┌──────────┐      ┌──────────┐          ┌──────────┐         │
+  │   │on_tool_  │      │  Actual  │          │on_tool_  │         │
+  │   │ start    │─────▸│  Tool    │─────────▸│  end     │         │
+  │   └──────────┘      │  Code    │          └──────────┘         │
+  │                     └──────────┘                               │
+  │        │                                       │               │
+  │   ┌────┴────┐                             ┌────┴────┐          │
+  │   │APPROVAL │ ◄── Block/allow             │   PII   │          │
+  │   │  GATE   │     BEFORE execution        │REDACTION│          │
+  │   │         │     (irreversible            │         │          │
+  │   │  raise  │      actions)               │ mutate  │          │
+  │   │  error  │                             │ output  │          │
+  │   │  to     │                             │ before  │          │
+  │   │  block  │                             │ agent   │          │
+  │   └─────────┘                             │  sees   │          │
+  │                                           │  it     │          │
+  │                                           └─────────┘          │
+  │                                                                 │
+  │   RULE: Approval = on_tool_start │ Redaction = on_tool_end      │
+  └─────────────────────────────────────────────────────────────────┘
+</pre>
+        <div class="diagram-caption">Fig 4.5 — Approval gates intercept <em>before</em> execution; PII redaction cleans up <em>after</em> execution</div>
+      </div>
+    </div>
+
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Redacting in <code class="inline">on_tool_start</code>:</strong> PII exists in the <em>result</em>, not the arguments. Redacting arguments is usually wrong — the tool needs the real arguments to function (e.g., a name to query).</li>
+        <li><strong>Approval gate in <code class="inline">on_tool_end</code>:</strong> By the time <code class="inline">on_tool_end</code> fires, the email is already sent, the record already deleted. Approval gates <em>must</em> be in <code class="inline">on_tool_start</code>.</li>
+        <li><strong>Forgetting to re-assign:</strong> When redacting PII, you must mutate <code class="inline">tool_result.output</code> in-place or re-assign the cleaned value. Simply computing a cleaned string without assigning it back does nothing.</li>
+      </ol>
+    </div>
+
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Mnemonic — "Before = Block, After = Clean":</strong> <code class="inline">on_tool_start</code> = can block (approval). <code class="inline">on_tool_end</code> = can clean (redact).</li>
+        <li><strong>Combine patterns:</strong> In production, you often implement BOTH on the same agent — approval gate on <code class="inline">on_tool_start</code> for writes AND PII redaction on <code class="inline">on_tool_end</code> for reads.</li>
+        <li><strong>Exam tell:</strong> If the question mentions "irreversible action" or "side effect" → approval gate → <code class="inline">on_tool_start</code>. If it mentions "sensitive data in output" → redaction → <code class="inline">on_tool_end</code>.</li>
+      </ul>
+    </div>
+
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.5 Sensitive Operations</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> Correct hook placement for security patterns — approval gates vs. data sanitization.</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>A compliance team requires that all database query results are scanned for
+Social Security Numbers before the agent processes them. Additionally,
+any DELETE operations must require manager approval.
+
+Which hook configuration implements BOTH requirements?
+
+A) on_tool_start for SSN scanning; on_tool_end for DELETE approval
+B) on_tool_end for SSN scanning; on_tool_start for DELETE approval
+C) on_tool_start for both (catch everything before execution)
+D) on_tool_end for both (validate all results after execution)
+</pre>
+      <p class="mt-8"><strong>CORRECT: B</strong></p>
+      <p>
+        <strong>Rationale:</strong> SSN scanning targets <em>output data</em> → <code class="inline">on_tool_end</code>.
+        DELETE approval must happen <em>before</em> the irreversible operation → <code class="inline">on_tool_start</code>.
+        This is the "sandwich" pattern — approval before, sanitization after.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.6 — Logging, Metrics & Guardrails via Hooks
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s46">
+  <div class="section-header">
+    <span class="section-number">4.6</span>
+    <span class="section-title">Adding Logging, Metrics &amp; Guardrails via Hooks</span>
+    <span class="hotspot medium">🔥 MEDIUM exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        Beyond security (approval gates) and compliance (PII redaction), hooks are the primary extension point for
+        <strong>observability</strong> and <strong>operational guardrails</strong>. Three enterprise-critical patterns built on hooks:
+      </p>
+      <ul class="mt-8">
+        <li><strong>Structured Logging:</strong> Emit structured JSON logs for every tool call, including timing, agent name, tool name, arguments, and result summary. Enables audit trails and debugging.</li>
+        <li><strong>Metrics Collection:</strong> Track tool call counts, latency percentiles, error rates, and token usage. Feed into monitoring dashboards (CloudWatch, Datadog, etc.).</li>
+        <li><strong>Guardrails:</strong> Enforce runtime invariants — e.g., rate-limit how many times an agent can call a tool, cap output size, or enforce argument constraints beyond what the tool schema allows.</li>
+      </ul>
+    </div>
+
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong>Structured Logging</strong> — JSON-formatted log events with consistent fields (timestamp, agent_name, tool_name, duration_ms, status). Machine-parseable for log analytics.</li>
+        <li><strong>Observability</strong> — The ability to understand an agent's internal state from its external outputs (logs, metrics, traces).</li>
+        <li><strong>Rate Limiting</strong> — Guardrail that caps how many times a tool can be called per run or per time window.</li>
+        <li><strong>Output Guardrail</strong> — Validation on tool results (e.g., max size, required format, no forbidden content).</li>
+        <li><strong>Input Guardrail</strong> — Validation on tool arguments (e.g., SQL injection prevention, path traversal checks).</li>
+      </ul>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example — Combined Logging + Rate Limiting</div>
+<pre><span class="keyword">import</span> <span class="type">time</span>, <span class="type">json</span>, <span class="type">logging</span>
+<span class="keyword">from</span> <span class="type">collections</span> <span class="keyword">import</span> <span class="type">defaultdict</span>
+<span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> <span class="type">AgentHooks</span>, <span class="type">RunContext</span>, <span class="type">Agent</span>, <span class="type">ToolCallInfo</span>, <span class="type">ToolResult</span>
+
+logger <span class="operator">=</span> logging.getLogger(<span class="string">"agent.audit"</span>)
+
+<span class="keyword">class</span> <span class="type">ObservabilityHooks</span>(<span class="type">AgentHooks</span>):
+    <span class="string">"""Structured logging, latency tracking, and rate limiting."""</span>
+
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>, <span class="param">max_calls_per_tool</span>: <span class="type">int</span> <span class="operator">=</span> <span class="number">10</span>):
+        <span class="param">self</span>.call_counts: <span class="type">dict</span>[<span class="type">str</span>, <span class="type">int</span>] <span class="operator">=</span> defaultdict(<span class="type">int</span>)
+        <span class="param">self</span>.max_calls <span class="operator">=</span> max_calls_per_tool
+        <span class="param">self</span>._start_times: <span class="type">dict</span>[<span class="type">str</span>, <span class="type">float</span>] <span class="operator">=</span> {}
+
+    <span class="keyword">async def</span> <span class="function">on_tool_start</span>(
+        <span class="param">self</span>, <span class="param">context</span>: <span class="type">RunContext</span>, <span class="param">agent</span>: <span class="type">Agent</span>, <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># ── Rate limiting guardrail ──</span>
+        <span class="param">self</span>.call_counts[tool_call.name] <span class="operator">+=</span> <span class="number">1</span>
+        <span class="keyword">if</span> <span class="param">self</span>.call_counts[tool_call.name] <span class="operator">&gt;</span> <span class="param">self</span>.max_calls:
+            <span class="keyword">raise</span> <span class="type">ToolExecutionError</span>(
+                <span class="string">f"Rate limit exceeded: '{tool_call.name}' called "</span>
+                <span class="string">f"{self.call_counts[tool_call.name]} times (max: {self.max_calls})"</span>
+            )
+        <span class="comment"># ── Start timer ──</span>
+        <span class="param">self</span>._start_times[tool_call.id] <span class="operator">=</span> time.monotonic()
+
+    <span class="keyword">async def</span> <span class="function">on_tool_end</span>(
+        <span class="param">self</span>, <span class="param">context</span>: <span class="type">RunContext</span>, <span class="param">agent</span>: <span class="type">Agent</span>,
+        <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>, <span class="param">tool_result</span>: <span class="type">ToolResult</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># ── Calculate latency ──</span>
+        start <span class="operator">=</span> <span class="param">self</span>._start_times.pop(tool_call.id, <span class="type">None</span>)
+        duration_ms <span class="operator">=</span> (time.monotonic() <span class="operator">-</span> start) <span class="operator">*</span> <span class="number">1000</span> <span class="keyword">if</span> start <span class="keyword">else</span> <span class="number">0</span>
+
+        <span class="comment"># ── Structured log event ──</span>
+        log_event <span class="operator">=</span> {
+            <span class="string">"event"</span>: <span class="string">"tool_call_complete"</span>,
+            <span class="string">"agent"</span>: agent.name,
+            <span class="string">"tool"</span>: tool_call.name,
+            <span class="string">"duration_ms"</span>: round(duration_ms, <span class="number">2</span>),
+            <span class="string">"output_length"</span>: len(tool_result.output),
+            <span class="string">"call_count"</span>: <span class="param">self</span>.call_counts[tool_call.name],
+        }
+        logger.info(json.dumps(log_event))
+
+<span class="comment"># ─── Usage ───</span>
+agent <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"guarded_agent"</span>,
+    tools<span class="operator">=</span>[web_search, database_query],
+    hooks<span class="operator">=</span><span class="type">ObservabilityHooks</span>(max_calls_per_tool<span class="operator">=</span><span class="number">5</span>),  <span class="comment"># Max 5 calls per tool</span>
+)
+</pre>
+    </div>
+
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — Observability Stack via Hooks</div>
+      <div class="diagram">
+<pre>  ┌─────────────────────────────────────────────────────────────┐
+  │                OBSERVABILITY HOOK STACK                      │
+  │                                                             │
+  │   on_tool_start                    on_tool_end              │
+  │   ┌──────────────┐               ┌──────────────────┐      │
+  │   │ 1. Rate      │               │ 4. Stop Timer    │      │
+  │   │    Limiter    │────▸ TOOL ───▸│                  │      │
+  │   │              │   Executes    │ 5. Emit Log      │      │
+  │   │ 2. Input     │               │    (structured    │      │
+  │   │    Validator  │               │     JSON)        │      │
+  │   │              │               │                  │      │
+  │   │ 3. Start     │               │ 6. Check Output  │      │
+  │   │    Timer     │               │    Size Limit    │      │
+  │   └──────────────┘               └──────────────────┘      │
+  │                                         │                   │
+  │                                         ▼                   │
+  │                              ┌──────────────────┐           │
+  │                              │  Monitoring       │           │
+  │                              │  Dashboard        │           │
+  │                              │  (CloudWatch /    │           │
+  │                              │   Datadog / etc.) │           │
+  │                              └──────────────────┘           │
+  └─────────────────────────────────────────────────────────────┘
+</pre>
+        <div class="diagram-caption">Fig 4.6 — Multiple guardrails and logging concerns layered into two hook methods</div>
+      </div>
+    </div>
+
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Logging sensitive arguments:</strong> When logging tool call arguments in structured logs, be careful not to log PII or secrets. Combine your logging hook with redaction logic, or exclude argument values from production logs.</li>
+        <li><strong>Stateful hooks without thread safety:</strong> If the same hook instance is shared across concurrent agent runs, mutable state (like <code class="inline">call_counts</code>) can race. Use <code class="inline">asyncio.Lock</code> or per-run state isolation.</li>
+        <li><strong>Over-guardrailing:</strong> Setting rate limits too low causes the agent to fail legitimate multi-step workflows. Tune guardrails based on expected usage patterns, not arbitrary numbers.</li>
+      </ol>
+    </div>
+
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Pattern recognition:</strong> Exam questions about "audit trail" or "compliance logging" → structured logging in <code class="inline">on_tool_end</code>. Questions about "preventing abuse" or "limiting calls" → rate limiting in <code class="inline">on_tool_start</code>.</li>
+        <li><strong>Combine, don't duplicate:</strong> Implement one Hooks class per agent with all concerns (logging, metrics, guardrails). Don't try to attach multiple hook instances — the SDK uses a single <code class="inline">hooks</code> parameter.</li>
+        <li><strong>Timer pattern:</strong> Start in <code class="inline">on_tool_start</code>, stop in <code class="inline">on_tool_end</code>, keyed by <code class="inline">tool_call.id</code>. This is the standard latency measurement pattern — memorize it.</li>
+      </ul>
+    </div>
+
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.6 Logging &amp; Guardrails</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> Where to place observability concerns and how to implement stateful guardrails.</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>A developer needs to ensure no tool is called more than 20 times per
+agent run. Where should this logic be implemented?
+
+A) In the tool function itself (add a counter)
+B) In on_tool_start — increment a counter and raise if exceeded
+C) In on_tool_end — check the count after execution
+D) In the agent's system prompt ("never call a tool more than 20 times")
+</pre>
+      <p class="mt-8"><strong>CORRECT: B</strong></p>
+      <p>
+        <strong>Rationale:</strong> Rate limiting must happen <em>before</em> execution to prevent the 21st call. <code class="inline">on_tool_start</code>
+        is the correct hook because you can raise an error to prevent execution. Option C is too late (tool already ran).
+        Option A works but violates separation of concerns — guardrails belong in hooks, not tools. Option D is unreliable.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     4.7 — Hands-On: Implementing Tool Call Interception
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="s47">
+  <div class="section-header">
+    <span class="section-number">4.7</span>
+    <span class="section-title">Hands-On: Implementing Tool Call Interception</span>
+    <span class="hotspot high">🔥 HIGH exam frequency</span>
+  </div>
+  <div class="section-body">
+
+    <div class="block concept">
+      <div class="block-label">📘 Core Concept</div>
+      <p>
+        This section synthesizes all prior concepts into a <strong>production-ready interception pipeline</strong>. In practice,
+        you combine approval gates, PII redaction, structured logging, and rate limiting into a single cohesive hook class
+        that acts as the agent's "middleware layer." The key architectural insight: hooks form a <strong>pipeline of concerns</strong>,
+        executed in a predictable order, providing a single enforcement boundary for all cross-cutting requirements.
+      </p>
+      <p class="mt-8">
+        The exam tests your ability to read a complete hook implementation and identify: (1) what each section does,
+        (2) whether hook methods are in the correct phase, and (3) what happens when edge cases occur (e.g., approval denied,
+        PII found in arguments vs. results, rate limit hit mid-conversation).
+      </p>
+    </div>
+
+    <div class="block terms">
+      <div class="block-label">🔑 Key Terms</div>
+      <ul>
+        <li><strong>Hook Pipeline</strong> — The sequential execution of hook methods forming a middleware-like chain around tool execution.</li>
+        <li><strong>Cross-Cutting Concern</strong> — Functionality (logging, security, metrics) that spans across all tools rather than belonging to any single tool.</li>
+        <li><strong>Middleware Pattern</strong> — Hooks acting like middleware in web frameworks — each request (tool call) passes through layers of processing.</li>
+        <li><strong>Error Propagation</strong> — When a hook raises an exception, the tool does not execute and the agent receives an error result. Subsequent hooks in the same phase are skipped.</li>
+        <li><strong>Graceful Degradation</strong> — Hooks should handle their own exceptions (e.g., logging service down) without breaking the agent's core flow.</li>
+      </ul>
+    </div>
+
+    <div class="block code-block">
+      <div class="block-label">💻 Code Example — Complete Production Hook Pipeline</div>
+      <p>A single hook class combining all four enterprise patterns:</p>
+<pre><span class="keyword">import</span> <span class="type">re</span>, <span class="type">time</span>, <span class="type">json</span>, <span class="type">logging</span>
+<span class="keyword">from</span> <span class="type">collections</span> <span class="keyword">import</span> <span class="type">defaultdict</span>
+<span class="keyword">from</span> <span class="type">agents</span> <span class="keyword">import</span> (
+    <span class="type">Agent</span>, <span class="type">Runner</span>, <span class="type">AgentHooks</span>, <span class="type">RunContext</span>,
+    <span class="type">ToolCallInfo</span>, <span class="type">ToolResult</span>, <span class="type">ToolExecutionError</span>, <span class="function">function_tool</span>,
+)
+
+logger <span class="operator">=</span> logging.getLogger(<span class="string">"agent.production"</span>)
+
+<span class="comment"># ═══════════════════════════════════════════════</span>
+<span class="comment">#  PRODUCTION HOOK PIPELINE</span>
+<span class="comment"># ═══════════════════════════════════════════════</span>
+<span class="keyword">class</span> <span class="type">ProductionHooks</span>(<span class="type">AgentHooks</span>):
+    <span class="string">"""
+    Combined pipeline:
+      on_tool_start → [1] Rate Limit → [2] Approval Gate → [3] Start Timer
+      on_tool_end   → [4] PII Redact → [5] Log Event    → [6] Metrics
+    """</span>
+
+    SENSITIVE_TOOLS <span class="operator">=</span> {<span class="string">"send_email"</span>, <span class="string">"delete_record"</span>}
+    PII_PATTERNS <span class="operator">=</span> [
+        (<span class="keyword">re</span>.compile(<span class="string">r"[\w.+-]+@[\w-]+\.[\w.-]+"</span>), <span class="string">"[EMAIL]"</span>),
+        (<span class="keyword">re</span>.compile(<span class="string">r"\b\d{3}-\d{2}-\d{4}\b"</span>), <span class="string">"[SSN]"</span>),
+    ]
+
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>, <span class="param">max_calls</span>: <span class="type">int</span> <span class="operator">=</span> <span class="number">20</span>):
+        <span class="param">self</span>.counts <span class="operator">=</span> defaultdict(<span class="type">int</span>)
+        <span class="param">self</span>.max_calls <span class="operator">=</span> max_calls
+        <span class="param">self</span>.timers <span class="operator">=</span> {}
+        <span class="param">self</span>.metrics <span class="operator">=</span> {<span class="string">"total_calls"</span>: <span class="number">0</span>, <span class="string">"total_latency_ms"</span>: <span class="number">0</span>, <span class="string">"errors"</span>: <span class="number">0</span>}
+
+    <span class="comment"># ─── PRE-TOOL: Rate Limit → Approval Gate → Timer ───</span>
+    <span class="keyword">async def</span> <span class="function">on_tool_start</span>(
+        <span class="param">self</span>, <span class="param">context</span>: <span class="type">RunContext</span>, <span class="param">agent</span>: <span class="type">Agent</span>, <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># [1] RATE LIMIT — checked first (cheapest check)</span>
+        <span class="param">self</span>.counts[tool_call.name] <span class="operator">+=</span> <span class="number">1</span>
+        <span class="keyword">if</span> <span class="param">self</span>.counts[tool_call.name] <span class="operator">&gt;</span> <span class="param">self</span>.max_calls:
+            <span class="param">self</span>.metrics[<span class="string">"errors"</span>] <span class="operator">+=</span> <span class="number">1</span>
+            <span class="keyword">raise</span> <span class="type">ToolExecutionError</span>(<span class="string">f"Rate limit hit for {tool_call.name}"</span>)
+
+        <span class="comment"># [2] APPROVAL GATE — only for sensitive tools</span>
+        <span class="keyword">if</span> tool_call.name <span class="keyword">in</span> <span class="param">self</span>.SENSITIVE_TOOLS:
+            approved <span class="operator">=</span> <span class="keyword">await</span> request_approval(tool_call.name, tool_call.arguments)
+            <span class="keyword">if not</span> approved:
+                <span class="param">self</span>.metrics[<span class="string">"errors"</span>] <span class="operator">+=</span> <span class="number">1</span>
+                <span class="keyword">raise</span> <span class="type">ToolExecutionError</span>(<span class="string">"Approval denied"</span>)
+
+        <span class="comment"># [3] START TIMER</span>
+        <span class="param">self</span>.timers[tool_call.id] <span class="operator">=</span> time.monotonic()
+
+    <span class="comment"># ─── POST-TOOL: PII Redact → Log → Metrics ───</span>
+    <span class="keyword">async def</span> <span class="function">on_tool_end</span>(
+        <span class="param">self</span>, <span class="param">context</span>: <span class="type">RunContext</span>, <span class="param">agent</span>: <span class="type">Agent</span>,
+        <span class="param">tool_call</span>: <span class="type">ToolCallInfo</span>, <span class="param">tool_result</span>: <span class="type">ToolResult</span>,
+    ) -&gt; <span class="type">None</span>:
+        <span class="comment"># [4] PII REDACTION</span>
+        cleaned <span class="operator">=</span> tool_result.output
+        pii_found <span class="operator">=</span> <span class="keyword">False</span>
+        <span class="keyword">for</span> pattern, replacement <span class="keyword">in</span> <span class="param">self</span>.PII_PATTERNS:
+            <span class="keyword">if</span> pattern.search(cleaned):
+                cleaned <span class="operator">=</span> pattern.sub(replacement, cleaned)
+                pii_found <span class="operator">=</span> <span class="keyword">True</span>
+        tool_result.output <span class="operator">=</span> cleaned
+
+        <span class="comment"># [5] STRUCTURED LOG</span>
+        duration <span class="operator">=</span> (time.monotonic() <span class="operator">-</span> <span class="param">self</span>.timers.pop(tool_call.id, time.monotonic())) <span class="operator">*</span> <span class="number">1000</span>
+        logger.info(json.dumps({
+            <span class="string">"agent"</span>: agent.name, <span class="string">"tool"</span>: tool_call.name,
+            <span class="string">"duration_ms"</span>: round(duration, <span class="number">2</span>),
+            <span class="string">"pii_redacted"</span>: pii_found,
+            <span class="string">"output_chars"</span>: len(cleaned),
+        }))
+
+        <span class="comment"># [6] METRICS</span>
+        <span class="param">self</span>.metrics[<span class="string">"total_calls"</span>] <span class="operator">+=</span> <span class="number">1</span>
+        <span class="param">self</span>.metrics[<span class="string">"total_latency_ms"</span>] <span class="operator">+=</span> duration
+
+<span class="comment"># ═══════════════════════════════════════════════</span>
+<span class="comment">#  WIRE IT UP</span>
+<span class="comment"># ═══════════════════════════════════════════════</span>
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">query_customers</span>(<span class="param">filter</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Query the customer database."""</span>
+    <span class="keyword">return</span> db.query(filter)
+
+<span class="decorator">@function_tool</span>
+<span class="keyword">def</span> <span class="function">send_email</span>(<span class="param">to</span>: <span class="type">str</span>, <span class="param">body</span>: <span class="type">str</span>) -&gt; <span class="type">str</span>:
+    <span class="string">"""Send an email to a customer."""</span>
+    <span class="keyword">return</span> email_service.send(to, body)
+
+agent <span class="operator">=</span> <span class="type">Agent</span>(
+    name<span class="operator">=</span><span class="string">"customer_service"</span>,
+    instructions<span class="operator">=</span><span class="string">"Help resolve customer issues."</span>,
+    tools<span class="operator">=</span>[query_customers, send_email],
+    hooks<span class="operator">=</span><span class="type">ProductionHooks</span>(max_calls<span class="operator">=</span><span class="number">20</span>),    <span class="comment"># ◄── All guardrails in one class</span>
+)
+
+result <span class="operator">=</span> <span class="keyword">await</span> <span class="type">Runner</span>.run(agent, input<span class="operator">=</span><span class="string">"Look up customer #1234 and email them a refund confirmation."</span>)
+</pre>
+    </div>
+
+    <div class="block visual">
+      <div class="block-label">📊 Visualization — Full Hook Pipeline Execution Sequence</div>
+      <div class="diagram">
+<pre>  Agent requests: send_email(to="alice@example.com", body="Your refund...")
+  ═══════════════════════════════════════════════════════════════════════
+
+  ┌────────────────────── on_tool_start ──────────────────────┐
+  │                                                            │
+  │  [1] Rate Limit Check                                      │
+  │      counts["send_email"] = 1  ≤  20  → ✅ PASS            │
+  │                                                            │
+  │  [2] Approval Gate                                         │
+  │      "send_email" ∈ SENSITIVE_TOOLS → request approval     │
+  │      Manager approves            → ✅ PASS                  │
+  │                                                            │
+  │  [3] Start Timer                                           │
+  │      timers["call_xyz"] = 1726300000.123                   │
+  │                                                            │
+  └────────────────────────────┬───────────────────────────────┘
+                               │
+                               ▼
+                  ┌─────────────────────────┐
+                  │   send_email() RUNS     │
+                  │   returns: "Email sent  │
+                  │   to alice@example.com" │
+                  └────────────┬────────────┘
+                               │
+                               ▼
+  ┌────────────────────── on_tool_end ────────────────────────┐
+  │                                                            │
+  │  [4] PII Redaction                                         │
+  │      Input:  "Email sent to alice@example.com"             │
+  │      Output: "Email sent to [EMAIL]"                       │
+  │      pii_found = True                                      │
+  │                                                            │
+  │  [5] Structured Log                                        │
+  │      {"agent":"customer_service", "tool":"send_email",     │
+  │       "duration_ms": 142.5, "pii_redacted": true}          │
+  │                                                            │
+  │  [6] Metrics Update                                        │
+  │      total_calls: 1,  total_latency_ms: 142.5              │
+  │                                                            │
+  └────────────────────────────┬───────────────────────────────┘
+                               │
+                               ▼
+                  ┌─────────────────────────┐
+                  │  Agent sees result:     │
+                  │  "Email sent to [EMAIL]"│ ◄── PII redacted
+                  └─────────────────────────┘
+</pre>
+        <div class="diagram-caption">Fig 4.7 — Complete trace of a send_email call through the ProductionHooks pipeline</div>
+      </div>
+    </div>
+
+    <div class="block pitfall">
+      <div class="block-label">⚠️ Common Pitfalls</div>
+      <ol>
+        <li><strong>Order matters in <code class="inline">on_tool_start</code>:</strong> Rate limiting should come before approval gates. Checking rate limits is cheap; requesting human approval is expensive. If the rate limit is already exceeded, don't waste time requesting approval.</li>
+        <li><strong>Swallowing exceptions in hooks:</strong> If a hook's logging code fails (e.g., logger connection timeout), it should catch that exception internally and not propagate it. Crashing the agent because the logging service is down is worse than missing a log entry.</li>
+        <li><strong>Testing hook interactions:</strong> When multiple concerns are in one hook class, test each concern in isolation AND test the combined flow. A PII pattern might inadvertently match a tool argument in <code class="inline">on_tool_end</code> that's also used for rate counting.</li>
+      </ol>
+    </div>
+
+    <div class="block tip">
+      <div class="block-label">💡 Tips &amp; Tricks</div>
+      <ul>
+        <li><strong>Mnemonic — "RAS-PLM" (Racecar):</strong> <code class="inline">on_tool_start</code> = <strong>R</strong>ate-limit → <strong>A</strong>pproval → <strong>S</strong>tart-timer. <code class="inline">on_tool_end</code> = <strong>P</strong>II-redact → <strong>L</strong>og → <strong>M</strong>etrics.</li>
+        <li><strong>Exam shortcut:</strong> If a code snippet asks "what's wrong?", look for: (1) wrong hook phase, (2) missing <code class="inline">async</code>, (3) mutating result without re-assigning, (4) approval gate in on_tool_end.</li>
+        <li><strong>Production best practice:</strong> Wrap all hook internals in try/except with fallback logging. Never let hook failures crash the agent run.</li>
+      </ul>
+    </div>
+
+    <div class="block exam">
+      <div class="block-label">🎯 Exam Strategy — 4.7 Hands-On</div>
+      <p><strong>WHAT'S BEING TESTED:</strong> Code reading comprehension — can you trace through a hook pipeline and predict behavior?</p>
+      <p class="mt-8"><strong>SAMPLE QUESTION STEM:</strong></p>
+<pre>Given the ProductionHooks class above, what happens when an agent
+calls send_email for the 21st time?
+
+A) The email is sent, then an error is logged in on_tool_end
+B) on_tool_start raises ToolExecutionError before execution;
+   the agent receives an error and the email is NOT sent
+C) The call succeeds but the rate limit counter resets
+D) on_tool_end blocks the result from reaching the agent
+</pre>
+      <p class="mt-8"><strong>CORRECT: B</strong></p>
+      <p>
+        <strong>Rationale:</strong> Rate limiting is checked in <code class="inline">on_tool_start</code> (step [1]), which fires <em>before</em>
+        the tool executes. When the count exceeds <code class="inline">max_calls</code>, a <code class="inline">ToolExecutionError</code> is raised,
+        preventing execution entirely. The email is never sent. The agent receives an error message and must decide how to proceed.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CROSS-CUTTING: CHAPTER MIND MAP
+     ═══════════════════════════════════════════════════════════ -->
+<hr class="divider">
+<section class="section" id="mindmap">
+  <div class="section-header">
+    <span class="section-number">MAP</span>
+    <span class="section-title">🗺️ Chapter Mind Map</span>
+  </div>
+  <div class="section-body">
+    <div class="mindmap">
+      <div class="mindmap-root">Chapter 4: Agent SDK Config &amp; Lifecycle Hooks</div>
+      <div class="mindmap-connector"></div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center;">
+        <!-- LEFT CLUSTER: Tool Configuration -->
+        <div style="border:2px solid var(--color-primary); border-radius:var(--radius-lg); padding:16px; flex:1; min-width:280px;">
+          <div style="font-size:13px; font-weight:700; color:var(--color-primary); margin-bottom:12px; text-align:center;">🔧 TOOL CONFIGURATION CLUSTER</div>
+          <div class="mindmap-branches" style="flex-direction:column; align-items:stretch;">
+            <div class="mindmap-branch">
+              <div class="branch-num">4.1</div>
+              <div class="branch-title">allowed_tools</div>
+              <div class="branch-sub">Allowlist filter · Scope isolation · Least privilege</div>
+            </div>
+            <div class="dep-arrow">↓ builds on</div>
+            <div class="mindmap-branch">
+              <div class="branch-num">4.2</div>
+              <div class="branch-title">Agent-Level Config</div>
+              <div class="branch-sub">tools[] registration · @function_tool · Immutability</div>
+            </div>
+            <div class="dep-arrow">↓ enables</div>
+            <div class="mindmap-branch">
+              <div class="branch-num">4.3</div>
+              <div class="branch-title">Task Tool / Delegation</div>
+              <div class="branch-sub">Subagent spawning · Turn isolation · .as_tool()</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT CLUSTER: Lifecycle Hooks -->
+        <div style="border:2px solid var(--badge-exam); border-radius:var(--radius-lg); padding:16px; flex:1; min-width:280px;">
+          <div style="font-size:13px; font-weight:700; color:var(--badge-exam); margin-bottom:12px; text-align:center;">🔄 LIFECYCLE HOOKS CLUSTER</div>
+          <div class="mindmap-branches" style="flex-direction:column; align-items:stretch;">
+            <div class="mindmap-branch">
+              <div class="branch-num">4.4</div>
+              <div class="branch-title">PostToolUse Hooks</div>
+              <div class="branch-sub">on_tool_start · on_tool_end · RunHooks vs AgentHooks</div>
+            </div>
+            <div class="dep-arrow">↓ applied as</div>
+            <div class="mindmap-branch">
+              <div class="branch-num">4.5</div>
+              <div class="branch-title">Sensitive Operations</div>
+              <div class="branch-sub">PII redaction · Approval gates · HITL pattern</div>
+            </div>
+            <div class="dep-arrow">↓ extended with</div>
+            <div class="mindmap-branch">
+              <div class="branch-num">4.6</div>
+              <div class="branch-title">Logging &amp; Guardrails</div>
+              <div class="branch-sub">Structured logs · Rate limiting · Metrics</div>
+            </div>
+            <div class="dep-arrow">↓ synthesized in</div>
+            <div class="mindmap-branch">
+              <div class="branch-num">4.7</div>
+              <div class="branch-title">Hands-On Pipeline</div>
+              <div class="branch-sub">RAS-PLM pattern · Production hooks class</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mindmap-connector"></div>
+      <div style="font-size:12px; color:var(--color-text-muted); text-align:center; max-width:500px; margin:0 auto;">
+        <strong>Key Insight:</strong> Tool Configuration (left) determines <em>what</em> an agent can do.
+        Lifecycle Hooks (right) determine <em>how</em> those actions are monitored and governed.
+        Together they form the Agent SDK's security and observability model.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CROSS-CUTTING: QUICK-REFERENCE CHEAT SHEET
+     ═══════════════════════════════════════════════════════════ -->
+<hr class="divider">
+<section class="section" id="cheatsheet">
+  <div class="section-header">
+    <span class="section-number">REF</span>
+    <span class="section-title">📋 Quick-Reference Cheat Sheet</span>
+  </div>
+  <div class="section-body" style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Sub-Section</th>
+          <th>Key Config / Method</th>
+          <th>Primary Use Case</th>
+          <th>Watch Out For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>4.1</strong> allowedTools</td>
+          <td><code>allowed_tools=["tool_a"]</code></td>
+          <td>Restrict which tools a subagent can see</td>
+          <td>No <code>denied_tools</code> exists; no inheritance</td>
+        </tr>
+        <tr>
+          <td><strong>4.2</strong> Agent Config</td>
+          <td><code>Agent(tools=[...], allowed_tools=[...])</code></td>
+          <td>Register tools + filter at construction</td>
+          <td>Immutable after init; name mismatch = silent drop</td>
+        </tr>
+        <tr>
+          <td><strong>4.3</strong> Task Tool</td>
+          <td><code>agent.as_tool(tool_name=...)</code></td>
+          <td>Delegate to specialized subagents</td>
+          <td>No conversation sharing; no tool cascading</td>
+        </tr>
+        <tr>
+          <td><strong>4.4</strong> PostToolUse</td>
+          <td><code>on_tool_start()</code> / <code>on_tool_end()</code></td>
+          <td>Intercept tool calls before/after execution</td>
+          <td>RunHooks (global) fires before AgentHooks (local)</td>
+        </tr>
+        <tr>
+          <td><strong>4.5</strong> PII / Approvals</td>
+          <td>Regex in <code>on_tool_end</code>; gate in <code>on_tool_start</code></td>
+          <td>Sanitize output data; block dangerous tools</td>
+          <td>Redact in end, not start; approve in start, not end</td>
+        </tr>
+        <tr>
+          <td><strong>4.6</strong> Logging / Guards</td>
+          <td>Structured JSON logs; rate-limit counter</td>
+          <td>Audit trails; prevent abuse</td>
+          <td>Thread safety for concurrent runs; don't log PII</td>
+        </tr>
+        <tr>
+          <td><strong>4.7</strong> Hands-On</td>
+          <td><code>ProductionHooks</code> class combining all</td>
+          <td>Production-ready middleware pipeline</td>
+          <td>Order in start: rate→approve→timer. Wrap in try/except.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CROSS-CUTTING: FULL LIFECYCLE DIAGRAM
+     ═══════════════════════════════════════════════════════════ -->
+<hr class="divider">
+<section class="section" id="lifecycle">
+  <div class="section-header">
+    <span class="section-number">LIFE</span>
+    <span class="section-title">🔄 Full Agent SDK Lifecycle Diagram</span>
+  </div>
+  <div class="section-body">
+    <p style="font-size:14px; color:var(--color-text-secondary); margin-bottom:16px;">
+      Complete execution flow from agent initialization through tool call, hook execution, and response generation:
+    </p>
+
+    <div class="lifecycle">
+      <div class="lifecycle-node agent">① Agent Initialized</div>
+      <div class="lifecycle-label">tools[] registered, allowed_tools filter applied, hooks attached</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node agent">② Runner.run(agent, input)</div>
+      <div class="lifecycle-label">input message sent to Claude with system prompt + visible tool schemas</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node agent">③ Claude Reasons &amp; Selects Tool</div>
+      <div class="lifecycle-label">model outputs tool_use block: {name: "web_search", arguments: {query: "..."}}</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node hook">④ on_tool_start FIRES</div>
+      <div class="lifecycle-label">[Rate Limit] → [Approval Gate] → [Start Timer]</div>
+      <div class="lifecycle-label" style="color:var(--color-error);">↑ Can raise ToolExecutionError to BLOCK execution</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node tool">⑤ Tool Executes</div>
+      <div class="lifecycle-label">web_search(query="...") runs and returns raw result</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node hook">⑥ on_tool_end FIRES</div>
+      <div class="lifecycle-label">[PII Redaction] → [Structured Log] → [Metrics]</div>
+      <div class="lifecycle-label" style="color:var(--badge-tip);">↑ Can mutate tool_result.output before agent sees it</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node agent">⑦ Claude Receives (Cleaned) Result</div>
+      <div class="lifecycle-label">continues reasoning with sanitized output; may call another tool (→ loop to ③)</div>
+      <div class="lifecycle-arrow"></div>
+
+      <div class="lifecycle-node result">⑧ Final Response Returned</div>
+      <div class="lifecycle-label">Runner.run() returns the agent's final text response to the caller</div>
+    </div>
+
+    <div style="background:var(--color-bg-secondary); border-radius:var(--radius-md); padding:16px; margin-top:16px;">
+      <p style="font-size:13px; color:var(--color-text-secondary);">
+        <strong>Loop behavior:</strong> Steps ③–⑦ repeat for each tool call in the agent's reasoning chain.
+        A single user request may trigger multiple tool calls, each independently hooked.
+        The agent continues calling tools until it produces a final text response (no more tool_use blocks).
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CROSS-CUTTING: SELF-TEST QUESTIONS
+     ═══════════════════════════════════════════════════════════ -->
+<hr class="divider">
+<section class="section" id="selftest">
+  <div class="section-header">
+    <span class="section-number">TEST</span>
+    <span class="section-title">✅ Self-Test Questions</span>
+  </div>
+  <div class="section-body">
+    <p style="font-size:14px; color:var(--color-text-secondary); margin-bottom:20px;">
+      Five exam-style questions covering Chapter 4. Try to answer before expanding. Target: 4/5 correct = exam-ready.
+    </p>
+
+    <!-- Q1 -->
+    <details>
+      <summary>
+        Q1 — An agent is constructed with <code class="inline">tools=[A, B, C]</code> and <code class="inline">allowed_tools=["B", "D"]</code>.
+        Which tools can the agent invoke?
+      </summary>
+      <div class="answer">
+        <p><span class="correct-tag">CORRECT ANSWER</span> <strong>B only.</strong></p>
+        <p>
+          <strong>Explanation:</strong> <code class="inline">allowed_tools</code> acts as an intersection filter against the <code class="inline">tools</code> list.
+          Tool "B" is in both lists → visible. Tool "D" is in <code class="inline">allowed_tools</code> but not registered in <code class="inline">tools</code> → silently ignored.
+          Tools "A" and "C" are registered but not in the allowlist → hidden. No error is raised for mismatched names.
+        </p>
+        <p><strong>Tests:</strong> Section 4.1 + 4.2 (intersection semantics)</p>
+      </div>
+    </details>
+
+    <!-- Q2 -->
+    <details>
+      <summary>
+        Q2 — An orchestrator spawns a subagent via <code class="inline">.as_tool()</code>. The orchestrator has
+        <code class="inline">tools=[web_search, send_email, delegate_research]</code>. The research subagent has
+        <code class="inline">tools=[web_search]</code>. What happens if the research subagent tries to call <code class="inline">send_email</code>?
+      </summary>
+      <div class="answer">
+        <p><span class="correct-tag">CORRECT ANSWER</span> <strong>The subagent cannot call <code class="inline">send_email</code> — it's not in the subagent's tool set.</strong></p>
+        <p>
+          <strong>Explanation:</strong> Each agent's tool scope is independent. The research subagent was constructed with <code class="inline">tools=[web_search]</code> only.
+          It has no visibility into the orchestrator's tools. Tool access does not cascade through delegation chains. The subagent doesn't even know
+          <code class="inline">send_email</code> exists — it's not in its system prompt.
+        </p>
+        <p><strong>Tests:</strong> Section 4.3 (turn isolation, no inheritance)</p>
+      </div>
+    </details>
+
+    <!-- Q3 -->
+    <details>
+      <summary>
+        Q3 — A developer implements PII redaction by scanning <code class="inline">tool_call.arguments</code> in the
+        <code class="inline">on_tool_start</code> hook and replacing email addresses with placeholders. The tool is a
+        customer lookup that takes an email as input. What is the problem with this approach?
+      </summary>
+      <div class="answer">
+        <p><span class="correct-tag">CORRECT ANSWER</span> <strong>The tool needs the real email to look up the customer. Redacting the input breaks the tool's functionality.</strong></p>
+        <p>
+          <strong>Explanation:</strong> PII redaction should happen in <code class="inline">on_tool_end</code> on the tool's <em>output</em>, not on its input.
+          The tool receives <code class="inline">alice@example.com</code> as input → queries the database → returns customer data (which may contain more PII).
+          The hook should clean the <em>returned data</em> so the agent never sees raw PII, but the tool itself must work with the real input.
+        </p>
+        <p><strong>Tests:</strong> Section 4.5 (correct hook placement for redaction)</p>
+      </div>
+    </details>
+
+    <!-- Q4 -->
+    <details>
+      <summary>
+        Q4 — Both <code class="inline">RunHooks</code> and <code class="inline">AgentHooks</code> define <code class="inline">on_tool_start</code>.
+        A run has one agent with its own <code class="inline">AgentHooks</code>. Which fires first?
+      </summary>
+      <div class="answer">
+        <p><span class="correct-tag">CORRECT ANSWER</span> <strong><code class="inline">RunHooks.on_tool_start</code> fires first (global before local).</strong></p>
+        <p>
+          <strong>Explanation:</strong> <code class="inline">RunHooks</code> are global — they apply to the entire Runner execution across all agents.
+          <code class="inline">AgentHooks</code> are scoped to a specific agent instance. The execution order is:
+          RunHooks.on_tool_start → AgentHooks.on_tool_start → [tool executes] → AgentHooks.on_tool_end → RunHooks.on_tool_end.
+          This is analogous to middleware in web frameworks — global middleware wraps local middleware.
+        </p>
+        <p><strong>Tests:</strong> Section 4.4 (hook ordering)</p>
+      </div>
+    </details>
+
+    <!-- Q5 -->
+    <details>
+      <summary>
+        Q5 — A <code class="inline">ProductionHooks</code> class implements: rate limiting, approval gates, PII redaction,
+        and structured logging. In what order should these execute in <code class="inline">on_tool_start</code>?
+      </summary>
+      <div class="answer">
+        <p><span class="correct-tag">CORRECT ANSWER</span> <strong>Rate limit → Approval gate → Start timer. (PII redaction and logging are in <code class="inline">on_tool_end</code>, not <code class="inline">on_tool_start</code>.)</strong></p>
+        <p>
+          <strong>Explanation:</strong> In <code class="inline">on_tool_start</code>: check rate limits first (cheapest operation — just a counter).
+          If the rate limit is exceeded, there's no point requesting human approval (expensive, blocks execution).
+          Then check the approval gate for sensitive tools. Then start the latency timer. PII redaction happens in
+          <code class="inline">on_tool_end</code> because it operates on the tool's <em>output</em>. Structured logging also happens in
+          <code class="inline">on_tool_end</code> because you need the duration and result to log.
+        </p>
+        <p><strong>Tests:</strong> Section 4.7 (RAS-PLM pipeline ordering)</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════ -->
+<hr class="divider">
+<footer style="text-align:center; padding:24px 0; color:var(--color-text-muted); font-size:12px;">
+  <p><strong>Claude Certified Architect — Chapter 4 Study Notes</strong></p>
+  <p>Agent SDK Configuration &amp; Lifecycle Hooks</p>
+  <p style="margin-top:8px;">
+    📌 Key mnemonics: <strong>ATF</strong> (Allowlist Task Filtering) · <strong>RAS-PLM</strong> (Rate-Approve-Start / PII-Log-Metrics)
+    · <strong>"Start blocks, End logs"</strong> · <strong>"Spawn + Scope"</strong>
+  </p>
+  <p style="margin-top:8px; color:var(--color-text-muted);">Good luck on the exam! 🎯</p>
+</footer>
+
+
+
+</body></html>

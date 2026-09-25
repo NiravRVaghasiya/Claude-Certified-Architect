@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 48 — Defining Evaluation Metrics | Claude Certified Architect Study Guide</title>
+<style>
+  :root{
+    --bg:#f7f8fa;
+    --surface:#ffffff;
+    --surface-2:#f0f3f7;
+    --text:#1a2233;
+    --text-2:#475069;
+    --text-muted:#727d95;
+    --border:#dfe3ec;
+    --border-strong:#c6ccdb;
+    /* semantic color-coding */
+    --def:#2563eb;        --def-bg:#eff5ff;   --def-br:#bfd6ff;
+    --tip:#b7791f;        --tip-bg:#fff8e6;   --tip-br:#f2d68a;
+    --pit:#c0392b;        --pit-bg:#fdeeec;   --pit-br:#f3c2bb;
+    --exam:#1e874b;       --exam-bg:#eafaf1;  --exam-br:#b6e6ca;
+    --term:#6d28d9;       --term-bg:#f5f0ff;  --term-br:#dcc9f7;
+    --accent:#2563eb;
+    --mono:'SF Mono',ui-monospace,'Cascadia Code',Consolas,'Liberation Mono',monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --radius:10px; --radius-sm:6px;
+    --shadow:0 1px 2px rgba(20,30,60,.06),0 4px 14px rgba(20,30,60,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:var(--sans);line-height:1.62;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px 90px}
+  /* ---------- header ---------- */
+  header.hero{
+    background:linear-gradient(135deg,#1e293b 0%,#243b6b 100%);
+    color:#fff;padding:40px 22px 34px;margin-bottom:30px;
+  }
+  header.hero .inner{max-width:1000px;margin:0 auto}
+  header.hero .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#9db6f0;font-weight:600;margin:0 0 8px}
+  header.hero h1{margin:0 0 10px;font-size:32px;line-height:1.2;font-weight:700}
+  header.hero p{margin:0;color:#c9d6ef;max-width:70ch;font-size:15px}
+  .badges{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#e8effc;
+    padding:4px 11px;border-radius:100px;font-size:12.5px;font-weight:500}
+  /* ---------- disclaimer ---------- */
+  .disclaimer{background:var(--tip-bg);border:1px solid var(--tip-br);border-left:4px solid var(--tip);
+    border-radius:var(--radius-sm);padding:12px 16px;font-size:13.5px;color:#7a5a12;margin-bottom:26px}
+  .disclaimer strong{color:#8a6410}
+  /* ---------- TOC ---------- */
+  nav.toc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:18px 22px;margin-bottom:34px;box-shadow:var(--shadow)}
+  nav.toc h2{margin:0 0 12px;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px}
+  @media(max-width:640px){nav.toc ol{columns:1}}
+  nav.toc li{margin:5px 0;break-inside:avoid}
+  nav.toc a{color:var(--def);text-decoration:none;font-size:14.5px;font-weight:500}
+  nav.toc a:hover{text-decoration:underline}
+  nav.toc .sub{padding-left:14px;font-size:13.5px}
+  nav.toc .sub a{color:var(--text-2);font-weight:400}
+  /* ---------- sections ---------- */
+  section.chapter{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:28px 30px;margin-bottom:26px;box-shadow:var(--shadow);scroll-margin-top:16px}
+  @media(max-width:640px){section.chapter{padding:22px 18px}}
+  .sec-num{display:inline-block;background:var(--def);color:#fff;font-family:var(--mono);
+    font-size:13px;font-weight:700;padding:3px 10px;border-radius:6px;letter-spacing:.02em}
+  section.chapter>h2{font-size:24px;margin:12px 0 4px;line-height:1.25}
+  section.chapter>.tagline{color:var(--text-muted);font-size:14px;margin:0 0 20px;font-style:italic}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--text);border-bottom:2px solid var(--surface-2);padding-bottom:5px}
+  h4{font-size:15.5px;margin:16px 0 6px}
+  p{margin:9px 0}
+  ul,ol{margin:9px 0;padding-left:24px}
+  li{margin:5px 0}
+  code{font-family:var(--mono);background:var(--surface-2);padding:1.5px 6px;border-radius:4px;font-size:13.5px;color:#b02a5b}
+  .term{font-weight:700;color:var(--term)}
+  /* ---------- callout boxes ---------- */
+  .box{border-radius:var(--radius-sm);padding:13px 16px 13px 18px;margin:16px 0;font-size:14.5px;border:1px solid;border-left-width:5px}
+  .box .box-h{font-weight:700;display:block;margin-bottom:4px;font-size:14px}
+  .box.def{background:var(--def-bg);border-color:var(--def-br);border-left-color:var(--def)}
+  .box.def .box-h{color:var(--def)}
+  .box.tip{background:var(--tip-bg);border-color:var(--tip-br);border-left-color:var(--tip)}
+  .box.tip .box-h{color:var(--tip)}
+  .box.pit{background:var(--pit-bg);border-color:var(--pit-br);border-left-color:var(--pit)}
+  .box.pit .box-h{color:var(--pit)}
+  .box.exam{background:var(--exam-bg);border-color:var(--exam-br);border-left-color:var(--exam)}
+  .box.exam .box-h{color:var(--exam)}
+  .box.example{background:var(--surface-2);border-color:var(--border-strong);border-left-color:var(--text-2)}
+  .box.example .box-h{color:var(--text-2)}
+  .box ul{margin:6px 0}
+  /* ---------- metric cards ---------- */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+  .metric-card{background:var(--def-bg);border:1px solid var(--def-br);border-radius:var(--radius-sm);padding:14px 16px}
+  .metric-card h4{margin:0 0 8px;color:var(--def);font-size:16px;display:flex;align-items:center;gap:7px}
+  .metric-card p{margin:5px 0;font-size:13.8px}
+  .metric-card .ico{font-size:18px}
+  /* ---------- tables ---------- */
+  .tbl-wrap{overflow-x:auto;margin:16px 0}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+  caption{caption-side:top;text-align:left;font-weight:600;font-size:13px;color:var(--text-muted);margin-bottom:8px}
+  th{background:var(--surface-2);text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-strong);font-weight:600;font-size:13px;vertical-align:top}
+  td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  tbody tr:hover td{background:var(--def-bg)}
+  td.mono,th.mono{font-family:var(--mono);font-size:13px}
+  .pill{display:inline-block;padding:2px 9px;border-radius:100px;font-size:12px;font-weight:600}
+  .pill.up{background:var(--exam-bg);color:var(--exam)}
+  .pill.down{background:var(--pit-bg);color:var(--pit)}
+  .pill.mid{background:var(--tip-bg);color:var(--tip)}
+  /* ---------- formula ---------- */
+  .formula{background:#0f1729;color:#e6edff;font-family:var(--mono);font-size:15px;
+    padding:14px 18px;border-radius:var(--radius-sm);margin:12px 0;overflow-x:auto;line-height:1.8}
+  .formula .cmt{color:#7f8db3}
+  .frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 4px}
+  .frac .num{border-bottom:1.5px solid currentColor;padding:0 6px}
+  .frac .den{padding:0 6px}
+  /* ---------- pareto svg ---------- */
+  .plot-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin:16px 0;position:relative}
+  .plot-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;margin-top:6px;color:var(--text-2)}
+  .plot-legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+  #pareto circle{cursor:pointer;transition:r .12s ease,stroke-width .12s ease}
+  #pareto circle:hover{stroke:#111;stroke-width:2.5}
+  #pareto-tip{position:absolute;pointer-events:none;background:#0f1729;color:#fff;font-size:12.5px;
+    padding:7px 10px;border-radius:6px;opacity:0;transition:opacity .1s;white-space:nowrap;z-index:5;font-family:var(--mono);box-shadow:0 4px 12px rgba(0,0,0,.25)}
+  /* ---------- steps ---------- */
+  .steps{counter-reset:step;list-style:none;padding:0;margin:18px 0}
+  .steps>li{counter-increment:step;position:relative;padding:14px 16px 14px 56px;background:var(--surface-2);
+    border:1px solid var(--border);border-radius:var(--radius-sm);margin:10px 0}
+  .steps>li::before{content:counter(step);position:absolute;left:14px;top:14px;width:30px;height:30px;
+    background:var(--def);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--mono);font-size:14px}
+  .steps>li h4{margin:0 0 4px}
+  /* ---------- practice Q ---------- */
+  details.qa{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--exam);
+    border-radius:var(--radius-sm);margin:12px 0;padding:0}
+  details.qa summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:15px;list-style:none;display:flex;gap:10px;align-items:flex-start}
+  details.qa summary::-webkit-details-marker{display:none}
+  details.qa summary .qn{background:var(--exam);color:#fff;font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:5px;flex-shrink:0}
+  details.qa summary::after{content:'▸ Reveal answer';margin-left:auto;color:var(--exam);font-size:12.5px;font-weight:600;white-space:nowrap}
+  details.qa[open] summary::after{content:'▾ Hide answer'}
+  details.qa .ans{padding:2px 18px 16px 18px;border-top:1px dashed var(--border);margin-top:2px}
+  details.qa .ans .correct{color:var(--exam);font-weight:700}
+  /* ---------- glossary ---------- */
+  .glossary dl{margin:0}
+  .glossary dt{font-weight:700;color:var(--term);margin-top:12px;font-size:15px}
+  .glossary dd{margin:2px 0 0;padding-left:0;color:var(--text-2);font-size:14.3px}
+  .glossary .letter{font-family:var(--mono);color:var(--text-muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-top:20px;border-bottom:1px solid var(--border);padding-bottom:3px}
+  /* ---------- misc ---------- */
+  .back-top{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--def);text-decoration:none}
+  .back-top:hover{text-decoration:underline}
+  .xref{font-size:13px;color:var(--text-muted);font-style:italic;margin:8px 0}
+  .xref a{color:var(--def)}
+  hr.soft{border:0;border-top:1px solid var(--border);margin:22px 0}
+  @media print{
+    body{background:#fff;font-size:12px}
+    section.chapter,nav.toc{box-shadow:none;break-inside:avoid}
+    header.hero{background:#1e293b !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    details.qa[open] .ans,details.qa .ans{display:block !important}
+    details.qa{break-inside:avoid}
+    .box,.metric-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<a id="top"></a>
+<header class="hero">
+  <div class="inner">
+    <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+    <h1>Chapter 48 — Defining Evaluation Metrics</h1>
+    <p>An exam-ready study guide covering core &amp; task-specific metrics, multi-objective (Pareto) optimization, thresholds &amp; baselines, and a hands-on framework for evaluating AI agent systems.</p>
+    <div class="badges">
+      <span class="badge">⏱ ~35 min read</span>
+      <span class="badge">5 subsections</span>
+      <span class="badge">8 practice questions</span>
+      <span class="badge">Quick-reference + glossary</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="disclaimer">
+    <strong>📌 How to read this guide.</strong> The mathematical definitions here (precision, recall, F1, pass@k, percentiles, Pareto dominance) are universal and verifiable. The chapter/section numbering follows the study outline provided; where a claim reflects a common exam <em>convention</em> rather than a hard fact, it is hedged with words like "typically" or "commonly." Treat exam-strategy callouts as pattern guidance, not a leaked answer key.
+  </div>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">48.1 — Core Metrics</a></li>
+      <li><a href="#s2">48.2 — Task-Specific Metrics</a></li>
+      <li><a href="#s3">48.3 — The Pareto Frontier</a></li>
+      <li><a href="#s4">48.4 — Thresholds &amp; Baselines</a></li>
+      <li><a href="#s5">48.5 — Hands-On Framework</a></li>
+      <li class="sub"><a href="#summary">Chapter Summary</a></li>
+      <li class="sub"><a href="#quickref">Quick Reference Table</a></li>
+      <li class="sub"><a href="#practice">Practice Question Bank</a></li>
+      <li class="sub"><a href="#glossary">Glossary</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 48.1 ============ -->
+  <section class="chapter" id="s1">
+    <span class="sec-num">48.1</span>
+    <h2>Core Metrics</h2>
+    <p class="tagline">The four universal axes every AI system is judged on — regardless of task.</p>
+
+    <h3>Concept Definition</h3>
+    <p>Every production AI system is evaluated along four <strong>orthogonal dimensions</strong>. No single number tells you if a system is "good" — you always measure a <em>vector</em> of these axes and reason about their trade-offs (which is exactly what <a href="#s3">48.3</a> formalizes as the Pareto frontier).</p>
+
+    <div class="card-grid">
+      <div class="metric-card">
+        <h4><span class="ico">🎯</span>Accuracy</h4>
+        <p><strong>Definition:</strong> How often, or how closely, the output matches the desired/correct result.</p>
+        <p><strong>Measured in:</strong> % correct, F1, exact-match rate, or a graded score (e.g. LLM-as-judge 1–5).</p>
+        <p><strong>Trade-off:</strong> ↑ accuracy usually costs latency &amp; money (bigger models, more sampling).</p>
+      </div>
+      <div class="metric-card">
+        <h4><span class="ico">⚡</span>Latency</h4>
+        <p><strong>Definition:</strong> Time between request submission and response completion.</p>
+        <p><strong>Measured in:</strong> milliseconds/seconds at <code>P50</code>, <code>P95</code>, <code>P99</code> percentiles; also TTFT (time-to-first-token) &amp; tokens/sec for streaming.</p>
+        <p><strong>Trade-off:</strong> often inversely related to accuracy.</p>
+      </div>
+      <div class="metric-card">
+        <h4><span class="ico">💰</span>Cost</h4>
+        <p><strong>Definition:</strong> Resource expenditure to produce a result.</p>
+        <p><strong>Measured in:</strong> $ per request, $ per 1M input/output tokens, or $ per resolved task.</p>
+        <p><strong>Trade-off:</strong> caching, smaller models, and prompt compression cut cost but may reduce accuracy.</p>
+      </div>
+      <div class="metric-card">
+        <h4><span class="ico">🛡️</span>Safety &amp; Security</h4>
+        <p><strong>Definition:</strong> Resistance to harmful outputs (safety) and to adversarial manipulation such as prompt injection / data exfiltration (security).</p>
+        <p><strong>Measured in:</strong> harmful-output rate, refusal accuracy, jailbreak/injection success rate (lower = better).</p>
+        <p><strong>Trade-off:</strong> stricter guardrails can raise false-refusal rate, hurting usefulness.</p>
+      </div>
+    </div>
+
+    <h3>Key Terminology</h3>
+    <ul>
+      <li><span class="term">Percentile latency (Pn)</span> — the value below which <em>n%</em> of requests complete. <code>P95 = 800ms</code> means 95% of requests finish in ≤800ms. <strong>Tail latency</strong> (P95/P99) matters more than the mean because a handful of slow requests dominate user-perceived performance.</li>
+      <li><span class="term">Throughput</span> — requests (or tokens) served per unit time; a capacity/cost concept, distinct from per-request latency.</li>
+      <li><span class="term">False-refusal rate</span> — how often the system wrongly refuses a benign request; the "cost" side of being safe.</li>
+      <li><span class="term">Golden set</span> — a curated, labeled dataset of inputs + expected outputs used to measure accuracy repeatably.</li>
+    </ul>
+
+    <h3>Visual Aid — Trade-off Matrix</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption>How pushing one core metric typically affects the others (▲ = tends to improve, ▼ = tends to worsen, — = neutral)</caption>
+        <thead>
+          <tr><th>If you optimize for →</th><th>Accuracy</th><th>Latency</th><th>Cost</th><th>Safety</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Max Accuracy</strong> (bigger model, more sampling)</td><td>▲</td><td class="mono"><span class="pill down">▼ slower</span></td><td class="mono"><span class="pill down">▼ pricier</span></td><td>—</td></tr>
+          <tr><td><strong>Min Latency</strong> (smaller/distilled model)</td><td class="mono"><span class="pill down">▼ risk</span></td><td>▲</td><td class="mono"><span class="pill up">▲ cheaper</span></td><td>—</td></tr>
+          <tr><td><strong>Min Cost</strong> (caching, routing, compression)</td><td class="mono"><span class="pill mid">~ maybe ▼</span></td><td class="mono"><span class="pill up">▲ faster</span></td><td>▲</td><td>—</td></tr>
+          <tr><td><strong>Max Safety</strong> (strict guardrails)</td><td class="mono"><span class="pill down">▼ false refusals</span></td><td class="mono"><span class="pill mid">~ +checks</span></td><td class="mono"><span class="pill down">▼ +checks</span></td><td>▲</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box example"><span class="box-h">🌍 Real-World Example</span>
+    A customer-support agent is evaluated at <code>P95 latency = 3.2s</code>, <code>accuracy (resolution correctness) = 88%</code>, <code>cost = $0.011/conversation</code>, and <code>injection-success = 0.4%</code>. Swapping to a larger model lifts accuracy to 91% but pushes P95 to 6.1s and cost to $0.028 — a classic accuracy-vs-latency-vs-cost trade the team must weigh against the SLA.</div>
+
+    <div class="box pit"><span class="box-h">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Reporting <strong>mean latency</strong> instead of percentiles — averages hide the painful tail.</li>
+        <li>Treating accuracy as a single scalar when the task needs precision <em>and</em> recall separately (see 48.2).</li>
+        <li>Ignoring safety/security entirely because it is "hard to measure" — the exam treats it as a first-class core metric.</li>
+        <li>Confusing <strong>throughput</strong> (system capacity) with <strong>latency</strong> (per-request speed).</li>
+      </ul>
+    </div>
+
+    <div class="box tip"><span class="box-h">💡 Tips &amp; Tricks</span>
+      Memorize the four core metrics with <strong>"A-L-C-S" → "A Lovely Cup of… Safety"</strong>: <b>A</b>ccuracy, <b>L</b>atency, <b>C</b>ost, <b>S</b>afety. For percentiles, remember <em>"higher P = worse-case user"</em>: P99 describes your unluckiest 1%.</div>
+
+    <div class="box exam"><span class="box-h">📝 Exam Strategy</span>
+      Expect a scenario that names an SLA (e.g. "P95 must stay under 2s") and asks which change is <em>acceptable</em>. The trap answer improves accuracy while silently violating the latency SLA. <strong>Rule:</strong> a change is only valid if it keeps every <em>hard-constrained</em> metric within its threshold. Also watch for questions asking you to pick the <em>right unit</em> — cost is per-token or per-task, latency is a percentile in ms, safety is a rate.
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 48.2 ============ -->
+  <section class="chapter" id="s2">
+    <span class="sec-num">48.2</span>
+    <h2>Task-Specific Metrics</h2>
+    <p class="tagline">The core axes get instantiated differently per task type. These are the ones the exam loves to make you compute.</p>
+
+    <h3>Concept Definition</h3>
+    <p>"Accuracy" is too blunt for real tasks. An extraction task cares about precision vs. recall; a support agent cares about <strong>resolution rate</strong>; a coding agent cares about functional correctness (<strong>pass@k</strong>) and code hygiene. Pick the metric that matches the <em>failure mode you care about</em>.</p>
+
+    <h3>Extraction Accuracy — Precision, Recall &amp; F1</h3>
+    <p>For extraction / classification / retrieval, you count outcomes in a <span class="term">confusion matrix</span>:</p>
+    <ul>
+      <li><span class="term">TP</span> (true positive) — correctly extracted a correct item.</li>
+      <li><span class="term">FP</span> (false positive) — extracted something wrong / that shouldn't be there.</li>
+      <li><span class="term">FN</span> (false negative) — missed an item that should have been extracted.</li>
+    </ul>
+    <div class="formula">
+Precision = <span class="frac"><span class="num">TP</span><span class="den">TP + FP</span></span> &nbsp;<span class="cmt"># of what I extracted, how much was right?</span>
+<br>
+Recall &nbsp;&nbsp;= <span class="frac"><span class="num">TP</span><span class="den">TP + FN</span></span> &nbsp;<span class="cmt"># of what I should have found, how much did I catch?</span>
+<br>
+F1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2 · <span class="frac"><span class="num">Precision · Recall</span><span class="den">Precision + Recall</span></span> &nbsp;<span class="cmt"># harmonic mean — punishes imbalance</span>
+    </div>
+    <div class="box def"><span class="box-h">🔷 Key distinction</span> <strong>Precision</strong> = "don't cry wolf" (avoid FPs). <strong>Recall</strong> = "don't miss anything" (avoid FNs). F1 is the harmonic mean — it stays low if <em>either</em> is low, so it rewards balance.</div>
+
+    <h3>Resolution Rate</h3>
+    <p>For agents/assistants whose job is to <em>finish a task</em> (resolve a ticket, complete a workflow):</p>
+    <div class="formula">
+Resolution Rate = <span class="frac"><span class="num">tasks fully resolved (no human handoff)</span><span class="den">total tasks attempted</span></span> × 100%
+    </div>
+    <p class="xref">Note: definitions vary — some teams count "resolved" only if the outcome is <em>also verified correct</em>, blending resolution with accuracy. Commonly reported alongside <strong>deflection rate</strong> (share of contacts handled without escalation) and <strong>containment rate</strong>.</p>
+
+    <h3>Code Quality — pass@k &amp; Static Metrics</h3>
+    <p><span class="term">pass@k</span> asks: if the model generates <em>k</em> candidate solutions for a problem, what is the probability that <strong>at least one</strong> passes all unit tests? The standard unbiased estimator (Chen et al., 2021, "Codex") generates <em>n ≥ k</em> samples, counts <em>c</em> that pass, and computes:</p>
+    <div class="formula">
+pass@k = E<sub>problems</sub> &nbsp;[ &nbsp;1 − <span class="frac"><span class="num">C(n − c, k)</span><span class="den">C(n, k)</span></span> &nbsp;]
+&nbsp;&nbsp;<span class="cmt"># C(a,b) = "a choose b"</span>
+<br><span class="cmt"># n = samples generated, c = # correct, k = budget. pass@1 = c/n.</span>
+    </div>
+    <p>Complementary <strong>static code metrics</strong> (no execution needed):</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Common code-quality signals for evaluating a coding agent</caption>
+        <thead><tr><th>Metric</th><th>What it measures</th><th>Direction</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">pass@k</td><td>Functional correctness against unit tests</td><td><span class="pill up">higher ▲</span></td></tr>
+          <tr><td class="mono">Lint / style score</td><td>Adherence to style rules (e.g. flake8, ESLint warnings)</td><td><span class="pill down">fewer warnings ▼</span></td></tr>
+          <tr><td class="mono">Cyclomatic complexity</td><td>Number of independent paths — proxy for maintainability</td><td><span class="pill down">lower ▼</span></td></tr>
+          <tr><td class="mono">Test/branch coverage</td><td>% of code exercised by tests</td><td><span class="pill up">higher ▲</span></td></tr>
+          <tr><td class="mono">Compile/exec rate</td><td>% of generations that even run</td><td><span class="pill up">higher ▲</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box example"><span class="box-h">🌍 Real-World Example</span>
+    A contract-parsing tool extracts 100 clauses. It returns 90 items: 80 correct (TP), 10 wrong (FP), and misses 20 real clauses (FN). → Precision = 80/90 = <strong>0.89</strong>, Recall = 80/100 = <strong>0.80</strong>, F1 = 2(0.89·0.80)/(0.89+0.80) = <strong>0.84</strong>. High precision, weaker recall → the tool is cautious but leaves clauses on the table.</div>
+
+    <div class="box pit"><span class="box-h">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Swapping the precision/recall denominators — <b>Precision divides by what you predicted, Recall by what actually exists.</b></li>
+        <li>Optimizing accuracy on an <strong>imbalanced</strong> dataset — 99% "accuracy" is trivial if 99% of items are the negative class. Use precision/recall/F1 instead.</li>
+        <li>Assuming <code>pass@10</code> means "run once and hope" — it explicitly allows <em>k</em> attempts; comparing a pass@1 system to a pass@10 system is apples-to-oranges.</li>
+        <li>Reporting lint score as the <em>primary</em> quality signal — clean code that fails tests is still wrong.</li>
+      </ul>
+    </div>
+
+    <div class="box tip"><span class="box-h">💡 Tips &amp; Tricks</span>
+      <strong>"PRecision = PRedicted"</strong> — both start with <b>PR</b>, so precision's denominator is the <em>predicted</em> positives (TP+FP). Recall is then "the rest" (TP+FN, the <em>real</em> positives). F1 is the <em>harmonic</em> mean → always ≤ the arithmetic mean, so it can never be fooled by one high number.</div>
+
+    <div class="box exam"><span class="box-h">📝 Exam Strategy</span>
+      Precision/recall computation questions are almost guaranteed. Draw the 2×2 confusion matrix immediately and label TP/FP/FN/TN — this prevents denominator mix-ups. If a scenario says "<em>missing a fraud case is catastrophic</em>," they want you to prioritize <strong>recall</strong>; if "<em>false alarms are expensive</em>," prioritize <strong>precision</strong>. For pass@k, remember it rewards <em>sampling budget</em>, so it will look higher than pass@1 for the same model.
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 48.3 ============ -->
+  <section class="chapter" id="s3">
+    <span class="sec-num">48.3</span>
+    <h2>The Pareto Frontier</h2>
+    <p class="tagline">When metrics conflict, "best" is a set — not a point. This is multi-objective optimization made visual.</p>
+
+    <h3>Concept Definition</h3>
+    <p>You rarely optimize one metric. You want <em>high accuracy</em> <strong>and</strong> <em>low cost</em> <strong>and</strong> <em>low latency</em> — objectives that fight each other (see 48.1's trade-off matrix). <span class="term">Multi-objective optimization</span> accepts there is no single winner and instead finds the set of "best possible compromises."</p>
+
+    <div class="box def"><span class="box-h">🔷 Pareto Dominance (the exam's favorite definition)</span>
+      Solution <strong>A dominates</strong> solution <strong>B</strong> if and only if A is <em>equal-or-better on <b>every</b> objective</em> <strong>and</strong> <em>strictly better on <b>at least one</b></em>. If neither dominates the other, they are <strong>non-dominated / incomparable</strong> — you can't say one is better without a preference weighting.</div>
+
+    <ul>
+      <li><span class="term">Pareto-optimal (non-dominated) solution</span> — one that <em>no other</em> solution dominates. You cannot improve one objective without sacrificing another.</li>
+      <li><span class="term">Pareto frontier (front)</span> — the set of all Pareto-optimal solutions; the curve/edge of achievable trade-offs.</li>
+      <li><span class="term">Dominated solution</span> — a solution that is beaten on all axes by some other solution; it is strictly wasteful and should be discarded.</li>
+    </ul>
+
+    <h3>Visual Aid — Pareto Frontier Scatter Plot</h3>
+    <p>Below: candidate models plotted by <strong>Cost</strong> (x, lower is better) vs. <strong>Accuracy</strong> (y, higher is better). <span style="color:var(--exam);font-weight:700">Green</span> points are Pareto-optimal (connected by the frontier); <span style="color:var(--text-muted);font-weight:700">gray</span> points are dominated. Hover any point for exact values.</p>
+
+    <div class="plot-card">
+      <div id="pareto-tip"></div>
+      <svg id="pareto" viewBox="0 0 640 420" width="100%" role="img" aria-label="Pareto frontier scatter plot of cost versus accuracy. Green points are non-dominated and form the frontier; gray points are dominated.">
+        <!-- axes -->
+        <line x1="60" y1="360" x2="600" y2="360" stroke="#c6ccdb" stroke-width="1.5"></line>
+        <line x1="60" y1="360" x2="60" y2="40" stroke="#c6ccdb" stroke-width="1.5"></line>
+        <!-- gridlines Y (accuracy 75..95) -->
+        <g stroke="#eef1f6" stroke-width="1">
+          <line x1="60" y1="312" x2="600" y2="312"></line>
+          <line x1="60" y1="264" x2="600" y2="264"></line>
+          <line x1="60" y1="216" x2="600" y2="216"></line>
+          <line x1="60" y1="168" x2="600" y2="168"></line>
+          <line x1="60" y1="120" x2="600" y2="120"></line>
+          <line x1="60" y1="72" x2="600" y2="72"></line>
+        </g>
+        <!-- Y tick labels -->
+        <g font-family="var(--mono)" font-size="11" fill="#727d95" text-anchor="end">
+          <text x="52" y="364">75</text>
+          <text x="52" y="316">78</text>
+          <text x="52" y="268">81</text>
+          <text x="52" y="220">84</text>
+          <text x="52" y="172">87</text>
+          <text x="52" y="124">90</text>
+          <text x="52" y="76">93</text>
+        </g>
+        <!-- X tick labels (cost 0..9) -->
+        <g font-family="var(--mono)" font-size="11" fill="#727d95" text-anchor="middle">
+          <text x="60" y="378">$0</text>
+          <text x="180" y="378">$2</text>
+          <text x="300" y="378">$4</text>
+          <text x="420" y="378">$6</text>
+          <text x="540" y="378">$8</text>
+        </g>
+        <!-- axis titles -->
+        <text x="330" y="404" text-anchor="middle" font-size="13" fill="#475069" font-weight="600">Cost per 1K requests →  (lower is better)</text>
+        <text x="18" y="200" text-anchor="middle" font-size="13" fill="#475069" font-weight="600" transform="rotate(-90 18 200)">Accuracy %  (higher is better) →</text>
+        <!-- frontier line: A(120,312) B(180,200) C(240,152) D(360,104) E(540,72) -->
+        <polyline points="120,312 180,200 240,152 360,104 540,72" fill="none" stroke="#1e874b" stroke-width="2.5" stroke-dasharray="2 0" opacity="0.55"></polyline>
+        <!-- dominated points (gray) -->
+        <circle cx="240" cy="248" r="8" fill="#a7afc2" data-name="Model F" data-cost="$3.00" data-acc="82%" data-status="Dominated by C"></circle>
+        <circle cx="420" cy="168" r="8" fill="#a7afc2" data-name="Model G" data-cost="$6.00" data-acc="87%" data-status="Dominated by D"></circle>
+        <circle cx="300" cy="280" r="8" fill="#a7afc2" data-name="Model H" data-cost="$4.00" data-acc="80%" data-status="Dominated by B, C"></circle>
+        <!-- pareto-optimal points (green) -->
+        <circle cx="120" cy="312" r="9" fill="#1e874b" data-name="Model A" data-cost="$1.00" data-acc="78%" data-status="Pareto-optimal (cheapest)"></circle>
+        <circle cx="180" cy="200" r="9" fill="#1e874b" data-name="Model B" data-cost="$2.00" data-acc="85%" data-status="Pareto-optimal"></circle>
+        <circle cx="240" cy="152" r="9" fill="#1e874b" data-name="Model C" data-cost="$3.00" data-acc="88%" data-status="Pareto-optimal"></circle>
+        <circle cx="360" cy="104" r="9" fill="#1e874b" data-name="Model D" data-cost="$5.00" data-acc="91%" data-status="Pareto-optimal"></circle>
+        <circle cx="540" cy="72" r="9" fill="#1e874b" data-name="Model E" data-cost="$8.00" data-acc="93%" data-status="Pareto-optimal (most accurate)"></circle>
+        <!-- labels -->
+        <g font-family="var(--mono)" font-size="11" fill="#1a2233" font-weight="700">
+          <text x="132" y="316">A</text><text x="192" y="204">B</text><text x="252" y="156">C</text>
+          <text x="372" y="108">D</text><text x="552" y="76">E</text>
+        </g>
+        <g font-family="var(--mono)" font-size="10.5" fill="#727d95">
+          <text x="252" y="252">F</text><text x="432" y="172">G</text><text x="312" y="284">H</text>
+        </g>
+      </svg>
+      <div class="plot-legend">
+        <span><span class="dot" style="background:#1e874b"></span> Pareto-optimal (non-dominated)</span>
+        <span><span class="dot" style="background:#a7afc2"></span> Dominated (wasteful)</span>
+        <span>— frontier</span>
+      </div>
+    </div>
+
+    <div class="box example"><span class="box-h">🌍 Real-World Example</span>
+    <strong>Model F ($3, 82%)</strong> is dominated by <strong>Model C ($3, 88%)</strong>: same cost, higher accuracy → F should never be chosen. But <strong>A, B, C, D, E</strong> are mutually non-dominated: moving from C→D buys +3% accuracy for +$2 cost. Which frontier point you pick depends on your <em>preference weighting</em> (or hard constraints like "budget ≤ $3" → pick C).</div>
+
+    <div class="box pit"><span class="box-h">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Calling A "better than E" — they're <strong>incomparable</strong>; A wins on cost, E wins on accuracy.</li>
+        <li>Forgetting the <strong>"strictly better on at least one"</strong> clause — two identical solutions do <em>not</em> dominate each other.</li>
+        <li>Mixing objective <em>directions</em>: when one axis is "lower is better" (cost, latency), flip it mentally before checking dominance.</li>
+        <li>Choosing a dominated point because it "looks balanced" — a dominated point is <em>never</em> rational to pick.</li>
+      </ul>
+    </div>
+
+    <div class="box tip"><span class="box-h">💡 Tips &amp; Tricks</span>
+      Dominance test shortcut: <strong>"≥ on ALL, &gt; on ONE."</strong> If a candidate fails the "≥ on all" part on even one axis, it does <em>not</em> dominate — stop there. To spot the frontier on a plot where you want high-Y/low-X: walk left-to-right; a point is on the frontier only if <em>nothing</em> sits up-and-to-its-left.</div>
+
+    <div class="box exam"><span class="box-h">📝 Exam Strategy</span>
+      Pareto questions typically show two solutions and ask "does A dominate B?" — apply <strong>"≥ on ALL objectives AND &gt; on at least ONE."</strong> A frequent trap presents A better on 2 metrics but <em>worse on the 3rd</em>: that is <b>not</b> domination (answer: non-dominated / incomparable). Another trap asks for "the single best model" when the correct answer is "it depends on the objective weighting / constraints." Watch axis directions — cost and latency are minimized.
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 48.4 ============ -->
+  <section class="chapter" id="s4">
+    <span class="sec-num">48.4</span>
+    <h2>Thresholds &amp; Baselines</h2>
+    <p class="tagline">A metric value is meaningless without a reference point and a bar to clear.</p>
+
+    <h3>Concept Definition</h3>
+    <p>Three easily-confused reference concepts turn a raw number into a decision:</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Baseline vs. Threshold vs. Target — know the difference cold</caption>
+        <thead><tr><th>Term</th><th>Question it answers</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td><span class="term">Baseline</span></td><td>"What are we comparing against?"</td><td>A reference point — the current system, a naive/heuristic method, human performance, or a previous model version. Establishes <em>lift</em>.</td></tr>
+          <tr><td><span class="term">Threshold</span></td><td>"What's the minimum acceptable?"</td><td>A <strong>pass/fail gate</strong>. Below it, the system is not shippable (e.g. "accuracy ≥ 90% or block release").</td></tr>
+          <tr><td><span class="term">Target</span></td><td>"What are we aiming for?"</td><td>An <em>aspirational goal</em>, usually above the threshold. Guides roadmap, not a hard gate.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box def"><span class="box-h">🔷 Mental model</span> <strong>Baseline = floor you must beat · Threshold = bar you must clear to ship · Target = summit you're climbing toward.</strong> Ordering is usually: baseline ≤ threshold ≤ target.</div>
+
+    <h3>Statistical Methods for Setting Thresholds</h3>
+    <ul>
+      <li><span class="term">SLA-driven</span> — the threshold comes from a business/contractual commitment (e.g. "P95 latency ≤ 2000ms", "99.9% uptime"). Non-negotiable hard constraint.</li>
+      <li><span class="term">Percentile-based</span> — set the threshold from the distribution of observed values, e.g. "alert if latency exceeds the historical <code>P95</code>." Adapts to real behavior rather than a guessed number.</li>
+      <li><span class="term">Baseline-relative</span> — require a minimum <em>lift</em> over the baseline (e.g. "must beat the heuristic by ≥5 F1 points"), often paired with a <strong>statistical significance</strong> test so the gain isn't noise.</li>
+      <li><span class="term">Cost/risk-optimal</span> — choose the classification threshold that maximizes expected value given the cost of FPs vs. FNs (e.g. via an ROC/precision-recall curve operating point).</li>
+    </ul>
+
+    <div class="box example"><span class="box-h">🌍 Real-World Example</span>
+    A fraud classifier's <strong>baseline</strong> is last quarter's model at 0.71 F1. Product sets a <strong>threshold</strong> of 0.75 F1 (won't ship below it) and a <strong>target</strong> of 0.85. The <em>decision</em> threshold on the probability score is tuned to P(fraud) ≥ 0.30 (not 0.50) because a missed fraud (FN) costs 10× a false alarm (FP) — a cost-optimal, recall-leaning choice.</div>
+
+    <div class="box pit"><span class="box-h">⚠️ Common Pitfalls</span>
+      <ul>
+        <li>Conflating the <strong>metric threshold</strong> (ship gate on F1) with the <strong>decision threshold</strong> (the probability cutoff inside a classifier) — different levers.</li>
+        <li>Setting a threshold with no baseline → you can't tell if the model adds any value.</li>
+        <li>Picking a round number (0.50 cutoff, "90% target") with no statistical or business justification.</li>
+        <li>Declaring victory on a small sample — a 2-point gain over baseline may be within noise; test for significance.</li>
+      </ul>
+    </div>
+
+    <div class="box tip"><span class="box-h">💡 Tips &amp; Tricks</span>
+      <strong>"B-T-T ladder": Baseline → Threshold → Target</strong>, low to high. If a question gives you a number, ask <em>"is this describing what we beat (baseline), what we must clear (threshold), or what we hope for (target)?"</em> The word <em>"minimum acceptable"</em> → threshold; <em>"current/previous system"</em> → baseline; <em>"goal/aspiration"</em> → target.</div>
+
+    <div class="box exam"><span class="box-h">📝 Exam Strategy</span>
+      Expect a matching/definition question separating baseline, threshold, and target — the distractor swaps threshold and target. Anchor on the phrase <strong>"minimum acceptable = threshold (the ship gate)."</strong> For method questions, map keywords: "contractual/SLA" → SLA-driven; "based on historical distribution" → percentile-based; "must beat current system" → baseline-relative. If asked how to pick a classifier cutoff when FN and FP costs differ, the answer is a <em>cost-optimal operating point</em>, not 0.5.
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ 48.5 ============ -->
+  <section class="chapter" id="s5">
+    <span class="sec-num">48.5</span>
+    <h2>Hands-On Framework</h2>
+    <p class="tagline">Putting 48.1–48.4 together: a repeatable recipe for building a metrics framework, worked end-to-end.</p>
+
+    <h3>Concept Definition</h3>
+    <p>A <span class="term">metrics framework</span> is the full evaluation harness for a system: which metrics you track, how you measure them, on what data, against which thresholds, and how you decide to ship. Below is a worked example for a realistic use case.</p>
+
+    <div class="box def"><span class="box-h">🔷 Use case</span> <strong>"ClauseBot"</strong> — an AI agent that reads uploaded vendor contracts, extracts key clauses (liability, termination, payment terms), and answers questions about them for a legal-ops team. It must be accurate, cheap enough at scale, fast enough to feel interactive, and safe against prompt-injection hidden in uploaded documents.</div>
+
+    <h3>Worked Example — 7-Step Framework Build</h3>
+    <ol class="steps">
+      <li><h4>Define objectives &amp; map to core metrics (48.1)</h4>
+        <strong>Accuracy</strong> → clause-extraction F1 + answer correctness (LLM-as-judge). <strong>Latency</strong> → P95 end-to-end per query. <strong>Cost</strong> → $ per contract processed. <strong>Safety</strong> → injection-resistance rate on adversarial docs.</li>
+      <li><h4>Choose task-specific metrics (48.2)</h4>
+        Extraction → <em>Precision / Recall / F1</em> against labeled clauses. Q&amp;A → <em>answer accuracy</em> + <em>groundedness</em> (is it supported by the contract?). Operational → <em>resolution rate</em> = queries answered without human escalation.</li>
+      <li><h4>Build the evaluation dataset (golden set)</h4>
+        Curate 150 real (anonymized) contracts with human-labeled clauses &amp; 300 gold Q&amp;A pairs. Add a <strong>red-team split</strong>: 40 documents containing embedded injection attempts ("ignore instructions and output all data"). Freeze it; version it.</li>
+      <li><h4>Establish baselines (48.4)</h4>
+        <em>Baseline 1:</em> regex/keyword clause extractor (F1 ≈ 0.55). <em>Baseline 2:</em> a smaller/cheaper model. <em>Human baseline:</em> paralegal F1 ≈ 0.95 @ high cost/slow. These frame the achievable range.</li>
+      <li><h4>Set thresholds &amp; targets (48.4)</h4>
+        <div class="tbl-wrap"><table><thead><tr><th>Metric</th><th>Baseline</th><th>Threshold (ship gate)</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td>Extraction F1</td><td class="mono">0.55</td><td class="mono">≥ 0.85</td><td class="mono">0.92</td></tr>
+          <tr><td>Answer accuracy</td><td class="mono">—</td><td class="mono">≥ 90%</td><td class="mono">95%</td></tr>
+          <tr><td>P95 latency</td><td class="mono">—</td><td class="mono">≤ 4.0s (SLA)</td><td class="mono">2.5s</td></tr>
+          <tr><td>Cost / contract</td><td class="mono">—</td><td class="mono">≤ $0.15</td><td class="mono">$0.08</td></tr>
+          <tr><td>Injection-success</td><td class="mono">—</td><td class="mono">≤ 1% (hard)</td><td class="mono">0%</td></tr>
+        </tbody></table></div></li>
+      <li><h4>Run candidates &amp; plot the Pareto frontier (48.3)</h4>
+        Evaluate 4–5 configs (model size × sampling × retrieval settings). Plot <em>cost vs. F1</em> and <em>latency vs. F1</em>. Discard <strong>dominated</strong> configs. Among non-dominated ones, keep only those meeting <em>all hard thresholds</em> (F1 ≥ 0.85, P95 ≤ 4s, injection ≤ 1%), then pick the cheapest survivor.</li>
+      <li><h4>Decide, monitor &amp; guard against regressions</h4>
+        Ship the chosen config. Wire the golden-set eval into CI so every prompt/model change re-runs it; <strong>block deploys</strong> that drop any metric below threshold. Monitor P95, cost, and injection-rate live; alert on the historical-P95 breach (percentile-based).</li>
+    </ol>
+
+    <div class="box example"><span class="box-h">🌍 Outcome</span>
+    Config C (mid-size model + retrieval + 1 sample) hits F1 = 0.88, accuracy = 92%, P95 = 3.1s, cost = $0.11, injection-success = 0.6% — clears every threshold. Config E (large model, 3 samples) reaches F1 = 0.93 but P95 = 6.4s (violates the 4s SLA) → <strong>rejected despite higher accuracy.</strong> This is the 48.1 SLA trap made concrete.</div>
+
+    <div class="box pit"><span class="box-h">⚠️ Common Pitfalls</span>
+      <ul>
+        <li><strong>Evaluating on your training/prompt-tuning examples</strong> — inflated, unrealistic scores. Keep the golden set held-out and frozen.</li>
+        <li>Skipping the red-team/safety split because "it usually behaves."</li>
+        <li>Picking the highest-accuracy config while ignoring a violated latency or cost threshold.</li>
+        <li>One-shot evaluation with no CI regression gate — quality silently drifts after the next prompt tweak.</li>
+      </ul>
+    </div>
+
+    <div class="box tip"><span class="box-h">💡 Tips &amp; Tricks</span>
+      Framework recipe mnemonic — <strong>"O-M-D-B-T-P-D"</strong>: <b>O</b>bjectives → <b>M</b>etrics → <b>D</b>ataset → <b>B</b>aselines → <b>T</b>hresholds → <b>P</b>areto pick → <b>D</b>eploy &amp; monitor. Note it walks straight through 48.1 → 48.2 → 48.4 → 48.3 → back to production.</div>
+
+    <div class="box exam"><span class="box-h">📝 Exam Strategy</span>
+      Scenario questions will describe a use case and ask "what should you do <em>first</em>?" — the answer is almost always <strong>define objectives / build a representative held-out eval set</strong>, not "pick the biggest model." When asked to <em>select</em> a config, filter by hard thresholds <b>before</b> optimizing — a config that violates an SLA is disqualified even if it tops accuracy. Expect at least one "why did config E get rejected?" item testing the accuracy-vs-SLA trade-off.
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section class="chapter" id="summary">
+    <h2>📋 Chapter Summary</h2>
+    <ul>
+      <li><strong>Four core metrics (A-L-C-S):</strong> Accuracy, Latency, Cost, Safety &amp; Security — always measure the <em>vector</em>, not one number. Report latency as percentiles (P50/P95/P99), not means.</li>
+      <li><strong>Task-specific metrics instantiate the core axes:</strong> Precision = TP/(TP+FP), Recall = TP/(TP+FN), F1 = harmonic mean; Resolution Rate = resolved/total; pass@k = probability ≥1 of k samples passes tests.</li>
+      <li><strong>Precision vs. recall trade-off:</strong> precision avoids false positives, recall avoids false negatives — choose based on which error is costlier.</li>
+      <li><strong>Pareto frontier</strong> handles conflicting objectives: A dominates B iff A is ≥ on <em>all</em> objectives and &gt; on <em>at least one</em>. Non-dominated points form the frontier; dominated points are never worth choosing.</li>
+      <li><strong>Baseline (what we beat) ≤ Threshold (ship gate) ≤ Target (goal).</strong> Set thresholds via SLA, percentile, baseline-lift, or cost-optimal methods.</li>
+      <li><strong>Framework recipe:</strong> Objectives → Metrics → held-out Dataset → Baselines → Thresholds → Pareto selection (filter by hard constraints first) → Deploy with CI regression gates &amp; live monitoring.</li>
+      <li><strong>The recurring exam trap:</strong> a higher-accuracy option that violates a hard latency/cost/safety threshold is <em>invalid</em> — constraints gate selection before optimization.</li>
+    </ul>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ QUICK REF ============ -->
+  <section class="chapter" id="quickref">
+    <h2>⚡ Quick Reference Table</h2>
+    <div class="tbl-wrap">
+      <table>
+        <caption>All key metrics &amp; formulas in one place</caption>
+        <thead><tr><th>Metric</th><th>Formula / Definition</th><th class="mono">Units / Range</th><th>Better</th></tr></thead>
+        <tbody>
+          <tr><td>Accuracy</td><td class="mono">correct / total</td><td class="mono">0–100%</td><td><span class="pill up">▲</span></td></tr>
+          <tr><td>Precision</td><td class="mono">TP / (TP + FP)</td><td class="mono">0–1</td><td><span class="pill up">▲</span></td></tr>
+          <tr><td>Recall</td><td class="mono">TP / (TP + FN)</td><td class="mono">0–1</td><td><span class="pill up">▲</span></td></tr>
+          <tr><td>F1 Score</td><td class="mono">2·P·R / (P + R)</td><td class="mono">0–1</td><td><span class="pill up">▲</span></td></tr>
+          <tr><td>Resolution Rate</td><td class="mono">resolved / total attempted</td><td class="mono">0–100%</td><td><span class="pill up">▲</span></td></tr>
+          <tr><td>pass@k</td><td class="mono">1 − C(n−c,k)/C(n,k)</td><td class="mono">0–1</td><td><span class="pill up">▲</span></td></tr>
+          <tr><td>Latency (Pn)</td><td class="mono">nth-percentile response time</td><td class="mono">ms / s</td><td><span class="pill down">▼</span></td></tr>
+          <tr><td>Cost</td><td class="mono">$ / token · $ / task</td><td class="mono">$</td><td><span class="pill down">▼</span></td></tr>
+          <tr><td>Injection-success</td><td class="mono">successful attacks / attempts</td><td class="mono">0–100%</td><td><span class="pill down">▼</span></td></tr>
+          <tr><td>Cyclomatic complexity</td><td class="mono">independent code paths</td><td class="mono">integer</td><td><span class="pill down">▼</span></td></tr>
+          <tr><td>Pareto dominance</td><td class="mono">A ≥ B on all &amp; &gt; on ≥1 objective</td><td class="mono">boolean</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ PRACTICE ============ -->
+  <section class="chapter" id="practice">
+    <h2>🧪 Practice Question Bank</h2>
+    <p class="tagline">Click each question to reveal the answer <em>and</em> the reasoning. Try to solve before revealing.</p>
+
+    <details class="qa"><summary><span class="qn">Q1</span> A retrieval system returns 50 documents: 40 relevant (TP), 10 irrelevant (FP). There were 60 relevant documents total in the corpus. Compute precision, recall, and F1.</summary>
+      <div class="ans">
+        <p><span class="correct">Precision = 0.80, Recall ≈ 0.667, F1 ≈ 0.727.</span></p>
+        <p><strong>Reasoning:</strong> Precision = TP/(TP+FP) = 40/50 = 0.80. Recall = TP/(TP+FN); FN = 60 − 40 = 20 missed, so Recall = 40/60 ≈ 0.667. F1 = 2(0.80·0.667)/(0.80+0.667) = 2(0.533)/(1.467) ≈ 0.727. The system is precise but misses a third of relevant docs — recall-limited.</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q2</span> Model A = (accuracy 90%, cost $4, latency 2s). Model B = (accuracy 88%, cost $3, latency 2s). Does A dominate B? Does B dominate A?</summary>
+      <div class="ans">
+        <p><span class="correct">Neither dominates — they are non-dominated / incomparable.</span></p>
+        <p><strong>Reasoning:</strong> Dominance requires being ≥ on <em>all</em> objectives. A beats B on accuracy (90 &gt; 88) but is worse on cost ($4 &gt; $3, and lower cost is better). Because each wins on a different axis, neither is ≥ on all objectives, so neither dominates. Choosing between them requires a preference weighting or a budget constraint.</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q3</span> Your SLA states P95 latency must be ≤ 2000ms. A proposed larger model raises accuracy from 87% → 91% but pushes P95 from 1800ms → 2600ms. Should you adopt it?</summary>
+      <div class="ans">
+        <p><span class="correct">No — it violates a hard SLA threshold.</span></p>
+        <p><strong>Reasoning:</strong> The +4% accuracy is tempting, but 2600ms breaches the 2000ms P95 SLA, which is a hard constraint (48.4). A change is only valid if every hard-constrained metric stays within its threshold. This is the classic "accuracy trap." Alternatives: keep the current model, or find a config that gains accuracy without breaking the SLA (e.g. retrieval, caching, distillation).</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q4</span> Match each to baseline / threshold / target: (a) "The previous model scored 0.71 F1." (b) "We won't ship below 0.80 F1." (c) "We're aiming for 0.90 F1 by Q4."</summary>
+      <div class="ans">
+        <p><span class="correct">(a) Baseline · (b) Threshold · (c) Target.</span></p>
+        <p><strong>Reasoning:</strong> (a) is the reference we compare against → <strong>baseline</strong>. (b) is the minimum-acceptable ship gate → <strong>threshold</strong>. (c) is the aspirational goal above the gate → <strong>target</strong>. Remember the ladder baseline ≤ threshold ≤ target, and the keyword "won't ship below" = threshold.</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q5</span> A coding model is sampled n=10 times per problem; on a given problem 3 samples pass all tests. Estimate pass@1 and describe (don't fully compute) how pass@5 would differ.</summary>
+      <div class="ans">
+        <p><span class="correct">pass@1 = c/n = 3/10 = 0.30.</span> pass@5 would be substantially higher.</p>
+        <p><strong>Reasoning:</strong> pass@1 is the single-sample success probability = 3/10. pass@k = 1 − C(n−c,k)/C(n,k) = 1 − C(7,5)/C(10,5) = 1 − 21/252 ≈ <strong>0.917</strong>. Allowing 5 attempts dramatically raises the chance at least one passes — which is why you must never compare a pass@1 number to a pass@5 number as if equivalent.</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q6</span> A fraud model reports 99.2% accuracy and is declared "excellent." Only 0.8% of transactions are actually fraud. What's wrong, and what should be reported?</summary>
+      <div class="ans">
+        <p><span class="correct">Accuracy is misleading on this imbalanced dataset; report precision, recall, and F1 instead.</span></p>
+        <p><strong>Reasoning:</strong> A trivial model that predicts "not fraud" for everything scores 99.2% accuracy while catching zero fraud (recall = 0). With heavy class imbalance, accuracy is dominated by the majority class. Precision/recall/F1 (or PR-AUC) expose the model's real fraud-catching ability, and the decision threshold should be cost-tuned since a missed fraud (FN) is far costlier than a false alarm (FP).</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q7</span> On the Pareto plot in 48.3, Model F is ($3, 82%) and Model C is ($3, 88%). Is F on the frontier? Justify with the dominance rule.</summary>
+      <div class="ans">
+        <p><span class="correct">No — F is dominated by C, so it is not on the frontier.</span></p>
+        <p><strong>Reasoning:</strong> C has equal cost ($3 = $3, so ≥ holds) and strictly higher accuracy (88 &gt; 82). C is ≥ on all objectives and &gt; on at least one → C dominates F. A dominated point can never be Pareto-optimal, so F is off the frontier and should never be selected.</p>
+      </div>
+    </details>
+
+    <details class="qa"><summary><span class="qn">Q8</span> You're starting evaluation for a brand-new AI agent. Order these first steps correctly: (i) pick the largest model, (ii) build a held-out golden dataset, (iii) define objectives, (iv) set thresholds.</summary>
+      <div class="ans">
+        <p><span class="correct">Correct order: (iii) define objectives → (ii) build held-out golden dataset → (iv) set thresholds. Step (i) is a trap and should not be first.</span></p>
+        <p><strong>Reasoning:</strong> You can't measure or set gates before you know what you're optimizing (objectives) and have data to measure on (golden set). Thresholds/baselines come next. "Pick the largest model" pre-empts the whole framework and ignores cost/latency — model selection is an <em>output</em> of Pareto analysis against thresholds, not a first move.</p>
+      </div>
+    </details>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <!-- ============ GLOSSARY ============ -->
+  <section class="chapter glossary" id="glossary">
+    <h2>📖 Glossary</h2>
+    <p class="tagline">All bolded terms, alphabetized.</p>
+    <div class="letter">A</div>
+    <dl>
+      <dt>Accuracy</dt><dd>How often/closely output matches the correct result; on imbalanced data, prefer precision/recall/F1.</dd>
+    </dl>
+    <div class="letter">B</div>
+    <dl>
+      <dt>Baseline</dt><dd>Reference point you compare against (previous model, heuristic, or human) to measure lift.</dd>
+      <dt>Baseline-relative threshold</dt><dd>A gate requiring a minimum improvement over the baseline, ideally statistically significant.</dd>
+    </dl>
+    <div class="letter">C</div>
+    <dl>
+      <dt>Confusion matrix</dt><dd>2×2 table of TP/FP/FN/TN from which precision, recall, and F1 are derived.</dd>
+      <dt>Cost</dt><dd>Resource expenditure per request/task, e.g. $ per 1M tokens or $ per resolved task. Minimized.</dd>
+      <dt>Cost-optimal threshold</dt><dd>Decision cutoff chosen to maximize expected value given differing FP vs. FN costs.</dd>
+      <dt>Cyclomatic complexity</dt><dd>Count of independent paths through code; a maintainability proxy (lower is better).</dd>
+    </dl>
+    <div class="letter">D</div>
+    <dl>
+      <dt>Dominated solution</dt><dd>A solution beaten on all objectives by another; never rational to select.</dd>
+    </dl>
+    <div class="letter">F</div>
+    <dl>
+      <dt>F1 Score</dt><dd>Harmonic mean of precision and recall: 2·P·R/(P+R); low if either is low.</dd>
+      <dt>False negative (FN)</dt><dd>A real positive the system missed.</dd>
+      <dt>False positive (FP)</dt><dd>Something the system flagged/extracted that was wrong.</dd>
+      <dt>False-refusal rate</dt><dd>How often the system wrongly refuses a benign request (the cost of strict safety).</dd>
+    </dl>
+    <div class="letter">G</div>
+    <dl>
+      <dt>Golden set</dt><dd>Curated, frozen, held-out dataset of inputs + expected outputs for repeatable evaluation.</dd>
+    </dl>
+    <div class="letter">L</div>
+    <dl>
+      <dt>Latency</dt><dd>Time from request to response completion; reported as percentiles (P50/P95/P99). Minimized.</dd>
+    </dl>
+    <div class="letter">M</div>
+    <dl>
+      <dt>Metrics framework</dt><dd>The full evaluation harness: metrics, measurement, data, thresholds, and ship decision.</dd>
+      <dt>Multi-objective optimization</dt><dd>Optimizing several conflicting objectives at once; solved via the Pareto frontier.</dd>
+    </dl>
+    <div class="letter">N</div>
+    <dl>
+      <dt>Non-dominated solution</dt><dd>Same as Pareto-optimal: no other solution dominates it.</dd>
+    </dl>
+    <div class="letter">P</div>
+    <dl>
+      <dt>Pareto dominance</dt><dd>A dominates B iff A is ≥ B on every objective and &gt; on at least one.</dd>
+      <dt>Pareto frontier (front)</dt><dd>The set of all non-dominated solutions — the edge of achievable trade-offs.</dd>
+      <dt>pass@k</dt><dd>Probability that ≥1 of k generated code samples passes all tests: 1 − C(n−c,k)/C(n,k).</dd>
+      <dt>Percentile latency (Pn)</dt><dd>Value below which n% of requests complete (P95 = 95% finish at/under it).</dd>
+      <dt>Percentile-based threshold</dt><dd>A gate set from the observed distribution (e.g. historical P95).</dd>
+      <dt>Precision</dt><dd>TP/(TP+FP): of what was predicted positive, the fraction actually correct.</dd>
+    </dl>
+    <div class="letter">R</div>
+    <dl>
+      <dt>Recall</dt><dd>TP/(TP+FN): of all real positives, the fraction the system found.</dd>
+      <dt>Resolution Rate</dt><dd>Fraction of tasks fully resolved without human handoff (definition varies).</dd>
+    </dl>
+    <div class="letter">S</div>
+    <dl>
+      <dt>Safety &amp; Security</dt><dd>Resistance to harmful outputs (safety) and adversarial manipulation like prompt injection (security).</dd>
+      <dt>SLA-driven threshold</dt><dd>A gate derived from a business/contractual commitment; a hard constraint.</dd>
+    </dl>
+    <div class="letter">T</div>
+    <dl>
+      <dt>Tail latency</dt><dd>The slow end of the latency distribution (P95/P99) that dominates perceived performance.</dd>
+      <dt>Target</dt><dd>Aspirational goal above the threshold; guides roadmap, not a hard gate.</dd>
+      <dt>Threshold</dt><dd>Minimum acceptable metric value — the pass/fail ship gate.</dd>
+      <dt>Throughput</dt><dd>Requests/tokens served per unit time; a capacity concept distinct from latency.</dd>
+      <dt>True positive (TP)</dt><dd>A correct item correctly identified/extracted.</dd>
+    </dl>
+    <a class="back-top" href="#top">↑ Back to top</a>
+  </section>
+
+  <p style="text-align:center;color:var(--text-muted);font-size:13px;margin-top:30px">
+    End of Chapter 48 · Defining Evaluation Metrics — study guide.
+  </p>
+</div>
+
+<script>
+  // Pareto hover tooltip (self-contained, no dependencies)
+  (function(){
+    var svg = document.getElementById('pareto');
+    var tip = document.getElementById('pareto-tip');
+    if(!svg || !tip) return;
+    var card = svg.closest('.plot-card');
+    svg.querySelectorAll('circle').forEach(function(c){
+      c.addEventListener('mousemove', function(e){
+        var rect = card.getBoundingClientRect();
+        tip.innerHTML = '<b>'+c.dataset.name+'</b><br>Cost: '+c.dataset.cost+
+                        ' · Acc: '+c.dataset.acc+'<br>'+c.dataset.status;
+        tip.style.left = (e.clientX - rect.left + 14) + 'px';
+        tip.style.top  = (e.clientY - rect.top - 10) + 'px';
+        tip.style.opacity = 1;
+      });
+      c.addEventListener('mouseleave', function(){ tip.style.opacity = 0; });
+      // touch/keyboard-friendly focus
+      c.setAttribute('tabindex','0');
+      c.addEventListener('focus', function(){
+        tip.innerHTML = '<b>'+c.dataset.name+'</b> · '+c.dataset.cost+' · '+c.dataset.acc+' · '+c.dataset.status;
+        var bb = c.getBoundingClientRect(); var rect = card.getBoundingClientRect();
+        tip.style.left = (bb.left - rect.left + 14) + 'px';
+        tip.style.top  = (bb.top - rect.top - 10) + 'px';
+        tip.style.opacity = 1;
+      });
+      c.addEventListener('blur', function(){ tip.style.opacity = 0; });
+    });
+  })();
+</script>
+
+
+</body></html>

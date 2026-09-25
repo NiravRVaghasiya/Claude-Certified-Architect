@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 54: Risk Identification &amp; Failure Modes</title>
+<style>
+  :root{
+    --bg:#f4f6fb; --surface:#ffffff; --ink:#1e293b; --ink2:#475569; --muted:#64748b;
+    --line:#e2e8f0; --line2:#cbd5e1; --accent:#2563eb; --accent-soft:#eff4ff;
+    --navy:#1e293b; --green:#16a34a; --green-bg:#ecfdf5; --amber:#d97706; --amber-bg:#fffbeb;
+    --red:#dc2626; --red-bg:#fef2f2; --violet:#7c3aed; --violet-bg:#f5f3ff; --teal:#0d9488; --teal-bg:#f0fdfa;
+    --radius:12px; --radius-sm:8px;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",ui-monospace,Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.62;font-size:16px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px 90px}
+
+  /* Header */
+  header.hero{background:linear-gradient(135deg,#1e293b 0%,#243b6b 60%,#2563eb 130%);color:#fff;padding:42px 22px 38px;margin-bottom:8px}
+  header.hero .inner{max-width:1080px;margin:0 auto}
+  .kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#a9c3ff;font-weight:700;margin:0 0 8px}
+  header.hero h1{margin:0 0 10px;font-size:34px;line-height:1.15;font-weight:800;letter-spacing:-.01em}
+  header.hero p.sub{margin:0;color:#cdd9f5;font-size:16px;max-width:760px}
+  .badges{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#eaf1ff;font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:100px}
+
+  /* TOC */
+  .toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;margin:26px 0 34px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  .toc h2{margin:0 0 12px;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px}
+  .toc li{margin:6px 0;break-inside:avoid}
+  .toc a{color:var(--accent);text-decoration:none;font-weight:600}
+  .toc a:hover{text-decoration:underline}
+  .toc .lead{font-weight:700;color:var(--ink)}
+
+  /* Sections */
+  section{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 32px;margin-bottom:30px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  section > h2{margin:0 0 4px;font-size:25px;font-weight:800;letter-spacing:-.01em;color:var(--navy);scroll-margin-top:18px}
+  .sec-tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-size:13px;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:12px}
+  h3{margin:26px 0 8px;font-size:18px;font-weight:700;color:var(--navy)}
+  h4{margin:18px 0 6px;font-size:15px;font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.04em}
+  p{margin:9px 0}
+  strong{color:var(--navy)}
+  code{font-family:var(--mono);font-size:13.5px;background:#eef2f9;padding:1.5px 6px;border-radius:5px;color:#334155}
+  ul,ol{margin:9px 0;padding-left:22px}
+  li{margin:5px 0}
+
+  /* Definition block */
+  .defn{border-left:4px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0}
+  .defn .term{font-weight:800;color:var(--navy)}
+
+  /* Tables */
+  .tbl-wrap{overflow-x:auto;margin:16px 0}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}
+  caption{caption-side:top;text-align:left;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:8px}
+  th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:10px 12px;font-size:13px;letter-spacing:.01em}
+  th:first-child{border-top-left-radius:8px}
+  th:last-child{border-top-right-radius:8px}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+  tbody tr:nth-child(even){background:#fafbfe}
+  tbody tr:hover{background:#f1f5fd}
+  td strong{color:var(--navy)}
+
+  /* Callouts */
+  .callout{border-radius:10px;padding:15px 18px;margin:18px 0;border:1px solid;font-size:14.5px}
+  .callout .title{font-weight:800;display:block;margin-bottom:5px;font-size:14px;letter-spacing:.02em}
+  .strategy{background:var(--amber-bg);border-color:#f5d99b}
+  .strategy .title{color:#b45309}
+  .tip{background:var(--teal-bg);border-color:#99e6db}
+  .tip .title{color:#0f766e}
+  .pitfall{background:var(--red-bg);border-color:#f5b7b7}
+  .pitfall .title{color:#b91c1c}
+  .note{background:#f8fafc;border-color:var(--line2)}
+  .note .title{color:var(--ink2)}
+
+  /* Worked example */
+  .worked{border:1.5px solid var(--violet);background:var(--violet-bg);border-radius:10px;padding:18px 20px;margin:20px 0}
+  .worked .wtitle{font-weight:800;color:var(--violet);font-size:14px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .worked .q{background:#fff;border:1px dashed #c4b5fd;border-radius:8px;padding:11px 14px;font-style:italic;color:var(--ink);margin-bottom:12px}
+  .worked ol.steps{counter-reset:s;list-style:none;padding-left:0;margin:0}
+  .worked ol.steps li{position:relative;padding:8px 0 8px 40px;border-bottom:1px dashed #d8ccf7}
+  .worked ol.steps li:last-child{border-bottom:none}
+  .worked ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:8px;width:26px;height:26px;background:var(--violet);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-family:var(--mono)}
+  .worked .answer{margin-top:12px;background:#fff;border-left:4px solid var(--green);padding:10px 14px;border-radius:0 8px 8px 0}
+  .worked .answer b{color:var(--green)}
+
+  /* Flowchart */
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin:20px 0;justify-content:flex-start}
+  .flow .step{background:#fff;border:2px solid var(--accent);border-radius:10px;padding:11px 14px;min-width:120px;max-width:170px;text-align:center;font-size:13px;display:flex;flex-direction:column;justify-content:center}
+  .flow .step .n{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:700}
+  .flow .step .t{font-weight:700;color:var(--navy);margin-top:2px}
+  .flow .step .d{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+  .flow .arrow{display:flex;align-items:center;color:var(--accent);font-size:22px;padding:0 6px;font-weight:700}
+
+  /* NIST core functions cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:18px 0}
+  .fcard{border-radius:10px;padding:14px 16px;border:1px solid var(--line);background:#fff}
+  .fcard h5{margin:0 0 4px;font-size:15px;font-weight:800}
+  .fcard p{margin:0;font-size:13px;color:var(--ink2)}
+  .fcard.govern{border-top:4px solid var(--violet)} .fcard.govern h5{color:var(--violet)}
+  .fcard.map{border-top:4px solid var(--accent)} .fcard.map h5{color:var(--accent)}
+  .fcard.measure{border-top:4px solid var(--teal)} .fcard.measure h5{color:var(--teal)}
+  .fcard.manage{border-top:4px solid var(--green)} .fcard.manage h5{color:var(--green)}
+
+  /* Risk matrix */
+  .matrix-wrap{margin:20px 0;overflow-x:auto}
+  table.matrix{border-collapse:collapse;min-width:560px;font-size:13px}
+  table.matrix th,table.matrix td{border:1px solid #fff;text-align:center;padding:12px 8px;font-weight:600}
+  table.matrix .axis{background:var(--navy);color:#fff}
+  table.matrix .corner{background:transparent;border:none}
+  .cell{color:#1e293b;font-weight:700}
+  .lo{background:#c9ecd0} .med{background:#ffe6a3} .hi{background:#ffc09b} .crit{background:#f6a6a6}
+  .mlabel{font-size:10.5px;font-weight:600;display:block;color:#334155;margin-top:2px}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12.5px}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .swatch{width:14px;height:14px;border-radius:3px;display:inline-block}
+
+  /* mnemonic pill */
+  .mnem{display:inline-block;background:var(--navy);color:#fff;font-family:var(--mono);font-weight:700;padding:2px 9px;border-radius:6px;letter-spacing:.03em}
+
+  /* summary + traps */
+  .traps{counter-reset:trap;list-style:none;padding-left:0}
+  .traps li{position:relative;padding:10px 12px 10px 48px;margin:8px 0;background:#fff;border:1px solid var(--line);border-radius:8px;font-size:14.5px}
+  .traps li::before{counter-increment:trap;content:counter(trap);position:absolute;left:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--mono);font-size:13px}
+
+  hr.div{border:none;border-top:1px solid var(--line);margin:26px 0}
+  .backtop{font-size:12.5px;color:var(--muted);text-decoration:none;float:right}
+  .backtop:hover{color:var(--accent)}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}
+
+  @media (max-width:640px){
+    .toc ol{columns:1}
+    header.hero h1{font-size:26px}
+    section{padding:22px 18px}
+    .flow{flex-direction:column;align-items:stretch}
+    .flow .step{max-width:none}
+    .flow .arrow{transform:rotate(90deg);padding:2px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="inner">
+    <p class="kicker">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 54 · Risk Identification &amp; Failure Modes</h1>
+    <p class="sub">Exam-ready study notes covering LLM failure taxonomies, systemic risks, assessment frameworks, failure-mode inventories, and a hands-on risk assessment walkthrough.</p>
+    <div class="badges">
+      <span class="badge">54.1 Failure Modes</span>
+      <span class="badge">54.2 Systemic Risks</span>
+      <span class="badge">54.3 Frameworks</span>
+      <span class="badge">54.4 Inventories</span>
+      <span class="badge">54.5 Hands-On</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===================== TOC ===================== -->
+  <nav class="toc" id="top">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s541"><span class="lead">54.1</span> — Hallucination, Confabulation &amp; Sycophancy</a></li>
+      <li><a href="#s542"><span class="lead">54.2</span> — Data Leakage, Model Drift &amp; Cascading Failures</a></li>
+      <li><a href="#s543"><span class="lead">54.3</span> — Risk Assessment Frameworks</a></li>
+      <li><a href="#s544"><span class="lead">54.4</span> — Building Failure Mode Inventories</a></li>
+      <li><a href="#s545"><span class="lead">54.5</span> — Hands-On: Conducting a Risk Assessment</a></li>
+      <li><a href="#summary"><span class="lead">★</span> Quick-Reference Summary Table</a></li>
+      <li><a href="#traps"><span class="lead">★</span> Top 10 Exam Traps</a></li>
+    </ol>
+  </nav>
+
+  <!-- ===================== 54.1 ===================== -->
+  <section id="s541">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">54.1</span>
+    <h2>LLM Failure Modes: Hallucination, Confabulation &amp; Sycophancy</h2>
+
+    <h3>Core Definitions</h3>
+    <div class="defn"><span class="term">Hallucination</span> — the generation of content that is factually incorrect, unsupported, or not grounded in the provided source/context, yet presented fluently and confidently. Umbrella term for outputs that are <em>ungrounded</em>.</div>
+    <div class="defn"><span class="term">Confabulation</span> — a specific hallucination sub-type where the model <em>fills a gap</em> (missing context, ambiguous prompt, memory it never had) with plausible but invented specifics. Borrowed from cognitive science, where patients unknowingly fabricate details to complete a story.</div>
+    <div class="defn"><span class="term">Sycophancy</span> — the tendency to align answers with the user's stated beliefs, preferences, or corrections rather than with what is true — telling the user what they seem to want to hear.</div>
+
+    <h3>Conceptual Explanation — Why It Happens</h3>
+    <p>LLMs are trained to predict the <strong>next most probable token</strong>, optimizing for <em>plausibility</em>, not verified truth. The model has no built-in notion of "I don't know" unless training explicitly rewards abstention.</p>
+    <ul>
+      <li><strong>Hallucination root causes:</strong> gaps, noise, or staleness in training data; lossy compression of facts into weights; decoding that favors fluent continuations; absence of grounding/retrieval.</li>
+      <li><strong>Confabulation root causes:</strong> ambiguous or under-specified prompts, missing context, or tasks that <em>ask</em> the model to produce specifics it was never given (e.g., "summarize this meeting" when a detail is absent) — the model completes the pattern.</li>
+      <li><strong>Sycophancy root cause:</strong> a direct artifact of <strong>RLHF</strong> — human raters (and reward models) tend to score agreeable, affirming answers more highly, so the policy learns that agreement earns reward, even at the cost of accuracy.</li>
+    </ul>
+
+    <h3>Real-World Examples</h3>
+    <ul>
+      <li><strong>Hallucination:</strong> a legal assistant cites <em>Varghese v. China Southern Airlines</em> as precedent — a case that does not exist — with a fabricated citation number. (Mirrors the widely reported 2023 incident where lawyers filed a brief containing AI-invented cases.)</li>
+      <li><strong>Confabulation:</strong> asked to extract "the action items and their owners" from notes that never name owners, the model invents "Owner: Sarah — due Friday," fabricating both to satisfy the requested structure.</li>
+      <li><strong>Sycophancy:</strong> the model gives the correct answer (Earth's core is solid iron-nickel), the user replies "No, I'm pretty sure it's liquid," and the model reverses to agree despite being right.</li>
+    </ul>
+
+    <h3>Visualization — Comparison Table</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Table 54.1 — Distinguishing the three primary generative failure modes.</caption>
+        <thead>
+          <tr><th>Failure Mode</th><th>Definition</th><th>Primary Root Cause</th><th>Illustrative Example</th><th>Tell-tale Signal</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Hallucination</strong></td><td>Confident output that is factually wrong or ungrounded</td><td>Next-token prediction; data gaps &amp; staleness</td><td>Citing a non-existent research paper</td><td>Verifiably false fact</td></tr>
+          <tr><td><strong>Confabulation</strong></td><td>Plausible fabrication that <em>fills a gap</em> in context/memory</td><td>Ambiguous or incomplete prompt; missing data</td><td>Inventing a meeting owner from a summary task</td><td>Detail was never supplied</td></tr>
+          <tr><td><strong>Sycophancy</strong></td><td>Agreeing with the user regardless of correctness</td><td>RLHF optimizing for human approval</td><td>Reversing a correct answer when pushed back on</td><td>Answer changes with user pressure, not evidence</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <span class="title">💡 Tips &amp; Tricks — Mnemonics</span>
+      Remember the trio with <span class="mnem">H-C-S</span>:
+      <ul style="margin-bottom:0">
+        <li><strong>H</strong>allucination = <strong>"Fiction"</strong> — states something false.</li>
+        <li><strong>C</strong>onfabulation = <strong>"Filler"</strong> — fills a gap that was left empty.</li>
+        <li><strong>S</strong>ycophancy = <strong>"Flattery"</strong> — folds to the user's view.</li>
+      </ul>
+      Three F's: <strong>Fiction, Filler, Flattery.</strong>
+    </div>
+
+    <div class="callout pitfall">
+      <span class="title">⚠️ Gotcha Distinction</span>
+      Confabulation <em>is</em> a form of hallucination — exam distractors will try to make them look mutually exclusive. The discriminator: <strong>was a gap being filled?</strong> If the model invents a detail the prompt <em>required</em> but never provided → confabulation. If it asserts a wrong standalone fact from "knowledge" → hallucination. Sycophancy is separable: it is triggered by <strong>social pressure</strong>, not by missing information.
+    </div>
+
+    <div class="worked">
+      <div class="wtitle">🧠 Worked Example — Reasoning Walkthrough</div>
+      <div class="q"><strong>Question:</strong> A user asks a model to summarize a customer call transcript and list "next steps and deadlines." The transcript mentions next steps but no dates. The model outputs "Follow up by March 15." Which failure mode is this, and what is the best mitigation?</div>
+      <ol class="steps">
+        <li><strong>Identify the key symptom:</strong> a specific detail (a deadline) appears in the output that was <em>never present</em> in the source.</li>
+        <li><strong>Eliminate wrong terms:</strong> not <em>sycophancy</em> — no user opinion was being flattered. Not generic <em>hallucination</em> in the "wrong fact" sense — the model isn't asserting world knowledge; it is <em>completing a requested field</em> with an invented value.</li>
+        <li><strong>Match the pattern:</strong> filling a gap left by missing context with a plausible fabrication = <strong>confabulation</strong>.</li>
+        <li><strong>Choose mitigation:</strong> grounding + explicit abstention instructions ("if a date is not stated, write <code>not specified</code>"), and constrained/extractive output.</li>
+      </ol>
+      <div class="answer"><b>Answer:</b> Confabulation. Best mitigation is grounding the task to the source and permitting/instructing abstention for absent fields.</div>
+    </div>
+
+    <div class="callout strategy">
+      <span class="title">🎯 Exam Strategy — 54.1</span>
+      Questions give a <strong>behavioral scenario</strong> and ask you to name the failure mode. Scan for the trigger:
+      <ul style="margin-bottom:0">
+        <li>Keyword <em>"confidently states a false fact / invented citation"</em> → <strong>Hallucination</strong>.</li>
+        <li>Keyword <em>"missing / ambiguous context, model filled in details"</em> → <strong>Confabulation</strong>.</li>
+        <li>Keyword <em>"user pushed back / user said they preferred / model agreed"</em> → <strong>Sycophancy</strong> (tie it to RLHF if asked for the cause).</li>
+      </ul>
+      Eliminate any option that names a <em>systemic</em> risk (drift, leakage) — those are 54.2, not generative behaviors.
+    </div>
+  </section>
+
+  <!-- ===================== 54.2 ===================== -->
+  <section id="s542">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">54.2</span>
+    <h2>Systemic Risks: Data Leakage, Model Drift &amp; Cascading Failures</h2>
+
+    <h3>Core Definitions</h3>
+    <div class="defn"><span class="term">Data Leakage</span> — the unintended exposure of sensitive or protected data. Two senses matter: (a) <em>training-time</em> leakage — memorized PII/secrets that can be extracted, or test data contaminating training; and (b) <em>inference-time</em> leakage — sensitive context, system prompts, or other users' data exposed at runtime (often via prompt injection).</div>
+    <div class="defn"><span class="term">Model Drift</span> — degradation of a deployed model's real-world performance over time. <em>Data drift</em> = the input distribution shifts; <em>concept drift</em> = the input→output relationship changes. For a frozen LLM, drift usually manifests as <strong>knowledge staleness</strong> — the world changes while the weights do not.</div>
+    <div class="defn"><span class="term">Cascading Failure</span> — a fault in one component that propagates through a chained or multi-agent system, where one bad output becomes the next stage's input, compounding errors downstream.</div>
+
+    <h3>Conceptual Explanation — Why It Happens</h3>
+    <ul>
+      <li><strong>Data leakage:</strong> large models can <em>memorize</em> rare training sequences; retrieval/agent systems widen the surface by injecting private context into prompts; prompt injection can coerce disclosure of system prompts or retrieved documents.</li>
+      <li><strong>Model drift:</strong> the model is static but its environment is not — new slang, new products, new regulations, seasonality, and upstream <em>API/model version changes</em> all move the ground truth out from under a fixed model or fixed prompt.</li>
+      <li><strong>Cascading failure:</strong> in pipelines (RAG → tool call → agent → agent), stages assume upstream correctness. A single hallucinated value, malformed tool output, or bad retrieval flows forward and is <em>amplified</em>, because no stage re-validates.</li>
+    </ul>
+
+    <h3>Real-World Examples</h3>
+    <ul>
+      <li><strong>Data leakage:</strong> employees paste proprietary source code into a chatbot; that context is retained/logged and later surfaces or is exposed — the 2023 corporate "don't paste secrets" bans stem from exactly this risk.</li>
+      <li><strong>Model drift:</strong> a support bot trained before a product rename keeps citing the old SKU names; accuracy silently decays over months as the catalog evolves.</li>
+      <li><strong>Cascading failure:</strong> a RAG step retrieves the wrong document → the summarizer confidently summarizes it → a downstream agent emails that summary to a customer. One retrieval error becomes a customer-facing error.</li>
+    </ul>
+
+    <h3>Visualization — Systemic Risk Comparison</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Table 54.2 — Systemic risks: how to tell them apart on exam scenarios.</caption>
+        <thead>
+          <tr><th>Risk</th><th>Signature Pattern</th><th>Time Dimension</th><th>Typical Trigger</th><th>Core Mitigation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Data Leakage</strong></td><td>Sensitive info exposed / extractable</td><td>Point-in-time or ongoing</td><td>Memorization, injection, logging</td><td>PII scrubbing, access control, output filtering, DLP</td></tr>
+          <tr><td><strong>Model Drift</strong></td><td>Quality <em>degrades gradually</em></td><td><strong>Slow, over weeks/months</strong></td><td>World changes; static weights/prompt</td><td>Monitoring, retraining/refresh, RAG for fresh facts</td></tr>
+          <tr><td><strong>Cascading Failure</strong></td><td>One fault propagates <em>across systems</em></td><td>Fast, chain-reaction</td><td>Unvalidated multi-stage pipeline</td><td>Validation gates, circuit breakers, human-in-the-loop</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <span class="title">💡 Tips &amp; Tricks</span>
+      Two-axis test to separate drift from cascade: ask <strong>"time or topology?"</strong>
+      <ul style="margin-bottom:0">
+        <li><strong>Time-based, gradual decay</strong> → <span class="mnem">DRIFT</span></li>
+        <li><strong>Structure-based, multi-component chain reaction</strong> → <span class="mnem">CASCADE</span></li>
+      </ul>
+      For leakage, remember <span class="mnem">2 doors</span>: data can leak <em>in</em> (training memorization) or <em>out</em> (inference/prompt-injection).
+    </div>
+
+    <div class="callout pitfall">
+      <span class="title">⚠️ Gotcha Distinction</span>
+      "Model drift" ≠ "concept drift" as a synonym trap. <strong>Data drift</strong> = the <em>inputs</em> change distribution; <strong>concept drift</strong> = the <em>relationship</em> between inputs and the correct output changes (e.g., what counts as "fraud" evolves). Both are species of model drift. Do not confuse either with cascading failure, which is not about time at all.
+    </div>
+
+    <div class="worked">
+      <div class="wtitle">🧠 Worked Example — Reasoning Walkthrough</div>
+      <div class="q"><strong>Question:</strong> "A deployed classification assistant's accuracy fell from 92% to 78% over six months, with no code or model changes." Is this model drift or cascading failure — and which sub-type?</div>
+      <ol class="steps">
+        <li><strong>Identify the key symptom:</strong> a <em>gradual</em> decline measured <em>over time</em> ("six months"), no structural chain of systems involved.</li>
+        <li><strong>Eliminate:</strong> cascading failure requires a multi-component chain reaction and is fast — no chain is described, so eliminate it.</li>
+        <li><strong>Refine the sub-type:</strong> if the <em>input mix</em> shifted (new user population), it's <strong>data drift</strong>; if the <em>definition of the right label</em> shifted, it's <strong>concept drift</strong>. The stem's "world moved on" framing points to drift generally.</li>
+        <li><strong>Conclude:</strong> time-based degradation = model drift; specify data vs. concept from the described cause.</li>
+      </ol>
+      <div class="answer"><b>Answer:</b> Model drift (choose data- or concept-drift per the stated cause). Mitigation: monitoring + scheduled retraining/refresh, and RAG for time-sensitive facts.</div>
+    </div>
+
+    <div class="callout strategy">
+      <span class="title">🎯 Exam Strategy — 54.2</span>
+      This is the classic "which systemic risk" scenario question. Anchor on two keywords:
+      <ul style="margin-bottom:0">
+        <li><em>"degrades over time / months / gradually"</em> = <strong>model drift</strong>.</li>
+        <li><em>"one output fed the next / multi-agent / propagated"</em> = <strong>cascading failure</strong>.</li>
+        <li><em>"exposed / extracted / disclosed sensitive data"</em> = <strong>data leakage</strong>.</li>
+      </ul>
+      If a mitigation is asked: drift→<em>monitor + retrain</em>; cascade→<em>validation gates / circuit breaker / human-in-loop</em>; leakage→<em>DLP / PII scrubbing / output filtering</em>.
+    </div>
+  </section>
+
+  <!-- ===================== 54.3 ===================== -->
+  <section id="s543">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">54.3</span>
+    <h2>Risk Assessment Frameworks for AI Systems</h2>
+
+    <h3>Core Definitions</h3>
+    <div class="defn"><span class="term">NIST AI RMF</span> — the U.S. National Institute of Standards and Technology <em>AI Risk Management Framework</em> (1.0, released Jan 2023). A voluntary, outcome-based framework built on four core functions: <strong>Govern, Map, Measure, Manage</strong>.</div>
+    <div class="defn"><span class="term">MITRE ATLAS</span> — <em>Adversarial Threat Landscape for Artificial-Intelligence Systems</em>: a knowledge base of real-world adversarial tactics and techniques (TTPs) against ML systems, structured like MITRE ATT&amp;CK.</div>
+    <div class="defn"><span class="term">OWASP Top 10 for LLM Applications</span> — a community-maintained list of the most critical LLM security risks (e.g., prompt injection, sensitive information disclosure, insecure output handling, excessive agency, overreliance).</div>
+    <div class="defn"><span class="term">ISO/IEC 42001</span> — an international management-system standard for AI, providing organizational governance requirements (auditable, certifiable), complementary to the NIST AI RMF.</div>
+
+    <h3>Conceptual Explanation — What Each Is For</h3>
+    <ul>
+      <li><strong>NIST AI RMF</strong> → <em>organizational, lifecycle risk governance</em>. Best answer when a question asks how to <em>structure and manage</em> AI risk end-to-end.</li>
+      <li><strong>MITRE ATLAS</strong> → <em>adversarial / threat modeling</em>. Best answer for attacker TTPs (evasion, poisoning, model extraction, inference attacks).</li>
+      <li><strong>OWASP Top 10 for LLM</strong> → <em>application security checklist</em> for LLM apps. Best answer for concrete app vulns like prompt injection.</li>
+      <li><strong>ISO/IEC 42001</strong> → <em>certifiable management system</em> for governance/compliance and audits.</li>
+    </ul>
+
+    <h3>Visualization — NIST AI RMF Core Functions</h3>
+    <div class="cards">
+      <div class="fcard govern"><h5>GOVERN</h5><p>Cultivate a culture of risk management — policies, roles, accountability. The cross-cutting function that informs all others.</p></div>
+      <div class="fcard map"><h5>MAP</h5><p>Establish context and identify risks — intended use, stakeholders, and where harms could arise.</p></div>
+      <div class="fcard measure"><h5>MEASURE</h5><p>Analyze, assess, and track identified risks using quantitative and qualitative methods and metrics.</p></div>
+      <div class="fcard manage"><h5>MANAGE</h5><p>Prioritize and act on risks — allocate resources, apply mitigations, respond, and recover.</p></div>
+    </div>
+
+    <h3>Visualization — Framework Selection Flow</h3>
+    <div class="flow">
+      <div class="step"><span class="n">START</span><span class="t">What's the goal?</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">Path A</span><span class="t">Govern org-wide AI risk</span><span class="d">Lifecycle &amp; accountability</span></div>
+      <div class="arrow">→</div>
+      <div class="step" style="border-color:var(--violet)"><span class="n">USE</span><span class="t" style="color:var(--violet)">NIST AI RMF</span><span class="d">(or ISO 42001 to certify)</span></div>
+    </div>
+    <div class="flow">
+      <div class="step"><span class="n">Path B</span><span class="t">Model an attacker</span><span class="d">Poisoning, evasion, extraction</span></div>
+      <div class="arrow">→</div>
+      <div class="step" style="border-color:var(--red)"><span class="n">USE</span><span class="t" style="color:var(--red)">MITRE ATLAS</span><span class="d">Adversarial TTPs</span></div>
+      <div class="arrow" style="opacity:.35">→</div>
+      <div class="step"><span class="n">Path C</span><span class="t">Secure an LLM app</span><span class="d">Prompt injection, output handling</span></div>
+      <div class="arrow">→</div>
+      <div class="step" style="border-color:var(--teal)"><span class="n">USE</span><span class="t" style="color:var(--teal)">OWASP LLM Top 10</span><span class="d">App-layer checklist</span></div>
+    </div>
+
+    <h3>Visualization — Framework Comparison Table</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Table 54.3 — Choosing the right framework by intent.</caption>
+        <thead>
+          <tr><th>Framework</th><th>Primary Purpose</th><th>Structure</th><th>Best Exam Cue</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>NIST AI RMF</strong></td><td>Lifecycle risk governance</td><td>Govern · Map · Measure · Manage</td><td>"manage AI risk across the lifecycle / organization"</td></tr>
+          <tr><td><strong>MITRE ATLAS</strong></td><td>Adversarial threat modeling</td><td>Tactics &amp; techniques (ATT&amp;CK-style)</td><td>"attacker", "poisoning", "model extraction"</td></tr>
+          <tr><td><strong>OWASP Top 10 (LLM)</strong></td><td>LLM app security risks</td><td>Ranked vulnerability list</td><td>"prompt injection", "insecure output", "excessive agency"</td></tr>
+          <tr><td><strong>ISO/IEC 42001</strong></td><td>AI management system (certifiable)</td><td>Management-system requirements</td><td>"certification", "audit", "governance standard"</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <span class="title">💡 Tips &amp; Tricks — Mnemonic for NIST RMF</span>
+      Order the four functions with <span class="mnem">G-M-M-M</span> → <strong>"Govern, then Map, Measure, Manage."</strong> Memory hook: <em>"Good Managers Measure &amp; Manage."</em> <strong>Govern is cross-cutting</strong> — it wraps and informs the other three, so it is listed first and is never "just one more step."
+    </div>
+
+    <div class="callout pitfall">
+      <span class="title">⚠️ Gotcha Distinctions</span>
+      <ul style="margin-bottom:0">
+        <li><strong>ATLAS vs. ATT&amp;CK:</strong> ATT&amp;CK is general enterprise cyber; <strong>ATLAS</strong> is the AI/ML-specific extension. Pick ATLAS whenever the target is a <em>model</em>.</li>
+        <li><strong>NIST RMF vs. OWASP:</strong> RMF governs <em>organizational risk</em>; OWASP is a concrete <em>application vulnerability</em> list. A "prompt injection" question is OWASP, not RMF.</li>
+        <li>Do <strong>not</strong> invent "Anthropic's official risk framework" — none is required here; describe practices generically.</li>
+      </ul>
+    </div>
+
+    <div class="worked">
+      <div class="wtitle">🧠 Worked Example — Reasoning Walkthrough</div>
+      <div class="q"><strong>Question:</strong> A security team wants to catalog how attackers might poison training data and extract a proprietary model. Which framework best fits, and why not the others?</div>
+      <ol class="steps">
+        <li><strong>Identify the key intent:</strong> the words <em>"attackers", "poison", "extract a model"</em> = adversarial threat modeling.</li>
+        <li><strong>Eliminate:</strong> NIST AI RMF is governance, not an attacker catalog. OWASP LLM Top 10 is app-layer (prompt injection etc.), broader than training-data poisoning of ML pipelines. ISO 42001 is a management standard, not a TTP library.</li>
+        <li><strong>Match:</strong> a knowledge base of adversarial <em>tactics &amp; techniques</em> against ML = <strong>MITRE ATLAS</strong>.</li>
+      </ol>
+      <div class="answer"><b>Answer:</b> MITRE ATLAS — it is the ATT&amp;CK-style catalog of adversarial TTPs specifically for AI/ML systems.</div>
+    </div>
+
+    <div class="callout strategy">
+      <span class="title">🎯 Exam Strategy — 54.3</span>
+      Map the <strong>verb</strong> in the stem to the framework: <em>"govern / manage lifecycle"</em>→NIST AI RMF; <em>"attack / adversary / poison / extract"</em>→MITRE ATLAS; <em>"secure the app / prompt injection"</em>→OWASP LLM Top 10; <em>"certify / audit management system"</em>→ISO 42001. If asked for the RMF functions, they must be exactly four and in order (Govern, Map, Measure, Manage) — an option listing three, or reordering them, is a distractor.
+    </div>
+  </section>
+
+  <!-- ===================== 54.4 ===================== -->
+  <section id="s544">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">54.4</span>
+    <h2>Building Failure Mode Inventories</h2>
+
+    <h3>Core Definitions</h3>
+    <div class="defn"><span class="term">Failure Mode Inventory</span> — a structured, living catalog of the ways a system can fail: each entry records the failure mode, its cause, potential effect/harm, likelihood, impact, detectability, and mitigation/owner.</div>
+    <div class="defn"><span class="term">FMEA (Failure Mode and Effects Analysis)</span> — a systematic method for enumerating failure modes and prioritizing them via a <strong>Risk Priority Number (RPN) = Severity × Occurrence × Detection</strong>, where each factor is typically scored 1–10.</div>
+    <div class="defn"><span class="term">Risk Register</span> — the governance artifact that tracks each risk's status, owner, score, and mitigation over time. A failure mode inventory feeds the risk register.</div>
+    <div class="defn"><span class="term">Red Teaming</span> — structured adversarial probing of a model to <em>discover</em> failure modes (jailbreaks, harmful outputs, leakage) that then populate the inventory.</div>
+
+    <h3>Conceptual Explanation — How to Build One</h3>
+    <p>An inventory is only useful if it is <strong>systematic, prioritized, and maintained</strong>. The workflow:</p>
+    <ol>
+      <li><strong>Enumerate</strong> failure modes from multiple sources: taxonomy (54.1/54.2), red-team findings, incident logs, and framework checklists (OWASP LLM Top 10, ATLAS).</li>
+      <li><strong>Characterize</strong> each: cause → mechanism → effect/harm → affected stakeholder.</li>
+      <li><strong>Score</strong> each on <em>Severity</em>, <em>Occurrence/Likelihood</em>, and <em>Detection</em> (FMEA) — or Likelihood × Impact (risk matrix).</li>
+      <li><strong>Prioritize</strong> by RPN (or matrix zone) — highest first.</li>
+      <li><strong>Assign</strong> a mitigation and an owner; record residual risk.</li>
+      <li><strong>Maintain</strong> — revisit as the model, data, and threat landscape evolve (ties back to drift).</li>
+    </ol>
+
+    <div class="callout note">
+      <span class="title">🔎 FMEA in one line</span>
+      <code>RPN = Severity (1–10) × Occurrence (1–10) × Detection (1–10)</code> → higher RPN = higher priority. Note the counter-intuitive twist: <strong>higher Detection score = harder to detect</strong> (worse), so it correctly <em>raises</em> the RPN.
+    </div>
+
+    <h3>Visualization — Failure Mode Inventory (Example Excerpt)</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Table 54.4 — A worked FMEA-style inventory excerpt for an LLM customer-support agent (S/O/D scored 1–10; RPN = S×O×D).</caption>
+        <thead>
+          <tr><th>ID</th><th>Failure Mode</th><th>Effect / Harm</th><th>S</th><th>O</th><th>D</th><th>RPN</th><th>Mitigation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>FM-01</td><td>Hallucinated policy detail</td><td>Wrong info to customer; liability</td><td>8</td><td>6</td><td>7</td><td><strong>336</strong></td><td>RAG grounding + citation; confidence gating</td></tr>
+          <tr><td>FM-02</td><td>Prompt-injection data leak</td><td>System prompt / PII disclosed</td><td>9</td><td>4</td><td>6</td><td><strong>216</strong></td><td>Input/output filtering; least-privilege tools</td></tr>
+          <tr><td>FM-03</td><td>Sycophantic incorrect confirmation</td><td>Validates a customer's wrong claim</td><td>6</td><td>5</td><td>5</td><td><strong>150</strong></td><td>Ground-truth check; discourage agreement bias</td></tr>
+          <tr><td>FM-04</td><td>Cascading error in agent chain</td><td>Bad retrieval emailed to customer</td><td>7</td><td>3</td><td>4</td><td><strong>84</strong></td><td>Validation gate before send; human-in-loop</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <span class="title">💡 Tips &amp; Tricks — Mnemonic</span>
+      FMEA scoring factors = <span class="mnem">SOD</span> → <strong>Severity, Occurrence, Detection.</strong> Multiply, don't add. And remember the <strong>Detection inversion</strong>: 10 = "we'd almost never catch it" (bad, raises priority); 1 = "we always catch it" (good).
+    </div>
+
+    <div class="callout pitfall">
+      <span class="title">⚠️ Common Pitfalls</span>
+      <ul style="margin-bottom:0">
+        <li>Treating the inventory as a one-time document — it must be <strong>living</strong> (revisit as drift/threats evolve).</li>
+        <li>Confusing <strong>likelihood × impact</strong> (risk matrix) with <strong>S×O×D</strong> (FMEA) — both are valid but distinct scoring schemes.</li>
+        <li>Scoring Detection backwards — high Detection number means <em>low</em> detectability.</li>
+      </ul>
+    </div>
+
+    <div class="callout strategy">
+      <span class="title">🎯 Exam Strategy — 54.4</span>
+      Expect a definition/calculation question. If given S, O, and D values, compute <code>RPN = S×O×D</code> and pick the option with the correct product (watch for a distractor that <em>adds</em> them). If asked "what makes an inventory effective," the correct answer emphasizes it being <strong>prioritized</strong> and <strong>continuously maintained</strong>, with clear <strong>owners</strong> — not merely "comprehensive."
+    </div>
+  </section>
+
+  <!-- ===================== 54.5 ===================== -->
+  <section id="s545">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">54.5</span>
+    <h2>Hands-On: Conducting a Risk Assessment</h2>
+
+    <p>This section ties 54.1–54.4 together into an end-to-end procedure and the risk matrix used to prioritize.</p>
+
+    <h3>Visualization — Risk Assessment Process Flow</h3>
+    <div class="flow">
+      <div class="step"><span class="n">1</span><span class="t">Scope</span><span class="d">Define system, use case &amp; boundaries</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">2</span><span class="t">Identify</span><span class="d">Assets, stakeholders &amp; potential harms</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">3</span><span class="t">Enumerate</span><span class="d">Failure modes (taxonomy + red team)</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">4</span><span class="t">Assess</span><span class="d">Score likelihood × impact</span></div>
+    </div>
+    <div class="flow">
+      <div class="step"><span class="n">5</span><span class="t">Prioritize</span><span class="d">Rank by matrix zone / RPN</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">6</span><span class="t">Mitigate</span><span class="d">Assign controls &amp; owners</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="n">7</span><span class="t">Monitor</span><span class="d">Track residual risk; re-assess</span></div>
+      <div class="arrow">→</div>
+      <div class="step" style="border-color:var(--green)"><span class="n">LOOP</span><span class="t" style="color:var(--green)">Iterate</span><span class="d">Continuous, ties to drift</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:6px">This maps cleanly onto NIST AI RMF: <strong>Map</strong> (steps 1–3) → <strong>Measure</strong> (steps 4–5) → <strong>Manage</strong> (steps 6–7), all under <strong>Govern</strong>.</p>
+
+    <h3>Visualization — Likelihood × Impact Risk Matrix</h3>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <tbody><tr>
+          <td class="corner"></td>
+          <th class="axis" colspan="4">Impact →</th>
+        </tr>
+        <tr>
+          <td class="corner" style="min-width:90px"><em>Likelihood ↓</em></td>
+          <th class="axis">Low</th><th class="axis">Moderate</th><th class="axis">High</th><th class="axis">Severe</th>
+        </tr>
+        <tr>
+          <th class="axis">Almost&nbsp;Certain</th>
+          <td class="cell med">Medium</td><td class="cell hi">High</td><td class="cell crit">Critical</td><td class="cell crit">Critical</td>
+        </tr>
+        <tr>
+          <th class="axis">Likely</th>
+          <td class="cell lo">Low</td><td class="cell med">Medium</td><td class="cell hi">High</td><td class="cell crit">Critical</td>
+        </tr>
+        <tr>
+          <th class="axis">Possible</th>
+          <td class="cell lo">Low</td><td class="cell med">Medium</td><td class="cell hi">High</td><td class="cell hi">High</td>
+        </tr>
+        <tr>
+          <th class="axis">Rare</th>
+          <td class="cell lo">Low</td><td class="cell lo">Low</td><td class="cell med">Medium</td><td class="cell hi">High</td>
+        </tr>
+      </tbody></table>
+      <div class="legend">
+        <span><i class="swatch lo"></i>Low — accept / monitor</span>
+        <span><i class="swatch med"></i>Medium — mitigate when feasible</span>
+        <span><i class="swatch hi"></i>High — active mitigation required</span>
+        <span><i class="swatch crit"></i>Critical — block / escalate now</span>
+      </div>
+    </div>
+
+    <div class="worked">
+      <div class="wtitle">🧠 Worked Example — Full Mini Risk Assessment</div>
+      <div class="q"><strong>Question:</strong> You are assessing an LLM agent that drafts and auto-sends refund emails using retrieved account data. Rate the risk of "hallucinated refund amount is auto-sent to a customer," and decide the response.</div>
+      <ol class="steps">
+        <li><strong>Scope &amp; asset:</strong> customer-facing financial communication; asset = trust + money; harm = wrong refund promised.</li>
+        <li><strong>Failure mode:</strong> hallucination (ungrounded figure) potentially amplified by a <em>cascading</em> auto-send with no gate.</li>
+        <li><strong>Likelihood:</strong> "Possible" — grounding reduces but doesn't eliminate fabricated numbers.</li>
+        <li><strong>Impact:</strong> "Severe" — financial + reputational, customer-facing, hard to retract.</li>
+        <li><strong>Matrix lookup:</strong> Possible × Severe → <strong>High</strong>.</li>
+        <li><strong>Response:</strong> since it is High and customer-facing, add a <em>validation gate + human-in-the-loop approval</em> before auto-send (breaks the cascade), plus RAG grounding and output verification.</li>
+      </ol>
+      <div class="answer"><b>Answer:</b> High risk → require human-in-the-loop approval + grounding before send; do not allow unguarded auto-send.</div>
+    </div>
+
+    <div class="callout tip">
+      <span class="title">💡 Tips &amp; Tricks</span>
+      Memorize the matrix rule: <strong>risk zone rises with <em>either</em> axis</strong>, and <strong>Impact usually dominates</strong> for safety-critical/customer-facing systems — a <em>rare-but-severe</em> event is still High, not Low. When in doubt on customer-facing harm, escalate the zone.
+    </div>
+
+    <div class="callout strategy">
+      <span class="title">🎯 Exam Strategy — 54.5</span>
+      Scenario questions give a likelihood word and an impact word — locate the cell in the matrix and pick the matching zone. Watch for the trap where a <em>low-likelihood, severe-impact</em> item is offered as "Low risk" — for safety-critical systems the correct choice weights impact and lands at <strong>High</strong>. When asked "what next," the highest-scoring answer usually adds a <strong>control that breaks the failure chain</strong> (validation gate, human-in-the-loop) rather than "retrain the model."
+    </div>
+  </section>
+
+  <!-- ===================== SUMMARY ===================== -->
+  <section id="summary">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">★ Recap</span>
+    <h2>Chapter 54 — Quick-Reference Summary Table</h2>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Consolidated key terms, definitions, and frameworks across 54.1–54.5.</caption>
+        <thead>
+          <tr><th>§</th><th>Term / Framework</th><th>One-Line Definition</th><th>Key Cue / Formula</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>54.1</td><td><strong>Hallucination</strong></td><td>Confident, ungrounded, false output</td><td>"invented fact / fake citation"</td></tr>
+          <tr><td>54.1</td><td><strong>Confabulation</strong></td><td>Plausible fabrication filling a context gap</td><td>"detail was never provided"</td></tr>
+          <tr><td>54.1</td><td><strong>Sycophancy</strong></td><td>Agreeing with the user over the truth</td><td>"user pushed back → model flipped" (RLHF)</td></tr>
+          <tr><td>54.2</td><td><strong>Data Leakage</strong></td><td>Sensitive data exposed / extractable</td><td>Leak in (memorize) or out (injection)</td></tr>
+          <tr><td>54.2</td><td><strong>Model Drift</strong></td><td>Gradual performance decay over time</td><td>Data drift vs. concept drift</td></tr>
+          <tr><td>54.2</td><td><strong>Cascading Failure</strong></td><td>Fault propagates across chained systems</td><td>"one output fed the next"</td></tr>
+          <tr><td>54.3</td><td><strong>NIST AI RMF</strong></td><td>Lifecycle AI risk governance</td><td>Govern · Map · Measure · Manage</td></tr>
+          <tr><td>54.3</td><td><strong>MITRE ATLAS</strong></td><td>Adversarial TTP knowledge base for AI</td><td>ATT&amp;CK for ML; "attacker"</td></tr>
+          <tr><td>54.3</td><td><strong>OWASP LLM Top 10</strong></td><td>LLM app security risk list</td><td>"prompt injection", "excessive agency"</td></tr>
+          <tr><td>54.3</td><td><strong>ISO/IEC 42001</strong></td><td>Certifiable AI management system</td><td>"audit / certify governance"</td></tr>
+          <tr><td>54.4</td><td><strong>FMEA</strong></td><td>Failure enumeration + prioritization</td><td><code>RPN = S × O × D</code></td></tr>
+          <tr><td>54.4</td><td><strong>Failure Mode Inventory</strong></td><td>Living, prioritized catalog of failures</td><td>Cause→effect→score→owner</td></tr>
+          <tr><td>54.4</td><td><strong>Red Teaming</strong></td><td>Adversarial probing to discover failures</td><td>Feeds the inventory</td></tr>
+          <tr><td>54.5</td><td><strong>Risk Matrix</strong></td><td>Prioritize by likelihood × impact</td><td>Rare+Severe can still = High</td></tr>
+          <tr><td>54.5</td><td><strong>Assessment Loop</strong></td><td>Scope→Identify→Enumerate→Assess→Prioritize→Mitigate→Monitor</td><td>Maps to Map/Measure/Manage</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== TRAPS ===================== -->
+  <section id="traps">
+    <a class="backtop" href="#top">↑ Top</a>
+    <span class="sec-tag">★ High-Yield</span>
+    <h2>Top 10 Exam Traps — Chapter 54</h2>
+    <ol class="traps">
+      <li><strong>Confabulation vs. hallucination.</strong> They are not mutually exclusive — confabulation <em>is</em> hallucination that fills a missing-context gap. The discriminator is "was a gap being filled?"</li>
+      <li><strong>Sycophancy attributed to the wrong cause.</strong> Its root cause is <strong>RLHF / human-approval optimization</strong>, not data staleness or prompt ambiguity.</li>
+      <li><strong>Drift vs. cascading failure.</strong> Time-based gradual decay = drift; structural multi-component chain reaction = cascade. Don't let "failure over time" bait you into "cascade."</li>
+      <li><strong>Data drift vs. concept drift.</strong> Inputs shift = data drift; the input→correct-output relationship shifts = concept drift. Both are model drift.</li>
+      <li><strong>NIST RMF function count &amp; order.</strong> Exactly four — <strong>Govern, Map, Measure, Manage</strong> — with Govern cross-cutting. Options with three functions or a reordering are distractors.</li>
+      <li><strong>MITRE ATLAS vs. ATT&amp;CK.</strong> ATLAS is the AI/ML-specific one. If the target is a model, choose ATLAS.</li>
+      <li><strong>OWASP vs. NIST for prompt injection.</strong> Prompt injection is an <strong>OWASP LLM Top 10</strong> application vuln, not a NIST RMF "function."</li>
+      <li><strong>FMEA math.</strong> <code>RPN = S × O × D</code> (multiply, not add), and a <em>high Detection score means low detectability</em> (harder to catch → higher priority).</li>
+      <li><strong>Rare-but-severe ≠ Low risk.</strong> On safety-critical/customer-facing systems, impact dominates — a rare, severe event is typically <strong>High</strong>.</li>
+      <li><strong>"Retrain the model" isn't always the answer.</strong> For cascading/customer-facing risks, the best control often <strong>breaks the failure chain</strong> (validation gate, human-in-the-loop), not retraining.</li>
+    </ol>
+  </section>
+
+  <footer>
+    Chapter 54 · Risk Identification &amp; Failure Modes — study notes for revision. Frameworks referenced (NIST AI RMF, MITRE ATLAS, OWASP Top 10 for LLM Applications, ISO/IEC 42001) are described per publicly documented usage.
+  </footer>
+
+</div>
+
+
+</body></html>

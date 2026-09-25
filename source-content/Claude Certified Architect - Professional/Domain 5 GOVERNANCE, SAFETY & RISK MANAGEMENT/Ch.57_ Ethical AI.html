@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 57: Ethical AI Considerations - Study Notes</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1a2233;
+    --text-soft: #4a5568;
+    --muted: #718096;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e0;
+    --primary: #5b3fd6;
+    --primary-soft: #ede9fd;
+    --accent: #0b7285;
+    --tip: #0b7285;
+    --tip-bg: #e6f5f7;
+    --strategy: #b45309;
+    --strategy-bg: #fdf3e2;
+    --pitfall: #c0392b;
+    --pitfall-bg: #fdeceb;
+    --ok: #2f855a;
+    --ok-bg: #e6f4ec;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", "Consolas", "Menlo", monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 28px 80px;
+  }
+
+  /* ---------- Header ---------- */
+  header.doc-head {
+    background: linear-gradient(135deg, #5b3fd6 0%, #7c5cf0 55%, #0b7285 140%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 34px 34px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 26px rgba(91, 63, 214, 0.22);
+  }
+  header.doc-head .kicker {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    font-weight: 600;
+  }
+  header.doc-head h1 {
+    margin: 8px 0 6px;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #fff;
+  }
+  header.doc-head p {
+    margin: 6px 0 0;
+    opacity: 0.92;
+    font-size: 15px;
+    max-width: 640px;
+  }
+  .exam-badge {
+    display: inline-block;
+    margin-top: 14px;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+
+  /* ---------- Table of Contents ---------- */
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-bottom: 34px;
+  }
+  nav.toc h2 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    border: none;
+    padding: 0;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+    column-gap: 32px;
+  }
+  nav.toc li { margin: 6px 0; break-inside: avoid; }
+  nav.toc a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14.5px;
+  }
+  nav.toc a:hover { text-decoration: underline; }
+
+  /* ---------- Sections ---------- */
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 30px;
+    scroll-margin-top: 20px;
+  }
+  h2.sec-title {
+    font-size: 23px;
+    margin: 0 0 4px;
+    color: var(--text);
+    border-bottom: 3px solid var(--primary-soft);
+    padding-bottom: 12px;
+  }
+  h2.sec-title .num {
+    color: var(--primary);
+    font-family: var(--mono);
+    margin-right: 6px;
+  }
+  h3 {
+    font-size: 17px;
+    margin: 26px 0 10px;
+    color: var(--accent);
+  }
+  h4 {
+    font-size: 14.5px;
+    margin: 18px 0 6px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  strong { color: var(--text); }
+  code {
+    font-family: var(--mono);
+    background: #eef1f6;
+    padding: 1.5px 5px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    color: #b7295a;
+  }
+  .lead {
+    font-size: 15px;
+    color: var(--text-soft);
+    background: #f4f2fd;
+    border-left: 4px solid var(--primary);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 4px 0 18px;
+  }
+
+  /* ---------- Pedagogical Boxes ---------- */
+  .box {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14.5px;
+    border: 1px solid;
+    position: relative;
+  }
+  .box .box-title {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  .tip-box     { background: var(--tip-bg);      border-color: #bfe6ec; }
+  .tip-box .box-title     { color: var(--tip); }
+  .exam-strategy { background: var(--strategy-bg); border-color: #f3dcae; }
+  .exam-strategy .box-title { color: var(--strategy); }
+  .pitfall-box { background: var(--pitfall-bg);  border-color: #f3c6c1; }
+  .pitfall-box .box-title { color: var(--pitfall); }
+
+  /* ---------- Tables ---------- */
+  .table-scroll { overflow-x: auto; margin: 16px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 520px;
+  }
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    padding-bottom: 8px;
+  }
+  th {
+    background: var(--primary-soft);
+    color: #3f2ba0;
+    text-align: left;
+    font-weight: 600;
+    padding: 10px 12px;
+    border: 1px solid var(--border-strong);
+    vertical-align: top;
+  }
+  td {
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text-soft);
+  }
+  tbody tr:nth-child(even) td { background: #fafbfd; }
+
+  /* ---------- Flowchart ---------- */
+  .flowchart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0;
+    margin: 18px 0;
+  }
+  .flowchart .step {
+    background: var(--primary-soft);
+    border: 1.5px solid #b9a7f0;
+    color: #3f2ba0;
+    border-radius: 9px;
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1 1 120px;
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flowchart .step .step-n {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: #5b3fd6;
+    color: #fff;
+    border-radius: 100px;
+    width: 20px; height: 20px;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+  .flowchart .arrow {
+    display: flex;
+    align-items: center;
+    color: var(--muted);
+    font-size: 20px;
+    padding: 0 6px;
+    font-weight: 700;
+  }
+
+  /* ---------- CSS Bar Chart ---------- */
+  .barchart { margin: 16px 0; }
+  .barchart .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+    font-size: 13px;
+  }
+  .barchart .bar-label { flex: 0 0 150px; color: var(--text-soft); }
+  .barchart .bar-track {
+    flex: 1;
+    background: #eef1f6;
+    border-radius: 100px;
+    height: 22px;
+    overflow: hidden;
+  }
+  .barchart .bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 600;
+    font-family: var(--mono);
+  }
+
+  /* ---------- Checklist ---------- */
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+    margin: 14px 0;
+  }
+  .checklist li {
+    padding: 8px 12px 8px 38px;
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 6px 0;
+    background: #fafbfd;
+    font-size: 14px;
+  }
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 13px;
+    top: 7px;
+    font-size: 16px;
+    color: var(--primary);
+  }
+
+  /* ---------- Key term chips ---------- */
+  .chip {
+    display: inline-block;
+    background: #eef1f6;
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    padding: 2px 10px;
+    font-size: 12px;
+    margin: 3px 4px 3px 0;
+    color: var(--text-soft);
+  }
+
+  /* ---------- Summary ---------- */
+  .summary { border-top: 4px solid var(--primary); }
+  .recap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .recap-card {
+    background: #faf9ff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .recap-card h4 {
+    margin: 0 0 6px;
+    color: var(--primary);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+  .recap-card p { font-size: 13px; margin: 0; color: var(--text-soft); }
+
+  footer.doc-foot {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .back-top {
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    float: right;
+    margin-top: 4px;
+  }
+  .back-top:hover { text-decoration: underline; }
+
+  @media (max-width: 620px) {
+    nav.toc ol { columns: 1; }
+    .flowchart .arrow { transform: rotate(90deg); width: 100%; padding: 4px 0; }
+    .flowchart { flex-direction: column; }
+    header.doc-head h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc-head">
+    <div class="kicker">Claude Certified Architect · Foundations &amp; Professional</div>
+    <h1>Chapter 57: Ethical AI Considerations</h1>
+    <p>Exam-ready study notes covering bias, fairness, transparency, responsible-AI governance, and a hands-on bias audit workflow for LLM deployments.</p>
+    <span class="exam-badge">🎓 5 sub-topics · scenario &amp; best-practice question focus</span>
+  </header>
+
+  <!-- ============ TABLE OF CONTENTS ============ -->
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1">Bias Detection &amp; Mitigation in LLM Outputs</a></li>
+      <li><a href="#s2">Fairness: Equitable Outcomes Across Groups</a></li>
+      <li><a href="#s3">Transparency: Explaining AI Decisions</a></li>
+      <li><a href="#s4">Responsible AI Frameworks &amp; Policies</a></li>
+      <li><a href="#s5">Hands-On: Conducting a Bias Audit</a></li>
+      <li><a href="#recap">Chapter Summary &amp; Quick-Reference Recap</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 57.1 ============ -->
+  <section id="s1">
+    <h2 class="sec-title"><span class="num">57.1</span> Bias Detection and Mitigation in LLM Outputs</h2>
+    <p class="lead">Bias in an LLM is any <strong>systematic</strong> skew in outputs that unfairly advantages or disadvantages a group, idea, or attribute. It enters through training data, model architecture, or the human feedback loop — and must be measured, not assumed.</p>
+
+    <h3>Types of Bias</h3>
+    <div class="table-scroll">
+    <table>
+      <caption>Common bias types on the exam — know the <em>source</em>, not just the name.</caption>
+      <thead>
+        <tr><th>Type</th><th>Where it comes from</th><th>LLM example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Representation / Sampling</strong></td><td>Training corpus over- or under-represents a group</td><td>Fewer texts in a language → weaker, error-prone responses for its speakers</td></tr>
+        <tr><td><strong>Historical</strong></td><td>Data faithfully reflects past inequities</td><td>Associating "nurse" with women, "engineer" with men</td></tr>
+        <tr><td><strong>Measurement</strong></td><td>The label or proxy is a poor stand-in for the real target</td><td>Using "arrest rate" as a proxy for "crime," encoding policing bias</td></tr>
+        <tr><td><strong>Aggregation</strong></td><td>One model applied to subgroups that behave differently</td><td>A single tone model that misreads dialect-specific phrasing</td></tr>
+        <tr><td><strong>Confirmation</strong></td><td>Model (or prompt) reinforces a pre-existing assumption</td><td>Leading prompts that elicit a stereotype the model then "agrees" with</td></tr>
+        <tr><td><strong>Automation</strong></td><td>Humans over-trust the model's output</td><td>Reviewer rubber-stamps an AI hiring recommendation without checking</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Detection Techniques</h3>
+    <ul>
+      <li><strong>Statistical parity checks</strong> — compare output rates (e.g., positive/negative sentiment, approval) across demographic slices.</li>
+      <li><strong>Counterfactual / output diffing</strong> — swap a sensitive attribute in an otherwise identical prompt (<code>"He is a great leader"</code> vs. <code>"She is a great leader"</code>) and diff the outputs.</li>
+      <li><strong>Prompt-based probing &amp; red-teaming</strong> — adversarial prompts designed to elicit biased or unsafe completions.</li>
+      <li><strong>Embedding association tests</strong> — e.g., <strong>WEAT</strong> (Word Embedding Association Test) measures stereotype strength in the vector space.</li>
+      <li><strong>Benchmark datasets</strong> — established bias probes such as <strong>BOLD</strong>, <strong>StereoSet</strong>, and <strong>BBQ</strong> (Bias Benchmark for QA).</li>
+    </ul>
+
+    <h3>Mitigation Strategies (across the lifecycle)</h3>
+    <div class="flowchart">
+      <div class="step"><span class="step-n">1</span>Pre-processing<br><small style="font-weight:400">Data curation &amp; balancing</small></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">2</span>In-training<br><small style="font-weight:400">Fine-tuning, RLHF, Constitutional AI</small></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">3</span>Post-processing<br><small style="font-weight:400">Output filtering &amp; guardrails</small></div>
+    </div>
+    <ul>
+      <li><strong>Data curation</strong> — de-duplicate, rebalance, and filter toxic/biased training data.</li>
+      <li><strong>Fine-tuning &amp; RLHF</strong> — align behavior with human preference signals; Anthropic's <strong>Constitutional AI</strong> uses a written set of principles to self-critique and revise outputs.</li>
+      <li><strong>System prompts &amp; guardrails</strong> — steer behavior at inference time and filter/refuse harmful outputs.</li>
+      <li><strong>Output filtering / classifiers</strong> — a secondary model screens generations before they reach the user.</li>
+    </ul>
+
+    <div class="box tip-box">
+      <span class="box-title">💡 Tips &amp; Tricks</span>
+      Remember the mitigation lifecycle as <strong>"PIP"</strong>: <em>P</em>re-process the data → <em>I</em>n-training alignment (RLHF/Constitutional AI) → <em>P</em>ost-process the output. Any single answer choice that "fixes bias with one step" is almost always wrong — bias is managed at multiple stages.
+    </div>
+    <div class="box exam-strategy">
+      <span class="box-title">🎯 Exam Strategy</span>
+      Questions often describe a symptom and ask for the <em>best</em> intervention. Map the symptom to the lifecycle stage: skewed <em>training data</em> → data curation; undesired <em>learned behavior</em> → fine-tuning/RLHF; a <em>leaked</em> harmful response → output filtering/guardrails. Match the fix to <strong>where</strong> the problem originates.
+    </div>
+    <div class="box pitfall-box">
+      <span class="box-title">⚠️ Common Pitfalls</span>
+      Don't confuse <strong>bias</strong> (a systematic, measurable skew) with <strong>variance</strong> or random error. Also, "remove the sensitive attribute" (fairness through unawareness) is a trap answer — proxies (ZIP code, name, language) let bias persist even after the attribute is dropped.
+    </div>
+  </section>
+
+  <!-- ============ 57.2 ============ -->
+  <section id="s2">
+    <h2 class="sec-title"><span class="num">57.2</span> Fairness: Ensuring Equitable Outcomes Across User Groups</h2>
+    <p class="lead">Fairness is not one metric — it is a family of <strong>mathematically distinct, often conflicting</strong> definitions. The exam tests whether you can pick the right definition for a scenario and reason about the trade-offs.</p>
+
+    <h3>Individual vs. Group Fairness</h3>
+    <ul>
+      <li><strong>Individual fairness</strong> — <em>similar individuals should receive similar outcomes</em> (treat like cases alike).</li>
+      <li><strong>Group fairness</strong> — outcomes should be statistically comparable <em>across</em> protected groups.</li>
+    </ul>
+
+    <h3>Group Fairness Metrics</h3>
+    <div class="table-scroll">
+    <table>
+      <caption>The three most-tested group-fairness definitions.</caption>
+      <thead>
+        <tr><th>Metric</th><th>What it equalizes</th><th>Use when…</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Demographic (statistical) parity</strong></td><td>Positive-outcome <em>rate</em> is equal across groups</td><td>You want equal <em>selection</em> regardless of ground truth (e.g., outreach)</td></tr>
+        <tr><td><strong>Equal opportunity</strong></td><td>True-positive rate (recall) is equal across groups</td><td>Missing a qualified person is the main harm (e.g., loan/hiring for the deserving)</td></tr>
+        <tr><td><strong>Equalized odds</strong></td><td>Both TPR <em>and</em> FPR are equal across groups</td><td>Both false negatives and false positives carry real cost</td></tr>
+        <tr><td><strong>Predictive parity</strong></td><td>Precision (PPV) is equal across groups</td><td>You care that a "positive" prediction means the same thing for everyone</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>The Core Trade-off (Impossibility)</h3>
+    <p>A foundational result (Kleinberg et al.; Chouldechova) shows that when base rates differ across groups, you <strong>cannot simultaneously satisfy</strong> demographic parity, equalized odds, and predictive parity — except in trivial cases. Choosing a fairness metric is therefore a <strong>value judgment</strong>, not a purely technical one.</p>
+
+    <h4>Illustrative: fairness–accuracy tension</h4>
+    <div class="barchart">
+      <div class="bar-row"><span class="bar-label">Accuracy-only model</span><div class="bar-track"><div class="bar-fill" style="width:92%; background:#5b3fd6;">92%</div></div></div>
+      <div class="bar-row"><span class="bar-label">Fairness-constrained</span><div class="bar-track"><div class="bar-fill" style="width:88%; background:#0b7285;">88%</div></div></div>
+      <div class="bar-row"><span class="bar-label">Disparity gap (lower = fairer)</span><div class="bar-track"><div class="bar-fill" style="width:14%; background:#c0392b;">↓</div></div></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:-4px;">Illustrative pattern only (not real benchmark data): enforcing a fairness constraint often trades a small amount of aggregate accuracy for a large reduction in group disparity.</p>
+
+    <div class="box tip-box">
+      <span class="box-title">💡 Tips &amp; Tricks</span>
+      Memorize the metrics with <strong>"D-E-E"</strong>: <em>D</em>emographic parity (equal <em>rate</em>), <em>E</em>qual opportunity (equal <em>TPR</em>), <em>E</em>qualized odds (equal <em>TPR + FPR</em>). Mnemonic bridge: <em>Opportunity = one rate (TPR); Odds = two rates (TPR &amp; FPR)</em>.
+    </div>
+    <div class="box exam-strategy">
+      <span class="box-title">🎯 Exam Strategy</span>
+      <strong>Elimination strategy for metric questions:</strong> read what harm the scenario emphasizes. If it stresses <em>qualified people being missed</em> → equal opportunity. If it stresses <em>equal representation regardless of qualification</em> → demographic parity. If it says "must balance both error types" → equalized odds. Eliminate any option that only equalizes one rate when the scenario names two.
+    </div>
+    <div class="box pitfall-box">
+      <span class="box-title">⚠️ Common Pitfalls</span>
+      The classic trap: assuming you can "just satisfy all fairness metrics at once." The impossibility theorem forbids it under differing base rates. Also don't equate <strong>demographic parity</strong> with "fair" universally — enforcing equal rates can force unqualified selections and is inappropriate when ground-truth qualification legitimately differs.
+    </div>
+  </section>
+
+  <!-- ============ 57.3 ============ -->
+  <section id="s3">
+    <h2 class="sec-title"><span class="num">57.3</span> Transparency: Explaining AI Decisions to Stakeholders</h2>
+    <p class="lead">Transparency means stakeholders can understand <em>what</em> a system does, <em>why</em> it produced an output, and <em>what its limits are</em> — communicated at the right level for each audience.</p>
+
+    <h3>Explainability vs. Interpretability</h3>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th></th><th>Interpretability</th><th>Explainability</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Definition</strong></td><td>The degree to which a human can <em>inherently</em> understand the model's mechanics</td><td><em>Post-hoc</em> techniques that explain a specific decision after the fact</td></tr>
+        <tr><td><strong>Typical model</strong></td><td>Simple/"glass-box" (linear, decision tree)</td><td>Complex "black-box" (deep nets, LLMs)</td></tr>
+        <tr><td><strong>Example</strong></td><td>Reading a decision tree's rules directly</td><td>SHAP/LIME feature attributions; chain-of-thought rationales</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><em>Rule of thumb:</em> interpretability is a <strong>property of the model</strong>; explainability is a <strong>tool applied to the model</strong>.</p>
+
+    <h3>Techniques &amp; Artifacts</h3>
+    <ul>
+      <li><strong>Model Cards</strong> (Mitchell et al., 2019) — document intended use, performance across groups, and limitations.</li>
+      <li><strong>Datasheets for Datasets</strong> (Gebru et al.) — document a dataset's provenance, composition, and collection process.</li>
+      <li><strong>System Cards</strong> — model-provider documents (used by Anthropic/OpenAI) describing capabilities, safety evaluations, and risks.</li>
+      <li><strong>Decision / audit logs</strong> — record inputs, outputs, model version, and rationale for traceability.</li>
+      <li><strong>Feature attribution</strong> — <strong>SHAP</strong> (Shapley-value based) and <strong>LIME</strong> (local surrogate) for per-prediction explanations.</li>
+      <li><strong>Natural-language explanations &amp; chain-of-thought</strong> — human-readable reasoning (with the caveat that stated reasoning may not equal true internal process).</li>
+    </ul>
+
+    <h3>Stakeholder-Specific Communication</h3>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Audience</th><th>What they need</th><th>Best artifact</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ML engineers / data scientists</td><td>Mechanics, metrics, failure modes</td><td>SHAP plots, model card metrics, eval reports</td></tr>
+        <tr><td>Executives / product</td><td>Risk, business impact, limits</td><td>Model card summary, risk register</td></tr>
+        <tr><td>End users / affected people</td><td>Plain-language reason &amp; recourse</td><td>Natural-language explanation, appeal path</td></tr>
+        <tr><td>Regulators / auditors</td><td>Traceability &amp; compliance evidence</td><td>Decision logs, datasheets, governance records</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="box tip-box">
+      <span class="box-title">💡 Tips &amp; Tricks</span>
+      Split the words to remember them: <strong>Interpret</strong>ability = the model is <em>inherently</em> readable (built-in). <strong>Explain</strong>ability = you <em>explain</em> a black box <em>afterward</em>. "Inherent = Interpretable, After-the-fact = Explainable."
+    </div>
+    <div class="box exam-strategy">
+      <span class="box-title">🎯 Exam Strategy</span>
+      When a question names an <strong>audience</strong>, match the explanation depth to it. A non-technical stakeholder never needs SHAP values — pick plain-language / model-card summaries. Answers that give regulators "a chain-of-thought log" or end users "raw attribution scores" are distractors that mismatch audience and artifact.
+    </div>
+    <div class="box pitfall-box">
+      <span class="box-title">⚠️ Common Pitfalls</span>
+      Treating a model's chain-of-thought as a <em>faithful</em> account of its internal computation — it is a plausible narrative, not verified mechanism. And don't swap the terms: interpretability ≠ explainability (a frequent definition-matching trap).
+    </div>
+  </section>
+
+  <!-- ============ 57.4 ============ -->
+  <section id="s4">
+    <h2 class="sec-title"><span class="num">57.4</span> Responsible AI Frameworks and Organizational Policies</h2>
+    <p class="lead">Frameworks give structure to "do AI responsibly." Know the <strong>NIST AI RMF</strong> functions, the <strong>OECD principles</strong>, and the <strong>EU AI Act</strong> risk tiers — these three appear most on the exam.</p>
+
+    <h3>Major Frameworks</h3>
+
+    <h4>NIST AI Risk Management Framework (AI RMF 1.0)</h4>
+    <p>A voluntary US framework built on four core functions:</p>
+    <div class="flowchart">
+      <div class="step"><span class="step-n">1</span>GOVERN<br><small style="font-weight:400">Culture, roles, accountability</small></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">2</span>MAP<br><small style="font-weight:400">Context &amp; risk identification</small></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">3</span>MEASURE<br><small style="font-weight:400">Analyze, assess, track</small></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">4</span>MANAGE<br><small style="font-weight:400">Prioritize &amp; respond</small></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:-4px;"><strong>Govern</strong> is cross-cutting — it wraps the other three, not just a first step.</p>
+
+    <h4>OECD AI Principles</h4>
+    <p>Five values-based principles adopted by many governments (basis for the G20 principles):</p>
+    <p>
+      <span class="chip">Inclusive growth &amp; well-being</span>
+      <span class="chip">Human-centred values &amp; fairness</span>
+      <span class="chip">Transparency &amp; explainability</span>
+      <span class="chip">Robustness, security &amp; safety</span>
+      <span class="chip">Accountability</span>
+    </p>
+
+    <h4>EU AI Act — Risk Tiers</h4>
+    <div class="table-scroll">
+    <table>
+      <caption>Risk-based regulation: obligations scale with risk.</caption>
+      <thead>
+        <tr><th>Tier</th><th>Treatment</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Unacceptable</strong></td><td>Banned</td><td>Social scoring, most real-time public biometric ID</td></tr>
+        <tr><td><strong>High</strong></td><td>Strict obligations (conformity assessment, oversight, documentation)</td><td>Hiring, credit scoring, medical devices</td></tr>
+        <tr><td><strong>Limited</strong></td><td>Transparency duties (disclose AI use)</td><td>Chatbots, deepfakes must be labeled</td></tr>
+        <tr><td><strong>Minimal</strong></td><td>Largely unregulated</td><td>Spam filters, AI in video games</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:13px;"><strong>Also worth knowing:</strong> <strong>ISO/IEC 42001</strong> (AI management-system standard) and the <strong>OECD/G7</strong> and UNESCO recommendations.</p>
+
+    <h3>Components of an Internal Responsible-AI Policy</h3>
+    <ul>
+      <li>Scope &amp; principles (values the org commits to)</li>
+      <li>Risk classification &amp; impact-assessment process</li>
+      <li>Data governance (provenance, privacy, consent)</li>
+      <li>Model documentation requirements (model cards, datasheets)</li>
+      <li>Human oversight &amp; escalation paths</li>
+      <li>Monitoring, incident response, and audit cadence</li>
+    </ul>
+
+    <h3>Governance Roles</h3>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Role</th><th>Responsibility</th></tr></thead>
+      <tbody>
+        <tr><td><strong>AI Ethics Board / Committee</strong></td><td>Sets policy, reviews high-risk use cases, resolves value trade-offs</td></tr>
+        <tr><td><strong>Model Risk Owner</strong></td><td>Accountable for a specific model's risk throughout its lifecycle</td></tr>
+        <tr><td><strong>Responsible-AI / ML Ops lead</strong></td><td>Implements controls, monitoring, and documentation</td></tr>
+        <tr><td><strong>Data Protection Officer</strong></td><td>Privacy, consent, and regulatory compliance</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="box tip-box">
+      <span class="box-title">💡 Tips &amp; Tricks</span>
+      NIST AI RMF functions = <strong>"GMMM"</strong> → <em>G</em>overn, <em>M</em>ap, <em>M</em>easure, <em>M</em>anage. Say it as <em>"Govern wraps Map → Measure → Manage."</em> For the EU AI Act, remember the ladder <strong>U-H-L-M</strong> (Unacceptable → High → Limited → Minimal) = "banned → strict → disclose → free."
+    </div>
+    <div class="box exam-strategy">
+      <span class="box-title">🎯 Exam Strategy</span>
+      Framework questions are usually <em>matching</em> ("which function/tier applies?"). Anchor on keywords: "identify context/risks" = <strong>Map</strong>; "quantify/track metrics" = <strong>Measure</strong>; "chatbot must disclose it's AI" = EU <strong>Limited</strong> risk; "used for hiring decisions" = EU <strong>High</strong> risk. NIST is <em>voluntary</em>; the EU AI Act is <em>binding law</em> — don't mix those attributes.
+    </div>
+    <div class="box pitfall-box">
+      <span class="box-title">⚠️ Common Pitfalls</span>
+      Confusing NIST's <strong>Map / Measure / Manage</strong> (three similar-sounding M's) — Map = identify, Measure = quantify, Manage = act. Also, don't call the OECD principles or NIST RMF "regulations" — they're voluntary/guidance; only instruments like the EU AI Act are enforceable law.
+    </div>
+  </section>
+
+  <!-- ============ 57.5 ============ -->
+  <section id="s5">
+    <h2 class="sec-title"><span class="num">57.5</span> Hands-On: Conducting a Bias Audit</h2>
+    <p class="lead">A bias audit is a <strong>structured, repeatable</strong> evaluation of a deployed model for disparate outcomes across groups. Know the workflow, the checklist, and the headline metric — the <em>disparate impact ratio</em>.</p>
+
+    <h3>Step-by-Step Audit Methodology</h3>
+    <div class="flowchart">
+      <div class="step"><span class="step-n">1</span>Define Scope</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">2</span>Collect Data</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">3</span>Run Tests</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">4</span>Analyze</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">5</span>Report</div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-n">6</span>Remediate</div>
+    </div>
+    <ol>
+      <li><strong>Define scope</strong> — the use case, protected attributes, chosen fairness metric(s), and pass/fail thresholds <em>before</em> looking at results.</li>
+      <li><strong>Collect data</strong> — a representative, labeled evaluation set with group membership (or reliable proxies), sized for statistical power per subgroup.</li>
+      <li><strong>Run tests</strong> — compute per-group performance and fairness metrics; include counterfactual and adversarial probes.</li>
+      <li><strong>Analyze</strong> — identify disparities, test for statistical significance, and trace likely root cause (data vs. model vs. threshold).</li>
+      <li><strong>Report</strong> — document findings, methodology, and limitations (e.g., in a model card / audit report) for stakeholders.</li>
+      <li><strong>Remediate &amp; monitor</strong> — apply mitigation (re-balance, re-train, re-threshold, add guardrails), then set up ongoing monitoring for drift.</li>
+    </ol>
+
+    <h3>The Headline Metric: Disparate Impact Ratio</h3>
+    <p>The <strong>disparate impact (DI) ratio</strong> = (selection rate of the disadvantaged group) ÷ (selection rate of the advantaged group). Under the US EEOC <strong>four-fifths (80%) rule</strong>, a ratio below <code>0.80</code> is a common red flag for adverse impact.</p>
+    <div class="barchart">
+      <div class="bar-row"><span class="bar-label">Group A selection rate</span><div class="bar-track"><div class="bar-fill" style="width:50%; background:#5b3fd6;">50%</div></div></div>
+      <div class="bar-row"><span class="bar-label">Group B selection rate</span><div class="bar-track"><div class="bar-fill" style="width:35%; background:#0b7285;">35%</div></div></div>
+      <div class="bar-row"><span class="bar-label">DI ratio (35/50 = 0.70)</span><div class="bar-track"><div class="bar-fill" style="width:70%; background:#c0392b;">0.70 ✗</div></div></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:-4px;">Illustrative: 0.70 &lt; 0.80 threshold → fails the four-fifths rule, signaling potential adverse impact worth investigating.</p>
+
+    <h3>Sample Audit Checklist</h3>
+    <ul class="checklist">
+      <li>Scope, protected attributes, and fairness metric(s) defined and documented</li>
+      <li>Pass/fail thresholds agreed <em>before</em> analysis (pre-registration)</li>
+      <li>Evaluation dataset is representative, labeled, and sufficiently large per subgroup</li>
+      <li>Per-group performance + fairness metrics computed (incl. DI ratio)</li>
+      <li>Counterfactual / adversarial probes executed</li>
+      <li>Disparities tested for statistical significance</li>
+      <li>Root cause traced (data / model / threshold)</li>
+      <li>Findings, methods, and limitations reported to stakeholders</li>
+      <li>Remediation plan defined and ongoing monitoring scheduled</li>
+    </ul>
+
+    <h3>Tools &amp; Metrics Commonly Used</h3>
+    <p>
+      <span class="chip">Fairlearn (Microsoft)</span>
+      <span class="chip">AI Fairness 360 / AIF360 (IBM)</span>
+      <span class="chip">What-If Tool (Google)</span>
+      <span class="chip">Aequitas</span>
+    </p>
+    <p style="font-size:13.5px;"><strong>Key metrics:</strong> disparate impact ratio, demographic parity difference, equal-opportunity difference, equalized-odds difference, per-group precision/recall.</p>
+
+    <div class="box tip-box">
+      <span class="box-title">💡 Tips &amp; Tricks</span>
+      Memorize the audit flow as <strong>"S-C-R-A-R-R"</strong>: <em>S</em>cope → <em>C</em>ollect → <em>R</em>un → <em>A</em>nalyze → <em>R</em>eport → <em>R</em>emediate. And nail the number: <strong>four-fifths = 0.80</strong> is the disparate-impact threshold.
+    </div>
+    <div class="box exam-strategy">
+      <span class="box-title">🎯 Exam Strategy</span>
+      Expect a numeric item: given two selection rates, compute the ratio (disadvantaged ÷ advantaged) and compare to <code>0.80</code>. Also watch for "what's the <em>first</em> step?" — the answer is almost always <strong>define scope / metric</strong> (never "start remediating"). Defining thresholds up front is the anti-cherry-picking control.
+    </div>
+    <div class="box pitfall-box">
+      <span class="box-title">⚠️ Common Pitfalls</span>
+      Inverting the DI ratio (always put the <em>disadvantaged</em> group's rate in the numerator). Auditing on a tiny or unrepresentative sample and over-reading noise. And treating a one-time audit as sufficient — bias re-emerges with data drift, so monitoring must be continuous.
+    </div>
+  </section>
+
+  <!-- ============ RECAP ============ -->
+  <section id="recap" class="summary">
+    <h2 class="sec-title">📌 Chapter Summary &amp; Quick-Reference Recap</h2>
+    <p class="lead">One-glance revision card for the final hours before the exam.</p>
+    <div class="recap-grid">
+      <div class="recap-card">
+        <h4>57.1 Bias</h4>
+        <p>Types by <em>source</em>. Detect via parity checks, counterfactuals, WEAT, benchmarks (BBQ/StereoSet). Mitigate across <strong>PIP</strong>: pre-process → in-training (RLHF/Constitutional AI) → post-process.</p>
+      </div>
+      <div class="recap-card">
+        <h4>57.2 Fairness</h4>
+        <p><strong>D-E-E</strong>: Demographic parity (equal rate), Equal opportunity (equal TPR), Equalized odds (TPR + FPR). Impossibility theorem: can't satisfy all at once when base rates differ.</p>
+      </div>
+      <div class="recap-card">
+        <h4>57.3 Transparency</h4>
+        <p><strong>Interpretability</strong> = inherent (glass-box); <strong>Explainability</strong> = post-hoc (SHAP/LIME). Match artifact to audience. Model cards, datasheets, decision logs.</p>
+      </div>
+      <div class="recap-card">
+        <h4>57.4 Frameworks</h4>
+        <p>NIST AI RMF = <strong>GMMM</strong> (Govern·Map·Measure·Manage, voluntary). OECD = 5 principles. EU AI Act = <strong>U-H-L-M</strong> tiers (binding law). ISO/IEC 42001.</p>
+      </div>
+      <div class="recap-card">
+        <h4>57.5 Bias Audit</h4>
+        <p>Flow <strong>S-C-R-A-R-R</strong>. Headline metric: <strong>disparate impact ratio</strong>, four-fifths rule = <code>0.80</code>. Tools: Fairlearn, AIF360, What-If Tool.</p>
+      </div>
+      <div class="recap-card">
+        <h4>Cross-cutting exam cues</h4>
+        <p>Match the fix to the <em>stage</em>. Match the explanation to the <em>audience</em>. "Remove sensitive attribute" and "satisfy all fairness metrics" are classic <em>trap</em> answers.</p>
+      </div>
+    </div>
+    <a class="back-top" href="#s1">↑ Back to top</a>
+  </section>
+
+  <footer class="doc-foot">
+    Chapter 57: Ethical AI Considerations · Study Notes · Self-contained HTML (no external dependencies)<br>
+    Concepts referenced are established, publicly documented frameworks and methods (NIST AI RMF, OECD AI Principles, EU AI Act, Model Cards, WEAT, four-fifths rule, Fairlearn/AIF360). Illustrative figures are labeled as such.
+  </footer>
+
+</div>
+
+</body></html>

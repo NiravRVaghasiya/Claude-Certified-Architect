@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 36: Translating Business Problems into Claude Solutions</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --ink: #1e293b;
+    --muted: #556070;
+    --line: #e2e8f0;
+    --accent: #6d4aff;      /* Claude-ish violet */
+    --accent-2: #d97706;
+    --tip-bg: #eef7f0;
+    --tip-line: #2f9e57;
+    --strat-bg: #eef2ff;
+    --strat-line: #4f46e5;
+    --warn-bg: #fdf1ef;
+    --warn-line: #d64541;
+    --yes: #2f9e57;
+    --no: #d64541;
+    --maybe: #d97706;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 80px; }
+  header.hero {
+    background: linear-gradient(135deg, #2b1a66 0%, #6d4aff 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 34px 32px;
+    margin-bottom: 8px;
+  }
+  header.hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: 12px;
+    opacity: .85;
+    margin: 0 0 8px;
+  }
+  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 10px; }
+  header.hero p { margin: 0; opacity: .92; max-width: 70ch; }
+  nav.toc {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 22px 0 30px;
+  }
+  nav.toc h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; border: none; padding: 0; }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 30px; }
+  nav.toc a { color: var(--accent); text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 28px;
+    margin-bottom: 26px;
+  }
+  h2 {
+    font-size: 23px;
+    margin: 0 0 6px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+  }
+  h3 { font-size: 17px; margin: 24px 0 8px; color: #2b1a66; }
+  h4 { font-size: 15px; margin: 16px 0 6px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 24px; }
+  li { margin: 4px 0; }
+  code { background: #eef1f6; padding: 1px 6px; border-radius: 5px; font-size: 13.5px; }
+  .overview {
+    background: #faf9ff;
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 4px 0 16px;
+  }
+  .tip-box, .exam-strategy, .warn-box {
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+  .tip-box { background: var(--tip-bg); border-left: 5px solid var(--tip-line); }
+  .exam-strategy { background: var(--strat-bg); border-left: 5px solid var(--strat-line); }
+  .warn-box { background: var(--warn-bg); border-left: 5px solid var(--warn-line); }
+  .tip-box strong, .exam-strategy strong, .warn-box strong { display: inline; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14.5px; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #f1f0fb; color: #2b1a66; font-weight: 600; }
+  tbody tr:nth-child(even) { background: #fafbfc; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .col-yes, .col-no { border-radius: 10px; padding: 14px 16px; }
+  .col-yes { background: #eef7f0; border: 1px solid #bfe3cc; }
+  .col-no { background: #fdf1ef; border: 1px solid #f3c7c3; }
+  .col-yes h4 { color: var(--yes); }
+  .col-no h4 { color: var(--no); }
+  .terms { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+  .term { background: #f1f0fb; border: 1px solid #ddd6fb; color: #3b2b8c; border-radius: 20px; padding: 4px 12px; font-size: 13px; }
+  .flow-svg, .proc-svg { width: 100%; height: auto; display: block; margin: 10px 0; background: #fbfbfe; border: 1px solid var(--line); border-radius: 10px; }
+  .brief-template {
+    background: #1e1b2e;
+    color: #e6e2ff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin: 14px 0;
+  }
+  .worked {
+    border: 1px dashed var(--accent);
+    border-radius: 10px;
+    padding: 4px 18px 14px;
+    background: #fcfbff;
+    margin: 14px 0;
+  }
+  details {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    background: #fbfbfe;
+  }
+  details[open] { background: #fff; }
+  summary { cursor: pointer; font-weight: 600; color: #2b1a66; }
+  summary::marker { color: var(--accent); }
+  details .ans { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .misconception { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 12px 16px; margin: 14px 0; }
+  .misconception h4 { color: var(--accent-2); margin-top: 6px; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
+  .badge.core { background: #ede9fe; color: #5b21b6; }
+  .takeaways li { margin: 7px 0; }
+  footer.note { text-align: center; color: var(--muted); font-size: 13px; margin-top: 30px; }
+  @media (max-width: 680px) {
+    nav.toc ol { columns: 1; }
+    .two-col { grid-template-columns: 1fr; }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">Claude Certified Architect · Foundations &amp; Professional</p>
+  <h1>Chapter 36: Translating Business Problems into Claude Solutions</h1>
+  <p>How to move from a fuzzy business need to a defensible, technically sound Claude-based solution design — and how to recognise when Claude is the wrong tool.</p>
+</header>
+
+<nav class="toc" aria-label="Chapter contents">
+  <h2>In this chapter</h2>
+  <ol>
+    <li><a href="#s361">36.1 Identifying AI-Solvable Business Problems</a></li>
+    <li><a href="#s362">36.2 The Discovery Process</a></li>
+    <li><a href="#s363">36.3 Mapping Objectives to Claude Capabilities</a></li>
+    <li><a href="#s364">36.4 When Claude Is (and Isn't) the Right Solution</a></li>
+    <li><a href="#s365">36.5 Hands-On: The Solution Design Brief</a></li>
+    <li><a href="#summary">Key Takeaways</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+  </ol>
+</nav>
+
+<!-- ================= 36.1 ================= -->
+<section id="s361">
+  <h2>36.1 Identifying AI-Solvable Business Problems <span class="badge core">Core</span></h2>
+  <div class="overview">
+    <strong>Overview.</strong> Not every business pain point is an AI problem. This sub-topic is about triage: recognising the signatures of a problem that a large language model like Claude can meaningfully improve, versus one better served by traditional software, process change, or a deterministic rules engine. The architect's first job is to filter, not to build.
+  </div>
+
+  <h3>Core concept</h3>
+  <p>An <em>AI-solvable</em> problem is one where the value comes from understanding, generating, transforming, or reasoning over <strong>natural language or loosely structured content at a scale or speed that humans cannot sustain</strong> — and where a <strong>probabilistic, "good enough and reviewable"</strong> output is acceptable. If the problem demands a single exact answer that must be provably correct every time, it is usually not (purely) an LLM problem.</p>
+
+  <h4>Signals a problem is a good fit</h4>
+  <ul>
+    <li><strong>Language-heavy:</strong> summarising, classifying, extracting, drafting, translating, or answering questions over text.</li>
+    <li><strong>High volume / repetitive judgement:</strong> the same reading-and-deciding task done thousands of times.</li>
+    <li><strong>Tolerant of review:</strong> a human can verify or a downstream system can validate the output.</li>
+    <li><strong>Fuzzy inputs:</strong> messy, inconsistent, or unstructured data that resists rigid parsing.</li>
+  </ul>
+
+  <h4>Key terminology</h4>
+  <div class="terms">
+    <span class="term">Unstructured data</span>
+    <span class="term">Probabilistic output</span>
+    <span class="term">Human-in-the-loop</span>
+    <span class="term">Determinism</span>
+    <span class="term">Automatable judgement</span>
+    <span class="term">Ground truth</span>
+    <span class="term">Value hypothesis</span>
+  </div>
+
+  <h3>Decision framework: "Is this problem AI-solvable?"</h3>
+  <svg class="flow-svg" viewBox="0 0 720 430" role="img" aria-label="Decision tree for whether a problem is AI-solvable">
+    <defs>
+      <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#556070"></path>
+      </marker>
+      <style>
+        .box{fill:#fff;stroke:#6d4aff;stroke-width:1.5;rx:8;}
+        .q{fill:#f1f0fb;stroke:#6d4aff;stroke-width:1.5;}
+        .lbl{font:13px sans-serif;fill:#1e293b;}
+        .yes{fill:#2f9e57;font:11px sans-serif;font-weight:700;}
+        .no{fill:#d64541;font:11px sans-serif;font-weight:700;}
+        .end-yes{fill:#eef7f0;stroke:#2f9e57;stroke-width:1.5;}
+        .end-no{fill:#fdf1ef;stroke:#d64541;stroke-width:1.5;}
+        .path{stroke:#556070;stroke-width:1.4;fill:none;}
+      </style>
+    </defs>
+    <!-- Q1 -->
+    <rect class="q" x="250" y="12" width="220" height="46" rx="8"></rect>
+    <text class="lbl" x="360" y="32" text-anchor="middle">Does it involve language or</text>
+    <text class="lbl" x="360" y="48" text-anchor="middle">unstructured content?</text>
+    <!-- Q1 -> No end -->
+    <path class="path" d="M470,35 L620,35 L620,60" marker-end="url(#arr)"></path>
+    <text class="no" x="545" y="28" text-anchor="middle">No</text>
+    <rect class="end-no" x="540" y="62" width="160" height="44" rx="8"></rect>
+    <text class="lbl" x="620" y="82" text-anchor="middle">Use traditional</text>
+    <text class="lbl" x="620" y="98" text-anchor="middle">software / DB / rules</text>
+    <!-- Q1 -> Q2 -->
+    <path class="path" d="M360,58 L360,96" marker-end="url(#arr)"></path>
+    <text class="yes" x="372" y="80">Yes</text>
+    <!-- Q2 -->
+    <rect class="q" x="250" y="98" width="220" height="46" rx="8"></rect>
+    <text class="lbl" x="360" y="118" text-anchor="middle">Is a probabilistic answer</text>
+    <text class="lbl" x="360" y="134" text-anchor="middle">(reviewable) acceptable?</text>
+    <path class="path" d="M470,121 L620,121 L620,148" marker-end="url(#arr)"></path>
+    <text class="no" x="545" y="114" text-anchor="middle">No</text>
+    <rect class="end-no" x="540" y="150" width="160" height="44" rx="8"></rect>
+    <text class="lbl" x="620" y="170" text-anchor="middle">Needs determinism →</text>
+    <text class="lbl" x="620" y="186" text-anchor="middle">rules engine / calc</text>
+    <path class="path" d="M360,144 L360,182" marker-end="url(#arr)"></path>
+    <text class="yes" x="372" y="166">Yes</text>
+    <!-- Q3 -->
+    <rect class="q" x="250" y="184" width="220" height="46" rx="8"></rect>
+    <text class="lbl" x="360" y="204" text-anchor="middle">Is there volume, scale, or</text>
+    <text class="lbl" x="360" y="220" text-anchor="middle">repetitive judgement?</text>
+    <path class="path" d="M250,207 L120,207 L120,234" marker-end="url(#arr)"></path>
+    <text class="no" x="175" y="200" text-anchor="middle">No</text>
+    <rect class="end-no" x="40" y="236" width="160" height="44" rx="8"></rect>
+    <text class="lbl" x="120" y="256" text-anchor="middle">Low ROI — manual</text>
+    <text class="lbl" x="120" y="272" text-anchor="middle">effort may suffice</text>
+    <path class="path" d="M360,230 L360,268" marker-end="url(#arr)"></path>
+    <text class="yes" x="372" y="252">Yes</text>
+    <!-- Q4 -->
+    <rect class="q" x="250" y="270" width="220" height="46" rx="8"></rect>
+    <text class="lbl" x="360" y="290" text-anchor="middle">Do you have data / access</text>
+    <text class="lbl" x="360" y="306" text-anchor="middle">to evaluate quality?</text>
+    <path class="path" d="M470,293 L620,293 L620,320" marker-end="url(#arr)"></path>
+    <text class="no" x="545" y="286" text-anchor="middle">No</text>
+    <rect class="end-no" x="540" y="322" width="160" height="44" rx="8"></rect>
+    <text class="lbl" x="620" y="342" text-anchor="middle">De-risk first: build</text>
+    <text class="lbl" x="620" y="358" text-anchor="middle">an eval set</text>
+    <path class="path" d="M360,316 L360,354" marker-end="url(#arr)"></path>
+    <text class="yes" x="372" y="338">Yes</text>
+    <!-- End yes -->
+    <rect class="end-yes" x="250" y="356" width="220" height="52" rx="8"></rect>
+    <text class="lbl" x="360" y="378" text-anchor="middle" style="font-weight:700;fill:#2f9e57;">Strong candidate for a</text>
+    <text class="lbl" x="360" y="396" text-anchor="middle" style="font-weight:700;fill:#2f9e57;">Claude-based solution</text>
+  </svg>
+
+  <div class="misconception">
+    <h4>⚠ Common misconceptions</h4>
+    <ul>
+      <li><strong>"AI can replace the whole process."</strong> Usually AI automates a <em>step</em> (reading, drafting), not the entire workflow including approvals and system-of-record writes.</li>
+      <li><strong>"If it's hard for humans, AI will do it better."</strong> Difficulty for humans ≠ fit for LLMs. A task requiring exact arithmetic or guaranteed compliance is hard <em>and</em> a poor LLM fit.</li>
+      <li><strong>Confusing "we have lots of data" with "AI-solvable."</strong> Volume matters only if the task is language/judgement-shaped.</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Tip:</strong> Use the phrase test. If you can describe the task as "read this, then decide/write that," it likely fits an LLM. If you describe it as "compute this exact value" or "guarantee this rule always holds," lean deterministic. The words <em>read, summarise, classify, draft, explain, extract</em> are green flags; <em>calculate, guarantee, reconcile-to-the-penny, must never</em> are yellow/red flags.
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy:</strong> 36.1 questions are usually "which of these problems is the <em>best</em> fit for an AI/Claude solution?" scenarios. Scan each option for the language-and-judgement signature. Eliminate anything that hinges on exact numeric correctness, hard determinism, or real-time sub-millisecond latency. When two options both look language-shaped, prefer the one that also mentions <strong>scale/volume</strong> and an <strong>acceptable review step</strong> — examiners reward candidates who spot both fit <em>and</em> feasibility.
+  </div>
+</section>
+
+<!-- ================= 36.2 ================= -->
+<section id="s362">
+  <h2>36.2 The Discovery Process: From Business Need to Technical Requirements <span class="badge core">Core</span></h2>
+  <div class="overview">
+    <strong>Overview.</strong> Discovery is the structured conversation that converts a vague stakeholder ask ("we need AI for support") into concrete, testable technical requirements. A good architect leaves discovery with a defined task, success metrics, data sources, constraints, and a definition of "done" — not with a model choice.
+  </div>
+
+  <h3>Core concept</h3>
+  <p>Discovery moves through predictable layers: understand the <strong>business outcome</strong> (why), pin down the <strong>concrete task</strong> (what), then derive <strong>technical requirements</strong> (how it will be built and judged). Skipping straight to "how" is the classic failure mode. Each layer should produce artefacts you can validate later.</p>
+
+  <h3>Process flow: Business Need → Discovery → Requirements</h3>
+  <svg class="proc-svg" viewBox="0 0 720 250" role="img" aria-label="Discovery process flow from business need to technical requirements">
+    <defs>
+      <marker id="arr2" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#6d4aff"></path>
+      </marker>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#6d4aff"></stop>
+        <stop offset="1" stop-color="#8b6bff"></stop>
+      </linearGradient>
+    </defs>
+    <!-- stage 1 -->
+    <rect x="20" y="40" width="150" height="70" rx="10" fill="url(#g1)"></rect>
+    <text x="95" y="70" text-anchor="middle" fill="#fff" style="font:13px sans-serif;font-weight:700;">Business Need</text>
+    <text x="95" y="90" text-anchor="middle" fill="#eee" style="font:11px sans-serif;">"Why does this</text>
+    <text x="95" y="104" text-anchor="middle" fill="#eee" style="font:11px sans-serif;">matter?"</text>
+    <path d="M170,75 L200,75" stroke="#6d4aff" stroke-width="2" marker-end="url(#arr2)"></path>
+    <!-- stage 2 -->
+    <rect x="200" y="40" width="150" height="70" rx="10" fill="url(#g1)"></rect>
+    <text x="275" y="70" text-anchor="middle" fill="#fff" style="font:13px sans-serif;font-weight:700;">Discovery</text>
+    <text x="275" y="90" text-anchor="middle" fill="#eee" style="font:11px sans-serif;">Task, data,</text>
+    <text x="275" y="104" text-anchor="middle" fill="#eee" style="font:11px sans-serif;">constraints, metrics</text>
+    <path d="M350,75 L380,75" stroke="#6d4aff" stroke-width="2" marker-end="url(#arr2)"></path>
+    <!-- stage 3 -->
+    <rect x="380" y="40" width="150" height="70" rx="10" fill="url(#g1)"></rect>
+    <text x="455" y="70" text-anchor="middle" fill="#fff" style="font:13px sans-serif;font-weight:700;">Requirements</text>
+    <text x="455" y="90" text-anchor="middle" fill="#eee" style="font:11px sans-serif;">Testable "how"</text>
+    <text x="455" y="104" text-anchor="middle" fill="#eee" style="font:11px sans-serif;">+ acceptance criteria</text>
+    <path d="M530,75 L560,75" stroke="#6d4aff" stroke-width="2" marker-end="url(#arr2)"></path>
+    <!-- stage 4 -->
+    <rect x="560" y="40" width="140" height="70" rx="10" fill="#eef7f0" stroke="#2f9e57" stroke-width="1.5"></rect>
+    <text x="630" y="70" text-anchor="middle" fill="#2f9e57" style="font:13px sans-serif;font-weight:700;">Solution Brief</text>
+    <text x="630" y="90" text-anchor="middle" fill="#1e293b" style="font:11px sans-serif;">Ready to design</text>
+    <text x="630" y="104" text-anchor="middle" fill="#1e293b" style="font:11px sans-serif;">&amp; scope</text>
+    <!-- feedback loop -->
+    <path d="M630,110 C630,180 275,200 275,110" stroke="#d97706" stroke-width="1.6" fill="none" stroke-dasharray="5,4" marker-end="url(#arr2)"></path>
+    <text x="450" y="195" text-anchor="middle" fill="#d97706" style="font:11px sans-serif;font-weight:700;">Iterate: new evidence reshapes the task</text>
+    <!-- questions row -->
+    <text x="95" y="150" text-anchor="middle" style="font:10.5px sans-serif;fill:#556070;">Outcome, owner,</text>
+    <text x="95" y="164" text-anchor="middle" style="font:10.5px sans-serif;fill:#556070;">baseline cost</text>
+    <text x="275" y="150" text-anchor="middle" style="font:10.5px sans-serif;fill:#556070;">Inputs/outputs,</text>
+    <text x="275" y="164" text-anchor="middle" style="font:10.5px sans-serif;fill:#556070;">edge cases, volume</text>
+    <text x="455" y="150" text-anchor="middle" style="font:10.5px sans-serif;fill:#556070;">Latency, cost,</text>
+    <text x="455" y="164" text-anchor="middle" style="font:10.5px sans-serif;fill:#556070;">accuracy target</text>
+  </svg>
+
+  <h3>Discovery question checklist</h3>
+  <ol>
+    <li><strong>Outcome:</strong> What decision or metric changes if this works? Who owns it?</li>
+    <li><strong>Task shape:</strong> What are the exact inputs and desired outputs? Show 3–5 real examples.</li>
+    <li><strong>Volume &amp; latency:</strong> How many per day? Real-time, or batch overnight?</li>
+    <li><strong>Quality bar:</strong> What accuracy is "good enough"? What is the cost of a wrong answer?</li>
+    <li><strong>Data &amp; access:</strong> Where does the source content live? Any PII, residency, or licensing limits?</li>
+    <li><strong>Constraints:</strong> Budget, compliance, auditability, integration points, human review capacity.</li>
+    <li><strong>Baseline:</strong> How is it done today, and what does that cost in time/money/errors?</li>
+  </ol>
+
+  <div class="misconception">
+    <h4>⚠ Common misconceptions</h4>
+    <ul>
+      <li><strong>Treating "the stakeholder's stated solution" as the requirement.</strong> Discovery interrogates the need behind the ask.</li>
+      <li><strong>Deferring success metrics.</strong> "We'll know it when we see it" is not a requirement — define acceptance criteria during discovery.</li>
+      <li><strong>Ignoring the baseline.</strong> Without today's cost/error rate you cannot prove value or set a quality target.</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Tip:</strong> Memory aid <strong>"O-T-V-Q-D-C-B"</strong> → Outcome, Task, Volume, Quality, Data, Constraints, Baseline. If any letter is blank, discovery isn't finished. The single most-forgotten letter on exams is <strong>B (baseline)</strong> — measuring the "before" is what makes ROI provable.
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy:</strong> 36.2 questions often describe a rushed team that jumped to a model/tool and ask "what did they skip?" or "what should happen first?". The correct answer almost always points back to <strong>defining the task, success metrics, or data availability</strong> — i.e., a discovery activity — rather than a technical fix. Beware answers that add more technology to a problem that is really an unclear-requirements problem.
+  </div>
+</section>
+
+<!-- ================= 36.3 ================= -->
+<section id="s363">
+  <h2>36.3 Mapping Business Objectives to Claude Capabilities <span class="badge core">Core</span></h2>
+  <div class="overview">
+    <strong>Overview.</strong> Once the task is clear, the architect maps each business objective onto a capability Claude genuinely offers — such as natural-language understanding, long-context document reasoning, summarisation, classification, structured extraction, tool/function use, and controllable, instruction-following generation. The mapping must stay truthful: match objectives to real strengths, and flag where supporting components (retrieval, validation, tools) are needed.
+  </div>
+
+  <h3>Core concept</h3>
+  <p>A capability map is the bridge between "what the business wants" and "what the model does." Each row states an objective, the Claude capability it leans on, and the <strong>architectural caveat</strong> — because most real solutions pair the model with retrieval, tools, or human review rather than using the model alone.</p>
+
+  <table>
+    <thead>
+      <tr><th>Business Objective</th><th>Claude Capability (leaned on)</th><th>Architectural notes / caveats</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Reduce support ticket volume &amp; handle time</td>
+        <td>Conversational reasoning + summarisation + instruction following</td>
+        <td>Pair with a retrieval layer over your knowledge base so answers are grounded; keep escalation to humans.</td>
+      </tr>
+      <tr>
+        <td>Accelerate contract / policy review</td>
+        <td>Long-context document analysis + extraction</td>
+        <td>Confirm the document fits the available context window; chunk or retrieve for very large corpora.</td>
+      </tr>
+      <tr>
+        <td>Turn messy free-text into structured records</td>
+        <td>Structured extraction (e.g., producing JSON to a schema)</td>
+        <td>Validate output against the schema downstream; the model proposes, your code enforces.</td>
+      </tr>
+      <tr>
+        <td>Triage / route incoming messages</td>
+        <td>Classification + reasoning over nuance</td>
+        <td>Define categories crisply; measure with a labelled eval set before rollout.</td>
+      </tr>
+      <tr>
+        <td>Draft first-pass content (emails, summaries, briefs)</td>
+        <td>Controllable text generation</td>
+        <td>Position as a human-in-the-loop draft; add review for tone, facts, and compliance.</td>
+      </tr>
+      <tr>
+        <td>Let the assistant take actions in other systems</td>
+        <td>Tool / function calling (model requests a tool, your code executes it)</td>
+        <td>The model decides <em>what</em> to call; your application controls execution and permissions.</td>
+      </tr>
+      <tr>
+        <td>Answer questions over private/current data</td>
+        <td>Reasoning over retrieved context (RAG pattern)</td>
+        <td>The model doesn't "know" your private data by default — supply it as context via retrieval.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Key terminology</h4>
+  <div class="terms">
+    <span class="term">Context window</span>
+    <span class="term">Retrieval (RAG)</span>
+    <span class="term">Structured / JSON output</span>
+    <span class="term">Tool / function calling</span>
+    <span class="term">Classification</span>
+    <span class="term">Grounding</span>
+    <span class="term">System prompt / instructions</span>
+  </div>
+
+  <div class="misconception">
+    <h4>⚠ Common misconceptions</h4>
+    <ul>
+      <li><strong>"The model knows our internal data."</strong> It doesn't by default — private or fresh data must be supplied as context (retrieval/tools).</li>
+      <li><strong>"Bigger context replaces retrieval."</strong> A large context window helps, but retrieval is still needed for large or changing corpora and cost control.</li>
+      <li><strong>Mapping an objective to a single capability.</strong> Real objectives usually combine capabilities plus supporting infrastructure.</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Tip:</strong> When you read an objective, ask "is this <em>understand</em>, <em>generate</em>, <em>transform</em>, or <em>act</em>?" — those four verbs map cleanly to reasoning/comprehension, generation, extraction/summarisation, and tool use. Then ask "does it need <em>fresh or private</em> data?" — if yes, add retrieval. This two-question routine builds most capability maps correctly.
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy:</strong> 36.3 items test whether you can match an objective to a <em>plausible, non-fabricated</em> capability. Distractors often invent oddly specific features or over-claim ("Claude natively connects to your database"). Prefer answers phrased as capabilities plus a supporting pattern (e.g., "reasoning <strong>with retrieval</strong>," "generation <strong>with human review</strong>"). If an option claims the model does something entirely on its own that clearly needs data access or execution, it's usually the trap.
+  </div>
+</section>
+
+<!-- ================= 36.4 ================= -->
+<section id="s364">
+  <h2>36.4 When Claude Is (and Isn't) the Right Solution <span class="badge core">Core</span></h2>
+  <div class="overview">
+    <strong>Overview.</strong> Mature architecture is knowing when <em>not</em> to use the model. This sub-topic contrasts scenarios where Claude adds clear value against those where deterministic systems, simpler ML, or pure engineering are the responsible choice — and where a <strong>hybrid</strong> design (LLM + deterministic components) beats either alone.
+  </div>
+
+  <h3>Core concept</h3>
+  <p>Fit is about the <strong>shape of the task and the cost of being wrong</strong>. Claude shines on language, nuance, and flexible reasoning with a review path. It's the wrong sole solution when outputs must be exact, auditable, guaranteed, ultra-low-latency at trivial cost, or when a simple rule already solves it.</p>
+
+  <div class="two-col">
+    <div class="col-yes">
+      <h4>✓ Use Claude when…</h4>
+      <ul>
+        <li>The core work is reading, writing, summarising, or classifying language.</li>
+        <li>Inputs are messy/unstructured and vary case to case.</li>
+        <li>A reviewed or validated "good draft" is acceptable.</li>
+        <li>Nuance, tone, or open-ended reasoning matters.</li>
+        <li>Requirements evolve and rigid rules would be brittle.</li>
+        <li>You can add retrieval/tools to ground and act.</li>
+      </ul>
+    </div>
+    <div class="col-no">
+      <h4>✗ Don't use Claude (alone) when…</h4>
+      <ul>
+        <li>Outputs must be exact and provably correct (tax, payroll, accounting).</li>
+        <li>The decision must be fully auditable/deterministic by regulation.</li>
+        <li>A simple rule, lookup, or formula already solves it cheaply.</li>
+        <li>You need guaranteed sub-millisecond latency at massive scale.</li>
+        <li>There is no way to evaluate or review output quality.</li>
+        <li>The task is pure numeric computation or exact reconciliation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Scenario comparison</h3>
+  <table>
+    <thead>
+      <tr><th>Scenario</th><th>Best approach</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Summarise 10,000 customer reviews into themes</td><td><strong>Claude</strong></td><td>Language + scale + reviewable output.</td></tr>
+      <tr><td>Calculate sales tax on an invoice</td><td><strong>Deterministic code</strong></td><td>Must be exact and auditable every time.</td></tr>
+      <tr><td>Answer HR policy questions for staff</td><td><strong>Claude + retrieval</strong></td><td>Language task, but must be grounded in the current policy docs.</td></tr>
+      <tr><td>Flag transactions over a fixed threshold</td><td><strong>Simple rule</strong></td><td>A single deterministic condition — no model needed.</td></tr>
+      <tr><td>Extract fields from varied invoices, then validate totals</td><td><strong>Hybrid</strong> (Claude extracts, code validates)</td><td>LLM handles messy layout; code enforces exactness.</td></tr>
+      <tr><td>Route incoming emails to the right team</td><td><strong>Claude</strong> (classification)</td><td>Nuanced language categorisation with an eval-measured bar.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="warn-box">
+    <strong>🚩 Red flag:</strong> Any requirement using the words <em>"must always,"</em> <em>"guaranteed,"</em> <em>"exact,"</em> <em>"provably,"</em> or <em>"fully auditable"</em> is a signal that a pure-LLM answer is likely wrong. Look for a deterministic component to carry the guarantee, with the model handling the fuzzy parts.
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 Tip:</strong> Remember the pairing rule — <strong>"model for the fuzzy, code for the exact."</strong> When a scenario mixes both (messy input <em>and</em> a hard guarantee), the right answer is almost always a hybrid architecture, not "Claude alone" and not "no AI at all."
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy:</strong> 36.4 is the classic "trap scenario" zone. Questions embed a hidden determinism/audit requirement (tax, medical dosage, legal filing, financial reconciliation). First, hunt for the guarantee keyword. If present, <strong>eliminate any option proposing Claude as a standalone system</strong> and choose the hybrid/deterministic option. If absent and the task is language-shaped, the AI option is likely correct. Don't over-correct — not every question is a trap.
+  </div>
+</section>
+
+<!-- ================= 36.5 ================= -->
+<section id="s365">
+  <h2>36.5 Hands-On: Writing a Solution Design Brief from a Business Problem <span class="badge core">Core</span></h2>
+  <div class="overview">
+    <strong>Overview.</strong> The Solution Design Brief is the deliverable that closes discovery. It captures the problem, the mapped capabilities, the feasibility verdict, success metrics, and the proposed architecture in one page — enough for stakeholders to approve and engineers to build against. This section walks a full worked example, then gives you a blank reusable template.
+  </div>
+
+  <h3>The four moves</h3>
+  <ol>
+    <li><strong>Frame the problem</strong> — business outcome, baseline, and task shape (from 36.1–36.2).</li>
+    <li><strong>Map to capabilities</strong> — objectives ↔ Claude strengths + supporting components (36.3).</li>
+    <li><strong>Feasibility check</strong> — is Claude the right tool, alone or hybrid? (36.4).</li>
+    <li><strong>Write the brief</strong> — metrics, architecture sketch, risks, and next step.</li>
+  </ol>
+
+  <h3>Worked example</h3>
+  <div class="worked">
+    <h4>Step 0 — The business problem (as stated)</h4>
+    <p>"Our claims team spends hours every day reading unstructured insurance claim emails and manually copying key details (policy number, incident date, claim type, amount) into our claims system. It's slow and error-prone, and volume is growing."</p>
+
+    <h4>Step 1 — Frame</h4>
+    <ul>
+      <li><strong>Outcome:</strong> Cut manual data-entry time and transcription errors; scale without adding headcount.</li>
+      <li><strong>Baseline:</strong> ~500 claim emails/day, ~6 min each of manual entry, ~4% transcription error rate.</li>
+      <li><strong>Task shape:</strong> Read a free-text email → extract 4 structured fields → hand to a human for confirm before system write.</li>
+    </ul>
+
+    <h4>Step 2 — Map to capabilities</h4>
+    <table>
+      <thead><tr><th>Objective</th><th>Capability</th><th>Support needed</th></tr></thead>
+      <tbody>
+        <tr><td>Pull fields from messy emails</td><td>Structured extraction to a JSON schema</td><td>Schema validation in code</td></tr>
+        <tr><td>Handle varied wording/formats</td><td>Language understanding / reasoning</td><td>Few-shot examples in the prompt</td></tr>
+        <tr><td>Keep entries accurate</td><td>—</td><td>Human-in-the-loop confirm + validation rules for amount/date formats</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Step 3 — Feasibility check (36.4)</h4>
+    <ul>
+      <li>Language + messy input + scale → strong Claude fit. ✓</li>
+      <li>But "amount" must be exact → add deterministic validation (regex/format + range checks). Hybrid.</li>
+      <li>Reviewable? Yes — reviewer confirms before the system-of-record write. ✓</li>
+      <li><strong>Verdict:</strong> Hybrid — Claude extracts, code validates, human confirms.</li>
+    </ul>
+
+    <h4>Step 4 — Completed Solution Design Brief</h4>
+    <div class="brief-template">SOLUTION DESIGN BRIEF
+======================
+Title:            Claims Email Field Extraction Assistant
+Author / Date:    A. Architect · Discovery complete
+
+1. PROBLEM &amp; OUTCOME
+   - Business need:   Reduce manual data entry &amp; errors from claim emails.
+   - Success outcome: -70% entry time; error rate below 1% post-review.
+   - Baseline:        500 emails/day · 6 min each · ~4% error rate.
+
+2. TASK DEFINITION
+   - Input:   Unstructured claim email (free text).
+   - Output:  {policy_number, incident_date, claim_type, amount} as JSON.
+   - Volume:  ~500/day, batch + near-real-time. Non-critical latency.
+
+3. CAPABILITY MAP
+   - Extraction of fields   -&gt; Structured (JSON) extraction
+   - Varied phrasing        -&gt; Language understanding + few-shot examples
+   - Accuracy of amount/date -&gt; Deterministic validation (NOT the model)
+
+4. FEASIBILITY VERDICT
+   - Fit: HYBRID. Claude for extraction; code validates; human confirms.
+   - Rejected "Claude alone" because amount must be exact/auditable.
+
+5. SUCCESS METRICS &amp; EVAL
+   - Field-level extraction accuracy on a 200-email labelled eval set.
+   - % emails needing manual correction; time saved per email.
+   - Guardrail: block auto-write if validation fails.
+
+6. ARCHITECTURE SKETCH
+   Email -&gt; Claude (extract to schema) -&gt; Code validation
+        -&gt; Human confirm UI -&gt; Claims system write.
+
+7. RISKS &amp; MITIGATIONS
+   - Hallucinated fields      -&gt; schema + validation + human confirm.
+   - Format drift over time   -&gt; monitor eval metrics; refresh examples.
+   - PII handling             -&gt; follow data-residency &amp; access policy.
+
+8. NEXT STEP
+   - Build eval set of 200 labelled emails; run a scoped pilot.</div>
+  </div>
+
+  <h3>Reusable blank template</h3>
+  <p>Copy this for your own practice problems:</p>
+  <div class="brief-template">SOLUTION DESIGN BRIEF
+======================
+Title:            __________________________________
+Author / Date:    __________________________________
+
+1. PROBLEM &amp; OUTCOME
+   - Business need:   ______________________________
+   - Success outcome: ______________________________
+   - Baseline (today's cost/errors/time): _________
+
+2. TASK DEFINITION
+   - Input:   _______________________________________
+   - Output:  _______________________________________
+   - Volume &amp; latency: _____________________________
+
+3. CAPABILITY MAP
+   - Objective 1 -&gt; Claude capability -&gt; support needed
+   - Objective 2 -&gt; Claude capability -&gt; support needed
+   - Objective 3 -&gt; Claude capability -&gt; support needed
+
+4. FEASIBILITY VERDICT  (Claude alone / hybrid / not AI)
+   - Fit &amp; reasoning: ______________________________
+   - What was rejected and why: ____________________
+
+5. SUCCESS METRICS &amp; EVAL
+   - Metric(s): _____________________________________
+   - Eval set / how measured: ______________________
+   - Guardrails: ___________________________________
+
+6. ARCHITECTURE SKETCH
+   ________________________________________________
+
+7. RISKS &amp; MITIGATIONS
+   - Risk -&gt; mitigation
+   - Risk -&gt; mitigation
+
+8. NEXT STEP
+   ________________________________________________</div>
+
+  <div class="tip-box">
+    <strong>💡 Tip:</strong> A brief that can't name its <strong>success metric</strong> and <strong>baseline</strong> isn't finished — those two lines are what let you prove value later. If you're time-pressured in the exam's hands-on prompt, fill sections 1, 4, and 5 first; they carry the most marks.
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy:</strong> 36.5 questions may give you a scenario and ask which brief section a missing piece belongs in, or ask you to critique a brief. Map the gap to the eight sections above. A brief that jumps to "Architecture" with no "Task Definition" or "Feasibility Verdict" is the typical wrong example — the fix is to complete the earlier, upstream sections first.
+  </div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section id="summary">
+  <h2>Key Takeaways</h2>
+  <ul class="takeaways">
+    <li><strong>Triage first (36.1):</strong> AI-solvable problems are language/judgement-shaped, high-volume, and tolerant of reviewable, probabilistic output. Exact-answer tasks are not pure-LLM problems.</li>
+    <li><strong>Discovery before design (36.2):</strong> Convert the business need into a defined task, metrics, data, and constraints. Remember <em>O-T-V-Q-D-C-B</em> — and never skip the <strong>Baseline</strong>.</li>
+    <li><strong>Map truthfully (36.3):</strong> Match objectives to real Claude strengths — understanding, long-context analysis, summarisation, classification, structured extraction, controllable generation, and tool use — usually paired with retrieval or human review. Don't fabricate features.</li>
+    <li><strong>Know the limits (36.4):</strong> "Model for the fuzzy, code for the exact." Guarantee/audit/exactness keywords signal a hybrid or deterministic answer, not Claude alone.</li>
+    <li><strong>Deliver a brief (36.5):</strong> The Solution Design Brief closes discovery: problem, capability map, feasibility verdict, metrics, architecture, risks, next step.</li>
+    <li><strong>Exam habit:</strong> Spot the task shape and the cost of being wrong. Prefer answers that combine a capability with a supporting pattern and a review path.</li>
+  </ul>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section id="quiz">
+  <h2>Self-Check Quiz</h2>
+  <p>Answer each, then expand to check. Covers 36.1–36.5.</p>
+
+  <details>
+    <summary>Q1 (36.1). A team wants to automatically calculate the exact interest owed on overdue invoices to the penny. Is this a strong fit for a Claude-based solution? Why or why not?</summary>
+    <div class="ans">
+      <strong>No.</strong> The task demands an exact, provably correct numeric output — a deterministic requirement. That is a classic non-fit for a pure LLM. Use deterministic code/a formula. Claude might help with the surrounding language (e.g., drafting the reminder email), but not the calculation itself.
+    </div>
+  </details>
+
+  <details>
+    <summary>Q2 (36.2). A stakeholder says "just build us a chatbot." During discovery, which artefact is most important to establish so you can later prove the solution worked?</summary>
+    <div class="ans">
+      The <strong>baseline and success metrics</strong> — how the task is done today (cost/time/error rate) and the acceptance criteria for "good enough." Without the baseline you cannot demonstrate ROI or set a quality target. (Remember the frequently-missed <em>B</em> in O-T-V-Q-D-C-B.)
+    </div>
+  </details>
+
+  <details>
+    <summary>Q3 (36.3). A business wants staff to ask questions and get answers based on the company's current internal policies. Which capability mapping is correct?</summary>
+    <div class="ans">
+      <strong>Reasoning over retrieved context (RAG)</strong> — Claude's language understanding <em>plus</em> a retrieval layer that supplies the current policy documents as context. The model does not inherently "know" private or fresh internal data; it must be grounded via retrieval. An answer claiming Claude natively knows the internal policies would be the trap.
+    </div>
+  </details>
+
+  <details>
+    <summary>Q4 (36.4). A scenario requires extracting data from thousands of messy PDF invoices, and the extracted monetary totals must reconcile exactly with the accounting ledger. What architecture do you recommend?</summary>
+    <div class="ans">
+      A <strong>hybrid architecture</strong>: Claude handles the fuzzy extraction from varied layouts, and <strong>deterministic code validates and reconciles the totals</strong> (with human review on failures). "Model for the fuzzy, code for the exact." Neither "Claude alone" nor "no AI" is ideal here.
+    </div>
+  </details>
+
+  <details>
+    <summary>Q5 (36.5). You review a colleague's Solution Design Brief. It has a detailed Architecture Sketch but no Task Definition and no Feasibility Verdict. What is the core problem and the fix?</summary>
+    <div class="ans">
+      The brief jumped to "how" before establishing "what" and "whether." The fix is to complete the upstream sections first — <strong>Task Definition</strong> (exact inputs/outputs, volume) and <strong>Feasibility Verdict</strong> (Claude alone vs. hybrid vs. not-AI, with reasoning) — since the architecture is only trustworthy once those are settled.
+    </div>
+  </details>
+</section>
+
+<footer class="note">
+  Chapter 36 · Translating Business Problems into Claude Solutions — study guide. Capability descriptions are kept general and consistent with publicly known LLM/Claude behaviour; verify exact product features against current Anthropic documentation.
+</footer>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch.20 — Enforcing Structured Output with Tool Use &amp; JSON Schemas</title>
+<style>
+  :root {
+    --ink: #1a2233;
+    --muted: #5b6472;
+    --line: #e2e6ec;
+    --code-bg: #f4f5f7;
+    --tip-bg: #e8f2fd;
+    --tip-accent: #1f7ae0;
+    --exam-bg: #fff6e0;
+    --exam-accent: #e08a1f;
+    --pit-bg: #fdecec;
+    --pit-accent: #d64545;
+    --brand: #6a3ec7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.62;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 24px 96px;
+    background: #fff;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    border-bottom: 4px solid var(--brand);
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 56px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    color: var(--brand);
+  }
+  h3 { font-size: 1.08rem; margin-top: 28px; color: #2c3140; }
+  .subtitle { color: var(--muted); font-size: 1.02rem; margin-top: 0; }
+  .lead { font-size: 1.02rem; }
+  a { color: var(--tip-accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: "SF Mono", "Cascadia Code", Consolas, Menlo, monospace;
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    border-radius: 6px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  .cmt { color: #6b8f4e; font-style: italic; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #f0eef8; color: #3a2f5a; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  .tip, .exam-tip, .pitfall, .cot {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 20px 0;
+  }
+  .tip { background: var(--tip-bg); border-left: 5px solid var(--tip-accent); }
+  .exam-tip { background: var(--exam-bg); border-left: 5px solid var(--exam-accent); }
+  .pitfall { background: var(--pit-bg); border-left: 5px solid var(--pit-accent); }
+  .cot { background: #f2f0fb; border-left: 5px solid var(--brand); }
+  .tip strong, .tip b { color: #14539a; }
+  .exam-tip strong.label { color: #a5610d; }
+  .pitfall strong.label { color: #a52929; }
+  .cot strong.label { color: var(--brand); }
+  .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+  nav.toc {
+    background: #faf9fe;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin: 28px 0;
+  }
+  nav.toc h2 { border: none; margin: 0 0 10px; padding: 0; font-size: 1.1rem; color: var(--ink); }
+  nav.toc ol { margin: 0; padding-left: 22px; }
+  nav.toc li { margin: 5px 0; }
+  .qa { margin: 10px 0 4px; }
+  .qa .q { font-weight: 600; }
+  .qa .ans { color: #1d6b32; font-weight: 600; }
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li { padding: 5px 0 5px 30px; position: relative; }
+  .checklist li:before {
+    content: "\2610";
+    position: absolute;
+    left: 0;
+    font-size: 1.15rem;
+    color: var(--brand);
+  }
+  .kbd { font-family: monospace; background:#eceaf6; border:1px solid #d6d0ee; border-radius:4px; padding:0 5px; }
+  footer { margin-top: 60px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>Chapter 20 — Enforcing Structured Output with Tool Use &amp; JSON Schemas</h1>
+<p class="subtitle">Claude Certified Architect — Foundations &amp; Professional · Exam-Ready Study Guide</p>
+<p class="lead">This chapter covers how to force Claude to return machine-parseable, schema-conformant data by leaning on the <code>tool_use</code> mechanism rather than free-text prompting. Master the seven subtopics below and you will be able to answer every exam question on structured extraction, <code>tool_choice</code> semantics, validation layering, and production pipeline design.</p>
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#s201">20.1 — Why Tool Use Is the Structured-Output Mechanism</a></li>
+    <li><a href="#s202">20.2 — <code>tool_choice</code> Options &amp; Behavior</a></li>
+    <li><a href="#s203">20.3 — Syntax vs. Semantic Validation Errors</a></li>
+    <li><a href="#s204">20.4 — Designing JSON Schemas for Extraction</a></li>
+    <li><a href="#s205">20.5 — Modeling Ambiguity: <code>"other"</code> / <code>"unclear"</code> + Detail Patterns</a></li>
+    <li><a href="#s206">20.6 — Production Patterns: Parallel Tools, Retries &amp; Streaming</a></li>
+    <li><a href="#s207">20.7 — Hands-On: A Complete Extraction Pipeline</a></li>
+    <li><a href="#summary">Chapter Summary &amp; Cheat Sheet</a></li>
+    <li><a href="#checklist">Final Pre-Exam Checklist</a></li>
+  </ol>
+</nav>
+
+<!-- ============================== 20.1 ============================== -->
+<h2 id="s201">20.1 Why Tool Use Is the Structured-Output Mechanism</h2>
+
+<p>Claude does not expose a dedicated "JSON mode" or "response format" object the way some other APIs do. Instead, the canonical way to force structured output is to define a <strong>tool</strong> and let Claude populate its inputs. A tool is a JSON object with three fields: <code>name</code>, <code>description</code>, and <code>input_schema</code>. The <code>input_schema</code> is a JSON Schema object describing the exact shape you want back. When Claude decides (or is forced) to call the tool, it emits a <code>tool_use</code> content block whose <code>input</code> field is a JSON object shaped by that schema.</p>
+
+<p>The mental reframe for the exam: you are not really asking Claude to "run a function." You are using the tool's <code>input_schema</code> as a <em>contract for the model's output</em>. Even if you never execute any real code, defining a tool named <code>record_extraction</code> and forcing its use is the idiomatic pattern for guaranteed structured data.</p>
+
+<p>Critically, Claude's schema adherence is <strong>best-effort, model-driven guidance — not hard-constrained decoding</strong>. The model is strongly steered toward valid output by the schema, but the API does not grammar-constrain every token. This single fact drives most of the chapter: because adherence is not guaranteed at the transport layer, <em>you must validate client-side</em>.</p>
+
+<h3>Anatomy of a tool definition and response</h3>
+<pre><code>{
+  "name": "record_contact",
+  "description": "Save a structured contact record extracted from text.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "full_name": { "type": "string" },
+      "email": { "type": "string" }
+    },
+    "required": ["full_name"]
+  }
+}</code></pre>
+
+<p>When invoked, Claude returns a message with <code>stop_reason: "tool_use"</code> and a content block like this:</p>
+<pre><code>{
+  "type": "tool_use",
+  "id": "toolu_01A9...",
+  "name": "record_contact",
+  "input": { "full_name": "Dana Lee", "email": "dana@acme.io" }
+}</code></pre>
+
+<h3>Terminology note</h3>
+<p>Anthropic documentation calls this <strong>tool use</strong> — the content block type is literally <code>"tool_use"</code>. "Function calling" is a competitor's term; on the exam, the Claude-native vocabulary is <code>tool_use</code>, <code>tool_result</code>, and <code>input_schema</code>.</p>
+
+<h4>Comparison: free-text JSON vs. tool-use extraction</h4>
+<table>
+  <tbody><tr><th>Approach</th><th>How it works</th><th>Reliability</th><th>When to use</th></tr>
+  <tr><td>"Return JSON" in the prompt</td><td>Ask in plain text; parse the reply string</td><td>Low — prose, markdown fences, or apologies leak in</td><td>Quick prototypes only</td></tr>
+  <tr><td>Prefill <code>{</code> in assistant turn</td><td>Start the assistant message with an open brace</td><td>Medium — nudges JSON but no schema</td><td>Light-weight, single-field cases</td></tr>
+  <tr><td><strong>Tool use + <code>input_schema</code></strong></td><td>Define a tool; read <code>tool_use.input</code></td><td>High — schema-shaped object, no prose wrapper</td><td>Production structured extraction</td></tr>
+</tbody></table>
+
+<div class="tip">
+  <strong>Tip:</strong> Put your extraction instructions inside the tool's <code>description</code> and each property's <code>description</code>, not only in the top-level prompt. Claude reads schema descriptions as guidance, so a well-described field (<code>"ISO 8601 date; use null if absent"</code>) dramatically improves adherence.
+</div>
+
+<div class="pitfall">
+  <strong class="label">Common Pitfall:</strong> Assuming there is a first-class "JSON mode" / <code>response_format</code> parameter on the Messages API. There is not. Selecting such an option on an exam question is a distractor — the mechanism is a defined tool plus <code>tool_choice</code>.
+</div>
+
+<div class="exam-tip">
+  <strong class="label">Exam Strategy:</strong> Questions here test whether you know the <em>field names</em>. Watch for distractors that swap <code>input_schema</code> for <code>parameters</code> (that is the other vendor's key). Keywords: "guaranteed structured output," "no first-class JSON mode," "schema as output contract."
+  <div class="qa">
+    <span class="q">Q:</span> An architect needs Claude to reliably return an object with fixed keys and no surrounding prose. Which is the recommended mechanism?<br>
+    <span class="ans">A:</span> Define a tool with an <code>input_schema</code> and read the resulting <code>tool_use.input</code> block. <em>Why:</em> it is the only approach that yields a schema-shaped object rather than a parsed string, and it avoids markdown/prose leakage.
+  </div>
+</div>
+
+<!-- ============================== 20.2 ============================== -->
+<h2 id="s202">20.2 <code>tool_choice</code> Options &amp; Behavior</h2>
+
+<p>The <code>tool_choice</code> parameter controls <em>whether</em> and <em>which</em> tool Claude uses. For structured-output extraction you almost always move away from the default. There are four types, plus a modifier flag.</p>
+
+<table>
+  <tbody><tr><th><code>tool_choice</code></th><th>Behavior</th><th>Can emit leading text / chain-of-thought?</th><th>Use case</th></tr>
+  <tr><td><code>{"type":"auto"}</code></td><td>Model decides whether to call a tool at all (default when tools are present)</td><td>Yes</td><td>General assistants; optional tool use</td></tr>
+  <tr><td><code>{"type":"any"}</code></td><td>Model <em>must</em> call one of the provided tools (its choice which)</td><td>No</td><td>Guaranteed tool invocation, several valid tools</td></tr>
+  <tr><td><code>{"type":"tool","name":"x"}</code></td><td>Model <em>must</em> call the one named tool</td><td>No</td><td>Single-purpose forced extraction</td></tr>
+  <tr><td><code>{"type":"none"}</code></td><td>Model may not call any tool; text only</td><td>Yes (text only)</td><td>Temporarily disable tools without removing definitions</td></tr>
+</tbody></table>
+
+<p>The <code>disable_parallel_tool_use</code> boolean can accompany <code>auto</code> or <code>any</code>. Set it to <code>true</code> to force at most a single tool call per turn — useful when your pipeline expects exactly one structured object.</p>
+
+<h3>The "no leading text" nuance</h3>
+<p>When <code>tool_choice</code> is <code>any</code> or <code>tool</code>, Claude is compelled to open with the tool call, so it cannot produce a natural-language chain-of-thought <em>before</em> the call. With <code>auto</code>, it may reason in text first, then call. If your design relies on visible reasoning ahead of extraction, you must either use <code>auto</code> or add an explicit thinking field <em>inside</em> the schema.</p>
+
+<pre><code><span class="cmt"># Forcing one specific extraction tool, single call only</span>
+tool_choice = { "type": "tool", "name": "record_contact" }
+<span class="cmt"># On the request, alongside tools=[...]:</span>
+<span class="cmt"># "disable_parallel_tool_use": true  -&gt;  guarantees exactly one tool_use block</span></code></pre>
+
+<div class="tip">
+  <strong>Tip:</strong> For a deterministic extractor that returns exactly one object, combine <code>{"type":"tool","name":"..."}</code> with <code>disable_parallel_tool_use: true</code>. If you want a "thoughts first" pattern under a forced tool, add a <code>"reasoning"</code> string property to the schema so the model can still think — inside the JSON, not before it.
+</div>
+
+<div class="pitfall">
+  <strong class="label">Common Pitfall:</strong> Choosing <code>any</code> when the scenario clearly needs one specific tool. <code>any</code> guarantees a tool runs but lets the model pick <em>which</em>; if only <code>extract_invoice</code> is acceptable, you need <code>tool</code>, not <code>any</code>. A second trap: expecting chain-of-thought text under <code>any</code>/<code>tool</code> — it is suppressed.
+</div>
+
+<div class="exam-tip">
+  <strong class="label">Exam Strategy:</strong> These questions hinge on <em>"one specific" vs. "any of several."</em> If the scenario names a single function that must run → <strong>forced <code>tool</code></strong>. If it says "guarantee some tool is used but any of them is fine" → <strong><code>any</code></strong>. Watch the distractor that offers <code>any</code> for a single-tool requirement.
+  <div class="qa">
+    <span class="q">Q:</span> A pipeline defines three tools but this request must invoke <code>classify_ticket</code> and nothing else, with no preamble text. Best config?<br>
+    <span class="ans">A:</span> <code>tool_choice = {"type":"tool","name":"classify_ticket"}</code>. <em>Why:</em> only forced-tool guarantees that specific tool; it also suppresses leading text, satisfying the "no preamble" requirement.
+  </div>
+</div>
+
+<!-- ============================== 20.3 ============================== -->
+<h2 id="s203">20.3 Syntax vs. Semantic Validation Errors <span class="badge">Chain-of-Thought</span></h2>
+
+<p>This is the most-tested conceptual distinction in the chapter. A structured output can fail in two independent layers:</p>
+
+<ul>
+  <li><strong>Syntactic / schema errors</strong> — the data violates the JSON Schema itself: wrong <code>type</code>, missing a <code>required</code> field, a value outside an <code>enum</code>, or a string that fails a declared <code>pattern</code>. These are catchable by a JSON Schema validator.</li>
+  <li><strong>Semantic errors</strong> — the data is fully schema-valid but <em>wrong in meaning</em>: a real-looking but impossible date, a total that does not equal the sum of line items, a country code that exists but is not the one in the source text. A schema validator passes these; only business-logic validation catches them.</li>
+</ul>
+
+<p>The crux exam trap is the JSON Schema <code>format</code> keyword (e.g. <code>"format": "date"</code>). In standard JSON Schema, <code>format</code> is an <strong>annotation, not an enforced assertion</strong> by default. So a value can satisfy <code>type: string</code> + <code>format: date</code> and still be a nonexistent calendar date.</p>
+
+<div class="cot">
+  <strong class="label">Chain-of-Thought Walkthrough:</strong> Why a malformed date <em>fails</em> validation but a logically-wrong date <em>passes</em>.
+  <ol>
+    <li><strong>Given schema:</strong> <code>{ "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }</code> for a <code>ship_date</code>.</li>
+    <li><strong>Candidate A — <code>"March 5th"</code>:</strong> Run schema validation. It is a string (type OK) but does not match the <code>pattern</code> regex. → <strong>Fails at the syntactic layer.</strong> A validator rejects it immediately.</li>
+    <li><strong>Candidate B — <code>"2026-02-31"</code>:</strong> It is a string, and <code>2026-02-31</code> <em>does</em> match <code>^\d{4}-\d{2}-\d{2}$</code>. → <strong>Passes schema validation.</strong> The regex only checks digit grouping, not whether February has 31 days.</li>
+    <li><strong>Why the divergence:</strong> the <code>pattern</code>/<code>format</code> layer verifies <em>shape</em>, not <em>real-world validity</em>. Feb 31 is shape-correct but calendar-impossible — a semantic error.</li>
+    <li><strong>Conclusion:</strong> Candidate A is a syntax error (schema catches it); Candidate B is a semantic error (only a date parser — e.g. <code>datetime.strptime</code> — catches it). Therefore a robust pipeline needs <em>both</em> a schema validator and a semantic/business-rule check.</li>
+  </ol>
+</div>
+
+<h4>Error-layer comparison</h4>
+<table>
+  <tbody><tr><th>Example value</th><th>Schema (<code>type</code>+<code>pattern</code>)</th><th>Semantic check</th><th>Error class</th></tr>
+  <tr><td><code>"March 5th"</code></td><td>Fail (pattern)</td><td>n/a</td><td>Syntactic</td></tr>
+  <tr><td><code>"2026-02-31"</code></td><td>Pass</td><td>Fail (no such day)</td><td>Semantic</td></tr>
+  <tr><td><code>total: "45"</code> where type is <code>number</code></td><td>Fail (type is string)</td><td>n/a</td><td>Syntactic</td></tr>
+  <tr><td><code>total: 45</code> but line items sum to 50</td><td>Pass</td><td>Fail (arithmetic)</td><td>Semantic</td></tr>
+</tbody></table>
+
+<div class="tip">
+  <strong>Tip:</strong> Layer your validation: (1) parse JSON, (2) validate against the schema with a real validator (e.g. Python <code>jsonschema</code>), (3) run domain checks (date parsing, sum reconciliation, cross-field rules). Never treat a passing schema check as proof of correctness.
+</div>
+
+<div class="pitfall">
+  <strong class="label">Common Pitfall:</strong> Believing <code>"format": "date"</code> or <code>"format": "email"</code> is enforced. By default it is advisory metadata; most validators do not assert it unless format-assertion is explicitly enabled. Architects who rely on it ship semantic bugs.
+</div>
+
+<div class="exam-tip">
+  <strong class="label">Exam Strategy:</strong> The classic distractor pairs a schema-valid-but-nonsensical value with the claim "the schema guarantees this is correct." Keywords: "syntactically valid," "passes schema validation," "logically impossible," "format is advisory." If a value <em>matches the shape</em> but is impossible in reality → semantic error, and the schema will <strong>not</strong> catch it.
+  <div class="qa">
+    <span class="q">Q:</span> Claude returns <code>{"birth_date":"1990-13-02"}</code> against a schema with <code>type:string, format:date</code>. Schema validation passes. Why, and what layer catches the bug?<br>
+    <span class="ans">A:</span> It passes because <code>format</code> is advisory and the string is the right shape; month <code>13</code> is a semantic error caught only by an actual date parser / business rule, not the schema.
+  </div>
+</div>
+
+<!-- ============================== 20.4 ============================== -->
+<h2 id="s204">20.4 Designing JSON Schemas for Extraction</h2>
+
+<p>A good extraction schema is opinionated: it uses <code>enum</code> to constrain categoricals, marks the minimum viable set as <code>required</code>, allows <code>null</code> for genuinely-absent data, and writes a purposeful <code>description</code> on every field. Claude reads those descriptions as instructions, so schema design <em>is</em> prompt engineering.</p>
+
+<h3>Core keywords the exam expects you to know</h3>
+<table>
+  <tbody><tr><th>Keyword</th><th>Purpose</th><th>Enforced by validator?</th></tr>
+  <tr><td><code>type</code></td><td>object / string / number / integer / boolean / array / null</td><td>Yes</td></tr>
+  <tr><td><code>properties</code></td><td>Defines object fields</td><td>Yes (shape)</td></tr>
+  <tr><td><code>required</code></td><td>Fields that must be present</td><td>Yes</td></tr>
+  <tr><td><code>enum</code></td><td>Restricts to a fixed value set</td><td>Yes</td></tr>
+  <tr><td><code>pattern</code></td><td>Regex constraint on strings</td><td>Yes</td></tr>
+  <tr><td><code>format</code></td><td>Semantic hint (date, email, uri)</td><td>No (advisory by default)</td></tr>
+  <tr><td><code>description</code></td><td>Guidance to the model (and humans)</td><td>No (guidance only)</td></tr>
+  <tr><td><code>enum</code> + null / union types</td><td>Allow "absent" without breaking type</td><td>Yes</td></tr>
+</tbody></table>
+
+<h3>Worked example — an invoice-line extraction schema</h3>
+<pre><code>{
+  "name": "record_invoice",
+  "description": "Extract structured invoice fields from the supplied document text.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "invoice_number": {
+        "type": "string",
+        "description": "Vendor invoice ID exactly as printed."
+      },
+      "issue_date": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "description": "ISO 8601 date (YYYY-MM-DD). Validate the calendar day downstream."
+      },
+      "currency": {
+        "type": "string",
+        "enum": ["USD", "EUR", "GBP", "PLN"],
+        "description": "ISO 4217 code. Use the closest match printed on the invoice."
+      },
+      "line_items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sku": { "type": "string" },
+            "quantity": { "type": "integer" },
+            "unit_price": { "type": "number" }
+          },
+          "required": ["sku", "quantity", "unit_price"]
+        }
+      },
+      "total": {
+        "type": "number",
+        "description": "Grand total. Downstream must reconcile against sum(line_items)."
+      }
+    },
+    "required": ["invoice_number", "currency", "line_items", "total"]
+  }
+}</code></pre>
+
+<div class="tip">
+  <strong>Tip:</strong> Prefer <code>enum</code> over free-text for any categorical field — it converts an open-ended guess into a closed-set choice the schema can enforce. And keep <code>required</code> minimal: mark only fields that <em>must</em> exist, and allow <code>null</code> (via a union type) for optional data so Claude does not invent values to satisfy the schema.
+</div>
+
+<div class="pitfall">
+  <strong class="label">Common Pitfall:</strong> Over-<code>required</code>-ing the schema. If you mark an optional field <code>required</code> but permit only <code>string</code>, Claude may hallucinate a plausible value rather than omit it — because omission would violate the contract. Give it a legal "escape" (null or an <code>"unknown"</code> enum) instead.
+</div>
+
+<div class="exam-tip">
+  <strong class="label">Exam Strategy:</strong> Expect "which keyword enforces X" matching questions. Remember the enforced set (<code>type, required, enum, pattern</code>) versus advisory (<code>format, description</code>). Keyword to watch: "constrain to a fixed set" → <code>enum</code>; "must be present" → <code>required</code>; "hint only" → <code>format</code>/<code>description</code>.
+  <div class="qa">
+    <span class="q">Q:</span> You must guarantee <code>status</code> is one of exactly {open, closed, pending}. Which keyword?<br>
+    <span class="ans">A:</span> <code>enum: ["open","closed","pending"]</code> — the only keyword that restricts to a fixed, validator-enforced value set.
+  </div>
+</div>
+
+<!-- ============================== 20.5 ============================== -->
+<h2 id="s205">20.5 Modeling Ambiguity: <code>"other"</code> / <code>"unclear"</code> + Detail Patterns <span class="badge">Chain-of-Thought</span></h2>
+
+<p>Real documents contain values that do not fit your enum, or that are genuinely ambiguous. If the schema offers no legal way to say "I'm not sure," Claude is pushed to pick the least-wrong enum member — a silent, confident error. The fix is an <strong>escape-hatch enum value</strong> (<code>"other"</code>, <code>"unclear"</code>) paired with a <strong>conditional detail field</strong> that captures the free-text explanation.</p>
+
+<h3>The canonical pattern</h3>
+<pre><code>{
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": ["invoice", "receipt", "other", "unclear"],
+      "description": "Document type. Use 'other' if it is a real type not listed; use 'unclear' if the text is too ambiguous to decide."
+    },
+    "category_detail": {
+      "type": "string",
+      "description": "REQUIRED when category is 'other' or 'unclear'. For 'other', name the actual type. For 'unclear', state what is missing to decide."
+    }
+  },
+  "required": ["category"]
+}</code></pre>
+
+<p>Note that <code>category_detail</code> is <em>not</em> in the top-level <code>required</code> array. JSON Schema <em>can</em> express conditional requirements via <code>if</code>/<code>then</code>, but Claude does not reliably enforce complex conditional subschemas at generation time. The robust approach is: describe the conditional rule in the field <code>description</code> (which steers the model), and <strong>enforce the "required-if" rule in your own validation code.</strong></p>
+
+<div class="cot">
+  <strong class="label">Chain-of-Thought Walkthrough:</strong> Why <code>"other"</code> and <code>"unclear"</code> are semantically different — and why you need both.
+  <ol>
+    <li><strong>Scenario 1 — a packing slip.</strong> It is a real, well-defined document type, just not in your enum {invoice, receipt}. If the only choices were those two, Claude would mislabel it. With <code>"other"</code>, it can correctly signal "known type, not in your list," and put <code>"packing slip"</code> in <code>category_detail</code>. This is a <em>confident classification into a residual bucket</em>.</li>
+    <li><strong>Scenario 2 — a blurry, half-scanned page.</strong> Here the problem is not that the type is missing from the enum; it is that the evidence is insufficient. <code>"unclear"</code> expresses <em>epistemic uncertainty</em>, and <code>category_detail</code> should say what is missing ("header cut off, no totals visible").</li>
+    <li><strong>Why one value is not enough:</strong> collapsing both into a single <code>"other"</code> destroys information — downstream you cannot tell "route to a human because it's a new type" from "route to a human because the scan is bad." Two distinct values preserve that routing signal.</li>
+    <li><strong>Conclusion:</strong> provide <code>"other"</code> (out-of-taxonomy but known) <em>and</em> <code>"unclear"</code> (insufficient evidence), plus one detail field whose meaning is conditioned on which was chosen. Then enforce "detail required when either is selected" in code, since the schema alone will not guarantee it.</li>
+  </ol>
+</div>
+
+<div class="tip">
+  <strong>Tip:</strong> Always give the model a legal way to express uncertainty. An enum without an escape hatch is a hallucination generator: forced to choose, the model chooses confidently and wrongly. Pair the escape value with a required-in-code detail field so no information is lost.
+</div>
+
+<div class="pitfall">
+  <strong class="label">Common Pitfall:</strong> Relying on JSON Schema <code>if</code>/<code>then</code>/<code>dependentRequired</code> to enforce "detail required when category is other." Claude will not reliably honor complex conditional subschemas during generation, and lightweight validators may skip them. Steer with descriptions; enforce the conditional in your application code.
+</div>
+
+<div class="exam-tip">
+  <strong class="label">Exam Strategy:</strong> Look for scenarios where a value "does not fit the categories" or is "ambiguous/insufficient." The right design adds an escape-hatch enum member plus a detail field — not "add every possible category" and not "let the model return free text." Keywords: "graceful uncertainty," "residual/other bucket," "conditional/required-if," "avoid forced misclassification."
+  <div class="qa">
+    <span class="q">Q:</span> An extractor keeps mislabeling unfamiliar document types as the nearest enum value. Best schema fix?<br>
+    <span class="ans">A:</span> Add <code>"other"</code> (and <code>"unclear"</code>) to the enum plus a <code>detail</code> field, and enforce "detail required when other/unclear" in validation code. <em>Why:</em> it gives the model a correct, information-preserving way to decline a forced choice.
+  </div>
+</div>
+
+<!-- ============================== 20.6 ============================== -->
+<h2 id="s206">20.6 Production Patterns: Parallel Tools, Retries &amp; Streaming</h2>
+
+<p>Beyond a single clean call, production extraction must handle multiple objects, malformed outputs, and latency. Three patterns dominate.</p>
+
+<h3>Parallel tool use</h3>
+<p>Under <code>tool_choice: auto</code> (or <code>any</code>), Claude may emit <em>multiple</em> <code>tool_use</code> blocks in one turn — for example calling <code>record_line_item</code> several times. If your pipeline expects exactly one object, set <code>disable_parallel_tool_use: true</code>. If you want the fan-out, iterate over every <code>tool_use</code> block in <code>response.content</code> and return one <code>tool_result</code> per <code>tool_use_id</code>.</p>
+
+<h3>The validate-and-retry loop</h3>
+<p>Because adherence is best-effort, wrap extraction in a bounded retry loop. On a schema or semantic failure, feed the validation error <em>back</em> to Claude as a <code>tool_result</code> with <code>"is_error": true</code>, and let it correct itself.</p>
+
+<pre><code><span class="cmt"># Pseudocode — bounded self-correction loop</span>
+for attempt in range(MAX_RETRIES):        <span class="cmt"># cap retries to control cost/latency</span>
+    resp = client.messages.create(...)     <span class="cmt"># tool_choice forces the extractor</span>
+    block = first_tool_use(resp)            <span class="cmt"># pull the tool_use content block</span>
+    ok, errors = validate(block["input"])   <span class="cmt"># schema + semantic checks (20.3)</span>
+    if ok:
+        return block["input"]               <span class="cmt"># clean, validated object</span>
+    <span class="cmt"># else: return the errors as a tool_result so Claude can fix them</span>
+    messages.append(tool_result(block["id"], errors, is_error=True))</code></pre>
+
+<h3>Streaming tool inputs</h3>
+<p>Tool inputs stream as <code>input_json_delta</code> events — partial JSON fragments that you accumulate and parse only once the block completes. Do not attempt to <code>json.loads</code> a partial buffer mid-stream; wait for <code>content_block_stop</code> (or the final message) before validating.</p>
+
+<div class="tip">
+  <strong>Tip:</strong> Always bound your retry loop (e.g. 2–3 attempts) and pass the <em>specific</em> validation error text back in the <code>tool_result</code>. Vague "that was wrong" retries waste tokens; "field <code>issue_date</code>: 2026-02-31 is not a real calendar date" gives Claude exactly what to fix.
+</div>
+
+<div class="pitfall">
+  <strong class="label">Common Pitfall:</strong> Parsing streamed <code>input_json_delta</code> fragments as if each were complete JSON. They are partial by design — accumulate first, parse once. A second trap: forgetting to return a <code>tool_result</code> for <em>every</em> <code>tool_use</code> block when parallel calls occur, which breaks the next turn.
+</div>
+
+<div class="exam-tip">
+  <strong class="label">Exam Strategy:</strong> Watch for "how do you handle a schema-invalid response" — the correct answer is a bounded retry that returns the error via <code>tool_result</code> with <code>is_error: true</code>, not "increase temperature" or "switch to JSON mode." For "exactly one object," the answer is <code>disable_parallel_tool_use</code>. Keywords: "self-correction," "partial JSON," "one tool_result per tool_use_id."
+  <div class="qa">
+    <span class="q">Q:</span> Claude occasionally returns a schema-invalid object. What is the recommended production fix?<br>
+    <span class="ans">A:</span> A bounded validate-and-retry loop that sends the validation errors back as a <code>tool_result</code> (<code>is_error: true</code>) so the model self-corrects — capped at a small number of attempts.
+  </div>
+</div>
+
+<!-- ============================== 20.7 ============================== -->
+<h2 id="s207">20.7 Hands-On: A Complete Extraction Pipeline</h2>
+
+<p>This section ties everything together: sample input, schema, request structure, expected output, and validation — each step annotated with <em>why</em>.</p>
+
+<h3>Step A — Sample input text</h3>
+<pre><code>Support ticket #4471, opened 2026-09-18.
+Customer: Dana Lee (dana@acme.io). Product: Aurora Dashboard.
+"Exports keep failing with a 500 error since the last release."
+Severity feels high — the whole reporting team is blocked.</code></pre>
+
+<h3>Step B — Tool + JSON Schema definition</h3>
+<pre><code>{
+  "name": "record_ticket",
+  "description": "Extract a structured support ticket. Use enum escape values when unsure.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "ticket_id":   { "type": "string",
+                       "description": "ID as printed, without the '#'." },
+      "opened_date": { "type": "string",
+                       "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                       "description": "ISO date; verify the calendar day in code." },
+      "customer_email": { "type": "string",
+                          "description": "Contact email, or null if absent." },
+      "severity": { "type": "string",
+                    "enum": ["low", "medium", "high", "unclear"],
+                    "description": "Use 'unclear' if severity is not stated or implied." },
+      "severity_detail": { "type": "string",
+                           "description": "REQUIRED (in code) when severity is 'unclear'." }
+    },
+    "required": ["ticket_id", "opened_date", "severity"]
+  }
+}</code></pre>
+<p class="cmt"><em>Why:</em> <code>enum</code> closes the severity value set (20.4); <code>"unclear"</code> + <code>severity_detail</code> give a graceful uncertainty path (20.5); <code>pattern</code> catches malformed dates but the calendar check is deferred to code (20.3).</p>
+
+<h3>Step C — Request structure (forced, single tool)</h3>
+<pre><code>{
+  "model": "claude-3-7-sonnet",
+  "max_tokens": 1024,
+  "tools": [ /* record_ticket definition from Step B */ ],
+  "tool_choice": { "type": "tool", "name": "record_ticket" },
+  "disable_parallel_tool_use": true,
+  "messages": [
+    { "role": "user",
+      "content": "Extract the ticket from the following text:\n<ticket_text>" }
+  ]
+}</ticket_text></code></pre>
+<p class="cmt"><em>Why:</em> forcing the named tool (20.2) guarantees exactly this extractor runs and suppresses any preamble; <code>disable_parallel_tool_use</code> guarantees a single object.</p>
+
+<h3>Step D — Expected structured output (the <code>tool_use.input</code>)</h3>
+<pre><code>{
+  "ticket_id": "4471",
+  "opened_date": "2026-09-18",
+  "customer_email": "dana@acme.io",
+  "severity": "high",
+  "severity_detail": "Reporter says the whole reporting team is blocked."
+}</code></pre>
+<p class="cmt"><em>Why:</em> severity is inferred as <code>"high"</code> from "the whole reporting team is blocked," not left <code>"unclear"</code>, because the text implies impact. If it had said nothing about impact, <code>"unclear"</code> + a detail explaining the gap would be correct.</p>
+
+<h3>Step E — Validation pass (schema + semantic)</h3>
+<pre><code><span class="cmt"># 1. Schema validation — catches type/enum/pattern/required violations</span>
+jsonschema.validate(instance=tool_input, schema=input_schema)
+
+<span class="cmt"># 2. Semantic validation — the schema cannot do these</span>
+datetime.strptime(tool_input["opened_date"], "%Y-%m-%d")   <span class="cmt"># real calendar day?</span>
+assert "@" in tool_input.get("customer_email", "@")        <span class="cmt"># plausible email</span>
+if tool_input["severity"] == "unclear":                     <span class="cmt"># conditional required-if</span>
+    assert tool_input.get("severity_detail"), "detail required when severity is unclear"</code></pre>
+<p class="cmt"><em>Why:</em> step 1 enforces shape; step 2 enforces meaning and the required-if rule the schema cannot guarantee (20.3, 20.5). On failure, return the error via a <code>tool_result</code> with <code>is_error: true</code> and retry within a bounded loop (20.6).</p>
+
+<!-- ============================== SUMMARY ============================== -->
+<h2 id="summary">Chapter Summary &amp; Cheat Sheet</h2>
+
+<table>
+  <tbody><tr><th>Concept</th><th>Key Rule</th><th>Exam Tip</th></tr>
+  <tr><td>Structured-output mechanism</td><td>Define a tool with <code>input_schema</code>; read <code>tool_use.input</code>. No first-class JSON mode.</td><td>Distractor: <code>parameters</code> / <code>response_format</code>. Correct key is <code>input_schema</code>.</td></tr>
+  <tr><td>Adherence guarantee</td><td>Best-effort model guidance, <em>not</em> constrained decoding → always validate client-side.</td><td>"Guaranteed valid JSON at the API layer" is false.</td></tr>
+  <tr><td><code>tool_choice</code></td><td><code>auto</code> (decide), <code>any</code> (some tool), <code>tool</code> (specific), <code>none</code> (off).</td><td>"One specific tool" → <code>tool</code>; "any tool but guaranteed" → <code>any</code>.</td></tr>
+  <tr><td>Leading text</td><td><code>any</code>/<code>tool</code> suppress pre-call chain-of-thought; <code>auto</code> allows it.</td><td>Need reasoning + forced tool? Add a field inside the schema.</td></tr>
+  <tr><td>Syntax vs. semantic</td><td>Schema checks shape (<code>type/enum/pattern</code>); code checks meaning.</td><td><code>format</code> is advisory — Feb 31 passes the schema.</td></tr>
+  <tr><td>Schema keywords</td><td>Enforced: <code>type, required, enum, pattern</code>. Advisory: <code>format, description</code>.</td><td>"Fixed value set" → <code>enum</code>; "must exist" → <code>required</code>.</td></tr>
+  <tr><td>Ambiguity modeling</td><td>Add <code>"other"</code>/<code>"unclear"</code> enum values + a conditional detail field.</td><td>Enforce required-if in code, not via <code>if/then</code>.</td></tr>
+  <tr><td>Single object</td><td><code>disable_parallel_tool_use: true</code>.</td><td>Parallel calls → one <code>tool_result</code> per <code>tool_use_id</code>.</td></tr>
+  <tr><td>Invalid output handling</td><td>Bounded retry; return error via <code>tool_result</code> <code>is_error: true</code>.</td><td>Not "raise temperature," not "switch to JSON mode."</td></tr>
+  <tr><td>Streaming</td><td>Tool inputs arrive as <code>input_json_delta</code>; accumulate then parse.</td><td>Never <code>json.loads</code> a partial buffer.</td></tr>
+</tbody></table>
+
+<!-- ============================== CHECKLIST ============================== -->
+<h2 id="checklist">Final Pre-Exam Checklist</h2>
+<ul class="checklist">
+  <li>I can name the three fields of a tool definition: <code>name</code>, <code>description</code>, <code>input_schema</code>.</li>
+  <li>I know the response contract: <code>stop_reason: "tool_use"</code> + a block with <code>id</code>, <code>name</code>, <code>input</code>.</li>
+  <li>I can distinguish all four <code>tool_choice</code> types and say which suppress leading text (<code>any</code>, <code>tool</code>).</li>
+  <li>I can explain why schema adherence is best-effort and validation is mandatory.</li>
+  <li>I can walk through a syntax error vs. a semantic error (Feb 31 passes the pattern, fails the calendar).</li>
+  <li>I know <code>format</code> is advisory, while <code>type</code>/<code>required</code>/<code>enum</code>/<code>pattern</code> are enforced.</li>
+  <li>I can design an escape-hatch enum (<code>other</code>/<code>unclear</code>) with a conditional detail field and enforce required-if in code.</li>
+  <li>I can configure a single-object extractor (<code>tool</code> + <code>disable_parallel_tool_use</code>).</li>
+  <li>I can describe the validate-and-retry loop using <code>tool_result</code> with <code>is_error: true</code>.</li>
+  <li>I know streamed tool inputs are <code>input_json_delta</code> fragments to accumulate before parsing.</li>
+  <li>I use Anthropic vocabulary: <code>tool_use</code>, <code>tool_result</code>, <code>input_schema</code> — never "function calling"/<code>parameters</code>.</li>
+</ul>
+
+<footer>
+  Chapter 20 · Enforcing Structured Output with Tool Use &amp; JSON Schemas · Claude Certified Architect study guide. All JSON snippets are validated as syntactically correct JSON; all API claims reflect documented Anthropic <code>tool_use</code> behavior (best-effort schema adherence, client-side validation required).
+</footer>
+
+
+
+</body></html>

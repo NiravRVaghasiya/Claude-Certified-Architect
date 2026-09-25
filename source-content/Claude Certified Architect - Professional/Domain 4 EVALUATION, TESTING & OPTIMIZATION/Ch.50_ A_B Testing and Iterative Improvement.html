@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 50: A/B Testing &amp; Iterative Improvement</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --ink:#1f2733; --muted:#5b6875; --line:#e2e6ec;
+    --brand:#2d5bd7; --brand-dark:#1c3a8f; --brandbg:#eef3ff;
+    --tip:#eaf6ec; --tipbrd:#4caf50; --pit:#fdecea; --pitbrd:#e05243;
+    --trick:#fff6e5; --trickbrd:#f0a500; --exam:#efeafd; --exambrd:#7b52d1;
+    --cot:#e9f6fb; --cotbrd:#1197c2; --code:#0f172a; --codeink:#e2e8f0;
+    --a:#2d5bd7; --b:#e0803a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; color:var(--ink); background:var(--bg);
+    margin:0; padding:0;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:32px 28px 80px;}
+  h1{font-size:2.15rem; line-height:1.2; margin:.2em 0 .1em; color:var(--brand-dark);}
+  .subtitle{color:var(--muted); font-size:1.05rem; margin:0 0 1.4em;}
+  h2{font-size:1.55rem; margin:1.9em 0 .5em; padding-bottom:.25em;
+     border-bottom:3px solid var(--brand); color:var(--brand-dark);}
+  h3{font-size:1.15rem; margin:1.4em 0 .4em; color:var(--ink);}
+  h4{font-size:1rem; margin:1.1em 0 .3em; text-transform:uppercase;
+     letter-spacing:.04em; color:var(--muted); font-weight:700;}
+  p{margin:.55em 0;}
+  a{color:var(--brand); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  code{font-family:"SF Mono",Menlo,Consolas,monospace; background:#eceff3;
+       padding:.1em .35em; border-radius:4px; font-size:.9em;}
+  pre{background:var(--code); color:var(--codeink); padding:16px 18px;
+      border-radius:8px; overflow-x:auto; font-size:.86rem; line-height:1.5;}
+  pre code{background:none; padding:0; color:inherit;}
+  table{border-collapse:collapse; width:100%; margin:1em 0; font-size:.92rem;
+        background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.05); border-radius:6px; overflow:hidden;}
+  th,td{border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top;}
+  th{background:var(--brandbg); color:var(--brand-dark); font-weight:700;}
+  tr:nth-child(even) td{background:#fafbfc;}
+  .callout{border-left:5px solid; border-radius:6px; padding:12px 16px; margin:1.1em 0;}
+  .tip{background:var(--tip); border-color:var(--tipbrd);}
+  .pitfall{background:var(--pit); border-color:var(--pitbrd);}
+  .trick{background:var(--trick); border-color:var(--trickbrd);}
+  .exam-tip{background:var(--exam); border-color:var(--exambrd); border-left:5px solid var(--exambrd);
+            border-radius:6px; padding:12px 16px; margin:1.2em 0;}
+  .cot{background:var(--cot); border-color:var(--cotbrd); border-left:5px solid var(--cotbrd);
+       border-radius:6px; padding:12px 16px; margin:1.1em 0;}
+  .callout strong,.exam-tip strong,.cot strong{display:inline-block; margin-bottom:.2em;}
+  nav.toc{background:#fff; border:1px solid var(--line); border-radius:10px;
+          padding:18px 22px; margin:1.4em 0 2em;}
+  nav.toc h2{border:none; margin:0 0 .4em; font-size:1.15rem;}
+  nav.toc ol{margin:.3em 0 0; padding-left:1.4em;}
+  nav.toc li{margin:.25em 0;}
+  .fig{margin:1.3em 0; background:#fff; border:1px solid var(--line);
+       border-radius:10px; padding:16px 18px;}
+  .fig svg{display:block; max-width:100%; height:auto; margin:0 auto;}
+  .caption{font-size:.85rem; color:var(--muted); margin-top:.6em; font-style:italic; text-align:center;}
+  .diff{border-radius:8px; overflow:hidden; border:1px solid var(--line); margin:1em 0; font-family:"SF Mono",Menlo,Consolas,monospace; font-size:.85rem;}
+  .diff .row{padding:4px 12px; white-space:pre-wrap;}
+  .diff .del{background:#fdecea; color:#8a1c12;}
+  .diff .add{background:#eaf6ec; color:#1b5e20;}
+  .diff .ctx{background:#fff; color:var(--muted);}
+  .pill{display:inline-block; padding:.1em .55em; border-radius:999px; font-size:.78rem; font-weight:700;}
+  .pill.a{background:#e3ecff; color:var(--brand-dark);}
+  .pill.b{background:#fbe9d8; color:#8a4b16;}
+  .flash{background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px 16px; margin:.7em 0;}
+  .flash .q{font-weight:700; color:var(--brand-dark);}
+  .flash .ans{margin-top:.35em; color:var(--ink);}
+  .mnemonic{background:var(--brandbg); border:1px dashed var(--brand); border-radius:10px; padding:16px 20px; margin:1.2em 0; font-size:1.02rem;}
+  .backtop{font-size:.8rem; color:var(--muted);}
+  .kbd{font-size:.8rem; color:var(--muted);}
+  ul.tight li,ol.tight li{margin:.2em 0;}
+  hr{border:none; border-top:1px solid var(--line); margin:2.4em 0;}
+  .badge{font-size:.72rem; background:#eceff3; color:var(--muted); padding:.15em .5em; border-radius:4px; margin-left:.5em; vertical-align:middle;}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+
+<h1>Chapter 50: A/B Testing &amp; Iterative Improvement</h1>
+<p class="subtitle">Claude Certified Architect — Foundations &amp; Professional · Exam-Ready Study Notes</p>
+
+<nav class="toc" aria-label="Table of contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#50-1">50.1 — Designing A/B Tests for LLM Systems</a></li>
+    <li><a href="#50-2">50.2 — Statistical Significance in Non-Deterministic Outputs</a></li>
+    <li><a href="#50-3">50.3 — Iterative Prompt Improvement Based on Evaluation Data</a></li>
+    <li><a href="#50-4">50.4 — Continuous Improvement Loops in Production</a></li>
+    <li><a href="#50-5">50.5 — Hands-On: Running an A/B Test on a Claude Application</a></li>
+    <li><a href="#summary-table">Chapter Summary Table</a></li>
+    <li><a href="#quick-revision">Quick Revision (Flashcards &amp; Mnemonic)</a></li>
+  </ol>
+  <p class="kbd">Note on product names: model identifiers such as <code>claude-sonnet-4.5</code> are used as
+  representative placeholders. Verify exact model IDs, limits, and pricing against current official Anthropic documentation.</p>
+</nav>
+
+<!-- ============================ 50.1 ============================ -->
+<section id="50-1">
+  <h2>50.1 — Designing A/B Tests for LLM Systems</h2>
+
+  <h4>Conceptual Overview</h4>
+  <p>An A/B test compares two variants (a control <span class="pill a">A</span> and a treatment
+  <span class="pill b">B</span>) by exposing each to a comparable slice of traffic and measuring a
+  predefined metric. In traditional software, the two sides differ by a deterministic change — a button
+  color, a checkout flow — and identical inputs produce identical outputs. <strong>LLM systems break that
+  assumption in two ways:</strong></p>
+  <ul class="tight">
+    <li><strong>Output non-determinism</strong> — at temperature &gt; 0 the same prompt yields different
+    completions on each call, so a single generation is a <em>sample from a distribution</em>, not a fixed result.</li>
+    <li><strong>Fuzzy, multi-dimensional quality</strong> — "better" is rarely a single number. You must
+    operationalize it (accuracy, groundedness, helpfulness, latency, cost, refusal rate) via an eval harness
+    or graded rubric before you can test anything.</li>
+  </ul>
+  <p>Because of this, an LLM A/B test is really a comparison of two <em>output distributions</em> under a
+  fixed evaluation function — not a comparison of two fixed values.</p>
+
+  <h4>Key Terminology</h4>
+  <table>
+    <thead><tr><th>Term</th><th>Plain-language definition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Variant</strong></td><td>One configuration under test — a prompt, model, temperature, retrieval setup, or tool policy. A = baseline/control, B = the change/treatment.</td></tr>
+      <tr><td><strong>Unit of randomization</strong></td><td>What you split on (user, session, or request). Must match the unit you analyze, or you get biased results.</td></tr>
+      <tr><td><strong>Primary metric (OEC)</strong></td><td>The single Overall Evaluation Criterion you decide on <em>before</em> the test. Guardrail metrics (cost, latency, safety) protect against regressions elsewhere.</td></tr>
+      <tr><td><strong>Eval harness</strong></td><td>Automated scorer that turns a raw completion into a number/label — exact match, rubric via LLM-as-judge, regex/JSON validity, embedding similarity, or human rating.</td></tr>
+      <tr><td><strong>Offline vs. online test</strong></td><td>Offline = replay a fixed test set through both variants before shipping. Online = live traffic split in production.</td></tr>
+      <tr><td><strong>Samples per input (k)</strong></td><td>How many completions you draw per test input to characterize the output distribution (needed because of non-determinism).</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Step-by-Step Methodology</h4>
+  <ol class="tight">
+    <li><strong>State a falsifiable hypothesis.</strong> "Prompt B increases groundedness pass-rate from ~78% to ≥83% with no latency regression."</li>
+    <li><strong>Choose one primary metric + guardrails.</strong> Avoid metric-shopping after the fact.</li>
+    <li><strong>Build/validate the eval harness first.</strong> If the scorer is noisy or biased, the whole test is invalid. Calibrate it against human labels on a small set.</li>
+    <li><strong>Fix everything except the variable under test.</strong> Same model, temperature, decoding params, retrieval, and test inputs — change only A vs B.</li>
+    <li><strong>Decide sampling: number of inputs (N) and completions per input (k).</strong> More <em>inputs</em> reduces between-prompt variance; more <em>completions per input</em> reduces per-prompt sampling noise.</li>
+    <li><strong>Power the test.</strong> Estimate required sample size from expected effect size and metric variance (see 50.2) <em>before</em> collecting data.</li>
+    <li><strong>Randomize correctly.</strong> Split at the chosen unit; keep a user consistently in one arm (sticky assignment) to avoid within-user contamination.</li>
+    <li><strong>Run, then analyze once at the pre-set stopping point</strong> — not continuously (peeking inflates false positives).</li>
+  </ol>
+
+  <div class="fig">
+    <strong>Figure 50.1 — Variant comparison scorecard</strong>
+    <table>
+      <thead><tr><th>Dimension</th><th><span class="pill a">Variant A</span> (baseline prompt)</th><th><span class="pill b">Variant B</span> (revised prompt)</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td>Groundedness pass-rate (primary)</td><td>78.0%</td><td>84.5%</td><td>+6.5 pts ✔ direction</td></tr>
+        <tr><td>Helpfulness (1–5, mean)</td><td>3.9</td><td>4.2</td><td>+0.3</td></tr>
+        <tr><td>Median latency</td><td>1.8 s</td><td>2.1 s</td><td>+0.3 s (guardrail — watch)</td></tr>
+        <tr><td>Cost / 1k requests</td><td>$4.10</td><td>$4.35</td><td>+6% (guardrail)</td></tr>
+        <tr><td>Refusal / safety flags</td><td>0.6%</td><td>0.5%</td><td>≈ flat ✔</td></tr>
+      </tbody>
+    </table>
+    <p class="caption">A scorecard separates the <em>primary</em> metric from <em>guardrails</em>. Even a genuine win on
+    quality must be weighed against latency and cost regressions before shipping — this is why LLM A/B tests are
+    multi-objective, not single-number, decisions.</p>
+  </div>
+
+  <div class="callout pitfall"><strong>⚠️ Common Pitfalls / Misconceptions</strong>
+    <ul class="tight">
+      <li><strong>Single generation per input.</strong> Judging a variant on one completion confuses sampling noise with a real effect.</li>
+      <li><strong>Changing two things at once</strong> (prompt <em>and</em> model). You can't attribute the result.</li>
+      <li><strong>Metric defined after seeing data.</strong> Cherry-picking whichever metric moved is p-hacking.</li>
+      <li><strong>Randomizing per-request but analyzing per-user</strong> — mismatched units break independence.</li>
+    </ul>
+  </div>
+
+  <div class="callout trick"><strong>💡 Tips &amp; Tricks</strong>
+    <ul class="tight">
+      <li>Pin <code>temperature=0</code> only for reproducibility checks — for a realistic test, use your <em>production</em> temperature so the measured distribution matches what users see.</li>
+      <li>Log the random seed / request ID and the full variant config with every result, so any surprising number is reproducible.</li>
+      <li>Start <strong>offline</strong> on a curated eval set to kill obviously worse variants cheaply, then only take promising ones to an <strong>online</strong> test.</li>
+      <li>Reuse the <em>same</em> test inputs across A and B (paired design) — it removes between-input variance and needs far fewer samples.</li>
+    </ul>
+  </div>
+
+  <div class="exam-tip"><strong>🎯 Exam Strategy:</strong> Design questions typically hand you a scenario and ask
+  "what's wrong with this test?" The most common correct answers involve <em>(a)</em> only one generation per input,
+  <em>(b)</em> more than one variable changed, or <em>(c)</em> the success metric chosen after the data was seen.
+  Watch for the keyword <strong>"single run"</strong> or <strong>"one response"</strong> — that almost always flags the
+  non-determinism trap. Eliminate options that claim a clean design while quietly mixing prompt <em>and</em> model changes.</div>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<!-- ============================ 50.2 ============================ -->
+<section id="50-2">
+  <h2>50.2 — Statistical Significance in Non-Deterministic Outputs</h2>
+
+  <h4>Conceptual Overview</h4>
+  <p>Statistical significance answers: <em>"Is the observed difference between A and B large enough that it is
+  unlikely to be explained by chance alone?"</em> The subtlety with LLMs is <strong>where the randomness comes
+  from</strong>. Classic A/B testing assumes each observation is independent and drawn from a fixed distribution.
+  LLM outputs violate both assumptions, so the naïve test overstates confidence.</p>
+
+  <h4>Key Terminology</h4>
+  <table>
+    <thead><tr><th>Term</th><th>Plain-language definition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Null hypothesis (H₀)</strong></td><td>The assumption of "no real difference" between A and B. A test tries to reject it.</td></tr>
+      <tr><td><strong>p-value</strong></td><td>The probability of seeing a difference at least this extreme <em>if H₀ were true</em>. It is <strong>not</strong> the probability that H₀ is true, nor the probability B is better.</td></tr>
+      <tr><td><strong>Significance level (α)</strong></td><td>The false-positive rate you accept in advance, usually 0.05. Reject H₀ when p &lt; α.</td></tr>
+      <tr><td><strong>Effect size</strong></td><td>The <em>magnitude</em> of the difference, independent of sample size (e.g., Cohen's <em>d</em> = mean difference ÷ pooled SD, or an absolute lift in pass-rate). Answers "how big," while p answers "how sure."</td></tr>
+      <tr><td><strong>Sample variance (σ²)</strong></td><td>How spread out the scores are. LLMs have <em>two</em> layers: variance <em>within</em> a prompt (re-sampling) and variance <em>between</em> prompts.</td></tr>
+      <tr><td><strong>Statistical power (1−β)</strong></td><td>Probability of detecting a real effect if it exists. Convention: 80%. Low power → you miss real wins.</td></tr>
+      <tr><td><strong>Confidence interval (CI)</strong></td><td>A range that would contain the true value in X% of repeated experiments (usually 95%). Narrower with more data / less variance.</td></tr>
+      <tr><td><strong>Multiple comparisons</strong></td><td>Testing many metrics/variants inflates the chance of a false positive; correct with e.g. Bonferroni (divide α by the number of tests).</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Chain-of-Thought: Why the Standard Assumptions Break, and What Replaces Them</h4>
+  <div class="cot"><strong>🧠 Step-by-step reasoning</strong>
+    <ol class="tight">
+      <li><strong>Assumption 1 — fixed distribution per condition.</strong> A classic test treats "the response to input X under variant A" as one fixed value. But at temperature &gt; 0, that response is itself a random draw. So each cell is a distribution, not a point. <em>Consequence:</em> a single sample per input badly under-estimates true variability.</li>
+      <li><strong>Assumption 2 — independence of observations.</strong> If you draw <em>k</em> completions from the same input, those k scores are <strong>correlated</strong> (they share the prompt, retrieved context, and topic difficulty). They are not k independent observations. <em>Consequence:</em> treating <em>N×k</em> rows as independent shrinks the standard error artificially → the p-value looks smaller than it should → <strong>false positives</strong>.</li>
+      <li><strong>Derive the fix — model the two variance layers.</strong> Total variability = between-input variance + within-input (re-sampling) variance. Two valid ways to respect this:
+        <ul class="tight">
+          <li><em>Aggregate first:</em> compute a mean score per input (averaging its k completions), then run the test across the <em>N input-level means</em>. Now each unit is independent again. Use a <strong>paired</strong> t-test when A and B share the same inputs (removes between-input variance entirely).</li>
+          <li><em>Model explicitly:</em> a mixed-effects / hierarchical model with a random effect per input, or cluster-robust standard errors clustered by input.</li>
+        </ul>
+      </li>
+      <li><strong>Handle non-normal, bounded metrics.</strong> Pass-rate is a proportion (0–1); rubric scores are ordinal and skewed. Don't assume normality. Use a <strong>two-proportion z-test</strong> for binary metrics, and <strong>bootstrapping</strong> (resample inputs with replacement, recompute the difference thousands of times) to get a CI on any statistic without distributional assumptions.</li>
+      <li><strong>Consider Bayesian framing.</strong> Model each variant's pass-rate with a Beta posterior (Beta-Binomial) and compute <em>P(B &gt; A)</em> and the expected loss of choosing wrong directly. This is often easier to communicate ("87% probability B is better") and degrades gracefully at small N, though the prior must be stated honestly.</li>
+      <li><strong>Conclusion / best practice.</strong> Report <strong>effect size + CI</strong>, not just a p-value; account for within-input correlation (aggregate to per-input means or use clustered/mixed models); prefer <strong>paired</strong> designs and <strong>bootstrapped or Bayesian</strong> intervals for LLM metrics; and pre-register the primary metric, α, and stopping rule. p &lt; 0.05 alone is <em>necessary but not sufficient</em> — a tiny effect can be "significant" at huge N yet worthless in practice.</li>
+    </ol>
+  </div>
+
+  <h4>Step-by-Step Methodology</h4>
+  <ol class="tight">
+    <li>Pick the metric type (binary pass/fail vs. continuous score) — it dictates the test (z-test for proportions, Welch's t-test for unequal-variance continuous, bootstrap for anything).</li>
+    <li>Decide sampling: N inputs × k completions. Aggregate to per-input means to restore independence.</li>
+    <li>Estimate variance from a pilot, then compute required sample size for 80% power at the effect size you care about.</li>
+    <li>Run the test to completion (no peeking), compute the difference, its CI, and the p-value.</li>
+    <li>Report effect size + CI first; use the p-value/α as a gate, not the headline.</li>
+    <li>If you tested multiple metrics or variants, apply a multiple-comparisons correction.</li>
+  </ol>
+
+  <h4>Rules of Thumb (statistically defensible, not exact)</h4>
+  <ul class="tight">
+    <li><strong>Continuous metric, per group:</strong> <code>n ≈ 16 · σ² / δ²</code> to detect a difference δ at 80% power / α=0.05 two-sided (the constant ≈ (1.96+0.84)²·2 ≈ 15.7).</li>
+    <li><strong>Proportion metric, per group:</strong> <code>n ≈ 16 · p(1−p) / δ²</code> for absolute lift δ. Smaller effects need dramatically more data (n scales as 1/δ²).</li>
+    <li>Halving the effect you want to detect roughly <strong>quadruples</strong> the required sample size.</li>
+  </ul>
+
+  <div class="fig">
+    <strong>Figure 50.2 — Confidence-interval overlap (why point estimates deceive)</strong>
+    <svg viewBox="0 0 640 260" role="img" aria-label="Confidence interval comparison chart">
+      <!-- axes -->
+      <line x1="70" y1="20" x2="70" y2="210" stroke="#c3c9d2" stroke-width="1"></line>
+      <line x1="70" y1="210" x2="610" y2="210" stroke="#c3c9d2" stroke-width="1"></line>
+      <!-- y gridlines/labels: 70% to 95% -->
+      <g font-size="11" fill="#5b6875">
+        <line x1="70" y1="180" x2="610" y2="180" stroke="#eef0f3"></line><text x="34" y="184">72%</text>
+        <line x1="70" y1="130" x2="610" y2="130" stroke="#eef0f3"></line><text x="34" y="134">78%</text>
+        <line x1="70" y1="80" x2="610" y2="80" stroke="#eef0f3"></line><text x="34" y="84">84%</text>
+        <line x1="70" y1="40" x2="610" y2="40" stroke="#eef0f3"></line><text x="34" y="44">90%</text>
+      </g>
+      <!-- Panel 1: overlapping CIs (small N) -->
+      <text x="180" y="238" font-size="12" fill="#1f2733" text-anchor="middle">Small N — CIs overlap</text>
+      <!-- A: mean 78, CI 71-85 -->
+      <line x1="150" y1="188" x2="150" y2="72" stroke="#2d5bd7" stroke-width="2"></line>
+      <line x1="142" y1="188" x2="158" y2="188" stroke="#2d5bd7" stroke-width="2"></line>
+      <line x1="142" y1="72" x2="158" y2="72" stroke="#2d5bd7" stroke-width="2"></line>
+      <circle cx="150" cy="130" r="5" fill="#2d5bd7"></circle>
+      <text x="150" y="255" font-size="11" fill="#2d5bd7" text-anchor="middle">A</text>
+      <!-- B: mean 84.5, CI 78-91 -->
+      <line x1="210" y1="130" x2="210" y2="30" stroke="#e0803a" stroke-width="2"></line>
+      <line x1="202" y1="130" x2="218" y2="130" stroke="#e0803a" stroke-width="2"></line>
+      <line x1="202" y1="30" x2="218" y2="30" stroke="#e0803a" stroke-width="2"></line>
+      <circle cx="210" cy="76" r="5" fill="#e0803a"></circle>
+      <text x="210" y="255" font-size="11" fill="#e0803a" text-anchor="middle">B</text>
+      <!-- overlap band -->
+      <rect x="130" y="72" width="100" height="58" fill="#ffd54f" opacity="0.18"></rect>
+      <!-- Panel 2: separated CIs (large N) -->
+      <text x="460" y="238" font-size="12" fill="#1f2733" text-anchor="middle">Large N — CIs separate</text>
+      <line x1="430" y1="146" x2="430" y2="114" stroke="#2d5bd7" stroke-width="2"></line>
+      <line x1="422" y1="146" x2="438" y2="146" stroke="#2d5bd7" stroke-width="2"></line>
+      <line x1="422" y1="114" x2="438" y2="114" stroke="#2d5bd7" stroke-width="2"></line>
+      <circle cx="430" cy="130" r="5" fill="#2d5bd7"></circle>
+      <text x="430" y="255" font-size="11" fill="#2d5bd7" text-anchor="middle">A</text>
+      <line x1="490" y1="92" x2="490" y2="60" stroke="#e0803a" stroke-width="2"></line>
+      <line x1="482" y1="92" x2="498" y2="92" stroke="#e0803a" stroke-width="2"></line>
+      <line x1="482" y1="60" x2="498" y2="60" stroke="#e0803a" stroke-width="2"></line>
+      <circle cx="490" cy="76" r="5" fill="#e0803a"></circle>
+      <text x="490" y="255" font-size="11" fill="#e0803a" text-anchor="middle">B</text>
+    </svg>
+    <p class="caption">Both panels show the <em>same</em> point estimates (A ≈ 78%, B ≈ 84.5%). On the left (small N /
+    high variance) the 95% CIs overlap, so the difference is <strong>not</strong> significant despite a 6.5-point gap.
+    On the right (larger N) the intervals separate and the result becomes significant. Takeaway: a difference in means
+    is meaningless without its uncertainty. Note the asymmetry — <em>non-overlapping</em> CIs imply significance, but
+    <em>overlapping</em> CIs do <strong>not</strong> automatically imply non-significance; confirm with the actual test.</p>
+  </div>
+
+  <div class="callout pitfall"><strong>⚠️ Common Pitfalls / Misconceptions</strong>
+    <ul class="tight">
+      <li><strong>Interpreting p as "probability B is better."</strong> It is the probability of the data under H₀ — a different thing.</li>
+      <li><strong>Counting N×k as independent samples.</strong> Re-samples of one prompt are correlated; this fakes significance.</li>
+      <li><strong>Peeking &amp; early stopping.</strong> Checking the p-value repeatedly and stopping when it dips below 0.05 massively inflates false positives (use sequential tests or a fixed horizon).</li>
+      <li><strong>Significance without effect size.</strong> At huge N, a 0.1-point rubric gain is "significant" yet practically irrelevant.</li>
+      <li><strong>Assuming normality</strong> for bounded proportions or ordinal rubric scores.</li>
+    </ul>
+  </div>
+
+  <div class="callout trick"><strong>💡 Tips &amp; Tricks</strong>
+    <ul class="tight">
+      <li>Use a <strong>paired</strong> design (same inputs through A and B) and analyze the per-input differences — it cancels between-input variance and is far more powerful.</li>
+      <li>When unsure of the distribution, <strong>bootstrap the CI</strong> — resample inputs, recompute the metric ~10k times, take the 2.5th/97.5th percentiles.</li>
+      <li>Bayesian <em>P(B&gt;A)</em> is often more intuitive for stakeholders and handles small samples gracefully.</li>
+      <li>Report the CI on the <em>difference</em> (B−A), not two separate CIs — it directly answers the question and avoids the overlap fallacy.</li>
+    </ul>
+  </div>
+
+  <div class="exam-tip"><strong>🎯 Exam Strategy:</strong> Questions on statistical significance often present a scenario
+  with a small sample size (n&lt;30) and ask you to identify the flaw. <strong>Watch for answer choices that ignore variance
+  across repeated generations — this is the most common trap.</strong> Also watch for the classic p-value misinterpretation
+  ("p=0.03 means a 97% chance B is better" — false) and for "significant" results reported with <em>no effect size</em>.
+  Eliminate any option that stops the test early "because it hit p&lt;0.05." Keywords that signal the intended answer:
+  <em>independence</em>, <em>effect size</em>, <em>power</em>, <em>paired</em>, <em>bootstrap</em>, <em>peeking</em>.</div>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<!-- ============================ 50.3 ============================ -->
+<section id="50-3">
+  <h2>50.3 — Iterative Prompt Improvement Based on Evaluation Data</h2>
+
+  <h4>Conceptual Overview</h4>
+  <p>Prompt improvement is A/B testing turned into a loop: you don't just pick a winner once, you use the
+  <em>eval data</em> to diagnose <em>why</em> a variant failed, form the next hypothesis, and test again. The
+  unit of learning is the failure case, not the aggregate score. Unlike traditional refactoring, a prompt change
+  can improve one slice of inputs and silently regress another — so improvement must be measured against a stable,
+  representative eval set, not vibes.</p>
+
+  <h4>Key Terminology</h4>
+  <table>
+    <thead><tr><th>Term</th><th>Plain-language definition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Eval set (golden set)</strong></td><td>A curated, version-controlled collection of representative inputs with expected outputs or grading rubrics. Your regression suite for prompts.</td></tr>
+      <tr><td><strong>Prompt drift</strong></td><td>Gradual, unintended change in behavior as a prompt is edited repeatedly — fixing one case quietly breaks others. Caught only by re-running the full eval set.</td></tr>
+      <tr><td><strong>Regression</strong></td><td>A previously-passing case that now fails after a change.</td></tr>
+      <tr><td><strong>Error taxonomy</strong></td><td>Categorized failure modes (hallucination, missed instruction, format error, over-refusal) used to target the next edit.</td></tr>
+      <tr><td><strong>LLM-as-judge</strong></td><td>Using a model to grade outputs against a rubric — scalable, but must be validated against human labels and watched for bias.</td></tr>
+      <tr><td><strong>Overfitting to the eval set</strong></td><td>Tuning the prompt so hard to the test cases that it stops generalizing — mitigated with a held-out set.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Step-by-Step Methodology</h4>
+  <ol class="tight">
+    <li><strong>Establish a versioned eval set</strong> with a train/dev split and a <em>held-out</em> set you rarely touch.</li>
+    <li><strong>Run the current prompt, collect graded results</strong> (multiple completions per input).</li>
+    <li><strong>Cluster the failures into an error taxonomy</strong> — read actual transcripts; aggregate scores hide the "why."</li>
+    <li><strong>Form ONE targeted hypothesis</strong> aimed at the biggest failure cluster ("add an explicit citation instruction to fix ungrounded answers").</li>
+    <li><strong>Make one change → produce prompt v(n+1)</strong>. Keep a diff.</li>
+    <li><strong>A/B the new prompt against the old</strong> on the eval set; check the primary metric <em>and</em> that no cluster regressed.</li>
+    <li><strong>Keep only if it wins without regressions</strong>; log the decision and version the prompt.</li>
+    <li><strong>Periodically validate on the held-out set</strong> to detect overfitting.</li>
+  </ol>
+
+  <h4>Chain-of-Thought: Tracing the Improvement Loop</h4>
+  <div class="cot"><strong>🧠 Hypothesis → Test → Data → Analysis → Decision → Redeploy → Monitor</strong>
+    <ul class="tight">
+      <li><strong>Hypothesis → Test Design:</strong> The eval showed 22% of answers were ungrounded. We <em>reason</em> that the model isn't told to cite sources, so we design a paired test: v1 (no citation rule) vs v2 (explicit "quote the source or say you don't know"), same inputs, k=5 completions each.</li>
+      <li><strong>Test Design → Data Collection:</strong> We run both on the golden set at production temperature, scoring groundedness (binary) with an LLM-judge calibrated to human labels. We collect per-input means to keep observations independent (per 50.2).</li>
+      <li><strong>Data Collection → Analysis:</strong> Paired difference in groundedness pass-rate = +11 pts, bootstrapped 95% CI [+6, +16], excludes 0 → real. But we <em>check guardrails</em>: refusal rate rose 0.6%→2.1%. Reasoning: the "say you don't know" clause over-triggers.</li>
+      <li><strong>Analysis → Decision:</strong> Net win on the primary metric, small regression on a guardrail within tolerance → <strong>accept v2</strong>, and open a follow-up hypothesis to soften the refusal clause.</li>
+      <li><strong>Decision → Redeployment:</strong> Ship v2 behind the same flag used for the test, with the old prompt one toggle away for instant rollback.</li>
+      <li><strong>Redeployment → Monitoring:</strong> Track live groundedness and refusal on sampled production traffic; if refusal keeps climbing (prompt drift or distribution shift), the monitor re-opens the loop with a fresh hypothesis.</li>
+    </ul>
+    <p style="margin:.4em 0 0">The reasoning at each transition is what turns a one-off test into <em>iterative improvement</em>: every arrow is justified by data, and every accepted change is reversible.</p>
+  </div>
+
+  <div class="fig">
+    <strong>Figure 50.3 — Prompt v1 → v2 diff (before/after)</strong>
+    <div class="diff">
+      <div class="row ctx">  System prompt — customer support assistant</div>
+      <div class="row ctx">  You are a helpful support assistant for AcmeCloud.</div>
+      <div class="row del">- Answer the user's question using the knowledge base.</div>
+      <div class="row add">+ Answer ONLY using the provided knowledge-base snippets.</div>
+      <div class="row add">+ Quote the exact snippet you relied on in [brackets].</div>
+      <div class="row add">+ If the snippets do not contain the answer, say:</div>
+      <div class="row add">+   "I don't have that in our docs — let me route you to a human."</div>
+      <div class="row ctx">  Keep answers under 120 words and professional.</div>
+    </div>
+    <p class="caption">A minimal, single-purpose diff targeting the "ungrounded answer" failure cluster. Isolating one
+    change per iteration is what lets you attribute the +11-point groundedness gain (and the small refusal-rate
+    side-effect) to a specific edit.</p>
+  </div>
+
+  <div class="callout pitfall"><strong>⚠️ Common Pitfalls / Misconceptions</strong>
+    <ul class="tight">
+      <li><strong>Editing prompts by intuition on a handful of examples</strong> — you fix the demo and break the long tail (prompt drift).</li>
+      <li><strong>Changing several instructions at once</strong> — impossible to attribute the effect.</li>
+      <li><strong>Tuning until the eval set is perfect</strong> — overfitting; the held-out set exposes it.</li>
+      <li><strong>Trusting an uncalibrated LLM-judge</strong> — its bias becomes your metric's bias.</li>
+      <li><strong>Ignoring guardrail regressions</strong> because the primary metric improved.</li>
+    </ul>
+  </div>
+
+  <div class="callout trick"><strong>💡 Tips &amp; Tricks</strong>
+    <ul class="tight">
+      <li>Version prompts like code (semantic versions + changelog); store the eval scorecard alongside each version.</li>
+      <li>Keep a "regression zoo" of past failure cases; every new prompt must still pass them.</li>
+      <li>Read ~20 real transcripts before touching the prompt — the fix is usually obvious once you see the failures.</li>
+      <li>One hypothesis per iteration. Resist bundling "while I'm in here" edits.</li>
+      <li>Calibrate the LLM-judge on ~50 human-labeled examples; track judge–human agreement (e.g., Cohen's κ).</li>
+    </ul>
+  </div>
+
+  <div class="exam-tip"><strong>🎯 Exam Strategy:</strong> Iterative-improvement questions reward <em>disciplined process</em>.
+  If an option says "change the model, the prompt, and the temperature together to move faster," it's wrong. The right
+  answers emphasize <strong>one change at a time</strong>, <strong>a stable versioned eval set</strong>, <strong>a held-out
+  set to detect overfitting</strong>, and <strong>checking for regressions</strong>. Keywords: <em>prompt drift</em>,
+  <em>regression</em>, <em>golden/eval set</em>, <em>held-out</em>, <em>attribution</em>.</div>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<!-- ============================ 50.4 ============================ -->
+<section id="50-4">
+  <h2>50.4 — Continuous Improvement Loops in Production</h2>
+
+  <h4>Conceptual Overview</h4>
+  <p>Offline tests prove a change is safe to ship; <em>production</em> is where real inputs, real users, and real
+  distribution shift live. A continuous improvement loop closes the gap: production telemetry continuously feeds
+  the next hypothesis, so the system improves over time instead of decaying. The defining LLM challenge is
+  <strong>non-stationarity</strong> — user behavior, content, and even the underlying model can change, so a prompt
+  that won last quarter may quietly regress today.</p>
+
+  <h4>Key Terminology</h4>
+  <table>
+    <thead><tr><th>Term</th><th>Plain-language definition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Online eval / live scoring</strong></td><td>Grading a sample of real production responses (LLM-judge, heuristics, or user signals) to track quality in the wild.</td></tr>
+      <tr><td><strong>Guardrail metric</strong></td><td>A metric that must not regress (latency, cost, safety, refusal) even if the primary metric improves.</td></tr>
+      <tr><td><strong>Canary / staged rollout</strong></td><td>Ship to a small % of traffic first; expand only if metrics hold. Enables fast rollback.</td></tr>
+      <tr><td><strong>Shadow / offline replay</strong></td><td>Run the new variant on logged real traffic without showing users, to compare safely.</td></tr>
+      <tr><td><strong>Distribution shift</strong></td><td>Production inputs drift away from your eval set over time, degrading quality silently.</td></tr>
+      <tr><td><strong>Feedback signal</strong></td><td>Implicit (thumbs up/down, edits, re-asks, escalations) or explicit user ratings used as an outcome metric.</td></tr>
+      <tr><td><strong>Model version pinning</strong></td><td>Locking to a specific model ID so a provider-side update doesn't silently change behavior mid-experiment.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Step-by-Step Methodology</h4>
+  <ol class="tight">
+    <li><strong>Instrument production</strong> — log inputs, outputs, latency, cost, and feedback signals with the variant/version attached.</li>
+    <li><strong>Continuously score a sample</strong> of live traffic (online eval) against primary + guardrail metrics.</li>
+    <li><strong>Detect drift &amp; regressions</strong> with dashboards and alerts on the scored stream.</li>
+    <li><strong>Feed failures back</strong> into the golden set so offline tests keep matching reality.</li>
+    <li><strong>Form a hypothesis, test offline, then roll out via canary</strong> with automatic rollback thresholds.</li>
+    <li><strong>Pin the model version</strong> during any experiment; re-baseline when the provider updates it.</li>
+    <li><strong>Repeat</strong> — the loop never ends; production is the source of the next hypothesis.</li>
+  </ol>
+
+  <div class="fig">
+    <strong>Figure 50.4 — The continuous improvement loop</strong>
+    <svg viewBox="0 0 700 300" role="img" aria-label="Continuous improvement loop flowchart">
+      <defs>
+        <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#2d5bd7"></path>
+        </marker>
+      </defs>
+      <g font-size="12.5" text-anchor="middle" fill="#1c3a8f">
+        <!-- nodes arranged in a ring -->
+        <g>
+          <rect x="290" y="10" width="120" height="46" rx="10" fill="#eef3ff" stroke="#2d5bd7"></rect>
+          <text x="350" y="30">Hypothesis</text><text x="350" y="46" font-size="10.5" fill="#5b6875">from prod data</text>
+        </g>
+        <g>
+          <rect x="500" y="70" width="120" height="46" rx="10" fill="#eef3ff" stroke="#2d5bd7"></rect>
+          <text x="560" y="90">Test Design</text><text x="560" y="106" font-size="10.5" fill="#5b6875">offline A/B</text>
+        </g>
+        <g>
+          <rect x="530" y="180" width="120" height="46" rx="10" fill="#eef3ff" stroke="#2d5bd7"></rect>
+          <text x="590" y="200">Data + Analysis</text><text x="590" y="216" font-size="10.5" fill="#5b6875">effect size + CI</text>
+        </g>
+        <g>
+          <rect x="290" y="244" width="120" height="46" rx="10" fill="#eef3ff" stroke="#2d5bd7"></rect>
+          <text x="350" y="264">Decision</text><text x="350" y="280" font-size="10.5" fill="#5b6875">ship / reject</text>
+        </g>
+        <g>
+          <rect x="50" y="180" width="120" height="46" rx="10" fill="#eef3ff" stroke="#2d5bd7"></rect>
+          <text x="110" y="200">Redeploy</text><text x="110" y="216" font-size="10.5" fill="#5b6875">canary rollout</text>
+        </g>
+        <g>
+          <rect x="80" y="70" width="120" height="46" rx="10" fill="#eef3ff" stroke="#2d5bd7"></rect>
+          <text x="140" y="90">Monitor</text><text x="140" y="106" font-size="10.5" fill="#5b6875">online eval</text>
+        </g>
+      </g>
+      <!-- arrows clockwise -->
+      <g stroke="#2d5bd7" stroke-width="2" fill="none" marker-end="url(#arrow)">
+        <path d="M410,34 Q480,40 512,72"></path>
+        <path d="M572,116 Q596,145 590,178"></path>
+        <path d="M540,224 Q470,255 412,268"></path>
+        <path d="M288,268 Q210,255 168,222"></path>
+        <path d="M96,178 Q78,145 118,118"></path>
+        <path d="M172,80 Q250,42 288,36"></path>
+      </g>
+      <text x="350" y="155" text-anchor="middle" font-size="13" fill="#e0803a" font-weight="700">↻ never-ending loop</text>
+    </svg>
+    <p class="caption">Each production cycle turns real telemetry into the next hypothesis. The loop is closed by
+    <em>Monitor → Hypothesis</em>: live regressions and drift automatically seed the next experiment. Canary rollout at
+    "Redeploy" keeps every change reversible, which is what makes continuous iteration safe.</p>
+  </div>
+
+  <div class="callout pitfall"><strong>⚠️ Common Pitfalls / Misconceptions</strong>
+    <ul class="tight">
+      <li><strong>"Offline pass = done."</strong> Production distribution differs; you must keep scoring live traffic.</li>
+      <li><strong>Big-bang rollout</strong> with no canary or rollback path.</li>
+      <li><strong>Unpinned model version</strong> — a provider update shifts behavior mid-experiment and confounds results.</li>
+      <li><strong>Treating implicit feedback as ground truth</strong> — thumbs-down is noisy and biased; corroborate with graded evals.</li>
+      <li><strong>Stale eval set</strong> that no longer represents real inputs (silent drift).</li>
+    </ul>
+  </div>
+
+  <div class="callout trick"><strong>💡 Tips &amp; Tricks</strong>
+    <ul class="tight">
+      <li>Wire automatic rollback: if a guardrail breaches its threshold during canary, revert without a human in the loop.</li>
+      <li>Continuously harvest hard/failed production cases into the golden set so offline tests stay honest.</li>
+      <li>Shadow-run a candidate on logged traffic before any user sees it — free, safe signal.</li>
+      <li>Alert on <em>rates of change</em>, not just absolute levels — drift shows up as a slow slope first.</li>
+      <li>Keep a dated changelog linking each prod change to its experiment and result for audits and rollbacks.</li>
+    </ul>
+  </div>
+
+  <div class="exam-tip"><strong>🎯 Exam Strategy:</strong> Production-loop questions test whether you'll ship safely.
+  Correct answers favor <strong>canary/staged rollout</strong>, <strong>guardrail metrics with automatic rollback</strong>,
+  <strong>online evaluation</strong>, and <strong>model-version pinning</strong>. A distractor will describe a full
+  100% rollout right after an offline win — reject it. Watch for scenarios where the model provider "updated the model"
+  mid-test — the expected answer is <em>re-baseline / pin the version</em>. Keywords: <em>canary</em>, <em>rollback</em>,
+  <em>distribution shift</em>, <em>guardrail</em>, <em>online eval</em>.</div>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<!-- ============================ 50.5 ============================ -->
+<section id="50-5">
+  <h2>50.5 — Hands-On: Running an A/B Test on a Claude Application</h2>
+
+  <h4>Scenario</h4>
+  <p>A customer-support assistant answers billing questions from an internal knowledge base. Users complain answers are
+  sometimes <em>ungrounded</em> (not backed by the docs). We hypothesize that an explicit
+  citation-and-abstain instruction (Variant B) beats the current prompt (Variant A) on <strong>groundedness pass-rate</strong>,
+  without hurting <strong>helpfulness</strong> or <strong>latency</strong>.</p>
+
+  <ul class="tight">
+    <li><strong>Primary metric:</strong> groundedness pass-rate (binary, graded by a calibrated LLM-judge).</li>
+    <li><strong>Guardrails:</strong> helpfulness (1–5), median latency, refusal rate.</li>
+    <li><strong>Design:</strong> paired — same 60 test inputs through both variants; <code>k=5</code> completions per input at production <code>temperature=0.7</code>; analyze per-input means.</li>
+  </ul>
+
+  <h4>Code Walkthrough (Python + Claude API style)</h4>
+  <p class="kbd">Illustrative pseudocode. <code>claude-sonnet-4.5</code> is a placeholder — confirm the current model ID and API surface against official docs.</p>
+  <pre><code># Pseudocode: paired A/B test on two Claude system prompts
+import anthropic, statistics as stats
+from scipy import stats as sps            # for the paired test
+import numpy as np
+
+client = anthropic.Anthropic()            # reads API key from env
+MODEL = "claude-sonnet-4.5"               # placeholder — verify
+
+PROMPT_A = "You are a support assistant. Answer using the knowledge base."
+PROMPT_B = ("You are a support assistant. Answer ONLY using the provided "
+            "snippets, quote the snippet in [brackets], and if the answer "
+            "is not present say you'll route to a human.")
+
+def generate(system_prompt, user_input, kb_snippets):
+    resp = client.messages.create(
+        model=MODEL,
+        max_tokens=400,
+        temperature=0.7,                  # production temperature
+        system=system_prompt,
+        messages=[{"role": "user",
+                   "content": f"Context:\n{kb_snippets}\n\nQuestion: {user_input}"}],
+    )
+    return resp.content[0].text
+
+def grade_groundedness(answer, kb_snippets) -&gt; int:
+    # Calibrated LLM-as-judge returns 1 (grounded) or 0 (ungrounded).
+    # Validate the judge against human labels before trusting it.
+    ...
+    return score
+
+def run_variant(system_prompt, test_set, k=5):
+    """Return one mean groundedness score PER INPUT (keeps units independent)."""
+    per_input_means = []
+    for item in test_set:                 # item = {input, kb_snippets}
+        scores = []
+        for _ in range(k):                # multiple samples -&gt; handle non-determinism
+            ans = generate(system_prompt, item["input"], item["kb_snippets"])
+            scores.append(grade_groundedness(ans, item["kb_snippets"]))
+        per_input_means.append(np.mean(scores))
+    return np.array(per_input_means)
+
+# --- run both arms on the SAME inputs (paired design) ---
+a = run_variant(PROMPT_A, TEST_SET, k=5)
+b = run_variant(PROMPT_B, TEST_SET, k=5)
+
+diff = b - a                              # per-input differences
+point = diff.mean()                       # observed lift in pass-rate
+
+# Paired t-test on per-input means (units are now independent)
+t_stat, p_value = sps.ttest_rel(b, a)
+
+# Distribution-free CI via bootstrap over inputs (robust, no normality assumption)
+boot = [np.random.choice(diff, size=len(diff), replace=True).mean()
+        for _ in range(10_000)]
+ci_low, ci_high = np.percentile(boot, [2.5, 97.5])
+
+print(f"Lift = {point:+.3f}  95% CI [{ci_low:+.3f}, {ci_high:+.3f}]  p = {p_value:.4f}")</code></pre>
+
+  <h4>Sample Results (mock data)</h4>
+  <div class="fig">
+    <strong>Figure 50.5a — Per-variant metrics (N = 60 inputs × k = 5)</strong>
+    <table>
+      <thead><tr><th>Metric</th><th><span class="pill a">A</span> baseline</th><th><span class="pill b">B</span> cite+abstain</th><th>Difference (B−A)</th><th>95% CI (bootstrap)</th><th>p (paired)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Groundedness pass-rate</strong> (primary)</td><td>0.78</td><td>0.89</td><td><strong>+0.11</strong></td><td>[+0.06, +0.16]</td><td>0.0007</td></tr>
+        <tr><td>Helpfulness (1–5 mean)</td><td>4.10</td><td>4.05</td><td>−0.05</td><td>[−0.18, +0.09]</td><td>0.42</td></tr>
+        <tr><td>Median latency</td><td>1.9 s</td><td>2.0 s</td><td>+0.1 s</td><td>[−0.1, +0.3]</td><td>0.31</td></tr>
+        <tr><td>Refusal rate</td><td>0.6%</td><td>2.1%</td><td>+1.5 pts</td><td>[+0.4, +2.7]</td><td>0.02</td></tr>
+      </tbody>
+    </table>
+    <p class="caption">The primary metric moves +11 points with a CI that excludes 0 and p ≪ 0.05 → a real, meaningful
+    win. Helpfulness and latency are statistically flat (CIs straddle 0). Refusal rate rises significantly but stays
+    small in absolute terms — a guardrail to watch, not a blocker.</p>
+  </div>
+
+  <div class="fig">
+    <strong>Figure 50.5b — Groundedness pass-rate with 95% CI</strong>
+    <svg viewBox="0 0 520 210" role="img" aria-label="Bar chart of groundedness pass-rate for A and B">
+      <line x1="60" y1="20" x2="60" y2="170" stroke="#c3c9d2"></line>
+      <line x1="60" y1="170" x2="480" y2="170" stroke="#c3c9d2"></line>
+      <g font-size="11" fill="#5b6875">
+        <line x1="60" y1="170" x2="480" y2="170" stroke="#eef0f3"></line><text x="30" y="174">0%</text>
+        <line x1="60" y1="120" x2="480" y2="120" stroke="#eef0f3"></line><text x="26" y="124">33%</text>
+        <line x1="60" y1="70" x2="480" y2="70" stroke="#eef0f3"></line><text x="26" y="74">67%</text>
+        <line x1="60" y1="20" x2="480" y2="20" stroke="#eef0f3"></line><text x="30" y="24">100%</text>
+      </g>
+      <!-- A bar: 78% -> height from 170 up; 78% of 150px = 117 -> y=53 -->
+      <rect x="150" y="53" width="90" height="117" fill="#2d5bd7" opacity="0.85"></rect>
+      <text x="195" y="188" font-size="12" text-anchor="middle" fill="#2d5bd7">A · 78%</text>
+      <!-- A error bar CI ~ [72,84] -> 72%=170-108=62 ; 84%=170-126=44 -->
+      <line x1="195" y1="44" x2="195" y2="62" stroke="#12306e" stroke-width="2"></line>
+      <line x1="187" y1="44" x2="203" y2="44" stroke="#12306e" stroke-width="2"></line>
+      <line x1="187" y1="62" x2="203" y2="62" stroke="#12306e" stroke-width="2"></line>
+      <!-- B bar: 89% -> 89% of 150 = 133.5 -> y=36.5 -->
+      <rect x="300" y="37" width="90" height="133" fill="#e0803a" opacity="0.9"></rect>
+      <text x="345" y="188" font-size="12" text-anchor="middle" fill="#b25e1c">B · 89%</text>
+      <!-- B error bar CI ~ [84,94] -> 84%=44 ; 94%=170-141=29 -->
+      <line x1="345" y1="29" x2="345" y2="44" stroke="#7a3f0f" stroke-width="2"></line>
+      <line x1="337" y1="29" x2="353" y2="29" stroke="#7a3f0f" stroke-width="2"></line>
+      <line x1="337" y1="44" x2="353" y2="44" stroke="#7a3f0f" stroke-width="2"></line>
+    </svg>
+    <p class="caption">The 95% confidence intervals for A and B do not overlap, visually confirming the paired test:
+    Variant B's groundedness gain is statistically significant, not sampling noise.</p>
+  </div>
+
+  <h4>Interpretation &amp; Decision</h4>
+  <div class="cot"><strong>🧠 Reading the results</strong>
+    <ol class="tight">
+      <li>Primary metric: +0.11 groundedness, 95% CI [+0.06, +0.16] excludes 0, p = 0.0007 — a genuine and practically meaningful improvement.</li>
+      <li>Guardrails: helpfulness and latency are statistically unchanged (CIs cross 0). Refusal rose significantly (+1.5 pts) but remains small (2.1%).</li>
+      <li>Trade-off judgment: the groundedness win clearly outweighs a minor, in-tolerance refusal increase.</li>
+    </ol>
+    <p style="margin:.4em 0 0"><strong>Decision:</strong> <span class="pill b">Ship Variant B</span> via a 10% canary with automatic
+    rollback if refusal exceeds 4% or latency p95 regresses &gt;20%. Open a follow-up hypothesis to soften the abstain
+    clause and recover the refusal-rate delta. Re-baseline if the model version changes.</p>
+  </div>
+
+  <div class="callout pitfall"><strong>⚠️ Common Pitfalls / Misconceptions (hands-on)</strong>
+    <ul class="tight">
+      <li>Running k=1 completion per input — you'd measure noise, not the variant.</li>
+      <li>Treating all 300 rows (60×5) as independent in the t-test — inflates significance; aggregate to per-input means first.</li>
+      <li>Shipping on the primary metric alone while ignoring the refusal-rate guardrail.</li>
+      <li>Trusting the LLM-judge without validating it against human labels.</li>
+    </ul>
+  </div>
+
+  <div class="exam-tip"><strong>🎯 Exam Strategy:</strong> Hands-on questions often show a code snippet or results table and
+  ask "what should you conclude?" or "what's the bug?" The intended flaw is usually <strong>one sample per input</strong>,
+  <strong>rows treated as independent</strong>, or a <strong>decision made on the primary metric while a guardrail regressed</strong>.
+  When a table shows a significant primary gain <em>and</em> a small guardrail regression, the exam-correct move is
+  usually <em>ship behind a canary with rollback</em>, not "ship to 100%" or "reject outright."</div>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<hr>
+
+<!-- ============================ SUMMARY ============================ -->
+<section id="summary-table">
+  <h2>Chapter Summary Table</h2>
+  <table>
+    <thead><tr><th>Topic</th><th>Key Concept</th><th>Formula / Method</th><th>Exam Tip</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>50.1</strong> Designing A/B tests</td>
+        <td>Compare two <em>output distributions</em> under a fixed eval; one variable, one primary metric + guardrails.</td>
+        <td>Paired design; N inputs × k completions; define OEC &amp; hypothesis up front.</td>
+        <td>Spot the flawed design: single run, two variables changed, or metric chosen post-hoc.</td>
+      </tr>
+      <tr>
+        <td><strong>50.2</strong> Statistical significance</td>
+        <td>Non-determinism + correlated re-samples break independence &amp; fixed-distribution assumptions.</td>
+        <td>Aggregate to per-input means; paired t-test / two-proportion z-test; <strong>bootstrap CI</strong>; Bayesian P(B&gt;A). Size: <code>n≈16σ²/δ²</code>.</td>
+        <td>Trap = ignoring variance across generations. Report effect size + CI, not p alone; no peeking.</td>
+      </tr>
+      <tr>
+        <td><strong>50.3</strong> Iterative prompt improvement</td>
+        <td>Use eval data to diagnose failures; one hypothesis per iteration; guard against prompt drift.</td>
+        <td>Versioned golden set + held-out split; error taxonomy; diff v(n)→v(n+1); regression check.</td>
+        <td>Favor "one change at a time" + held-out set. Reject "change model+prompt+temp together."</td>
+      </tr>
+      <tr>
+        <td><strong>50.4</strong> Continuous improvement loops</td>
+        <td>Production telemetry seeds the next hypothesis; manage non-stationarity &amp; distribution shift.</td>
+        <td>Online eval on sampled traffic; canary rollout + auto-rollback; pin model version; feed failures back.</td>
+        <td>Prefer canary + rollback + online eval. Reject 100% rollout after offline win; re-baseline on model update.</td>
+      </tr>
+      <tr>
+        <td><strong>50.5</strong> Hands-on Claude A/B test</td>
+        <td>Paired test of two system prompts; k samples/input; groundedness primary, guardrails watched.</td>
+        <td><code>ttest_rel</code> on per-input means + bootstrap CI; ship via canary if primary wins &amp; guardrails hold.</td>
+        <td>Bug is usually k=1 or rows treated independent; decision = ship behind canary, not to 100%.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<!-- ============================ REVISION ============================ -->
+<section id="quick-revision">
+  <h2>Quick Revision</h2>
+
+  <h3>Flashcards</h3>
+
+  <div class="flash"><div class="q">Q1. Why can't you judge an LLM variant on a single generation per input?</div>
+  <div class="ans">A. At temperature &gt; 0 each generation is one draw from a distribution; a single sample confuses random noise with a real effect. Use multiple completions (k) per input.</div></div>
+
+  <div class="flash"><div class="q">Q2. What does a p-value actually mean?</div>
+  <div class="ans">A. The probability of observing a difference at least this extreme <em>if the null hypothesis (no difference) were true</em>. It is NOT the probability that B is better or that H₀ is true.</div></div>
+
+  <div class="flash"><div class="q">Q3. Effect size vs. statistical significance?</div>
+  <div class="ans">A. Effect size = how big the difference is (e.g., Cohen's d, absolute lift), independent of N. Significance = how confident we are it isn't chance. A tiny effect can be significant at huge N yet useless.</div></div>
+
+  <div class="flash"><div class="q">Q4. Which independence assumption do LLM A/B tests violate, and how do you fix it?</div>
+  <div class="ans">A. Multiple completions from the same input are correlated (share prompt/context), so N×k rows aren't independent. Fix by aggregating to per-input means (or using clustered/mixed-effects models) before testing.</div></div>
+
+  <div class="flash"><div class="q">Q5. When is a paired design preferred, and why?</div>
+  <div class="ans">A. When A and B run on the same inputs. It cancels between-input variance, giving much higher power for the same sample size.</div></div>
+
+  <div class="flash"><div class="q">Q6. What is bootstrapping and when do you use it?</div>
+  <div class="ans">A. Resampling inputs with replacement thousands of times to build an empirical distribution of the metric difference, yielding a CI with no normality assumption — ideal for skewed/bounded LLM metrics.</div></div>
+
+  <div class="flash"><div class="q">Q7. Give the rule-of-thumb sample size for a continuous metric.</div>
+  <div class="ans">A. Per group, n ≈ 16·σ²/δ² for 80% power at α=0.05 (two-sided). Halving δ roughly quadruples required n.</div></div>
+
+  <div class="flash"><div class="q">Q8. Do overlapping 95% CIs mean the result is not significant?</div>
+  <div class="ans">A. Not necessarily. Non-overlapping CIs imply significance, but overlapping CIs can still be significant — check the CI on the <em>difference</em> or run the test.</div></div>
+
+  <div class="flash"><div class="q">Q9. What is prompt drift?</div>
+  <div class="ans">A. Gradual, unintended behavior change from repeated prompt edits — fixing one case silently breaks others. Detected by re-running the full versioned eval set.</div></div>
+
+  <div class="flash"><div class="q">Q10. Why keep a held-out eval set?</div>
+  <div class="ans">A. To detect overfitting — tuning a prompt so hard to the dev set that it stops generalizing. The held-out set gives an unbiased quality estimate.</div></div>
+
+  <div class="flash"><div class="q">Q11. What is a guardrail metric?</div>
+  <div class="ans">A. A metric that must not regress (latency, cost, safety, refusal) even when the primary metric improves. Ship only if guardrails hold.</div></div>
+
+  <div class="flash"><div class="q">Q12. Why pin the model version during an experiment?</div>
+  <div class="ans">A. A provider-side model update mid-test changes behavior and confounds A vs B. Pin the version; re-baseline when it changes.</div></div>
+
+  <div class="flash"><div class="q">Q13. What does "peeking" do to an A/B test?</div>
+  <div class="ans">A. Repeatedly checking results and stopping when p&lt;0.05 inflates the false-positive rate far above α. Use a fixed sample horizon or a proper sequential test.</div></div>
+
+  <div class="flash"><div class="q">Q14. Why validate an LLM-as-judge before using it?</div>
+  <div class="ans">A. If the judge is biased or miscalibrated, its bias becomes your metric's bias. Calibrate against human labels and track judge–human agreement (e.g., Cohen's κ).</div></div>
+
+  <div class="flash"><div class="q">Q15. What's the safe way to roll a winning variant to production?</div>
+  <div class="ans">A. Canary/staged rollout with online evaluation and automatic rollback thresholds on guardrails — never a 100% big-bang rollout straight from an offline win.</div></div>
+
+  <h3>Memory Aid — the A/B Testing Workflow</h3>
+  <div class="mnemonic">
+    <strong>Mnemonic: “Hypothesis Testing Delivers Actionable Decisions, Reliably Monitored.”</strong><br>
+    <strong>H</strong>ypothesis → <strong>T</strong>est Design → <strong>D</strong>ata Collection →
+    <strong>A</strong>nalysis → <strong>D</strong>ecision → <strong>R</strong>edeployment → <strong>M</strong>onitoring
+    <br><span class="kbd">The final M loops back to H — Monitoring surfaces the next hypothesis, closing the continuous-improvement loop.</span>
+  </div>
+
+  <div class="callout trick"><strong>💡 Three-second exam recall:</strong> <em>“Sample many, pair inputs, report effect size + CI,
+  never peek, ship by canary.”</em> If an answer choice violates any of those five, it's probably the wrong option.</div>
+  <p class="backtop"><a href="#top">↑ Contents</a></p>
+</section>
+
+<hr>
+<p class="kbd">End of Chapter 50 notes · Model identifiers and API details are representative placeholders — verify against current official Anthropic documentation before use.</p>
+
+</div>
+
+
+</body></html>

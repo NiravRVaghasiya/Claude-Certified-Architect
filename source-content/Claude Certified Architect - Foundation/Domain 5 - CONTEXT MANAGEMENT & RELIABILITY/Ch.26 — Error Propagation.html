@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 26 — Error Propagation Across Multi-Agent Systems | Study Guide</title>
+<style>
+  :root{
+    --bg:#f6f8fb; --ink:#1e293b; --muted:#5b6b7f; --line:#dce3ec;
+    --card:#ffffff; --accent:#2563eb; --accent-soft:#e8f0fe;
+    --ok:#0f766e; --ok-soft:#d7f2ee; --warn:#b45309; --warn-soft:#fdf0dd;
+    --bad:#b91c1c; --bad-soft:#fde8e8; --code-bg:#0f172a; --code-ink:#e2e8f0;
+    --violet:#7c3aed; --violet-soft:#efe7fd;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:32px 22px 80px;}
+  header.hero{
+    background:linear-gradient(135deg,#1e293b,#334155); color:#fff;
+    border-radius:16px; padding:34px 30px; margin-bottom:26px;
+    box-shadow:0 10px 30px rgba(15,23,42,.18);
+  }
+  header.hero .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#93c5fd; font-weight:700;}
+  header.hero h1{margin:8px 0 6px; font-size:30px; line-height:1.2;}
+  header.hero p{margin:0; color:#cbd5e1; font-size:15px; max-width:70ch;}
+  header.hero .exam-tag{
+    display:inline-block; margin-top:14px; background:rgba(37,99,235,.25);
+    border:1px solid rgba(147,197,253,.5); color:#dbeafe;
+    padding:5px 12px; border-radius:999px; font-size:12.5px; font-weight:600;
+  }
+
+  nav.toc{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:18px 22px; margin-bottom:30px;
+  }
+  nav.toc h4{margin:0 0 10px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
+  nav.toc ol{margin:0; padding-left:20px; columns:2; column-gap:34px;}
+  nav.toc li{margin:4px 0;}
+  nav.toc a{color:var(--accent); text-decoration:none;}
+  nav.toc a:hover{text-decoration:underline;}
+
+  h2{
+    font-size:23px; margin:46px 0 4px; padding-top:14px; border-top:3px solid var(--accent);
+    scroll-margin-top:16px;
+  }
+  h2 .num{color:var(--accent);}
+  h3{
+    font-size:16px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--muted); margin:26px 0 8px; border-left:4px solid var(--accent);
+    padding-left:10px;
+  }
+  section.topic{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:8px 26px 26px; margin-bottom:8px; box-shadow:0 2px 10px rgba(15,23,42,.04);
+  }
+  p{margin:10px 0;}
+
+  /* Definitions */
+  dl.terms{margin:8px 0; padding:14px 16px; background:#fbfcfe; border:1px solid var(--line); border-radius:10px;}
+  dl.terms dt{font-weight:700; color:var(--accent); margin-top:10px;}
+  dl.terms dt:first-child{margin-top:0;}
+  dl.terms dd{margin:2px 0 0 0; color:var(--ink);}
+  .term{font-weight:700; color:var(--accent);}
+
+  /* Tables */
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; background:#fff;}
+  caption{caption-side:top; text-align:left; font-size:13px; color:var(--muted); margin-bottom:6px; font-style:italic;}
+  th,td{border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top;}
+  thead th{background:var(--accent-soft); color:#1e3a8a; font-weight:700;}
+  tbody tr:nth-child(even){background:#fafbfd;}
+  td.good{background:var(--ok-soft);}
+  td.bad{background:var(--bad-soft);}
+  .yes{color:var(--ok); font-weight:700;}
+  .no{color:var(--bad); font-weight:700;}
+
+  /* Code */
+  pre{background:var(--code-bg); border-radius:10px; padding:16px 18px; overflow-x:auto; margin:14px 0; border:1px solid #1e293b;}
+  pre code{color:var(--code-ink); font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:13.5px; line-height:1.55; display:block; white-space:pre;}
+  code.inline{background:#eef2f7; padding:1px 6px; border-radius:5px; font-family:Consolas,monospace; font-size:13.5px; color:#0f172a; border:1px solid var(--line);}
+  .cmt{color:#7c8ba1;} .kw{color:#c084fc;} .str{color:#86efac;} .fn{color:#7dd3fc;} .num2{color:#fca5a5;}
+
+  /* Callout boxes */
+  .tip, .exam-strategy, .pitfall{
+    border-radius:10px; padding:14px 16px 14px 16px; margin:16px 0; font-size:14.8px;
+  }
+  .tip{background:var(--ok-soft); border-left:5px solid var(--ok);}
+  .tip strong{color:var(--ok);}
+  .pitfall{background:var(--warn-soft); border-left:5px solid var(--warn);}
+  .pitfall strong{color:var(--warn);}
+  .exam-strategy{background:var(--violet-soft); border-left:5px solid var(--violet);}
+  .exam-strategy strong{color:var(--violet);}
+  .tip ul, .exam-strategy ul, .pitfall ul{margin:8px 0 2px; padding-left:20px;}
+  .tip li, .exam-strategy li, .pitfall li{margin:5px 0;}
+  .exam-strategy .trap{background:#fff; border:1px dashed var(--violet); border-radius:6px; padding:6px 10px; margin-top:8px; font-size:14px;}
+
+  /* Flowcharts */
+  .flow{display:flex; flex-direction:column; gap:0; align-items:center; margin:18px 0;}
+  .flow-row{display:flex; gap:14px; align-items:stretch; justify-content:center; flex-wrap:wrap;}
+  .node{
+    background:#fff; border:2px solid var(--accent); border-radius:10px;
+    padding:11px 15px; min-width:150px; max-width:230px; text-align:center; font-size:14px; font-weight:600;
+    box-shadow:0 2px 6px rgba(37,99,235,.12);
+  }
+  .node small{display:block; font-weight:400; color:var(--muted); font-size:12.5px; margin-top:3px;}
+  .node.start{border-color:var(--muted); background:#f1f5f9;}
+  .node.decision{border-color:var(--warn); background:var(--warn-soft); border-radius:8px;}
+  .node.ok{border-color:var(--ok); background:var(--ok-soft);}
+  .node.bad{border-color:var(--bad); background:var(--bad-soft);}
+  .node.esc{border-color:var(--violet); background:var(--violet-soft);}
+  .arrow-down{width:2px; height:26px; background:var(--muted); position:relative; margin:2px 0;}
+  .arrow-down::after{content:""; position:absolute; bottom:-1px; left:-4px; border-left:5px solid transparent; border-right:5px solid transparent; border-top:8px solid var(--muted);}
+  .arrow-label{font-size:12px; color:var(--muted); background:#fff; padding:0 6px; font-weight:600;}
+  .branch{display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:4px;}
+  .branch-col{display:flex; flex-direction:column; align-items:center;}
+  .lbl-chip{font-size:11.5px; font-weight:700; padding:2px 9px; border-radius:999px; margin-bottom:4px;}
+  .lbl-yes{background:var(--ok-soft); color:var(--ok);}
+  .lbl-no{background:var(--bad-soft); color:var(--bad);}
+  .lbl-maybe{background:var(--warn-soft); color:var(--warn);}
+
+  /* Summary / cheat sheet / self check */
+  .cheat{background:#0f172a; color:#e2e8f0; border-radius:14px; padding:22px 26px; margin:18px 0;}
+  .cheat h3{color:#93c5fd; border-color:#3b82f6;}
+  .cheat ul{margin:6px 0; padding-left:20px;}
+  .cheat li{margin:6px 0; font-size:14.5px;}
+  .cheat code{background:#1e293b; color:#7dd3fc; padding:1px 6px; border-radius:5px;}
+
+  details.qa{background:#fff; border:1px solid var(--line); border-radius:10px; margin:12px 0; padding:0 16px;}
+  details.qa summary{cursor:pointer; font-weight:700; padding:14px 0; list-style:none; color:var(--ink);}
+  details.qa summary::-webkit-details-marker{display:none;}
+  details.qa summary::before{content:"▸ "; color:var(--accent); font-weight:700;}
+  details.qa[open] summary::before{content:"▾ ";}
+  details.qa .ans{padding:0 0 16px; border-top:1px dashed var(--line); margin-top:2px; padding-top:12px; font-size:14.7px;}
+  details.qa .correct{color:var(--ok); font-weight:700;}
+  .qopts{margin:8px 0; padding-left:18px;}
+  .qopts li{margin:4px 0;}
+
+  .lifecycle-strip{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0;}
+  .lifecycle-strip .step{flex:1; min-width:150px; background:var(--accent-soft); border:1px solid #bfdbfe; border-radius:10px; padding:10px 12px; font-size:13.5px;}
+  .lifecycle-strip .step b{display:block; color:#1e3a8a; font-size:12px; text-transform:uppercase; letter-spacing:.04em;}
+
+  footer.foot{margin-top:40px; text-align:center; color:var(--muted); font-size:13px;}
+  hr.soft{border:none; border-top:1px solid var(--line); margin:30px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">Claude Certified Architect — Foundations &amp; Professional</div>
+  <h1>Chapter 26 · Error Propagation Across Multi-Agent Systems</h1>
+  <p>An exam-ready study guide covering how errors are represented, distinguished, contained, escalated, and recovered from as they travel between subagents and a coordinating agent. Structured for rapid revision with diagrams, code, tips, and exam-strategy notes.</p>
+  <span class="exam-tag">📚 Instructional study material — self-contained reference</span>
+</header>
+
+<nav class="toc">
+  <h4>Contents</h4>
+  <ol>
+    <li><a href="#s261">26.1 Structured Error Context</a></li>
+    <li><a href="#s262">26.2 Timeouts vs Empty Results</a></li>
+    <li><a href="#s263">26.3 Subagent Local Recovery</a></li>
+    <li><a href="#s264">26.4 Coordinator Recovery Strategies</a></li>
+    <li><a href="#s265">26.5 Hands-On Implementation</a></li>
+    <li><a href="#summary">Chapter Summary</a></li>
+    <li><a href="#master">Master Flowchart</a></li>
+    <li><a href="#cheat">Cheat Sheet</a></li>
+    <li><a href="#selfcheck">Self-Check Questions</a></li>
+  </ol>
+</nav>
+
+<!-- Framing paragraph tying the chapter together -->
+<section class="topic">
+  <h3 style="margin-top:14px;">How this chapter fits together</h3>
+  <p>In a multi-agent system, a <span class="term">coordinator</span> (orchestrator) delegates work to specialized <span class="term">subagents</span>. Things fail: tools time out, permissions are denied, payloads come back empty. The chapter teaches one coherent <strong>error-handling lifecycle</strong>:</p>
+  <div class="lifecycle-strip">
+    <div class="step"><b>26.1 Represent</b>Capture failures as structured error context, not raw strings.</div>
+    <div class="step"><b>26.2 Distinguish</b>Separate "couldn't check" (access failure) from "checked, nothing found" (valid empty).</div>
+    <div class="step"><b>26.3 Contain</b>Let the subagent self-heal locally before it bothers the coordinator.</div>
+    <div class="step"><b>26.4 Recover</b>Coordinator retries, tries alternatives, or degrades gracefully.</div>
+    <div class="step"><b>26.5 Apply</b>Wire it all together end-to-end in a worked example.</div>
+  </div>
+  <p>Keep this progression in mind — <em>represent → distinguish → contain → recover → apply</em> — because exam questions frequently test whether you know <strong>which layer owns which responsibility</strong>.</p>
+</section>
+
+<!-- ===================== 26.1 ===================== -->
+<h2 id="s261"><span class="num">26.1</span> Structured Error Context for Intelligent Recovery</h2>
+<section class="topic">
+
+  <h3>Concept Overview</h3>
+  <p>When a subagent fails, <em>how</em> it reports the failure decides whether the system can recover intelligently. A bare string like <code class="inline">"Error: request failed"</code> tells the coordinator almost nothing — it cannot decide whether to retry, switch tools, or give up. <span class="term">Structured error context</span> replaces that string with a machine-readable object carrying the facts a recovery policy needs: <em>what</em> failed, <em>who</em> failed, <em>what was being attempted</em>, <em>what (if anything) was already produced</em>, and <em>how many times it has been tried</em>.</p>
+  <p>The "why" is decision-making. Recovery is a routing decision, and routing needs typed inputs. Structured context turns error handling from guesswork ("does this string contain the word 'timeout'?") into deterministic policy ("if <code class="inline">error_type == ACCESS_FAILURE</code> and <code class="inline">retry_count &lt; max</code>, retry").</p>
+
+  <h3>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Structured Error Context</dt>
+    <dd>A typed object describing a failure, designed to be consumed by recovery logic rather than read by a human.</dd>
+    <dt>Error Type</dt>
+    <dd>A categorical label (e.g. <code class="inline">ACCESS_FAILURE</code>, <code class="inline">VALIDATION_ERROR</code>, <code class="inline">EMPTY_RESULT</code>) that drives the recovery branch taken.</dd>
+    <dt>Source Agent</dt>
+    <dd>The identifier of the subagent (and ideally the tool) where the failure originated — essential for targeted retries and observability.</dd>
+    <dt>Attempted Action</dt>
+    <dd>The operation being performed (query, tool name, parameters) so the coordinator can reproduce or substitute it.</dd>
+    <dt>Partial Results</dt>
+    <dd>Any usable output gathered before the failure, so work already done is not thrown away.</dd>
+    <dt>Retry Count</dt>
+    <dd>How many attempts have already occurred — the guard that prevents infinite retry loops.</dd>
+  </dl>
+
+  <h3>Visualization</h3>
+  <table>
+    <caption>Anatomy of a structured error context object</caption>
+    <thead><tr><th>Field</th><th>Type</th><th>Why the coordinator needs it</th></tr></thead>
+    <tbody>
+      <tr><td><code class="inline">error_type</code></td><td>enum</td><td>Selects the recovery branch (retry vs. alternative vs. degrade).</td></tr>
+      <tr><td><code class="inline">source_agent</code></td><td>string</td><td>Targets the retry and localizes the fault for logging.</td></tr>
+      <tr><td><code class="inline">attempted_action</code></td><td>object</td><td>Enables replay or substitution with a fallback tool.</td></tr>
+      <tr><td><code class="inline">partial_results</code></td><td>list / null</td><td>Preserves completed work to support graceful degradation.</td></tr>
+      <tr><td><code class="inline">retry_count</code></td><td>int</td><td>Enforces retry budgets; prevents infinite loops.</td></tr>
+      <tr><td><code class="inline">message</code></td><td>string</td><td>Human-readable detail for logs — <em>never</em> the primary decision signal.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Code / Pseudocode Example</h3>
+<pre><code><span class="kw">from</span> dataclasses <span class="kw">import</span> dataclass, field
+<span class="kw">from</span> enum <span class="kw">import</span> Enum
+
+<span class="kw">class</span> <span class="fn">ErrorType</span>(Enum):
+    ACCESS_FAILURE   = <span class="str">"access_failure"</span>   <span class="cmt"># couldn't complete the operation</span>
+    EMPTY_RESULT     = <span class="str">"empty_result"</span>     <span class="cmt"># completed, nothing matched (NOT an error)</span>
+    VALIDATION_ERROR = <span class="str">"validation_error"</span> <span class="cmt"># bad input / schema mismatch</span>
+
+<span class="kw">@dataclass</span>
+<span class="kw">class</span> <span class="fn">ErrorContext</span>:
+    error_type: ErrorType
+    source_agent: str
+    attempted_action: dict
+    retry_count: int = <span class="num2">0</span>
+    partial_results: list = field(default_factory=list)
+    message: str = <span class="str">""</span>
+
+<span class="cmt"># Producing structured context instead of a raw string:</span>
+<span class="kw">try</span>:
+    data = subagent.fetch(query)
+<span class="kw">except</span> TimeoutError <span class="kw">as</span> e:
+    <span class="kw">return</span> <span class="fn">ErrorContext</span>(
+        error_type=ErrorType.ACCESS_FAILURE,
+        source_agent=<span class="str">"research_subagent"</span>,
+        attempted_action={<span class="str">"tool"</span>: <span class="str">"web_search"</span>, <span class="str">"query"</span>: query},
+        retry_count=<span class="num2">1</span>,
+        message=<span class="str">f"web_search timed out: {e}"</span>,
+    )</code></pre>
+
+  <div class="tip">
+    <strong>💡 Tips &amp; Tricks</strong>
+    <ul>
+      <li>Make <code class="inline">error_type</code> a closed <em>enum</em>, not a free string — this is what makes recovery logic exhaustive and testable.</li>
+      <li>Always populate <code class="inline">partial_results</code> when any work completed; discarding it forces needless re-computation and blocks graceful degradation (26.4).</li>
+      <li>Keep <code class="inline">message</code> for humans/logs only. The moment your recovery code parses <code class="inline">message</code> with string matching, you've reintroduced the fragility structured context was meant to remove.</li>
+      <li>Include the <em>tool name</em> inside <code class="inline">attempted_action</code>, not just the query — the coordinator often recovers by swapping the tool, not the input.</li>
+    </ul>
+  </div>
+
+  <div class="pitfall">
+    <strong>⚠️ Common Pitfall</strong>
+    <p>Returning <code class="inline">None</code> or an empty list on failure. This collapses two very different situations — "it broke" and "it found nothing" — into one ambiguous value, which is exactly the confusion 26.2 warns against.</p>
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy</strong>
+    <p>Questions here test whether you know <em>why</em> structure beats strings. Look for stems like "the coordinator cannot decide how to recover" or "error handling is brittle / relies on string matching."</p>
+    <ul>
+      <li><b>Keywords to spot:</b> "intelligent recovery," "typed / categorized error," "retry budget," "machine-readable."</li>
+      <li><b>Elimination tactic:</b> Reject any answer that logs a nicely-formatted string but returns it as the sole signal — presentation ≠ structure.</li>
+    </ul>
+    <div class="trap"><b>Trap answer:</b> "Wrap the error in a detailed human-readable message." Detail is good for logs but is <em>not</em> structured context — the recovery layer still can't branch on it reliably.</div>
+  </div>
+</section>
+
+<!-- ===================== 26.2 ===================== -->
+<h2 id="s262"><span class="num">26.2</span> Access Failures (Timeouts) vs Valid Empty Results</h2>
+<section class="topic">
+
+  <h3>Concept Overview</h3>
+  <p>This is the single most tested distinction in the chapter. Two outcomes look superficially similar — both leave you with "no data" — but they mean opposite things:</p>
+  <p><span class="term">Access failure</span> = <em>"I couldn't check."</em> The operation never completed (timeout, connection reset, permission denied). The truth is <strong>unknown</strong>. The correct response is to <strong>retry or escalate</strong>.</p>
+  <p><span class="term">Valid empty result</span> = <em>"I checked, and there's nothing."</em> The operation completed successfully and authoritatively returned an empty payload (e.g. <code class="inline">[]</code>, <code class="inline">0 rows</code>). The truth is <strong>known: nothing exists</strong>. The correct response is to <strong>proceed / conclude</strong>.</p>
+  <p>Conflating them produces two dangerous bugs. Treating an access failure as empty → a <strong>false negative</strong> ("no security vulnerabilities found" when the scanner actually crashed). Treating a valid empty as a failure → wasted retries, escalation storms, and <strong>silent stalls</strong>.</p>
+
+  <h3>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Access Failure</dt>
+    <dd>The operation did not complete; the result is unknown. Signalled by an exception, timeout, or non-2xx transport error.</dd>
+    <dt>Valid Empty Result</dt>
+    <dd>The operation completed successfully and the authoritative answer is "nothing." Signalled by a successful response with an empty payload.</dd>
+    <dt>False Negative</dt>
+    <dd>Reporting "nothing found" when in fact the check never ran — the most damaging failure mode of conflation.</dd>
+    <dt>Silent Failure</dt>
+    <dd>An error that produces no visible signal because it was quietly coerced into a benign-looking empty value.</dd>
+  </dl>
+
+  <h3>Visualization</h3>
+  <table>
+    <caption>The core distinction table — memorize this</caption>
+    <thead><tr><th>Scenario</th><th>Signal</th><th class="yes">Correct Interpretation</th><th class="no">Wrong Interpretation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>API call times out</td>
+        <td>Exception / no response</td>
+        <td class="good">Access failure — status <b>unknown</b>; retry or escalate</td>
+        <td class="bad">❌ Treating as "no data exists"</td>
+      </tr>
+      <tr>
+        <td>Query returns <code class="inline">[]</code></td>
+        <td>Successful (2xx) response, empty payload</td>
+        <td class="good">Valid empty result — status <b>known</b>; proceed</td>
+        <td class="bad">❌ Treating as a system failure</td>
+      </tr>
+      <tr>
+        <td>Permission denied (403)</td>
+        <td>Error response, no data</td>
+        <td class="good">Access failure — escalate (retry won't help)</td>
+        <td class="bad">❌ Reporting "user has no records"</td>
+      </tr>
+      <tr>
+        <td>Search returns <code class="inline">0 results</code></td>
+        <td>2xx with <code class="inline">count: 0</code></td>
+        <td class="good">Valid empty — conclude "none match"</td>
+        <td class="bad">❌ Retrying indefinitely</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Code / Pseudocode Example</h3>
+<pre><code><span class="cmt"># Distinguish at the boundary: exceptions =&gt; access failure;</span>
+<span class="cmt"># successful-but-empty =&gt; valid empty result.</span>
+<span class="kw">def</span> <span class="fn">fetch_records</span>(client, query):
+    <span class="kw">try</span>:
+        resp = client.search(query, timeout=<span class="num2">5</span>)      <span class="cmt"># may raise TimeoutError</span>
+    <span class="kw">except</span> (TimeoutError, ConnectionError) <span class="kw">as</span> e:
+        <span class="kw">return</span> <span class="fn">ErrorContext</span>(                         <span class="cmt"># "COULDN'T CHECK"</span>
+            error_type=ErrorType.ACCESS_FAILURE,
+            source_agent=<span class="str">"records_subagent"</span>,
+            attempted_action={<span class="str">"tool"</span>: <span class="str">"search"</span>, <span class="str">"query"</span>: query},
+            message=<span class="str">f"{type(e).__name__}: {e}"</span>,
+        )
+    <span class="kw">except</span> PermissionError:
+        <span class="kw">return</span> <span class="fn">ErrorContext</span>(                         <span class="cmt"># also access failure; retry is futile</span>
+            error_type=ErrorType.ACCESS_FAILURE,
+            source_agent=<span class="str">"records_subagent"</span>,
+            attempted_action={<span class="str">"tool"</span>: <span class="str">"search"</span>, <span class="str">"query"</span>: query},
+            message=<span class="str">"permission denied"</span>,
+        )
+
+    <span class="cmt"># Reached here =&gt; the call SUCCEEDED. Empty is a real answer.</span>
+    <span class="kw">if</span> resp.count == <span class="num2">0</span>:
+        <span class="kw">return</span> {<span class="str">"status"</span>: <span class="str">"empty"</span>, <span class="str">"data"</span>: [], <span class="str">"checked"</span>: <span class="kw">True</span>}   <span class="cmt"># "CHECKED, NOTHING"</span>
+    <span class="kw">return</span> {<span class="str">"status"</span>: <span class="str">"ok"</span>, <span class="str">"data"</span>: resp.items, <span class="str">"checked"</span>: <span class="kw">True</span>}</code></pre>
+
+  <div class="tip">
+    <strong>💡 Tips &amp; Tricks</strong>
+    <ul>
+      <li>Draw the line at the <em>transport boundary</em>: an exception/timeout is an access failure; a successful response is authoritative even when empty.</li>
+      <li>Carry a <code class="inline">checked: true</code> flag on empty results so downstream agents can trust that "empty" really means "verified empty."</li>
+      <li><b>403 / auth errors are access failures, not empties</b> — but note that retrying them is usually pointless, so route them straight to escalation (26.3/26.4).</li>
+      <li>Never coerce exceptions into <code class="inline">[]</code> or <code class="inline">None</code> "to keep the pipeline running." That is how false negatives become invisible.</li>
+    </ul>
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy</strong>
+    <p>Watch for scenario questions describing a subagent returning "no results" <em>after a network exception</em> — the correct answer treats this as an <em>access failure</em>, not a valid empty result.</p>
+    <ul>
+      <li><b>Keywords that mean access failure:</b> "timed out," "connection reset," "exception," "403 / denied," "no response."</li>
+      <li><b>Keywords that mean valid empty:</b> "returned successfully," "200 OK," "empty list," "zero rows," "no matches found."</li>
+      <li><b>Elimination tactic:</b> If the stem mentions <em>any</em> exception or timeout, eliminate every option that says "report no data / conclude none exist."</li>
+    </ul>
+    <div class="trap"><b>Trap answer:</b> "The scan finished with no vulnerabilities, so mark the system secure" — when the stem said the scanner <em>crashed / timed out</em>. That's a false negative, not a clean bill of health.</div>
+  </div>
+</section>
+
+<!-- ===================== 26.3 ===================== -->
+<h2 id="s263"><span class="num">26.3</span> Subagent Local Recovery Before Coordinator Escalation</h2>
+<section class="topic">
+
+  <h3>Concept Overview</h3>
+  <p>Good multi-agent systems <strong>contain failures at the lowest level that can resolve them</strong>. Before a subagent escalates to the coordinator, it should attempt inexpensive local recovery: a bounded retry (ideally with backoff) for transient errors, then a <span class="term">fallback tool</span> or alternative strategy. Escalation is the last resort — it costs coordinator attention, may pause other work, and loses local context.</p>
+  <p>The guiding principle is <span class="term">self-heal vs. escalate</span>: retry what is <em>transient</em>, fall back on what is <em>tool-specific</em>, and escalate what is <em>structural</em> (permissions, exhausted budgets, unrecoverable validation errors). A valid empty result is <em>not</em> a failure and should simply be returned — never retried or escalated.</p>
+
+  <h3>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Local Recovery</dt>
+    <dd>Recovery attempted inside the subagent, invisible to the coordinator, before any escalation.</dd>
+    <dt>Bounded Retry</dt>
+    <dd>Retrying a transient failure a fixed maximum number of times, typically with exponential backoff, guarded by <code class="inline">retry_count</code>.</dd>
+    <dt>Fallback Tool</dt>
+    <dd>An alternative tool/data source the subagent tries when the primary one fails (e.g. cached index when the live API is down).</dd>
+    <dt>Escalation</dt>
+    <dd>Returning a structured <code class="inline">ErrorContext</code> up to the coordinator because local recovery is exhausted or inappropriate.</dd>
+    <dt>Transient vs. Structural Error</dt>
+    <dd>Transient = likely to succeed on retry (timeout, rate limit). Structural = will not (403, schema mismatch, budget exhausted) → escalate.</dd>
+  </dl>
+
+  <h3>Visualization — Subagent Decision Tree</h3>
+  <div class="flow">
+    <div class="node start">Subagent runs action</div>
+    <div class="arrow-down"></div>
+    <div class="node decision">Did it succeed?</div>
+    <div class="branch">
+      <div class="branch-col">
+        <span class="lbl-chip lbl-yes">YES</span>
+        <div class="node ok">Return result<small>(including a valid empty result — do NOT retry)</small></div>
+      </div>
+      <div class="branch-col">
+        <span class="lbl-chip lbl-no">NO — failed</span>
+        <div class="node decision">Transient error?<small>timeout / rate limit</small></div>
+        <div class="arrow-down"><span class="arrow-label">yes &amp; retry_count &lt; max</span></div>
+        <div class="node">Retry with backoff<small>retry_count += 1</small></div>
+        <div class="arrow-down"><span class="arrow-label">still failing / not transient</span></div>
+        <div class="node decision">Fallback tool available?</div>
+        <div class="branch">
+          <div class="branch-col">
+            <span class="lbl-chip lbl-maybe">YES</span>
+            <div class="node">Try fallback tool<small>e.g. cache / alt source</small></div>
+          </div>
+          <div class="branch-col">
+            <span class="lbl-chip lbl-no">NO / exhausted</span>
+            <div class="node esc">Escalate<small>return ErrorContext to coordinator</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Code / Pseudocode Example</h3>
+<pre><code><span class="kw">def</span> <span class="fn">subagent_run</span>(action, max_retries=<span class="num2">2</span>):
+    retry_count = <span class="num2">0</span>
+    <span class="kw">while</span> retry_count &lt;= max_retries:
+        <span class="kw">try</span>:
+            <span class="kw">return</span> primary_tool(action)          <span class="cmt"># success (empty is fine) -&gt; return</span>
+        <span class="kw">except</span> RateLimitError, TimeoutError:      <span class="cmt"># TRANSIENT -&gt; self-heal</span>
+            retry_count += <span class="num2">1</span>
+            sleep(backoff(retry_count))          <span class="cmt"># exponential backoff</span>
+        <span class="kw">except</span> PermissionError <span class="kw">as</span> e:            <span class="cmt"># STRUCTURAL -&gt; escalate now</span>
+            <span class="kw">return</span> <span class="fn">ErrorContext</span>(ErrorType.ACCESS_FAILURE, <span class="str">"sub"</span>,
+                       action, retry_count, message=<span class="str">"denied"</span>)
+
+    <span class="cmt"># Retries exhausted: try a fallback before giving up</span>
+    <span class="kw">if</span> has_fallback(action):
+        <span class="kw">try</span>:
+            <span class="kw">return</span> fallback_tool(action)         <span class="cmt"># alternative source</span>
+        <span class="kw">except</span> Exception:
+            <span class="kw">pass</span>
+
+    <span class="cmt"># Local recovery exhausted -&gt; escalate with full context</span>
+    <span class="kw">return</span> <span class="fn">ErrorContext</span>(ErrorType.ACCESS_FAILURE, <span class="str">"sub"</span>,
+               action, retry_count, message=<span class="str">"primary+fallback failed"</span>)</code></pre>
+
+  <div class="tip">
+    <strong>💡 Tips &amp; Tricks</strong>
+    <ul>
+      <li>Use <strong>exponential backoff with jitter</strong> for retries to avoid synchronized retry storms across subagents.</li>
+      <li>Do <em>not</em> retry structural errors (403, malformed schema) — you'll burn the retry budget and delay escalation. Fail fast, escalate clearly.</li>
+      <li>Keep the retry budget small at the subagent (2–3). Deep retry loops hide latency and mask real outages from the coordinator.</li>
+      <li>When you escalate, send the <em>final</em> <code class="inline">retry_count</code> and any <code class="inline">partial_results</code> so the coordinator doesn't restart from zero.</li>
+    </ul>
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy</strong>
+    <p>These questions test <em>where</em> recovery should happen. The best answers keep transient recovery local and reserve escalation for structural failures or exhausted budgets.</p>
+    <ul>
+      <li><b>Keywords to spot:</b> "before escalating," "self-heal," "fallback," "who should handle," "lowest level."</li>
+      <li><b>Elimination tactic:</b> Eliminate answers that escalate a first transient timeout straight to the coordinator (skips cheap local retry) <em>and</em> answers that retry a 403 forever (never escalates a structural error).</li>
+    </ul>
+    <div class="trap"><b>Trap answer:</b> "Immediately escalate every error to the coordinator for centralized handling." Centralizing <em>all</em> errors defeats containment and floods the coordinator.</div>
+  </div>
+</section>
+
+<!-- ===================== 26.4 ===================== -->
+<h2 id="s264"><span class="num">26.4</span> Coordinator Recovery Strategies: Retry, Alternative Approaches &amp; Graceful Degradation</h2>
+<section class="topic">
+
+  <h3>Concept Overview</h3>
+  <p>Once a failure escalates, the coordinator chooses among three recovery strategies. They form an <strong>escalating ladder</strong>: try the cheapest, most faithful option first, and only trade fidelity for resilience as options run out.</p>
+  <ol>
+    <li><span class="term">Retry</span> — attempt the same action again (usually with backoff). Best for transient access failures the subagent couldn't clear alone.</li>
+    <li><span class="term">Alternative approach</span> — achieve the same goal a different way: a different subagent, tool, data source, or decomposition. Best when the primary path is structurally blocked but the goal is still reachable.</li>
+    <li><span class="term">Graceful degradation</span> — return a reduced-but-useful result (using <code class="inline">partial_results</code>), clearly flagged as incomplete. Best when the goal is <em>not</em> fully reachable but partial value still helps the user.</li>
+  </ol>
+
+  <h3>Key Terminology</h3>
+  <dl class="terms">
+    <dt>Retry (coordinator-level)</dt>
+    <dd>Re-issuing the failed action, often to a fresh subagent instance, bounded by a global retry budget.</dd>
+    <dt>Alternative Approach</dt>
+    <dd>Substituting the path to the goal — different tool, agent, or strategy — while keeping the goal fixed.</dd>
+    <dt>Graceful Degradation</dt>
+    <dd>Delivering a partial or lower-fidelity result with an explicit "incomplete / some sources failed" annotation instead of failing entirely.</dd>
+    <dt>Retry Budget</dt>
+    <dd>A system-wide cap on retries that prevents cost blow-ups and cascading load.</dd>
+  </dl>
+
+  <h3>Visualization — Strategy Comparison</h3>
+  <table>
+    <caption>Choosing among the three coordinator strategies</caption>
+    <thead>
+      <tr><th>Strategy</th><th>When to use</th><th class="yes">Pros</th><th class="no">Cons / Risk of overuse</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Retry</b></td>
+        <td>Transient access failure (timeout, rate limit); action is idempotent.</td>
+        <td class="good">Simple; preserves full fidelity; often succeeds.</td>
+        <td class="bad">Useless on structural errors; overuse → latency, cost, retry storms, duplicate side effects if not idempotent.</td>
+      </tr>
+      <tr>
+        <td><b>Alternative approach</b></td>
+        <td>Primary path blocked (tool down, permission denied) but goal reachable another way.</td>
+        <td class="good">Recovers full or near-full result; resilient to single-path outages.</td>
+        <td class="bad">More complex; alternative may be slower/less accurate; overuse hides that the primary path is chronically broken.</td>
+      </tr>
+      <tr>
+        <td><b>Graceful degradation</b></td>
+        <td>Goal not fully reachable; partial results still valuable; deadline pressure.</td>
+        <td class="good">Always returns <em>something</em> useful; honest about gaps; good UX under partial outage.</td>
+        <td class="bad">Reduced fidelity; overuse normalizes incomplete answers and can mask systemic failures if not flagged.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Code / Pseudocode Example</h3>
+<pre><code><span class="kw">def</span> <span class="fn">coordinator_recover</span>(err: ErrorContext, goal):
+    <span class="cmt"># 1) RETRY — cheap, full fidelity, only for transient + within budget</span>
+    <span class="kw">if</span> err.error_type == ErrorType.ACCESS_FAILURE <span class="kw">and</span> err.retry_count &lt; GLOBAL_BUDGET \
+       <span class="kw">and</span> is_transient(err):
+        <span class="kw">return</span> retry(err.attempted_action)
+
+    <span class="cmt"># 2) ALTERNATIVE — same goal, different path (structural block, goal reachable)</span>
+    alt = pick_alternative(err.attempted_action, goal)
+    <span class="kw">if</span> alt <span class="kw">is</span> <span class="kw">not</span> <span class="kw">None</span>:
+        <span class="kw">return</span> dispatch(alt)                     <span class="cmt"># different tool / subagent</span>
+
+    <span class="cmt"># 3) GRACEFUL DEGRADATION — return partial, clearly flagged</span>
+    <span class="kw">return</span> {
+        <span class="str">"status"</span>: <span class="str">"partial"</span>,
+        <span class="str">"data"</span>: err.partial_results,
+        <span class="str">"note"</span>: <span class="str">f"{err.source_agent} unavailable; result is incomplete"</span>,
+    }</code></pre>
+
+  <div class="tip">
+    <strong>💡 Tips &amp; Tricks</strong>
+    <ul>
+      <li>Enforce a <strong>global retry budget</strong> at the coordinator that spans subagent retries — otherwise local + global retries multiply into runaway cost.</li>
+      <li>Only retry <strong>idempotent</strong> actions blindly; for non-idempotent ones (writes, payments), prefer an alternative or require a deduplication key.</li>
+      <li>Graceful degradation must be <strong>labelled</strong>. An unlabelled partial result is indistinguishable from a complete one — and reintroduces the false-negative risk from 26.2.</li>
+      <li>Log which strategy fired. If "alternative" or "degradation" fires constantly, that's a signal the primary path needs fixing — don't let resilience mask rot.</li>
+    </ul>
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy</strong>
+    <p>Scenario questions give you a failure and ask "what should the coordinator do?" Map the <em>error nature</em> to the <em>strategy</em>: transient → retry; structural-but-goal-reachable → alternative; goal-unreachable-but-partial-value → degrade.</p>
+    <ul>
+      <li><b>Keywords → retry:</b> "temporary," "timeout," "rate limited," "transient."</li>
+      <li><b>Keywords → alternative:</b> "primary tool unavailable," "another data source," "different agent," "still need the full answer."</li>
+      <li><b>Keywords → degrade:</b> "deadline," "return what we have," "3 of 4 sources responded," "partial results acceptable."</li>
+    </ul>
+    <div class="trap"><b>Trap answer:</b> "Keep retrying until it succeeds." No retry budget = infinite loop / cost blow-up. Also a trap: degrading <em>silently</em> without flagging the result as partial.</div>
+  </div>
+</section>
+
+<!-- ===================== 26.5 ===================== -->
+<h2 id="s265"><span class="num">26.5</span> Hands-On: Implementing Error Propagation in a Multi-Agent System</h2>
+<section class="topic">
+
+  <h3>Concept Overview</h3>
+  <p>This worked example wires together 26.1–26.4. A <strong>coordinator</strong> dispatches two subagents in parallel to answer a compliance question:</p>
+  <ul>
+    <li><b>Subagent A (regulatory feed)</b> — its live API <strong>times out</strong> → this is an <em>access failure</em> (26.2). It self-heals with a bounded retry (26.3); the retry also fails → it escalates a structured <code class="inline">ErrorContext</code> (26.1).</li>
+    <li><b>Subagent B (internal records)</b> — it completes successfully but the query matches nothing → a <em>valid empty result</em> (26.2). It returns cleanly, <strong>no retry, no escalation</strong>.</li>
+  </ul>
+  <p>The coordinator receives one escalation and one clean empty. It applies the strategy ladder (26.4): retry the transient failure once more, then fall back to an alternative source; if that also fails, it <strong>degrades gracefully</strong>, returning B's verified-empty finding plus an explicit note that the regulatory source was unreachable — <em>never</em> claiming "no regulations found."</p>
+
+  <h3>Key Terminology (reused, defined once earlier)</h3>
+  <p>All terms below are used exactly as defined above: <span class="term">ErrorContext</span> (26.1), <span class="term">access failure</span> / <span class="term">valid empty result</span> (26.2), <span class="term">local recovery</span> / <span class="term">escalation</span> (26.3), <span class="term">retry</span> / <span class="term">alternative approach</span> / <span class="term">graceful degradation</span> (26.4).</p>
+
+  <h3>Visualization — End-to-End Flow of This Example</h3>
+  <div class="flow">
+    <div class="node start">Coordinator dispatches goal<small>"find applicable regulations"</small></div>
+    <div class="arrow-down"></div>
+    <div class="flow-row">
+      <div class="branch-col">
+        <div class="node bad">Subagent A — Regulatory API<small>TIMEOUT → access failure</small></div>
+        <div class="arrow-down"><span class="arrow-label">local retry fails</span></div>
+        <div class="node esc">Escalate ErrorContext<small>ACCESS_FAILURE, retry_count=2</small></div>
+      </div>
+      <div class="branch-col">
+        <div class="node ok">Subagent B — Internal Records<small>200 OK, 0 rows → valid empty</small></div>
+        <div class="arrow-down"><span class="arrow-label">no retry</span></div>
+        <div class="node ok">Return {empty, checked:true}</div>
+      </div>
+    </div>
+    <div class="arrow-down"></div>
+    <div class="node decision">Coordinator recovery ladder<small>retry → alternative → degrade</small></div>
+    <div class="arrow-down"><span class="arrow-label">retry + alt both fail</span></div>
+    <div class="node esc">Graceful degradation<small>return B's verified-empty + "regulatory source unavailable"</small></div>
+  </div>
+
+  <h3>Code / Pseudocode Walkthrough</h3>
+<pre><code><span class="cmt"># ---------- Shared types (26.1) ----------</span>
+<span class="cmt"># ErrorType, ErrorContext as defined in 26.1</span>
+
+<span class="cmt"># ---------- Subagent A: regulatory feed (will time out) ----------</span>
+<span class="kw">def</span> <span class="fn">subagent_A</span>(query, max_retries=<span class="num2">2</span>):
+    retry_count = <span class="num2">0</span>
+    <span class="kw">while</span> retry_count &lt;= max_retries:
+        <span class="kw">try</span>:
+            <span class="kw">return</span> {<span class="str">"status"</span>: <span class="str">"ok"</span>, <span class="str">"data"</span>: regulatory_api.get(query)}
+        <span class="kw">except</span> TimeoutError:                     <span class="cmt"># 26.2: access failure, not empty</span>
+            retry_count += <span class="num2">1</span>                     <span class="cmt"># 26.3: bounded local retry</span>
+            sleep(backoff(retry_count))
+    <span class="kw">return</span> <span class="fn">ErrorContext</span>(                        <span class="cmt"># 26.1 + 26.3: escalate with context</span>
+        error_type=ErrorType.ACCESS_FAILURE,
+        source_agent=<span class="str">"regulatory_subagent"</span>,
+        attempted_action={<span class="str">"tool"</span>: <span class="str">"regulatory_api"</span>, <span class="str">"query"</span>: query},
+        retry_count=retry_count,
+        message=<span class="str">"regulatory_api timed out after retries"</span>,
+    )
+
+<span class="cmt"># ---------- Subagent B: internal records (succeeds, empty) ----------</span>
+<span class="kw">def</span> <span class="fn">subagent_B</span>(query):
+    resp = records_db.search(query)             <span class="cmt"># completes successfully</span>
+    <span class="kw">if</span> resp.count == <span class="num2">0</span>:
+        <span class="kw">return</span> {<span class="str">"status"</span>: <span class="str">"empty"</span>, <span class="str">"data"</span>: [], <span class="str">"checked"</span>: <span class="kw">True</span>}  <span class="cmt"># 26.2 valid empty</span>
+    <span class="kw">return</span> {<span class="str">"status"</span>: <span class="str">"ok"</span>, <span class="str">"data"</span>: resp.items, <span class="str">"checked"</span>: <span class="kw">True</span>}
+
+<span class="cmt"># ---------- Coordinator: orchestrate + recover (26.4) ----------</span>
+<span class="kw">def</span> <span class="fn">coordinator</span>(query):
+    a = subagent_A(query)
+    b = subagent_B(query)
+
+    findings = {}
+
+    <span class="cmt"># Handle B: a valid empty result is a REAL, trustworthy answer</span>
+    <span class="kw">if</span> b[<span class="str">"status"</span>] <span class="kw">in</span> (<span class="str">"ok"</span>, <span class="str">"empty"</span>):
+        findings[<span class="str">"internal_records"</span>] = {<span class="str">"data"</span>: b[<span class="str">"data"</span>], <span class="str">"verified"</span>: <span class="kw">True</span>}
+
+    <span class="cmt"># Handle A: only an ErrorContext means it truly failed</span>
+    <span class="kw">if</span> isinstance(a, ErrorContext):
+        recovered = coordinator_recover(a, goal=query)   <span class="cmt"># retry -&gt; alt -&gt; degrade</span>
+        <span class="kw">if</span> recovered.get(<span class="str">"status"</span>) == <span class="str">"partial"</span>:
+            <span class="cmt"># 26.4 graceful degradation: keep B's verified finding,</span>
+            <span class="cmt"># explicitly flag the regulatory gap — never claim "none found".</span>
+            findings[<span class="str">"regulatory"</span>] = {
+                <span class="str">"data"</span>: <span class="kw">None</span>,
+                <span class="str">"verified"</span>: <span class="kw">False</span>,
+                <span class="str">"note"</span>: <span class="str">"regulatory source unreachable — result INCOMPLETE"</span>,
+            }
+        <span class="kw">else</span>:
+            findings[<span class="str">"regulatory"</span>] = {<span class="str">"data"</span>: recovered[<span class="str">"data"</span>], <span class="str">"verified"</span>: <span class="kw">True</span>}
+    <span class="kw">else</span>:
+        findings[<span class="str">"regulatory"</span>] = {<span class="str">"data"</span>: a[<span class="str">"data"</span>], <span class="str">"verified"</span>: <span class="kw">True</span>}
+
+    <span class="kw">return</span> summarize(findings)   <span class="cmt"># honest: verified-empty + flagged gap</span></code></pre>
+
+  <div class="tip">
+    <strong>💡 Tips &amp; Tricks</strong>
+    <ul>
+      <li>Notice the asymmetry: B's <code class="inline">empty</code> flows straight into <code class="inline">findings</code> as <em>verified</em>; A's failure is an <code class="inline">ErrorContext</code> that triggers the recovery ladder. Same "no data," completely different handling — that's the whole chapter in one function.</li>
+      <li>The final summary must distinguish "internal records: verified none" from "regulatory: unknown / unreachable." Merging them into "no regulations apply" would be the exact false negative 26.2 forbids.</li>
+      <li>Run subagents concurrently, but collect <em>structured</em> results — never a mix of exceptions and values — so the coordinator's branching stays clean.</li>
+    </ul>
+  </div>
+
+  <div class="exam-strategy">
+    <strong>🎯 Exam Strategy</strong>
+    <p>Integration questions describe a multi-subagent scenario and ask for the "correct final behavior." The right answer (a) treats the timeout as an access failure, (b) treats the empty query as a valid finding, and (c) degrades gracefully with an explicit incompleteness flag.</p>
+    <ul>
+      <li><b>Elimination tactic:</b> Discard any option that reports a single fused "nothing found," or that retries the valid-empty subagent, or that fails the whole request because one subagent errored.</li>
+    </ul>
+    <div class="trap"><b>Trap answer:</b> "Since neither subagent returned data, report that no regulations apply." This ignores that A never actually checked — a textbook false negative.</div>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER SUMMARY ===================== -->
+<h2 id="summary">Chapter Summary</h2>
+<section class="topic">
+  <table>
+    <caption>Condensed recap — topic → key takeaway → exam tip</caption>
+    <thead><tr><th>Topic</th><th>Key Takeaway</th><th>Exam Tip</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>26.1</b> Structured Error Context</td>
+        <td>Report failures as typed objects (type, source, action, partial results, retry count), not strings.</td>
+        <td>Reject "detailed message" answers — detail ≠ structure.</td>
+      </tr>
+      <tr>
+        <td><b>26.2</b> Timeouts vs Empty</td>
+        <td>Access failure = "couldn't check" (unknown → retry/escalate); valid empty = "checked, nothing" (known → proceed).</td>
+        <td>Any exception/timeout in the stem ⇒ eliminate "no data exists" answers.</td>
+      </tr>
+      <tr>
+        <td><b>26.3</b> Local Recovery First</td>
+        <td>Subagent self-heals transient errors (bounded retry, fallback) before escalating structural ones.</td>
+        <td>Don't escalate first timeouts; don't retry 403s forever.</td>
+      </tr>
+      <tr>
+        <td><b>26.4</b> Coordinator Strategies</td>
+        <td>Ladder: retry (transient) → alternative (blocked but reachable) → graceful degradation (partial, flagged).</td>
+        <td>Match error nature to strategy; always cap retries; label partials.</td>
+      </tr>
+      <tr>
+        <td><b>26.5</b> End-to-End</td>
+        <td>Handle a timeout and a valid-empty differently in one flow; degrade honestly, never fuse into a false "none found."</td>
+        <td>Correct final behavior = verified-empty + explicitly flagged gap.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== MASTER FLOWCHART ===================== -->
+<h2 id="master">Master Flowchart — Full Error Propagation Lifecycle</h2>
+<section class="topic">
+  <p>One diagram spanning 26.1 → 26.4: how a single action flows from execution through classification, local containment, escalation, and coordinator recovery.</p>
+  <div class="flow">
+    <div class="node start">① Subagent executes action</div>
+    <div class="arrow-down"></div>
+    <div class="node decision">② Exception raised?<small>26.2 classification</small></div>
+    <div class="branch">
+      <div class="branch-col">
+        <span class="lbl-chip lbl-no">NO (success)</span>
+        <div class="node ok">Valid result<small>incl. valid empty — return, no retry</small></div>
+      </div>
+      <div class="branch-col">
+        <span class="lbl-chip lbl-yes">YES → access failure</span>
+        <div class="node decision">③ Transient?<small>26.3</small></div>
+        <div class="branch">
+          <div class="branch-col">
+            <span class="lbl-chip lbl-maybe">transient &amp; budget left</span>
+            <div class="node">Local retry + backoff<small>retry_count++</small></div>
+            <div class="arrow-down"><span class="arrow-label">still failing</span></div>
+            <div class="node">Try fallback tool</div>
+          </div>
+          <div class="branch-col">
+            <span class="lbl-chip lbl-no">structural</span>
+            <div class="node">Skip retry</div>
+          </div>
+        </div>
+        <div class="arrow-down"><span class="arrow-label">local recovery exhausted</span></div>
+        <div class="node esc">④ Escalate ErrorContext<small>26.1 typed object → coordinator</small></div>
+        <div class="arrow-down"></div>
+        <div class="node decision">⑤ Coordinator recovery<small>26.4 ladder</small></div>
+        <div class="branch">
+          <div class="branch-col">
+            <span class="lbl-chip lbl-maybe">transient</span>
+            <div class="node">Retry<small>within global budget</small></div>
+          </div>
+          <div class="branch-col">
+            <span class="lbl-chip lbl-maybe">blocked, reachable</span>
+            <div class="node">Alternative approach</div>
+          </div>
+          <div class="branch-col">
+            <span class="lbl-chip lbl-no">unreachable</span>
+            <div class="node esc">Graceful degradation<small>partial + flagged</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow-down"></div>
+    <div class="node ok">⑥ Honest final result<small>verified data + explicit gaps</small></div>
+  </div>
+</section>
+
+<!-- ===================== CHEAT SHEET ===================== -->
+<h2 id="cheat">Quick-Reference Cheat Sheet</h2>
+<div class="cheat">
+  <h3>Last-Minute Revision</h3>
+  <ul>
+    <li><b>Structured context fields:</b> <code>error_type</code> · <code>source_agent</code> · <code>attempted_action</code> · <code>partial_results</code> · <code>retry_count</code> (+ <code>message</code> for logs only).</li>
+    <li><b>Access failure</b> = "couldn't check" → status <b>unknown</b> → retry/escalate. Signalled by exception/timeout/403.</li>
+    <li><b>Valid empty result</b> = "checked, nothing" → status <b>known</b> → proceed. Signalled by 2xx + empty payload.</li>
+    <li><b>Golden rule:</b> exception ⇒ access failure; successful-but-empty ⇒ valid empty. Never coerce an exception into <code>[]</code>/<code>None</code>.</li>
+    <li><b>Subagent order:</b> bounded retry (transient) → fallback tool → escalate (structural / exhausted). Never retry a valid empty.</li>
+    <li><b>Coordinator ladder:</b> Retry → Alternative approach → Graceful degradation.</li>
+    <li><b>Retry only idempotent actions</b> blindly; always enforce a <b>global retry budget</b>.</li>
+    <li><b>Graceful degradation must be flagged</b> — an unlabelled partial = a hidden false negative.</li>
+    <li><b>Cardinal sin:</b> reporting "none found" when the check never completed (false negative).</li>
+  </ul>
+</div>
+
+<!-- ===================== SELF-CHECK ===================== -->
+<h2 id="selfcheck">Self-Check Questions</h2>
+<section class="topic">
+  <p>Five exam-style questions covering all sub-topics. Click each to reveal the answer and rationale.</p>
+
+  <details class="qa">
+    <summary>Q1 (26.1). A subagent catches an exception and returns the string <code class="inline">"failed to fetch: timeout"</code>. The coordinator's recovery logic is described as "brittle." What is the <em>best</em> fix?</summary>
+    <div class="ans">
+      <ul class="qopts">
+        <li>A. Add more detail to the error string.</li>
+        <li>B. Return a typed <code class="inline">ErrorContext</code> with <code class="inline">error_type</code>, <code class="inline">source_agent</code>, <code class="inline">attempted_action</code>, and <code class="inline">retry_count</code>.</li>
+        <li>C. Return <code class="inline">None</code> so the coordinator knows it failed.</li>
+        <li>D. Log the error and continue with an empty list.</li>
+      </ul>
+      <p class="correct">Answer: B.</p>
+      <p>Brittleness comes from string-matching. A typed object lets recovery branch deterministically. A is presentation, not structure; C and D destroy information and cause the false-negative confusion of 26.2.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q2 (26.2). A vulnerability scanner subagent throws a <code class="inline">TimeoutError</code>, and the wrapper returns <code class="inline">[]</code>. The coordinator reports "no vulnerabilities found." What went wrong?</summary>
+    <div class="ans">
+      <ul class="qopts">
+        <li>A. Nothing — an empty list correctly means no vulnerabilities.</li>
+        <li>B. The timeout is an access failure; coercing it to <code class="inline">[]</code> produced a false negative. It should be reported as ACCESS_FAILURE and retried/escalated.</li>
+        <li>C. The scanner should have retried forever until it succeeded.</li>
+        <li>D. The coordinator should have degraded silently.</li>
+      </ul>
+      <p class="correct">Answer: B.</p>
+      <p>The scan never completed, so "empty" is unknown, not verified. Reporting a clean result is a dangerous false negative. (C = no budget; D = unflagged degradation — both also wrong.)</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q3 (26.3). A subagent's primary tool returns a <code class="inline">RateLimitError</code> on its first call. What should it do <em>first</em>?</summary>
+    <div class="ans">
+      <ul class="qopts">
+        <li>A. Immediately escalate an ErrorContext to the coordinator.</li>
+        <li>B. Retry with exponential backoff (bounded), then try a fallback tool, then escalate if still failing.</li>
+        <li>C. Return an empty result.</li>
+        <li>D. Retry indefinitely with no backoff.</li>
+      </ul>
+      <p class="correct">Answer: B.</p>
+      <p>Rate limiting is transient — the subagent should self-heal locally before escalating. A skips cheap local recovery; C hides the failure; D causes retry storms and ignores the retry budget.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q4 (26.4). A subagent escalates because its primary data source is permanently decommissioned (permission revoked), but an equivalent source exists. Which coordinator strategy is most appropriate?</summary>
+    <div class="ans">
+      <ul class="qopts">
+        <li>A. Retry the same action repeatedly.</li>
+        <li>B. Alternative approach — dispatch to the equivalent source.</li>
+        <li>C. Graceful degradation with a partial result.</li>
+        <li>D. Fail the entire request.</li>
+      </ul>
+      <p class="correct">Answer: B.</p>
+      <p>The failure is structural (retry is futile, so A is out) but the goal is still fully reachable via another path, so an alternative approach recovers full fidelity. Degradation (C) needlessly sacrifices completeness when a full answer is attainable.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Q5 (26.5 integration). Subagent A times out (after local retries) and escalates; Subagent B completes and returns <code class="inline">0 rows</code>. Retry and alternative both fail for A. What is the correct <em>final</em> coordinator behavior?</summary>
+    <div class="ans">
+      <ul class="qopts">
+        <li>A. Report "no results" for the whole request.</li>
+        <li>B. Fail the entire request because A errored.</li>
+        <li>C. Return B's result as a <em>verified empty</em> finding <b>and</b> flag A's portion as unreachable/incomplete (graceful degradation).</li>
+        <li>D. Retry A until it eventually succeeds.</li>
+      </ul>
+      <p class="correct">Answer: C.</p>
+      <p>B's empty is authoritative and should be reported as verified; A's outcome is unknown and must be flagged as an incomplete gap — never fused with B into a single "none found." A is a false negative, B discards a valid finding, D ignores the retry budget.</p>
+    </div>
+  </details>
+</section>
+
+<footer class="foot">
+  Chapter 26 · Error Propagation Across Multi-Agent Systems — instructional study guide.<br>
+  Self-contained HTML · no external dependencies · <em>represent → distinguish → contain → recover → apply</em>.
+</footer>
+
+</div>
+
+</body></html>

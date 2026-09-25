@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 18 — Designing Precision Prompts to Reduce False Positives | Study Guide</title>
+<style>
+  :root {
+    --ink: #1f2933;
+    --muted: #52606d;
+    --line: #e4e7eb;
+    --bg: #ffffff;
+    --soft: #f7f9fc;
+    --accent: #2f57d6;
+    --tip: #2563eb;
+    --tip-bg: #eef4ff;
+    --exam: #15803d;
+    --exam-bg: #ecfdf3;
+    --pit: #c2410c;
+    --pit-bg: #fff4ec;
+    --before-bg: #fbecec;
+    --before-line: #d98a8a;
+    --after-bg: #eaf7ee;
+    --after-line: #7bbf92;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--soft);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg);
+    padding: 48px 56px 72px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  header.doc {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+  }
+  header.doc .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 6px; }
+  header.doc .sub { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  h2 {
+    font-size: 1.4rem;
+    margin: 44px 0 4px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 16px;
+  }
+  h3 {
+    font-size: 1.02rem;
+    color: var(--accent);
+    margin: 22px 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+  }
+  p { margin: 8px 0; }
+  p.summary {
+    background: var(--soft);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin: 10px 0 4px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    background: #eef1f5;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+
+  /* Table of contents */
+  nav.toc {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin: 28px 0 8px;
+  }
+  nav.toc h2 { border: 0; padding: 0; margin: 0 0 10px; font-size: 1.1rem; }
+  nav.toc ol { columns: 2; column-gap: 32px; padding-left: 18px; }
+  nav.toc a { font-weight: 600; }
+  nav.toc span.ttl { font-weight: 400; color: var(--muted); }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid var(--line);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #eef2fb; font-weight: 700; }
+  tr:nth-child(even) td { background: #fafbfe; }
+  table.comparison td:first-child { font-weight: 600; white-space: nowrap; }
+
+  /* Callout boxes */
+  .tips, .exam-strategy, .pitfalls {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.94rem;
+  }
+  .tips { background: var(--tip-bg); border-left: 5px solid var(--tip); }
+  .exam-strategy { background: var(--exam-bg); border-left: 5px solid var(--exam); }
+  .pitfalls { background: var(--pit-bg); border-left: 5px solid var(--pit); }
+  .tips strong { color: var(--tip); }
+  .exam-strategy strong { color: var(--exam); }
+  .pitfalls strong { color: var(--pit); }
+  .callout-lg { padding: 18px 22px; }
+  .callout-lg ul { margin-top: 8px; }
+
+  /* Before / After */
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
+  .ba .cell { border-radius: 8px; padding: 12px 15px; font-size: 0.9rem; }
+  .ba .before { background: var(--before-bg); border: 1px solid var(--before-line); }
+  .ba .after  { background: var(--after-bg);  border: 1px solid var(--after-line); }
+  .ba .tag { display: inline-block; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; padding: 2px 8px; border-radius: 20px; }
+  .ba .before .tag { background: #d98a8a; color: #fff; }
+  .ba .after  .tag { background: #4f9d6a; color: #fff; }
+  .ba pre { margin: 0; white-space: pre-wrap; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.82rem; line-height: 1.5; }
+
+  /* Flowchart */
+  .flowchart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  .flowchart .step {
+    background: #fff;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .flowchart .arrow { color: var(--muted); font-weight: 700; font-size: 1.1rem; }
+  .flowchart.good .step { border-color: var(--exam); color: var(--exam); }
+
+  .xref { font-size: 0.9rem; color: var(--muted); font-style: italic; margin: 10px 0; }
+  .xref a { font-style: normal; }
+
+  footer.doc { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.82rem; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 28px 20px 48px; }
+    nav.toc ol { columns: 1; }
+    .ba { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc">
+    <p class="kicker">Claude Certified Architect — Foundations &amp; Professional</p>
+    <h1>Chapter 18 · Designing Precision Prompts to Reduce False Positives</h1>
+    <p class="sub">Exam-ready study guide for AI-assisted code review. Covers scoping, category criteria, few-shot calibration, and measurement of false-positive rates.</p>
+  </header>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#18-1">18.1 <span class="ttl">Understanding False Positives</span></a></li>
+      <li><a href="#18-2">18.2 <span class="ttl">How Vague Prompts Cause Them</span></a></li>
+      <li><a href="#18-3">18.3 <span class="ttl">Scoping: What to Flag / Ignore</span></a></li>
+      <li><a href="#18-4">18.4 <span class="ttl">Specific Review Criteria by Category</span></a></li>
+      <li><a href="#18-5">18.5 <span class="ttl">Few-Shot Calibration</span></a></li>
+      <li><a href="#18-6">18.6 <span class="ttl">Refinement &amp; Measuring FP Rate</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================ 18.1 ============================ -->
+  <section id="18-1">
+    <h2>18.1 Understanding False Positives in AI Code Review</h2>
+    <p class="summary">A <strong>false positive</strong> is an issue the reviewer flags that is not actually a problem in context. In AI-assisted code review, false positives are the single biggest driver of developer distrust: a reviewer that cries wolf is quickly ignored, even when it is later right.</p>
+
+    <h3>Deep Dive</h3>
+    <p>Every classifier — human or model — trades off two error types. A <strong>false positive</strong> flags correct code as defective; a <strong>false negative</strong> misses a real defect. In code review these costs are asymmetric but not in the way beginners assume. A single missed critical bug is expensive, but a <em>stream</em> of spurious warnings is corrosive: it trains developers to dismiss the tool wholesale, at which point the false-negative rate effectively becomes 100% because nobody reads the output. This is why precision-oriented prompting matters — the goal is a reviewer whose signals are trusted enough to act on.</p>
+    <p>False positives arise because the model is reasoning under-constrained. When a prompt says "find problems," the model must silently invent a definition of "problem," a severity bar, and an assumption about surrounding context it cannot see. Each invented assumption is a chance to flag something that is fine — a deliberate style choice, a guard that exists two files away, a pattern that is idiomatic in the codebase. Reducing false positives is therefore mostly about <em>removing the model's need to guess</em>: supplying the definition, the bar, and the context explicitly.</p>
+
+    <h3>Visualization — Confusion Matrix</h3>
+    <table class="comparison">
+      <tbody><tr><th>&nbsp;</th><th>Model flags issue</th><th>Model stays silent</th></tr>
+      <tr><td>Real defect exists</td><td>True Positive ✅ (correct catch)</td><td>False Negative ❌ (missed bug)</td></tr>
+      <tr><td>Code is fine</td><td><strong>False Positive ⚠️ (noise → distrust)</strong></td><td>True Negative ✅ (correct silence)</td></tr>
+    </tbody></table>
+
+    <div class="tips">💡 <strong>Tip:</strong> Frame the reviewer's job as <em>precision-first</em>. Tell the model plainly: "It is better to miss a borderline issue than to flag code that is actually correct." This single instruction shifts the model's internal threshold toward silence on ambiguous cases.</div>
+
+    <div class="exam-strategy">🎯 <strong>Exam Strategy:</strong> Expect a definitional question distinguishing false positives from false negatives, and a scenario that asks <em>why</em> false positives are especially damaging in review workflows. The keyword to watch is <strong>"developer trust"</strong> — answers that connect false positives to erosion of trust (and therefore tool abandonment) score highest. Do not conflate "reduce false positives" with "flag less"; the correct framing is "flag <em>only</em> what is genuinely defective."</div>
+
+    <p class="xref">Connects to → <a href="#18-2">18.2</a> (the vagueness that produces these errors) and <a href="#18-6">18.6</a> (how to measure the FP rate you are trying to reduce).</p>
+  </section>
+
+  <!-- ============================ 18.2 ============================ -->
+  <section id="18-2">
+    <h2>18.2 How Vague Prompts Cause False Positives</h2>
+    <p class="summary">Vague instructions force the model to fill gaps with assumptions. Each unstated definition — of severity, scope, and context — becomes a place where the model over-flags. Ambiguity is the root cause; precision is the cure.</p>
+
+    <h3>Deep Dive</h3>
+    <p>Consider the instruction "Be thorough and catch all potential issues." Three words silently expand the model's flagging surface. <strong>"Thorough"</strong> rewards volume, so the model reports marginal observations to appear diligent. <strong>"All"</strong> removes any severity floor, so cosmetic nits sit beside real bugs. <strong>"Potential"</strong> invites speculation about code paths the model cannot verify from the diff alone. The result is a long list dominated by non-issues — a textbook false-positive cascade.</p>
+    <p>The mechanism is worth internalizing because it generalizes: <em>a model resolves ambiguity in the direction the prompt seems to reward.</em> A prompt that praises exhaustiveness biases toward recall (and false positives); a prompt that praises restraint biases toward precision. Vagueness also strips context — without knowing the file's role, the language's idioms, or which lines are new versus pre-existing, the model evaluates code against a generic ideal rather than the actual situation, flagging intentional trade-offs as mistakes. Removing the vagueness (see <a href="#18-3">18.3</a> and <a href="#18-4">18.4</a>) is the direct antidote.</p>
+
+    <h3>Visualization — Failure Cascade</h3>
+    <div class="flowchart">
+      <div class="step">Vague prompt</div>
+      <span class="arrow">→</span>
+      <div class="step">Model invents definitions</div>
+      <span class="arrow">→</span>
+      <div class="step">Ambiguous interpretation</div>
+      <span class="arrow">→</span>
+      <div class="step">High false positives</div>
+      <span class="arrow">→</span>
+      <div class="step">Developer distrust</div>
+    </div>
+
+    <h3>Before vs. After</h3>
+    <div class="ba">
+      <div class="cell before">
+        <span class="tag">Before · Vague</span>
+        <pre>Be conservative when reviewing code.</pre>
+      </div>
+      <div class="cell after">
+        <span class="tag">After · Precise</span>
+        <pre>Flag only issues where: (1) a null-pointer
+dereference is possible on an unguarded path,
+(2) user input reaches a SQL query without
+parameterization, or (3) a resource is opened
+but not closed on an error path. Ignore style,
+naming, and formatting entirely.</pre>
+      </div>
+    </div>
+
+    <div class="tips">💡 <strong>Tip:</strong> Audit your prompt for "trigger words" that silently reward over-flagging: <code>thorough</code>, <code>comprehensive</code>, <code>all</code>, <code>any</code>, <code>potential</code>, <code>might</code>. Replace each with a bounded, verifiable condition.</div>
+
+    <div class="exam-strategy">🎯 <strong>Exam Strategy:</strong> Questions here are usually <em>diagnostic</em> — you are shown a weak prompt and asked which phrase is most responsible for false positives. Watch for words that expand scope (<strong>"all/any"</strong>), reward volume (<strong>"thorough"</strong>), or invite speculation (<strong>"potential/possible"</strong>). The best answer identifies the ambiguity <em>and</em> names the fix: make the criterion specific, bounded, and verifiable.</div>
+
+    <p class="xref">Connects to → <a href="#18-4">18.4</a> (specific criteria are the concrete solution to each failure mode identified here).</p>
+  </section>
+
+  <!-- ============================ 18.3 ============================ -->
+  <section id="18-3">
+    <h2>18.3 Scoping Prompts: Defining What to Flag and What to Ignore</h2>
+    <p class="summary">Precision comes as much from stating what to <em>ignore</em> as what to catch. An explicit allow-list of concerns plus an explicit exclusion list bounds the model's attention, so it stops evaluating code against invisible, generic standards.</p>
+
+    <h3>Deep Dive</h3>
+    <p>Scoping works on a simple principle: a model will inspect whatever the prompt implies is in-bounds, so an unbounded prompt makes <em>everything</em> in-bounds. Two complementary levers narrow the frame. First, a <strong>positive scope</strong> — an explicit list of the concern categories that matter (e.g., correctness, security, resource safety). Second, a <strong>negative scope</strong> — an explicit exclusion list (e.g., "do not comment on formatting, import ordering, or subjective naming; assume the linter handles those"). The exclusion list is the one most engineers forget, and it is often the highest-leverage sentence in the entire prompt because it eliminates whole classes of noise at once.</p>
+    <p>Scope should also be pinned in <em>space and time</em>: tell the model to review <strong>only the changed lines</strong> in a diff, and to treat unchanged code and out-of-view files as correct rather than speculating about them. This prevents the classic false positive where the model "fixes" pre-existing code the author never touched, or invents a bug in a helper it cannot see. Well-scoped prompts convert an open-ended "judge this code" task into a closed checklist the model can actually satisfy.</p>
+
+    <h3>Visualization — Scope Boundaries</h3>
+    <table class="comparison">
+      <tbody><tr><th>Lever</th><th>Purpose</th><th>Example instruction</th></tr>
+      <tr><td>Positive scope</td><td>Names the concerns that count</td><td>"Review for: logic correctness, security, resource leaks, and concurrency."</td></tr>
+      <tr><td>Negative scope</td><td>Removes whole noise classes</td><td>"Do not comment on formatting, naming, or import order — a linter owns those."</td></tr>
+      <tr><td>Spatial scope</td><td>Limits attention to the change</td><td>"Review only added/modified lines; treat unchanged code as correct."</td></tr>
+      <tr><td>Assumption scope</td><td>Blocks speculation</td><td>"If you cannot verify a call from the diff, assume it behaves correctly."</td></tr>
+    </tbody></table>
+
+    <h3>Before vs. After</h3>
+    <div class="ba">
+      <div class="cell before">
+        <span class="tag">Before · Vague</span>
+        <pre>Review this pull request and list everything
+that could be improved.</pre>
+      </div>
+      <div class="cell after">
+        <span class="tag">After · Precise</span>
+        <pre>Review ONLY the added/modified lines in this
+diff. In scope: logic bugs, security flaws,
+unclosed resources. OUT of scope: formatting,
+naming, imports (a linter handles these). If a
+called function is not shown, assume it works.</pre>
+      </div>
+    </div>
+
+    <div class="tips">💡 <strong>Tip:</strong> Write the exclusion list <em>first</em>. Deciding what the reviewer must stay silent about clarifies what genuinely deserves attention, and it is usually the fastest single change that cuts false-positive volume.</div>
+
+    <div class="exam-strategy">🎯 <strong>Exam Strategy:</strong> Look for the phrase <strong>"out of scope"</strong> or <strong>"exclusion"</strong> in answer options — questions here reward recognizing that <em>defining what to ignore</em> is a first-class precision technique, not an afterthought. A common distractor is an answer that only adds more things to check; the stronger answer bounds attention (positive + negative scope) and blocks speculation about unseen code.</div>
+
+    <p class="xref">Connects to → <a href="#18-2">18.2</a> (scope removes the ambiguity that drives over-flagging) and <a href="#18-4">18.4</a> (within each in-scope category, criteria get specific).</p>
+  </section>
+
+  <!-- ============================ 18.4 ============================ -->
+  <section id="18-4">
+    <h2>18.4 Writing Specific Review Criteria by Category</h2>
+    <p class="summary">Precise, per-category criteria (bugs, security, performance, style) reduce cross-category false positives by telling the model exactly what qualifies as an issue in each domain. A category with a concrete, verifiable definition is a category the model stops guessing about.</p>
+
+    <h3>Deep Dive</h3>
+    <p>Once scope (18.3) has named the in-bounds categories, each category still needs its own <em>definition of a defect</em>. "Check for security issues" is a category label, not a criterion — the model must still invent the bar. Replacing the label with enumerated, checkable conditions ("flag hardcoded secrets, unparameterized SQL, and missing auth on new endpoints") turns a fuzzy judgment into pattern-matching against a spec. This is why category-specific criteria are so effective at precision: the model can only flag what matches a listed condition, and everything else falls through as a true negative.</p>
+    <p>Specific criteria also prevent <strong>cross-category leakage</strong> — the tendency to report, say, a style preference under the banner of a "bug," or a theoretical performance concern as a "security" issue. When each category carries its own bar, the model classifies correctly and the severity stays honest. The practical craft is to phrase each criterion as something a reader could verify by pointing at a line: prefer "a resource opened without a corresponding close on the error path" over "possible resource issues." Verifiable phrasing is the difference between a criterion and a vibe.</p>
+
+    <h3>Visualization — Vague vs. Precise Criteria by Category</h3>
+    <table class="comparison">
+      <tbody><tr><th>Category</th><th>Vague Criteria</th><th>Precise Criteria</th></tr>
+      <tr><td>Security</td><td>"Check for vulnerabilities"</td><td>"Flag hardcoded secrets, unparameterized SQL, and missing auth checks on new endpoints."</td></tr>
+      <tr><td>Correctness</td><td>"Look for bugs"</td><td>"Flag off-by-one loop bounds, unhandled null returns, and inverted boolean conditions."</td></tr>
+      <tr><td>Resource safety</td><td>"Check resource handling"</td><td>"Flag files/sockets/locks opened without a guaranteed close on every exit path, including exceptions."</td></tr>
+      <tr><td>Performance</td><td>"Watch performance"</td><td>"Flag O(n²) work over request-scoped collections and queries executed inside a loop (N+1)."</td></tr>
+      <tr><td>Style</td><td>"Ensure good style"</td><td>"Out of scope — defer to the linter. Do not report style."</td></tr>
+    </tbody></table>
+
+    <div class="tips">💡 <strong>Tip:</strong> Attach a <strong>severity label</strong> to each criterion (<code>blocker</code> / <code>warning</code> / <code>nit</code>) and instruct the model to report only <code>blocker</code> and <code>warning</code>. This lets you keep a criterion in the spec while suppressing its low-value output.</div>
+
+    <div class="exam-strategy">🎯 <strong>Exam Strategy:</strong> Expect a "rewrite this criterion" question that gives a vague category label and asks for the most precise replacement. The best answer enumerates <strong>specific, verifiable conditions</strong> rather than adding adjectives ("more carefully check…"). Watch for the keyword <strong>"per-category"</strong> and for distractors that merge categories — the exam rewards keeping criteria and severities separated by domain.</div>
+
+    <p class="xref">Connects to → <a href="#18-3">18.3</a> (criteria live inside the scope you defined) and <a href="#18-5">18.5</a> (examples calibrate the severity bar these criteria imply).</p>
+  </section>
+
+  <!-- ============================ 18.5 ============================ -->
+  <section id="18-5">
+    <h2>18.5 Few-Shot Calibration with Positive and Negative Examples</h2>
+    <p class="summary">Examples set the model's threshold more precisely than adjectives can. A few paired examples — one showing a true issue worth flagging, one showing similar-looking code that should <em>not</em> be flagged — calibrate the severity bar and teach the model where the line sits.</p>
+
+    <h3>Deep Dive</h3>
+    <p>Natural-language criteria still leave a gray zone: how bad must a bug be before it clears the bar? The most efficient way to communicate a threshold is by demonstration. A <strong>positive example</strong> shows code that <em>should</em> be flagged and the ideal terse comment. A <strong>negative example</strong> — the one engineers omit — shows code that looks suspicious but is actually correct, paired with the instruction "do not flag this." Negative examples are disproportionately powerful against false positives because they directly target the near-misses the model would otherwise report.</p>
+    <p>Good calibration examples are <em>contrastive</em>: the positive and negative should look similar so the model learns the discriminating feature, not a surface pattern. For instance, a SQL call built with string concatenation (flag) versus one using bound parameters (do not flag) teaches the model that <em>parameterization</em>, not the presence of SQL, is the signal. Keep the set small — three to five pairs usually suffice — and make sure they cover the boundary cases your team argues about, since those are exactly where the model's uncalibrated guesses become false positives.</p>
+
+    <h3>Visualization — Contrastive Calibration Pair</h3>
+    <table class="comparison">
+      <tbody><tr><th>Signal</th><th>DO flag (positive)</th><th>Do NOT flag (negative)</th></tr>
+      <tr><td>SQL construction</td><td><code>"...WHERE id=" + userId</code> — string-concatenated input</td><td><code>execute(sql, [userId])</code> — parameterized</td></tr>
+      <tr><td>Null handling</td><td><code>user.name</code> after an unchecked lookup</td><td><code>user?.name</code> or a guarded early return</td></tr>
+      <tr><td>Empty catch</td><td><code>catch(e){}</code> swallowing an error silently</td><td><code>catch(e){ log(e); rethrow }</code></td></tr>
+    </tbody></table>
+
+    <div class="tips">💡 <strong>Tip:</strong> For every positive example you add, add a matching negative that looks similar but is safe. The negative examples are what actually drive the false-positive rate down — they mark the boundary the model must not cross.</div>
+
+    <div class="exam-strategy">🎯 <strong>Exam Strategy:</strong> Watch for the terms <strong>"few-shot"</strong>, <strong>"negative example"</strong>, and <strong>"calibration."</strong> A frequent question asks why adding <em>negative</em> examples reduces false positives — the answer is that they demonstrate the boundary of what counts, suppressing near-miss over-flagging. Distractor answers suggest adding only more positive examples or more rules; the stronger choice pairs positives with contrastive negatives.</div>
+
+    <p class="xref">Connects to → <a href="#18-4">18.4</a> (examples make each category's severity bar concrete) and <a href="#18-6">18.6</a> (failing examples from production become new calibration pairs).</p>
+  </section>
+
+  <!-- ============================ 18.6 ============================ -->
+  <section id="18-6">
+    <h2>18.6 Iterative Refinement and Measuring the False-Positive Rate</h2>
+    <p class="summary">Precision prompting is empirical, not one-shot. You establish a labeled evaluation set, measure precision and recall, and feed each confirmed false positive back into the prompt as a sharpened criterion or a negative example. The loop is what turns a decent prompt into a trusted reviewer.</p>
+
+    <h3>Deep Dive</h3>
+    <p>You cannot reduce what you do not measure. The core metric is <strong>precision</strong> = true positives ÷ (true positives + false positives) — the fraction of the reviewer's flags that were genuinely worth raising. Track it against a held-out set of reviews that a human has labeled, so a prompt change's effect is visible rather than anecdotal. Pair it with <strong>recall</strong> (real issues caught ÷ real issues present) to guard against the trivial way to reach perfect precision: flag nothing. The tension between the two is captured by the <strong>F-score</strong>, but for review tooling teams usually weight precision higher because trust is the scarce resource (see <a href="#18-1">18.1</a>).</p>
+    <p>Refinement is then a disciplined loop: run the prompt on the eval set, triage each flag as TP or FP, and for every false positive ask "what unstated assumption produced this?" The answer becomes a concrete edit — a tightened criterion (18.4), an added exclusion (18.3), or a new negative example (18.5). Change <em>one</em> thing at a time and re-measure, so you can attribute improvement (or regression) to a specific edit. This is ordinary regression testing applied to prompts: freeze the eval set, and treat a rise in false positives after an edit as a failing test.</p>
+
+    <h3>Visualization — The Refinement Loop</h3>
+    <div class="flowchart good">
+      <div class="step">Run on labeled eval set</div>
+      <span class="arrow">→</span>
+      <div class="step">Measure precision / recall</div>
+      <span class="arrow">→</span>
+      <div class="step">Triage each false positive</div>
+      <span class="arrow">→</span>
+      <div class="step">Add criterion / exclusion / negative example</div>
+      <span class="arrow">→</span>
+      <div class="step">Re-measure (regression check)</div>
+    </div>
+
+    <table class="comparison">
+      <tbody><tr><th>Metric</th><th>Formula</th><th>What it tells you</th></tr>
+      <tr><td>Precision</td><td>TP / (TP + FP)</td><td>How trustworthy each flag is — the anti-false-positive metric.</td></tr>
+      <tr><td>Recall</td><td>TP / (TP + FN)</td><td>How many real issues you still catch — guards against flagging nothing.</td></tr>
+      <tr><td>F1</td><td>2·P·R / (P + R)</td><td>Balanced summary when both errors matter.</td></tr>
+    </tbody></table>
+
+    <div class="tips">💡 <strong>Tip:</strong> Keep a frozen "golden" set of past reviews with human labels. Re-run it after every prompt edit; if precision drops, you have caught a regression before it reaches developers — exactly like a unit test for your prompt.</div>
+
+    <div class="exam-strategy">🎯 <strong>Exam Strategy:</strong> Expect a calculation or definition item on <strong>precision</strong> vs. <strong>recall</strong>, and a scenario asking how to improve a reviewer over time. Watch the keyword <strong>"iterative"</strong> and the trap of optimizing precision alone — the correct answer preserves recall and changes one variable per iteration against a fixed eval set. Remember: precision is the metric that directly measures false positives.</div>
+
+    <p class="xref">Connects to → <a href="#18-1">18.1</a> (precision operationalizes the trust argument) and <a href="#18-5">18.5</a> (confirmed false positives become new negative examples).</p>
+  </section>
+
+  <!-- ============================ SUMMARY TABLE ============================ -->
+  <section id="summary">
+    <h2>Chapter Summary Table</h2>
+    <table>
+      <tbody><tr><th>Sub-topic</th><th>Key Takeaway</th><th>One-line Exam Tip</th></tr>
+      <tr>
+        <td>18.1 False positives</td>
+        <td>False positives erode developer trust and cause tool abandonment — a worse outcome than a missed borderline issue.</td>
+        <td>Link false positives to <em>trust</em>; distinguish them from false negatives.</td>
+      </tr>
+      <tr>
+        <td>18.2 Vague prompts</td>
+        <td>Ambiguity forces the model to invent definitions; volume-rewarding words drive over-flagging.</td>
+        <td>Spot the trigger word (<code>thorough</code>, <code>all</code>, <code>potential</code>) and bound it.</td>
+      </tr>
+      <tr>
+        <td>18.3 Scoping</td>
+        <td>Stating what to <em>ignore</em> (and limiting to changed lines) bounds attention and blocks speculation.</td>
+        <td>Recognize "out of scope / exclusion" as a first-class precision lever.</td>
+      </tr>
+      <tr>
+        <td>18.4 Category criteria</td>
+        <td>Enumerated, verifiable conditions per category stop guessing and prevent cross-category leakage.</td>
+        <td>Prefer specific listed conditions over adjectives; keep categories separate.</td>
+      </tr>
+      <tr>
+        <td>18.5 Few-shot calibration</td>
+        <td>Contrastive positive/negative examples set the severity threshold; negatives cut false positives most.</td>
+        <td>Know <em>why negative examples</em> reduce false positives.</td>
+      </tr>
+      <tr>
+        <td>18.6 Refinement &amp; metrics</td>
+        <td>Measure precision/recall on a frozen eval set; feed each false positive back as a targeted edit.</td>
+        <td>Precision = TP/(TP+FP); preserve recall; change one thing per iteration.</td>
+      </tr>
+    </tbody></table>
+  </section>
+
+  <!-- ============================ PITFALLS ============================ -->
+  <section id="pitfalls">
+    <h2>Common Pitfalls</h2>
+    <div class="pitfalls callout-lg">
+      <strong>⚠️ Mistakes candidates make on this chapter's exam questions</strong>
+      <ul>
+        <li><strong>Equating "reduce false positives" with "flag less."</strong> The goal is to flag <em>only genuine</em> defects, not to suppress volume indiscriminately — suppressing everything just trades false positives for false negatives.</li>
+        <li><strong>Confusing false positives with false negatives.</strong> A false positive flags correct code; a false negative misses a real bug. Precision measures the former.</li>
+        <li><strong>Forgetting the exclusion list.</strong> Candidates add more checks but never state what to ignore — yet negative scope (18.3) is often the highest-leverage fix.</li>
+        <li><strong>Adding adjectives instead of criteria.</strong> "Check more carefully" is not precision; enumerated, verifiable conditions (18.4) are.</li>
+        <li><strong>Only adding positive examples.</strong> Without contrastive <em>negative</em> examples (18.5), the model never learns the boundary of what not to flag.</li>
+        <li><strong>Optimizing precision in isolation.</strong> Ignoring recall lets "flag nothing" look perfect; always report both, or F1.</li>
+        <li><strong>Changing many prompt variables at once.</strong> You then cannot attribute the change in the false-positive rate to any single edit — refine one thing per iteration against a frozen eval set.</li>
+        <li><strong>Assuming unseen code is broken.</strong> Instruct the model to treat unverifiable calls and unchanged lines as correct, or it will speculate and over-flag.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="doc">
+    Study guide · Chapter 18 — Designing Precision Prompts to Reduce False Positives. Concepts are grounded in general prompt-engineering and code-review best practice; product-specific behavior should be verified against current official documentation.
+  </footer>
+
+</div>
+
+
+</body></html>
