@@ -4,6 +4,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { motion, type HTMLMotionProps } from "framer-motion";
 import { cva, type VariantProps } from "class-variance-authority";
+import { useMagnetic } from "@/components/animations/magnetic";
 import { transitions } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
@@ -61,24 +62,38 @@ export interface AnimatedButtonProps
   extends Omit<HTMLMotionProps<"button">, "children">,
     VariantProps<typeof buttonVariants> {
   children?: React.ReactNode;
+  /** Lean toward the pointer. `true` = 3px; pass a number for a custom pull. */
+  magnetic?: boolean | number;
 }
 
 /**
- * Button with a physical press: a 1px sink on tap, no scale-up on hover (hover
- * is carried by color alone, which stays legible under reduced motion).
+ * Button with physical feedback (L1).
+ *
+ * Optionally magnetic: the control leans a few pixels toward the cursor and
+ * springs back. When the magnet is on, the press is carried by a tiny scale
+ * instead of `y` — the pointer spring owns `y`, and animating both would make
+ * the two fight over the same transform.
  */
 const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
-  ({ className, variant, size, children, ...props }, ref) => (
-    <motion.button
-      ref={ref}
-      className={cn(buttonVariants({ variant, size, className }))}
-      whileTap={{ y: 1 }}
-      transition={transitions.fast}
-      {...props}
-    >
-      {children}
-    </motion.button>
-  )
+  ({ className, variant, size, children, magnetic = false, style, ...props }, ref) => {
+    const pull = useMagnetic(typeof magnetic === "number" ? magnetic : 3);
+    const on = magnetic !== false && pull.enabled;
+
+    return (
+      <motion.button
+        ref={ref}
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...(on ? pull.handlers : null)}
+        style={on ? { ...pull.style, ...(style as React.CSSProperties) } : style}
+        whileHover={on ? undefined : { y: -1 }}
+        whileTap={on ? { scale: 0.985 } : { y: 1 }}
+        transition={transitions.press}
+        {...props}
+      >
+        {children}
+      </motion.button>
+    );
+  }
 );
 AnimatedButton.displayName = "AnimatedButton";
 

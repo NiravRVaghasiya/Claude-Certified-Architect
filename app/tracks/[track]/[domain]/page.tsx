@@ -6,6 +6,7 @@ import { ProgressSummary, type ProgressChapter } from "@/components/dashboard/da
 import { PageHeader } from "@/components/dashboard/page-header";
 import { TRACK_COLOR, TRACK_SHORT } from "@/lib/nav";
 import { getDomainGroup, getTrackGroups } from "@/lib/content";
+import { cappedStagger } from "@/lib/motion";
 import { TRACK_LABELS } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -67,7 +68,12 @@ export default function DomainPage({ params }: { params: { track: string; domain
           </h2>
         </AnimatedSection>
 
-        <AnimatedList className="mt-5 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* One capped cascade for the grid (L3). Nothing staggers inside a card as
+            well — the tiles arrive in sequence, then the page is still. */}
+        <AnimatedList
+          stagger={cappedStagger(group.chapters.length)}
+          className="mt-5 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {group.chapters.map((chapter) => (
             <AnimatedItem key={chapter.slug} className="h-full">
               <ChapterCard

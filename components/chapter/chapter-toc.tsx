@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion, useTransform } from "framer-motion";
 import { ChevronDown, List } from "lucide-react";
-import { durations, easeInOut, transitions } from "@/lib/motion";
+import { readingProgress } from "@/components/chapter/reading-progress";
+import { durations, easeInOut, swapVariants, transitions } from "@/lib/motion";
 import { useMotionSafe } from "@/lib/use-motion";
 import type { SectionHeading } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -28,9 +29,14 @@ export interface ChapterTOCProps {
  * Chapter outline with scroll-spy.
  *
  * The active row is marked by a single indicator that travels between rows, the
- * rail line carries a fill tied to document scroll, and every row stays a plain
+ * rail line carries a fill tied to reading progress, and every row stays a plain
  * anchor so the outline works without JS (globals.css gives anchored headings a
  * scroll-margin that clears the fixed header).
+ *
+ * All the scroll-linked parts read the one motion value published by
+ * `<ReadingProgress/>`; this component adds no scroll listener of its own. The
+ * only React state that changes while scrolling is `activeId`, and that is
+ * driven by an IntersectionObserver — once per section, not once per frame.
  */
 export function ChapterTOC({
   sections,
@@ -42,9 +48,10 @@ export function ChapterTOC({
   const [activeId, setActiveId] = React.useState<string | null>(sections[0]?.id ?? null);
   const [open, setOpen] = React.useState(false);
 
-  const { scrollYProgress } = useScroll();
-  const { stiffness, damping, mass } = transitions.indicator;
-  const smoothProgress = useSpring(scrollYProgress, { stiffness, damping, mass });
+  // Formatted inside the motion value so the number can be written straight into
+  // the DOM by framer — rendering it from state would re-render the whole rail on
+  // every scroll frame.
+  const percent = useTransform(readingProgress, (value) => `${Math.round(value * 100)}%`);
 
   React.useEffect(() => {
     if (sections.length === 0) return;
@@ -77,13 +84,15 @@ export function ChapterTOC({
 
   if (sections.length === 0) return null;
 
+  const activeTitle = sections.find((section) => section.id === activeId)?.title ?? null;
+
   const list = (
     <div className="relative">
-      {/* Rail: a hairline with a scroll-progress fill scaled from the top. */}
+      {/* Rail: a hairline with a reading-progress fill scaled from the top. */}
       <span className="absolute inset-y-0 left-0 w-px bg-border" aria-hidden="true" />
       <motion.span
         className="absolute inset-y-0 left-0 w-px origin-top bg-accent/40"
-        style={{ scaleY: motionSafe ? smoothProgress : scrollYProgress }}
+        style={{ scaleY: readingProgress }}
         aria-hidden="true"
       />
       <ul className="space-y-px">
@@ -134,12 +143,42 @@ export function ChapterTOC({
           className="flex w-full items-center gap-2 rounded-xl px-4 py-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <List className="size-3.5 shrink-0 text-muted-foreground" aria-hidden="true" />
-          <span className="eyebrow flex-1 text-foreground/90">On this page</span>
-          <span className="font-mono text-2xs tabular text-muted-foreground">{sections.length}</span>
+          <span className="eyebrow shrink-0 text-foreground/90">On this page</span>
+
+          {/* Where the reader currently is, while the list is closed. L1 swap: the
+              header is a status line that the reader glances at, so the change has
+              to be over before the glance settles. Only while closed — open, the
+              travelling indicator answers the same question better, and two
+              answers would compete.
+
+              The slot is flex-sized and the title truncates, so a long section
+              name can never move the count or the chevron. aria-hidden because
+              this must not keep rewriting the button's accessible name as the
+              page scrolls; the list itself carries `aria-current`. */}
+          <span className="min-w-0 flex-1" aria-hidden="true">
+            <AnimatePresence initial={false} mode="wait">
+              {!open && activeTitle && (
+                <motion.span
+                  key={activeTitle}
+                  variants={swapVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  className="block truncate text-2xs text-muted-foreground"
+                >
+                  {activeTitle}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </span>
+
+          <span className="shrink-0 font-mono text-2xs tabular text-muted-foreground">
+            {sections.length}
+          </span>
           <motion.span
             animate={{ rotate: open ? 180 : 0 }}
             transition={{ duration: durations.fast, ease: easeInOut }}
-            className="grid place-items-center text-muted-foreground"
+            className="grid shrink-0 place-items-center text-muted-foreground"
           >
             <ChevronDown className="size-3.5" aria-hidden="true" />
           </motion.span>
@@ -166,7 +205,19 @@ export function ChapterTOC({
 
   return (
     <nav aria-label="Table of contents" className={cn("min-w-0", className)}>
-      <p className="eyebrow mb-3">On this page</p>
+      <div className="mb-3 flex items-baseline gap-2">
+        <p className="eyebrow flex-1">On this page</p>
+        {/* Same motion value as the rail fill and the top bar, so the three can
+            never disagree. Fixed width + tabular figures: 0% → 100% must not
+            nudge anything. aria-hidden — it duplicates the rail's own state and
+            would otherwise be a number that rewrites itself as you scroll. */}
+        <motion.span
+          aria-hidden="true"
+          className="min-w-[2.5rem] text-right font-mono text-2xs tabular text-muted-foreground"
+        >
+          {percent}
+        </motion.span>
+      </div>
       <div className="scroll-rail max-h-[calc(100dvh-var(--header-h)-8rem)] overflow-y-auto overscroll-contain">
         {list}
       </div>

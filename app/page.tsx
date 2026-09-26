@@ -16,6 +16,7 @@ import {
 import { TrackCard } from "@/components/dashboard/track-card";
 import { Button } from "@/components/ui/button";
 import { getManifest, getStats, getTrackGroups } from "@/lib/content";
+import { cappedStagger } from "@/lib/motion";
 
 /**
  * Dashboard. Content is read on the server and handed to the client cards as
@@ -66,6 +67,8 @@ export default function HomePage() {
           {chapterCount} chapters across {domainCount} domains, with progress you can see and a
           reader built for long sessions.
         </p>
+        {/* Static row, one magnetic primary (inside ContinueCta) — the two track
+            buttons stay plain so the pull marks a single action, not three. */}
         <div className="mt-7 flex flex-wrap items-center gap-3">
           <ContinueCta chapters={continueChapters} />
           <Button asChild variant="outline">
@@ -98,7 +101,12 @@ export default function HomePage() {
           </p>
         </AnimatedSection>
 
-        <AnimatedList className="mt-5 grid items-stretch gap-4 sm:grid-cols-2">
+        {/* One capped cascade for the whole grid (L3), scroll-triggered and once —
+            it sits below the fold, so it arrives as the reader reaches it. */}
+        <AnimatedList
+          stagger={cappedStagger(certTracks.length)}
+          className="mt-5 grid items-stretch gap-4 sm:grid-cols-2"
+        >
           {certTracks.map((track) => (
             <AnimatedItem key={track.track} className="h-full">
               <TrackCard

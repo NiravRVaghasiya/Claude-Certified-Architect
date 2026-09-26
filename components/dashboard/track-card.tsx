@@ -41,6 +41,7 @@ export function TrackCard({
   const slugs = React.useMemo(() => domains.flatMap((d) => d.slugs), [domains]);
   const done = hydrated ? countOf(slugs) : 0;
   const percent = hydrated ? percentOf(slugs) : 0;
+  const complete = chapterCount > 0 && done === chapterCount;
 
   const counts = (
     <span className="font-mono text-2xs tabular text-muted-foreground">
@@ -53,7 +54,13 @@ export function TrackCard({
     return (
       <CardLink
         href={`/tracks/${track}`}
-        className={cn("group flex items-center gap-4 p-4 sm:gap-5", className)}
+        className={cn(
+          "group flex items-center gap-4 p-4 sm:gap-5",
+          // Border, not motion, carries "finished" — the same static signal the
+          // domain and chapter cards use, and it survives animations being off.
+          complete && "border-success/30",
+          className
+        )}
       >
         <span className="flex min-w-0 items-center gap-2">
           <span className={cn("size-1.5 shrink-0 rounded-full", hue?.bg)} aria-hidden="true" />
@@ -70,8 +77,10 @@ export function TrackCard({
         />
         {counts}
         <span className="eyebrow hidden shrink-0 sm:inline">{domains.length} domains</span>
+        {/* L1, transform only. Paired with `group-focus-visible` so the keyboard
+            gets the same affordance as the pointer. */}
         <ArrowRight
-          className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 ease-emphasis group-hover:translate-x-0.5"
+          className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 ease-emphasis group-hover:translate-x-0.5 group-focus-visible:translate-x-0.5"
           aria-hidden="true"
         />
       </CardLink>
@@ -79,7 +88,17 @@ export function TrackCard({
   }
 
   return (
-    <CardLink href={`/tracks/${track}`} className={cn("group flex h-full flex-col p-5", className)}>
+    // No travelling arrow on this variant: the whole card lifts 3px on hover and a
+    // second moving element in the same glance would be one too many. The dense
+    // compact row gets the arrow precisely because it does not read as a card.
+    <CardLink
+      href={`/tracks/${track}`}
+      className={cn(
+        "group flex h-full flex-col p-5",
+        complete && "border-success/30",
+        className
+      )}
+    >
       <div className="flex items-center justify-between gap-3">
         <span className="flex min-w-0 items-center gap-2">
           <span className={cn("size-1.5 shrink-0 rounded-full", hue?.bg)} aria-hidden="true" />

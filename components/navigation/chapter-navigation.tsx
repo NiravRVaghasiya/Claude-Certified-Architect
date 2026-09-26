@@ -6,7 +6,13 @@ import { CardLink } from "@/components/ui/card";
 import type { ChapterSummary } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-/** Previous / next chapter pair. The arrow travels on hover; the card lifts 3px. */
+/**
+ * Previous / next chapter pair.
+ *
+ * L1 throughout: the card lifts 3px, the border and shadow firm up, and the arrow
+ * travels 2px in the direction it points. No magnet (the target is far too large
+ * to lean convincingly) and no scale (text inside a scaling box reflows badly).
+ */
 export function ChapterNavigation({
   prev,
   next,
@@ -52,16 +58,17 @@ function NavCard({
           isNext && "sm:justify-end"
         )}
       >
+        {/* Focus-visible is paired with hover so the arrow answers the keyboard too. */}
         {!isNext && (
           <Arrow
-            className="size-3 transition-transform duration-200 ease-emphasis group-hover:-translate-x-0.5"
+            className="size-3 transition-transform duration-[160ms] ease-emphasis group-hover:-translate-x-0.5 group-focus-visible:-translate-x-0.5"
             aria-hidden="true"
           />
         )}
         {isNext ? "Next" : "Previous"}
         {isNext && (
           <Arrow
-            className="size-3 transition-transform duration-200 ease-emphasis group-hover:translate-x-0.5"
+            className="size-3 transition-transform duration-[160ms] ease-emphasis group-hover:translate-x-0.5 group-focus-visible:translate-x-0.5"
             aria-hidden="true"
           />
         )}

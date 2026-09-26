@@ -44,12 +44,29 @@ const TRACK_BADGE: Record<Track, "neutral" | "foundation" | "professional"> = {
 };
 
 /** Renders highlight segments. Matches get a soft accent wash, never a <mark>. */
-export function Highlight({ segments }: { segments: HighlightSegment[] }) {
+export function Highlight({
+  segments,
+  inherit = false,
+}: {
+  segments: HighlightSegment[];
+  /**
+   * Let matches take their colour from the surrounding text instead of forcing
+   * `foreground`. Needed in the title, which recolours on hover — a match that
+   * kept its own colour there would end up *less* prominent than its context.
+   */
+  inherit?: boolean;
+}) {
   return (
     <>
       {segments.map((segment, i) =>
         segment.match ? (
-          <span key={i} className="rounded-[3px] bg-accent/20 px-0.5 text-foreground">
+          <span
+            key={i}
+            className={cn(
+              "rounded-[3px] bg-accent/20 px-0.5",
+              inherit ? "text-inherit" : "text-foreground"
+            )}
+          >
             {segment.text}
           </span>
         ) : (
@@ -63,6 +80,15 @@ export function Highlight({ segments }: { segments: HighlightSegment[] }) {
 /* Varying widths so the placeholder reads as text, not as a table. */
 const SKELETON_WIDTHS = ["62%", "48%", "71%", "55%", "44%"];
 
+/**
+ * The one looping animation in the app: a skeleton has to say "still coming",
+ * and only motion says that. Reduced motion collapses the keyframe to a single
+ * 0.01ms iteration (see globals.css) and, with no fill mode, the sweep parks
+ * back off-canvas — leaving a plain static bar, which is the correct resting
+ * state. Deliberately not branched on `useMotionSafe()`: this renders in
+ * server-prerendered markup, and a tree that differs by motion preference
+ * mismatches on hydration.
+ */
 function Shimmer() {
   return (
     <span
@@ -152,18 +178,22 @@ export function SearchResultRow({
 
   return (
     <span className={cn("flex w-full min-w-0 items-start gap-3", className)}>
+      {/* Hover, keyboard focus and cmdk selection all get the same treatment, and
+          all three are spelled out: an affordance only a mouse can reach is not
+          one. All of it is CSS on data-attributes — the palette would otherwise
+          have to re-render every row on every arrow key to move one border. */}
       <span
         aria-hidden="true"
-        className="mt-px flex size-7 shrink-0 items-center justify-center rounded-md border border-border bg-muted-subtle font-mono text-2xs tabular text-muted-foreground transition-colors duration-150 group-data-[selected=true]/srow:border-border-strong group-data-[selected=true]/srow:text-foreground"
+        className="mt-px flex size-7 shrink-0 items-center justify-center rounded-md border border-border bg-muted-subtle font-mono text-2xs tabular text-muted-foreground transition-colors duration-150 group-hover/srow:border-border-strong group-hover/srow:text-foreground group-focus-visible/srow:border-border-strong group-focus-visible/srow:text-foreground group-data-[selected=true]/srow:border-border-strong group-data-[selected=true]/srow:text-foreground"
       >
         {entry.chapterNumber}
       </span>
 
       <span className="min-w-0 flex-1">
         <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-          <span className="min-w-0 truncate text-[0.8125rem] font-medium text-foreground sm:text-sm">
+          <span className="min-w-0 truncate text-[0.8125rem] font-medium text-foreground transition-colors duration-150 group-hover/srow:text-accent group-focus-visible/srow:text-accent group-data-[selected=true]/srow:text-accent sm:text-sm">
             <span className="sr-only">{`Chapter ${entry.chapterNumber}: `}</span>
-            <Highlight segments={titleSegments} />
+            <Highlight segments={titleSegments} inherit />
           </span>
           <Badge variant={TRACK_BADGE[entry.track]} size="sm" mono>
             {TRACK_SHORT[entry.track]}
@@ -195,9 +225,12 @@ export function SearchResultRow({
           {complete && <Check className="size-3.5 text-success" aria-hidden="true" />}
         </span>
         {variant === "palette" && (
+          // Slides the last 4px in rather than fading: arriving from the edge
+          // points back at the key you press, and a pure fade on a 14px glyph
+          // reads as a rendering artefact (L1).
           <span
             aria-hidden="true"
-            className="hidden size-4 items-center justify-center text-muted-foreground opacity-0 transition-opacity duration-150 group-hover/srow:opacity-100 group-focus-visible/srow:opacity-100 group-data-[selected=true]/srow:opacity-100 sm:flex"
+            className="hidden size-4 translate-x-1 items-center justify-center text-muted-foreground opacity-0 transition-[opacity,transform] duration-150 ease-emphasis group-hover/srow:translate-x-0 group-hover/srow:opacity-100 group-focus-visible/srow:translate-x-0 group-focus-visible/srow:opacity-100 group-data-[selected=true]/srow:translate-x-0 group-data-[selected=true]/srow:opacity-100 sm:flex"
           >
             <CornerDownLeft className="size-3.5" />
           </span>

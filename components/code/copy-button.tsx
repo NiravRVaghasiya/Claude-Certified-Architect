@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, Copy } from "lucide-react";
-import { transitions } from "@/lib/motion";
+import { Copy } from "lucide-react";
+import { AnimatedCheck } from "@/components/animations/animated-check";
+import { swapVariants, transitions } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 /** How long the confirmation holds before reverting to the resting state. */
@@ -54,6 +55,8 @@ function manualShortcut(): string {
 
 export interface CopyButtonProps {
   code: string;
+  /** Fired once per successful copy, so the block can acknowledge it. */
+  onCopied?: () => void;
   className?: string;
 }
 
@@ -64,8 +67,13 @@ export interface CopyButtonProps {
  * always visible where there is no hover (touch). The label swaps with the
  * icon so the state is never carried by motion alone, and the same change is
  * announced through a polite live region.
+ *
+ * L1 throughout: the confirmation is feedback on a click the reader already knows
+ * they made, so it has to land immediately. The one thing that gets more weight
+ * is the tick, which draws its own stroke — a mark being made rather than an icon
+ * appearing.
  */
-export function CopyButton({ code, className }: CopyButtonProps) {
+export function CopyButton({ code, onCopied, className }: CopyButtonProps) {
   const [status, setStatus] = React.useState<Status>("idle");
   const [shortcut, setShortcut] = React.useState("Ctrl+C");
   const timer = React.useRef<number | null>(null);
@@ -87,6 +95,7 @@ export function CopyButton({ code, className }: CopyButtonProps) {
     if (copied) {
       setStatus("copied");
       revertAfter(COPIED_MS);
+      onCopied?.();
       return;
     }
     setShortcut(manualShortcut());
@@ -108,8 +117,9 @@ export function CopyButton({ code, className }: CopyButtonProps) {
       onClick={handleClick}
       // Stable regardless of state, so the accessible name never shifts.
       aria-label="Copy code"
+      // Press is a spring: it is the one part of this control that answers a hand.
       whileTap={{ y: 1 }}
-      transition={transitions.fast}
+      transition={transitions.press}
       className={cn(
         "inline-flex h-6 shrink-0 items-center gap-1.5 rounded-md border border-code-border bg-code-chrome px-1.5",
         "font-mono text-2xs font-medium text-code-foreground/75",
@@ -125,20 +135,32 @@ export function CopyButton({ code, className }: CopyButtonProps) {
     >
       <span className="relative grid size-3.5 shrink-0 place-items-center" aria-hidden="true">
         <AnimatePresence initial={false} mode="wait">
-          <motion.span
-            key={status === "copied" ? "done" : "copy"}
-            className="absolute inset-0 grid place-items-center"
-            initial={{ opacity: 0, scale: 0.6 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.6 }}
-            transition={transitions.fast}
-          >
-            {status === "copied" ? (
-              <Check className="size-3.5 text-success" />
-            ) : (
+          {status === "copied" ? (
+            // The stroke drawing itself *is* the entrance, so the wrapper only
+            // fades — a scale-in on top of it would blur the mark being made.
+            // Remounted on every copy, so the tick redraws each time.
+            <motion.span
+              key="done"
+              className="absolute inset-0 grid place-items-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, scale: 0.6 }}
+              transition={transitions.fast}
+            >
+              <AnimatedCheck size={14} className="text-success" />
+            </motion.span>
+          ) : (
+            <motion.span
+              key="copy"
+              className="absolute inset-0 grid place-items-center"
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.6 }}
+              transition={transitions.fast}
+            >
               <Copy className="size-3.5" />
-            )}
-          </motion.span>
+            </motion.span>
+          )}
         </AnimatePresence>
       </span>
 
@@ -148,10 +170,10 @@ export function CopyButton({ code, className }: CopyButtonProps) {
           <motion.span
             key={label}
             className="inline-block"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={transitions.fast}
+            variants={swapVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
           >
             {label}
           </motion.span>

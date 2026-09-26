@@ -1,6 +1,7 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { AnimatedCheck } from "@/components/animations/animated-check";
+import { useCompletionDraw } from "@/components/dashboard/chapter-card";
 import { ProgressRing } from "@/components/progress/progress-ring";
 import { Badge } from "@/components/ui/badge";
 import { CardLink } from "@/components/ui/card";
@@ -24,6 +25,7 @@ export function DomainCard({ track, domainKey, title, chapterSlugs, className }:
   const done = hydrated ? countOf(chapterSlugs) : 0;
   const percent = hydrated ? percentOf(chapterSlugs) : 0;
   const complete = total > 0 && done === total;
+  const draw = useCompletionDraw(complete, hydrated);
 
   return (
     <CardLink
@@ -37,6 +39,8 @@ export function DomainCard({ track, domainKey, title, chapterSlugs, className }:
             {title}
           </h3>
         </div>
+        {/* The ring is the card's one L4 moment: it sweeps to the real value once,
+            when progress arrives, and its stroke settles to `success` at 100%. */}
         <ProgressRing
           percent={percent}
           size={44}
@@ -47,11 +51,14 @@ export function DomainCard({ track, domainKey, title, chapterSlugs, className }:
         />
       </div>
 
-      <div className="mt-auto flex items-center justify-between gap-3 pt-5">
+      {/* 1.375rem is the success badge's exact height (16px line + 4px padding +
+          2px border). Reserving it means the badge replacing the `done/total`
+          count after hydration cannot change the card's height. */}
+      <div className="mt-auto flex min-h-[1.375rem] items-center justify-between gap-3 pt-5">
         <span className="eyebrow">{total} chapters</span>
         {complete ? (
           <Badge variant="success" size="sm" mono>
-            <Check aria-hidden="true" />
+            <AnimatedCheck size={12} instant={!draw} />
             Done
           </Badge>
         ) : (

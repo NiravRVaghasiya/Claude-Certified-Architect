@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { getStats } from "@/lib/content";
 
 /**
- * 404. Deliberately unanimated — it renders when something already went wrong,
- * so it stays a plain server component with no motion payload.
+ * 404. Deliberately calm: a static server component, no entrance reveal, and one
+ * CSS-only hover on the primary action. It renders when something already went
+ * wrong — the reader wants a way out, not a performance.
  */
 export default function NotFound() {
   const { chapterCount } = getStats();
@@ -20,10 +21,16 @@ export default function NotFound() {
         The chapter may have been renamed, or the link is incomplete. Search all {chapterCount}{" "}
         chapters, or head back to your dashboard.
       </p>
+      {/* The page's only motion: the back arrow travels 2px (L1, transform only).
+          No magnetic pull, no reveal — this renders when something already went
+          wrong, so it stays a plain server component with no motion payload. */}
       <div className="mt-7 flex flex-wrap items-center gap-3">
-        <Button asChild>
+        <Button asChild className="group">
           <Link href="/">
-            <ArrowLeft aria-hidden="true" />
+            <ArrowLeft
+              aria-hidden="true"
+              className="transition-transform duration-150 ease-emphasis group-hover:-translate-x-0.5 group-focus-visible:-translate-x-0.5"
+            />
             Back to dashboard
           </Link>
         </Button>

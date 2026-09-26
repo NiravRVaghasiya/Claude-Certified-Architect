@@ -19,7 +19,7 @@ export function ThemeToggle() {
       size="icon-sm"
       aria-label={mounted ? `Switch to ${isDark ? "light" : "dark"} theme` : "Toggle theme"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative text-muted-foreground hover:text-foreground"
+      className="relative text-muted-foreground transition-transform hover:text-foreground active:scale-[0.94]"
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.span
