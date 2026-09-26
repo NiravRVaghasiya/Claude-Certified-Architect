@@ -1,0 +1,2097 @@
+/* ===========================================================================
+   Chapter blocks
+   ---------------------------------------------------------------------------
+   Companion to chapter-prose.css. This file styles the *rich* structures the
+   source study notes ship — exam panels, quiz/question blocks, decision trees,
+   flow and pipeline diagrams, timelines, mnemonics, cheat sheets, comparison
+   tables, scenario walkthroughs — while chapter-prose.css owns base typography,
+   callouts, generic cards/grids, tables and code.
+
+   Plain CSS only — no Tailwind at-rules, no directives; colors come from the
+   HSL custom properties in globals.css so light and dark both work.
+
+   Conventions used throughout:
+   - Mobile-first. Horizontal figures are `flex-wrap: wrap` (keeps the source's
+     "→" glyphs pointing the right way at every width) or single-column grids;
+     the multi-column form is opted into at the 640px breakpoint.
+   - The source markup mixes element types for the same class name (`.q` is a
+     div, a p AND a span across chapters), so block treatments are attached to
+     the element type that actually carries them and inline treatments stay
+     type-agnostic.
+   =========================================================================== */
+
+.chapter-prose {
+  --blk-line: hsl(var(--border));
+  --blk-line-strong: hsl(var(--border-strong));
+  --blk-surface: hsl(var(--card));
+  --blk-sunken: hsl(var(--muted-subtle));
+  --blk-fill: hsl(var(--muted));
+  --blk-radius: calc(var(--radius) + 2px);
+  --blk-radius-sm: calc(var(--radius) - 4px);
+  --blk-gap: 0.75rem;
+
+  /* Ink for surfaces the *source HTML* tints with its own inline colors. Those
+     inline styles beat any stylesheet, so the only thing left to control is
+     legibility on top of them. */
+  --blk-ink-on-dark: hsl(0 0% 100%);
+  --blk-ink-on-tint: hsl(224 24% 12%);
+}
+
+/* ---------------------------------------------------------------------------
+   Shared primitives
+   --------------------------------------------------------------------------- */
+
+/* Uppercase mono eyebrow — the `.eyebrow` utility, restated in plain CSS for
+   the source markup's own label classes. */
+.chapter-prose .exam-panel-header,
+.chapter-prose .exam-label,
+.chapter-prose .q-label,
+.chapter-prose .qlabel,
+.chapter-prose .qtype,
+.chapter-prose .q-meta,
+.chapter-prose .recall-label,
+.chapter-prose .mnemonic-label,
+.chapter-prose .flow-label,
+.chapter-prose .arrow-label,
+.chapter-prose .edge-label,
+.chapter-prose .branch-label,
+.chapter-prose .dt-branch-label,
+.chapter-prose .lifecycle-label,
+.chapter-prose .lane-note,
+.chapter-prose .map-sublabel,
+.chapter-prose .tier,
+.chapter-prose .wf-header,
+.chapter-prose .lbl-yes,
+.chapter-prose .lbl-no,
+.chapter-prose .lbl-maybe,
+.chapter-prose .lbl-input,
+.chapter-prose .lbl-rsn,
+.chapter-prose .yes-label,
+.chapter-prose .no-label,
+.chapter-prose .loop-label,
+.chapter-prose .bench-legend,
+.chapter-prose .plot-legend,
+.chapter-prose .colhead-fast,
+.chapter-prose .colhead-bal,
+.chapter-prose .colhead-max {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Mono keys that keep their source capitalisation (they are terms, not labels). */
+.chapter-prose .cheat-key,
+.chapter-prose .cheat-term,
+.chapter-prose .cheat-label,
+.chapter-prose .qref-term,
+.chapter-prose .stage-name,
+.chapter-prose .seq-actor,
+.chapter-prose .map-label,
+.chapter-prose .node-text,
+.chapter-prose .tool-text,
+.chapter-prose .akey .ans-q {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* Small numeric / letter chips: question numbers, step numbers, option keys. */
+.chapter-prose .q-num,
+.chapter-prose .qnum,
+.chapter-prose .qn,
+.chapter-prose .qid,
+.chapter-prose .exam-q-num,
+.chapter-prose .seq-num,
+.chapter-prose .wf-step-num,
+.chapter-prose .branch-num,
+.chapter-prose .mnemonic-letter,
+.chapter-prose .opt-key,
+.chapter-prose .opt-letter,
+.chapter-prose span.opt,
+.chapter-prose .opts .lt,
+.chapter-prose .akey .ans-a,
+.chapter-prose .seq-step > .n,
+.chapter-prose .stage > .step-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  padding: 0 0.3rem;
+  border-radius: var(--blk-radius-sm);
+  background: hsl(var(--accent) / 0.12);
+  color: hsl(var(--accent));
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.55;
+  vertical-align: baseline;
+}
+
+/* Figure shell: one hairline panel, sunken so diagrams read as plates. */
+.chapter-prose .diagram,
+.chapter-prose .diagram-box,
+.chapter-prose .diagram-container,
+.chapter-prose .diagram-wrap,
+.chapter-prose .svgwrap,
+.chapter-prose .viz-box,
+.chapter-prose .viz-container,
+.chapter-prose .flow,
+.chapter-prose .flow-diagram,
+.chapter-prose .flowchart,
+.chapter-prose .flowrow,
+.chapter-prose .flow-row,
+.chapter-prose .connection-flow,
+.chapter-prose .connections,
+.chapter-prose .cross-connections,
+.chapter-prose .pipeline,
+.chapter-prose .seq,
+.chapter-prose .lifecycle,
+.chapter-prose .lifecycle-strip,
+.chapter-prose .layer-stack,
+.chapter-prose .layers,
+.chapter-prose .decision-tree,
+.chapter-prose .decision-grid,
+.chapter-prose .tree,
+.chapter-prose .timeline,
+.chapter-prose .mindmap,
+.chapter-prose .map,
+.chapter-prose .barchart,
+.chapter-prose .bench,
+.chapter-prose .chart-card,
+.chapter-prose .plot-card,
+.chapter-prose .quadrant-wrap,
+.chapter-prose .arch,
+.chapter-prose .workflow,
+.chapter-prose .suite-overview {
+  margin: 1.75rem 0;
+  padding: 1.125rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius);
+  background: var(--blk-sunken);
+}
+
+/* Nested figures never double up the plate. */
+.chapter-prose .flow .flow,
+.chapter-prose .flow .branch,
+.chapter-prose .decision-tree .decision-tree,
+.chapter-prose .bench .barchart,
+.chapter-prose .chart-card .barchart {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* SVG figures: the source hard-codes viewBox dimensions, so cap and centre. */
+.chapter-prose .flow-svg,
+.chapter-prose .proc-svg,
+.chapter-prose .quadrant-wrap > svg,
+.chapter-prose .map > svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.chapter-prose .quadrant-wrap,
+.chapter-prose .map {
+  overflow-x: auto;
+}
+
+/* Author-drawn figure wrappers: centre the art and let wide ones scroll rather
+   than squeeze. (chapter-body.tsx makes the overflowing ones keyboard-focusable.) */
+.chapter-prose :is(.diagram, .diagram-box, .diagram-container, .diagram-wrap, .svgwrap, .viz-box, .viz-container) {
+  overflow-x: auto;
+}
+.chapter-prose :is(.diagram, .diagram-box, .diagram-container, .diagram-wrap, .svgwrap, .viz-box, .viz-container) > svg {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   Exam panels & practice questions
+   ---------------------------------------------------------------------------
+   Target: reads like a printed practice exam — numbered stem, lettered option
+   rows on hairlines, the correct row marked in success green, rationale in a
+   sunken block underneath.
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .exam-panel,
+.chapter-prose .exam-box,
+.chapter-prose .exam-strategy-box,
+.chapter-prose .exam-strategy,
+.chapter-prose .strategy-box,
+.chapter-prose .strategy-block,
+.chapter-prose .self-check,
+.chapter-prose .exit-check,
+.chapter-prose .recall,
+.chapter-prose .quick-recall,
+.chapter-prose .question-block,
+.chapter-prose .exam-q,
+.chapter-prose .exam-question,
+.chapter-prose .quiz-q,
+.chapter-prose .quiz-question,
+.chapter-prose .qcard,
+.chapter-prose .q-card,
+.chapter-prose .qbox,
+.chapter-prose .qbody,
+.chapter-prose .sample-q,
+.chapter-prose .mc,
+.chapter-prose .mcq,
+.chapter-prose .qa-item,
+.chapter-prose .flash,
+.chapter-prose div.question {
+  margin: 1.5rem 0;
+  padding: 1.125rem 1.25rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius);
+  background: var(--blk-surface);
+}
+
+/* Exam-strategy family is the one accent-marked variant: it is the "read this"
+   block of every chapter. */
+.chapter-prose .exam-panel,
+.chapter-prose .exam-box,
+.chapter-prose .exam-strategy,
+.chapter-prose .exam-strategy-box,
+.chapter-prose .strategy-box,
+.chapter-prose .strategy-block {
+  border-left-width: 2px;
+  border-left-color: hsl(var(--accent));
+  background: hsl(var(--accent) / 0.05);
+}
+
+/* "🎯 Exam Strategy:" openers — accent-tinted, but kept at body size because
+   the source prefixes them with an emoji that would not shrink with them. */
+.chapter-prose .exam-strategy > strong:first-of-type,
+.chapter-prose .exam-strategy-box > strong:first-of-type,
+.chapter-prose .exam-box > strong:first-of-type,
+.chapter-prose .strategy-box > strong:first-of-type {
+  color: hsl(var(--accent));
+}
+
+.chapter-prose .exam-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: -0.25rem 0 0.875rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--blk-line);
+  color: hsl(var(--accent));
+}
+
+/* `.field` rows inside exam panels / ADR cards: label column + value column. */
+.chapter-prose .exam-row,
+.chapter-prose .exam-panel .field {
+  display: grid;
+  gap: 0.125rem 0.75rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--blk-line);
+  font-size: 0.875rem;
+}
+.chapter-prose .exam-row:first-of-type,
+.chapter-prose .exam-panel .field:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.chapter-prose .exam-panel .field-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .exam-value,
+.chapter-prose .exam-panel .field-value {
+  min-width: 0;
+}
+@media (min-width: 640px) {
+  .chapter-prose .exam-row,
+  .chapter-prose .exam-panel .field {
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+  }
+}
+
+/* Question stem. `.q` is a div, a p and a span depending on the chapter. */
+.chapter-prose .q-text,
+.chapter-prose .q-stem,
+.chapter-prose .qstem,
+.chapter-prose .exam-q-text,
+.chapter-prose .exam-question > .q-text,
+.chapter-prose .question > p.q,
+.chapter-prose div.q,
+.chapter-prose p.q,
+.chapter-prose .qa-question,
+.chapter-prose .quiz-question,
+.chapter-prose .question-block > h4,
+.chapter-prose .flash > .q {
+  display: block;
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.chapter-prose .qa-question {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+/* `<span class="q">` is overloaded in the source: a whole "example-style
+   question" trailing an exam-strategy box (ch21), a bare "Q:" label inside a
+   Q&A pair (ch20), and a decision-gate question (ch30). Default to inline
+   emphasis and promote only the first form. */
+.chapter-prose span.q {
+  font-weight: 600;
+}
+.chapter-prose .exam-box > span.q,
+.chapter-prose .exam-strategy > span.q,
+.chapter-prose .exam-strategy-box > span.q,
+.chapter-prose .strategy-box > span.q,
+.chapter-prose .tip-box > span.q {
+  display: block;
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid hsl(var(--accent) / 0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* The "Q:" / "A:" pair of an inline Q&A block. */
+.chapter-prose .qa > span.q,
+.chapter-prose .qa > span.ans {
+  margin-right: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.chapter-prose .qa > span.q {
+  color: hsl(var(--accent));
+}
+
+.chapter-prose .q-label,
+.chapter-prose .qlabel,
+.chapter-prose .qtype,
+.chapter-prose .q-meta,
+.chapter-prose .recall-label {
+  display: block;
+  margin-bottom: 0.375rem;
+}
+.chapter-prose .qtype {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--blk-line);
+  border-radius: 999px;
+  background: var(--blk-fill);
+}
+
+/* --- Option lists ------------------------------------------------------- */
+
+.chapter-prose .exam-option,
+.chapter-prose .options > li,
+.chapter-prose .options > div,
+.chapter-prose .opts > li,
+.chapter-prose .opts > div,
+.chapter-prose .q-opts > li,
+.chapter-prose .qopts > li,
+.chapter-prose .q-options > li,
+.chapter-prose .q-options > div,
+.chapter-prose .choices > li,
+.chapter-prose .q-choices > .choice,
+.chapter-prose .choice,
+.chapter-prose div.opt {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Option containers: hairline-separated rows, no list bullets/numbers — the
+   source already writes "A)" / "B." into the text, or supplies a letter chip. */
+.chapter-prose .options,
+.chapter-prose .opts,
+.chapter-prose .q-opts,
+.chapter-prose .qopts,
+.chapter-prose .q-options,
+.chapter-prose .choices,
+.chapter-prose .q-choices,
+.chapter-prose .distractors {
+  display: grid;
+  gap: 0.375rem;
+  margin: 0.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+.chapter-prose .options > li::marker,
+.chapter-prose .opts > li::marker,
+.chapter-prose .q-opts > li::marker,
+.chapter-prose .qopts > li::marker,
+.chapter-prose .choices > li::marker {
+  content: none;
+}
+
+/* Some chapters number their options with a real <ol>; keep the counter but
+   render it as the letter chip the other chapters use explicitly. */
+.chapter-prose ol.choices,
+.chapter-prose ol.q-opts,
+.chapter-prose ol.options,
+.chapter-prose ol.opts {
+  counter-reset: blk-opt;
+}
+.chapter-prose ol.choices > li,
+.chapter-prose ol.q-opts > li,
+.chapter-prose ol.options > li,
+.chapter-prose ol.opts > li {
+  counter-increment: blk-opt;
+}
+.chapter-prose ol.choices > li::before,
+.chapter-prose ol.q-opts > li::before,
+.chapter-prose ol.options > li::before,
+.chapter-prose ol.opts > li::before {
+  content: counter(blk-opt, upper-alpha);
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+}
+
+/* The correct option: success green, marked by fill AND weight (never by a
+   glyph alone — several chapters omit the check mark). */
+.chapter-prose .exam-option.correct,
+.chapter-prose .options > .correct,
+.chapter-prose .opts > .correct,
+.chapter-prose .q-opts > .correct,
+.chapter-prose .q-options > .correct,
+.chapter-prose .choices > .correct,
+.chapter-prose .choice.correct,
+.chapter-prose div.opt.correct {
+  border-color: hsl(var(--success) / 0.5);
+  background: hsl(var(--success) / 0.08);
+  font-weight: 500;
+}
+.chapter-prose ol.choices > li.correct::before,
+.chapter-prose ol.q-opts > li.correct::before,
+.chapter-prose ol.options > li.correct::before {
+  color: hsl(var(--success));
+}
+
+.chapter-prose .exam-option.incorrect,
+.chapter-prose .options > .incorrect,
+.chapter-prose .opts > .incorrect,
+.chapter-prose .choice.incorrect,
+.chapter-prose div.opt.distract,
+.chapter-prose .distractor {
+  border-style: dashed;
+  color: hsl(var(--muted-foreground));
+}
+
+/* --- Correctness marks (inline, used in dozens of shapes) ---------------- */
+
+.chapter-prose .correct,
+.chapter-prose .ans,
+.chapter-prose .verdict,
+.chapter-prose .win,
+.chapter-prose .winner {
+  color: hsl(var(--success));
+  font-weight: 600;
+}
+.chapter-prose .correct-tag,
+.chapter-prose .qr {
+  display: inline-block;
+  padding: 0.0625rem 0.4375rem;
+  border-radius: 999px;
+  background: hsl(var(--success) / 0.14);
+  color: hsl(var(--success));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Wrong answers stay muted rather than red: an option list where every
+   distractor shouts destructive-red is unreadable. Red is kept for the
+   explicit "why this is wrong" markers. */
+.chapter-prose .wrong,
+.chapter-prose .distract {
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+.chapter-prose .distractors .x,
+.chapter-prose .why-wrong > strong:first-child {
+  color: hsl(var(--destructive));
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* --- Answers, rationale, explanations ----------------------------------- */
+
+.chapter-prose div.answer,
+.chapter-prose .answer-body,
+.chapter-prose div.ans,
+.chapter-prose .ans-q + .ans-a,
+.chapter-prose .qa-answer,
+.chapter-prose .quiz-answer,
+.chapter-prose .rationale,
+.chapter-prose .exam-rationale,
+.chapter-prose .q-explanation,
+.chapter-prose .explanation,
+.chapter-prose .why,
+.chapter-prose .why-wrong,
+.chapter-prose .reveal,
+.chapter-prose .akey,
+.chapter-prose .flash > .ans {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--blk-line);
+  border-left: 2px solid hsl(var(--success) / 0.55);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-sunken);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+/* Rationale nested inside an already-revealed answer: no second plate. */
+.chapter-prose div.answer .why-wrong,
+.chapter-prose div.answer .rationale,
+.chapter-prose div.ans .why-wrong {
+  border-left-color: hsl(var(--destructive) / 0.45);
+  background: hsl(var(--muted) / 0.6);
+}
+.chapter-prose div.ans,
+.chapter-prose div.answer {
+  color: hsl(var(--foreground));
+  font-weight: 400;
+}
+.chapter-prose .answer > :first-child,
+.chapter-prose .ans > :first-child,
+.chapter-prose .rationale > :first-child,
+.chapter-prose .qa-answer > :first-child {
+  margin-top: 0;
+}
+.chapter-prose .answer > :last-child,
+.chapter-prose .ans > :last-child,
+.chapter-prose .rationale > :last-child,
+.chapter-prose .qa-answer > :last-child {
+  margin-bottom: 0;
+}
+
+/* Inline post-option commentary ("— coordinates clients, doesn't connect"). */
+.chapter-prose .explain,
+.chapter-prose .accuracy-note {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+}
+
+/* Answer-key table: Q / letter / rationale on one dense row. */
+.chapter-prose .ans-row {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  gap: 0.5rem 0.625rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--blk-line);
+  font-size: 0.875rem;
+}
+.chapter-prose .ans-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.chapter-prose .akey .ans-a {
+  background: hsl(var(--success) / 0.14);
+  color: hsl(var(--success));
+}
+
+/* Quick-reference / recall strips. */
+.chapter-prose .recall,
+.chapter-prose .quick-recall,
+.chapter-prose .self-check,
+.chapter-prose .exit-check {
+  border-left-width: 2px;
+  border-left-color: hsl(var(--info));
+  background: hsl(var(--info) / 0.06);
+  font-size: 0.875rem;
+}
+
+.chapter-prose .qref-grid {
+  display: grid;
+  gap: 0.625rem;
+  margin: 1.5rem 0;
+}
+.chapter-prose .qref-item {
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+}
+.chapter-prose .qref-def {
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+@media (min-width: 640px) {
+  .chapter-prose .qref-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* `.exam` / `.qa` as callout modifiers — mirrors chapter-prose.css's mapping. */
+.chapter-prose .callout.exam,
+.chapter-prose .box.exam {
+  border-left-color: hsl(var(--accent));
+  background: hsl(var(--accent) / 0.06);
+}
+.chapter-prose .callout.qa,
+.chapter-prose .box.qa {
+  border-left-color: hsl(var(--info));
+  background: hsl(var(--info) / 0.06);
+}
+.chapter-prose .block-label.exam,
+.chapter-prose .exam-label {
+  color: hsl(var(--accent));
+}
+
+/* Polls / self-scoring widgets appear as plain inline counters. */
+.chapter-prose .score,
+.chapter-prose .vote {
+  display: inline-block;
+  padding: 0.0625rem 0.4375rem;
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-fill);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-prose .hyp {
+  display: inline-block;
+  margin-left: 0.375rem;
+  padding: 0.0625rem 0.4375rem;
+  border: 1px dashed hsl(var(--warning) / 0.6);
+  border-radius: 999px;
+  color: hsl(var(--warning));
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------------
+   Flow, pipeline & sequence diagrams
+   ---------------------------------------------------------------------------
+   Target: technical figures. Mono node labels, hairline connectors, at most one
+   accent node. Wrapping (not scrolling, not rotating) is the mobile strategy —
+   the source's arrow glyphs are a mix of "→" and "▼" inside the *same* class,
+   so rotating them would point half of them the wrong way.
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .flow-row,
+.chapter-prose .flowrow,
+.chapter-prose .flowchart,
+.chapter-prose .connection-flow,
+.chapter-prose .connections,
+.chapter-prose .cross-connections,
+.chapter-prose .pipeline,
+.chapter-prose .flow-branch,
+.chapter-prose .sub-row,
+.chapter-prose .arch-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--blk-gap);
+}
+
+/* Vertical flows: node / arrow / branch stacked down the page. */
+.chapter-prose .flow,
+.chapter-prose .flow-diagram,
+.chapter-prose .flow-col,
+.chapter-prose .arrow-col,
+.chapter-prose .branch-col,
+.chapter-prose .decision-tree,
+.chapter-prose .tree,
+.chapter-prose .arch,
+.chapter-prose .seq,
+.chapter-prose .layer-stack,
+.chapter-prose .layers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--blk-gap);
+}
+.chapter-prose .flow,
+.chapter-prose .flow-diagram,
+.chapter-prose .decision-tree,
+.chapter-prose .tree,
+.chapter-prose .arch {
+  align-items: stretch;
+}
+
+/* Nodes. One calm hairline box; `node-good` / `node-bad` / `start` / `esc`
+   carry the only hue. */
+.chapter-prose .flow-node,
+.chapter-prose .flow-step,
+.chapter-prose .flow-leaf,
+.chapter-prose .node,
+.chapter-prose .node-rect,
+.chapter-prose .box-node,
+.chapter-prose .dt-node,
+.chapter-prose .decision-node,
+.chapter-prose .decision-box,
+.chapter-prose .lifecycle-node,
+.chapter-prose .map-node,
+.chapter-prose .agent-box,
+.chapter-prose .connection-node,
+.chapter-prose .fbox,
+.chapter-prose .suite-tool,
+.chapter-prose .flowchart .step,
+.chapter-prose .lifecycle-strip .step,
+.chapter-prose .tree .step {
+  display: block;
+  margin: 0;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--blk-line-strong);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.chapter-prose .flowchart .step,
+.chapter-prose .tree .step,
+.chapter-prose .lifecycle-strip .step {
+  /* Overrides chapter-prose.css's generic `.step` flex card. */
+  display: block;
+  gap: 0;
+}
+.chapter-prose .lifecycle-strip .step,
+.chapter-prose .tree .step {
+  text-align: left;
+}
+.chapter-prose .lifecycle-strip .step b,
+.chapter-prose .agent-box .agent-sub,
+.chapter-prose .node .t,
+.chapter-prose .node .d,
+.chapter-prose .node .nlabel,
+.chapter-prose .node .ndesc,
+.chapter-prose .suite-tool .name,
+.chapter-prose .suite-tool .purpose,
+.chapter-prose .flow-node .sub,
+.chapter-prose .layer .tag,
+.chapter-prose .layer .body,
+.chapter-prose .stage-name,
+.chapter-prose .stage-desc,
+.chapter-prose .seq-step .t {
+  display: block;
+}
+.chapter-prose .lifecycle-strip .step b,
+.chapter-prose .node .t,
+.chapter-prose .node .nlabel,
+.chapter-prose .suite-tool .name {
+  margin-bottom: 0.1875rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.chapter-prose .agent-box .agent-sub,
+.chapter-prose .node .d,
+.chapter-prose .node .ndesc,
+.chapter-prose .suite-tool .purpose,
+.chapter-prose .flow-node .sub,
+.chapter-prose .stage-desc,
+.chapter-prose .lane-note {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+/* The one accent node per figure: the question/decision the figure turns on. */
+.chapter-prose .flow-q,
+.chapter-prose .dt-q,
+.chapter-prose .flow-node.decision,
+.chapter-prose .node.decision,
+.chapter-prose .decision-diamond,
+.chapter-prose .dt-diamond,
+.chapter-prose .gate,
+.chapter-prose .cond,
+.chapter-prose .node.brain,
+.chapter-prose .brain,
+.chapter-prose .agent-box.b-coord {
+  border-color: hsl(var(--accent) / 0.55);
+  background: hsl(var(--accent) / 0.07);
+  font-weight: 600;
+}
+.chapter-prose .node.start,
+.chapter-prose .start {
+  border-color: var(--blk-line-strong);
+  background: var(--blk-fill);
+  font-weight: 600;
+}
+
+/* Outcome nodes. */
+.chapter-prose .node-good,
+.chapter-prose .node.ok,
+.chapter-prose .dt-yes,
+.chapter-prose .end-yes,
+.chapter-prose .node.safe,
+.chapter-prose .node.allow,
+.chapter-prose .node.approve,
+.chapter-prose .node.resolved {
+  border-color: hsl(var(--success) / 0.5);
+  background: hsl(var(--success) / 0.08);
+}
+.chapter-prose .node-bad,
+.chapter-prose .dt-no,
+.chapter-prose .end-no,
+.chapter-prose .node.err,
+.chapter-prose .node.fail,
+.chapter-prose .node.deny,
+.chapter-prose .branch-no {
+  border-color: hsl(var(--destructive) / 0.45);
+  background: hsl(var(--destructive) / 0.07);
+}
+.chapter-prose .node.esc,
+.chapter-prose .node.human,
+.chapter-prose .node.rvw,
+.chapter-prose .esc {
+  border-color: hsl(var(--warning) / 0.5);
+  background: hsl(var(--warning) / 0.07);
+}
+
+/* Connectors. */
+.chapter-prose .flow-arrow,
+.chapter-prose .flow-arrow-down,
+.chapter-prose .flow-arrow-primary,
+.chapter-prose .arrow,
+.chapter-prose .arrow-down,
+.chapter-prose .arr,
+.chapter-prose .farr,
+.chapter-prose .parrow,
+.chapter-prose .dep-arrow,
+.chapter-prose .connection-arrow,
+.chapter-prose .arrow-col,
+.chapter-prose .corner,
+.chapter-prose .up,
+.chapter-prose .down {
+  flex: 0 0 auto;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.chapter-prose .flow-arrow-down,
+.chapter-prose .arrow-down,
+.chapter-prose .arrow-col,
+.chapter-prose .dep-arrow {
+  display: block;
+  width: 100%;
+}
+.chapter-prose .flow-arrow-primary {
+  color: hsl(var(--accent));
+}
+.chapter-prose .arrow-label,
+.chapter-prose .loop-label {
+  display: inline-block;
+  padding: 0 0.375rem;
+  text-transform: none;
+}
+
+/* Branch containers: one column on a phone, side-by-side from 640px. */
+.chapter-prose .branch,
+.chapter-prose .branches,
+.chapter-prose .dt-row,
+.chapter-prose .flow-branch,
+.chapter-prose .paths,
+.chapter-prose .decision-grid,
+.chapter-prose .tools-grid,
+.chapter-prose .mindmap-branches,
+.chapter-prose .suite-overview,
+.chapter-prose .sub-row {
+  display: grid;
+  gap: var(--blk-gap);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 640px) {
+  .chapter-prose .branch,
+  .chapter-prose .branches,
+  .chapter-prose .dt-row,
+  .chapter-prose .flow-branch,
+  .chapter-prose .paths,
+  .chapter-prose .decision-grid,
+  .chapter-prose .sub-row {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-columns: none;
+    align-items: start;
+  }
+  .chapter-prose .tools-grid,
+  .chapter-prose .mindmap-branches,
+  .chapter-prose .suite-overview {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  }
+}
+.chapter-prose .branch-col,
+.chapter-prose .flow-col,
+.chapter-prose .vs-col,
+.chapter-prose .col-yes,
+.chapter-prose .col-no {
+  min-width: 0;
+}
+
+/* Individual reasoning paths in a self-consistency / branch figure. */
+.chapter-prose .paths > .path,
+.chapter-prose .col > .path {
+  padding: 0.3125rem 0.625rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+/* Branch labels — yes/no chips above the column they govern. */
+.chapter-prose .lbl-yes,
+.chapter-prose .lbl-no,
+.chapter-prose .lbl-maybe,
+.chapter-prose .lbl-input,
+.chapter-prose .lbl-rsn,
+.chapter-prose .yes-label,
+.chapter-prose .no-label,
+.chapter-prose .branch-label,
+.chapter-prose .dt-branch-label,
+.chapter-prose .lbl-chip {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  padding: 0.0625rem 0.4375rem;
+  border: 1px solid var(--blk-line);
+  border-radius: 999px;
+  background: var(--blk-fill);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.chapter-prose .lbl-yes,
+.chapter-prose .yes-label,
+.chapter-prose .yes {
+  border-color: hsl(var(--success) / 0.45);
+  color: hsl(var(--success));
+}
+.chapter-prose .lbl-no,
+.chapter-prose .no-label,
+.chapter-prose .no {
+  border-color: hsl(var(--destructive) / 0.4);
+  color: hsl(var(--destructive));
+}
+.chapter-prose .lbl-maybe {
+  border-color: hsl(var(--warning) / 0.45);
+  color: hsl(var(--warning));
+}
+/* `.yes` / `.no` also appear as bare inline words in prose — keep those flat. */
+.chapter-prose p .yes,
+.chapter-prose p .no,
+.chapter-prose li .yes,
+.chapter-prose li .no {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* --- Sequence diagrams --------------------------------------------------- */
+
+.chapter-prose .lane-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--blk-line);
+}
+.chapter-prose .lane-head > * {
+  padding: 0.0625rem 0.4375rem;
+  border-radius: 999px;
+  background: var(--blk-fill);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .seq-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.625rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--blk-line);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.chapter-prose .seq-step:first-of-type {
+  border-top: 0;
+}
+.chapter-prose .seq-desc,
+.chapter-prose .seq-body {
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .seq-step .meta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* --- Stages / lifecycle / layers ---------------------------------------- */
+
+.chapter-prose .lifecycle,
+.chapter-prose .lifecycle-strip {
+  display: grid;
+  gap: var(--blk-gap);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 640px) {
+  .chapter-prose .lifecycle,
+  .chapter-prose .lifecycle-strip {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+.chapter-prose .stage {
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+}
+.chapter-prose .stage-name {
+  margin: 0.375rem 0 0.125rem;
+}
+
+.chapter-prose .layer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.25rem 0.875rem;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.chapter-prose .layer > .tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--accent));
+}
+@media (min-width: 640px) {
+  .chapter-prose .layer {
+    grid-template-columns: 7rem minmax(0, 1fr);
+  }
+}
+
+/* --- Workflows ----------------------------------------------------------- */
+
+.chapter-prose .wf-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--blk-line);
+  color: hsl(var(--accent));
+}
+.chapter-prose .wf-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--blk-line);
+}
+.chapter-prose .wf-step:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.chapter-prose .wf-step-body {
+  min-width: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.chapter-prose .wf-step-body > p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Semantic pills used inside diagrams -------------------------------- */
+
+.chapter-prose .b-coord,
+.chapter-prose .b-doc,
+.chapter-prose .b-err,
+.chapter-prose .b-high,
+.chapter-prose .b-low,
+.chapter-prose .b-med,
+.chapter-prose .b-neutral,
+.chapter-prose .b-ok,
+.chapter-prose .b-out,
+.chapter-prose .b-synth,
+.chapter-prose .b-user,
+.chapter-prose .b-web {
+  border-color: var(--blk-line-strong);
+}
+.chapter-prose .badge.b-ok,
+.chapter-prose .b-ok {
+  background: hsl(var(--success) / 0.14);
+  color: hsl(var(--success));
+}
+.chapter-prose .badge.b-err,
+.chapter-prose .b-err {
+  background: hsl(var(--destructive) / 0.12);
+  color: hsl(var(--destructive));
+}
+.chapter-prose .badge.b-high,
+.chapter-prose .b-high {
+  background: hsl(var(--accent) / 0.14);
+  color: hsl(var(--accent));
+}
+.chapter-prose .badge.b-med,
+.chapter-prose .b-med {
+  background: hsl(var(--warning) / 0.14);
+  color: hsl(var(--warning));
+}
+.chapter-prose .badge.b-low,
+.chapter-prose .b-low,
+.chapter-prose .badge.b-neutral,
+.chapter-prose .b-neutral {
+  background: var(--blk-fill);
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .agent-box.b-user,
+.chapter-prose .agent-box.b-out {
+  background: var(--blk-fill);
+}
+.chapter-prose .agent-box.b-web,
+.chapter-prose .agent-box.b-doc {
+  background: var(--blk-surface);
+}
+.chapter-prose .agent-box.b-synth {
+  border-color: hsl(var(--foundation) / 0.5);
+  background: hsl(var(--foundation) / 0.07);
+}
+
+/* SVG figure labels: typography only. The source sets `fill` per element and
+   CSS beats presentation attributes, so setting a fill here would flatten
+   every hand-coloured diagram in the notes. */
+.chapter-prose .svg-label,
+.chapter-prose .svg-sub,
+.chapter-prose .map-label,
+.chapter-prose .map-sublabel,
+.chapter-prose .edge-label,
+.chapter-prose .coord {
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.chapter-prose .svg-sub,
+.chapter-prose .map-sublabel {
+  font-size: 10px;
+}
+.chapter-prose .map-node,
+.chapter-prose .node-rect {
+  rx: 6px;
+}
+/* Only reaches edges the source left uncoloured (inline `style` wins elsewhere). */
+.chapter-prose .svg-edge {
+  stroke: hsl(var(--border-strong));
+  fill: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Timelines, maps & mindmaps
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .tl-track {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  border-radius: var(--blk-radius-sm);
+}
+.chapter-prose .tl-seg,
+.chapter-prose .strip-ish,
+.chapter-prose .part {
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  background: var(--blk-fill);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.chapter-prose .tl-seg:first-child {
+  background: hsl(var(--accent) / 0.12);
+}
+@media (min-width: 640px) {
+  .chapter-prose .tl-track {
+    flex-direction: row;
+  }
+  .chapter-prose .tl-seg {
+    flex: 1 1 0;
+  }
+}
+
+.chapter-prose .mindmap-root {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--accent) / 0.5);
+  border-radius: var(--blk-radius-sm);
+  background: hsl(var(--accent) / 0.07);
+  font-weight: 600;
+  text-align: center;
+}
+.chapter-prose .mindmap-branch {
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+}
+.chapter-prose .branch-title {
+  display: block;
+  margin: 0.375rem 0 0.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.chapter-prose .branch-sub {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---------------------------------------------------------------------------
+   Comparisons, matrices & charts
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .compare,
+.chapter-prose .comparison,
+.chapter-prose .compare-grid,
+.chapter-prose .ba,
+.chapter-prose .ba-grid,
+.chapter-prose .strat-grid,
+.chapter-prose .recap-grid,
+.chapter-prose .legend-grid,
+.chapter-prose .weight-grid,
+.chapter-prose .usecases {
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 640px) {
+  .chapter-prose .compare,
+  .chapter-prose .comparison,
+  .chapter-prose .compare-grid,
+  .chapter-prose .ba {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .chapter-prose .ba-grid,
+  .chapter-prose .strat-grid,
+  .chapter-prose .recap-grid,
+  .chapter-prose .legend-grid,
+  .chapter-prose .usecases {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .chapter-prose .weight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+.chapter-prose .compare-card,
+.chapter-prose .recap-card,
+.chapter-prose .strat-card,
+.chapter-prose .ba-card,
+.chapter-prose .adr-card,
+.chapter-prose .case,
+.chapter-prose .case-study,
+.chapter-prose .scenario,
+.chapter-prose .scn,
+.chapter-prose .walk,
+.chapter-prose .worked,
+.chapter-prose .doc,
+.chapter-prose .legend-item,
+.chapter-prose .cheat-item,
+.chapter-prose .vs-col,
+.chapter-prose .ba > .cell,
+.chapter-prose .lab,
+.chapter-prose .hands-on,
+.chapter-prose .practice {
+  min-width: 0;
+  padding: 1rem 1.125rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius);
+  background: var(--blk-surface);
+}
+.chapter-prose .compare-card > h4,
+.chapter-prose .recap-card > h4,
+.chapter-prose .strat-card > h4,
+.chapter-prose .ba-card > h4,
+.chapter-prose .adr-card > h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+}
+.chapter-prose .recap-card > p:last-child,
+.chapter-prose .strat-card > p:last-child,
+.chapter-prose .compare-card > ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Before / after: state the direction of travel with hue, not decoration. */
+.chapter-prose .cell.before,
+.chapter-prose .before,
+.chapter-prose .con,
+.chapter-prose .bad {
+  border-color: hsl(var(--destructive) / 0.35);
+}
+.chapter-prose .cell.after,
+.chapter-prose .after,
+.chapter-prose .pro,
+.chapter-prose .good {
+  border-color: hsl(var(--success) / 0.4);
+}
+.chapter-prose .ba > .cell > pre,
+.chapter-prose .vs-col > pre {
+  margin-top: 0.5rem;
+  border-radius: var(--blk-radius-sm);
+}
+.chapter-prose .ba > .cell > .tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Versus layout: two panels with a literal "vs" divider between them. */
+.chapter-prose .vs-box {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+}
+.chapter-prose .vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .vs-divider::before,
+.chapter-prose .vs-divider::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--blk-line);
+}
+@media (min-width: 768px) {
+  .chapter-prose .vs-box {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+  .chapter-prose .vs-divider {
+    flex-direction: column;
+    width: 2.5rem;
+  }
+  .chapter-prose .vs-divider::before,
+  .chapter-prose .vs-divider::after {
+    width: 1px;
+    height: auto;
+  }
+}
+
+/* --- Bar charts: the app's own ProgressBar language --------------------- */
+
+.chapter-prose .bar-row {
+  display: grid;
+  gap: 0.25rem 0.75rem;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  padding: 0.3125rem 0;
+}
+.chapter-prose .bar-label,
+.chapter-prose .bench-row > .metric {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .bar-track,
+.chapter-prose .progress,
+.chapter-prose .bar {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  height: 1.125rem;
+  border-radius: 999px;
+  background: var(--blk-fill);
+}
+.chapter-prose .bar-fill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding-right: 0.5rem;
+  border-radius: 999px;
+  background: hsl(var(--accent));
+  color: var(--blk-ink-on-dark);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.chapter-prose .bar-fill.before {
+  background: hsl(var(--muted-foreground) / 0.75);
+}
+.chapter-prose .bar-fill.after {
+  background: hsl(var(--success));
+}
+.chapter-prose .bench-row {
+  display: grid;
+  gap: 0.375rem 0.875rem;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0.625rem 0;
+  border-top: 1px solid var(--blk-line);
+}
+.chapter-prose .bench-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.chapter-prose .bench-bars {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+@media (min-width: 640px) {
+  .chapter-prose .bar-row {
+    grid-template-columns: minmax(7rem, 14rem) minmax(0, 1fr);
+  }
+  .chapter-prose .bench-row {
+    grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr);
+    align-items: center;
+  }
+}
+
+/* Segmented allocation bar (`.bar` > `.seg`): widths come from inline styles. */
+.chapter-prose .bar > .seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--blk-fill);
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.chapter-prose .bar {
+  display: flex;
+  height: 1.625rem;
+  border-radius: var(--blk-radius-sm);
+}
+
+.chapter-prose .legend,
+.chapter-prose .bench-legend,
+.chapter-prose .plot-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 0.875rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .legend-grid .legend-item {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+/* Exam-weight grid: a dot + a label, dense. */
+.chapter-prose .weight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.625rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-surface);
+  font-size: 0.8125rem;
+}
+.chapter-prose .weight-dot,
+.chapter-prose .dot-high,
+.chapter-prose .dot-med {
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+.chapter-prose .weight-dot.dot-high,
+.chapter-prose .dot-high {
+  background: hsl(var(--accent));
+}
+.chapter-prose .weight-dot.dot-med,
+.chapter-prose .dot-med {
+  background: hsl(var(--warning));
+}
+
+/* Heat matrix: mono tabular numbers, centred. */
+.chapter-prose table.heat td,
+.chapter-prose table.heat th {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-prose table.heat td:first-child,
+.chapter-prose table.heat th:first-child {
+  text-align: left;
+  font-family: var(--font-sans);
+}
+
+/* Matrix / scoring tables. */
+.chapter-prose .cell-fast,
+.chapter-prose .cell-bal,
+.chapter-prose .cell-max,
+.chapter-prose .leaf-fast,
+.chapter-prose .leaf-bal,
+.chapter-prose .leaf-max {
+  font-weight: 600;
+}
+.chapter-prose .leaf-fast {
+  border-color: hsl(var(--success) / 0.45);
+}
+.chapter-prose .leaf-bal {
+  border-color: hsl(var(--accent) / 0.5);
+}
+.chapter-prose .leaf-max {
+  border-color: hsl(var(--professional) / 0.5);
+}
+.chapter-prose .rate,
+.chapter-prose .frac,
+.chapter-prose .measure,
+.chapter-prose .efficiency,
+.chapter-prose .cost {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* A real stacked fraction for the metric formulas. */
+.chapter-prose .frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.25em;
+  vertical-align: middle;
+  line-height: 1.35;
+  text-align: center;
+  white-space: normal;
+}
+.chapter-prose .frac > .num {
+  padding: 0 0.3em;
+  border-bottom: 1px solid currentColor;
+}
+.chapter-prose .frac > .den {
+  padding: 0 0.3em;
+}
+
+/* Severity / magnitude modifiers. These ride on the source's own `.pill`,
+   `.priority` and `.tag-*` shapes, so they contribute colour only. */
+.chapter-prose .hi,
+.chapter-prose .high,
+.chapter-prose .s-hi,
+.chapter-prose .w-high,
+.chapter-prose .hot,
+.chapter-prose .hotspot {
+  color: hsl(var(--accent));
+  font-weight: 600;
+}
+.chapter-prose .med,
+.chapter-prose .medium,
+.chapter-prose .s-mid,
+.chapter-prose .w-med,
+.chapter-prose .slow {
+  color: hsl(var(--warning));
+  font-weight: 600;
+}
+.chapter-prose .lo,
+.chapter-prose .low,
+.chapter-prose .s-lo,
+.chapter-prose .dim {
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .fast {
+  color: hsl(var(--success));
+  font-weight: 600;
+}
+.chapter-prose .hotspot {
+  display: inline-block;
+  padding: 0.0625rem 0.4375rem;
+  border: 1px solid hsl(var(--accent) / 0.4);
+  border-radius: 999px;
+  background: hsl(var(--accent) / 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------------
+   Mnemonics, cheat sheets & recall
+   ---------------------------------------------------------------------------
+   Target: dense mono key / plain value rows.
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .mnemonic,
+.chapter-prose .mnemonic-box,
+.chapter-prose .mnem,
+.chapter-prose .cheat,
+.chapter-prose .cheat-sheet,
+.chapter-prose .recap,
+.chapter-prose .anchors,
+.chapter-prose .slides {
+  margin: 1.75rem 0;
+  padding: 1.125rem 1.25rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius);
+  background: var(--blk-sunken);
+}
+.chapter-prose .mnemonic,
+.chapter-prose .mnemonic-box,
+.chapter-prose .mnem {
+  border-left-width: 2px;
+  border-left-color: hsl(var(--accent));
+}
+.chapter-prose .mnemonic-word,
+.chapter-prose .mnemonic-text {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: hsl(var(--accent));
+}
+.chapter-prose .mnemonic-breakdown,
+.chapter-prose .mnemonic-decode {
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+.chapter-prose .mnemonic-decode {
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .mnemonic-letter {
+  margin-right: 0.375rem;
+}
+
+/* Key/value rows. `.cheat-grid` / `.cheat-card` layout belongs to
+   chapter-prose.css; only the internals are styled here. */
+.chapter-prose .cheat-row,
+.chapter-prose .cheat-item {
+  display: grid;
+  gap: 0.125rem 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* `.qa` is a *flow* block (Q: … <br> A: …), never a grid — grid would turn each
+   bare text run between the labels into its own anonymous grid item. */
+.chapter-prose div.qa:not(.box):not(.callout) {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-sunken);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+.chapter-prose .cheat-row {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--blk-line);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.chapter-prose .cheat-row:last-of-type {
+  border-bottom: 0;
+}
+.chapter-prose .cheat-def,
+.chapter-prose .cheat-val,
+.chapter-prose .cheat-value {
+  min-width: 0;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .cheat-item .cheat-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: hsl(var(--accent));
+}
+.chapter-prose .cheat-item .cheat-value {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+}
+@media (min-width: 640px) {
+  .chapter-prose .cheat-row {
+    grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr);
+  }
+}
+
+/* Flashcards: question then answer, always revealed (the source's <details>
+   wrappers are stripped during sanitization). */
+.chapter-prose .flash > .q {
+  margin-top: 0;
+}
+.chapter-prose .flash > .ans {
+  margin-bottom: 0;
+}
+
+/* Glossary / mnemonic letter dividers. */
+.chapter-prose .letter,
+.chapter-prose .akey > .letter {
+  margin: 1.5rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--blk-line);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Numbered "top 10 before the exam" lists read as a ranked stack. */
+.chapter-prose ol.top10 {
+  counter-reset: blk-top;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+.chapter-prose ol.top10 > li {
+  counter-increment: blk-top;
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr);
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0.625rem 0;
+  border-top: 1px solid var(--blk-line);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.chapter-prose ol.top10 > li:first-child {
+  border-top: 0;
+}
+.chapter-prose ol.top10 > li::before {
+  content: counter(blk-top);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--accent));
+}
+
+.chapter-prose .anchor,
+.chapter-prose .akey > .anchor,
+.chapter-prose .slide {
+  display: block;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--blk-line);
+  font-size: 0.875rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Scenarios, cases, templates & governance blocks
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .case,
+.chapter-prose .case-study,
+.chapter-prose .scenario,
+.chapter-prose .scn,
+.chapter-prose .walk,
+.chapter-prose .worked,
+.chapter-prose .doc,
+.chapter-prose .framing,
+.chapter-prose .lab,
+.chapter-prose .hands-on,
+.chapter-prose .practice {
+  margin: 1.75rem 0;
+}
+.chapter-prose .case > h3:first-child,
+.chapter-prose .case-study > h3:first-child,
+.chapter-prose .scenario > h3:first-child,
+.chapter-prose .walk > h3:first-child,
+.chapter-prose .worked > h3:first-child {
+  margin-top: 0;
+}
+
+/* `.scenario` / `.mcq` also appear as `<span class="tag scenario">` markers. */
+.chapter-prose span.scenario,
+.chapter-prose span.mcq,
+.chapter-prose span.recall,
+.chapter-prose span.case {
+  display: inline-block;
+  margin: 0;
+  padding: 0.0625rem 0.4375rem;
+  border: 1px solid var(--blk-line);
+  border-left-width: 1px;
+  border-radius: 999px;
+  background: var(--blk-fill);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ADR cards: status pill + label/body pairs. */
+.chapter-prose .adr-card > .status {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.0625rem 0.4375rem;
+  border-radius: 999px;
+  background: hsl(var(--success) / 0.14);
+  color: hsl(var(--success));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+.chapter-prose .adr-card > .field-label,
+.chapter-prose .doc > .field-label {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose .adr-card > .field-label + p {
+  margin-top: 0.25rem;
+}
+
+/* Pre-formatted document templates: the source ships ASCII layout that must
+   not reflow. */
+.chapter-prose .brief-template,
+.chapter-prose .proposal-template {
+  margin: 1.5rem 0;
+  padding: 1rem 1.125rem;
+  overflow-x: auto;
+  border: 1px solid var(--blk-line);
+  border-radius: var(--blk-radius);
+  background: var(--blk-sunken);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.65;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.chapter-prose .business-case-quote {
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 2px solid hsl(var(--accent));
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+.chapter-prose .principle-banner,
+.chapter-prose .principles {
+  margin: 1.75rem 0;
+  padding: 1rem 1.125rem;
+  border: 1px solid hsl(var(--accent) / 0.35);
+  border-left-width: 2px;
+  border-left-color: hsl(var(--accent));
+  border-radius: var(--blk-radius);
+  background: hsl(var(--accent) / 0.05);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+/* Risk / mitigation / rollback ledger rows. */
+.chapter-prose .risk,
+.chapter-prose .mit,
+.chapter-prose .mitigations,
+.chapter-prose .rollback,
+.chapter-prose .outcome,
+.chapter-prose .consequences,
+.chapter-prose .escalation,
+.chapter-prose .resolved,
+.chapter-prose .govern,
+.chapter-prose .manage,
+.chapter-prose .discovery,
+.chapter-prose .productivity {
+  min-width: 0;
+}
+.chapter-prose div.risk,
+.chapter-prose div.mit,
+.chapter-prose div.mitigations,
+.chapter-prose div.rollback,
+.chapter-prose div.outcome,
+.chapter-prose div.consequences,
+.chapter-prose div.escalation,
+.chapter-prose div.resolved {
+  margin: 1rem 0;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--blk-line);
+  border-left-width: 2px;
+  border-radius: var(--blk-radius-sm);
+  background: var(--blk-sunken);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.chapter-prose div.risk,
+.chapter-prose div.escalation,
+.chapter-prose div.consequences {
+  border-left-color: hsl(var(--warning));
+}
+.chapter-prose div.mit,
+.chapter-prose div.mitigations,
+.chapter-prose div.rollback,
+.chapter-prose div.resolved,
+.chapter-prose div.outcome {
+  border-left-color: hsl(var(--success));
+}
+
+/* Guardrail verdict words wherever they appear inline. */
+.chapter-prose .safe,
+.chapter-prose .allow,
+.chapter-prose .approve {
+  color: hsl(var(--success));
+  font-weight: 600;
+}
+.chapter-prose .err,
+.chapter-prose .fail,
+.chapter-prose .deny {
+  color: hsl(var(--destructive));
+  font-weight: 600;
+}
+.chapter-prose .rvw,
+.chapter-prose .human {
+  color: hsl(var(--warning));
+  font-weight: 600;
+}
+/* …but never repaint a whole block just because it carries the word. */
+.chapter-prose div.safe,
+.chapter-prose div.err,
+.chapter-prose div.fail,
+.chapter-prose div.human {
+  font-weight: inherit;
+}
+
+/* ---------------------------------------------------------------------------
+   Content-authored inline colors
+   ---------------------------------------------------------------------------
+   A handful of source elements carry inline `style` backgrounds. Inline styles
+   beat this stylesheet, so the only options are (a) accept them and fix the
+   ink on top, or (b) override with `!important` where the hard-coded value
+   actively breaks a theme. Both are used, deliberately and narrowly.
+   --------------------------------------------------------------------------- */
+
+/* (a) Saturated dark fills authored inline — force light ink. */
+.chapter-prose .flow-node[style],
+.chapter-prose .bar > .seg[style],
+.chapter-prose .bar-fill[style],
+.chapter-prose .connection-node[style] {
+  color: var(--blk-ink-on-dark);
+}
+.chapter-prose .flow-node[style] {
+  border-color: transparent;
+}
+
+/* (a) Pale tints authored inline (heat-map cells) — force dark ink, otherwise
+   dark mode paints near-white text onto a pastel swatch. */
+.chapter-prose table.heat td[style] {
+  color: var(--blk-ink-on-tint);
+}
+
+/* (b) Five `.exam-panel` instances hard-code a white page background and a
+   light border; that is unreadable in dark mode. */
+.chapter-prose .exam-panel[style] {
+  background: hsl(var(--accent) / 0.05) !important;
+  border-color: var(--blk-line) !important;
+  border-left-color: hsl(var(--accent)) !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Narrow-viewport safety net
+   ---------------------------------------------------------------------------
+   Nothing above may push past the viewport at 360px. Diagram nodes get a
+   sane floor, long mono strings wrap, and wide tables scroll rather than
+   stretch their container.
+   --------------------------------------------------------------------------- */
+
+.chapter-prose .flow-node,
+.chapter-prose .flow-step,
+.chapter-prose .flow-leaf,
+.chapter-prose .node,
+.chapter-prose .dt-node,
+.chapter-prose .agent-box,
+.chapter-prose .fbox,
+.chapter-prose .suite-tool,
+.chapter-prose .tl-seg,
+.chapter-prose .connection-node {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.chapter-prose .flow-row > *,
+.chapter-prose .flowrow > *,
+.chapter-prose .flowchart > *,
+.chapter-prose .connection-flow > * {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.chapter-prose .exam-panel,
+.chapter-prose .exam-box,
+.chapter-prose .question-block,
+.chapter-prose .qcard,
+.chapter-prose .cheat-sheet,
+.chapter-prose .brief-template {
+  max-width: 100%;
+}
+.chapter-prose .exam-value code,
+.chapter-prose .cheat-def code,
+.chapter-prose .qref-def code,
+.chapter-prose .exam-option code {
+  overflow-wrap: break-word;
+}

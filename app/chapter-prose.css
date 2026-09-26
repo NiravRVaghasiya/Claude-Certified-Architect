@@ -1,0 +1,1387 @@
+/* ===========================================================================
+   Chapter prose — base layer
+   ---------------------------------------------------------------------------
+   The 70 chapters of study notes are sanitized at build time (scripts/ingest.ts)
+   and injected with dangerouslySetInnerHTML, so the markup cannot carry Tailwind
+   classes. This stylesheet maps the source's OWN class vocabulary onto the
+   design tokens in globals.css: headings, leads, callouts, generic cards/grids,
+   lists, tables, code + code tokens, badges/tags and inline utilities.
+
+   Rich structures (exam/quiz panels, flow & decision diagrams, timelines,
+   mnemonics, cheat sheets, comparison matrices, charts) live in
+   chapter-blocks.css and are deliberately NOT styled here.
+
+   Rules:
+   - Plain CSS only (no @apply / @layer / @tailwind). Imported after globals.css
+     so `.chapter-prose h2` outranks the typography plugin's `:where()`-wrapped
+     `.prose h2` defaults.
+   - Every selector is scoped under `.chapter-prose`.
+   - Colors come only from the HSL custom properties, so light and dark both
+     work. No hex, no rgb().
+   - Element-qualified selectors (div.box, span.lbl, td.mono…) are used wherever
+     the source reuses one class name for two different jobs — several classes
+     appear both as a text label and as an SVG/ASCII diagram part.
+   =========================================================================== */
+
+.chapter-prose {
+  /* Local aliases so the recurring hairline/surface/radius trio stays legible. */
+  --cp-line: hsl(var(--border));
+  --cp-line-strong: hsl(var(--border-strong));
+  --cp-surface: hsl(var(--card));
+  --cp-sunken: hsl(var(--muted-subtle));
+  --cp-fill: hsl(var(--muted));
+  --cp-radius: calc(var(--radius) - 2px);
+  --cp-radius-lg: var(--radius);
+  --cp-gap: 1.5rem;
+
+  font-size: 0.9375rem;
+  line-height: 1.72;
+}
+
+/* --- Root rhythm ---------------------------------------------------------- */
+/* A single spacing baseline for the top level; every block element below sets
+   its own margins so nesting inside the source's transparent wrappers works. */
+.chapter-prose > * + * {
+  margin-top: 1.25rem;
+}
+.chapter-prose > :first-child,
+.chapter-prose > :first-child > :first-child {
+  margin-top: 0;
+}
+.chapter-prose > :last-child {
+  margin-bottom: 0;
+}
+
+/* Comfortable measure for running text; tables, code and grids stay full
+   width. Scoped to the transparent wrappers the source nests content in. */
+.chapter-prose > :is(p, ul, ol),
+.chapter-prose
+  :is(.wrap, .wrapper, .container, .layout, .section, .section-body, .section-content, .content-block)
+  > :is(p, ul, ol) {
+  max-width: 74ch;
+}
+
+/* ===========================================================================
+   1. Headings & section scaffolding
+   =========================================================================== */
+.chapter-prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cp-line);
+  color: hsl(var(--foreground));
+  font-size: 1.375rem;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.018em;
+}
+.chapter-prose h3 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.625rem;
+  color: hsl(var(--foreground));
+  font-size: 1.0625rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+}
+.chapter-prose h4 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+.chapter-prose :is(h5, h6) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.375rem;
+  color: hsl(var(--foreground));
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* h2/h3 aliases the source uses interchangeably with the bare elements. */
+.chapter-prose :is(h2, h3, h4).sec,
+.chapter-prose :is(h2, h3, h4).section-title,
+.chapter-prose :is(h2, h3, h4).sec-title,
+.chapter-prose :is(h2, h3, h4).block,
+.chapter-prose :is(h2, h3, h4).block-title {
+  color: hsl(var(--foreground));
+}
+/* `.section-title` also appears as a plain span inside `.section-header`. */
+.chapter-prose span.section-title,
+.chapter-prose span.title,
+.chapter-prose div.wtitle {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 650;
+  letter-spacing: -0.012em;
+}
+.chapter-prose h2 + :is(h3, h4),
+.chapter-prose .section-header + :is(h3, h4) {
+  margin-top: 1.25rem;
+}
+
+/* Section ordinals ("11.1", "64.1") — mono, quiet, never wider than the text. */
+.chapter-prose :is(.section-num, .section-number, .sec-num, .snum, .h2num, .module-tag, .topic-id),
+.chapter-prose :is(h2, h3, h4) > span.num {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+/* Standalone ordinal rows ("Section 7.2", `<div class="section-number">`). */
+.chapter-prose div:is(.section-number, .part-label, .kicker) {
+  margin-bottom: 0.375rem;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.chapter-prose .module-tag {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Heading blocks: `<div class="section-header|sec-head|subhdr">` wraps an
+   ordinal and the heading, so the heading must not re-add its top margin. */
+.chapter-prose :is(.section-header, .sec-head, .subhdr, .section-head) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cp-line);
+}
+.chapter-prose :is(.section-header, .sec-head, .subhdr, .section-head) > :is(h2, h3, h4) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  flex: 1 1 auto;
+}
+
+/* Sub-headings / tags that sit directly under a section heading. */
+.chapter-prose :is(.sec-sub, .subtitle, .tagline, .sub-items) {
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+}
+.chapter-prose :is(.sec-tag, .section-label) {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Zero-height anchor targets must not disturb the flow. */
+.chapter-prose .section-anchor {
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.chapter-prose hr,
+.chapter-prose hr.section-sep {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--cp-line);
+}
+
+/* "↑ Back to top" — a quiet trailing affordance, not a call to action. */
+.chapter-prose :is(a, p, div).backtop {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 0.75rem;
+}
+.chapter-prose :is(a.backtop, .backtop a) {
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+  text-decoration: none;
+}
+.chapter-prose :is(a.backtop, .backtop a):hover {
+  color: hsl(var(--accent));
+}
+
+/* ===========================================================================
+   2. Structural wrappers — transparent by design
+   ---------------------------------------------------------------------------
+   The source wraps whole sections in these. They must add rhythm only: giving
+   them borders or fills would nest panels inside panels on every chapter.
+   =========================================================================== */
+.chapter-prose :is(.wrap, .wrapper, .container, .layout, .section, .section-body, .section-content, .content-block, .detail-content, .details-body) {
+  display: block;
+}
+.chapter-prose :is(.wrap, .container, .section, .content-block) + :is(.wrap, .container, .section, .content-block) {
+  margin-top: 2rem;
+}
+.chapter-prose :is(.wrap, .wrapper, .container, .layout, .section, .section-body, .section-content, .content-block) > :first-child {
+  margin-top: 0;
+}
+
+/* ===========================================================================
+   3. Leads, intros, captions
+   =========================================================================== */
+.chapter-prose :is(p, div).lead,
+.chapter-prose :is(p, div).lede,
+.chapter-prose p.sec-lead,
+.chapter-prose p.section-intro,
+.chapter-prose p.summary,
+.chapter-prose p.summary-note,
+.chapter-prose div.thesis {
+  color: hsl(var(--muted-foreground));
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+.chapter-prose span.lead {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+/* Overview / purpose / primer blurbs: a quiet sunken slab, no hue. */
+.chapter-prose :is(.overview, .overview-card, .primer, .purpose, div.summary, .section-card) {
+  margin: var(--cp-gap) 0;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius);
+  background: var(--cp-sunken);
+  font-size: 0.9375rem;
+}
+.chapter-prose :is(.overview, .overview-card, .primer, .purpose, div.summary, .section-card) > :first-child {
+  margin-top: 0;
+}
+.chapter-prose :is(.overview, .overview-card, .primer, .purpose, div.summary, .section-card) > :last-child {
+  margin-bottom: 0;
+}
+
+/* Figure captions sit under the thing they describe. */
+.chapter-prose :is(.caption, .cap, .code-caption, .diagram-caption, .diagram-cap) {
+  margin-top: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  text-align: center;
+  text-wrap: pretty;
+}
+/* `.cap` is also used *above* a figure, so keep both edges breathing. */
+.chapter-prose .cap {
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================================================================
+   4. Callouts & notes
+   ---------------------------------------------------------------------------
+   One base treatment — hairline box, 2px rule on the leading edge, 6% tint —
+   and a hue per meaning. The source spells the same idea a dozen ways, so the
+   variants are grouped rather than duplicated.
+   =========================================================================== */
+.chapter-prose div.callout,
+.chapter-prose p.callout,
+.chapter-prose div.box,
+.chapter-prose div.block:not(.code-block),
+.chapter-prose :is(.note-box, .tip-box, .tips-box, .warn-box, .warning-box, .pitfall-box, .trap-box, .misconception-box, .example-box, .remember-box, .takeaway-box, .takeaway-card, .summary-box, .assume-box, .scope-box, .req-box, .obj-box, .objectives, .relevance-box, .disclaimer, .callout-mini, .callout-lg, .def, .defn, .lead-def, .xref-row) {
+  margin: var(--cp-gap) 0;
+  padding: 0.875rem 1.0625rem;
+  border: 1px solid var(--cp-line);
+  border-left: 2px solid var(--cp-line-strong);
+  border-radius: var(--cp-radius);
+  background: var(--cp-sunken);
+  font-size: 0.9375rem;
+}
+.chapter-prose .callout-mini {
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+}
+
+/* Interior rhythm: never leak the first/last child margin outside the box. */
+.chapter-prose :is(div.callout, p.callout, div.box, div.block, .note-box, .tip-box, .warn-box, .warning-box, .pitfall-box, .trap-box, .misconception-box, .example-box, .remember-box, .takeaway-box, .summary-box, .req-box, .relevance-box, .disclaimer, .callout-mini, .callout-lg, .def, .defn, .card, .topic-card, .arch-card, .pillar-card, .metric-card, .grid-card, .check-card, .step-card, .dcard, .fbox, .fcard, .overview) > :first-child {
+  margin-top: 0;
+}
+.chapter-prose :is(div.callout, p.callout, div.box, div.block, .note-box, .tip-box, .warn-box, .warning-box, .pitfall-box, .trap-box, .misconception-box, .example-box, .remember-box, .takeaway-box, .summary-box, .req-box, .relevance-box, .disclaimer, .callout-mini, .callout-lg, .def, .defn, .card, .topic-card, .arch-card, .pillar-card, .metric-card, .grid-card, .check-card, .step-card, .dcard, .fbox, .fcard, .overview) > :last-child {
+  margin-bottom: 0;
+}
+/* Headings inside a callout are labels, not document structure. */
+.chapter-prose :is(div.callout, div.box, div.block, .card, .topic-card, .arch-card, .pillar-card, .metric-card, .grid-card, .dcard, .fcard) > :is(h3, h4, h5) {
+  margin-top: 0.75rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: 0.9375rem;
+}
+.chapter-prose :is(div.callout, div.box, div.block, .card, .topic-card, .arch-card, .pillar-card, .metric-card, .grid-card, .dcard, .fcard) > :is(h3, h4, h5):first-child {
+  margin-top: 0;
+}
+
+/* --- Callout hues: accent = exam / key, info = concept, success = tip,
+       warning = pitfall, destructive = trap, violet = hands-on,
+       teal = recap/summary, neutral = example/scope. ------------------------ */
+.chapter-prose :is(div.callout, div.box, div.block).callout-exam,
+.chapter-prose :is(div.callout, div.box, div.block).exam-tip,
+.chapter-prose :is(div.callout, div.box, div.block).callout-key,
+.chapter-prose :is(div.callout, div.box, div.block).key-concept,
+.chapter-prose :is(div.callout, div.box, div.block).callout-orange,
+.chapter-prose .callout-lg {
+  border-left-color: hsl(var(--accent));
+  background: hsl(var(--accent) / 0.06);
+}
+.chapter-prose :is(div.callout, div.box, div.block).note,
+.chapter-prose :is(div.callout, div.box, div.block).note-box,
+.chapter-prose :is(div.callout, div.box, div.block).note-illus,
+.chapter-prose :is(div.callout, div.box, div.block).callout-blue,
+.chapter-prose :is(div.callout, div.box, div.block).callout-concept,
+.chapter-prose :is(div.callout, div.box, div.block).concept,
+.chapter-prose :is(div.callout, div.box, div.block).insight,
+.chapter-prose :is(div.callout, div.box, div.block).info,
+.chapter-prose :is(div.callout, div.box, div.block).connection,
+.chapter-prose :is(div.callout, div.box, div.block).callout-xref,
+.chapter-prose .xref-row {
+  border-left-color: hsl(var(--info));
+  background: hsl(var(--info) / 0.06);
+}
+.chapter-prose :is(div.callout, div.box, div.block).tip,
+.chapter-prose :is(div.callout, div.box, div.block).tips,
+.chapter-prose :is(div.callout, div.box, div.block).tip-box,
+.chapter-prose :is(div.callout, div.box, div.block).tips-box,
+.chapter-prose :is(div.callout, div.box, div.block).callout-tip,
+.chapter-prose :is(div.callout, div.box, div.block).callout-best,
+.chapter-prose :is(div.callout, div.box, div.block).callout-green,
+.chapter-prose :is(div.callout, div.box, div.block).callout-success,
+.chapter-prose :is(div.callout, div.box, div.block).callout-hands {
+  border-left-color: hsl(var(--success));
+  background: hsl(var(--success) / 0.06);
+}
+.chapter-prose :is(div.callout, div.box, div.block).warn,
+.chapter-prose :is(div.callout, div.box, div.block).warnn,
+.chapter-prose :is(div.callout, div.box, div.block).warning,
+.chapter-prose :is(div.callout, div.box, div.block).pitfall,
+.chapter-prose :is(div.callout, div.box, div.block).pit,
+.chapter-prose :is(div.callout, div.box, div.block).pitfalls,
+.chapter-prose :is(div.callout, div.box, div.block).mistake,
+.chapter-prose :is(div.callout, div.box, div.block).misconception,
+.chapter-prose :is(div.callout, div.box, div.block).callout-warning,
+.chapter-prose :is(div.callout, div.box, div.block).callout-pitfall,
+.chapter-prose :is(div.callout, div.box, div.block).callout-misconception,
+.chapter-prose :is(div.callout, div.box, div.block).callout-yellow,
+.chapter-prose :is(.warn-box, .warning-box, .pitfall-box, .misconception-box) {
+  border-left-color: hsl(var(--warning));
+  background: hsl(var(--warning) / 0.06);
+}
+.chapter-prose :is(div.callout, div.box, div.block).trap,
+.chapter-prose :is(div.callout, div.box, div.block).traps,
+.chapter-prose :is(div.callout, div.box, div.block).common-trap,
+.chapter-prose :is(div.callout, div.box, div.block).danger,
+.chapter-prose :is(div.callout, div.box, div.block).crit,
+.chapter-prose :is(div.callout, div.box, div.block).callout-trap,
+.chapter-prose :is(div.callout, div.box, div.block).callout-critical,
+.chapter-prose :is(div.callout, div.box, div.block).callout-red,
+.chapter-prose .trap-box {
+  border-left-color: hsl(var(--destructive));
+  background: hsl(var(--destructive) / 0.06);
+}
+.chapter-prose :is(div.callout, div.box, div.block).callout-purple {
+  border-left-color: hsl(var(--professional));
+  background: hsl(var(--professional) / 0.06);
+}
+.chapter-prose :is(div.callout, div.box, div.block).callout-summary,
+.chapter-prose :is(div.callout, div.box, div.block).takeaways,
+.chapter-prose :is(.summary-box, .takeaway-box, .takeaway-card, .remember-box) {
+  border-left-color: hsl(var(--foundation));
+  background: hsl(var(--foundation) / 0.06);
+}
+/* Scope / example / definition asides stay neutral — they are context, not
+   signal, and tinting them would dilute the semantic hues above. */
+.chapter-prose :is(div.callout, div.box, div.block).example,
+.chapter-prose :is(div.callout, div.box, div.block).illustrative,
+.chapter-prose :is(div.callout, div.box, div.block).disclaimer,
+.chapter-prose :is(.example-box, .assume-box, .scope-box, .obj-box, .objectives, .req-box, .relevance-box, .disclaimer, .def, .defn, .lead-def) {
+  border-left-color: var(--cp-line-strong);
+  background: var(--cp-sunken);
+}
+
+/* --- Callout internals ---------------------------------------------------- */
+/* Icon + body layout only when the source actually ships a separate icon
+   slot; plain callouts stay as normal flow so long text wraps naturally. */
+.chapter-prose div.callout:has(> :is(.callout-icon, .icon, .ic, .ico)) {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.chapter-prose div.callout > :is(.callout-icon, .icon) {
+  flex: 0 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+.chapter-prose :is(.callout-body, .callout-content) {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.chapter-prose :is(.callout-body, .callout-content) > :first-child {
+  margin-top: 0;
+}
+.chapter-prose :is(.callout-body, .callout-content) > :last-child {
+  margin-bottom: 0;
+}
+
+/* The bold lead line every callout opens with. */
+.chapter-prose :is(.callout-title, .callout-label, .box-title, .box-h, .block-label, .card-title, .co-title, .rb-title, .def-label, .step-title, .a-term, .hd, .field-label) {
+  display: block;
+  margin: 0 0 0.375rem;
+  color: hsl(var(--foreground));
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+}
+.chapter-prose :is(.callout-body, .callout-content) > strong:first-child {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+/* `.def-label` / `.part-label` read as chrome, not as a title. */
+.chapter-prose .def-label {
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* `.lbl` is the source's workhorse label: a leading line inside a box or step.
+   Element-qualified so SVG <text class="lbl"> is untouched. */
+.chapter-prose :is(span, div, strong, p).lbl {
+  display: block;
+  margin-bottom: 0.375rem;
+  color: hsl(var(--foreground));
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+/* `.label` is inline ("Key Concept:", "Common Pitfall:") — keep it in flow. */
+.chapter-prose :is(span, strong).label:not(.lang-label) {
+  color: hsl(var(--foreground));
+  font-weight: 650;
+}
+.chapter-prose div.label {
+  display: block;
+  font-weight: 650;
+}
+
+/* Cross-references and footnotes. */
+.chapter-prose .xref-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1rem;
+}
+.chapter-prose span.xref,
+.chapter-prose p.xref {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+}
+.chapter-prose :is(.footnote, .foot, .footer, .footer-section, .doc-footer) {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.chapter-prose :is(.footer, .footer-section, .doc-footer) {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cp-line);
+}
+
+/* ===========================================================================
+   5. Generic cards, boxes & grids
+   =========================================================================== */
+.chapter-prose :is(.card, .topic-card, .arch-card, .pillar, .pillar-card, .metric-card, .grid-card, .check-card, .step-card, .dcard, .fbox, .fcard, .overview-card, .trap-item) {
+  margin: 0;
+  padding: 1rem 1.0625rem;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius-lg);
+  background: var(--cp-surface);
+  font-size: 0.9375rem;
+}
+/* Cards used standalone (not inside a grid) still need vertical rhythm. */
+.chapter-prose > :is(.card, .topic-card, .arch-card, .metric-card, .step-card, .trap-item),
+.chapter-prose :is(.wrap, .container, .section, .section-body, .content-block) > :is(.card, .topic-card, .arch-card, .metric-card, .step-card, .trap-item) {
+  margin: var(--cp-gap) 0;
+}
+.chapter-prose .trap-item {
+  border-left: 2px solid hsl(var(--destructive));
+}
+
+.chapter-prose :is(.card-num, .arch-icon, .emoji) {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+.chapter-prose .card-num {
+  color: hsl(var(--accent));
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-prose :is(.card-desc, .a-def, .details-body, .detail-content) {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+/* One-column by default; two/three columns only once there is room. */
+.chapter-prose :is(.cards, .card-grid, .grid, .grid2, .grid-2, .grid-3, .topic-grid, .arch-grid, .pillar-grid, .checklist-grid, .takeaway-grid, .two-col, .twocol, div.split) {
+  display: grid;
+  gap: 0.875rem;
+  grid-template-columns: minmax(0, 1fr);
+  margin: var(--cp-gap) 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .chapter-prose :is(.cards, .card-grid, .grid, .grid2, .grid-2, .topic-grid, .arch-grid, .pillar-grid, .checklist-grid, .takeaway-grid, .two-col, .twocol, div.split) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 900px) {
+  .chapter-prose :is(.grid-3, .pillar-grid, .topic-grid) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.chapter-prose .col,
+.chapter-prose :is(.cards, .card-grid, .grid2, .grid-2, .grid-3, .topic-grid, .arch-grid, .pillar-grid, .two-col, .twocol, div.split) > * {
+  min-width: 0;
+}
+.chapter-prose :is(.arch-row, .sub-row) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.375rem 0.75rem;
+}
+
+/* ===========================================================================
+   6. Lists, steps & checklists
+   =========================================================================== */
+.chapter-prose :is(ul, ol) {
+  margin: 1rem 0;
+  padding-left: 1.375rem;
+}
+.chapter-prose li {
+  margin: 0.375rem 0;
+  padding-left: 0.125rem;
+}
+.chapter-prose li > :is(p, ul, ol) {
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+.chapter-prose li::marker {
+  color: hsl(var(--border-strong));
+}
+.chapter-prose ol > li::marker {
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+.chapter-prose :is(ul, ol).tight > li {
+  margin: 0.1875rem 0;
+}
+.chapter-prose :is(ul, ol):is(.mt-0) {
+  margin-top: 0;
+}
+.chapter-prose :is(p, ul, ol).mt-8 {
+  margin-top: 2rem;
+}
+/* `.keys`, `.tips-list`, `.summary-list`, `.body-list`, `.takeaways`,
+   `.remember-list`, `.traps` are emphasis lists — denser, bolder leads. */
+.chapter-prose :is(ul, ol):is(.keys, .tips-list, .tips, .summary-list, .body-list, .takeaways, .remember-list, .traps, .pitfalls) {
+  margin: 0.75rem 0;
+}
+.chapter-prose :is(ul, ol):is(.keys, .tips-list, .summary-list, .takeaways, .remember-list) > li {
+  margin: 0.5rem 0;
+}
+
+/* Checklists: square-off the marker so the row reads as a task. */
+.chapter-prose :is(ul, ol).checklist,
+.chapter-prose ul.chk {
+  margin: 1rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+.chapter-prose :is(ul, ol).checklist > li,
+.chapter-prose ul.chk > li {
+  position: relative;
+  margin: 0.375rem 0;
+  padding-left: 1.625rem;
+}
+.chapter-prose :is(ul, ol).checklist > li::before,
+.chapter-prose ul.chk > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--cp-line-strong);
+  border-radius: calc(var(--radius) - 7px);
+  background: var(--cp-surface);
+}
+.chapter-prose span.chk {
+  margin-right: 0.375rem;
+  color: hsl(var(--success));
+  font-weight: 600;
+}
+.chapter-prose div.checklist {
+  margin: var(--cp-gap) 0;
+}
+
+/* Numbered step cards. `.step` is also a flow-diagram node (chapter-blocks
+   owns the containers), so the two-column layout is opt-in via :has(). */
+.chapter-prose div.step,
+.chapter-prose .pstep {
+  margin: 0.625rem 0;
+  padding: 0.75rem 0.9375rem;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius);
+  background: var(--cp-surface);
+  font-size: 0.9375rem;
+}
+.chapter-prose div.step:has(> :is(.step-num, .step-n, .step-content)) {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1rem;
+}
+.chapter-prose span.step {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius);
+  background: var(--cp-surface);
+  font-size: 0.8125rem;
+}
+.chapter-prose :is(.step-num, .step-n, span.n, .num2, .nt) {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.chapter-prose :is(.step-num, span.step-n, span.n) {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 999px;
+  background: hsl(var(--accent) / 0.12);
+  color: hsl(var(--accent));
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.chapter-prose .step-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.chapter-prose .step-content > :first-child {
+  margin-top: 0;
+}
+.chapter-prose .step-content > :last-child {
+  margin-bottom: 0;
+}
+.chapter-prose span.nt {
+  display: block;
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+.chapter-prose ol.steps {
+  margin: 1rem 0;
+}
+
+/* ===========================================================================
+   7. Definitions & glossary
+   =========================================================================== */
+.chapter-prose dl {
+  margin: 1rem 0;
+}
+.chapter-prose dt {
+  margin-top: 0.75rem;
+  color: hsl(var(--foreground));
+  font-weight: 650;
+}
+.chapter-prose dd {
+  margin: 0.25rem 0 0;
+  padding-left: 1rem;
+  border-left: 1px solid var(--cp-line);
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose :is(span, td).term,
+.chapter-prose .a-term,
+.chapter-prose td.tk {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+.chapter-prose td.term,
+.chapter-prose td.tk {
+  white-space: normal;
+}
+.chapter-prose :is(.terms, .glossary) {
+  margin: var(--cp-gap) 0;
+}
+
+/* ===========================================================================
+   8. Tables
+   ---------------------------------------------------------------------------
+   Data, not decoration: muted header row, hairline rules, tabular numerals in
+   the columns the source marks as numeric. Wrappers scroll so wide comparison
+   matrices never blow out the viewport at 360px.
+   =========================================================================== */
+.chapter-prose :is(.table-wrap, .table-scroll, .tbl-wrap, .tbl-scroll, .matrix-wrap) {
+  margin: var(--cp-gap) 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius-lg);
+  background: var(--cp-surface);
+  -webkit-overflow-scrolling: touch;
+}
+.chapter-prose :is(.table-wrap, .table-scroll, .tbl-wrap, .tbl-scroll, .matrix-wrap) > table {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+.chapter-prose table {
+  width: 100%;
+  margin: var(--cp-gap) 0;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius-lg);
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: var(--cp-surface);
+  font-size: 0.8438rem;
+  line-height: 1.55;
+  text-align: left;
+}
+.chapter-prose table.mt-0 {
+  margin-top: 0;
+}
+.chapter-prose thead {
+  background: var(--cp-fill);
+}
+.chapter-prose th {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--cp-line-strong);
+  color: hsl(var(--foreground));
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.chapter-prose td {
+  padding: 0.5rem 0.75rem;
+  border-top: 1px solid var(--cp-line);
+  vertical-align: top;
+}
+/* Headers wrap rather than forcing a horizontal scroll: most tables in the
+   source are NOT wrapped in a scroll container, so they must fit on their own. */
+.chapter-prose :is(th, td) {
+  overflow-wrap: break-word;
+}
+.chapter-prose :is(th, td) + :is(th, td) {
+  border-left: 1px solid var(--cp-line);
+}
+.chapter-prose tbody tr:first-child > td {
+  border-top: 0;
+}
+.chapter-prose thead + tbody tr:first-child > td {
+  border-top: 1px solid var(--cp-line);
+}
+/* First column of a glossary/summary table carries the term. */
+.chapter-prose :is(.glossary-table, .summary-table, .flashcard-table) td:first-child {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+.chapter-prose :is(.truth-table, .decision-matrix, .tradeoff-matrix, .matrix, .comparison-table, .compare-table, .mechanics-table) :is(th, td) {
+  text-align: left;
+}
+/* Cell-level utilities the source uses as if Tailwind existed. */
+.chapter-prose :is(th, td).center {
+  text-align: center;
+}
+.chapter-prose p.center {
+  text-align: center;
+}
+.chapter-prose :is(th, td).mono,
+.chapter-prose :is(th, td).tabular {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.chapter-prose td.dim,
+.chapter-prose td.flat {
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose td:is(.highlight-direct, .highlight-explore, .highlight-plan) {
+  font-weight: 500;
+}
+.chapter-prose td.highlight-direct {
+  background: hsl(var(--accent) / 0.07);
+}
+.chapter-prose td.highlight-explore {
+  background: hsl(var(--info) / 0.07);
+}
+.chapter-prose td.highlight-plan {
+  background: hsl(var(--professional) / 0.07);
+}
+
+/* ===========================================================================
+   9. Code
+   ---------------------------------------------------------------------------
+   The code surface is dark in both themes (see globals.css), so token colors
+   are stable. Chrome — filenames, language tags, good/bad verdicts — is mono at
+   11px on a muted fill, welded to the code frame's top or bottom edge.
+   =========================================================================== */
+.chapter-prose .code-block {
+  position: relative;
+  margin: var(--cp-gap) 0;
+}
+.chapter-prose pre {
+  margin: var(--cp-gap) 0;
+  padding: 1rem 1.0625rem;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid hsl(var(--code-border));
+  border-radius: var(--cp-radius-lg);
+  background: hsl(var(--code-bg));
+  color: hsl(var(--code-fg));
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  tab-size: 2;
+  -webkit-overflow-scrolling: touch;
+}
+/* When a host wrapper owns the frame (components/code/code-block.tsx moves the
+   <pre> into a bordered, clipped `.code-block`), the <pre> must not draw a
+   second hairline inside it — only its semantic good/bad rule survives. */
+.chapter-prose .code-block > pre {
+  margin: 0;
+  border-width: 0;
+  border-radius: 0;
+}
+.chapter-prose .code-block > pre:is(.code-good, .code-bad) {
+  border-left-width: 2px;
+}
+.chapter-prose pre code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+/* A pre that is only ASCII art needs no colour, just monospace alignment. */
+.chapter-prose pre:is(.ascii, .ascii-diagram) {
+  color: hsl(var(--code-fg) / 0.92);
+  line-height: 1.45;
+}
+.chapter-prose pre.code-good {
+  border-left: 2px solid hsl(var(--tok-good));
+}
+.chapter-prose pre.code-bad {
+  border-left: 2px solid hsl(var(--tok-bad));
+}
+.chapter-prose .ascii-box {
+  margin: var(--cp-gap) 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--cp-line);
+  border-radius: var(--cp-radius-lg);
+  background: var(--cp-sunken);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+/* Inline code. */
+.chapter-prose :not(pre) > code,
+.chapter-prose code.inline,
+.chapter-prose code.inl {
+  padding: 0.0625rem 0.3125rem;
+  border: 1px solid var(--cp-line);
+  border-radius: calc(var(--radius) - 5px);
+  background: var(--cp-fill);
+  color: hsl(var(--foreground));
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 450;
+  white-space: break-spaces;
+  word-break: break-word;
+}
+.chapter-prose :not(pre) > code::before,
+.chapter-prose :not(pre) > code::after {
+  content: none;
+}
+.chapter-prose :is(span, p).mono,
+.chapter-prose span.kbd {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+.chapter-prose span.kbd {
+  padding: 0.0625rem 0.3125rem;
+  border: 1px solid var(--cp-line-strong);
+  border-bottom-width: 2px;
+  border-radius: calc(var(--radius) - 5px);
+  background: var(--cp-fill);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* --- Code chrome: filenames, captions and language tags ------------------- */
+/* A label immediately above a block becomes its title bar — mono, muted, and
+   welded to the code frame so the pair reads as one object. */
+.chapter-prose :is(.code-label, .filename, .c-title) {
+  display: block;
+  margin: var(--cp-gap) 0 0;
+  padding: 0.4375rem 0.75rem;
+  border: 1px solid var(--cp-line);
+  border-bottom: 0;
+  border-radius: var(--cp-radius-lg) var(--cp-radius-lg) 0 0;
+  background: var(--cp-fill);
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+}
+.chapter-prose :is(.code-label, .filename, .c-title) + :is(pre, .code-block) {
+  margin-top: 0;
+}
+.chapter-prose :is(.code-label, .filename, .c-title) + :is(pre, .code-block) > pre,
+.chapter-prose :is(.code-label, .filename, .c-title) + pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/* The source also puts a label *after* a block (a verdict on the sample above);
+   flip the welded edge so it still reads as chrome rather than a broken header. */
+.chapter-prose :is(pre, .code-block) + :is(.code-label, .filename, .c-title) {
+  margin-top: -1px;
+  border-top: 1px solid var(--cp-line);
+  border-bottom: 1px solid var(--cp-line);
+  border-radius: 0 0 var(--cp-radius-lg) var(--cp-radius-lg);
+}
+.chapter-prose .code-label.good {
+  border-color: hsl(var(--success) / 0.35);
+  background: hsl(var(--success) / 0.1);
+  color: hsl(var(--success));
+}
+.chapter-prose .code-label.bad {
+  border-color: hsl(var(--destructive) / 0.35);
+  background: hsl(var(--destructive) / 0.1);
+  color: hsl(var(--destructive));
+}
+/* `.lang-label` lives *inside* the pre as its first line. */
+.chapter-prose pre :is(.lang-label, .label, .python) {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--code-fg) / 0.5);
+  font-weight: 500;
+}
+.chapter-prose p.code-caption {
+  margin-bottom: 0.375rem;
+  text-align: left;
+}
+
+/* --- Syntax tokens -------------------------------------------------------- */
+/* The source ships several parallel token vocabularies (kw/keyword/code-keyword,
+   str/string/code-string, …). All of them fold onto the --tok-* palette so the
+   pre-highlighted notes match lib/highlight.ts output and the global .cb-*
+   classes. Scoped to `pre` because `num`, `key`, `label`, `n`, `s`, `hl` and
+   `comment` are ALSO used outside code for entirely different jobs. */
+.chapter-prose pre :is(.cmt, .cm, .comment, .code-comment, .code-annotation, .c-cmt, .tok-c, .note) {
+  color: hsl(var(--tok-comment));
+  font-style: italic;
+}
+.chapter-prose pre :is(.kw, .keyword, .code-keyword, .k, .tok-k, .c-key, .directive, .code-directive, .sys) {
+  color: hsl(var(--tok-keyword));
+}
+.chapter-prose pre :is(.str, .string, .code-string, .s, .tok-s) {
+  color: hsl(var(--tok-string));
+}
+.chapter-prose pre :is(.num, .n, .num2, .number, .code-number, .bool, .code-bool, .tok-n, .c-num) {
+  color: hsl(var(--tok-number));
+  font-variant-numeric: tabular-nums;
+}
+.chapter-prose pre :is(.type, .code-type) {
+  color: hsl(var(--tok-number));
+}
+.chapter-prose pre :is(.key, .param, .field, .prop, .c-user, .code-heading) {
+  color: hsl(var(--tok-property));
+}
+.chapter-prose pre .code-heading {
+  font-weight: 600;
+}
+.chapter-prose pre :is(.fn, .func, .function, .code-function, .decorator) {
+  color: hsl(var(--tok-function));
+}
+.chapter-prose pre :is(.op, .operator) {
+  color: hsl(var(--tok-operator));
+}
+.chapter-prose pre :is(.punc, .punctuation) {
+  color: hsl(var(--tok-punctuation));
+}
+.chapter-prose pre :is(.c-ok, .code-good, .ok) {
+  color: hsl(var(--tok-good));
+}
+.chapter-prose pre :is(.c-bad, .code-bad, .bad) {
+  color: hsl(var(--tok-bad));
+}
+/* Emphasis highlights inside ASCII/code — bold tinted, never background-filled
+   (a tint would break box-drawing alignment). */
+.chapter-prose pre .hl {
+  background: hsl(var(--tok-number) / 0.16);
+  color: hsl(var(--tok-number));
+}
+.chapter-prose pre .hl2 {
+  color: hsl(var(--tok-property));
+  font-weight: 600;
+}
+.chapter-prose pre .hl3 {
+  color: hsl(var(--tok-function));
+  font-weight: 600;
+}
+.chapter-prose pre .hl4 {
+  color: hsl(var(--tok-good));
+  font-weight: 600;
+}
+
+/* ===========================================================================
+   10. Badges, tags & metadata
+   =========================================================================== */
+.chapter-prose :is(.badge, .tag, .pill, .chip, .lbl-chip, .arch-tag, .tool-tag, .pr-tag, .prov-tag, .case-tag, .qtag, .examtag, .exam-badge, .weight-badge, .complexity-badge, .section-badge, .module-tag.badge, .priority) {
+  display: inline-block;
+  padding: 0.0625rem 0.4375rem;
+  border: 1px solid var(--cp-line);
+  border-radius: 999px;
+  background: var(--cp-fill);
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.chapter-prose :is(.chip, .tool-tag, .arch-tag) {
+  border-radius: calc(var(--radius) - 5px);
+  color: hsl(var(--foreground));
+  white-space: normal;
+}
+.chapter-prose :is(.badges, .tags) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin: 0.5rem 0;
+}
+.chapter-prose :is(.badge, .tag, .pill, .chip) + :is(.badge, .tag, .pill, .chip) {
+  margin-left: 0.25rem;
+}
+
+/* Severity / status modifiers. Only meaningful on a badge-like element, so the
+   selectors are compound — `hi`, `lo`, `med` mean other things elsewhere. */
+.chapter-prose :is(.badge, .tag, .pill, .chip, .priority, .weight-badge, .complexity-badge):is(.hi, .high, .b-high, .w-high, .required, .badge-required, .tag-required, .critical) {
+  border-color: hsl(var(--destructive) / 0.35);
+  background: hsl(var(--destructive) / 0.1);
+  color: hsl(var(--destructive));
+}
+.chapter-prose :is(.badge, .tag, .pill, .chip, .priority, .weight-badge, .complexity-badge):is(.med, .medium, .mid, .b-med, .w-med, .intermediate, .tag-transient) {
+  border-color: hsl(var(--warning) / 0.35);
+  background: hsl(var(--warning) / 0.12);
+  color: hsl(var(--warning));
+}
+.chapter-prose :is(.badge, .tag, .pill, .chip, .priority, .weight-badge, .complexity-badge):is(.lo, .low, .b-low, .beginner, .done, .tag-success, .badge-complete) {
+  border-color: hsl(var(--success) / 0.35);
+  background: hsl(var(--success) / 0.1);
+  color: hsl(var(--success));
+}
+.chapter-prose :is(.badge, .tag, .pill, .chip):is(.advanced, .core, .badge-red) {
+  border-color: hsl(var(--accent) / 0.35);
+  background: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
+}
+.chapter-prose :is(.badge, .tag, .pill, .chip):is(.optional, .badge-optional, .tag-optional, .todo) {
+  border-style: dashed;
+}
+.chapter-prose :is(.badge, .tag, .pill):is(.badge-green, .tag-plan, .highlight-plan) {
+  border-color: hsl(var(--success) / 0.35);
+  background: hsl(var(--success) / 0.1);
+  color: hsl(var(--success));
+}
+.chapter-prose :is(.badge, .tag, .pill):is(.badge-blue, .tag-explore, .tag-api, .tag-mcq, .tag-enum) {
+  border-color: hsl(var(--info) / 0.35);
+  background: hsl(var(--info) / 0.1);
+  color: hsl(var(--info));
+}
+.chapter-prose :is(.badge, .tag, .pill):is(.badge-purple, .tag-mcp, .tag-scenario, .pill-coord, .badge-project) {
+  border-color: hsl(var(--professional) / 0.35);
+  background: hsl(var(--professional) / 0.1);
+  color: hsl(var(--professional));
+}
+.chapter-prose :is(.badge, .tag, .pill):is(.tag-sdk, .tag-cli, .tag-direct, .pill-doc, .pill-synth, .pill-web, .badge-user, .tag-business, .tag-permission, .tag-trick) {
+  border-color: hsl(var(--foundation) / 0.35);
+  background: hsl(var(--foundation) / 0.1);
+  color: hsl(var(--foundation));
+}
+.chapter-prose .section-badge {
+  border-color: hsl(var(--accent) / 0.35);
+  background: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
+}
+/* Severity as a whole table cell, not a pill. */
+.chapter-prose td:is(.tag-hi, .pri-high, .priority-high) {
+  color: hsl(var(--destructive));
+  font-weight: 600;
+}
+.chapter-prose td:is(.tag-med, .pri-med, .priority-med) {
+  color: hsl(var(--warning));
+  font-weight: 600;
+}
+.chapter-prose td:is(.tag-lo, .pri-low, .priority-low) {
+  color: hsl(var(--success));
+  font-weight: 600;
+}
+
+/* Small metadata runs. */
+.chapter-prose :is(.meta, .label-text, .field-value) {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+}
+.chapter-prose span.meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.chapter-prose :is(p, div).metric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===========================================================================
+   11. Inline utilities & base inline elements
+   =========================================================================== */
+.chapter-prose :is(strong, b) {
+  color: hsl(var(--foreground));
+  font-weight: 650;
+}
+.chapter-prose :is(em, i) {
+  font-style: italic;
+}
+.chapter-prose u {
+  text-decoration: underline;
+  text-decoration-color: hsl(var(--accent) / 0.5);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.chapter-prose :is(sub, sup) {
+  font-size: 0.7em;
+  line-height: 0;
+}
+.chapter-prose mark {
+  padding: 0.0625rem 0.1875rem;
+  border-radius: calc(var(--radius) - 7px);
+  background: hsl(var(--accent) / 0.16);
+  color: inherit;
+}
+.chapter-prose blockquote {
+  margin: var(--cp-gap) 0;
+  padding: 0.125rem 0 0.125rem 1rem;
+  border-left: 2px solid hsl(var(--accent) / 0.4);
+  color: hsl(var(--muted-foreground));
+  font-style: normal;
+}
+.chapter-prose blockquote p:first-child::before,
+.chapter-prose blockquote p:last-child::after {
+  content: none;
+}
+.chapter-prose a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration-color: hsl(var(--accent) / 0.45);
+  text-underline-offset: 3px;
+}
+.chapter-prose a:hover {
+  color: hsl(var(--accent));
+}
+.chapter-prose :is(figure, .fig) {
+  margin: var(--cp-gap) 0;
+}
+.chapter-prose img,
+.chapter-prose svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Many source diagrams leave <text> with no fill, which paints black — invisible
+   on the dark theme. Only fill in the gap: any element that *does* declare a
+   colour keeps it. */
+.chapter-prose svg text:not([fill]),
+.chapter-prose svg tspan:not([fill]) {
+  fill: hsl(var(--foreground));
+}
+.chapter-prose svg g:not([fill]) > text:not([fill]) {
+  fill: hsl(var(--foreground));
+}
+
+/* Text-colour utilities the source writes as if Tailwind were available. */
+.chapter-prose :is(p, div, span, li).text-muted,
+.chapter-prose :is(span, div).dim,
+.chapter-prose .disclaimer {
+  color: hsl(var(--muted-foreground));
+}
+.chapter-prose :is(p, div, span, li).text-sm {
+  font-size: 0.8125rem;
+}
+.chapter-prose :is(p, ul, ol, div).mt-0 {
+  margin-top: 0;
+}
+
+/* Inline highlights. Hue = meaning, same mapping as the callouts. */
+.chapter-prose :not(pre) span:is(.hl, .highlight),
+.chapter-prose span:is(.hl-amber, .hl-green, .hl-purple, .hl-red, .hl-teal),
+.chapter-prose span.warn-hl {
+  padding: 0.0625rem 0.25rem;
+  border-radius: calc(var(--radius) - 7px);
+  font-weight: 500;
+}
+.chapter-prose :not(pre) span:is(.hl, .highlight) {
+  background: hsl(var(--accent) / 0.12);
+  color: hsl(var(--accent));
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+.chapter-prose span.hl-amber,
+.chapter-prose span.warn-hl {
+  background: hsl(var(--warning) / 0.14);
+  color: hsl(var(--warning));
+}
+.chapter-prose span.hl-green {
+  background: hsl(var(--success) / 0.12);
+  color: hsl(var(--success));
+}
+.chapter-prose span.hl-purple {
+  background: hsl(var(--professional) / 0.12);
+  color: hsl(var(--professional));
+}
+.chapter-prose span.hl-red {
+  background: hsl(var(--destructive) / 0.12);
+  color: hsl(var(--destructive));
+}
+.chapter-prose span.hl-teal {
+  background: hsl(var(--foundation) / 0.12);
+  color: hsl(var(--foundation));
+}
+
+/* Inline lead-ins the source uses as run-in labels. */
+.chapter-prose span:is(.trap, .pitfall, .mistake, .misconception, .common-trap) {
+  color: hsl(var(--warning));
+  font-weight: 650;
+}
+.chapter-prose span:is(.illus, .note-illus, .footnote) {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+  font-style: italic;
+}
+.chapter-prose span.note {
+  color: hsl(var(--muted-foreground));
+}
+
+/* ===========================================================================
+   12. Guards
+   ---------------------------------------------------------------------------
+   The source reuses a few of the label classes above as *diagram parts* — e.g.
+   `<span class="lbl">┌────┐</span>` inside `.diagram`. Neutralise only the
+   label chrome there so the ASCII/SVG structures chapter-blocks.css styles are
+   not deformed by this file.
+   =========================================================================== */
+.chapter-prose :is(.diagram, .diagram-box, .ascii, .ascii-box, .ascii-diagram, .flow, .flowchart, .flow-diagram) :is(.lbl, .label, .title, .num, .n, .t, .d) {
+  display: revert;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+}
+.chapter-prose :is(.diagram, .ascii, .ascii-box, .ascii-diagram) :is(.lbl, .hl, .hl2, .hl3, .hl4) {
+  font-family: var(--font-mono);
+}
+/* FontAwesome markers survive sanitisation but the font is not loaded; hide the
+   empty <i> rather than leaving stray whitespace inside labels. */
+.chapter-prose i[class*="fa-"]:empty {
+  display: none;
+}
+
+/* ===========================================================================
+   13. Narrow viewports
+   =========================================================================== */
+@media (max-width: 639px) {
+  .chapter-prose {
+    font-size: 0.9375rem;
+  }
+  .chapter-prose h2 {
+    margin-top: 2.25rem;
+    font-size: 1.1875rem;
+  }
+  .chapter-prose h3 {
+    margin-top: 1.75rem;
+    font-size: 1rem;
+  }
+  .chapter-prose :is(.section-header, .sec-head, .subhdr, .section-head) {
+    margin-top: 2.25rem;
+  }
+  /* Keep long tokens and paths from forcing a horizontal page scroll. */
+  .chapter-prose :is(p, li, td, th, .callout, div.box) {
+    overflow-wrap: break-word;
+  }
+  .chapter-prose :is(div.callout, div.box, div.block, .card, .topic-card, .arch-card, .metric-card, .grid-card) {
+    padding: 0.75rem 0.875rem;
+  }
+  .chapter-prose pre {
+    padding: 0.875rem;
+    font-size: 0.75rem;
+  }
+  .chapter-prose table {
+    font-size: 0.8125rem;
+  }
+  .chapter-prose :is(th, td) {
+    padding: 0.4375rem 0.5625rem;
+  }
+  /* Steps stack rather than squeezing the body into a sliver. */
+  .chapter-prose div.step:has(> :is(.step-num, .step-n, .step-content)) {
+    gap: 0.625rem;
+  }
+}
+
+@media print {
+  .chapter-prose :is(.table-wrap, .table-scroll, .tbl-wrap, .tbl-scroll, pre) {
+    overflow: visible;
+  }
+  .chapter-prose .backtop {
+    display: none;
+  }
+}
