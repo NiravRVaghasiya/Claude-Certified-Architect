@@ -6,6 +6,7 @@ import { DomainCard } from "@/components/dashboard/domain-card";
 import { PageHeader } from "@/components/dashboard/page-header";
 import { TRACK_COLOR, TRACK_SHORT } from "@/lib/nav";
 import { getTrackGroup, getTrackGroups } from "@/lib/content";
+import { cappedStagger } from "@/lib/motion";
 import { TRACK_DESCRIPTIONS, TRACK_LABELS } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -56,7 +57,13 @@ export default function TrackPage({ params }: { params: { track: string } }) {
           </h2>
         </AnimatedSection>
 
-        <AnimatedList className="mt-5 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* The grid's single cascade (L3). `cappedStagger` shrinks the step as the
+            domain count grows, so a six-tile and a sixteen-tile track both finish
+            landing inside 300ms and read as one gesture. */}
+        <AnimatedList
+          stagger={cappedStagger(group.domains.length)}
+          className="mt-5 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {group.domains.map((domain) => (
             <AnimatedItem key={domain.domain.key} className="h-full">
               <DomainCard

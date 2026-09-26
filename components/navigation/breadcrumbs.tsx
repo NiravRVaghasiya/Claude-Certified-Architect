@@ -11,6 +11,11 @@ export interface Crumb {
 /**
  * Trail above a page title. On narrow screens the intermediate crumbs collapse
  * so the first and last stay readable rather than wrapping to three lines.
+ *
+ * Deliberately static: this row sits directly above the page title, and anything
+ * that moves here competes with the title's own entrance. The only motion is the
+ * L1 colour/underline change on a link the pointer is actually over — pure CSS, so
+ * it costs no JS and needs no hydration.
  */
 export function Breadcrumbs({ items, className }: { items: Crumb[]; className?: string }) {
   return (
@@ -27,7 +32,7 @@ export function Breadcrumbs({ items, className }: { items: Crumb[]; className?: 
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="eyebrow max-w-[16ch] truncate transition-colors hover:text-accent sm:max-w-[28ch]"
+                  className="eyebrow max-w-[16ch] truncate decoration-accent/40 underline-offset-[3px] transition-colors duration-[160ms] ease-emphasis hover:text-accent hover:underline focus-visible:text-accent focus-visible:underline sm:max-w-[28ch]"
                 >
                   {item.label}
                 </Link>

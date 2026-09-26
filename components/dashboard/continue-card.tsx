@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, Check, Clock } from "lucide-react";
 import { AnimatedSection } from "@/components/animations/animated-section";
+import { Magnetic } from "@/components/animations/magnetic";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardLink } from "@/components/ui/card";
@@ -63,29 +64,49 @@ export function ContinueCta({
   if (!slug) return null;
 
   return (
-    <Button asChild className={className}>
-      <Link href={`/chapters/${slug}`}>
-        Continue learning
-        <ArrowRight aria-hidden="true" />
-      </Link>
-    </Button>
+    // The dashboard's single magnetic control (L1). It is the one primary action
+    // on the page, so a 3px lean toward the pointer puts the weight on the thing
+    // that matters — and nothing else on the page does it, which is the point.
+    // Wrapping rather than swapping in `AnimatedButton` keeps `Button asChild` +
+    // `<Link>` intact: real href, prefetch, and one focus ring on the anchor.
+    // The arrow deliberately does NOT travel here; the lean is already the hover.
+    <Magnetic className={cn("inline-flex", className)}>
+      <Button asChild>
+        <Link href={`/chapters/${slug}`}>
+          Continue learning
+          <ArrowRight aria-hidden="true" />
+        </Link>
+      </Button>
+    </Magnetic>
   );
 }
 
 /**
  * Placeholder shown until progress hydrates. It is the real card's markup with
- * the text replaced by bars, so it reserves the correct height at every width
- * (including when the meta line wraps on a phone) instead of guessing one.
+ * the text replaced by bars, so it reserves the correct height instead of
+ * guessing one with a min-height.
+ *
+ * Each bar sits in a box the height of the line it stands in for (eyebrow 16px,
+ * title 24px, meta 16px) with the real card's 6px gaps, so the column measures
+ * 68px either way and resolving the target cannot shift the page. It is also
+ * completely still: a shimmer here would be the only looping animation in the
+ * app, and the bars already read as "not resolved yet".
  */
 function ContinuePlaceholder({ className }: { className?: string }) {
   return (
     <div aria-hidden="true" className={className}>
       <Card className="flex items-center gap-4 p-5">
         <span className="size-10 shrink-0 rounded-full bg-muted" />
-        <div className="min-w-0 flex-1 space-y-2">
-          <span className="block h-3 w-28 rounded bg-muted" />
-          <span className="block h-4 w-3/4 rounded bg-muted" />
-          <span className="block h-3 w-1/2 rounded bg-muted" />
+        <div className="min-w-0 flex-1">
+          <span className="flex h-4 items-center">
+            <span className="block h-2.5 w-28 rounded bg-muted" />
+          </span>
+          <span className="mt-1.5 flex h-6 items-center">
+            <span className="block h-3.5 w-3/4 rounded bg-muted" />
+          </span>
+          <span className="mt-1.5 flex h-4 items-center">
+            <span className="block h-2.5 w-1/2 rounded bg-muted" />
+          </span>
         </div>
       </Card>
     </div>
@@ -114,6 +135,9 @@ export function ContinueCard({
     return (
       <AnimatedSection immediate tight className={className}>
         <Card className="flex h-full flex-wrap items-center gap-4 border-success/30 p-5">
+          {/* A plain check, not an `AnimatedCheck`: this card only ever mounts with
+              the work already finished, and drawing the tick would replay a moment
+              that happened on another page on every visit to this one. */}
           <span
             className="grid size-10 shrink-0 place-items-center rounded-full bg-success/10 text-success"
             aria-hidden="true"
@@ -178,8 +202,11 @@ export function ContinueCard({
             </p>
           </div>
 
+          {/* L1: the arrow travels 2px toward where the link goes. Paired with
+              `group-focus-visible` so the keyboard gets the same affordance as
+              the pointer, and it is transform-only so nothing reflows. */}
           <ArrowRight
-            className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 ease-emphasis group-hover:translate-x-0.5"
+            className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 ease-emphasis group-hover:translate-x-0.5 group-focus-visible:translate-x-0.5"
             aria-hidden="true"
           />
         </div>

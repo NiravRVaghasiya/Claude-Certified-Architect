@@ -6,6 +6,7 @@ import { AnimatedNumber } from "@/components/animations/animated-number";
 import { ProgressBar } from "@/components/progress/progress-bar";
 import { ProgressRing } from "@/components/progress/progress-ring";
 import { Card } from "@/components/ui/card";
+import { cappedStagger } from "@/lib/motion";
 import { useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
 
@@ -81,6 +82,19 @@ export function DashboardMetrics({ chapters }: { chapters: ProgressChapter[] }) 
   const percent = hydrated ? percentOf(slugs) : 0;
   const left = formatMinutes(hydrated ? remainingMinutes(chapters, completed) : 0);
 
+  const tiles: MetricProps[] = [
+    { label: "Complete", icon: Check, value: hydrated ? done : null },
+    { label: "Remaining", icon: Circle, value: hydrated ? total - done : null },
+    {
+      label: "Reading left",
+      icon: Clock,
+      value: hydrated ? left.value : null,
+      suffix: left.suffix,
+    },
+    { label: "Day streak", icon: CalendarCheck, value: hydrated && streak > 0 ? streak : null },
+  ];
+  const step = cappedStagger(tiles.length);
+
   return (
     <section id="progress" aria-labelledby="progress-heading">
       <h2 id="progress-heading" className="text-base font-semibold tracking-display sm:text-lg">
@@ -92,6 +106,12 @@ export function DashboardMetrics({ chapters }: { chapters: ProgressChapter[] }) 
 
       <Card className="mt-5 p-5 sm:p-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+          {/*
+            The page's one L4 moment: ring, headline count and bar sweep to the real
+            values together when progress resolves, then the whole panel is still.
+            They animate once on arrival and afterwards only when a value genuinely
+            changes — `ProgressRing`/`ProgressBar` own that, keyed off the value.
+          */}
           <div className="relative inline-flex shrink-0 self-start sm:self-auto">
             <ProgressRing
               percent={percent}
@@ -123,27 +143,20 @@ export function DashboardMetrics({ chapters }: { chapters: ProgressChapter[] }) 
               label={`Overall progress: ${percent}%`}
             />
 
+            {/*
+              The four tiles are one cascade, not four animations: only the numbers
+              move, their start times stepped by `cappedStagger` so the last one
+              begins inside the 300ms L3 window.
+
+              The tiles themselves stay put. The card around them has already
+              revealed as a block, and a second opacity cascade inside it would be
+              two animations fighting over one glance — the numbers are what
+              changed when localStorage landed, so the numbers are what moves.
+            */}
             <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-border pt-6 sm:grid-cols-4">
-              <Metric label="Complete" icon={Check} value={hydrated ? done : null} delay={0.05} />
-              <Metric
-                label="Remaining"
-                icon={Circle}
-                value={hydrated ? total - done : null}
-                delay={0.1}
-              />
-              <Metric
-                label="Reading left"
-                icon={Clock}
-                value={hydrated ? left.value : null}
-                suffix={left.suffix}
-                delay={0.15}
-              />
-              <Metric
-                label="Day streak"
-                icon={CalendarCheck}
-                value={hydrated && streak > 0 ? streak : null}
-                delay={0.2}
-              />
+              {tiles.map((tile, index) => (
+                <Metric key={tile.label} {...tile} delay={index * step} />
+              ))}
             </dl>
           </div>
         </div>
@@ -219,9 +232,15 @@ export function ProgressSummary({
         <p className="eyebrow">Reading left</p>
         <p className="mt-1 font-mono text-sm font-semibold tabular">
           {hydrated ? (
-            <AnimatedNumber value={left.value} suffix={left.suffix} />
+            <AnimatedNumber
+              value={left.value}
+              suffix={left.suffix}
+              className="inline-block min-w-[2.5ch]"
+            />
           ) : (
-            <span className="text-muted-foreground">—</span>
+            // Same reserved width as the resolved value, so the column cannot
+            // resize when localStorage lands.
+            <span className="inline-block min-w-[2.5ch] text-muted-foreground">—</span>
           )}
         </p>
       </div>

@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { ChapterSidebar } from "@/components/navigation/chapter-sidebar";
 import { LogoMark } from "@/components/navigation/logo";
 import { Button } from "@/components/ui/button";
-import { drawerVariants, durations, transitions } from "@/lib/motion";
+import { drawerVariants, transitions } from "@/lib/motion";
 import { slugsOf } from "@/lib/nav";
 import { useProgress } from "@/lib/progress";
 import { useMotionSafe } from "@/lib/use-motion";
@@ -52,7 +52,9 @@ export function MobileNavigation({ groups }: { groups: TrackGroup[] }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: durations.base }}
+                // Same L2 window as the panel, so backdrop and drawer read as one
+                // surface arriving rather than two.
+                transition={transitions.base}
               />
             </DialogPrimitive.Overlay>
 
@@ -87,18 +89,19 @@ export function MobileNavigation({ groups }: { groups: TrackGroup[] }) {
                   </DialogPrimitive.Close>
                 </div>
 
-                <motion.div
-                  className="min-h-0 flex-1"
-                  initial={motionSafe ? { opacity: 0 } : false}
-                  animate={{ opacity: 1 }}
-                  transition={{ ...transitions.base, delay: 0.08 }}
-                >
+                {/* The panel carries the eye in; the rail's track sections then
+                    cascade once (L2, ~40ms apart, inside 300ms). The cascade is
+                    declared by the rail's own nav, so it runs on mount only and
+                    does not replay when progress changes. Exits are uniform — the
+                    panel slides out and nothing staggers on the way. */}
+                <div className="min-h-0 flex-1">
                   <ChapterSidebar
                     groups={groups}
                     instanceId="drawer"
+                    cascade
                     onNavigate={() => setOpen(false)}
                   />
-                </motion.div>
+                </div>
               </motion.div>
             </DialogPrimitive.Content>
           </DialogPrimitive.Portal>

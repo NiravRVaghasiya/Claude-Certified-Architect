@@ -94,7 +94,7 @@ export default function ChapterPage({ params }: { params: { slug: string } }) {
           would squeeze the reading column to ~384px. */}
       <div className="mt-6 grid gap-10 xl:grid-cols-[minmax(0,1fr)_15rem] xl:gap-14">
         {/* Reading column, capped for line length rather than filling the grid. */}
-        <article className="min-w-0 max-w-prose">
+        <article id="chapter-article" className="min-w-0 max-w-prose">
           <ChapterHeader chapter={chapter} />
 
           {/* The rail is the outline on lg+; below that it collapses inline. */}

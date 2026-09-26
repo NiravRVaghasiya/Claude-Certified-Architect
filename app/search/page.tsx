@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import { Search as SearchIcon, TriangleAlert, X } from "lucide-react";
 import { AnimatedSection } from "@/components/animations/animated-section";
 import { shortcutLabel, useModifierLabel } from "@/components/search/search-command";
@@ -24,16 +25,75 @@ import {
   useSearchIndex,
 } from "@/lib/search";
 import { TRACK_LABELS, type Track } from "@/lib/types";
+import { useMotionSafe } from "@/lib/use-motion";
 import { cn } from "@/lib/utils";
 
+/**
+ * The chip shell. An active chip's border and fill are drawn by `TrackPill`
+ * instead of by the chip itself, so its own border goes transparent — same
+ * geometry either way, so nothing in the row shifts when the selection changes.
+ */
 function chipClass(active: boolean): string {
   return cn(
-    "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium",
+    "relative inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium",
     "transition-colors duration-150 ease-emphasis",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
     active
-      ? "border-accent/30 bg-accent/10 text-accent"
+      ? "border-transparent text-accent"
       : "border-border bg-card text-muted-foreground hover:border-border-strong hover:text-foreground"
+  );
+}
+
+/**
+ * The active-filter pill (L1).
+ *
+ * Deliberately NOT a travelling `layoutId` element. The filter is additive — a
+ * reader can hold Foundation and Professional at once — so several chips can be
+ * active, and one pill sliding between them would be describing a control that
+ * does not exist. Each pill settles in place instead. `-inset-px` covers the
+ * border box, so its hairline lands exactly where the inactive chip's border was.
+ */
+function TrackPill({ animate }: { animate: boolean }) {
+  return (
+    <motion.span
+      aria-hidden="true"
+      initial={animate ? { opacity: 0, scale: 0.94 } : false}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.94 }}
+      transition={transitions.fast}
+      className="absolute -inset-px rounded-full border border-accent/30 bg-accent/10"
+    />
+  );
+}
+
+/**
+ * One track filter. `aria-pressed` is the honest role here: the chips are
+ * independent toggles and every combination is reachable.
+ */
+function TrackChip({
+  label,
+  count,
+  active,
+  motionSafe,
+  onToggle,
+}: {
+  label: string;
+  count: number;
+  active: boolean;
+  motionSafe: boolean;
+  onToggle: () => void;
+}) {
+  return (
+    <button type="button" aria-pressed={active} onClick={onToggle} className={chipClass(active)}>
+      <AnimatePresence initial={false}>
+        {active && <TrackPill animate={motionSafe} />}
+      </AnimatePresence>
+      {/* Positioned so the label sits above the pill. */}
+      <span className="relative inline-flex items-center gap-1.5">
+        {label}
+        <span className="font-mono tabular text-[0.6875rem]">{count}</span>
+      </span>
+    </button>
   );
 }
 
@@ -46,8 +106,9 @@ export default function SearchPage() {
   const [query, setQuery] = React.useState("");
   const [tracks, setTracks] = React.useState<Track[]>([]);
   const inputRef = React.useRef<HTMLInputElement>(null);
+  const motionSafe = useMotionSafe();
   const modifier = useModifierLabel();
-  const { fuse, entries, loading, error, load, retry } = useSearchIndex();
+  const { fuse, entries, error, load, retry } = useSearchIndex();
 
   React.useEffect(() => {
     load();
@@ -73,6 +134,9 @@ export default function SearchPage() {
   );
   const groups = React.useMemo(() => groupHitsByTrack(filtered), [filtered]);
 
+  // Additive: any combination of tracks is reachable, and an empty selection
+  // means "all". Filtering is the reader's tool, so it is not narrowed to suit an
+  // animation — the pill is per-chip precisely because this stays multi-select.
   const toggleTrack = (track: Track) =>
     setTracks((current) =>
       current.includes(track) ? current.filter((t) => t !== track) : [...current, track]
@@ -83,9 +147,14 @@ export default function SearchPage() {
     inputRef.current?.focus();
   };
 
+  // "Requested but not here" and "not requested yet" look identical to the reader,
+  // and the second one is the first paint — folding them together is what keeps the
+  // prerendered HTML showing the skeleton instead of a frame of "No chapters match".
+  const indexPending = !error && entries.length === 0;
+
   const countLabel = error
     ? "Search is unavailable"
-    : loading && entries.length === 0
+    : indexPending
       ? "Loading the search index…"
       : `${filtered.length} ${filtered.length === 1 ? "chapter" : "chapters"}${
           trimmed ? ` matching “${trimmed}”` : ""
@@ -136,32 +205,34 @@ export default function SearchPage() {
           opens the command palette from anywhere in the guide.
         </p>
 
-        {/* Track filters. Empty selection means "all", so the default needs no chip. */}
+        {/* Track filters. An empty selection means "all", which is the "All"
+            chip's pressed state. */}
         <div className="mt-5 flex flex-wrap items-center gap-2">
           <span className="eyebrow mr-1">Tracks</span>
-          <button
-            type="button"
-            aria-pressed={tracks.length === 0}
-            onClick={() => setTracks([])}
-            className={chipClass(tracks.length === 0)}
-          >
-            All
-            <span className="font-mono tabular text-[0.6875rem]">{hits.length}</span>
-          </button>
+          <TrackChip
+            label="All"
+            count={hits.length}
+            active={tracks.length === 0}
+            motionSafe={motionSafe}
+            onToggle={() => setTracks([])}
+          />
           {TRACK_ORDER.map((track) => (
-            <button
+            <TrackChip
               key={track}
-              type="button"
-              aria-pressed={tracks.includes(track)}
-              onClick={() => toggleTrack(track)}
-              className={chipClass(tracks.includes(track))}
-            >
-              {TRACK_LABELS[track]}
-              <span className="font-mono tabular text-[0.6875rem]">{counts[track]}</span>
-            </button>
+              label={TRACK_LABELS[track]}
+              count={counts[track]}
+              active={tracks.includes(track)}
+              motionSafe={motionSafe}
+              onToggle={() => toggleTrack(track)}
+            />
           ))}
         </div>
 
+        {/* The live region element itself never unmounts — only its text swaps
+            (L1), and `initial={false}` keeps the first paint completely static. */}
+        {/* Static on purpose. The count changes with almost every keystroke, and a
+            line that animates directly beneath the input is motion competing with
+            typing. `aria-live` announces it; nothing needs to move. */}
         <p
           aria-live="polite"
           className="eyebrow mt-5 min-h-4 border-t border-border pt-4 text-muted-foreground"
@@ -180,7 +251,7 @@ export default function SearchPage() {
             Try again
           </Button>
         </Card>
-      ) : loading && entries.length === 0 ? (
+      ) : indexPending ? (
         <Card className="mt-6 overflow-hidden p-2">
           <SearchSkeletonRows count={5} />
         </Card>
@@ -191,11 +262,11 @@ export default function SearchPage() {
             {trimmed ? (
               <>
                 Nothing matches <span className="text-foreground">“{trimmed}”</span>
-                {tracks.length > 0 ? " in the selected tracks" : ""}. Try a shorter or more general
+                {tracks.length > 0 ? " in the selected track" : ""}. Try a shorter or more general
                 term.
               </>
             ) : (
-              "No chapters in the selected tracks."
+              "No chapters in the selected track."
             )}
           </p>
           <span className="flex flex-wrap items-center justify-center gap-2">
