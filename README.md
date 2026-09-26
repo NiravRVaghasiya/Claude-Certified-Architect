@@ -37,12 +37,17 @@ npm run build      # ingest + next build
 
 ## Features
 
-- ⌘K command palette + `/search` page, both backed by a client-side Fuse.js index over chapter titles, sections, and excerpts.
-- Per-chapter progress ("mark complete"), persisted to `localStorage`, driving per-domain/per-track/overall progress rings and a homepage "resume where you left off" card.
-- Sticky, scroll-spy table of contents on chapter pages (`IntersectionObserver` + a `layoutId`-animated active indicator).
-- Copy-to-clipboard on every code block.
-- Dark/light mode via `next-themes` (system-aware, persisted, no flash).
-- Framer Motion throughout (page transitions, scroll reveals, hero timeline, spring-animated command palette), all gated behind `prefers-reduced-motion`.
+- **Design system** — warm-paper/ink neutrals with one copper accent reserved for *active / in progress*, `success` green for *complete*, and teal/violet for the Foundation and Professional tracks. Hue carries meaning, never decoration. Tokens live in `app/globals.css`; the type, radius, shadow and spacing scales in `tailwind.config.ts`.
+- **Animation language** — `lib/motion.ts` defines every duration (fast 160ms / base 240ms / entrance 420ms) and the three springs. Nothing hardcodes a duration. Entrance reveals run once; the first paint animates in CSS (`.reveal-in`) so content is never hidden behind hydration.
+- **Reduced motion** — `<MotionConfig reducedMotion="user">` drops transform/layout animation app-wide, CSS transitions are neutralised in `globals.css`, and anything where the animation *is* the feature additionally checks `useMotionSafe()`.
+- **Learning dashboard** — overall/track/domain progress, chapters complete, reading time remaining, day streak, and a "continue where you left off" card, with counters that count up and bars that fill once.
+- **Chapter reader** — number → title → dek → metadata → content → related concepts → prev/next, sequenced on open; scroll-spy table of contents with a `layoutId` indicator and scroll-progress rail; reading-progress bar tied to document scroll.
+- **Code blocks** — dark chrome strip with filename/language badge and a copy button that animates to a check. Syntax highlighting comes from `lib/highlight.ts`, a dependency-free tokenizer (JSON/YAML/bash/Python/TS) that never touches the 17 chapters whose notes already ship their own token spans.
+- **Chapter prose** — `app/chapter-prose.css` and `app/chapter-blocks.css` map the study notes' own class vocabulary (callouts, exam panels, decision trees, flow diagrams, cheat sheets, mnemonics, comparison matrices…) onto the design tokens, in plain CSS, for both themes. They are imported by the chapter route only, so ~70 kB of CSS stays off every other page.
+- **Search** — ⌘K / Ctrl K command palette and a `/search` page over one client-side Fuse.js index, sharing one result row: chapter, track, domain, best-matching section, and a context snippet with the match highlighted. Keyboard-navigable, with designed idle/loading/empty/error states and a separate mobile layout.
+- **Progress** — per-chapter completion persisted to `localStorage` (keys unchanged since the first version), driving every ring, bar and count. Writers merge with storage rather than trusting React state, so a chapter opened before the provider hydrates cannot erase history.
+- **Navigation** — fixed header that compacts on scroll without shifting layout, a chapter rail with a travelling active indicator and collapsible domains, and an animated drawer below `lg`.
+- **Accessibility** — semantic landmarks, one `<main>` per route, visible focus everywhere, `aria-current`/`aria-expanded`/`aria-live` where they belong, AA contrast verified by computing ratios from the tokens, and keyboard-scrollable wide tables and code blocks.
 
 ## Deploying to Vercel
 
@@ -55,10 +60,21 @@ npm run build      # ingest + next build
 ## Project structure
 
 ```
-app/              # Next.js App Router routes
-components/       # UI + motion components
-content/          # generated at build time — not committed
-lib/              # motion tokens, search, progress, utils
-scripts/ingest.ts # content ingestion
-source-content/   # source study-notes HTML (input to ingestion)
+app/                       # Next.js App Router routes
+  globals.css              # design tokens, base type, utilities
+  chapter-prose.css        # study-notes markup → tokens (base layer)
+  chapter-blocks.css       # exam panels, diagrams, cheat sheets (rich layer)
+components/
+  animations/              # MotionProvider, AnimatedPage/Section/List/Number
+  navigation/              # header, chapter rail, drawer, breadcrumbs, prev/next
+  search/                  # ⌘K palette, shared result row, highlight ranges
+  progress/                # ring, bar, mark-complete
+  chapter/                 # header, body, TOC, reading progress, related
+  code/                    # code-block chrome, copy button
+  dashboard/               # metrics, continue card, track/domain/chapter cards
+  ui/                      # button, card, badge, kbd, dialog, theme toggle
+content/                   # generated at build time — not committed
+lib/                       # motion language, hooks, search, progress, highlight
+scripts/ingest.ts          # content ingestion
+source-content/            # source study-notes HTML (input to ingestion)
 ```

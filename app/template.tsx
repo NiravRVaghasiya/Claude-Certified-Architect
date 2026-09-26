@@ -1,21 +1,9 @@
-"use client";
+import { AnimatedPage } from "@/components/animations/animated-page";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { pageTransition, pageTransitionProps } from "@/lib/motion";
-
+/**
+ * Next re-mounts `template.tsx` on every navigation, which gives each route a
+ * fresh enter transition (see AnimatedPage).
+ */
 export default function Template({ children }: { children: React.ReactNode }) {
-  const shouldReduceMotion = useReducedMotion();
-
-  if (shouldReduceMotion) return <>{children}</>;
-
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={pageTransition}
-      transition={pageTransitionProps.transition}
-    >
-      {children}
-    </motion.div>
-  );
+  return <AnimatedPage>{children}</AnimatedPage>;
 }

@@ -1,30 +1,43 @@
+"use client";
+
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
+import { motion, type HTMLMotionProps } from "framer-motion";
 import { cva, type VariantProps } from "class-variance-authority";
+import { transitions } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  [
+    "inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-md",
+    "text-sm font-medium tracking-[-0.005em]",
+    "transition-[background-color,border-color,color,box-shadow,opacity] duration-150 ease-emphasis",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "disabled:pointer-events-none disabled:opacity-50",
+    "[&_svg]:pointer-events-none [&_svg]:shrink-0",
+  ].join(" "),
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        outline: "border border-border bg-transparent hover:bg-muted",
-        ghost: "hover:bg-muted",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+        accent: "bg-accent text-accent-foreground shadow-xs hover:bg-accent/90",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-muted",
+        outline:
+          "border border-border bg-card text-foreground shadow-xs hover:border-border-strong hover:bg-muted/60",
+        ghost: "text-foreground/80 hover:bg-muted hover:text-foreground",
+        success: "bg-success text-success-foreground shadow-xs hover:bg-success/90",
+        link: "text-foreground underline decoration-accent/50 underline-offset-4 hover:decoration-accent",
       },
       size: {
-        default: "h-10 px-5 py-2",
-        sm: "h-8 px-3 text-xs",
-        lg: "h-12 px-7 text-base",
-        icon: "h-10 w-10",
+        xs: "h-7 gap-1.5 px-2.5 text-xs [&_svg]:size-3.5",
+        sm: "h-8 px-3 text-[0.8125rem] [&_svg]:size-4",
+        default: "h-9 px-4 [&_svg]:size-4",
+        lg: "h-11 px-5 text-[0.9375rem] [&_svg]:size-[1.125rem]",
+        icon: "size-9 [&_svg]:size-4",
+        "icon-sm": "size-8 [&_svg]:size-4",
       },
     },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
+    defaultVariants: { variant: "default", size: "default" },
   }
 );
 
@@ -44,4 +57,29 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export interface AnimatedButtonProps
+  extends Omit<HTMLMotionProps<"button">, "children">,
+    VariantProps<typeof buttonVariants> {
+  children?: React.ReactNode;
+}
+
+/**
+ * Button with a physical press: a 1px sink on tap, no scale-up on hover (hover
+ * is carried by color alone, which stays legible under reduced motion).
+ */
+const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
+  ({ className, variant, size, children, ...props }, ref) => (
+    <motion.button
+      ref={ref}
+      className={cn(buttonVariants({ variant, size, className }))}
+      whileTap={{ y: 1 }}
+      transition={transitions.fast}
+      {...props}
+    >
+      {children}
+    </motion.button>
+  )
+);
+AnimatedButton.displayName = "AnimatedButton";
+
+export { Button, AnimatedButton, buttonVariants };

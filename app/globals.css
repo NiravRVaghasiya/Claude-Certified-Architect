@@ -2,88 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===========================================================================
+   Design tokens
+   ---------------------------------------------------------------------------
+   Identity: warm paper + ink neutrals, one copper accent for "active / in
+   progress", green for "complete", and the two certification-track hues
+   (teal = Foundation, violet = Professional). Neutral-first primary keeps the
+   UI calm; hue is reserved for meaning, never decoration.
+   =========================================================================== */
 @layer base {
   :root {
-    --background: 240 20% 99%;
-    --foreground: 224 24% 12%;
-
+    /* Surfaces */
+    --background: 40 22% 98%;
     --card: 0 0% 100%;
-    --card-foreground: 224 24% 12%;
-
+    --elevated: 40 30% 99.5%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 24% 12%;
+    --popover-foreground: 225 18% 12%;
+    --card-foreground: 225 18% 12%;
 
-    --primary: 255 92% 45%;
-    --primary-foreground: 0 0% 100%;
+    /* Text */
+    --foreground: 225 20% 11%;
+    --muted-foreground: 225 8% 40%;
 
-    --secondary: 240 20% 95%;
-    --secondary-foreground: 224 24% 12%;
+    /* Fills */
+    --muted: 38 16% 94%;
+    --muted-subtle: 38 16% 96.5%;
+    --secondary: 38 16% 94%;
+    --secondary-foreground: 225 20% 11%;
 
-    --muted: 240 15% 95%;
-    --muted-foreground: 220 10% 45%;
+    /* Ink-neutral primary (buttons, strong UI) */
+    --primary: 225 22% 13%;
+    --primary-foreground: 40 25% 98%;
 
-    --accent: 255 92% 45%;
-    --accent-foreground: 0 0% 100%;
+    /* Copper accent — active state, focus, progress */
+    --accent: 22 80% 35%;
+    --accent-foreground: 40 25% 98%;
+    --accent-subtle: 26 82% 96%;
 
-    --destructive: 0 84% 45%;
-    --destructive-foreground: 0 0% 100%;
+    /* Lines */
+    --border: 35 14% 88%;
+    --border-strong: 35 12% 78%;
+    --input: 35 14% 86%;
+    --ring: 22 82% 40%;
 
-    --success: 152 76% 30%;
-    --warning: 40 96% 42%;
-    --info: 210 92% 45%;
+    /* Semantic */
+    --success: 158 60% 26%;
+    --success-foreground: 40 25% 98%;
+    --warning: 33 90% 30%;
+    --info: 208 76% 38%;
+    --destructive: 2 72% 44%;
+    --destructive-foreground: 40 25% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 255 92% 45%;
+    /* Tracks */
+    --foundation: 187 65% 27%;
+    --foundation-foreground: 40 25% 98%;
+    --professional: 262 48% 48%;
+    --professional-foreground: 40 25% 98%;
 
-    --foundation: 187 70% 38%;
-    --foundation-foreground: 0 0% 100%;
-    --professional: 260 60% 52%;
-    --professional-foreground: 0 0% 100%;
+    /* Code surface — always dark, in both themes, for consistent token colors */
+    --code-bg: 224 24% 9%;
+    --code-fg: 220 16% 88%;
+    --code-border: 224 18% 18%;
+    --code-chrome: 224 22% 12%;
 
-    --radius: 0.875rem;
+    /* Code token palette. One set for both themes (the code surface is always
+       dark), tuned for ~7:1 contrast on --code-bg. */
+    --tok-comment: 220 10% 55%;
+    --tok-keyword: 320 60% 74%;
+    --tok-string: 96 45% 68%;
+    --tok-number: 28 85% 70%;
+    --tok-property: 205 80% 72%;
+    --tok-function: 265 70% 78%;
+    --tok-operator: 220 14% 70%;
+    --tok-punctuation: 220 12% 62%;
+    --tok-good: 152 55% 62%;
+    --tok-bad: 2 72% 68%;
+
+    /* Depth — light mode uses real (tiny) shadows */
+    --shadow-xs: 0 1px 1px hsl(225 20% 11% / 0.03);
+    --shadow-sm: 0 1px 2px hsl(225 20% 11% / 0.05), 0 1px 1px hsl(225 20% 11% / 0.03);
+    --shadow-md: 0 4px 12px -4px hsl(225 20% 11% / 0.09), 0 1px 2px hsl(225 20% 11% / 0.04);
+    --shadow-lg: 0 16px 40px -12px hsl(225 20% 11% / 0.16), 0 2px 6px hsl(225 20% 11% / 0.05);
+    --shadow-ring: 0 0 0 1px hsl(var(--border));
+
+    /* Geometry + motion */
+    --radius: 0.625rem;
+    --header-h: 4rem;
+    --ease-emphasis: cubic-bezier(0.22, 0.61, 0.36, 1);
 
     --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   }
 
   .dark {
-    --background: 224 28% 8%;
-    --foreground: 220 20% 94%;
+    --background: 226 16% 7%;
+    --card: 226 15% 10%;
+    --elevated: 226 14% 12.5%;
+    --popover: 226 15% 11%;
+    --popover-foreground: 40 12% 93%;
+    --card-foreground: 40 12% 93%;
 
-    --card: 224 24% 11%;
-    --card-foreground: 220 20% 94%;
+    --foreground: 40 14% 93%;
+    --muted-foreground: 226 8% 62%;
 
-    --popover: 224 24% 11%;
-    --popover-foreground: 220 20% 94%;
+    --muted: 226 13% 15%;
+    --muted-subtle: 226 13% 12.5%;
+    --secondary: 226 13% 16%;
+    --secondary-foreground: 40 14% 93%;
 
-    --primary: 255 92% 68%;
-    --primary-foreground: 224 28% 8%;
+    --primary: 40 16% 94%;
+    --primary-foreground: 226 18% 9%;
 
-    --secondary: 224 20% 16%;
-    --secondary-foreground: 220 20% 94%;
+    --accent: 28 88% 60%;
+    --accent-foreground: 226 18% 9%;
+    --accent-subtle: 26 40% 14%;
 
-    --muted: 224 18% 16%;
-    --muted-foreground: 220 12% 65%;
+    --border: 226 11% 18%;
+    --border-strong: 226 10% 26%;
+    --input: 226 11% 20%;
+    --ring: 28 88% 60%;
 
-    --accent: 255 92% 68%;
-    --accent-foreground: 224 28% 8%;
+    --success: 158 52% 46%;
+    --success-foreground: 226 18% 9%;
+    --warning: 36 90% 58%;
+    --info: 208 84% 64%;
+    --destructive: 2 72% 64%;
+    --destructive-foreground: 40 25% 98%;
 
-    --destructive: 0 72% 55%;
-    --destructive-foreground: 0 0% 100%;
+    --foundation: 187 58% 52%;
+    --foundation-foreground: 226 18% 9%;
+    --professional: 262 66% 72%;
+    --professional-foreground: 226 18% 9%;
 
-    --success: 152 60% 48%;
-    --warning: 40 92% 58%;
-    --info: 210 90% 65%;
+    --code-bg: 226 18% 9.5%;
+    --code-fg: 220 16% 88%;
+    --code-border: 226 12% 17%;
+    --code-chrome: 226 15% 12%;
 
-    --border: 224 18% 20%;
-    --input: 224 18% 20%;
-    --ring: 255 92% 68%;
-
-    --foundation: 187 65% 55%;
-    --foundation-foreground: 224 28% 8%;
-    --professional: 260 70% 72%;
-    --professional-foreground: 224 28% 8%;
+    /* Dark mode reads depth from luminance, not shadow */
+    --shadow-xs: 0 1px 1px hsl(0 0% 0% / 0.2);
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 14px -6px hsl(0 0% 0% / 0.5);
+    --shadow-lg: 0 20px 48px -16px hsl(0 0% 0% / 0.65);
+    --shadow-ring: 0 0 0 1px hsl(var(--border));
   }
 }
 
@@ -91,13 +152,67 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "cv11", "ss01";
-  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01", "calt";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Editorial display type: tight tracking at large sizes only. */
+  h1,
+  h2 {
+    @apply tracking-display;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.22);
+  }
+
+  /* Default focus ring. Components that draw their own (Button, CardLink) opt
+     out with `focus-visible:outline-none` so the two never stack. Deliberately
+     does not set border-radius — outlines already follow the element's own. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Anchored headings clear the fixed header. */
+  [id] {
+    scroll-margin-top: calc(var(--header-h) + 1.5rem);
+  }
+
+  /* Restrained scrollbars for the nav/TOC rails. */
+  .scroll-rail {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border-strong)) transparent;
+  }
+  .scroll-rail::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scroll-rail::-webkit-scrollbar-thumb {
+    background: hsl(var(--border-strong) / 0.7);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  .scroll-rail::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+    background-clip: content-box;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -105,6 +220,7 @@
     *,
     *::before,
     *::after {
+      animation-delay: 0s !important;
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -115,88 +231,99 @@
 
 @layer utilities {
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground;
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground;
+  }
+
+  /* Mono, uppercase, letterspaced — every eyebrow/metadata label in the app. */
+  .eyebrow {
+    @apply font-mono text-2xs font-medium uppercase tracking-label text-muted-foreground;
+  }
+
+  /* 1px hairline that survives dark mode. */
+  .hairline {
+    @apply border-border;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Fades the bottom of a scroll container instead of hard-cutting it. */
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black calc(100% - 2rem), transparent 100%);
+  }
+
+  /* Page-top wash: a single, very low-contrast gradient. No blobs. */
+  .page-wash {
+    background-image: radial-gradient(
+      75rem 28rem at 50% -8rem,
+      hsl(var(--accent) / 0.055),
+      transparent 70%
+    );
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* First-paint entrance, in CSS rather than JS.
+     A framer reveal has to serialise `opacity: 0` into the prerendered HTML,
+     which holds the largest contentful paint back until hydration and leaves the
+     content invisible if the bundle never lands. A keyframe animation starts at
+     first paint instead, needs no JS, and is neutralised by the reduced-motion
+     block above. Scroll-triggered reveals still need JS, so they stay on framer. */
+  .reveal-in {
+    animation: reveal-in var(--reveal-duration, 420ms) var(--ease-emphasis)
+      var(--reveal-delay, 0s) both;
   }
 }
 
-/* Chapter prose: bridges the sanitized source HTML (callouts, steps, diagrams,
-   pre-highlighted code spans) with the design system, since that markup is
-   injected via dangerouslySetInnerHTML and can't take Tailwind classes at ingest time. */
-.chapter-prose {
-  --cp-radius: 0.875rem;
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance, 12px));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.chapter-prose .callout {
-  @apply my-6 flex gap-3 rounded-2xl border p-4;
+/* ---------------------------------------------------------------------------
+   Code tokens
+   ---------------------------------------------------------------------------
+   Emitted both by the client-side highlighter (lib/highlight.ts) and mapped
+   onto the token classes the source notes already ship (see chapter-prose.css),
+   so every code block in the app shares one palette.
+   --------------------------------------------------------------------------- */
+.cb-cmt {
+  color: hsl(var(--tok-comment));
+  font-style: italic;
 }
-.chapter-prose .callout.insight {
-  @apply border-info/30 bg-info/5;
+.cb-kw {
+  color: hsl(var(--tok-keyword));
 }
-.chapter-prose .callout.mistake {
-  @apply border-warning/30 bg-warning/5;
+.cb-str {
+  color: hsl(var(--tok-string));
 }
-.chapter-prose .callout.exam-tip {
-  @apply border-primary/30 bg-primary/5;
+.cb-num {
+  color: hsl(var(--tok-number));
 }
-.chapter-prose .callout.connection {
-  @apply border-success/30 bg-success/5;
+.cb-prop {
+  color: hsl(var(--tok-property));
 }
-.chapter-prose .callout-icon {
-  @apply text-xl leading-none;
+.cb-fn {
+  color: hsl(var(--tok-function));
 }
-.chapter-prose .callout-content > strong {
-  @apply mb-1 block font-semibold;
+.cb-op {
+  color: hsl(var(--tok-operator));
 }
-
-.chapter-prose .step {
-  @apply my-4 flex gap-4 rounded-2xl border border-border bg-card p-4;
+.cb-punc {
+  color: hsl(var(--tok-punctuation));
 }
-.chapter-prose .step-num {
-  @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary;
-}
-
-.chapter-prose .diagram-container {
-  @apply my-6 overflow-x-auto rounded-2xl border border-border bg-muted/40 p-4;
-}
-.chapter-prose .diagram-container svg {
-  @apply mx-auto;
-}
-
-.chapter-prose .topic-grid,
-.chapter-prose .arch-grid {
-  @apply my-6 grid gap-4 sm:grid-cols-2;
-}
-.chapter-prose .topic-card,
-.chapter-prose .arch-card {
-  @apply rounded-2xl border border-border bg-card p-4;
-}
-.chapter-prose .complexity-badge {
-  @apply mt-2 inline-block rounded-full px-2.5 py-0.5 text-xs font-medium;
-}
-.chapter-prose .complexity-badge.beginner {
-  @apply bg-success/10 text-success;
-}
-.chapter-prose .complexity-badge.intermediate {
-  @apply bg-warning/10 text-warning;
-}
-.chapter-prose .complexity-badge.advanced {
-  @apply bg-destructive/10 text-destructive;
-}
-
-.chapter-prose table {
-  @apply w-full border-collapse overflow-hidden rounded-xl text-sm;
-}
-.chapter-prose th {
-  @apply border border-border bg-muted px-3 py-2 text-left font-semibold;
-}
-.chapter-prose td {
-  @apply border border-border px-3 py-2 align-top;
-}
-
-.chapter-prose pre {
-  @apply overflow-x-auto rounded-xl border border-border bg-[#0d1117] p-4 text-[0.85em] leading-relaxed text-slate-100;
-  font-family: var(--font-mono);
-}
-.chapter-prose :not(pre) > code {
-  @apply rounded-md border border-border bg-muted px-1.5 py-0.5 font-mono text-[0.85em];
+.cb-bool {
+  color: hsl(var(--tok-number));
 }
